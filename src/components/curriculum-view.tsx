@@ -1,0 +1,86 @@
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+import { curriculum } from "@/data/curriculum";
+import { ArrowRight, LockKeyhole, BookOpen } from "lucide-react";
+export function CurriculumView() {
+  const [level, setLevel] = useState(0);
+  return (
+    <div className="page">
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">THE BIG PICTURE</div>
+          <h1>기초에서 시작하는 수학의 지도</h1>
+          <p>LEVEL 0~8, 170단원을 목표로 한 단계씩 설계하고 있어요.</p>
+        </div>
+      </div>
+      <div className="notice">
+        <BookOpen size={20} />
+        <div>
+          <strong>현재 M0-01만 학습할 수 있어요.</strong>
+          <p>
+            LEVEL 0의 12단원은 편집 초안입니다. 170단원 정본 목록과 공식
+            성취기준 매핑은 미등록 상태예요.
+          </p>
+        </div>
+      </div>
+      <div className="level-tabs" aria-label="레벨 선택">
+        {Array.from({ length: 9 }, (_, i) => (
+          <button
+            key={i}
+            aria-pressed={level === i}
+            className={level === i ? "selected" : ""}
+            onClick={() => setLevel(i)}
+          >
+            LEVEL {i}
+            {i > 0 && <LockKeyhole size={12} />}
+          </button>
+        ))}
+      </div>
+      {level === 0 ? (
+        <>
+          <div className="curriculum-title">
+            <h2>LEVEL 0 · 수학의 언어 익히기</h2>
+            <span>1개 공개 / 12개 메타데이터 초안</span>
+          </div>
+          <div className="unit-list">
+            {curriculum.units.map((u) => (
+              <article
+                className={`card unit-row ${u.status === "published" ? "available" : ""}`}
+                key={u.id}
+              >
+                <span className="unit-number">{u.id.slice(-2)}</span>
+                <div className="unit-detail">
+                  <span className="eyebrow">{u.id}</span>
+                  <h3>{u.title}</h3>
+                  <p>{u.objectives.join(" · ")}</p>
+                  <div className="unit-tags">
+                    {u.concepts.map((c) => (
+                      <span key={c.id}>{c.label}</span>
+                    ))}
+                  </div>
+                </div>
+                {u.status === "published" ? (
+                  <Link className="button" href={`/learn/${u.id}`}>
+                    학습하기 <ArrowRight size={16} />
+                  </Link>
+                ) : (
+                  <span className="draft-label">
+                    <LockKeyhole size={14} />
+                    초안 · 준비 중
+                  </span>
+                )}
+              </article>
+            ))}
+          </div>
+        </>
+      ) : (
+        <section className="card empty-state">
+          <LockKeyhole size={32} />
+          <h2>LEVEL {level} 정본 목록을 기다리고 있어요</h2>
+          <p>단원 이름과 순서는 공식 마스터 목록을 검토한 뒤 등록합니다.</p>
+        </section>
+      )}
+    </div>
+  );
+}
