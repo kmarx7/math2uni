@@ -3,6 +3,7 @@
 - 먼저 docs/ARCHITECTURE.md, CURRICULUM.md, CONTENT_SCHEMA.md, QUESTION_BANK.md, ROADMAP.md, DELIVERY_PLAN.md, AUTH.md를 읽는다.
 - 한국어 학습 경험, 접근성, 수학적 정확성을 우선한다. 점수 달성을 보장하지 않는다.
 - 단원 ID/순서는 변경하지 않는다. 공식 교육과정 코드와 미제공 170개 단원 목록을 추측하지 않는다.
+- 170단원 제안안은 docs/CURRICULUM_PROPOSAL.md와 src/data/curriculum-proposal.ts에 별도로 둔다. 구성 확인 전 실서비스 curriculum/채점/진도 경계에 섞거나 정본으로 표시하지 않는다.
 - 콘텐츠/문제는 src/data, 계약은 src/contracts, 엔진은 src/modules, 화면은 src/components에 둔다.
 - question-bank/server.ts는 server-only이다. 공개 DTO에 정답/해설/채점 규칙을 포함하지 않는다.
 - 인증은 서버에서 검증하고 DB RLS에 auth.uid() 소유 조건을 적용한다. mock 인증은 테스트 전용 서버에만 둔다.

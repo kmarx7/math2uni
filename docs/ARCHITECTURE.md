@@ -65,3 +65,11 @@ lint, typecheck, test, test:e2e, build를 독립 실행한다. 모바일·키보
 Content는 getLesson(unitId), Bank는 목적+unitId, API는 검증된 unitId를 사용한다. 학습 데이터는 `unitProgress[unitId] = {completedBlocks, assessmentScore}` 및 Attempt.unitId를 추가한다. 기존 schemaVersion 1과 루트 completedBlocks/assessmentScore는 유지하며 M0-01에만 대응한다. 과거 unitId 없는 시도도 M0-01로 읽는다. 다른 단원 점수가 기존 기록을 덮어쓰지 않는다. JSONB 스냅샷의 가산 필드이므로 이번 작업에는 DB DDL 변경이 없다. 소유권 RLS와 CAS 저장은 그대로 적용한다.
 
 공통 화면에서 선수 미숙 개념을 제공하는 단원으로 연결한다. 블록 확인·세 개념 숙달·평가 기준 충족 후 다음 등록 단원을 안내한다. 마지막 단원 이후 미등록 LEVEL은 준비 상태를 표시한다. production의 사람 승인 게이트는 유지한다.
+
+## ADR-006 · 170단원 제안안과 학습 등록 분리 (2026-11-01)
+
+원본 전체 목록은 미제공 상태이므로 다음 단계는 검토 가능한 전체 교육과정 제안안이다. `curriculum-proposal.ts`는 기존 12단원을 복사하고 신규 158개 메타데이터를 합치되 정본으로 등록하지 않는다. 명시된 기준 버전과 기존 단원 전체 필드 보존을 검증한다. `status: proposed`, `coverage: partial`, 빈 canonicalManifest를 계약으로 강제한다. 170개 수량/ID/순서/LEVEL 수량/선수 개념/순환/중복 제목/미승인 공개/공식 코드 미연결을 검사한다.
+
+`/curriculum/plan`은 기존 인증 레이아웃 아래 읽기 전용 계획 화면이다. 서버가 제안 데이터를 검증하고 공개 메타데이터만 클라이언트에 전달한다. 검색·필터·선수 단원 탐색·JSON 내려받기는 브라우저 상태만 바꾸며 DB/진도/승인을 기록하지 않는다. 제안 모듈은 학습·채점·진도·인증 경계에 import하지 않는다. 기존 운영 목록은 12개이고 미구현 학습 경로는 404를 유지한다.
+
+학습 완료·콘텐츠 초안·교육과정 구성 제안·사람의 게시 승인은 각각 다른 상태다. 제안안 확인 후 ID/순서 manifest와 변경 근거를 확정하고 M1-01~M1-05부터 실제 콘텐츠를 추가한다. [CURRICULUM_PROPOSAL.md](CURRICULUM_PROPOSAL.md)에 전체 목록과 근거를 기록했다.

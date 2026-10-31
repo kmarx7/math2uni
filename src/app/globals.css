@@ -2446,4 +2446,204 @@ footer,
   border-color: #80a471;
   background: #f9fcf6;
 }
-.math-lab .lab-result strong{font-size:clamp(23px,3vw,38px);overflow-wrap:anywhere}
+.math-lab .lab-result strong {
+  font-size: clamp(23px, 3vw, 38px);
+  overflow-wrap: anywhere;
+}
+
+/* Curriculum proposal: review metadata without opening unimplemented lessons. */
+.plan-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.plan-stats > div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 20px;
+}
+.plan-stats dt {
+  color: var(--muted);
+}
+.plan-stats dd {
+  margin: 4px 0 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--green);
+}
+.plan-stats small {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.plan-levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.plan-levels button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  color: var(--ink);
+  background: var(--white);
+}
+.plan-levels button[aria-pressed="true"] {
+  background: var(--mint);
+  border-color: var(--green);
+}
+.plan-levels button > span:last-child {
+  font-size: 12px;
+  color: var(--muted);
+}
+.plan-toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 28px;
+}
+.plan-toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+.plan-search {
+  flex: 1;
+  min-width: 0;
+}
+.plan-search > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.plan-toolbar input,
+.plan-toolbar select {
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  width: 100%;
+  min-width: 0;
+}
+.plan-result {
+  color: var(--muted);
+  margin: 18px 0;
+}
+.plan-units {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.plan-unit {
+  padding: 0;
+  overflow: hidden;
+}
+.plan-unit summary {
+  cursor: pointer;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.plan-unit summary::before {
+  content: "+";
+  font-size: 22px;
+  width: 18px;
+  flex-shrink: 0;
+  color: var(--green);
+}
+.plan-unit[open] summary::before {
+  content: "−";
+}
+.plan-unit summary > .eyebrow {
+  min-width: 90px;
+}
+.plan-unit summary > strong {
+  flex: 1;
+  font-size: 16px;
+}
+.plan-unit-state {
+  color: var(--muted);
+  font-size: 12px;
+}
+.plan-unit-body {
+  padding: 0 24px 24px;
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.plan-unit-body h3 {
+  font-size: 14px;
+  margin: 22px 0 6px;
+}
+.plan-unit-body p {
+  margin: 8px 0;
+}
+.plan-next,
+.plan-sources {
+  margin-top: 24px;
+}
+.plan-sources a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.plan-sources li {
+  margin: 14px 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .plan-stats {
+    gap: 8px;
+  }
+  .plan-stats > div {
+    padding: 12px;
+  }
+  .plan-stats dt {
+    font-size: 11px;
+  }
+  .plan-stats dd {
+    font-size: 24px;
+  }
+  .plan-stats small {
+    display: block;
+    margin: 0;
+  }
+  .plan-levels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .plan-levels button {
+    padding: 12px;
+  }
+  .plan-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .plan-search {
+    flex-basis: 100%;
+  }
+  .plan-toolbar > label:not(.plan-search) {
+    flex: 1;
+  }
+  .plan-unit summary {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px;
+  }
+  .plan-unit summary > strong {
+    flex-basis: calc(100% - 32px);
+  }
+  .plan-unit-state {
+    margin-left: 26px;
+  }
+  .plan-unit-body {
+    padding: 0 16px 20px;
+  }
+}

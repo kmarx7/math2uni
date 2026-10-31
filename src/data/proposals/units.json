@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "M1-01",
+    "title": "정수와 절댓값",
+    "concepts": ["부호와 절댓값", "정수의 대소 비교"],
+    "prerequisiteUnits": ["M0-11"],
+    "visualization": "수직선과 원점 거리"
+  },
+  {
+    "id": "M1-02",
+    "title": "정수의 곱셈과 나눗셈",
+    "concepts": ["부호 결정", "역연산 검산"],
+    "prerequisiteUnits": ["M1-01", "M0-04"],
+    "visualization": "부호별 연산표"
+  },
+  {
+    "id": "M1-03",
+    "title": "유리수의 사칙연산",
+    "concepts": ["유리수의 표현", "부호 있는 분수 계산"],
+    "prerequisiteUnits": ["M1-02", "M0-08"],
+    "visualization": "유리수 수직선"
+  },
+  {
+    "id": "M1-04",
+    "title": "거듭제곱과 지수법칙 기초",
+    "concepts": ["거듭제곱의 뜻", "자연수 지수의 연산"],
+    "prerequisiteUnits": ["M1-02"],
+    "visualization": "같은 인수 묶음"
+  },
+  {
+    "id": "M1-05",
+    "title": "문자와 식의 값",
+    "concepts": ["문자로 양 나타내기", "대입과 식의 값"],
+    "prerequisiteUnits": ["M1-03"],
+    "visualization": "입력과 출력 표"
+  },
+  {
+    "id": "M1-06",
+    "title": "단항식의 계산",
+    "concepts": ["계수와 차수", "단항식의 곱셈과 나눗셈"],
+    "prerequisiteUnits": ["M1-04", "M1-05"],
+    "visualization": "인수 색상 묶음"
+  },
+  {
+    "id": "M1-07",
+    "title": "다항식의 덧셈과 뺄셈",
+    "concepts": ["동류항", "다항식의 정리"],
+    "prerequisiteUnits": ["M1-06"],
+    "visualization": "대수 타일"
+  },
+  {
+    "id": "M1-08",
+    "title": "분배법칙과 식의 전개",
+    "concepts": ["분배법칙", "단항식과 다항식의 곱"],
+    "prerequisiteUnits": ["M1-07"],
+    "visualization": "직사각형 넓이 분할"
+  },
+  {
+    "id": "M1-09",
+    "title": "등식과 방정식의 의미",
+    "concepts": ["해와 항등식", "등식의 성질"],
+    "prerequisiteUnits": ["M1-05"],
+    "visualization": "양팔저울"
+  },
+  {
+    "id": "M1-10",
+    "title": "일차방정식의 풀이",
+    "concepts": ["이항과 계수 정리", "해의 대입 검산"],
+    "prerequisiteUnits": ["M1-07", "M1-09"],
+    "visualization": "저울의 동치 변형"
+  },
+  {
+    "id": "M1-11",
+    "title": "일차방정식의 활용",
+    "concepts": ["미지수 설정", "양의 관계식 구성"],
+    "prerequisiteUnits": ["M1-10", "M0-10"],
+    "visualization": "문장과 식 연결표"
+  },
+  {
+    "id": "M1-12",
+    "title": "일차부등식",
+    "concepts": ["부등식의 성질", "해의 범위"],
+    "prerequisiteUnits": ["M1-10", "M1-01"],
+    "visualization": "해의 수직선 표시"
+  },
+  {
+    "id": "M1-13",
+    "title": "좌표평면과 순서쌍",
+    "concepts": ["두 축과 사분면", "점의 좌표 해석"],
+    "prerequisiteUnits": ["M1-01"],
+    "visualization": "좌표평면 점 이동"
+  },
+  {
+    "id": "M1-14",
+    "title": "정비례와 반비례",
+    "concepts": ["비례상수", "표와 그래프 연결"],
+    "prerequisiteUnits": ["M1-05", "M1-13"],
+    "visualization": "비례 그래프 비교"
+  },
+  {
+    "id": "M1-15",
+    "title": "각과 평행선",
+    "concepts": ["맞꼭지각과 동위각", "평행선의 각 계산"],
+    "prerequisiteUnits": ["M0-02"],
+    "visualization": "평행선과 횡단선"
+  },
+  {
+    "id": "M1-16",
+    "title": "삼각형과 다각형",
+    "concepts": ["삼각형의 합동 조건", "다각형의 각"],
+    "prerequisiteUnits": ["M1-15"],
+    "visualization": "삼각형 합동 겹치기"
+  },
+  {
+    "id": "M1-17",
+    "title": "평면도형의 넓이",
+    "concepts": ["단위와 넓이", "도형의 분할과 합성"],
+    "prerequisiteUnits": ["M1-16", "M0-03"],
+    "visualization": "넓이 재배열"
+  },
+  {
+    "id": "M1-18",
+    "title": "입체도형과 부피",
+    "concepts": ["전개도와 겉넓이", "기둥과 뿔의 부피"],
+    "prerequisiteUnits": ["M1-17", "M0-08"],
+    "visualization": "입체와 전개도"
+  },
+  {
+    "id": "M1-19",
+    "title": "자료의 정리와 대표값",
+    "concepts": ["도수와 상대도수", "평균과 중앙값"],
+    "prerequisiteUnits": ["M0-09", "M0-10"],
+    "visualization": "도수표와 막대그래프"
+  },
+  {
+    "id": "M1-20",
+    "title": "수와 식 기초 종합",
+    "concepts": ["연산과 문자 연결", "일차 관계 모델링"],
+    "prerequisiteUnits": ["M1-11", "M1-12", "M1-14", "M1-19"],
+    "visualization": "식과 표와 그래프 연결"
+  },
+  {
+    "id": "M2-01",
+    "title": "연립일차방정식의 뜻",
+    "concepts": ["공통해", "두 조건의 식 표현"],
+    "prerequisiteUnits": ["M1-10"],
+    "visualization": "두 저울 조건"
+  },
+  {
+    "id": "M2-02",
+    "title": "연립일차방정식의 풀이",
+    "concepts": ["대입법", "가감법"],
+    "prerequisiteUnits": ["M2-01", "M1-07"],
+    "visualization": "동치 식 변형"
+  },
+  {
+    "id": "M2-03",
+    "title": "연립방정식의 활용",
+    "concepts": ["두 미지수 설정", "조건과 해의 적합성"],
+    "prerequisiteUnits": ["M2-02", "M1-11"],
+    "visualization": "조건별 수량 표"
+  },
+  {
+    "id": "M2-04",
+    "title": "일차함수의 의미",
+    "concepts": ["함수의 대응", "일차함수의 식"],
+    "prerequisiteUnits": ["M1-14"],
+    "visualization": "입력 출력 대응"
+  },
+  {
+    "id": "M2-05",
+    "title": "일차함수의 그래프",
+    "concepts": ["기울기와 절편", "식과 그래프 변환"],
+    "prerequisiteUnits": ["M2-04", "M1-13"],
+    "visualization": "기울기 삼각형"
+  },
+  {
+    "id": "M2-06",
+    "title": "일차함수와 방정식",
+    "concepts": ["직선의 교점", "교점과 공통해"],
+    "prerequisiteUnits": ["M2-05", "M2-02"],
+    "visualization": "두 직선 교점 이동"
+  },
+  {
+    "id": "M2-07",
+    "title": "제곱근과 실수",
+    "concepts": ["제곱근의 정의", "실수의 대소 관계"],
+    "prerequisiteUnits": ["M1-04", "M1-01"],
+    "visualization": "정사각형 넓이와 변"
+  },
+  {
+    "id": "M2-08",
+    "title": "근호를 포함한 계산",
+    "concepts": ["근호의 성질", "분모의 유리화"],
+    "prerequisiteUnits": ["M2-07", "M1-03"],
+    "visualization": "근호 값과 수직선"
+  },
+  {
+    "id": "M2-09",
+    "title": "다항식의 곱셈",
+    "concepts": ["곱셈공식", "전개식의 계수"],
+    "prerequisiteUnits": ["M1-08"],
+    "visualization": "넓이로 곱셈공식"
+  },
+  {
+    "id": "M2-10",
+    "title": "인수분해 기초",
+    "concepts": ["공통인수", "곱셈공식의 역이용"],
+    "prerequisiteUnits": ["M2-09"],
+    "visualization": "대수 타일 묶기"
+  },
+  {
+    "id": "M2-11",
+    "title": "이차방정식의 풀이",
+    "concepts": ["인수분해와 해", "근의 공식"],
+    "prerequisiteUnits": ["M2-10", "M2-08"],
+    "visualization": "영이 되는 곱"
+  },
+  {
+    "id": "M2-12",
+    "title": "이차방정식의 활용",
+    "concepts": ["수량의 이차 관계", "해의 조건 검토"],
+    "prerequisiteUnits": ["M2-11", "M1-11"],
+    "visualization": "직사각형 변과 넓이"
+  },
+  {
+    "id": "M2-13",
+    "title": "이차함수의 그래프",
+    "concepts": ["꼭짓점과 대칭축", "평행이동"],
+    "prerequisiteUnits": ["M2-05", "M2-09"],
+    "visualization": "포물선 이동"
+  },
+  {
+    "id": "M2-14",
+    "title": "이차함수와 최대·최소",
+    "concepts": ["완전제곱식", "정의역 안의 최댓값과 최솟값"],
+    "prerequisiteUnits": ["M2-13", "M2-10"],
+    "visualization": "구간 위 포물선"
+  },
+  {
+    "id": "M2-15",
+    "title": "닮음과 비례",
+    "concepts": ["닮음 조건", "대응변의 길이비"],
+    "prerequisiteUnits": ["M1-16", "M0-10"],
+    "visualization": "닮은 삼각형 확대"
+  },
+  {
+    "id": "M2-16",
+    "title": "피타고라스 정리",
+    "concepts": ["직각삼각형의 변 관계", "거리 계산"],
+    "prerequisiteUnits": ["M2-07", "M1-17"],
+    "visualization": "세 정사각형 넓이"
+  },
+  {
+    "id": "M2-17",
+    "title": "삼각비의 기초",
+    "concepts": ["사인·코사인·탄젠트", "직각삼각형의 길이"],
+    "prerequisiteUnits": ["M2-15", "M2-16"],
+    "visualization": "각과 삼각비 변화"
+  },
+  {
+    "id": "M2-18",
+    "title": "원과 삼각형의 성질",
+    "concepts": ["원주각과 중심각", "원의 접선 관계"],
+    "prerequisiteUnits": ["M1-16", "M2-15"],
+    "visualization": "원 위 각 이동"
+  },
+  {
+    "id": "M2-19",
+    "title": "산포도와 산점도",
+    "concepts": ["분산과 표준편차", "상관관계 해석"],
+    "prerequisiteUnits": ["M1-19", "M2-07"],
+    "visualization": "자료 분포와 산점도"
+  },
+  {
+    "id": "M2-20",
+    "title": "중학 수학 연결 점검",
+    "concepts": ["식과 함수의 연결", "도형과 자료 조건 해석"],
+    "prerequisiteUnits": ["M2-06", "M2-12", "M2-14", "M2-17", "M2-18", "M2-19"],
+    "visualization": "조건별 개념 지도"
+  },
+  {
+    "id": "M3-01",
+    "title": "다항식의 구조와 정리",
+    "concepts": ["차수와 계수", "내림차순 정리"],
+    "prerequisiteUnits": ["M1-07"],
+    "visualization": "항과 차수 분류"
+  },
+  {
+    "id": "M3-02",
+    "title": "다항식의 곱셈 확장",
+    "concepts": ["세 항의 전개", "대칭식의 전개"],
+    "prerequisiteUnits": ["M3-01", "M2-09"],
+    "visualization": "넓이와 부피 분할"
+  },
+  {
+    "id": "M3-03",
+    "title": "다항식의 나눗셈",
+    "concepts": ["몫과 나머지", "조립제법"],
+    "prerequisiteUnits": ["M3-02"],
+    "visualization": "나눗셈 항 정렬"
+  },
+  {
+    "id": "M3-04",
+    "title": "항등식과 미정계수",
+    "concepts": ["계수 비교", "수치 대입법"],
+    "prerequisiteUnits": ["M3-01", "M1-09"],
+    "visualization": "양변 계수 비교표"
+  },
+  {
+    "id": "M3-05",
+    "title": "나머지정리",
+    "concepts": ["다항식의 대입값", "일차식으로 나눈 나머지"],
+    "prerequisiteUnits": ["M3-03", "M3-04"],
+    "visualization": "대입값과 나머지 연결"
+  },
+  {
+    "id": "M3-06",
+    "title": "인수정리",
+    "concepts": ["인수와 근의 관계", "다항식의 인수 판정"],
+    "prerequisiteUnits": ["M3-05", "M2-10"],
+    "visualization": "영점과 인수 대응"
+  },
+  {
+    "id": "M3-07",
+    "title": "인수분해의 확장",
+    "concepts": ["치환과 묶기", "고차식 인수분해"],
+    "prerequisiteUnits": ["M3-06", "M3-02"],
+    "visualization": "식의 구조 묶기"
+  },
+  {
+    "id": "M3-08",
+    "title": "복소수의 뜻",
+    "concepts": ["허수단위", "실수부와 허수부"],
+    "prerequisiteUnits": ["M2-07", "M2-11"],
+    "visualization": "수의 범위 확장표"
+  },
+  {
+    "id": "M3-09",
+    "title": "복소수의 계산",
+    "concepts": ["켤레복소수", "복소수의 사칙연산"],
+    "prerequisiteUnits": ["M3-08", "M1-03"],
+    "visualization": "켤레쌍 계산표"
+  },
+  {
+    "id": "M3-10",
+    "title": "이차방정식과 판별식",
+    "concepts": ["판별식의 부호", "복소수 범위의 근"],
+    "prerequisiteUnits": ["M3-09", "M2-11"],
+    "visualization": "판별식과 근 분류"
+  },
+  {
+    "id": "M3-11",
+    "title": "근과 계수의 관계",
+    "concepts": ["두 근의 합과 곱", "대칭식의 값"],
+    "prerequisiteUnits": ["M3-10", "M3-02"],
+    "visualization": "근과 계수 연결표"
+  },
+  {
+    "id": "M3-12",
+    "title": "이차방정식과 이차함수",
+    "concepts": ["교점과 실근", "그래프와 판별식"],
+    "prerequisiteUnits": ["M3-10", "M2-13"],
+    "visualization": "포물선과 직선 교점"
+  },
+  {
+    "id": "M3-13",
+    "title": "이차함수의 구간 최적화",
+    "concepts": ["꼭짓점의 위치", "매개변수별 최대·최소"],
+    "prerequisiteUnits": ["M3-12", "M2-14"],
+    "visualization": "구간과 꼭짓점 이동"
+  },
+  {
+    "id": "M3-14",
+    "title": "삼차·사차방정식 기초",
+    "concepts": ["인수분해에 의한 풀이", "치환에 의한 차수 낮추기"],
+    "prerequisiteUnits": ["M3-07", "M3-10"],
+    "visualization": "인수별 해 모으기"
+  },
+  {
+    "id": "M3-15",
+    "title": "연립방정식의 확장",
+    "concepts": ["일차·이차 연립", "대칭형 연립"],
+    "prerequisiteUnits": ["M3-14", "M2-02"],
+    "visualization": "두 곡선의 공통 조건"
+  },
+  {
+    "id": "M3-16",
+    "title": "연립일차부등식",
+    "concepts": ["해집합의 교집합", "경계 포함 여부"],
+    "prerequisiteUnits": ["M1-12"],
+    "visualization": "겹치는 수직선 구간"
+  },
+  {
+    "id": "M3-17",
+    "title": "이차부등식",
+    "concepts": ["이차식의 부호", "그래프로 해석한 해집합"],
+    "prerequisiteUnits": ["M3-12", "M3-16"],
+    "visualization": "포물선 부호 구간"
+  },
+  {
+    "id": "M3-18",
+    "title": "방정식·부등식 종합",
+    "concepts": ["매개변수 조건 분류", "해의 범위와 개수"],
+    "prerequisiteUnits": ["M3-13", "M3-15", "M3-17"],
+    "visualization": "조건 분기표"
+  },
+  {
+    "id": "M3-19",
+    "title": "경우의 수 기초",
+    "concepts": ["합의 법칙", "곱의 법칙"],
+    "prerequisiteUnits": ["M0-03", "M1-19"],
+    "visualization": "수형도"
+  },
+  {
+    "id": "M3-20",
+    "title": "순열과 조합 기초",
+    "concepts": ["순서 있는 선택", "순서 없는 선택"],
+    "prerequisiteUnits": ["M3-19", "M0-04"],
+    "visualization": "선택 카드 배열"
+  },
+  {
+    "id": "M3-21",
+    "title": "행렬과 행렬의 연산",
+    "concepts": ["행렬의 성분", "합·실수배·곱"],
+    "prerequisiteUnits": ["M1-08", "M1-13"],
+    "visualization": "행과 열 곱 시각화"
+  },
+  {
+    "id": "M3-22",
+    "title": "공통수학1 연결 점검",
+    "concepts": ["대수 조건의 구조화", "경우의 수와 행렬 적용"],
+    "prerequisiteUnits": ["M3-18", "M3-20", "M3-21"],
+    "visualization": "영역별 조건 지도"
+  },
+  {
+    "id": "M4-01",
+    "title": "두 점 사이의 거리와 내분",
+    "concepts": ["좌표 거리", "내분점의 좌표"],
+    "prerequisiteUnits": ["M1-13", "M2-16", "M0-10"],
+    "visualization": "선분 위 내분점"
+  },
+  {
+    "id": "M4-02",
+    "title": "직선의 방정식",
+    "concepts": ["점과 기울기", "두 점을 지나는 직선"],
+    "prerequisiteUnits": ["M2-05", "M4-01"],
+    "visualization": "직선 회전과 이동"
+  },
+  {
+    "id": "M4-03",
+    "title": "두 직선의 위치 관계",
+    "concepts": ["평행 조건", "수직 조건"],
+    "prerequisiteUnits": ["M4-02", "M2-06"],
+    "visualization": "기울기 쌍 비교"
+  },
+  {
+    "id": "M4-04",
+    "title": "점과 직선 사이의 거리",
+    "concepts": ["수선의 거리", "거리 공식의 활용"],
+    "prerequisiteUnits": ["M4-03", "M2-16"],
+    "visualization": "점에서 직선으로 수선"
+  },
+  {
+    "id": "M4-05",
+    "title": "원의 방정식",
+    "concepts": ["중심과 반지름", "일반형과 표준형 변환"],
+    "prerequisiteUnits": ["M4-01", "M2-09"],
+    "visualization": "원의 중심 이동"
+  },
+  {
+    "id": "M4-06",
+    "title": "원과 직선의 위치 관계",
+    "concepts": ["교점 개수", "접선의 조건"],
+    "prerequisiteUnits": ["M4-05", "M4-04", "M3-10"],
+    "visualization": "직선과 원 교점"
+  },
+  {
+    "id": "M4-07",
+    "title": "도형의 평행이동",
+    "concepts": ["좌표의 이동", "방정식의 이동"],
+    "prerequisiteUnits": ["M4-02", "M4-05"],
+    "visualization": "도형과 좌표 이동"
+  },
+  {
+    "id": "M4-08",
+    "title": "도형의 대칭이동",
+    "concepts": ["축·원점 대칭", "대칭 후 방정식"],
+    "prerequisiteUnits": ["M4-07"],
+    "visualization": "도형 대칭 겹치기"
+  },
+  {
+    "id": "M4-09",
+    "title": "집합의 표현과 포함",
+    "concepts": ["원소와 부분집합", "집합의 표현법"],
+    "prerequisiteUnits": ["M1-05"],
+    "visualization": "벤 다이어그램"
+  },
+  {
+    "id": "M4-10",
+    "title": "집합의 연산",
+    "concepts": ["합집합과 교집합", "여집합과 차집합"],
+    "prerequisiteUnits": ["M4-09"],
+    "visualization": "집합 영역 색칠"
+  },
+  {
+    "id": "M4-11",
+    "title": "명제와 조건",
+    "concepts": ["명제의 참·거짓", "조건의 진리집합"],
+    "prerequisiteUnits": ["M4-10", "M1-12"],
+    "visualization": "진리집합 포함도"
+  },
+  {
+    "id": "M4-12",
+    "title": "역·대우와 조건 관계",
+    "concepts": ["역과 대우", "필요조건과 충분조건"],
+    "prerequisiteUnits": ["M4-11"],
+    "visualization": "명제 화살표"
+  },
+  {
+    "id": "M4-13",
+    "title": "명제의 증명",
+    "concepts": ["대우 증명", "귀류법"],
+    "prerequisiteUnits": ["M4-12"],
+    "visualization": "증명 논리 흐름"
+  },
+  {
+    "id": "M4-14",
+    "title": "절대부등식 기초",
+    "concepts": ["실수 제곱의 비음성", "산술·기하평균 관계"],
+    "prerequisiteUnits": ["M4-13", "M2-08"],
+    "visualization": "두 양의 합과 곱"
+  },
+  {
+    "id": "M4-15",
+    "title": "함수와 그래프",
+    "concepts": ["정의역과 치역", "함수의 대응 조건"],
+    "prerequisiteUnits": ["M2-04", "M4-09"],
+    "visualization": "대응 화살표"
+  },
+  {
+    "id": "M4-16",
+    "title": "합성함수",
+    "concepts": ["함수의 연속 적용", "합성의 정의역"],
+    "prerequisiteUnits": ["M4-15"],
+    "visualization": "함수 기계 연결"
+  },
+  {
+    "id": "M4-17",
+    "title": "역함수",
+    "concepts": ["일대일 대응", "역함수의 그래프"],
+    "prerequisiteUnits": ["M4-16", "M4-08"],
+    "visualization": "대각선 대칭 그래프"
+  },
+  {
+    "id": "M4-18",
+    "title": "유리함수",
+    "concepts": ["점근선", "유리함수의 평행이동"],
+    "prerequisiteUnits": ["M4-15", "M4-07", "M1-03"],
+    "visualization": "쌍곡선과 점근선"
+  },
+  {
+    "id": "M4-19",
+    "title": "무리함수",
+    "concepts": ["근호식의 정의역", "무리함수와 역함수"],
+    "prerequisiteUnits": ["M4-17", "M2-08"],
+    "visualization": "근호 그래프 이동"
+  },
+  {
+    "id": "M4-20",
+    "title": "공통수학2 연결 점검",
+    "concepts": ["좌표와 집합 조건 연결", "함수의 정의역과 대응"],
+    "prerequisiteUnits": ["M4-06", "M4-08", "M4-14", "M4-18", "M4-19"],
+    "visualization": "좌표와 함수 조건 지도"
+  },
+  {
+    "id": "M5-01",
+    "title": "지수의 확장",
+    "concepts": ["정수·유리수 지수", "거듭제곱근"],
+    "prerequisiteUnits": ["M1-04", "M2-08"],
+    "visualization": "지수와 근호 대응"
+  },
+  {
+    "id": "M5-02",
+    "title": "실수 지수와 지수법칙",
+    "concepts": ["실수 지수의 의미", "지수법칙의 조건"],
+    "prerequisiteUnits": ["M5-01"],
+    "visualization": "지수값의 연속 변화"
+  },
+  {
+    "id": "M5-03",
+    "title": "로그의 정의",
+    "concepts": ["로그와 지수의 관계", "진수와 밑의 조건"],
+    "prerequisiteUnits": ["M5-02", "M4-17"],
+    "visualization": "지수와 로그 왕복"
+  },
+  {
+    "id": "M5-04",
+    "title": "로그의 성질",
+    "concepts": ["곱·몫·거듭제곱 로그", "밑의 변환"],
+    "prerequisiteUnits": ["M5-03"],
+    "visualization": "로그식 변환 연결"
+  },
+  {
+    "id": "M5-05",
+    "title": "상용로그",
+    "concepts": ["정수 부분과 소수 부분", "상용로그의 활용"],
+    "prerequisiteUnits": ["M5-04", "M0-09"],
+    "visualization": "십진 자릿수와 로그"
+  },
+  {
+    "id": "M5-06",
+    "title": "지수함수의 그래프",
+    "concepts": ["지수함수의 증감", "그래프의 이동"],
+    "prerequisiteUnits": ["M5-02", "M4-07", "M4-15"],
+    "visualization": "밑에 따른 지수 그래프"
+  },
+  {
+    "id": "M5-07",
+    "title": "로그함수의 그래프",
+    "concepts": ["로그함수의 증감", "지수함수와 역함수 관계"],
+    "prerequisiteUnits": ["M5-04", "M5-06", "M4-17"],
+    "visualization": "두 그래프의 대칭"
+  },
+  {
+    "id": "M5-08",
+    "title": "지수방정식과 부등식",
+    "concepts": ["밑의 통일", "증감에 따른 부등호"],
+    "prerequisiteUnits": ["M5-06", "M3-17"],
+    "visualization": "지수 그래프 교점"
+  },
+  {
+    "id": "M5-09",
+    "title": "로그방정식과 부등식",
+    "concepts": ["진수 조건", "로그의 증감 활용"],
+    "prerequisiteUnits": ["M5-07", "M5-08"],
+    "visualization": "정의역과 해집합"
+  },
+  {
+    "id": "M5-10",
+    "title": "지수·로그의 활용",
+    "concepts": ["증가·감소 모델", "로그 척도 해석"],
+    "prerequisiteUnits": ["M5-05", "M5-09"],
+    "visualization": "성장 곡선과 로그 축"
+  },
+  {
+    "id": "M5-11",
+    "title": "일반각과 호도법",
+    "concepts": ["회전과 일반각", "라디안과 부채꼴"],
+    "prerequisiteUnits": ["M2-18", "M0-10"],
+    "visualization": "단위원 회전"
+  },
+  {
+    "id": "M5-12",
+    "title": "삼각함수의 정의",
+    "concepts": ["단위원의 좌표", "삼각함수의 부호"],
+    "prerequisiteUnits": ["M5-11", "M2-17", "M1-13"],
+    "visualization": "단위원과 좌표"
+  },
+  {
+    "id": "M5-13",
+    "title": "삼각함수의 기본 관계",
+    "concepts": ["제곱 관계", "탄젠트와 사인·코사인"],
+    "prerequisiteUnits": ["M5-12", "M2-16"],
+    "visualization": "단위원 직각삼각형"
+  },
+  {
+    "id": "M5-14",
+    "title": "삼각함수의 그래프",
+    "concepts": ["주기와 진폭", "그래프의 이동"],
+    "prerequisiteUnits": ["M5-12", "M4-07"],
+    "visualization": "단위원과 주기 그래프"
+  },
+  {
+    "id": "M5-15",
+    "title": "삼각방정식과 부등식",
+    "concepts": ["구간 안의 해", "그래프와 단위원 해석"],
+    "prerequisiteUnits": ["M5-13", "M5-14"],
+    "visualization": "단위원의 해 구간"
+  },
+  {
+    "id": "M5-16",
+    "title": "사인법칙",
+    "concepts": ["외접원과 변의 비", "삼각형의 변·각"],
+    "prerequisiteUnits": ["M5-12", "M2-18"],
+    "visualization": "삼각형과 외접원"
+  },
+  {
+    "id": "M5-17",
+    "title": "코사인법칙",
+    "concepts": ["두 변과 끼인각", "변과 각의 역추론"],
+    "prerequisiteUnits": ["M5-13", "M2-16"],
+    "visualization": "끼인각과 대변 길이"
+  },
+  {
+    "id": "M5-18",
+    "title": "삼각형의 넓이와 활용",
+    "concepts": ["사인으로 구한 넓이", "사인·코사인법칙 선택"],
+    "prerequisiteUnits": ["M5-16", "M5-17", "M1-17"],
+    "visualization": "삼각형의 높이 변화"
+  },
+  {
+    "id": "M5-19",
+    "title": "수열과 일반항",
+    "concepts": ["항과 일반항", "수열의 규칙 표현"],
+    "prerequisiteUnits": ["M1-05", "M4-15"],
+    "visualization": "항 번호와 값 표"
+  },
+  {
+    "id": "M5-20",
+    "title": "등차수열",
+    "concepts": ["공차와 일반항", "등차수열의 합"],
+    "prerequisiteUnits": ["M5-19", "M1-10"],
+    "visualization": "차이가 일정한 점 배열"
+  },
+  {
+    "id": "M5-21",
+    "title": "등비수열",
+    "concepts": ["공비와 일반항", "유한 등비수열의 합"],
+    "prerequisiteUnits": ["M5-19", "M5-01"],
+    "visualization": "비가 일정한 묶음"
+  },
+  {
+    "id": "M5-22",
+    "title": "합의 기호와 여러 수열의 합",
+    "concepts": ["시그마의 성질", "자연수·제곱·세제곱의 합"],
+    "prerequisiteUnits": ["M5-20", "M5-21"],
+    "visualization": "항별 합의 분할"
+  },
+  {
+    "id": "M5-23",
+    "title": "수학적 귀납법",
+    "concepts": ["시작 단계", "귀납 단계"],
+    "prerequisiteUnits": ["M5-22", "M4-13"],
+    "visualization": "도미노와 명제 연결"
+  },
+  {
+    "id": "M5-24",
+    "title": "대수 연결 점검",
+    "concepts": ["함수의 증감과 식 변환", "수열 조건과 논리적 증명"],
+    "prerequisiteUnits": ["M5-10", "M5-15", "M5-18", "M5-23"],
+    "visualization": "함수와 수열 전략 지도"
+  },
+  {
+    "id": "M6-01",
+    "title": "함수의 극한의 뜻",
+    "concepts": ["좌극한과 우극한", "극한의 존재 조건"],
+    "prerequisiteUnits": ["M4-15", "M2-13"],
+    "visualization": "점에 가까워지는 그래프"
+  },
+  {
+    "id": "M6-02",
+    "title": "극한의 성질과 계산",
+    "concepts": ["극한의 사칙연산", "인수분해와 약분"],
+    "prerequisiteUnits": ["M6-01", "M3-07"],
+    "visualization": "구멍이 있는 그래프"
+  },
+  {
+    "id": "M6-03",
+    "title": "극한의 대소 관계",
+    "concepts": ["대소 관계 보존", "샌드위치 원리"],
+    "prerequisiteUnits": ["M6-02", "M3-17"],
+    "visualization": "두 함수 사이의 그래프"
+  },
+  {
+    "id": "M6-04",
+    "title": "함수의 연속",
+    "concepts": ["연속의 정의", "구간에서의 연속"],
+    "prerequisiteUnits": ["M6-02"],
+    "visualization": "그래프 연결과 끊김"
+  },
+  {
+    "id": "M6-05",
+    "title": "연속함수의 성질",
+    "concepts": ["최대·최소 정리", "사잇값 정리"],
+    "prerequisiteUnits": ["M6-04", "M2-14"],
+    "visualization": "연속 곡선의 값 범위"
+  },
+  {
+    "id": "M6-06",
+    "title": "평균변화율과 순간변화율",
+    "concepts": ["평균변화율", "차분몫의 극한"],
+    "prerequisiteUnits": ["M6-01", "M2-05"],
+    "visualization": "할선이 접선에 접근"
+  },
+  {
+    "id": "M6-07",
+    "title": "미분계수",
+    "concepts": ["한 점의 미분계수", "미분가능성과 연속"],
+    "prerequisiteUnits": ["M6-06", "M6-04"],
+    "visualization": "한 점에서 좌우 기울기"
+  },
+  {
+    "id": "M6-08",
+    "title": "도함수의 뜻",
+    "concepts": ["도함수와 원함수", "다항함수의 도함수"],
+    "prerequisiteUnits": ["M6-07", "M5-01"],
+    "visualization": "함수와 기울기 그래프"
+  },
+  {
+    "id": "M6-09",
+    "title": "다항함수의 미분법",
+    "concepts": ["합·차·상수배 미분", "다항식 미분 계산"],
+    "prerequisiteUnits": ["M6-08", "M3-01"],
+    "visualization": "항별 미분 비교"
+  },
+  {
+    "id": "M6-10",
+    "title": "접선의 방정식",
+    "concepts": ["접점과 접선 기울기", "외부 점을 지나는 접선"],
+    "prerequisiteUnits": ["M6-09", "M4-02"],
+    "visualization": "접점에 따른 접선"
+  },
+  {
+    "id": "M6-11",
+    "title": "평균값 정리",
+    "concepts": ["롤의 정리", "평균값 정리의 조건"],
+    "prerequisiteUnits": ["M6-07", "M6-05"],
+    "visualization": "평행한 할선과 접선"
+  },
+  {
+    "id": "M6-12",
+    "title": "함수의 증가와 감소",
+    "concepts": ["도함수의 부호", "증감표"],
+    "prerequisiteUnits": ["M6-09", "M6-11", "M3-17"],
+    "visualization": "기울기 부호와 함수"
+  },
+  {
+    "id": "M6-13",
+    "title": "극대와 극소",
+    "concepts": ["극값의 판정", "정지점과 극점 구별"],
+    "prerequisiteUnits": ["M6-12"],
+    "visualization": "부호 변화와 극점"
+  },
+  {
+    "id": "M6-14",
+    "title": "다항함수의 그래프 해석",
+    "concepts": ["도함수와 개형", "근과 극값의 배치"],
+    "prerequisiteUnits": ["M6-13", "M3-12"],
+    "visualization": "함수와 도함수 나란히 보기"
+  },
+  {
+    "id": "M6-15",
+    "title": "미분과 최대·최소",
+    "concepts": ["닫힌 구간의 후보점", "최적화 조건 모델링"],
+    "prerequisiteUnits": ["M6-14", "M6-05"],
+    "visualization": "구간과 극값 비교"
+  },
+  {
+    "id": "M6-16",
+    "title": "미분과 방정식·부등식",
+    "concepts": ["실근의 개수", "함수 차이의 부호"],
+    "prerequisiteUnits": ["M6-14", "M3-18"],
+    "visualization": "그래프 교점과 접촉"
+  },
+  {
+    "id": "M6-17",
+    "title": "미분과 운동",
+    "concepts": ["위치와 속도", "속도와 가속도"],
+    "prerequisiteUnits": ["M6-09", "M6-12"],
+    "visualization": "시간별 위치·속도"
+  },
+  {
+    "id": "M6-18",
+    "title": "부정적분",
+    "concepts": ["원시함수", "적분상수"],
+    "prerequisiteUnits": ["M6-09"],
+    "visualization": "같은 도함수의 함수족"
+  },
+  {
+    "id": "M6-19",
+    "title": "다항함수의 부정적분",
+    "concepts": ["항별 적분", "초기 조건으로 상수 결정"],
+    "prerequisiteUnits": ["M6-18", "M1-10"],
+    "visualization": "미분과 적분 왕복"
+  },
+  {
+    "id": "M6-20",
+    "title": "정적분",
+    "concepts": ["정적분의 정의와 계산", "미분과 정적분의 관계"],
+    "prerequisiteUnits": ["M6-19", "M6-04"],
+    "visualization": "누적량과 원시함수"
+  },
+  {
+    "id": "M6-21",
+    "title": "정적분의 성질",
+    "concepts": ["구간 분할", "대칭성과 정적분"],
+    "prerequisiteUnits": ["M6-20", "M4-08"],
+    "visualization": "구간별 부호 있는 넓이"
+  },
+  {
+    "id": "M6-22",
+    "title": "정적분과 넓이",
+    "concepts": ["곡선과 축 사이의 넓이", "두 곡선 사이의 넓이"],
+    "prerequisiteUnits": ["M6-21", "M6-14"],
+    "visualization": "교점 기준 넓이 분할"
+  },
+  {
+    "id": "M6-23",
+    "title": "정적분과 운동",
+    "concepts": ["속도의 적분과 변위", "속력의 적분과 이동거리"],
+    "prerequisiteUnits": ["M6-22", "M6-17"],
+    "visualization": "속도 그래프의 누적량"
+  },
+  {
+    "id": "M6-24",
+    "title": "미적분Ⅰ 연결 점검",
+    "concepts": ["극한·연속·미분 연결", "미분·적분의 조건 해석"],
+    "prerequisiteUnits": ["M6-03", "M6-15", "M6-16", "M6-23"],
+    "visualization": "변화율과 누적량 지도"
+  },
+  {
+    "id": "M7-01",
+    "title": "여러 가지 순열",
+    "concepts": ["중복순열", "같은 것이 있는 순열"],
+    "prerequisiteUnits": ["M3-20"],
+    "visualization": "원형과 중복 카드 배열"
+  },
+  {
+    "id": "M7-02",
+    "title": "중복조합",
+    "concepts": ["중복을 허용한 선택", "구분자와 배분"],
+    "prerequisiteUnits": ["M7-01", "M3-20"],
+    "visualization": "공과 칸 배분"
+  },
+  {
+    "id": "M7-03",
+    "title": "이항정리",
+    "concepts": ["이항계수", "전개식의 특정 항"],
+    "prerequisiteUnits": ["M7-02", "M3-02"],
+    "visualization": "파스칼 삼각형"
+  },
+  {
+    "id": "M7-04",
+    "title": "확률의 뜻",
+    "concepts": ["표본공간과 사건", "수학적 확률의 조건"],
+    "prerequisiteUnits": ["M4-10", "M3-19", "M0-10"],
+    "visualization": "같은 가능성의 표본공간"
+  },
+  {
+    "id": "M7-05",
+    "title": "확률의 기본 성질",
+    "concepts": ["확률의 범위", "여사건의 확률"],
+    "prerequisiteUnits": ["M7-04", "M4-10"],
+    "visualization": "전체와 여사건 영역"
+  },
+  {
+    "id": "M7-06",
+    "title": "확률의 덧셈정리",
+    "concepts": ["합사건과 교사건", "배반사건"],
+    "prerequisiteUnits": ["M7-05"],
+    "visualization": "벤 다이어그램 확률"
+  },
+  {
+    "id": "M7-07",
+    "title": "조건부확률",
+    "concepts": ["조건에 따른 표본공간", "조건부확률 계산"],
+    "prerequisiteUnits": ["M7-06", "M0-08"],
+    "visualization": "조건을 제한한 이원표"
+  },
+  {
+    "id": "M7-08",
+    "title": "확률의 곱셈정리",
+    "concepts": ["연속 시행의 확률", "조건부 경로의 곱"],
+    "prerequisiteUnits": ["M7-07"],
+    "visualization": "확률 수형도"
+  },
+  {
+    "id": "M7-09",
+    "title": "사건의 독립과 종속",
+    "concepts": ["독립 조건", "독립과 배반의 구별"],
+    "prerequisiteUnits": ["M7-08", "M7-06"],
+    "visualization": "이원표의 독립 비교"
+  },
+  {
+    "id": "M7-10",
+    "title": "독립시행의 확률",
+    "concepts": ["반복 시행", "성공 횟수의 확률"],
+    "prerequisiteUnits": ["M7-09", "M7-03"],
+    "visualization": "반복 시행 경로"
+  },
+  {
+    "id": "M7-11",
+    "title": "확률변수와 확률분포",
+    "concepts": ["확률변수의 값", "이산확률분포"],
+    "prerequisiteUnits": ["M7-04", "M4-15"],
+    "visualization": "값과 확률 막대그래프"
+  },
+  {
+    "id": "M7-12",
+    "title": "이산확률변수의 기댓값",
+    "concepts": ["가중평균", "기댓값의 성질"],
+    "prerequisiteUnits": ["M7-11", "M1-19"],
+    "visualization": "확률 무게중심"
+  },
+  {
+    "id": "M7-13",
+    "title": "확률변수의 분산과 표준편차",
+    "concepts": ["이차 모멘트", "선형변환의 분산"],
+    "prerequisiteUnits": ["M7-12", "M2-19", "M2-08"],
+    "visualization": "분포의 퍼짐 비교"
+  },
+  {
+    "id": "M7-14",
+    "title": "이항분포",
+    "concepts": ["이항분포의 조건", "평균과 분산"],
+    "prerequisiteUnits": ["M7-10", "M7-13"],
+    "visualization": "성공 횟수 분포"
+  },
+  {
+    "id": "M7-15",
+    "title": "연속확률변수와 정규분포",
+    "concepts": ["밀도와 구간 확률", "정규분포의 모양"],
+    "prerequisiteUnits": ["M7-13", "M6-22"],
+    "visualization": "곡선 아래 확률 넓이"
+  },
+  {
+    "id": "M7-16",
+    "title": "표준정규분포",
+    "concepts": ["표준화", "정규분포표 해석"],
+    "prerequisiteUnits": ["M7-15"],
+    "visualization": "평균·표준편차와 표준화"
+  },
+  {
+    "id": "M7-17",
+    "title": "모집단과 표본",
+    "concepts": ["임의추출", "모평균과 표본평균"],
+    "prerequisiteUnits": ["M7-12", "M1-19"],
+    "visualization": "반복 표본 추출"
+  },
+  {
+    "id": "M7-18",
+    "title": "표본평균의 분포",
+    "concepts": ["표본평균의 평균과 분산", "표본 크기와 표준오차"],
+    "prerequisiteUnits": ["M7-17", "M7-16"],
+    "visualization": "표본 크기별 평균 분포"
+  },
+  {
+    "id": "M7-19",
+    "title": "모평균의 추정",
+    "concepts": ["신뢰구간", "신뢰도와 오차의 관계"],
+    "prerequisiteUnits": ["M7-18"],
+    "visualization": "반복 추정 구간"
+  },
+  {
+    "id": "M7-20",
+    "title": "모비율과 모비율의 추정",
+    "concepts": ["표본비율의 분포", "모비율의 신뢰구간 해석"],
+    "prerequisiteUnits": ["M7-14", "M7-16", "M7-19"],
+    "visualization": "반복 표본비율과 추정 구간"
+  },
+  {
+    "id": "M8-01",
+    "title": "수능형 조건 읽기",
+    "concepts": ["조건의 수식·그림 변환", "구할 양과 주어진 양 분리"],
+    "prerequisiteUnits": ["M5-24", "M6-24", "M7-03", "M7-09", "M7-20"],
+    "visualization": "조건과 표현 대응표"
+  },
+  {
+    "id": "M8-02",
+    "title": "함수의 그래프와 식 통합",
+    "concepts": ["그래프의 정성적 해석", "식과 그래프의 왕복"],
+    "prerequisiteUnits": ["M8-01", "M5-10", "M6-14"],
+    "visualization": "그래프별 조건 연결"
+  },
+  {
+    "id": "M8-03",
+    "title": "수열과 경우의 수 통합",
+    "concepts": ["항의 규칙과 선택 조건", "중복·누락 없는 분류"],
+    "prerequisiteUnits": ["M8-01", "M5-23", "M7-03"],
+    "visualization": "경우 분류 트리"
+  },
+  {
+    "id": "M8-04",
+    "title": "미분·적분 통합 추론",
+    "concepts": ["변화율과 누적량 연결", "함수 조건의 역추론"],
+    "prerequisiteUnits": ["M8-02", "M6-24"],
+    "visualization": "도함수와 누적량 비교"
+  },
+  {
+    "id": "M8-05",
+    "title": "확률·통계 자료 해석",
+    "concepts": ["조건부 모형 선택", "분포·추정 결과 해석"],
+    "prerequisiteUnits": ["M8-01", "M7-20"],
+    "visualization": "표와 분포 연결"
+  },
+  {
+    "id": "M8-06",
+    "title": "다단계 문제와 검산",
+    "concepts": ["경우 분류와 경계 확인", "독립 풀이의 검산"],
+    "prerequisiteUnits": ["M8-03", "M8-04", "M8-05"],
+    "visualization": "풀이 분기와 검산표"
+  },
+  {
+    "id": "M8-07",
+    "title": "시간 배분과 실전 연습",
+    "concepts": ["풀이 순서 결정", "제한 시간 내 독립 응답"],
+    "prerequisiteUnits": ["M8-06"],
+    "visualization": "응답 시간과 문항 지도"
+  },
+  {
+    "id": "M8-08",
+    "title": "독립 평가와 최종 보완",
+    "concepts": ["독립 평가 결과 해석", "취약 개념의 지연 재평가"],
+    "prerequisiteUnits": ["M8-07"],
+    "visualization": "개념별 증거와 복습 지도"
+  }
+]

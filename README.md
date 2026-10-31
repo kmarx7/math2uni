@@ -35,6 +35,7 @@ npm start
 - 서버 채점과 제출 후 정답·해설, 전체 제출 형성평가
 - 이메일 아이디·비밀번호 로그인, 계정별·단원별 진도·힌트·재시도·오답 기록, 숙달·1/3/7일 복습
 - 반응형 대시보드·커리큘럼·오답노트·복습 화면
+- `/curriculum/plan`의 170단원 구성 제안·상세 검색·LEVEL 필터·선수 연결·JSON 내려받기 (학습 콘텐츠는 12단원)
 
 170단원 정본/전체 콘텐츠, 공식 성취기준 매핑, D4~D5 문항, AI 튜터·Python·실전 모의평가·관리자 UI는 미구현입니다. 정본 목록이 미제공되어 `npm run curriculum:canonical`은 의도적으로 실패하는 별도 출시 게이트입니다. 일반 MVP 테스트와 구분합니다.
 
@@ -66,6 +67,7 @@ npm start
 - [문제은행](docs/QUESTION_BANK.md)
 - [로드맵과 미완료 범위](docs/ROADMAP.md)
 - [170단원 단계별 완성 계획](docs/DELIVERY_PLAN.md)
+- [170단원 교육과정 제안안](docs/CURRICULUM_PROPOSAL.md)
 - [로그인·계정 저장 설계와 설정](docs/AUTH.md)
 - [실제 검증 결과](docs/VERIFICATION.md)
 

@@ -26,6 +26,9 @@ export function CurriculumView() {
             LEVEL 0의 12단원은 편집 초안입니다. 170단원 정본 목록과 공식
             성취기준 매핑은 미등록 상태예요.
           </p>
+          <Link href="/curriculum/plan" className="button secondary">
+            170단원 전체 제안안 보기 <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
       <div className="level-tabs" aria-label="레벨 선택">
@@ -116,7 +119,12 @@ export function CurriculumView() {
         <section className="card empty-state">
           <LockKeyhole size={32} />
           <h2>LEVEL {level} 정본 목록을 기다리고 있어요</h2>
-          <p>단원 이름과 순서는 공식 마스터 목록을 검토한 뒤 등록합니다.</p>
+          <p>
+            단원 이름과 순서는 마스터 교육과정 제안안을 검토한 뒤 확정합니다.
+          </p>
+          <Link href="/curriculum/plan" className="button">
+            전체 학습 계획 살펴보기
+          </Link>
         </section>
       )}
     </div>
