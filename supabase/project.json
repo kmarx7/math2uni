@@ -1,0 +1,7 @@
+{
+  "name": "math90",
+  "projectRef": "aaeitniisrtssiuertxo",
+  "region": "ap-northeast-2",
+  "url": "https://aaeitniisrtssiuertxo.supabase.co",
+  "appliedMigration": "20261031083910_account_learning_progress"
+}

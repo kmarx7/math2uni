@@ -66,3 +66,22 @@
 초기 E2E 실패에서 Next 경로 알림과 오류 메시지가 같은 alert 역할을 가져 충돌하던 테스트 선택자를 좁혔다. 비동기 저장 후 버튼 상태가 변경될 때까지 테스트가 기다리도록 수정했다. 인증 레이아웃의 스트리밍 때문에 미공개 단원이 HTTP 200이 되던 동작은 Proxy의 404 rewrite로 보완했다. 로그아웃으로 이전 페이지의 요청이 취소될 수 있음을 지연 응답 테스트에 반영했다. 실패한 상태를 완료로 처리하지 않고 수정 후 모음을 다시 실행했다.
 
 테스트 fixture는 실제 Supabase 응답 모양의 HTTP 서비스이며 실제 DB나 이메일을 사용하지 않는다. 테스트용 비밀번호/계정/JWT 키는 더미 값이고 운영 인증 우회 코드는 없다. 위 결과를 실제 사용자 계정의 클라우드 로그인·이메일 인증·RLS 보안 검증 통과로 해석하면 안 된다. 기존 170단원 canonical 게이트 미통과 상태도 유지한다.
+
+# 실제 Supabase 연결 검증
+
+사용자가 전용 프로젝트 연결에 동의한 후 `kmarx7's Org`에 Math 90 프로젝트를 생성했다. 생성 직전 다시 조회한 비용은 월 $0, 리전은 서울(ap-northeast-2), project ref는 `aaeitniisrtssiuertxo`이다.
+
+- 프로젝트 상태 ACTIVE_HEALTHY, 빈 public 스키마 확인 후 `account_learning_progress` 마이그레이션 적용 성공.
+- 원격의 실제 migration 버전 `20261031083910`에 맞춰 로컬 파일명을 동기화했다. 중복 적용하지 않는다.
+- `.env.local`에 실제 프로젝트 URL과 publishable 키를 설정했다. `git check-ignore .env.local`로 Git 제외를 확인했다. service_role/secret 키나 사용자 비밀번호는 앱에 설정하지 않았다.
+- 실제 Auth `/auth/v1/settings`에서 이메일 가입 활성화, 가입 허용, 이메일 자동 확인 비활성화(이메일 인증 필요), 익명 가입 비활성화를 확인했다.
+- 실제 DB에서 authenticated 역할과 `auth.uid()`를 사용하여 본인 기록 SELECT/INSERT/UPDATE 성공, 다른 계정의 SELECT 비노출/INSERT 거부/UPDATE 0행 및 user_id 소유권 재지정 거부를 검사했다. 전체 트랜잭션을 롤백했다. 재현 SQL은 `supabase/tests/learning_progress_rls.sql`이다.
+- 롤백 후 실제 auth.users와 learning_progress가 모두 0행임을 확인했다. anon SELECT 권한 없음, RLS 활성화 및 FORCE 설정을 확인했다.
+- Supabase security/performance advisors: 둘 다 지적 사항 0개.
+- 실제 앱 `/login`, `/signup` HTTP 200, 비로그인 `/api/progress`와 `/api/practice` HTTP 401. 존재하지 않는 더미 계정의 로그인은 401로 거부했고 실제 Auth 로그에서도 400 요청 완료를 확인했다. 이 검사는 가입 메일을 보내거나 실제 사용자 계정을 생성하지 않는다.
+- 실제 연결 설정을 적용한 상태에서 lint, 타입 검사, 단위 테스트 71개, 프로덕션 빌드가 통과했다. 보호 학습 경로는 쿠키 기반 동적 경로로 빌드됐다.
+- 연결 후 모의 HTTP fixture E2E 전체 재실행은 데스크톱 8개가 통과한 뒤 실행기/teardown의 240초 시간 제한에 도달해 모바일 8개가 실행되지 않았다. 이 재실행을 전체 통과로 기록하지 않는다. 앞선 계정 기능 구현 단계에서 16개가 모두 통과한 결과와 구분한다. 이어 모바일만 별도 실행하여 8개 테스트의 통과를 확인했다. 전체 모음의 실행기 제한은 별도 이슈로 남긴다.
+
+**남은 사용자 확인:** 실제 이메일로 회원가입하여 인증 메일을 수신하고 인증 링크를 완료한 뒤 로그인하는 과정은 자동으로 수행하지 않았다. 개인 비밀번호는 요청하거나 대신 설정하지 않았다. 연결 도구에 Auth 설정 변경 기능이 없고 CLI/관리 화면은 별도 로그인이 필요해 Site URL/Redirect URL 및 SMTP를 임의로 변경하지 않았다. 로컬 기본 주소는 `http://localhost:3000`이며, 실제 이메일 발송/다른 배포 도메인 설정은 가입 시 또는 배포 시 확인해야 한다.
+
+모의 HTTP fixture를 사용하는 E2E 결과와 위 실제 DB/RLS 검증은 서로 다른 검사다. 위 계정 기능 확장 단계의 “실제 연결 대기” 상태는 이번 연결 작업으로 해소됐다. 실제 사용자 이메일 가입 검증과 전체 170단원 canonical 게이트는 여전히 완료로 표시하지 않는다.

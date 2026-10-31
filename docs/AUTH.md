@@ -4,7 +4,7 @@
 
 2026-10-31 사용자 요청으로 최초 MVP의 인증 제외 범위를 확장했다. 이메일을 아이디로 사용하는 회원가입·비밀번호 로그인·로그아웃, 학습 페이지/API의 서버 인증, 계정별 PostgreSQL 저장 어댑터와 마이그레이션을 추가했다. `feat/account-login`은 `feat/math90-mvp`에서 분기했다.
 
-전용 Supabase 프로젝트 생성은 도구에서 비용 확인 ID를 요구하여 보류 중이다. 조회된 비용은 월 $0이고, 조직 `kmarx7's Org` 선택과 이 비용에 대한 명시적 동의를 요청했다. 동의 전에는 프로젝트 생성·DB 변경을 하지 않는다. 따라서 **연결 코드가 구현되어 있어도 실제 Supabase 계정 생성/로그인/저장이 검증되었다고 주장하지 않는다.**
+사용자의 “연결해줘” 동의 후 `kmarx7's Org`에 조회 비용 월 $0의 Math 90 전용 프로젝트를 생성하고 연결했다. 프로젝트 ref는 `aaeitniisrtssiuertxo`, 리전은 서울 `ap-northeast-2`이다. 마이그레이션과 실제 PostgreSQL RLS 소유권 검증을 통과했고 보안·성능 advisors에 지적 사항이 없다. `.env.local`에 URL과 publishable 키만 저장했으며 Git에서는 제외한다. 실제 사용자 가입·이메일 수신·인증 링크·성공 로그인은 사용자가 자신의 이메일로 처음 가입할 때 확인해야 하며 자동 검증 완료로 주장하지 않는다.
 
 ## 사용자 흐름
 
@@ -38,10 +38,18 @@ RLS는 SELECT/INSERT/UPDATE 모두 `auth.uid() = user_id`를 요구하고 UPDATE
 
 진도 API는 검증된 블록 확인 작업만 받는다. 전체 state나 임의 평가 점수 덮어쓰기 요청은 받지 않는다. 문제 정답과 점수는 서버 채점 결과에서 기록한다. 학습 스냅샷은 교육 지표이며 독립적이고 변조 불가능한 고부담 시험 성적표는 아니다. 현재 10,000회 기록 상한 이후의 보관 정책은 후속 범위다.
 
-## 설정 절차
+## 연결된 프로젝트
+
+[Supabase Math 90 관리 화면](https://supabase.com/dashboard/project/aaeitniisrtssiuertxo)에서 확인한다. 이메일 가입은 활성화, 이메일 자동 확인은 비활성화(인증 메일 확인 필요), 익명 가입은 비활성화 상태다. 사용자는 `http://localhost:3000/signup`에서 직접 계정을 만든다. 비밀번호를 채팅에 보내지 않는다.
+
+기본 이메일 서비스의 실제 발송/수신과 배포 도메인의 Redirect URL은 별도 확인 대상이다. Auth 설정을 변경하는 연결 도구가 없어 Site URL/Redirect URL은 임의 변경하지 않았으며, 현재 로컬 기본 주소를 사용한다. 다른 도메인에 배포할 때 관리 화면에서 해당 주소를 등록해야 한다.
+
+SQL 도구가 반환한 실제 적용 버전 `20261031083910`과 로컬 파일명을 동기화했다. `supabase/tests/learning_progress_rls.sql`은 실제 실행한 롤백 검증을 재현한다.
+
+## 새 환경 설정 절차
 
 1. 허용된 Supabase 프로젝트를 생성하거나 기존 전용 프로젝트를 선택한다.
-2. 프로젝트의 테이블을 확인하고 `supabase/migrations/20261031082333_account_learning_progress.sql`을 적용한다. 기존 데이터가 있는 프로젝트에 무작정 적용하지 않는다.
+2. 프로젝트의 테이블을 확인하고 `supabase/migrations/20261031083910_account_learning_progress.sql`을 적용한다. 기존 데이터가 있는 프로젝트에 무작정 적용하지 않는다.
 3. `.env.example`을 `.env.local`로 복사하고 해당 프로젝트의 URL과 **publishable** 키를 입력한다. `.env.local`은 Git에서 제외한다.
 4. Supabase Auth의 Site URL을 실제 앱 주소로 지정하고 `/auth/callback` 주소를 허용 Redirect URL에 등록한다. 로컬은 `http://localhost:3000/auth/callback`이다. 이메일 인증을 유지하고 테스트용 기본 메일러의 제약과 SMTP 설정을 확인한다.
 5. 앱을 다시 실행하고 실제 테스트 계정으로 가입·이메일 인증·로그인·기록 저장·로그아웃·재로그인을 확인한다.
