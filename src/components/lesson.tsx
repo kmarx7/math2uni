@@ -3,11 +3,13 @@ import Link from "next/link";
 import { useState } from "react";
 import type { ContentDocument, Block, Unit } from "@/contracts";
 import { useProgress } from "./progress-provider";
-import { PlaceLab } from "./place-lab";
+import { MathLab } from "./math-lab";
+import { curriculum } from "@/data/curriculum";
+import { getLesson } from "@/data/content";
 import { ProblemSession } from "./problem-session";
-import { mastery, isComplete } from "@/modules/progress";
+import { mastery, isComplete, unitProgress } from "@/modules/progress";
 import { Check, ArrowLeft, CheckCircle2 } from "lucide-react";
-function BlockRenderer({ block }: { block: Block }) {
+function BlockRenderer({ block, unitId }: { block: Block; unitId: string }) {
   switch (block.type) {
     case "ExplanationBlock":
       return (
@@ -17,7 +19,7 @@ function BlockRenderer({ block }: { block: Block }) {
         </>
       );
     case "InteractiveBlock":
-      return <PlaceLab />;
+      return <MathLab block={block} />;
     case "WorkedExampleBlock":
       return (
         <ol className="worked-steps">
@@ -30,17 +32,34 @@ function BlockRenderer({ block }: { block: Block }) {
         </ol>
       );
     case "PracticeBlock":
-      return <ProblemSession />;
+      return <ProblemSession unitId={unitId} hintText={block.hint} />;
     case "AssessmentBlock":
-      return <ProblemSession mode="assessment" />;
+      return <ProblemSession unitId={unitId} mode="assessment" />;
     default:
       return <p className="block-body">{block.body}</p>;
   }
 }
 export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
   const { state, completeBlock, saving } = useProgress();
+  const progress = state
+    ? unitProgress(state, unit.id)
+    : { completedBlocks: [], assessmentScore: null };
+  const next = curriculum.units.find(
+    (candidate) =>
+      candidate.order === unit.order + 1 &&
+      candidate.status === "published" &&
+      getLesson(candidate.id),
+  );
+  const missing = unit.prerequisites
+    .filter((skill) => mastery(state?.attempts ?? [], skill) < 80)
+    .map((skill) => ({
+      skill,
+      unit: curriculum.units.find((candidate) =>
+        candidate.concepts.some((c) => c.id === skill),
+      ),
+    }));
   const completed = doc.blocks.filter((b) =>
-    state?.completedBlocks.includes(b.id),
+    progress.completedBlocks.includes(b.id),
   ).length;
   const done = state
     ? isComplete(
@@ -67,6 +86,28 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
           {completed} / {doc.blocks.length} 블록 확인
         </span>
       </div>
+      {missing.length > 0 && (
+        <aside className="notice prerequisite-notice">
+          <div>
+            <strong>먼저 확인하면 좋은 선수 개념</strong>
+            <p>
+              아직 익숙하지 않은 개념이 있어요. 해당 단원에서 복습하거나 이번
+              단원을 살펴볼 수 있습니다.
+            </p>
+            <div className="prerequisite-links">
+              {missing.map(
+                ({ skill, unit: previous }) =>
+                  previous && (
+                    <Link key={skill} href={`/learn/${previous.id}`}>
+                      {previous.id} ·{" "}
+                      {previous.concepts.find((c) => c.id === skill)?.label}
+                    </Link>
+                  ),
+              )}
+            </div>
+          </div>
+        </aside>
+      )}
       <div className="lesson-layout">
         <nav className="lesson-index" aria-label="학습 단계">
           <span className="eyebrow">LEARNING PATH</span>
@@ -74,12 +115,12 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
             <a href={`#${b.id}`} key={b.id}>
               <span
                 className={
-                  state?.completedBlocks.includes(b.id)
+                  progress.completedBlocks.includes(b.id)
                     ? "index-number checked"
                     : "index-number"
                 }
               >
-                {state?.completedBlocks.includes(b.id) ? (
+                {progress.completedBlocks.includes(b.id) ? (
                   <Check size={13} />
                 ) : (
                   String(i + 1).padStart(2, "0")
@@ -111,16 +152,18 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
                 </span>
                 <h2>{block.title}</h2>
               </div>
-              <BlockRenderer block={block} />
+              <BlockRenderer block={block} unitId={unit.id} />
               <button
-                className={`block-check ${state?.completedBlocks.includes(block.id) ? "done" : ""}`}
+                className={`block-check ${progress.completedBlocks.includes(block.id) ? "done" : ""}`}
                 disabled={
-                  !state || saving || state.completedBlocks.includes(block.id)
+                  !state ||
+                  saving ||
+                  progress.completedBlocks.includes(block.id)
                 }
                 onClick={() => completeBlock(unit.id, block.id)}
               >
                 <CheckCircle2 size={17} />
-                {state?.completedBlocks.includes(block.id)
+                {progress.completedBlocks.includes(block.id)
                   ? "확인했어요"
                   : "이 단계를 확인했어요"}
               </button>
@@ -128,13 +171,31 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
           ))}
           <section className="completion">
             <h2>
-              {done ? "첫 단원을 완료했어요!" : "이해를 쌓아, 첫 단원 완료까지"}
+              {done
+                ? unit.id === "M0-01"
+                  ? "첫 단원을 완료했어요!"
+                  : `${unit.id} 단원을 완료했어요!`
+                : "이해를 쌓아, 단원 완료까지"}
             </h2>
             <p>
               블록 확인 {completed}/{doc.blocks.length} · 형성평가{" "}
-              {state?.assessmentScore ?? 0}점 · 개념별 숙달도 80% 이상 필요
+              {progress.assessmentScore ?? 0}점 · 개념별 숙달도 80% 이상 필요
             </p>
-            <p>다음 단원 M0-02는 아직 준비 중이에요.</p>
+            {next ? (
+              <p>
+                다음 단원 · {next.id} {next.title}
+              </p>
+            ) : (
+              <p>
+                LEVEL 0의 마지막 단원입니다. LEVEL 1은 정본 목록 검토 후
+                이어집니다.
+              </p>
+            )}
+            {done && next && (
+              <Link href={`/learn/${next.id}`} className="button">
+                다음 단원 학습하기
+              </Link>
+            )}
             <Link href="/review" className="button">
               복습 일정 확인하기
             </Link>
@@ -156,7 +217,7 @@ function ReadinessCheck() {
           aria-pressed={ready === true}
           onClick={() => setReady(true)}
         >
-          십 묶음을 설명할 수 있어요
+          선수 개념을 설명할 수 있어요
         </button>
         <button
           className="button secondary"
@@ -169,11 +230,11 @@ function ReadinessCheck() {
       {ready !== null && (
         <p className="hint" role="status">
           {ready ? (
-            "좋아요. 숫자와 자릿값의 차이를 살펴보세요."
+            "좋아요. 이번 단원의 핵심 개념을 살펴보세요."
           ) : (
             <>
-              먼저 낱개 10개가 십 묶음 1개가 되는 관계를 연습해요.{" "}
-              <a href="#lab">자리표 실험실로 이동하기</a>
+              기초 설명과 예제를 먼저 확인하고, 수학 실험실에서 직접 조작해
+              보세요. <a href="#lab">수학 실험실로 이동하기</a>
             </>
           )}
         </p>

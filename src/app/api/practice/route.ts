@@ -11,16 +11,23 @@ import { SupabaseProgressRepository } from "@/modules/progress/server";
 import { transactProgress } from "@/modules/progress/account-repository";
 import { applySubmission } from "@/modules/progress/mutations";
 import { badRequest, noStore, readJson } from "../http";
-export async function GET() {
+export async function GET(request?: Request) {
+  const unitId = request
+    ? (new URL(request.url).searchParams.get("unitId") ?? "M0-01")
+    : "M0-01";
   const { response } = await apiAccount();
   if (response) return response;
   return Response.json(
-    { problems: publicProblems("practice"), preview: isPreview() },
+    { problems: publicProblems("practice", unitId), preview: isPreview() },
     { headers: noStore },
   );
 }
 const inputSchema = z
   .object({
+    unitId: z
+      .string()
+      .regex(/^M[0-8]-\d{2}$/)
+      .default("M0-01"),
     problemId: z.string().max(100),
     answer: z.string().max(64),
     requestId: z.uuid(),
@@ -38,7 +45,7 @@ export async function POST(request: Request) {
   } catch (error) {
     return badRequest(error);
   }
-  const problem = privateProblems("practice").find(
+  const problem = privateProblems("practice", input.unitId).find(
     (p) => p.id === input.problemId,
   );
   if (!problem)
@@ -55,6 +62,7 @@ export async function POST(request: Request) {
     );
     const snapshot = await transactProgress(repository, account.id, (s) =>
       applySubmission(s, {
+        unitId: problem.unitId,
         requestId: input.requestId,
         answers: { [problem.id]: input.answer },
         feedback: [feedback],

@@ -51,8 +51,6 @@ export function gradeAnswer(rule: AnswerRule, raw: string): Grade {
   const correct = actual[0] * expected[1] === expected[0] * actual[1];
   return {
     status: correct ? "correct" : "incorrect",
-    message: correct
-      ? "정답이에요!"
-      : "숫자가 놓인 자리와 자릿값을 다시 확인해 보세요.",
+    message: correct ? "정답이에요!" : "조건과 계산 과정을 다시 확인해 보세요.",
   };
 }

@@ -6,9 +6,13 @@ import { Check, ArrowRight, Lightbulb } from "lucide-react";
 export function ProblemSession({
   mode = "practice",
   onlyId,
+  unitId = "M0-01",
+  hintText = "문제의 조건을 정리하고, 개념 설명과 풀이 예제를 한 단계씩 확인해 보세요.",
 }: {
   mode?: "practice" | "assessment" | "review";
   onlyId?: string;
+  unitId?: string;
+  hintText?: string;
 }) {
   const assessment = mode === "assessment";
   const endpoint = assessment ? "assessment" : "practice";
@@ -26,7 +30,9 @@ export function ProblemSession({
     [preview, setPreview] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`/api/${endpoint}`, { signal: controller.signal })
+    fetch(`/api/${endpoint}?unitId=${encodeURIComponent(unitId)}`, {
+      signal: controller.signal,
+    })
       .then((r) => {
         if (!r.ok) throw new Error();
         return r.json();
@@ -45,7 +51,7 @@ export function ProblemSession({
           setError("문항을 불러오지 못했어요. 페이지를 새로고침해 주세요.");
       });
     return () => controller.abort();
-  }, [endpoint, onlyId]);
+  }, [endpoint, onlyId, unitId]);
   const filtered = problems.filter(
       (p) => filter === "all" || p.reasoning === filter,
     ),
@@ -62,8 +68,9 @@ export function ProblemSession({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           assessment
-            ? { answers, requestId }
+            ? { unitId, answers, requestId }
             : {
+                unitId,
                 problemId: problem.id,
                 answer: answers[problem.id] ?? "",
                 requestId,
@@ -135,9 +142,10 @@ export function ProblemSession({
                 name={p.id}
                 value={choice.id}
                 checked={answers[p.id] === choice.id}
-                onChange={() =>
-                  setAnswers((a) => ({ ...a, [p.id]: choice.id }))
-                }
+                onChange={() => {
+                  setRequestId(crypto.randomUUID());
+                  setAnswers((a) => ({ ...a, [p.id]: choice.id }));
+                }}
                 required
               />
               <span className="choice-index">{i + 1}</span>
@@ -147,17 +155,30 @@ export function ProblemSession({
         </div>
       ) : (
         <div className="answer-field">
-          <label htmlFor={p.id}>답안 (정수 · 쉼표 없이)</label>
+          <label htmlFor={p.id}>
+            {p.input === "fraction"
+              ? "답안 (분수 · a/b)"
+              : p.input === "decimal"
+                ? "답안 (소수)"
+                : "답안 (정수 · 쉼표 없이)"}
+          </label>
           <input
             id={p.id}
-            inputMode="numeric"
+            inputMode={
+              p.input === "fraction" || unitId === "M0-11"
+                ? "text"
+                : p.input === "decimal"
+                  ? "decimal"
+                  : "numeric"
+            }
             autoComplete="off"
             maxLength={64}
             placeholder="숫자를 입력하세요"
             value={answers[p.id] ?? ""}
-            onChange={(e) =>
-              setAnswers((a) => ({ ...a, [p.id]: e.target.value }))
-            }
+            onChange={(e) => {
+              setRequestId(crypto.randomUUID());
+              setAnswers((a) => ({ ...a, [p.id]: e.target.value }));
+            }}
             required
           />
         </div>
@@ -236,7 +257,10 @@ export function ProblemSession({
                 <button
                   type="button"
                   className="button secondary"
-                  onClick={() => setHint(true)}
+                  onClick={() => {
+                    setRequestId(crypto.randomUUID());
+                    setHint(true);
+                  }}
                 >
                   <Lightbulb size={16} />
                   힌트 보기
@@ -261,8 +285,7 @@ export function ProblemSession({
       {hint && !assessment && (
         <p className="hint">
           <Lightbulb size={16} />
-          오른쪽부터 일, 십, 백, 천의 자리를 적어 보세요. 숫자와 그 숫자의
-          자릿값을 구분해요. 힌트 사용은 기록됩니다.
+          {hintText} 힌트 사용은 기록됩니다.
         </p>
       )}
       {score !== null && (

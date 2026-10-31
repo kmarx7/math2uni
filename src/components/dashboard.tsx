@@ -19,23 +19,32 @@ import {
   recommendPractice,
 } from "@/modules/progress";
 import { curriculum } from "@/data/curriculum";
-import { lesson } from "@/data/content";
+import { getLesson } from "@/data/content";
 export function Dashboard() {
   const { state } = useProgress();
   const attempts = state?.attempts ?? [];
-  const skills = curriculum.units[0].concepts;
+  const available = curriculum.units.filter(
+    (unit) => unit.status === "published" && getLesson(unit.id),
+  );
+  const completed = state
+    ? available.filter((unit) =>
+        isComplete(
+          state,
+          unit,
+          getLesson(unit.id)!.blocks.map((block) => block.id),
+        ),
+      )
+    : [];
+  const current =
+    available.find((unit) => !completed.some((done) => done.id === unit.id)) ??
+    available[0];
+  const skills = current.concepts;
   const mean = Math.round(
       skills.reduce((n, c) => n + mastery(attempts, c.id), 0) / skills.length,
     ),
     due = dueReviews(attempts),
     wrong = wrongAnswers(attempts),
-    done = state
-      ? isComplete(
-          state,
-          curriculum.units[0],
-          lesson.blocks.map((b) => b.id),
-        )
-      : false;
+    done = completed.length;
   const recommendation = recommendPractice(
     attempts,
     skills.map((c) => c.id),
@@ -62,19 +71,19 @@ export function Dashboard() {
               <span /> 오늘의 추천 학습
             </span>
             <div className="unit-tag">
-              LEVEL 0 <span>·</span> M0-01
+              LEVEL {current.level} <span>·</span> {current.id}
             </div>
             <h2>
               수학의 첫걸음,
               <br />
-              자연수와 자리값
+              {current.title}
             </h2>
             <p>
-              숫자의 위치가 바뀌면 값도 달라져요.
+              {current.objectives[0]}
               <br />
               직접 움직이며 수의 구조를 발견해 보세요.
             </p>
-            <Link className="button white" href="/learn/M0-01">
+            <Link className="button white" href={`/learn/${current.id}`}>
               {attempts.length ? "이어서 학습하기" : "첫 학습 시작하기"}{" "}
               <ArrowRight size={18} />
             </Link>
@@ -130,7 +139,7 @@ export function Dashboard() {
           </div>
           <div className="journey-bottom">
             <span>
-              <b>{done ? 1 : 0}</b> / 1 공개 단원 완료
+              <b>{done}</b> / {available.length} 검토용 단원 완료
             </span>
             <Link href="/curriculum" aria-label="커리큘럼으로 이동">
               <ArrowUpRight size={19} />
@@ -237,8 +246,8 @@ export function Dashboard() {
             <br />
             나의 말로 설명해 볼까요?
           </p>
-          <Link href="/learn/M0-01">
-            <span>자리표로 이해하러 가기</span>
+          <Link href={`/learn/${current.id}`}>
+            <span>지금 개념 이해하러 가기</span>
             <span className="round-arrow">
               <MoveUpRight size={19} />
             </span>
@@ -247,7 +256,7 @@ export function Dashboard() {
       </div>
       <div className="scope-note">
         <span className="soft-tag">공개 범위</span> 전체 170단원을 목표로 설계
-        중입니다. 지금은 M0-01 한 단원을 학습할 수 있어요.
+        중입니다. 지금은 LEVEL 0의 12단원을 검토용으로 학습할 수 있어요.
       </div>
     </div>
   );

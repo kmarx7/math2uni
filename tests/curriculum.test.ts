@@ -57,7 +57,7 @@ describe("curriculum contracts", () => {
     const doc = structuredClone(lesson);
     doc.blocks.push(doc.blocks[0]);
     expect(validateContent(doc, curriculum.units)).toContain("블록 ID 중복");
-    doc.unitId = "M0-02";
+    doc.unitId = "M1-01";
     expect(validateContent(doc, curriculum.units)).toContain(
       "공개 단원 참조 필요",
     );

@@ -5,6 +5,7 @@ export function scoreProblem(p: ProblemInstance, answer: string): Feedback {
     return {
       status: "invalid",
       message: "보기 중 하나를 선택하세요.",
+      unitId: p.unitId,
       problemId: p.id,
       version: p.version,
       skillId: p.skillId,
@@ -13,6 +14,7 @@ export function scoreProblem(p: ProblemInstance, answer: string): Feedback {
   const grade = gradeAnswer(p.answerRule, answer);
   const result: Feedback = {
     ...grade,
+    unitId: p.unitId,
     problemId: p.id,
     version: p.version,
     skillId: p.skillId,

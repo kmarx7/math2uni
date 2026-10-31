@@ -2271,3 +2271,179 @@ footer,
     padding: 4px 0;
   }
 }
+.lab-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+.lab-control {
+  display: block;
+  margin: 18px 0;
+  color: #516b48;
+  font-size: 12px;
+}
+.lab-control > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.lab-control strong {
+  font-size: 17px;
+  color: var(--green);
+}
+.lab-control input {
+  display: block;
+  width: 100%;
+  accent-color: var(--green);
+  min-height: 38px;
+}
+.lab-operation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #516b48;
+  font-size: 12px;
+}
+.lab-operation select {
+  padding: 9px;
+  border: 1px solid #d7e3cc;
+  border-radius: 5px;
+  background: white;
+}
+.fraction-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 15px;
+}
+.fraction-whole {
+  display: grid;
+  gap: 3px;
+  min-height: 30px;
+}
+.fraction-whole i {
+  display: block;
+  background: #fff;
+  border: 1px solid #cbdcbe;
+  min-height: 30px;
+}
+.fraction-whole i.filled {
+  background: #82a66c;
+  border-color: #75945e;
+}
+.ratio-track {
+  height: 35px;
+  border: 1px solid #cbdcbe;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.ratio-track span {
+  display: block;
+  height: 100%;
+  background: #82a66c;
+}
+.signed-line {
+  position: relative;
+  height: 3px;
+  background: #648357;
+  margin: 65px 24px 12px;
+}
+.signed-line > span {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.signed-line > span:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.line-start {
+  bottom: 11px;
+  color: #516c95;
+}
+.line-start:after {
+  background: #6685a8;
+  bottom: -14px;
+}
+.line-end {
+  top: 13px;
+  color: #3e6d37;
+}
+.line-end:after {
+  background: #679b59;
+  top: -16px;
+}
+.line-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 45px;
+  color: #708963;
+  font-size: 10px;
+}
+.factor-list {
+  line-height: 1.9;
+  color: #47683d;
+  padding: 15px;
+  background: white;
+  border-radius: 6px;
+}
+.multiplication-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.multiplication-groups > div {
+  border: 1px solid #b6cfa5;
+  border-radius: 5px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 8px);
+  gap: 5px;
+  min-width: 20px;
+  min-height: 20px;
+}
+.multiplication-groups i {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #759d60;
+}
+.prerequisite-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.prerequisite-links a {
+  border: 1px solid #c5d7ba;
+  border-radius: 4px;
+  background: white;
+  padding: 7px 10px;
+  font-size: 11px;
+}
+.completion > .button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.unit-progress-line {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: #56754a;
+  margin-top: 12px;
+}
+.unit-row.completed {
+  border-color: #80a471;
+  background: #f9fcf6;
+}
+.math-lab .lab-result strong{font-size:clamp(23px,3vw,38px);overflow-wrap:anywhere}

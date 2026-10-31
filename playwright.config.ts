@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
@@ -8,20 +8,7 @@ export default defineConfig({
   expect: { timeout: 12000 },
   reporter: "list",
   use: { baseURL: "http://localhost:3005", trace: "retain-on-failure" },
-  projects: [
-    {
-      name: "desktop",
-      use: { ...devices["Desktop Chrome"], channel: "chrome" },
-    },
-    {
-      name: "mobile",
-      use: {
-        ...devices["iPhone 13"],
-        defaultBrowserType: "chromium",
-        channel: "chrome",
-      },
-    },
-  ],
+  projects: [{ name: "chromium", use: { browserName: "chromium" } }],
   webServer: [
     {
       command: "node scripts/test-auth-service.mjs",

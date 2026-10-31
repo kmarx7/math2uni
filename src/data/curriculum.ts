@@ -1,3 +1,8 @@
+import {
+  foundationUnits,
+  foundationConcepts,
+  foundationPrerequisites,
+} from "./level-zero-units";
 import type { Curriculum, Unit } from "@/contracts";
 const titles = [
   "자연수와 자리값",
@@ -14,7 +19,7 @@ const titles = [
   "기초 학습 종합 점검",
 ];
 export const curriculum: Curriculum = {
-  version: "0.1.0-draft",
+  version: "0.2.0-level-zero-draft",
   coverage: "partial",
   targetCount: 170,
   canonicalManifest: [],
@@ -37,7 +42,7 @@ export const curriculum: Curriculum = {
     level: 0,
     order: i + 1,
     title,
-    status: i === 0 ? "published" : "draft",
+    status: "published",
     version: "1.0.0",
     objectives:
       i === 0
@@ -46,7 +51,7 @@ export const curriculum: Curriculum = {
             "0이 있는 수를 읽고 분해한다",
             "조건에 맞는 자연수를 구성한다",
           ]
-        : [`${title}의 뜻을 설명한다`, `${title}의 기본 문제를 해결한다`],
+        : foundationUnits[i - 1].objectives,
     concepts:
       i === 0
         ? [
@@ -54,21 +59,20 @@ export const curriculum: Curriculum = {
             { id: "compose", label: "수의 분해와 합성" },
             { id: "infer", label: "조건으로 수 찾기" },
           ]
-        : [{ id: `m0-${i + 1}-core`, label: title }],
-    prerequisites:
-      i === 0 ? [] : i === 1 ? ["place", "compose"] : [`m0-${i}-core`],
+        : foundationConcepts(i + 1, foundationUnits[i - 1].concepts),
+    prerequisites: i === 0 ? [] : foundationPrerequisites[i + 1],
     visualization:
       i === 0
         ? ["십진 자리표와 묶음 조작"]
-        : ["수직선 또는 수 모형 (편집 초안)"],
+        : [foundationUnits[i - 1].lab.interaction],
     problemTypes:
       i === 0
         ? ["자릿값 식별", "분해·합성", "조건 역추론"]
-        : ["기본 개념 확인 (편집 초안)"],
+        : foundationUnits[i - 1].concepts,
     assessmentPlan:
       i === 0
         ? "선수 진단 + 연습 3원형 + 독립 형성평가 3문항, 80% 이상"
-        : "개념 확인 및 형성평가 계획 검토 필요",
+        : "선수 자기 점검 + 연습 3원형 + 분리된 형성평가 3문항, 80% 이상",
     standards: [],
   })),
 };

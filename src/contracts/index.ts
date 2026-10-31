@@ -50,12 +50,31 @@ export const blockSchema = z.discriminatedUnion("type", [
   z.object({
     ...base,
     type: z.literal("InteractiveBlock"),
-    interaction: z.literal("place-value"),
+    interaction: z.enum([
+      "place-value",
+      "arithmetic",
+      "fraction",
+      "fraction-sum",
+      "decimal",
+      "ratio",
+      "number-line",
+    ]),
+    settings: z
+      .object({
+        operation: z
+          .enum(["add", "multiply", "divide", "mixed", "factors"])
+          .optional(),
+        initialA: z.number().int().min(-20).max(60),
+        initialB: z.number().int().min(-20).max(60),
+        initialC: z.number().int().min(0).max(12).optional(),
+      })
+      .optional(),
   }),
   z.object({
     ...base,
     type: z.literal("PracticeBlock"),
     purpose: z.literal("practice"),
+    hint: text.optional(),
   }),
   z.object({ ...base, type: z.literal("FeedbackBlock"), body: text }),
   z.object({
@@ -151,6 +170,7 @@ export type Grade = {
   message: string;
 };
 export type Feedback = Grade & {
+  unitId?: string;
   problemId: string;
   version: string;
   skillId: string;
@@ -161,6 +181,10 @@ export type Feedback = Grade & {
   misconception?: string;
 };
 export const attemptSchema = z.object({
+  unitId: z
+    .string()
+    .regex(/^M[0-8]-\d{2}$/)
+    .optional(),
   id,
   problemId: id,
   version: id,
@@ -185,6 +209,15 @@ export const progressSchema = z.object({
   attempts: z.array(attemptSchema).max(10000),
   completedBlocks: z.array(id),
   assessmentScore: z.number().min(0).max(100).nullable(),
+  unitProgress: z
+    .record(
+      z.string().regex(/^M[0-8]-\d{2}$/),
+      z.object({
+        completedBlocks: z.array(id),
+        assessmentScore: z.number().min(0).max(100).nullable(),
+      }),
+    )
+    .optional(),
 });
 export type ProgressState = z.infer<typeof progressSchema>;
 export interface ProgressRepository {

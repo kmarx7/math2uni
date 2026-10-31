@@ -65,3 +65,19 @@ export const lesson: ContentDocument = {
     },
   ],
 };
+
+// Public content only; assessment answers remain in the server-side bank.
+import { curriculum } from "./curriculum";
+import { foundationUnits, foundationLesson } from "./level-zero-units";
+export const lessons: ContentDocument[] = [
+  lesson,
+  ...foundationUnits.map((definition) =>
+    foundationLesson(
+      curriculum.units.find((unit) => unit.order === definition.number)!,
+      definition,
+    ),
+  ),
+];
+export function getLesson(unitId: string) {
+  return lessons.find((document) => document.unitId === unitId);
+}

@@ -1,13 +1,20 @@
 "use client";
 import Link from "next/link";
+import type { Attempt } from "@/contracts";
+import { curriculum } from "@/data/curriculum";
 import { useState } from "react";
 import { useProgress } from "./progress-provider";
-import { wrongAnswers, dueReviews, reviewSchedule } from "@/modules/progress";
+import {
+  wrongAnswers,
+  dueReviews,
+  reviewSchedule,
+  attemptUnitId,
+} from "@/modules/progress";
 import { ProblemSession } from "./problem-session";
 import { NotebookPen, CalendarDays } from "lucide-react";
 export function Records({ review = false }: { review?: boolean }) {
   const { state } = useProgress();
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Attempt | null>(null);
   const attempts = state?.attempts ?? [];
   const records = review
     ? dueReviews(attempts).map((r) => r.last)
@@ -54,7 +61,7 @@ export function Records({ review = false }: { review?: boolean }) {
           {records.map((a) => (
             <article className="card record-card" key={a.problemId}>
               <span className="eyebrow">
-                {a.problemId} · v{a.version} ·{" "}
+                {attemptUnitId(a)} · {a.problemId} · v{a.version} ·{" "}
                 {a.purpose === "assessment" ? "형성평가" : "연습"}
               </span>
               <h2>제출 답안: {a.answer}</h2>
@@ -66,16 +73,13 @@ export function Records({ review = false }: { review?: boolean }) {
               </details>
               {a.purpose === "assessment" ? (
                 <Link
-                  href="/learn/M0-01#assessment"
+                  href={`/learn/${attemptUnitId(a)}#assessment`}
                   className="button secondary"
                 >
                   전체 평가 다시 도전
                 </Link>
               ) : (
-                <button
-                  className="button"
-                  onClick={() => setSelected(a.problemId)}
-                >
+                <button className="button" onClick={() => setSelected(a)}>
                   이 문제 복습하기
                 </button>
               )}
@@ -86,7 +90,12 @@ export function Records({ review = false }: { review?: boolean }) {
       {selected && (
         <section className="card lesson-block">
           <h2>해설 없이 다시 도전</h2>
-          <ProblemSession key={selected} mode="review" onlyId={selected} />
+          <ProblemSession
+            key={selected.problemId}
+            unitId={attemptUnitId(selected)}
+            mode="review"
+            onlyId={selected.problemId}
+          />
         </section>
       )}
       {review && scheduled.length > 0 && (
@@ -94,7 +103,13 @@ export function Records({ review = false }: { review?: boolean }) {
           <h2>다가오는 복습</h2>
           {scheduled.map((r) => (
             <div key={r.problemId}>
-              <span>{r.problemId}</span>
+              <span>
+                {
+                  curriculum.units.find((u) => u.id === attemptUnitId(r.last))
+                    ?.title
+                }{" "}
+                · {r.problemId}
+              </span>
               <time dateTime={r.dueAt}>
                 {new Date(r.dueAt).toLocaleDateString("ko-KR")}
               </time>

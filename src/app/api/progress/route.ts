@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { SupabaseProgressRepository } from "@/modules/progress/server";
 import { transactProgress } from "@/modules/progress/account-repository";
 import { completeLearningBlock } from "@/modules/progress/mutations";
-import { lesson } from "@/data/content";
+import { getLesson } from "@/data/content";
 import { noStore, readJson, badRequest } from "../http";
 export async function GET() {
   const { account, response } = await apiAccount();
@@ -28,18 +28,20 @@ export async function POST(request: Request) {
   const { account, response } = await apiAccount();
   if (response) return response;
   let blockId: string;
+  let unitId: string;
   try {
     const input = z
       .object({
         type: z.literal("complete-block"),
-        unitId: z.literal("M0-01"),
+        unitId: z.string().regex(/^M[0-8]-\d{2}$/),
         blockId: z.string().max(100),
       })
       .strict()
       .parse(await readJson(request));
-    if (!lesson.blocks.some((b) => b.id === input.blockId))
+    if (!getLesson(input.unitId)?.blocks.some((b) => b.id === input.blockId))
       throw new Error("Unknown block");
     blockId = input.blockId;
+    unitId = input.unitId;
   } catch (error) {
     return badRequest(error);
   }
@@ -48,7 +50,7 @@ export async function POST(request: Request) {
       await createSupabaseServerClient(),
     );
     const snapshot = await transactProgress(repository, account.id, (s) =>
-      completeLearningBlock(s, blockId),
+      completeLearningBlock(s, blockId, unitId),
     );
     return Response.json(snapshot, { headers: noStore });
   } catch {

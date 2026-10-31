@@ -33,7 +33,7 @@ it("module graph has no cycles and engines never import UI", () => {
 it("client source never imports private bank", () => {
   for (const file of files("src/components"))
     expect(readFileSync(file, "utf8")).not.toMatch(
-      /from ['"](@\/data\/problems|@\/modules\/question-bank\/server)/,
+      /from ['"](@\/data\/(?:problems|level-zero-problems)|@\/modules\/question-bank\/server)/,
     );
   expect(readFileSync("src/modules/question-bank/server.ts", "utf8")).toMatch(
     /import ['"]server-only['"]/,

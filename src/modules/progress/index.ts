@@ -45,15 +45,31 @@ export function wrongAnswers(attempts: Attempt[]) {
     .filter((r) => !r.last.correct)
     .map((r) => r.last);
 }
+export function unitProgress(state: ProgressState, unitId: string) {
+  return (
+    state.unitProgress?.[unitId] ??
+    (unitId === "M0-01"
+      ? {
+          completedBlocks: state.completedBlocks,
+          assessmentScore: state.assessmentScore,
+        }
+      : { completedBlocks: [], assessmentScore: null })
+  );
+}
+export function attemptUnitId(attempt: Attempt) {
+  return attempt.unitId ?? "M0-01";
+}
 export function isComplete(
   state: ProgressState,
   unit: Unit,
   blockIds: string[],
 ) {
   return (
-    blockIds.every((id) => state.completedBlocks.includes(id)) &&
+    blockIds.every((id) =>
+      unitProgress(state, unit.id).completedBlocks.includes(id),
+    ) &&
     unit.concepts.every((c) => mastery(state.attempts, c.id) >= 80) &&
-    (state.assessmentScore ?? 0) >= 80
+    (unitProgress(state, unit.id).assessmentScore ?? 0) >= 80
   );
 }
 export function recommendPractice(attempts: Attempt[], skills: string[]) {

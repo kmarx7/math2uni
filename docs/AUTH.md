@@ -4,7 +4,7 @@
 
 2026-10-31 사용자 요청으로 최초 MVP의 인증 제외 범위를 확장했다. 이메일을 아이디로 사용하는 회원가입·비밀번호 로그인·로그아웃, 학습 페이지/API의 서버 인증, 계정별 PostgreSQL 저장 어댑터와 마이그레이션을 추가했다. `feat/account-login`은 `feat/math90-mvp`에서 분기했다.
 
-사용자의 “연결해줘” 동의 후 `kmarx7's Org`에 조회 비용 월 $0의 Math 90 전용 프로젝트를 생성하고 연결했다. 프로젝트 ref는 `aaeitniisrtssiuertxo`, 리전은 서울 `ap-northeast-2`이다. 마이그레이션과 실제 PostgreSQL RLS 소유권 검증을 통과했고 보안·성능 advisors에 지적 사항이 없다. `.env.local`에 URL과 publishable 키만 저장했으며 Git에서는 제외한다. 실제 사용자 가입·이메일 수신·인증 링크·성공 로그인은 사용자가 자신의 이메일로 처음 가입할 때 확인해야 하며 자동 검증 완료로 주장하지 않는다.
+사용자의 “연결해줘” 동의 후 `kmarx7's Org`에 조회 비용 월 $0의 Math 90 전용 프로젝트를 생성하고 연결했다. 프로젝트 ref는 `aaeitniisrtssiuertxo`, 리전은 서울 `ap-northeast-2`이다. 마이그레이션과 실제 PostgreSQL RLS 소유권 검증을 통과했고 보안·성능 advisors에 지적 사항이 없다. `.env.local`에 URL과 publishable 키만 저장했으며 Git에서는 제외한다. 후속 대화에서 사용자가 실제 로그인 동작 성공을 확인했다. 이메일 발송 전 과정을 에이전트가 자동 검증했다고 주장하지 않는다.
 
 ## 사용자 흐름
 

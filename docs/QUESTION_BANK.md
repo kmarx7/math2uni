@@ -2,11 +2,11 @@
 
 ## 세 계층
 
-ProblemFamily는 풀이 전략을 나타낸다. MVP는 자릿값 식별, 분해·합성, 조건 역추론 세 원형이다. 수치가 다른 인스턴스를 새로운 원형으로 세지 않는다. ProblemTemplate는 familyId, 매개변수 범위와 generator를 가진 검증된 생성 규칙이다. ProblemInstance는 고유 ID, unitId, skillId, familyId, templateId?, reasoning, difficulty D1~D5, input 방식, prompt, choices?, answerRule, answerDisplay, explanation, steps, misconceptions, status, version, provenance, reviewHistory, purpose를 갖는다.
+ProblemFamily는 풀이 전략을 나타낸다. M0-01은 자릿값 식별, 분해·합성, 조건 역추론 세 원형이다. LEVEL 0 전체는 33개 원형 ID를 사용하며 종합 점검은 기존 원형을 재사용한다. 수치가 다른 인스턴스를 새로운 원형으로 세지 않는다. ProblemTemplate는 familyId, 매개변수 범위와 generator를 가진 검증된 생성 규칙이다. ProblemInstance는 고유 ID, unitId, skillId, familyId, templateId?, reasoning, difficulty D1~D5, input 방식, prompt, choices?, answerRule, answerDisplay, explanation, steps, misconceptions, status, version, provenance, reviewHistory, purpose를 갖는다.
 
 ## 공개 규칙
 
-AI 보조로 작성한 고정 샘플 6문항(연습 3 + 평가 3), 검증된 자리값 템플릿 1개를 제공한다. 정수 범위/0이 아닌 목표 숫자/안전 정수 제약을 만족한 생성 인스턴스만 연습에 쓴다. 템플릿 버전에 실제 사람 승인 이력이 추가되면 그 이력을 상속하고 출처에 생성 매개변수를 보관한다. D1~D3만 공개되어 있고 D4~D5는 미래 계약이다. AI 생성·미승인·권리 미확인·다른 버전 승인 이력은 publication gate에서 차단한다. 관리자 대시보드는 범위 밖이며 데이터+자동 검수 게이트가 MVP의 Content Administration이다.
+AI 보조로 작성한 고정 문항 72개(12단원 × 연습 3 + 평가 3), 검증된 자리값 템플릿 1개를 제공한다. 정수 범위/0이 아닌 목표 숫자/안전 정수 제약을 만족한 생성 인스턴스만 연습에 쓴다. 템플릿 버전에 실제 사람 승인 이력이 추가되면 그 이력을 상속하고 출처에 생성 매개변수를 보관한다. D1~D3만 개발 검토용으로 제공하며 D4~D5는 미래 계약이다. AI 생성·미승인·권리 미확인·다른 버전 승인 이력은 publication gate에서 차단한다. 관리자 대시보드는 범위 밖이며 데이터+자동 검수 게이트가 MVP의 Content Administration이다.
 
 검수 상태 draft→reviewed→approved, 버전마다 승인자·시각·수학 검증 여부를 기록한다. 초기 문항은 reviewed 상태이며 자동 정합성 검사만 기록했다. 사람의 관리자 승인은 없고 `approvals.json`은 비어 있다. 로컬 개발의 명시적 검토 모드에서만 샘플을 제공하며 운영에서는 canPublish를 통과하지 못해 문항이 표시되지 않는다. 이것은 외부 교육과정 공인이나 독립 전문가 검증을 의미하지 않는다. 저작자는 Math 90 프로젝트, 권리는 project-original이다. 외부 기출은 포함하지 않는다.
 
@@ -19,3 +19,9 @@ AI 보조로 작성한 고정 샘플 6문항(연습 3 + 평가 3), 검증된 자
 ## QA
 
 스키마, ID와 본문 정규화 중복, 단원/개념/원형/용도 참조, choices의 유일성, 정답 자기 채점, 템플릿 모든 유한 조합 정답, independent reference model, 해설 단계에 정답 표기, 승인 필터, 평가 비노출을 검사한다. 해설의 의미적 완전성은 자동 검사만으로 보증할 수 없으므로 전문 교육 검토는 후속 과제다.
+
+## LEVEL 0 문항 묶음
+
+`level-zero-problems.ts`는 서버 전용 bank에서만 가져온다. M0-02~12 고정 66개에 기존 6개를 더한다. 자리값 생성 샘플 2개까지 bank 인스턴스는 74개이다. 각 단원의 연습/평가 집합은 별도이며 GET/POST의 unitId로 범위를 제한한다. 전체 평가에 다른 단원 응답을 섞으면 완료로 처리하지 않는다.
+
+신규 66개 정답은 단순 정답 자기 채점 외에 별도의 수학 계산식으로 재계산한다. 다단계 곱셈·나눗셈의 중간 계산과 해설도 회귀 검사한다. reviewed는 자동 검사 상태이고 승인 기록은 여전히 비어 있다. D4~D5 및 독립 모의평가는 이번 묶음 밖이다.
