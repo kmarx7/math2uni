@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import type { PublicProblem, Feedback, Attempt } from "@/contracts";
+import type { PublicProblem, Feedback } from "@/contracts";
 import { useProgress } from "./progress-provider";
 import { Check, ArrowRight, Lightbulb } from "lucide-react";
 export function ProblemSession({
@@ -12,14 +12,13 @@ export function ProblemSession({
 }) {
   const assessment = mode === "assessment";
   const endpoint = assessment ? "assessment" : "practice";
-  const { state, update } = useProgress();
+  const { state, replaceSnapshot } = useProgress();
   const [problems, setProblems] = useState<PublicProblem[]>([]),
     [answers, setAnswers] = useState<Record<string, string>>({}),
     [results, setResults] = useState<Feedback[]>([]),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false),
     [hint, setHint] = useState(false),
-    [retry, setRetry] = useState(false),
     [index, setIndex] = useState(0),
     [filter, setFilter] = useState("all"),
     [score, setScore] = useState<number | null>(null),
@@ -51,43 +50,7 @@ export function ProblemSession({
       (p) => filter === "all" || p.reasoning === filter,
     ),
     problem = filtered[index];
-  function record(feedback: Feedback[], savedScore?: number) {
-    const now = new Date().toISOString();
-    update((s) => {
-      const added: Attempt[] = feedback
-        .filter((r) => r.status === "correct" || r.status === "incorrect")
-        .map((r) => ({
-          id: crypto.randomUUID(),
-          problemId: r.problemId,
-          version: r.version,
-          skillId: r.skillId,
-          purpose: mode,
-          answer: answers[r.problemId] ?? "",
-          correct: r.status === "correct",
-          hintUsed: hint,
-          retry:
-            retry ||
-            s.attempts.some(
-              (a) =>
-                a.problemId === r.problemId &&
-                a.version === r.version &&
-                Date.parse(now) - Date.parse(a.at) < 86_400_000,
-            ),
-          at: now,
-          feedback: {
-            answerDisplay: r.answerDisplay!,
-            explanation: r.explanation!,
-            steps: r.steps!,
-            misconception: r.misconception,
-          },
-        }));
-      return {
-        ...s,
-        attempts: [...s.attempts, ...added],
-        assessmentScore: savedScore ?? s.assessmentScore,
-      };
-    }, state?.profileId);
-  }
+  const [requestId, setRequestId] = useState(() => crypto.randomUUID());
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (!state || busy) return;
@@ -99,8 +62,14 @@ export function ProblemSession({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           assessment
-            ? { answers }
-            : { problemId: problem.id, answer: answers[problem.id] ?? "" },
+            ? { answers, requestId }
+            : {
+                problemId: problem.id,
+                answer: answers[problem.id] ?? "",
+                requestId,
+                hintUsed: hint,
+                mode: mode === "review" ? "review" : "practice",
+              },
         ),
       });
       const data = await response.json();
@@ -114,9 +83,9 @@ export function ProblemSession({
         setError(feedback[0].message);
         return;
       }
+      replaceSnapshot(data);
       setResults(feedback);
       if (assessment) setScore(data.score);
-      record(feedback, assessment ? data.score : undefined);
     } catch (e) {
       setError(
         e instanceof Error
@@ -131,7 +100,7 @@ export function ProblemSession({
     setIndex((index + 1) % filtered.length);
     setResults([]);
     setHint(false);
-    setRetry(false);
+    setRequestId(crypto.randomUUID());
     setError("");
     setAnswers({});
   }
@@ -216,7 +185,7 @@ export function ProblemSession({
                 setResults([]);
                 setAnswers({});
                 setHint(false);
-                setRetry(false);
+                setRequestId(crypto.randomUUID());
               }}
             >
               {label}
@@ -335,7 +304,7 @@ export function ProblemSession({
               setResults([]);
               setAnswers({});
               setHint(false);
-              setRetry(true);
+              setRequestId(crypto.randomUUID());
               setScore(null);
             }}
           >

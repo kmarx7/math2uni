@@ -5,3 +5,7 @@ test-results/
 *.tsbuildinfo
 .env*
 .DS_Store
+!.env.example
+
+.next-e2e/
+supabase/.temp/

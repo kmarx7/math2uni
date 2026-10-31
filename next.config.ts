@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
+  distDir: process.env.MATH90_BUILD_DIR || ".next",
   allowedDevOrigins: ["127.0.0.1", "localhost"],
   async headers() {
     return [

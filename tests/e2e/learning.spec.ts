@@ -1,7 +1,7 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 test("lesson → wrong answer → correction → saved progress → isolated profile", async ({
   page,
-}, testInfo) => {
+}) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
@@ -12,7 +12,7 @@ test("lesson → wrong answer → correction → saved progress → isolated pro
   await expect(
     page.getByRole("heading", { name: "자연수와 자리값", exact: true }),
   ).toBeVisible();
-  await expect(page.locator("#profile")).not.toHaveValue("");
+  await expect(page.locator(".account-email")).not.toHaveText("");
   await page.getByLabel("천의 자리", { exact: true }).fill("4");
   await expect(page.locator(".lab-result strong")).toHaveText("4,042");
   const practice = page.locator("#practice");
@@ -32,14 +32,6 @@ test("lesson → wrong answer → correction → saved progress → isolated pro
   await expect(page.getByText("아직 남아 있는 오답이 없어요")).toBeVisible();
   await page.getByRole("link", { name: "학습 대시보드", exact: true }).click();
   await expect(page.locator(".stat-number").first()).toHaveText("2회");
-  if (testInfo.project.name === "desktop") {
-    await page.getByRole("button", { name: "새 로컬 프로필 만들기" }).click();
-    await expect(page.locator(".stat-number").first()).toHaveText("0회");
-    await page
-      .getByLabel("학습 프로필 선택")
-      .selectOption({ label: "학습자 1" });
-    await expect(page.locator(".stat-number").first()).toHaveText("2회");
-  }
   expect(errors).toEqual([]);
   expect(
     await page.evaluate(
@@ -59,7 +51,8 @@ test("assessment is private until full submit and saves result", async ({
     expect(problem).not.toHaveProperty("explanation");
   }
   const partial = await request.post("/api/assessment", {
-    data: { answers: { "a-place-1": "200" } },
+    headers: { Origin: "http://localhost:3005" },
+    data: { requestId: crypto.randomUUID(), answers: { "a-place-1": "200" } },
   });
   expect(partial.status()).toBe(400);
   expect(await partial.text()).not.toContain("answerDisplay");
@@ -100,7 +93,8 @@ test("curriculum distinguishes draft units; unreleased route is 404", async ({
   ).toBe(true);
 });
 test("complete the unit and return for a delayed review", async ({ page }) => {
-  await page.clock.install({ time: new Date("2026-10-31T03:00:00.000Z") });
+  const initialTime = Date.now();
+  await page.clock.install({ time: new Date(initialTime) });
   await page.goto("/learn/M0-01");
   const practice = page.locator("#practice");
   await practice.locator('input[value="c"]').check();
@@ -126,11 +120,13 @@ test("complete the unit and return for a delayed review", async ({ page }) => {
   await assessment.locator("#a-infer-1").fill("3064");
   await assessment.getByRole("button", { name: "전체 답안 제출" }).click();
   await expect(assessment.getByText("100점", { exact: true })).toBeVisible();
-  for (let i = 0; i < 9; i++)
+  for (let i = 0; i < 9; i++) {
     await page
       .getByRole("button", { name: "이 단계를 확인했어요", exact: true })
       .first()
       .click();
+    await expect(page.locator(".block-check.done")).toHaveCount(i + 1);
+  }
   await expect(
     page.getByRole("heading", { name: "첫 단원을 완료했어요!" }),
   ).toBeVisible();
@@ -138,7 +134,7 @@ test("complete the unit and return for a delayed review", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "첫 단원을 완료했어요!" }),
   ).toBeVisible();
-  await page.clock.setSystemTime(new Date("2026-11-01T04:00:00.000Z"));
+  await page.clock.setSystemTime(new Date(initialTime + 25 * 60 * 60 * 1000));
   await page.getByRole("link", { name: "복습하기", exact: true }).click();
   await expect(page.locator(".record-card")).toHaveCount(6);
   await page
@@ -153,11 +149,16 @@ test("complete the unit and return for a delayed review", async ({ page }) => {
   await expect(page.locator(".record-card")).toHaveCount(5);
 });
 
-test("an in-flight answer cannot write into a different profile", async ({
+test("an in-flight answer cannot write into a different account", async ({
   page,
+  account,
 }) => {
   let release!: () => void;
   let received!: () => void;
+  let delivered!: () => void;
+  const settled = new Promise<void>((resolve) => {
+    delivered = resolve;
+  });
   const paused = new Promise<void>((resolve) => {
     release = resolve;
   });
@@ -172,22 +173,41 @@ test("an in-flight answer cannot write into a different profile", async ({
     const response = await route.fetch();
     received();
     await paused;
-    await route.fulfill({ response });
+    try {
+      await route.fulfill({ response });
+    } catch {
+      /* Logout navigation can cancel the old document request. */
+    } finally {
+      delivered();
+    }
   });
   await page.goto("/learn/M0-01");
   const section = page.locator("#practice");
   await section.locator('input[value="c"]').check();
   await section.getByRole("button", { name: "답안 확인" }).click();
   await intercepted;
-  await page.getByRole("button", { name: "새 로컬 프로필 만들기" }).click();
-  const response = page.waitForResponse(
-    (r) => r.url().endsWith("/api/practice") && r.request().method() === "POST",
-  );
+  await page.getByRole("button", { name: "로그아웃", exact: true }).click();
+  await expect(page).toHaveURL("/login");
+  const created = await page.request.post("/api/auth/signup", {
+    headers: { Origin: "http://localhost:3005" },
+    data: {
+      email: `other-${crypto.randomUUID()}@math90.test`,
+      password: "Math90TestOnly123",
+    },
+  });
+  expect(created.status()).toBe(200);
   release();
-  await response;
-  await page.getByRole("link", { name: "학습 대시보드", exact: true }).click();
+  await settled;
+  await page.goto("/");
   await expect(page.locator(".stat-number").first()).toHaveText("0회");
-  await expect(
-    page.getByLabel("학습 프로필 선택").locator("option:checked"),
-  ).toHaveText("학습자 2");
+  await expect(page.locator(".account-email")).toContainText("other-");
+  await page.getByRole("button", { name: "로그아웃", exact: true }).click();
+  await expect(page).toHaveURL("/login");
+  const signedIn = await page.request.post("/api/auth/login", {
+    headers: { Origin: "http://localhost:3005" },
+    data: account,
+  });
+  expect(signedIn.status()).toBe(200);
+  await page.goto("/");
+  await expect(page.locator(".stat-number").first()).toHaveText("1회");
 });

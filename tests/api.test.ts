@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, afterEach } from "vitest";
+import { describe, it, expect, vi, afterEach, beforeEach } from "vitest";
 import {
   GET as practiceGET,
   POST as practicePOST,
@@ -7,23 +7,95 @@ import {
   GET as assessmentGET,
   POST as assessmentPOST,
 } from "@/app/api/assessment/route";
+import { emptyProgress } from "@/modules/progress/repository";
+import type { ProgressState } from "@/contracts";
+const fixtures = vi.hoisted(() => ({
+  account: {
+    id: "124d3c71-9359-4cf2-b111-9ba5502df231",
+    email: "test@example.invalid",
+  },
+  authenticated: true,
+  states: new Map<string, { progress: ProgressState; revision: number }>(),
+}));
+vi.mock("@/modules/auth/server", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/modules/auth/server")>()),
+  apiAccount: vi.fn(async () =>
+    fixtures.authenticated
+      ? { account: fixtures.account, response: null }
+      : {
+          account: null,
+          response: Response.json(
+            { error: "로그인이 필요합니다." },
+            { status: 401 },
+          ),
+        },
+  ),
+}));
+vi.mock("@/lib/supabase/server", () => ({
+  createSupabaseServerClient: vi.fn(async () => ({})),
+}));
+vi.mock("@/modules/progress/server", () => ({
+  SupabaseProgressRepository: class {
+    async load(id: string) {
+      return (
+        fixtures.states.get(id) ?? { progress: emptyProgress(id), revision: 0 }
+      );
+    }
+    async compareAndSwap(id: string, revision: number, state: ProgressState) {
+      if ((fixtures.states.get(id)?.revision ?? 0) !== revision) return false;
+      fixtures.states.set(id, { progress: state, revision: revision + 1 });
+      return true;
+    }
+  },
+}));
 const request = (body: unknown) =>
   new Request("http://localhost/api", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json", Origin: "http://localhost" },
+    body: JSON.stringify({
+      ...{ requestId: crypto.randomUUID(), hintUsed: false, mode: "practice" },
+      ...(body as object),
+      ...((body as { answers?: unknown }).answers
+        ? { hintUsed: undefined, mode: undefined }
+        : {}),
+    }),
   });
 vi.stubEnv("NODE_ENV", "development");
 vi.stubEnv("MATH90_CONTENT_PREVIEW", "1");
 describe("server submission boundaries", () => {
+  it("rejects every protected endpoint without a verified account", async () => {
+    fixtures.authenticated = false;
+    expect((await practiceGET()).status).toBe(401);
+    expect((await assessmentGET()).status).toBe(401);
+    expect(
+      (await practicePOST(request({ problemId: "p-place-1", answer: "c" })))
+        .status,
+    ).toBe(401);
+  });
+  it("blocks cross-origin grading requests", async () => {
+    const r = request({ problemId: "p-place-1", answer: "c" });
+    r.headers.set("Origin", "https://untrusted.invalid");
+    expect((await practicePOST(r)).status).toBe(403);
+  });
+  it("stores a server-graded result under the authenticated account", async () => {
+    await practicePOST(request({ problemId: "p-place-1", answer: "c" }));
+    expect(
+      fixtures.states.get(fixtures.account.id)?.progress.attempts[0],
+    ).toMatchObject({ correct: true, answer: "c" });
+    expect(fixtures.states.size).toBe(1);
+  });
+  beforeEach(() => {
+    fixtures.states.clear();
+    fixtures.authenticated = true;
+  });
   afterEach(() => {
     vi.stubEnv("NODE_ENV", "development");
     vi.stubEnv("MATH90_CONTENT_PREVIEW", "1");
   });
   it("production never publishes unapproved AI content even with preview enabled", async () => {
     vi.stubEnv("NODE_ENV", "production");
-    expect((await practiceGET().json()).problems).toEqual([]);
-    expect((await assessmentGET().json()).problems).toEqual([]);
+    expect((await (await practiceGET()).json()).problems).toEqual([]);
+    expect((await (await assessmentGET()).json()).problems).toEqual([]);
     expect(
       (await practicePOST(request({ problemId: "p-place-1", answer: "c" })))
         .status,
@@ -32,7 +104,7 @@ describe("server submission boundaries", () => {
   });
   it("keeps both GET payloads free of grading fields", async () => {
     for (const get of [practiceGET, assessmentGET]) {
-      const response = get();
+      const response = await get();
       expect(response.headers.get("Cache-Control")).toBe("no-store");
       const body = await response.json();
       expect(body.problems.length).toBeGreaterThan(0);
@@ -78,7 +150,10 @@ describe("server submission boundaries", () => {
     const malformed = await assessmentPOST(
       new Request("http://localhost", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Origin: "http://localhost",
+        },
         body: "{",
       }),
     );

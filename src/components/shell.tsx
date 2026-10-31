@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
@@ -19,7 +20,21 @@ const links = [
 ];
 export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname(),
-    { state, profiles, switchProfile, newProfile, error } = useProgress();
+    { state, account, error, loading, saving, reload } = useProgress();
+  const [logoutError, setLogoutError] = useState(""),
+    [loggingOut, setLoggingOut] = useState(false);
+  async function logout() {
+    setLoggingOut(true);
+    setLogoutError("");
+    try {
+      const response = await fetch("/api/auth/logout", { method: "POST" });
+      if (!response.ok) throw new Error();
+      window.location.replace("/login");
+    } catch {
+      setLogoutError("로그아웃하지 못했어요. 다시 시도해 주세요.");
+      setLoggingOut(false);
+    }
+  }
   return (
     <div className="app-shell">
       <a className="skip" href="#main">
@@ -69,29 +84,27 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="profile">
           <span className="avatar">나</span>
           <div>
-            <label htmlFor="profile">로컬 학습 프로필</label>
-            <select
-              id="profile"
-              value={state?.profileId ?? ""}
-              onChange={(e) => switchProfile(e.target.value)}
-              aria-label="학습 프로필 선택"
-            >
-              {profiles.map((p, i) => (
-                <option value={p} key={p}>
-                  학습자 {i + 1}
-                </option>
-              ))}
-            </select>
+            <span className="account-caption">나의 학습 계정</span>
+            <span className="account-email" title={account.email}>
+              {account.email}
+            </span>
           </div>
           <button
-            className="icon-button"
-            onClick={newProfile}
-            aria-label="새 로컬 프로필 만들기"
+            className="logout-button"
+            onClick={logout}
+            disabled={loggingOut}
+            aria-label="로그아웃"
           >
-            ＋
+            {loggingOut ? "처리 중…" : "로그아웃"}
           </button>
         </div>
-        <span className="local-note">이 브라우저에만 저장돼요</span>
+        <span className="local-note">
+          {saving
+            ? "저장 중…"
+            : loading
+              ? "기록 불러오는 중…"
+              : "학습 기록이 계정에 저장돼요"}
+        </span>
       </aside>
       <div className="workspace">
         <header className="topbar">
@@ -108,13 +121,24 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <span className="avatar small">나</span>
           </div>
         </header>
-        {error && (
+        {(error || logoutError) && (
           <p role="alert" className="storage-error">
-            {error}
+            {error || logoutError}{" "}
+            {error && (
+              <button className="button secondary" onClick={reload}>
+                다시 불러오기
+              </button>
+            )}
           </p>
         )}
         <main id="main" key={state?.profileId ?? "loading"}>
-          {children}
+          {state ? (
+            children
+          ) : loading ? (
+            <p className="page" role="status">
+              학습 기록을 불러오고 있어요…
+            </p>
+          ) : null}
         </main>
         <footer>
           Math 90 · 수학의 기초부터, 나의 가능성까지.

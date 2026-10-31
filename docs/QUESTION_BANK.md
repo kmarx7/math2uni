@@ -12,7 +12,7 @@ AI 보조로 작성한 고정 샘플 6문항(연습 3 + 평가 3), 검증된 자
 
 ## DTO / 채점
 
-공개 DTO는 id,unitId,skillId,familyId,reasoning,difficulty,input,prompt,choices,purpose,version만 포함한다. 서버만 정답, 규칙, 해설, 검수 이력에 접근한다. 연습 POST는 문제 하나를 채점하고 피드백을 반환한다. 평가 POST는 정확한 평가 문항 집합과 각 응답을 검증한 후 모든 결과를 반환한다. GET/오류 응답에는 정답이 없다. localStorage에는 제출 후 결과만 기록한다.
+공개 DTO는 id,unitId,skillId,familyId,reasoning,difficulty,input,prompt,choices,purpose,version만 포함한다. 서버만 정답, 규칙, 해설, 검수 이력에 접근한다. 연습 POST는 문제 하나를 채점하고 피드백을 반환한다. 평가 POST는 정확한 평가 문항 집합과 각 응답을 검증한 후 모든 결과를 반환한다. GET/오류 응답에는 정답이 없다. 현재 계정 기능에서는 서버가 채점 후 결과를 인증된 계정의 PostgreSQL 스냅샷에 기록한다. 이전 MVP의 로컬 저장은 과거 구현으로 남아 있다.
 
 객관식은 option ID, 정수는 부호 있는 정수, 소수는 유한 소수, 분수는 a/b로 파싱한다. 길이 64, 숫자부 최대 12자리, 분모 0 금지, 지수/함수/변수/연산식 금지. BigInt 교차곱으로 동치 유리수를 비교한다. expression 입력은 unsupported라서 정답으로 처리하지 않는다. D2 문항은 소수·분수 답안도 수치 동치면 허용하는 정수 규칙과 분리한다. 채점 invalid/unsupported는 숙달 증거로 저장하지 않는다.
 

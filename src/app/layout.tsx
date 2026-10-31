@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ProgressProvider } from "@/components/progress-provider";
-import { Shell } from "@/components/shell";
 export const metadata: Metadata = {
   title: "Math 90 · 한 개념 더 단단하게",
   description:
@@ -14,11 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" data-scroll-behavior="smooth">
-      <body>
-        <ProgressProvider>
-          <Shell>{children}</Shell>
-        </ProgressProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

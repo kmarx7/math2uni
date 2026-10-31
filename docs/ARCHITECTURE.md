@@ -53,3 +53,7 @@ ProgressRepository: load(profileId) → ProgressState, save(profileId,state) →
 ## 검증 및 운영
 
 lint, typecheck, test, test:e2e, build를 독립 실행한다. 모바일·키보드·오답→복습→재시도·새로고침·프로필 분리·평가 사전 정답 비노출을 검사한다. 현재 구현/미구현과 실제 실행 결과는 ROADMAP 및 VERIFICATION에 기록한다.
+
+## ADR-004 · 계정 기능 확장 (2026-10-31)
+
+후속 사용자 요청으로 인증과 계정별 서버 기록을 추가했다. 위의 최초 MVP 범위와 로컬 저장 설명은 초기 설계 기록이며 현행 학습 화면은 인증을 필수로 한다. auth 서버 경계, Supabase PostgreSQL CAS 저장소, RLS 마이그레이션과 검증 상태는 [AUTH.md](AUTH.md)를 기준으로 한다. 실제 Supabase 프로젝트 생성은 명시적 비용 동의 대기 상태이다. 비밀번호/토큰은 localStorage에 저장하지 않는다.

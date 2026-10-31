@@ -38,7 +38,7 @@ function BlockRenderer({ block }: { block: Block }) {
   }
 }
 export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
-  const { state, update } = useProgress();
+  const { state, completeBlock, saving } = useProgress();
   const completed = doc.blocks.filter((b) =>
     state?.completedBlocks.includes(b.id),
   ).length;
@@ -114,15 +114,10 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
               <BlockRenderer block={block} />
               <button
                 className={`block-check ${state?.completedBlocks.includes(block.id) ? "done" : ""}`}
-                disabled={!state || state.completedBlocks.includes(block.id)}
-                onClick={() =>
-                  update((s) => ({
-                    ...s,
-                    completedBlocks: [
-                      ...new Set([...s.completedBlocks, block.id]),
-                    ],
-                  }))
+                disabled={
+                  !state || saving || state.completedBlocks.includes(block.id)
                 }
+                onClick={() => completeBlock(unit.id, block.id)}
               >
                 <CheckCircle2 size={17} />
                 {state?.completedBlocks.includes(block.id)

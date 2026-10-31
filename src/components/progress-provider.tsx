@@ -7,109 +7,108 @@ import {
   useRef,
   type ReactNode,
 } from "react";
-import type { ProgressState } from "@/contracts";
-import {
-  emptyProgress,
-  LocalProgressRepository,
-} from "@/modules/progress/repository";
+import { progressSchema, type ProgressState } from "@/contracts";
+import type { Account } from "@/modules/auth/server";
+import type { ProgressSnapshot } from "@/modules/progress/account-repository";
 const Context = createContext<{
   state: ProgressState | null;
+  account: Account;
   error: string;
-  update: (
-    fn: (s: ProgressState) => ProgressState,
-    expectedProfileId?: string,
-  ) => void;
-  newProfile: () => void;
-  switchProfile: (id: string) => void;
-  profiles: string[];
+  loading: boolean;
+  saving: boolean;
+  replaceSnapshot: (snapshot: ProgressSnapshot) => void;
+  completeBlock: (unitId: string, blockId: string) => Promise<void>;
+  reload: () => void;
 } | null>(null);
-export function ProgressProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<ProgressState | null>(null);
-  const stateRef = useRef<ProgressState | null>(null);
-  const [profiles, setProfiles] = useState<string[]>([]);
-  const [error, setError] = useState("");
-  useEffect(() => {
-    try {
-      let active = localStorage.getItem("math90:active");
-      if (!active) {
-        active = crypto.randomUUID();
-        localStorage.setItem("math90:active", active);
-      }
-      let ids: string[] = [];
-      try {
-        ids = JSON.parse(localStorage.getItem("math90:profiles") ?? "[]");
-      } catch {
-        ids = [];
-      }
-      ids = Array.isArray(ids) ? ids.filter((x) => typeof x === "string") : [];
-      if (!ids.includes(active)) {
-        ids.push(active);
-        localStorage.setItem("math90:profiles", JSON.stringify(ids));
-      }
-      // Browser storage hydration runs once after SSR; it synchronizes an external system.
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setProfiles(ids);
-      const loaded = new LocalProgressRepository(localStorage).load(active);
-      stateRef.current = loaded;
-      setState(loaded);
-    } catch {
-      setError(
-        "로컬 기록을 읽을 수 없어요. 브라우저 저장소를 확인하거나 새 프로필을 만들어 주세요.",
-      );
-    }
-  }, []);
-  function update(
-    fn: (s: ProgressState) => ProgressState,
-    expectedProfileId?: string,
-  ) {
-    const current = stateRef.current;
+export function ProgressProvider({
+  account,
+  children,
+}: {
+  account: Account;
+  children: ReactNode;
+}) {
+  const [state, setState] = useState<ProgressState | null>(null),
+    [error, setError] = useState(""),
+    [loading, setLoading] = useState(true),
+    [saving, setSaving] = useState(false),
+    [generation, setGeneration] = useState(0);
+  const revision = useRef(-1);
+  function replaceSnapshot(snapshot: ProgressSnapshot) {
+    const progress = progressSchema.parse(snapshot.progress);
     if (
-      !current ||
-      (expectedProfileId && current.profileId !== expectedProfileId)
+      progress.profileId !== account.id ||
+      !Number.isInteger(snapshot.revision) ||
+      snapshot.revision < 0
     )
-      return;
-    const next = fn(current);
-    try {
-      new LocalProgressRepository(localStorage).save(next.profileId, next);
-      stateRef.current = next;
-      setState(next);
-      setError("");
-    } catch {
-      setError(
-        "저장하지 못했어요. 저장 공간과 브라우저 설정을 확인한 뒤 다시 시도해 주세요.",
-      );
-    }
+      throw new Error("학습 기록의 계정이 일치하지 않습니다.");
+    if (snapshot.revision < revision.current) return;
+    revision.current = snapshot.revision;
+    setState(progress);
+    setError("");
   }
-  function switchProfile(profileId: string) {
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/progress", { signal: controller.signal, cache: "no-store" })
+      .then(async (response) => {
+        if (response.status === 401) {
+          window.location.replace("/login");
+          return;
+        }
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error);
+        const progress = progressSchema.parse(data.progress);
+        if (
+          progress.profileId !== account.id ||
+          !Number.isInteger(data.revision)
+        )
+          throw new Error("학습 기록의 계정이 일치하지 않습니다.");
+        if (data.revision >= revision.current) {
+          revision.current = data.revision;
+          setState(progress);
+          setError("");
+        }
+      })
+      .catch((e) => {
+        if (e.name !== "AbortError")
+          setError(
+            "학습 기록을 불러오지 못했어요. 다시 불러오기를 눌러 주세요.",
+          );
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false);
+      });
+    return () => controller.abort();
+  }, [account.id, generation]);
+  async function completeBlock(unitId: string, blockId: string) {
+    setSaving(true);
+    setError("");
     try {
-      const next = new LocalProgressRepository(localStorage).load(profileId);
-      localStorage.setItem("math90:active", profileId);
-      stateRef.current = next;
-      setState(next);
-      setError("");
+      const response = await fetch("/api/progress", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "complete-block", unitId, blockId }),
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error);
+      replaceSnapshot(data);
     } catch {
-      setError("이 프로필 기록을 읽을 수 없어요. 다른 프로필을 선택해 주세요.");
-    }
-  }
-  function newProfile() {
-    try {
-      const profileId = crypto.randomUUID(),
-        next = emptyProgress(profileId);
-      new LocalProgressRepository(localStorage).save(profileId, next);
-      const ids = [...profiles, profileId];
-      localStorage.setItem("math90:profiles", JSON.stringify(ids));
-      localStorage.setItem("math90:active", profileId);
-      setProfiles(ids);
-      stateRef.current = next;
-      setState(next);
-      setError("");
-    } catch {
-      setError("새 프로필을 저장할 수 없어요. 브라우저 저장소를 확인하세요.");
+      setError("학습 단계를 저장하지 못했어요. 다시 확인 버튼을 눌러 주세요.");
+    } finally {
+      setSaving(false);
     }
   }
   return (
     <Context.Provider
-      value={{ state, error, update, newProfile, switchProfile, profiles }}
+      value={{
+        state,
+        account,
+        error,
+        loading,
+        saving,
+        replaceSnapshot,
+        completeBlock,
+        reload: () => setGeneration((n) => n + 1),
+      }}
     >
       {children}
     </Context.Provider>
