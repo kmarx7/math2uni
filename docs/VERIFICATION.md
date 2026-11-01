@@ -138,7 +138,7 @@
 | `npm run typecheck`            | PASS                     | optional collection으로 과거 state 호환, 인계 계약·서버 전달                                   |
 | `npm test`                     | PASS · 12파일/101개      | 기존 87개 + 신규은행8 + 인계6                                                                  |
 | `npm run content:validate`     | PASS · 14개              | 신규30개 독립 산술, 전체102개 고정 문항/40원형, 승인/버전/해시, 6소단원/15단계, core 완료 보존 |
-| `npm run agents:validate`      | PASS · 템플릿 검사       | Python tomllib, 역할 필드·agents 설정. 실제 설치/로더 검증은 아님                              |
+| `npm run agents:validate`      | PASS · 설치 비교 검사    | Python tomllib, 세 역할과 공통 설정의 구문 및 템플릿 일치                                     |
 | `npm run test:smoke`           | PASS · 52개/2.3m, exit 0 | 최종 단일 실행, Chromium 작업자1/데스크톱·모바일                                               |
 | `npm run test:e2e`             | 실행 차단 · exit 1       | fixture 54329 listen EPERM. 같은 모음의 허용 별칭은 위와 같이 전체 통과                        |
 | `npm run build`                | PASS                     | 17개 라우트 + Proxy, 기존 Next.js 단일 앱                                                      |
@@ -150,6 +150,6 @@ M0-01은 기존9블록/3기술/기본평가3문항과 과거 완료를 보존하
 
 확장 시도는 collection=extended로 저장하고 기본 평가 점수·숙달·완료 판정에 섞지 않는다. 새로고침·오답노트의 올바른 확장 복습과 평가의 정확한 응답 집합을 브라우저에서 검사했다. 미승인 확장 문항은 production에서 비공개이고, 새 설명/조작도 서버 전달 게이트로 production에서는 보존된 v1.0.0 문서를 사용한다. 클라이언트 공유 완료 인덱스에는 본문·정답이 없다. 새 조작 화면 모바일/데스크톱 캡처를 직접 확인했으며 가로 넘침 검사와 키보드 조작이 통과했다.
 
-CLI 0.166.0, multi_agent stable/true를 확인했다. 공식 standalone TOML 형식의 세 역할과 공통 설정은 docs/agents에 작성했다. `.codex/agents/*.toml` 쓰기는 보호 경로 정책으로 거부되어 설치하지 않았고 우회하지 않았다. `--strict-config ... features list`도 CLI에서 미지원이므로 런타임 설정 검증으로 주장하지 않는다. 실제 협업은 현재 세션의 서브에이전트 도구로 실행했으며 TOML 자동 로딩과 구분한다.
+CLI 0.166.0, multi_agent stable/true를 확인했다. 세 standalone TOML과 공통 설정은 docs/agents 템플릿에서 프로젝트 `.codex/`로 복사되었고 설치본이 템플릿과 일치한다. `codex --strict-config ... exec`로 실제 호출을 시도했으나 in-process app-server 초기화가 `Operation not permitted`로 실패해 custom role discovery는 미검증이다. `--strict-config ... features list`는 CLI에서 지원되지 않는다. 실제 앞선 협업은 현재 세션의 서브에이전트 도구로 실행했으며 프로젝트 TOML 자동 로딩 검증과 구분한다.
 
 실제 Supabase 사용자·스키마·환경 비밀은 변경하지 않았다. E2E는 모의 HTTP fixture이며 실제 이메일·RLS 재검증이 아니다. 원문 공식 성취기준, KICE 직접 문항 본문, 사람 교육 검수·권리 확인·운영 게시 승인은 남아 있다. D4/D5·조건 카드 조작·확장 평가 회차별 통계·최신 배분의170상세목록·실물 모바일/스크린리더·학습 효과는 미완료/미검증이다. 신규30문항은 계속 draft, 승인 이력은 비어 있다.

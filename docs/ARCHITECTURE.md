@@ -76,7 +76,7 @@ Content는 getLesson(unitId), Bank는 목적+unitId, API는 검증된 unitId를 
 
 ## ADR-008 · 전문 역할과 인계 품질 검사
 
-세 전문 서브에이전트를 실제 실행해 파일 소유권을 분리했다. 설치 CLI 0.166.0은 multi_agent stable/true이다. `.codex` 보호 경로 쓰기가 거부되어 현재 standalone 역할 TOML은 docs/agents에 검토 가능한 템플릿으로 보관한다. 런타임에 이 설정이 로드됐다고 주장하지 않는다. 역할별 책임·실제 산출물·순차 대안은 [MULTI_AGENT.md](MULTI_AGENT.md)에 기록한다.
+세 전문 서브에이전트를 실제 실행해 파일 소유권을 분리했다. 설치 CLI 0.166.0은 multi_agent stable/true이다. 사용자가 standalone 역할 TOML 세 개와 공통 설정을 프로젝트 `.codex/`에 설치했으며 `agents:validate`에서 템플릿과의 일치를 확인한다. 실제 CLI 에이전트 호출은 app-server 초기화 권한 오류로 미검증이다. 역할별 책임·실제 산출물·순차 대안은 [MULTI_AGENT.md](MULTI_AGENT.md)에 기록한다.
 
 기존 단일 Next 앱 구조를 유지하며 새 외부 서비스/의존성을 추가하지 않는다. Content Quality Validator를 src/modules/content-quality에 추가하고 기존 Review Engine은 progress의 복습 함수로 유지한다. 공통 인계는 버전/해시·6소단원·15단계·문항 수·원형/기술/난도·검토 상태를 검사한다. 운영 단계 경로와 개발 preview의 구현/테스트 상태를 분리하고 승인 대기 콘텐츠에는 approvedContent=null을 명시한다.
 

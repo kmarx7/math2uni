@@ -11,7 +11,7 @@
 | Developer & QA       | 은행 opt-in collection, fail-closed 수학 검사, 독립 기준 모델·E2E·구현 보고            | m001-expansion.ts, bank/server.ts, tests/m001-expansion.test.ts, tests/e2e/m001-expansion.spec.ts, implementation-report/qa-report |
 | Orchestrator         | 계약·설정·인계 검사·API/UI·진도 호환·통합·최종 검증/push                               | 나머지 통합 변경                                                                                                                   |
 
-현재 세션의 서브에이전트 도구로 세 역할을 실제 실행했다. CLI 0.166.0의 multi_agent 기능은 stable/true이다. 보호된 `.codex` 쓰기가 거부되어 설정은 [docs/agents](agents/README.md)에 보관했으며 이 파일들이 CLI에 자동 로드된 것은 아니다. 역할별 수정 범위는 지침으로 통제하며 별도 OS 권한을 만든 것이 아니다.
+앞선 세션의 서브에이전트 도구로 세 역할을 실제 실행했다. CLI 0.166.0의 multi_agent 기능은 stable/true이다. 사용자가 세 역할과 공통 설정을 `.codex/`에 복사했고 현재 설치 파일은 템플릿과 일치한다. 이 채팅 세션은 설치 뒤 시작된 세션이 아니며, CLI 에이전트 호출 시험은 in-process app-server 초기화의 `Operation not permitted`로 실패해 자동 역할 발견 여부는 아직 확인되지 않았다. 역할별 수정 범위는 지침으로 통제하며 별도 OS 권한을 만든 것이 아니다.
 
 ## 인계 순서
 
