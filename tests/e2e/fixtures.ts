@@ -8,6 +8,7 @@ export const test = base.extend<{
     async ({ page }, provide) => {
       const email = `learner-${randomUUID()}@math90.test`;
       const response = await page.request.post("/api/auth/signup", {
+        maxRetries: 2,
         headers: { Origin: "http://localhost:3005" },
         data: { email, password },
       });

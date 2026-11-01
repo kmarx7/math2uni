@@ -1,0 +1,160 @@
+{
+  "unitId": "M0-01",
+  "contentVersion": "1.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "lessonSource": "src/data/content.ts",
+  "instruction": {
+    "unitId": "M0-01",
+    "version": "1.1.0-draft",
+    "sections": [
+      {
+        "id": "m001-u1",
+        "title": "수와 숫자, 낱개와 묶음",
+        "body": "숫자는 수를 적는 기호예요. 같은 숫자 3도 낱개 3개를 나타내거나 십 묶음 3개를 나타낼 수 있어요.",
+        "activity": "낱개 10개를 십 묶음 1개로 교환하고 양이 같은지 센다.",
+        "check": "숫자 기호와 나타내는 양을 말로 구별한다."
+      },
+      {
+        "id": "m001-u2",
+        "title": "일·십·백·천의 자리와 단위",
+        "body": "같은 단위 열 개를 윗단위 하나로 바꿔요. 오른쪽부터 일·십·백·천으로 자리를 정하면 각 숫자가 어느 묶음인지를 알 수 있어요.",
+        "activity": "3,214의 자리별 슬라이더를 하나씩 움직이고 자리 이름과 값을 함께 읽는다.",
+        "check": "자리 이름·자리 숫자·자릿값을 각각 대답한다."
+      },
+      {
+        "id": "m001-u3",
+        "title": "0이 지키는 빈 자리",
+        "body": "3,042에서 백 묶음이 없으므로 백의 자리에 0을 써요. 그 0을 지우면 342가 돼요. 0보다 왼쪽에 있던 3은 천의 자리에서 백의 자리로 옮겨 값이 달라져요. 오른쪽의 4는 여전히 십, 2는 여전히 일의 자리예요.",
+        "activity": "0을 남긴 자리표와 0을 지워 쓴 수를 나란히 비교한다.",
+        "check": "0이 없다는 뜻과 0을 지워도 된다는 생각을 구별한다."
+      },
+      {
+        "id": "m001-u4",
+        "title": "같은 양을 분해하고 다시 묶기",
+        "body": "2,507은 천 묶음 2개, 백 묶음 5개, 십 묶음 0개, 낱개 7개예요. 같은 양을 단위별로 나누거나 십 묶음을 낱개로 교환해도 전체 양은 같아요.",
+        "activity": "3백과 12십을 4백과 2십으로 교환해 모두 420인지 확인한다.",
+        "check": "표준 분해식과 비표준 묶음이 같은 양임을 보인다."
+      },
+      {
+        "id": "m001-u5",
+        "title": "수 비교와 자리 변화",
+        "body": "네 자리 수끼리는 천의 자리부터 비교해요. 같은 자리까지는 묶음 수가 같으므로 처음 다른 높은 자리에서 어느 쪽이 큰지 결정할 수 있어요.",
+        "activity": "같은 수의 한 자리만 바꾸어 전체 수의 변화량을 전후 비교한다.",
+        "check": "자리 숫자가 1 커졌을 때 그 자리의 단위만큼 값이 늘었음을 설명한다."
+      },
+      {
+        "id": "m001-u6",
+        "title": "조건 추론·오류 교정·새 상황",
+        "body": "빈 자리에 놓일 숫자의 조건을 하나씩 확인해요. 가장 큰 수를 고를 때도 먼저 모든 조건을 만족하는지, 맨 앞자리가 0은 아닌지 확인해야 해요.",
+        "activity": "카드로 수를 만들고 조건에 맞는 후보와 맞지 않는 후보의 이유를 비교한다.",
+        "check": "조건 충족과 최댓값·최솟값의 근거를 분리해서 설명한다."
+      }
+    ],
+    "principleDerivation": "같은 단위 열 개를 윗단위 하나로 교환하므로 오른쪽에서 한 자리 왼쪽으로 갈 때 단위가 10배가 된다. 자리값 식은 관찰한 묶음을 간결하게 기록한 표현이다.",
+    "learningPhases": [
+      {
+        "id": "learning-objectives",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "prerequisite-check",
+        "title": "선수학습 확인",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "concept-introduction",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "concept-explanation",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "visual-exploration",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "principle-derivation",
+        "title": "공식과 원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "worked-example",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "foundation-practice",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "family-practice",
+        "title": "유형별 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "application-practice",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "advanced-transfer",
+        "title": "심화 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "error-analysis",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "formative-assessment",
+        "title": "형성평가",
+        "blockId": "assessment",
+        "state": "available"
+      },
+      {
+        "id": "spaced-review",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "next-unit",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ]
+  },
+  "questionSource": "src/data/m001-expansion.json",
+  "newFixedDrafts": 30,
+  "hashes": {
+    "src/data/m001-expansion.json": "6c20e8f2f8c90ce1900431afb24535ad83bca362ea68f84c67f16a73d7968458",
+    "src/data/m001-instruction.json": "b8d46f00d8f8e6cd3c53d016a85be2af9c9aed7801249a7194638ab6f32274db",
+    "docs/specifications/M0-01/lesson-spec.json": "ea5c6bb43b2ecc574a5e874319735e92b6ab86dd8da486090f39aefba999ca20",
+    "docs/specifications/M0-01/problem-blueprint.json": "4d03da2c0fea9341e4751e218cc0b345a68e4210a37f662236ab44a22d42c94f",
+    "src/data/content.ts": "82e1092d38b89c51576bae078f4003a8d0062baca6ad8734a559a5426af5610f",
+    "src/components/place-value-exploration.tsx": "679a43cf62f8196a38e77d1c9be0de6f7a7dfb5bef82de59e816c3c884d35527",
+    "src/data/m001-core-lesson.json": "ccd74e0467facd82b9dec8d0c53dbec931d27c89a19ab1cd9919dde12ad673d5",
+    "src/modules/content/server.ts": "ed969cb763ced7b12d95ce48b670a63047fb284e85a49c2f21d0cafd23a66ba3"
+  }
+}

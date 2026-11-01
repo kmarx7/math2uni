@@ -1,0 +1,1734 @@
+{
+  "families": [
+    {
+      "id": "identify",
+      "title": "자릿값 식별",
+      "strategy": "자리 단위를 곱하기"
+    },
+    {
+      "id": "compose",
+      "title": "분해·합성",
+      "strategy": "각 자리의 값을 더하기"
+    },
+    {
+      "id": "infer",
+      "title": "조건 역추론",
+      "strategy": "조건에 맞춰 자리를 배치하기"
+    },
+    {
+      "id": "m001x-zero-placeholder",
+      "title": "0의 자리 유지",
+      "strategy": "0 삭제 전후 숫자열을 비교해 자리 이동을 설명하기"
+    },
+    {
+      "id": "m001x-representation-match",
+      "title": "여러 표현의 동치 판정",
+      "strategy": "수·자리표·분해식의 의미를 연결해 같은 양 찾기"
+    },
+    {
+      "id": "m001x-regroup-equivalence",
+      "title": "묶음 교환의 동치",
+      "strategy": "십진 묶음을 교환해 같은 양의 다른 표현 찾기"
+    },
+    {
+      "id": "m001x-compare-lexicographic",
+      "title": "자리 순서로 수 비교",
+      "strategy": "가장 높은 다른 자리에서 대소를 결정하기"
+    },
+    {
+      "id": "m001x-digit-change",
+      "title": "한 자리 변화 추적",
+      "strategy": "바뀐 자리만 수정하고 나머지 자리 유지하기"
+    },
+    {
+      "id": "m001x-error-diagnosis",
+      "title": "설명 오류 발견",
+      "strategy": "자리·숫자·값의 주장 각각을 검증해 틀린 설명 찾기"
+    },
+    {
+      "id": "m001x-constrained-extrema",
+      "title": "카드 제약 아래 최댓값·최솟값",
+      "strategy": "선행 0을 배제하고 큰 자리부터 최적 배치하기"
+    }
+  ],
+  "problems": [
+    {
+      "id": "p-m001x-identify-01",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "identify",
+      "reasoning": "basic",
+      "difficulty": "D1",
+      "input": "integer",
+      "prompt": "4,627에서 백의 자리 숫자가 나타내는 값을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "600"
+      },
+      "answerDisplay": "600",
+      "explanation": "오른쪽부터 일·십·백·천의 자리를 확인합니다. 백의 자리 숫자는 6입니다. 6개의 100 묶음은 600입니다. 정답은 600입니다.",
+      "steps": [
+        "오른쪽부터 일·십·백·천의 자리를 확인합니다. 백의 자리 숫자는 6입니다.",
+        "6개의 100 묶음은 600입니다.",
+        "정답은 600입니다."
+      ],
+      "misconceptions": [
+        "숫자 자체와 그 숫자가 나타내는 값을 구분해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-identify-02",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "identify",
+      "reasoning": "basic",
+      "difficulty": "D1",
+      "input": "integer",
+      "prompt": "5,814에서 십의 자리 숫자가 나타내는 값을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "10"
+      },
+      "answerDisplay": "10",
+      "explanation": "오른쪽부터 일·십·백·천의 자리를 확인합니다. 십의 자리 숫자는 1입니다. 1개의 10 묶음은 10입니다. 정답은 10입니다.",
+      "steps": [
+        "오른쪽부터 일·십·백·천의 자리를 확인합니다. 십의 자리 숫자는 1입니다.",
+        "1개의 10 묶음은 10입니다.",
+        "정답은 10입니다."
+      ],
+      "misconceptions": [
+        "숫자 자체와 그 숫자가 나타내는 값을 구분해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-identify-03",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "identify",
+      "reasoning": "basic",
+      "difficulty": "D1",
+      "input": "integer",
+      "prompt": "9,362에서 천의 자리 숫자가 나타내는 값을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "9000"
+      },
+      "answerDisplay": "9000",
+      "explanation": "오른쪽부터 일·십·백·천의 자리를 확인합니다. 천의 자리 숫자는 9입니다. 9개의 1000 묶음은 9000입니다. 정답은 9000입니다.",
+      "steps": [
+        "오른쪽부터 일·십·백·천의 자리를 확인합니다. 천의 자리 숫자는 9입니다.",
+        "9개의 1000 묶음은 9000입니다.",
+        "정답은 9000입니다."
+      ],
+      "misconceptions": [
+        "숫자 자체와 그 숫자가 나타내는 값을 구분해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-compose-01",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "compose",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "분해식 3000 + 70 + 2의 값을 하나의 자연수로 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "3072"
+      },
+      "answerDisplay": "3072",
+      "explanation": "천·백·십·일 자리 숫자를 순서대로 적으면 3, 0, 7, 2입니다. 묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다. 정답은 3072입니다.",
+      "steps": [
+        "천·백·십·일 자리 숫자를 순서대로 적으면 3, 0, 7, 2입니다.",
+        "묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다.",
+        "정답은 3072입니다."
+      ],
+      "misconceptions": [
+        "없는 자리를 생략하지 말고 0을 써요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-compose-02",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "compose",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "분해식 8000 + 400 + 5의 값을 하나의 자연수로 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "8405"
+      },
+      "answerDisplay": "8405",
+      "explanation": "천·백·십·일 자리 숫자를 순서대로 적으면 8, 4, 0, 5입니다. 묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다. 정답은 8405입니다.",
+      "steps": [
+        "천·백·십·일 자리 숫자를 순서대로 적으면 8, 4, 0, 5입니다.",
+        "묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다.",
+        "정답은 8405입니다."
+      ],
+      "misconceptions": [
+        "없는 자리를 생략하지 말고 0을 써요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-compose-03",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "compose",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "분해식 5000 + 9의 값을 하나의 자연수로 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "5009"
+      },
+      "answerDisplay": "5009",
+      "explanation": "천·백·십·일 자리 숫자를 순서대로 적으면 5, 0, 0, 9입니다. 묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다. 정답은 5009입니다.",
+      "steps": [
+        "천·백·십·일 자리 숫자를 순서대로 적으면 5, 0, 0, 9입니다.",
+        "묶음이 없는 자리도 0으로 남겨 각 숫자의 자리를 유지합니다.",
+        "정답은 5009입니다."
+      ],
+      "misconceptions": [
+        "없는 자리를 생략하지 말고 0을 써요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-infer-01",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "infer",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "천의 자리 4, 백의 자리 0, 일의 자리 3인 네 자리 자연수입니다. 십의 자리 숫자는 일의 자리의 3배입니다. 이 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "4093"
+      },
+      "answerDisplay": "4093",
+      "explanation": "십의 자리 숫자는 3을 3번 모으면 9입니다. 천·백·십·일 순서로 4, 0, 9, 3을 놓습니다. 정답은 4093입니다.",
+      "steps": [
+        "십의 자리 숫자는 3을 3번 모으면 9입니다.",
+        "천·백·십·일 순서로 4, 0, 9, 3을 놓습니다.",
+        "정답은 4093입니다."
+      ],
+      "misconceptions": [
+        "조건으로 구한 것은 숫자이므로 해당 자리에 놓아야 해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-infer-02",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "infer",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "천의 자리 6, 백의 자리 2, 일의 자리 4인 네 자리 자연수입니다. 십의 자리 숫자는 일의 자리보다 3 큰 수입니다. 이 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "6274"
+      },
+      "answerDisplay": "6274",
+      "explanation": "십의 자리 숫자는 4에서 3만큼 더 세면 7입니다. 천·백·십·일 순서로 6, 2, 7, 4를 놓습니다. 정답은 6274입니다.",
+      "steps": [
+        "십의 자리 숫자는 4에서 3만큼 더 세면 7입니다.",
+        "천·백·십·일 순서로 6, 2, 7, 4를 놓습니다.",
+        "정답은 6274입니다."
+      ],
+      "misconceptions": [
+        "조건으로 구한 것은 숫자이므로 해당 자리에 놓아야 해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-infer-03",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "infer",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "천의 자리 7, 백의 자리 0, 일의 자리 2인 네 자리 자연수입니다. 십의 자리 숫자는 일의 자리의 4배입니다. 이 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "7082"
+      },
+      "answerDisplay": "7082",
+      "explanation": "십의 자리 숫자는 2를 4번 모으면 8입니다. 천·백·십·일 순서로 7, 0, 8, 2를 놓습니다. 정답은 7082입니다.",
+      "steps": [
+        "십의 자리 숫자는 2를 4번 모으면 8입니다.",
+        "천·백·십·일 순서로 7, 0, 8, 2를 놓습니다.",
+        "정답은 7082입니다."
+      ],
+      "misconceptions": [
+        "조건으로 구한 것은 숫자이므로 해당 자리에 놓아야 해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-zero-placeholder-01",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-zero-placeholder",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "학생이 수 4,052의 백의 자리 0 한 개를 지우고 남은 숫자를 붙여 썼습니다. 잘못 적힌 수는 무엇인가요?",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "452"
+      },
+      "answerDisplay": "452",
+      "explanation": "원래 숫자열은 4, 0, 5, 2입니다. 백의 자리 0 한 개만 지운 뒤의 숫자열은 4, 5, 2입니다. 452에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다. 정답은 452입니다.",
+      "steps": [
+        "원래 숫자열은 4, 0, 5, 2입니다.",
+        "백의 자리 0 한 개만 지운 뒤의 숫자열은 4, 5, 2입니다.",
+        "452에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다.",
+        "정답은 452입니다."
+      ],
+      "misconceptions": [
+        "0은 더하는 값이 없어도 다른 숫자의 자리를 유지해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-zero-placeholder-02",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-zero-placeholder",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "학생이 수 6,008의 백의 자리 0 한 개를 지우고 남은 숫자를 붙여 썼습니다. 잘못 적힌 수는 무엇인가요?",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "608"
+      },
+      "answerDisplay": "608",
+      "explanation": "원래 숫자열은 6, 0, 0, 8입니다. 백의 자리 0 한 개만 지운 뒤의 숫자열은 6, 0, 8입니다. 608에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다. 정답은 608입니다.",
+      "steps": [
+        "원래 숫자열은 6, 0, 0, 8입니다.",
+        "백의 자리 0 한 개만 지운 뒤의 숫자열은 6, 0, 8입니다.",
+        "608에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다.",
+        "정답은 608입니다."
+      ],
+      "misconceptions": [
+        "0은 더하는 값이 없어도 다른 숫자의 자리를 유지해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-zero-placeholder-03",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-zero-placeholder",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "학생이 수 7,090의 백의 자리 0 한 개를 지우고 남은 숫자를 붙여 썼습니다. 잘못 적힌 수는 무엇인가요?",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "790"
+      },
+      "answerDisplay": "790",
+      "explanation": "원래 숫자열은 7, 0, 9, 0입니다. 백의 자리 0 한 개만 지운 뒤의 숫자열은 7, 9, 0입니다. 790에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다. 정답은 790입니다.",
+      "steps": [
+        "원래 숫자열은 7, 0, 9, 0입니다.",
+        "백의 자리 0 한 개만 지운 뒤의 숫자열은 7, 9, 0입니다.",
+        "790에서는 0보다 왼쪽에 있던 숫자의 자리가 달라져 원래 수와 같지 않습니다.",
+        "정답은 790입니다."
+      ],
+      "misconceptions": [
+        "0은 더하는 값이 없어도 다른 숫자의 자리를 유지해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-representation-match-01",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-representation-match",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "choice",
+      "prompt": "다음 중 수 3,064에 대응하는 분해식을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "b"
+      },
+      "answerDisplay": "3000 + 60 + 4",
+      "explanation": "3,064의 각 숫자가 어느 자리에 있는지 확인합니다. 선택지마다 천·백·십·일 묶음의 값을 비교합니다. 3000 + 60 + 4만 원래 수와 같은 자리의 양을 나타냅니다. 정답은 3000 + 60 + 4입니다.",
+      "steps": [
+        "3,064의 각 숫자가 어느 자리에 있는지 확인합니다.",
+        "선택지마다 천·백·십·일 묶음의 값을 비교합니다.",
+        "3000 + 60 + 4만 원래 수와 같은 자리의 양을 나타냅니다.",
+        "정답은 3000 + 60 + 4입니다."
+      ],
+      "misconceptions": [
+        "숫자들이 같아 보여도 자리 단위가 다르면 다른 수예요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice",
+      "choices": [
+        {
+          "id": "a",
+          "label": "3000 + 600 + 4"
+        },
+        {
+          "id": "b",
+          "label": "3000 + 60 + 4"
+        },
+        {
+          "id": "c",
+          "label": "300 + 60 + 4"
+        }
+      ]
+    },
+    {
+      "id": "p-m001x-representation-match-02",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-representation-match",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "choice",
+      "prompt": "다음 중 수 7,205에 대응하는 분해식을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "a"
+      },
+      "answerDisplay": "7000 + 200 + 5",
+      "explanation": "7,205의 각 숫자가 어느 자리에 있는지 확인합니다. 선택지마다 천·백·십·일 묶음의 값을 비교합니다. 7000 + 200 + 5만 원래 수와 같은 자리의 양을 나타냅니다. 정답은 7000 + 200 + 5입니다.",
+      "steps": [
+        "7,205의 각 숫자가 어느 자리에 있는지 확인합니다.",
+        "선택지마다 천·백·십·일 묶음의 값을 비교합니다.",
+        "7000 + 200 + 5만 원래 수와 같은 자리의 양을 나타냅니다.",
+        "정답은 7000 + 200 + 5입니다."
+      ],
+      "misconceptions": [
+        "숫자들이 같아 보여도 자리 단위가 다르면 다른 수예요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice",
+      "choices": [
+        {
+          "id": "a",
+          "label": "7000 + 200 + 5"
+        },
+        {
+          "id": "b",
+          "label": "7000 + 20 + 5"
+        },
+        {
+          "id": "c",
+          "label": "700 + 20 + 5"
+        }
+      ]
+    },
+    {
+      "id": "a-m001x-representation-match-03",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-representation-match",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "choice",
+      "prompt": "다음 중 수 5,048에 대응하는 분해식을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "c"
+      },
+      "answerDisplay": "5000 + 40 + 8",
+      "explanation": "5,048의 각 숫자가 어느 자리에 있는지 확인합니다. 선택지마다 천·백·십·일 묶음의 값을 비교합니다. 5000 + 40 + 8만 원래 수와 같은 자리의 양을 나타냅니다. 정답은 5000 + 40 + 8입니다.",
+      "steps": [
+        "5,048의 각 숫자가 어느 자리에 있는지 확인합니다.",
+        "선택지마다 천·백·십·일 묶음의 값을 비교합니다.",
+        "5000 + 40 + 8만 원래 수와 같은 자리의 양을 나타냅니다.",
+        "정답은 5000 + 40 + 8입니다."
+      ],
+      "misconceptions": [
+        "숫자들이 같아 보여도 자리 단위가 다르면 다른 수예요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment",
+      "choices": [
+        {
+          "id": "a",
+          "label": "5000 + 400 + 8"
+        },
+        {
+          "id": "b",
+          "label": "500 + 40 + 8"
+        },
+        {
+          "id": "c",
+          "label": "5000 + 40 + 8"
+        }
+      ]
+    },
+    {
+      "id": "p-m001x-regroup-equivalence-01",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-regroup-equivalence",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "2,860을 백 묶음 28개와 십 묶음 몇 개로 나타낼 수 있나요? 남는 십 묶음 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "6"
+      },
+      "answerDisplay": "6",
+      "explanation": "십 묶음 10개와 백 묶음 1개는 같은 양입니다. 백 묶음 28개는 2800이고, 남은 60은 십 묶음 6개입니다. 정답은 6입니다.",
+      "steps": [
+        "십 묶음 10개와 백 묶음 1개는 같은 양입니다.",
+        "백 묶음 28개는 2800이고, 남은 60은 십 묶음 6개입니다.",
+        "정답은 6입니다."
+      ],
+      "misconceptions": [
+        "묶음의 개수가 달라도 묶음 크기를 바꾸면 같은 양을 나타낼 수 있어요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-regroup-equivalence-02",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-regroup-equivalence",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "십 묶음 34개를 백 묶음 3개와 십 묶음으로 바꿉니다. 남는 십 묶음은 몇 개인가요?",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "4"
+      },
+      "answerDisplay": "4",
+      "explanation": "십 묶음 10개와 백 묶음 1개는 같은 양입니다. 십 묶음 30개는 백 묶음 3개입니다. 남는 십 묶음은 4개입니다. 정답은 4입니다.",
+      "steps": [
+        "십 묶음 10개와 백 묶음 1개는 같은 양입니다.",
+        "십 묶음 30개는 백 묶음 3개입니다. 남는 십 묶음은 4개입니다.",
+        "정답은 4입니다."
+      ],
+      "misconceptions": [
+        "묶음의 개수가 달라도 묶음 크기를 바꾸면 같은 양을 나타낼 수 있어요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-regroup-equivalence-03",
+      "unitId": "M0-01",
+      "skillId": "compose",
+      "familyId": "m001x-regroup-equivalence",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "1,000을 백 묶음 7개와 십 묶음으로 나타냅니다. 필요한 십 묶음은 몇 개인가요?",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "30"
+      },
+      "answerDisplay": "30",
+      "explanation": "십 묶음 10개와 백 묶음 1개는 같은 양입니다. 천 묶음 1개는 백 묶음 10개입니다. 7개를 따로 두면 백 묶음 3개가 남고, 이는 십 묶음 30개입니다. 정답은 30입니다.",
+      "steps": [
+        "십 묶음 10개와 백 묶음 1개는 같은 양입니다.",
+        "천 묶음 1개는 백 묶음 10개입니다. 7개를 따로 두면 백 묶음 3개가 남고, 이는 십 묶음 30개입니다.",
+        "정답은 30입니다."
+      ],
+      "misconceptions": [
+        "묶음의 개수가 달라도 묶음 크기를 바꾸면 같은 양을 나타낼 수 있어요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-compare-lexicographic-01",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-compare-lexicographic",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "4,102와 4,029 중 더 큰 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "4102"
+      },
+      "answerDisplay": "4102",
+      "explanation": "자리 수가 같으므로 천의 자리부터 차례로 비교합니다. 처음 다른 자리는 백의 자리이고 숫자는 1과 0입니다. 그 자리에서 더 큰 값을 가진 수를 선택합니다. 정답은 4102입니다.",
+      "steps": [
+        "자리 수가 같으므로 천의 자리부터 차례로 비교합니다.",
+        "처음 다른 자리는 백의 자리이고 숫자는 1과 0입니다.",
+        "그 자리에서 더 큰 값을 가진 수를 선택합니다.",
+        "정답은 4102입니다."
+      ],
+      "misconceptions": [
+        "일의 자리부터 비교하거나 숫자의 합으로 대소를 판단하지 않아요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-compare-lexicographic-02",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-compare-lexicographic",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "5,806과 5,860 중 더 큰 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "5860"
+      },
+      "answerDisplay": "5860",
+      "explanation": "자리 수가 같으므로 천의 자리부터 차례로 비교합니다. 처음 다른 자리는 십의 자리이고 숫자는 0과 6입니다. 그 자리에서 더 큰 값을 가진 수를 선택합니다. 정답은 5860입니다.",
+      "steps": [
+        "자리 수가 같으므로 천의 자리부터 차례로 비교합니다.",
+        "처음 다른 자리는 십의 자리이고 숫자는 0과 6입니다.",
+        "그 자리에서 더 큰 값을 가진 수를 선택합니다.",
+        "정답은 5860입니다."
+      ],
+      "misconceptions": [
+        "일의 자리부터 비교하거나 숫자의 합으로 대소를 판단하지 않아요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-compare-lexicographic-03",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-compare-lexicographic",
+      "reasoning": "variation",
+      "difficulty": "D2",
+      "input": "integer",
+      "prompt": "6,307과 6,370 중 더 작은 수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "6307"
+      },
+      "answerDisplay": "6307",
+      "explanation": "자리 수가 같으므로 천의 자리부터 차례로 비교합니다. 처음 다른 자리는 십의 자리이고 숫자는 0과 7입니다. 그 자리에서 더 작은 값을 가진 수를 선택합니다. 정답은 6307입니다.",
+      "steps": [
+        "자리 수가 같으므로 천의 자리부터 차례로 비교합니다.",
+        "처음 다른 자리는 십의 자리이고 숫자는 0과 7입니다.",
+        "그 자리에서 더 작은 값을 가진 수를 선택합니다.",
+        "정답은 6307입니다."
+      ],
+      "misconceptions": [
+        "일의 자리부터 비교하거나 숫자의 합으로 대소를 판단하지 않아요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-digit-change-01",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-digit-change",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "4,923의 백의 자리 숫자만 2로 바꾸고 다른 자리는 그대로 두었습니다. 원래 수보다 얼마나 작아졌나요? 변화한 양을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "700"
+      },
+      "answerDisplay": "700",
+      "explanation": "백 묶음이 9개에서 2개가 되어 7개 줄어듭니다. 한 묶음의 크기는 100이므로 변화한 양은 7 × 100 = 700입니다. 정답은 700입니다.",
+      "steps": [
+        "백 묶음이 9개에서 2개가 되어 7개 줄어듭니다.",
+        "한 묶음의 크기는 100이므로 변화한 양은 7 × 100 = 700입니다.",
+        "정답은 700입니다."
+      ],
+      "misconceptions": [
+        "바꾼 숫자 자체가 아니라 그 자리의 단위 묶음이 얼마나 바뀌었는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-digit-change-02",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-digit-change",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "1,304의 십의 자리 숫자만 7로 바꾸고 다른 자리는 그대로 두었습니다. 원래 수보다 얼마나 커졌나요? 변화한 양을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "70"
+      },
+      "answerDisplay": "70",
+      "explanation": "십 묶음이 0개에서 7개가 되어 7개 늘어납니다. 한 묶음의 크기는 10이므로 변화한 양은 7 × 10 = 70입니다. 정답은 70입니다.",
+      "steps": [
+        "십 묶음이 0개에서 7개가 되어 7개 늘어납니다.",
+        "한 묶음의 크기는 10이므로 변화한 양은 7 × 10 = 70입니다.",
+        "정답은 70입니다."
+      ],
+      "misconceptions": [
+        "바꾼 숫자 자체가 아니라 그 자리의 단위 묶음이 얼마나 바뀌었는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-digit-change-03",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-digit-change",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "8,605의 천의 자리 숫자만 3으로 바꾸고 다른 자리는 그대로 두었습니다. 원래 수보다 얼마나 작아졌나요? 변화한 양을 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "5000"
+      },
+      "answerDisplay": "5000",
+      "explanation": "천 묶음이 8개에서 3개가 되어 5개 줄어듭니다. 한 묶음의 크기는 1000이므로 변화한 양은 5 × 1000 = 5000입니다. 정답은 5000입니다.",
+      "steps": [
+        "천 묶음이 8개에서 3개가 되어 5개 줄어듭니다.",
+        "한 묶음의 크기는 1000이므로 변화한 양은 5 × 1000 = 5000입니다.",
+        "정답은 5000입니다."
+      ],
+      "misconceptions": [
+        "바꾼 숫자 자체가 아니라 그 자리의 단위 묶음이 얼마나 바뀌었는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    },
+    {
+      "id": "p-m001x-error-diagnosis-01",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-error-diagnosis",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "choice",
+      "prompt": "3,582에 대한 설명 중 틀린 것을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "b"
+      },
+      "answerDisplay": "백의 자리 숫자는 5이고, 나타내는 값은 5이다.",
+      "explanation": "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다. 백의 자리 숫자가 나타내는 실제 값은 500입니다. 보기 b에 적힌 값 5는 이 값과 다르므로 틀린 주장입니다. 따라서 틀린 설명은 「백의 자리 숫자는 5이고, 나타내는 값은 5이다.」이며, 그 자리 숫자가 나타내는 바른 값은 500입니다.",
+      "steps": [
+        "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다.",
+        "백의 자리 숫자가 나타내는 실제 값은 500입니다. 보기 b에 적힌 값 5는 이 값과 다르므로 틀린 주장입니다.",
+        "따라서 틀린 설명은 「백의 자리 숫자는 5이고, 나타내는 값은 5이다.」이며, 그 자리 숫자가 나타내는 바른 값은 500입니다."
+      ],
+      "misconceptions": [
+        "자리를 맞게 말했더라도 나타내는 값까지 맞는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice",
+      "choices": [
+        {
+          "id": "a",
+          "label": "천의 자리 숫자는 3이고, 나타내는 값은 3000이다."
+        },
+        {
+          "id": "b",
+          "label": "백의 자리 숫자는 5이고, 나타내는 값은 5이다."
+        },
+        {
+          "id": "c",
+          "label": "십의 자리 숫자는 8이고, 나타내는 값은 80이다."
+        }
+      ]
+    },
+    {
+      "id": "p-m001x-error-diagnosis-02",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-error-diagnosis",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "choice",
+      "prompt": "7,046에 대한 설명 중 틀린 것을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "a"
+      },
+      "answerDisplay": "천의 자리 숫자는 7이고, 나타내는 값은 700이다.",
+      "explanation": "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다. 천의 자리 숫자가 나타내는 실제 값은 7000입니다. 보기 a에 적힌 값 700은 이 값과 다르므로 틀린 주장입니다. 따라서 틀린 설명은 「천의 자리 숫자는 7이고, 나타내는 값은 700이다.」이며, 그 자리 숫자가 나타내는 바른 값은 7000입니다.",
+      "steps": [
+        "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다.",
+        "천의 자리 숫자가 나타내는 실제 값은 7000입니다. 보기 a에 적힌 값 700은 이 값과 다르므로 틀린 주장입니다.",
+        "따라서 틀린 설명은 「천의 자리 숫자는 7이고, 나타내는 값은 700이다.」이며, 그 자리 숫자가 나타내는 바른 값은 7000입니다."
+      ],
+      "misconceptions": [
+        "자리를 맞게 말했더라도 나타내는 값까지 맞는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice",
+      "choices": [
+        {
+          "id": "a",
+          "label": "천의 자리 숫자는 7이고, 나타내는 값은 700이다."
+        },
+        {
+          "id": "b",
+          "label": "백의 자리 숫자는 0이고, 나타내는 값은 0이다."
+        },
+        {
+          "id": "c",
+          "label": "일의 자리 숫자는 6이고, 나타내는 값은 6이다."
+        }
+      ]
+    },
+    {
+      "id": "a-m001x-error-diagnosis-03",
+      "unitId": "M0-01",
+      "skillId": "place",
+      "familyId": "m001x-error-diagnosis",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "choice",
+      "prompt": "6,209에 대한 설명 중 틀린 것을 고르세요.",
+      "answerRule": {
+        "kind": "choice",
+        "expected": "c"
+      },
+      "answerDisplay": "일의 자리 숫자는 9이고, 나타내는 값은 90이다.",
+      "explanation": "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다. 일의 자리 숫자가 나타내는 실제 값은 9입니다. 보기 c에 적힌 값 90은 이 값과 다르므로 틀린 주장입니다. 따라서 틀린 설명은 「일의 자리 숫자는 9이고, 나타내는 값은 90이다.」이며, 그 자리 숫자가 나타내는 바른 값은 9입니다.",
+      "steps": [
+        "각 설명에서 자리 이름·숫자·나타내는 값을 따로 확인합니다.",
+        "일의 자리 숫자가 나타내는 실제 값은 9입니다. 보기 c에 적힌 값 90은 이 값과 다르므로 틀린 주장입니다.",
+        "따라서 틀린 설명은 「일의 자리 숫자는 9이고, 나타내는 값은 90이다.」이며, 그 자리 숫자가 나타내는 바른 값은 9입니다."
+      ],
+      "misconceptions": [
+        "자리를 맞게 말했더라도 나타내는 값까지 맞는지 확인해요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment",
+      "choices": [
+        {
+          "id": "a",
+          "label": "백의 자리 숫자는 2이고, 나타내는 값은 200이다."
+        },
+        {
+          "id": "b",
+          "label": "십의 자리 숫자는 0이고, 나타내는 값은 0이다."
+        },
+        {
+          "id": "c",
+          "label": "일의 자리 숫자는 9이고, 나타내는 값은 90이다."
+        }
+      ]
+    },
+    {
+      "id": "p-m001x-constrained-extrema-01",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-constrained-extrema",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "숫자 카드 4, 1, 0, 9 네 장을 각각 한 번씩 써서 만들 수 있는 가장 큰 네 자리 자연수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "9410"
+      },
+      "answerDisplay": "9410",
+      "explanation": "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다. 큰 자리부터 남은 가장 큰 숫자를 놓습니다. 정답은 9410입니다.",
+      "steps": [
+        "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다.",
+        "큰 자리부터 남은 가장 큰 숫자를 놓습니다.",
+        "정답은 9410입니다."
+      ],
+      "misconceptions": [
+        "가장 작은 수를 만들더라도 0을 맨 앞에 놓으면 네 자리 자연수가 아니에요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "p-m001x-constrained-extrema-02",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-constrained-extrema",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "숫자 카드 7, 0, 4, 2 네 장을 각각 한 번씩 써서 만들 수 있는 가장 작은 네 자리 자연수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "2047"
+      },
+      "answerDisplay": "2047",
+      "explanation": "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다. 천의 자리에는 0이 아닌 가장 작은 숫자를 놓습니다. 나머지 자리에는 남은 숫자를 작은 것부터 놓습니다. 정답은 2047입니다.",
+      "steps": [
+        "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다.",
+        "천의 자리에는 0이 아닌 가장 작은 숫자를 놓습니다.",
+        "나머지 자리에는 남은 숫자를 작은 것부터 놓습니다.",
+        "정답은 2047입니다."
+      ],
+      "misconceptions": [
+        "가장 작은 수를 만들더라도 0을 맨 앞에 놓으면 네 자리 자연수가 아니에요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "practice"
+    },
+    {
+      "id": "a-m001x-constrained-extrema-03",
+      "unitId": "M0-01",
+      "skillId": "infer",
+      "familyId": "m001x-constrained-extrema",
+      "reasoning": "application",
+      "difficulty": "D3",
+      "input": "integer",
+      "prompt": "숫자 카드 2, 0, 6, 3 네 장을 각각 한 번씩 써서 만들 수 있는 가장 작은 네 자리 자연수를 쓰세요.",
+      "answerRule": {
+        "kind": "integer",
+        "expected": "2036"
+      },
+      "answerDisplay": "2036",
+      "explanation": "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다. 천의 자리에는 0이 아닌 가장 작은 숫자를 놓습니다. 나머지 자리에는 남은 숫자를 작은 것부터 놓습니다. 정답은 2036입니다.",
+      "steps": [
+        "네 장을 한 번씩만 쓰고 천의 자리에는 0을 놓지 않습니다.",
+        "천의 자리에는 0이 아닌 가장 작은 숫자를 놓습니다.",
+        "나머지 자리에는 남은 숫자를 작은 것부터 놓습니다.",
+        "정답은 2036입니다."
+      ],
+      "misconceptions": [
+        "가장 작은 수를 만들더라도 0을 맨 앞에 놓으면 네 자리 자연수가 아니에요."
+      ],
+      "status": "draft",
+      "version": "1.0.0",
+      "provenance": {
+        "author": "Math 90 Research & Content Agent",
+        "license": "project-original",
+        "source": "M0-01 공동개발 자체 제작 초안 v1; 외부 문항 복제 없음",
+        "aiGenerated": true
+      },
+      "reviewHistory": [],
+      "purpose": "assessment"
+    }
+  ],
+  "verification": [
+    {
+      "problemId": "p-m001x-identify-01",
+      "kind": "digit-value",
+      "params": {
+        "number": 4627,
+        "place": 100
+      }
+    },
+    {
+      "problemId": "p-m001x-identify-02",
+      "kind": "digit-value",
+      "params": {
+        "number": 5814,
+        "place": 10
+      }
+    },
+    {
+      "problemId": "a-m001x-identify-03",
+      "kind": "digit-value",
+      "params": {
+        "number": 9362,
+        "place": 1000
+      }
+    },
+    {
+      "problemId": "p-m001x-compose-01",
+      "kind": "compose",
+      "params": {
+        "terms": [
+          {
+            "count": 3,
+            "unit": 1000
+          },
+          {
+            "count": 0,
+            "unit": 100
+          },
+          {
+            "count": 7,
+            "unit": 10
+          },
+          {
+            "count": 2,
+            "unit": 1
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "p-m001x-compose-02",
+      "kind": "compose",
+      "params": {
+        "terms": [
+          {
+            "count": 8,
+            "unit": 1000
+          },
+          {
+            "count": 4,
+            "unit": 100
+          },
+          {
+            "count": 0,
+            "unit": 10
+          },
+          {
+            "count": 5,
+            "unit": 1
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "a-m001x-compose-03",
+      "kind": "compose",
+      "params": {
+        "terms": [
+          {
+            "count": 5,
+            "unit": 1000
+          },
+          {
+            "count": 0,
+            "unit": 100
+          },
+          {
+            "count": 0,
+            "unit": 10
+          },
+          {
+            "count": 9,
+            "unit": 1
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "p-m001x-infer-01",
+      "kind": "constraint-number",
+      "params": {
+        "thousands": 4,
+        "hundreds": 0,
+        "ones": 3,
+        "tensMultiplier": 3
+      }
+    },
+    {
+      "problemId": "p-m001x-infer-02",
+      "kind": "constraint-number",
+      "params": {
+        "thousands": 6,
+        "hundreds": 2,
+        "ones": 4,
+        "tensAdd": 3
+      }
+    },
+    {
+      "problemId": "a-m001x-infer-03",
+      "kind": "constraint-number",
+      "params": {
+        "thousands": 7,
+        "hundreds": 0,
+        "ones": 2,
+        "tensMultiplier": 4
+      }
+    },
+    {
+      "problemId": "p-m001x-zero-placeholder-01",
+      "kind": "remove-zero",
+      "params": {
+        "number": 4052,
+        "zeroIndex": 1,
+        "ask": "number"
+      }
+    },
+    {
+      "problemId": "p-m001x-zero-placeholder-02",
+      "kind": "remove-zero",
+      "params": {
+        "number": 6008,
+        "zeroIndex": 1,
+        "ask": "number"
+      }
+    },
+    {
+      "problemId": "a-m001x-zero-placeholder-03",
+      "kind": "remove-zero",
+      "params": {
+        "number": 7090,
+        "zeroIndex": 1,
+        "ask": "number"
+      }
+    },
+    {
+      "problemId": "p-m001x-representation-match-01",
+      "kind": "representation-match",
+      "params": {
+        "number": 3064,
+        "choices": [
+          {
+            "id": "a",
+            "terms": [
+              {
+                "count": 3,
+                "unit": 1000
+              },
+              {
+                "count": 6,
+                "unit": 100
+              },
+              {
+                "count": 4,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "b",
+            "terms": [
+              {
+                "count": 3,
+                "unit": 1000
+              },
+              {
+                "count": 6,
+                "unit": 10
+              },
+              {
+                "count": 4,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "c",
+            "terms": [
+              {
+                "count": 3,
+                "unit": 100
+              },
+              {
+                "count": 6,
+                "unit": 10
+              },
+              {
+                "count": 4,
+                "unit": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "p-m001x-representation-match-02",
+      "kind": "representation-match",
+      "params": {
+        "number": 7205,
+        "choices": [
+          {
+            "id": "a",
+            "terms": [
+              {
+                "count": 7,
+                "unit": 1000
+              },
+              {
+                "count": 2,
+                "unit": 100
+              },
+              {
+                "count": 5,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "b",
+            "terms": [
+              {
+                "count": 7,
+                "unit": 1000
+              },
+              {
+                "count": 2,
+                "unit": 10
+              },
+              {
+                "count": 5,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "c",
+            "terms": [
+              {
+                "count": 7,
+                "unit": 100
+              },
+              {
+                "count": 2,
+                "unit": 10
+              },
+              {
+                "count": 5,
+                "unit": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "a-m001x-representation-match-03",
+      "kind": "representation-match",
+      "params": {
+        "number": 5048,
+        "choices": [
+          {
+            "id": "a",
+            "terms": [
+              {
+                "count": 5,
+                "unit": 1000
+              },
+              {
+                "count": 4,
+                "unit": 100
+              },
+              {
+                "count": 8,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "b",
+            "terms": [
+              {
+                "count": 5,
+                "unit": 100
+              },
+              {
+                "count": 4,
+                "unit": 10
+              },
+              {
+                "count": 8,
+                "unit": 1
+              }
+            ]
+          },
+          {
+            "id": "c",
+            "terms": [
+              {
+                "count": 5,
+                "unit": 1000
+              },
+              {
+                "count": 4,
+                "unit": 10
+              },
+              {
+                "count": 8,
+                "unit": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "problemId": "p-m001x-regroup-equivalence-01",
+      "kind": "regroup",
+      "params": {
+        "number": 2860,
+        "knownTerms": [
+          {
+            "count": 28,
+            "unit": 100
+          }
+        ],
+        "unknownUnit": 10
+      }
+    },
+    {
+      "problemId": "p-m001x-regroup-equivalence-02",
+      "kind": "regroup",
+      "params": {
+        "number": 340,
+        "knownTerms": [
+          {
+            "count": 3,
+            "unit": 100
+          }
+        ],
+        "unknownUnit": 10
+      }
+    },
+    {
+      "problemId": "a-m001x-regroup-equivalence-03",
+      "kind": "regroup",
+      "params": {
+        "number": 1000,
+        "knownTerms": [
+          {
+            "count": 7,
+            "unit": 100
+          }
+        ],
+        "unknownUnit": 10
+      }
+    },
+    {
+      "problemId": "p-m001x-compare-lexicographic-01",
+      "kind": "compare",
+      "params": {
+        "numbers": [
+          4102,
+          4029
+        ],
+        "ask": "greatest"
+      }
+    },
+    {
+      "problemId": "p-m001x-compare-lexicographic-02",
+      "kind": "compare",
+      "params": {
+        "numbers": [
+          5806,
+          5860
+        ],
+        "ask": "greatest"
+      }
+    },
+    {
+      "problemId": "a-m001x-compare-lexicographic-03",
+      "kind": "compare",
+      "params": {
+        "numbers": [
+          6307,
+          6370
+        ],
+        "ask": "smallest"
+      }
+    },
+    {
+      "problemId": "p-m001x-digit-change-01",
+      "kind": "digit-change",
+      "params": {
+        "number": 4923,
+        "place": 100,
+        "newDigit": 2,
+        "ask": "difference"
+      }
+    },
+    {
+      "problemId": "p-m001x-digit-change-02",
+      "kind": "digit-change",
+      "params": {
+        "number": 1304,
+        "place": 10,
+        "newDigit": 7,
+        "ask": "difference"
+      }
+    },
+    {
+      "problemId": "a-m001x-digit-change-03",
+      "kind": "digit-change",
+      "params": {
+        "number": 8605,
+        "place": 1000,
+        "newDigit": 3,
+        "ask": "difference"
+      }
+    },
+    {
+      "problemId": "p-m001x-error-diagnosis-01",
+      "kind": "error-diagnosis",
+      "params": {
+        "number": 3582,
+        "claims": [
+          {
+            "id": "a",
+            "place": 1000,
+            "digit": 3,
+            "value": 3000
+          },
+          {
+            "id": "b",
+            "place": 100,
+            "digit": 5,
+            "value": 5
+          },
+          {
+            "id": "c",
+            "place": 10,
+            "digit": 8,
+            "value": 80
+          }
+        ],
+        "ask": "incorrect"
+      }
+    },
+    {
+      "problemId": "p-m001x-error-diagnosis-02",
+      "kind": "error-diagnosis",
+      "params": {
+        "number": 7046,
+        "claims": [
+          {
+            "id": "a",
+            "place": 1000,
+            "digit": 7,
+            "value": 700
+          },
+          {
+            "id": "b",
+            "place": 100,
+            "digit": 0,
+            "value": 0
+          },
+          {
+            "id": "c",
+            "place": 1,
+            "digit": 6,
+            "value": 6
+          }
+        ],
+        "ask": "incorrect"
+      }
+    },
+    {
+      "problemId": "a-m001x-error-diagnosis-03",
+      "kind": "error-diagnosis",
+      "params": {
+        "number": 6209,
+        "claims": [
+          {
+            "id": "a",
+            "place": 100,
+            "digit": 2,
+            "value": 200
+          },
+          {
+            "id": "b",
+            "place": 10,
+            "digit": 0,
+            "value": 0
+          },
+          {
+            "id": "c",
+            "place": 1,
+            "digit": 9,
+            "value": 90
+          }
+        ],
+        "ask": "incorrect"
+      }
+    },
+    {
+      "problemId": "p-m001x-constrained-extrema-01",
+      "kind": "extrema",
+      "params": {
+        "digits": [
+          4,
+          1,
+          0,
+          9
+        ],
+        "mode": "greatest"
+      }
+    },
+    {
+      "problemId": "p-m001x-constrained-extrema-02",
+      "kind": "extrema",
+      "params": {
+        "digits": [
+          7,
+          0,
+          4,
+          2
+        ],
+        "mode": "smallest"
+      }
+    },
+    {
+      "problemId": "a-m001x-constrained-extrema-03",
+      "kind": "extrema",
+      "params": {
+        "digits": [
+          2,
+          0,
+          6,
+          3
+        ],
+        "mode": "smallest"
+      }
+    }
+  ]
+}

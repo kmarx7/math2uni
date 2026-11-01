@@ -73,7 +73,7 @@ export function Records({ review = false }: { review?: boolean }) {
               </details>
               {a.purpose === "assessment" ? (
                 <Link
-                  href={`/learn/${attemptUnitId(a)}#assessment`}
+                  href={`/learn/${attemptUnitId(a)}${a.problemId.startsWith("a-m001x-") ? "?collection=extended" : ""}#assessment`}
                   className="button secondary"
                 >
                   전체 평가 다시 도전

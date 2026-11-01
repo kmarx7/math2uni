@@ -1,7 +1,10 @@
 import type { Attempt, ProgressState, Unit } from "@/contracts";
 export function mastery(attempts: Attempt[], skillId: string): number {
+  // Extended exploration is recorded and reviewed separately from core mastery.
   const latest = new Map<string, Attempt>();
-  for (const a of attempts.filter((a) => a.skillId === skillId)) {
+  for (const a of attempts.filter(
+    (a) => a.skillId === skillId && a.collection !== "extended",
+  )) {
     const key = `${a.problemId}@${a.version}`;
     const previous = latest.get(key);
     if (!previous || a.at >= previous.at) latest.set(key, a);

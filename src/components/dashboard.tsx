@@ -19,19 +19,19 @@ import {
   recommendPractice,
 } from "@/modules/progress";
 import { curriculum } from "@/data/curriculum";
-import { getLesson } from "@/data/content";
+import { getLessonOutline } from "@/data/content-index";
 export function Dashboard() {
   const { state } = useProgress();
   const attempts = state?.attempts ?? [];
   const available = curriculum.units.filter(
-    (unit) => unit.status === "published" && getLesson(unit.id),
+    (unit) => unit.status === "published" && getLessonOutline(unit.id),
   );
   const completed = state
     ? available.filter((unit) =>
         isComplete(
           state,
           unit,
-          getLesson(unit.id)!.blocks.map((block) => block.id),
+          getLessonOutline(unit.id)!.blocks.map((block) => block.id),
         ),
       )
     : [];

@@ -10,6 +10,9 @@ for (const viewport of viewports) {
       await page
         .getByRole("link", { name: "170단원 전체 제안안 보기" })
         .click();
+      // The first RSC navigation compiles the full plan on a cold dev server.
+      // Wait for the actual route commit before asserting its rendered content.
+      await expect(page).toHaveURL("/curriculum/plan", { timeout: 60000 });
       await expect(
         page.getByRole("heading", { name: "170단원 전체 학습 계획" }),
       ).toBeVisible();

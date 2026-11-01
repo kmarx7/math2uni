@@ -24,3 +24,11 @@ ContentDocument {unitId,version,blocks: Block[]}의 Block은 id, type, title과 
 InteractiveBlock.interaction은 place-value/arithmetic/fraction/fraction-sum/decimal/ratio/number-line이다. settings는 허용 연산과 유계 정수 초기값만 받는다. 조작 입력은 슬라이더로 제한하며 임의 수식을 실행하지 않는다. 단원 이동 시 Lesson의 React key를 unitId로 두어 이전 문항·조작 상태를 이어받지 않는다.
 
 선수 진단은 현재 자기 점검이다. 실제 진단 문항 기반의 수준 판정으로 표현하지 않는다.
+
+## M0-01 공동 개발 인계
+
+`src/contracts/handoff.ts`는 사용자 요청의 단원 메타데이터, 6소단원, 15단계, 문제 청사진, 검토·평가·복습 기준을 검증한다. `ContentDocument.learningPhases`는 15개 교수단계를 기존 블록 ID에 연결하며 state=available/planned를 구분한다. ExplanationBlock.sections는 설명·활동·이해 확인을 공통 렌더러에 제공한다. 현재 14단계는 안내/활동을 제공하고 심화 단계는 미작성 상태를 표시한다.
+
+기존 M0-01 9블록 ID를 추가·대체하지 않아 과거 완료를 취소하지 않는다. 콘텐츠 버전은 1.1.0-draft이고 기존 문항 버전은 바꾸지 않는다. [협업 계약](MULTI_AGENT.md)과 단원별 content-draft/검증/승인 대기 파일로 인계한다.
+
+신규 M0-01 설명/조작도 운영 승인 전 개발 검토 모드에서만 전달한다. `src/modules/content/server.ts`는 production에서 preview 플래그를 무시하고 보존된 v1.0.0 문서로 되돌린다. 클라이언트는 `content-index`의 블록 ID만 완료 판정에 사용하며 초안 설명을 직접 import하지 않는다. 이 게이트는 새 콘텐츠의 운영 승인이 아직 없다는 상태를 보존한다.

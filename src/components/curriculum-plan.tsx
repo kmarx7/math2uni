@@ -1,4 +1,5 @@
 "use client";
+import masterDesign from "@/data/master-design.json";
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, Search } from "lucide-react";
@@ -86,6 +87,27 @@ export function CurriculumPlan({
             성취기준 코드는 미연결이며, 사람 검수와 구성 확인을 거쳐 확정합니다.
             미구현 단원은 학습할 수 없습니다.
           </p>
+        </div>
+      </aside>
+      <aside className="notice">
+        <div>
+          <strong>최신 마스터 기준과 상세 단원 재배치 검토 중</strong>
+          <p>
+            최신 요청의 LEVEL 0~8 수량은{" "}
+            {masterDesign.levels.map((item) => item.count).join(" / ")}입니다.
+            아래 목록은 기존 ID를 보존한 이전 제안 v{proposal.version}이며 최신
+            배분과 아직 정렬되지 않았습니다.
+          </p>
+          <details>
+            <summary>새 LEVEL별 설계 기준 보기</summary>
+            <ul>
+              {masterDesign.levels.map((item) => (
+                <li key={item.level}>
+                  LEVEL {item.level} · {item.title} · {item.count}단원
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
       </aside>
       <dl className="plan-stats">

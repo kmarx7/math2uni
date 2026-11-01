@@ -41,6 +41,11 @@ export const blockSchema = z.discriminatedUnion("type", [
     type: z.literal("ExplanationBlock"),
     body: text,
     readinessCheck: z.boolean().optional(),
+    sections: z
+      .array(
+        z.object({ id, title: id, body: text, activity: text, check: text }),
+      )
+      .optional(),
   }),
   z.object({
     ...base,
@@ -88,6 +93,16 @@ export const contentSchema = z.object({
   unitId: id,
   version: id,
   blocks: z.array(blockSchema).min(1),
+  learningPhases: z
+    .array(
+      z.object({
+        id,
+        title: id,
+        blockId: id,
+        state: z.enum(["available", "planned"]),
+      }),
+    )
+    .optional(),
 });
 export type ContentDocument = z.infer<typeof contentSchema>;
 export type Block = z.infer<typeof blockSchema>;
@@ -116,6 +131,19 @@ export const reviewSchema = z.object({
   actorType: z.enum(["human", "automated"]),
   mathChecked: z.boolean(),
 });
+export const thinkingTypeSchema = z.enum([
+  "개념 이해",
+  "기초 계산",
+  "단계별 풀이",
+  "빈칸 완성",
+  "오류 발견",
+  "표현 변환",
+  "실생활 응용",
+  "시각적 탐구",
+  "복합 개념",
+  "심화·전이",
+]);
+export type ThinkingType = z.infer<typeof thinkingTypeSchema>;
 export const problemSchema = z.object({
   id,
   unitId: id,
@@ -143,6 +171,8 @@ export const problemSchema = z.object({
   reviewHistory: z.array(reviewSchema),
   purpose: z.enum(["practice", "assessment"]),
 });
+export const problemCollectionSchema = z.enum(["core", "extended"]);
+export type ProblemCollection = z.infer<typeof problemCollectionSchema>;
 export type ProblemInstance = z.infer<typeof problemSchema>;
 export type ProblemFamily = { id: string; title: string; strategy: string };
 export type ProblemTemplate = {
@@ -181,6 +211,7 @@ export type Feedback = Grade & {
   misconception?: string;
 };
 export const attemptSchema = z.object({
+  collection: problemCollectionSchema.optional(),
   unitId: z
     .string()
     .regex(/^M[0-8]-\d{2}$/)

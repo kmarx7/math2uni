@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M0-01",
+  "contentVersion": "1.1.0-draft",
+  "actorType": "automated",
+  "contentQuality": {
+    "newFixedDrafts": 30,
+    "practice": 20,
+    "assessment": 10,
+    "distinctFamilies": 10,
+    "newFamilies": 7,
+    "choice": 6,
+    "integer": 24,
+    "independentAnswerChecks": {
+      "passed": 30,
+      "failed": 0
+    },
+    "automaticAndAgentReview": "passed-with-manual-review-limitations",
+    "humanApproved": 0,
+    "reviewStatus": "draft",
+    "questionVersion": "1.0.0",
+    "explanationCheck": "Final answer and constrained numeric statements checked automatically; educational wording cross-reviewed by agents; general semantic proof and expert review remain pending"
+  },
+  "codeQuality": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "unitTests": {
+      "passed": 101,
+      "failed": 0
+    },
+    "build": "passed",
+    "contentChecks": {
+      "passed": 14,
+      "failed": 0
+    },
+    "e2e": {
+      "status": "passed",
+      "passed": 52,
+      "failed": 0,
+      "exitCode": 0,
+      "elapsedDisplay": "2.3m",
+      "command": "npm run test:smoke",
+      "workerCount": 1
+    },
+    "agentTomlSyntax": "passed",
+    "agentRuntimeConfigInstallation": "blocked"
+  },
+  "publication": {
+    "status": "blocked",
+    "humanApproval": null,
+    "productionExtendedQuestions": false,
+    "productionExtendedLessonDelivery": false
+  },
+  "hashes": {
+    "src/data/m001-expansion.json": "6c20e8f2f8c90ce1900431afb24535ad83bca362ea68f84c67f16a73d7968458",
+    "src/data/m001-instruction.json": "b8d46f00d8f8e6cd3c53d016a85be2af9c9aed7801249a7194638ab6f32274db",
+    "docs/specifications/M0-01/lesson-spec.json": "ea5c6bb43b2ecc574a5e874319735e92b6ab86dd8da486090f39aefba999ca20",
+    "docs/specifications/M0-01/problem-blueprint.json": "4d03da2c0fea9341e4751e218cc0b345a68e4210a37f662236ab44a22d42c94f",
+    "src/data/content.ts": "82e1092d38b89c51576bae078f4003a8d0062baca6ad8734a559a5426af5610f",
+    "src/components/place-value-exploration.tsx": "679a43cf62f8196a38e77d1c9be0de6f7a7dfb5bef82de59e816c3c884d35527",
+    "src/data/m001-core-lesson.json": "ccd74e0467facd82b9dec8d0c53dbec931d27c89a19ab1cd9919dde12ad673d5",
+    "src/modules/content/server.ts": "ed969cb763ced7b12d95ce48b670a63047fb284e85a49c2f21d0cafd23a66ba3"
+  },
+  "knownGates": {
+    "canonical170": "failed: empty manifest / 12 registered units",
+    "requestedAllocation": "recorded, detailed170alignmentpending",
+    ".codexInstallation": "write rejected by protected-path policy"
+  },
+  "limitations": [
+    "D4/D5 not authored",
+    "condition-card manipulation not implemented",
+    "official achievement-code mapping unverified",
+    "extended assessment attempts stored; independent assessment-run analytics not implemented",
+    "real-device accessibility and learning-effect evidence not verified",
+    "TOML templates not runtime-loaded; real role delegation used session tools"
+  ]
+}

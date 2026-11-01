@@ -1,22 +1,31 @@
 "use client";
 import { useEffect, useState } from "react";
-import type { PublicProblem, Feedback } from "@/contracts";
+import type {
+  PublicProblem,
+  Feedback,
+  ProblemFamily,
+  ProblemCollection,
+} from "@/contracts";
 import { useProgress } from "./progress-provider";
 import { Check, ArrowRight, Lightbulb } from "lucide-react";
 export function ProblemSession({
   mode = "practice",
   onlyId,
+  collection = onlyId?.startsWith("p-m001x-") ? "extended" : "core",
   unitId = "M0-01",
   hintText = "문제의 조건을 정리하고, 개념 설명과 풀이 예제를 한 단계씩 확인해 보세요.",
 }: {
   mode?: "practice" | "assessment" | "review";
   onlyId?: string;
+  collection?: ProblemCollection;
   unitId?: string;
   hintText?: string;
 }) {
   const assessment = mode === "assessment";
   const endpoint = assessment ? "assessment" : "practice";
   const { state, replaceSnapshot } = useProgress();
+  const [families, setFamilies] = useState<ProblemFamily[]>([]);
+  const [family, setFamily] = useState("all");
   const [problems, setProblems] = useState<PublicProblem[]>([]),
     [answers, setAnswers] = useState<Record<string, string>>({}),
     [results, setResults] = useState<Feedback[]>([]),
@@ -30,9 +39,12 @@ export function ProblemSession({
     [preview, setPreview] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`/api/${endpoint}?unitId=${encodeURIComponent(unitId)}`, {
-      signal: controller.signal,
-    })
+    fetch(
+      `/api/${endpoint}?unitId=${encodeURIComponent(unitId)}&collection=${collection}`,
+      {
+        signal: controller.signal,
+      },
+    )
       .then((r) => {
         if (!r.ok) throw new Error();
         return r.json();
@@ -43,6 +55,7 @@ export function ProblemSession({
             (p: PublicProblem) => !onlyId || p.id === onlyId,
           ),
         );
+        setFamilies(data.families ?? []);
         setLoaded(true);
         setPreview(data.preview);
       })
@@ -51,9 +64,11 @@ export function ProblemSession({
           setError("문항을 불러오지 못했어요. 페이지를 새로고침해 주세요.");
       });
     return () => controller.abort();
-  }, [endpoint, onlyId, unitId]);
+  }, [endpoint, onlyId, unitId, collection]);
   const filtered = problems.filter(
-      (p) => filter === "all" || p.reasoning === filter,
+      (p) =>
+        (filter === "all" || p.reasoning === filter) &&
+        (family === "all" || p.familyId === family),
     ),
     problem = filtered[index];
   const [requestId, setRequestId] = useState(() => crypto.randomUUID());
@@ -68,9 +83,10 @@ export function ProblemSession({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           assessment
-            ? { unitId, answers, requestId }
+            ? { unitId, collection, answers, requestId }
             : {
                 unitId,
+                collection,
                 problemId: problem.id,
                 answer: answers[problem.id] ?? "",
                 requestId,
@@ -202,6 +218,7 @@ export function ProblemSession({
               className={filter === v ? "selected" : ""}
               onClick={() => {
                 setFilter(v);
+                setFamily("all");
                 setIndex(0);
                 setResults([]);
                 setAnswers({});
@@ -214,16 +231,40 @@ export function ProblemSession({
           ))}
         </div>
       )}
+      {!assessment && !onlyId && families.length > 0 && (
+        <label className="family-selector">
+          문제 원형
+          <select
+            value={family}
+            onChange={(event) => {
+              setFamily(event.target.value);
+              setFilter("all");
+              setIndex(0);
+              setResults([]);
+              setAnswers({});
+              setHint(false);
+              setRequestId(crypto.randomUUID());
+            }}
+          >
+            <option value="all">모든 원형</option>
+            {families.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.title}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       {assessment && (
         <p className="helper">
-          3문항을 모두 풀고 제출해 주세요. 정답과 해설은 전체 제출 후
-          표시됩니다. 실전 모의평가는 아직 제공하지 않습니다.
+          {problems.length}문항을 모두 풀고 제출해 주세요. 정답과 해설은 전체
+          제출 후 표시됩니다. 실전 모의평가는 아직 제공하지 않습니다.
         </p>
       )}
       {preview && (
         <p className="preview-note">
-          검토용 미승인 샘플 · 자동 검사 완료, 관리자 승인 대기 · 운영
-          서비스에는 공개되지 않습니다.
+          검토용 미승인 초안 · 관리자 승인 대기 · 운영 서비스에는 공개되지
+          않습니다.
         </p>
       )}
       {!problem && !error && (
@@ -286,6 +327,12 @@ export function ProblemSession({
         <p className="hint">
           <Lightbulb size={16} />
           {hintText} 힌트 사용은 기록됩니다.
+        </p>
+      )}
+      {assessment && collection === "extended" && (
+        <p className="helper">
+          확장 평가는 풀이 기록과 복습에 저장되며 기존 3문항 평가 점수와 단원
+          완료 조건을 바꾸지 않습니다.
         </p>
       )}
       {score !== null && (

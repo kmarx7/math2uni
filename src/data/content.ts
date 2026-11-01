@@ -1,7 +1,10 @@
+import instruction from "./m001-instruction.json";
 import type { ContentDocument } from "@/contracts";
 export const lesson: ContentDocument = {
   unitId: "M0-01",
-  version: "1.0.0",
+  version: instruction.version,
+  learningPhases:
+    instruction.learningPhases as ContentDocument["learningPhases"],
   blocks: [
     {
       id: "goals",
@@ -20,7 +23,8 @@ export const lesson: ContentDocument = {
       id: "concept",
       type: "ExplanationBlock",
       title: "숫자는 같아도, 자릿값은 달라요",
-      body: "3,042에서 3은 천의 자리에 있어 3,000을 나타냅니다. 4는 십의 자리에 있어 40을 나타내요. 백의 자리의 0은 백 묶음이 없다는 뜻입니다. 0을 빼서 342로 쓰면 다른 수가 됩니다.",
+      sections: instruction.sections,
+      body: "3,042에서 3은 천의 자리에 있어 3,000을 나타냅니다. 4는 십의 자리에 있어 40을 나타내요. 백의 자리의 0은 백 묶음이 없다는 뜻입니다. 0을 지워 342로 쓰면 3은 천의 자리에서 백의 자리로 바뀌지만 4의 십 자리와 2의 일 자리는 유지됩니다. 그래서 전체 양은 달라져요. 같은 단위 열 개를 윗단위 하나로 교환하므로 오른쪽에서 한 자리 왼쪽으로 갈 때 단위가 10배가 된다. 자리값 식은 관찰한 묶음을 간결하게 기록한 표현이다.",
     },
     {
       id: "lab",
@@ -61,7 +65,7 @@ export const lesson: ContentDocument = {
       id: "review",
       type: "ReviewBlock",
       title: "기억이 오래 남도록",
-      body: "오늘 풀었던 문항은 다음 날 다시 확인해요. 복습에서 맞히면 3일, 7일로 간격을 늘립니다. 오답노트에서는 바로 다시 연습할 수도 있어요. 모든 블록 확인, 세 개념 숙달, 형성평가 80% 이상이면 이 단원 완료입니다. 다음 단원은 콘텐츠 검토 후 열립니다.",
+      body: "오늘 풀었던 문항은 다음 날 다시 확인해요. 복습에서 맞히면 3일, 7일로 간격을 늘립니다. 오답노트에서는 바로 다시 연습할 수도 있어요. 모든 블록 확인, 세 개념 숙달, 형성평가 80% 이상이면 이 단원 완료입니다. 기본 완료 조건을 만족하면 다음 단원으로 이동할 수 있어요. 확장 10원형 연습과 확장 평가는 선택 활동이며 기존 완료 점수와 분리합니다. D4~D5 심화 문항은 작성·검수 예정입니다.",
     },
   ],
 };

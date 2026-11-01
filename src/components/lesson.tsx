@@ -1,25 +1,104 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import type { ContentDocument, Block, Unit } from "@/contracts";
+import type {
+  ContentDocument,
+  Block,
+  Unit,
+  ProblemCollection,
+} from "@/contracts";
 import { useProgress } from "./progress-provider";
+import { PlaceValueExploration } from "./place-value-exploration";
 import { MathLab } from "./math-lab";
 import { curriculum } from "@/data/curriculum";
-import { getLesson } from "@/data/content";
+import { getLessonOutline } from "@/data/content-index";
 import { ProblemSession } from "./problem-session";
 import { mastery, isComplete, unitProgress } from "@/modules/progress";
 import { Check, ArrowLeft, CheckCircle2 } from "lucide-react";
-function BlockRenderer({ block, unitId }: { block: Block; unitId: string }) {
+function UnitProblemSession({
+  unitId,
+  mode = "practice",
+  hintText,
+  initialCollection = "core",
+  allowExtension = false,
+}: {
+  unitId: string;
+  mode?: "practice" | "assessment";
+  hintText?: string;
+  initialCollection?: ProblemCollection;
+  allowExtension?: boolean;
+}) {
+  const [collection, setCollection] =
+    useState<ProblemCollection>(initialCollection);
+  return (
+    <>
+      {unitId === "M0-01" && allowExtension && (
+        <label className="collection-selector">
+          {mode === "assessment" ? "평가 문항 묶음" : "연습 문항 묶음"}
+          <select
+            value={collection}
+            onChange={(event) =>
+              setCollection(event.target.value as ProblemCollection)
+            }
+          >
+            <option value="core">기본 학습 묶음</option>
+            <option value="extended">10원형 확장 묶음 · 검토용</option>
+          </select>
+        </label>
+      )}
+      <ProblemSession
+        key={`${unitId}:${mode}:${collection}`}
+        unitId={unitId}
+        mode={mode}
+        hintText={hintText}
+        collection={collection}
+      />
+    </>
+  );
+}
+function BlockRenderer({
+  block,
+  unitId,
+  initialCollection,
+  allowExtension,
+}: {
+  block: Block;
+  unitId: string;
+  initialCollection: ProblemCollection;
+  allowExtension: boolean;
+}) {
   switch (block.type) {
     case "ExplanationBlock":
       return (
         <>
           <p className="block-body">{block.body}</p>
+          {block.sections && (
+            <div className="instruction-sections">
+              {block.sections.map((section) => (
+                <article key={section.id}>
+                  <h3>{section.title}</h3>
+                  <p>{section.body}</p>
+                  <p>
+                    <strong>탐구 활동 · </strong>
+                    {section.activity}
+                  </p>
+                  <p className="helper">이해 확인 · {section.check}</p>
+                </article>
+              ))}
+            </div>
+          )}
           {block.readinessCheck && <ReadinessCheck />}
         </>
       );
     case "InteractiveBlock":
-      return <MathLab block={block} />;
+      return (
+        <>
+          <MathLab block={block} />
+          {block.interaction === "place-value" && allowExtension && (
+            <PlaceValueExploration />
+          )}
+        </>
+      );
     case "WorkedExampleBlock":
       return (
         <ol className="worked-steps">
@@ -32,14 +111,35 @@ function BlockRenderer({ block, unitId }: { block: Block; unitId: string }) {
         </ol>
       );
     case "PracticeBlock":
-      return <ProblemSession unitId={unitId} hintText={block.hint} />;
+      return (
+        <UnitProblemSession
+          unitId={unitId}
+          hintText={block.hint}
+          allowExtension={allowExtension}
+        />
+      );
     case "AssessmentBlock":
-      return <ProblemSession unitId={unitId} mode="assessment" />;
+      return (
+        <UnitProblemSession
+          unitId={unitId}
+          mode="assessment"
+          initialCollection={initialCollection}
+          allowExtension={allowExtension}
+        />
+      );
     default:
       return <p className="block-body">{block.body}</p>;
   }
 }
-export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
+export function Lesson({
+  doc,
+  unit,
+  initialCollection = "core",
+}: {
+  doc: ContentDocument;
+  unit: Unit;
+  initialCollection?: ProblemCollection;
+}) {
   const { state, completeBlock, saving } = useProgress();
   const progress = state
     ? unitProgress(state, unit.id)
@@ -48,7 +148,7 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
     (candidate) =>
       candidate.order === unit.order + 1 &&
       candidate.status === "published" &&
-      getLesson(candidate.id),
+      getLessonOutline(candidate.id),
   );
   const missing = unit.prerequisites
     .filter((skill) => mastery(state?.attempts ?? [], skill) < 80)
@@ -108,6 +208,16 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
           </div>
         </aside>
       )}
+      {doc.learningPhases && (
+        <nav className="lesson-phases" aria-label="15단계 학습 경로">
+          {doc.learningPhases.map((phase) => (
+            <a key={phase.id} href={`#${phase.blockId}`}>
+              {phase.title}
+              {phase.state === "planned" ? " · 준비 중" : ""}
+            </a>
+          ))}
+        </nav>
+      )}
       <div className="lesson-layout">
         <nav className="lesson-index" aria-label="학습 단계">
           <span className="eyebrow">LEARNING PATH</span>
@@ -130,7 +240,7 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
             </a>
           ))}
           <div className="mastery-summary">
-            <strong>개념별 숙달도</strong>
+            <strong>기본 학습 개념별 숙달도</strong>
             {unit.concepts.map((c) => (
               <div key={c.id}>
                 <span>{c.label}</span>
@@ -152,7 +262,12 @@ export function Lesson({ doc, unit }: { doc: ContentDocument; unit: Unit }) {
                 </span>
                 <h2>{block.title}</h2>
               </div>
-              <BlockRenderer block={block} unitId={unit.id} />
+              <BlockRenderer
+                block={block}
+                unitId={unit.id}
+                initialCollection={initialCollection}
+                allowExtension={!!doc.learningPhases}
+              />
               <button
                 className={`block-check ${progress.completedBlocks.includes(block.id) ? "done" : ""}`}
                 disabled={

@@ -3,10 +3,12 @@ import {
   type ProgressState,
   type Feedback,
   type Attempt,
+  type ProblemCollection,
 } from "@/contracts";
 import { unitProgress } from "./index";
 export type Submission = {
   unitId?: string;
+  collection?: ProblemCollection;
   requestId: string;
   answers: Record<string, string>;
   feedback: Feedback[];
@@ -33,12 +35,14 @@ export function applySubmission(
       if (
         previous.answer !== answer ||
         previous.hintUsed !== submission.hintUsed ||
-        previous.version !== feedback.version
+        previous.version !== feedback.version ||
+        (previous.collection ?? "core") !== (submission.collection ?? "core")
       )
         throw new Error("같은 제출 ID의 답안이 다릅니다.");
       continue;
     }
     added.push({
+      collection: submission.collection ?? "core",
       unitId,
       id,
       problemId: feedback.problemId,
@@ -68,7 +72,7 @@ export function applySubmission(
     ...state,
     attempts: [...state.attempts, ...added],
     assessmentScore:
-      unitId === "M0-01"
+      unitId === "M0-01" && submission.collection !== "extended"
         ? (submission.score ?? state.assessmentScore)
         : state.assessmentScore,
     unitProgress: {
@@ -76,7 +80,9 @@ export function applySubmission(
       [unitId]: {
         ...unitProgress(state, unitId),
         assessmentScore:
-          submission.score ?? unitProgress(state, unitId).assessmentScore,
+          (submission.collection !== "extended"
+            ? submission.score
+            : undefined) ?? unitProgress(state, unitId).assessmentScore,
       },
     },
   });

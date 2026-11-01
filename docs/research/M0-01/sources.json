@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M0-01",
+  "status": "researched",
+  "officialMappingStatus": "unverified",
+  "sources": [
+    {
+      "id": "moe-2022-notice",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&statusYN=W",
+      "publisher": "대한민국 교육부",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "page-verified-attachment-not-reviewed",
+      "verifiedFacts": ["수학과 교육과정은 별책 8로 고시됨"],
+      "unverified": [
+        "별책 8 첨부 원문 전체",
+        "M0-01 단원별 공식 성취기준 코드와 매핑"
+      ],
+      "rights": {
+        "use": "reference-link-only",
+        "licenseVerification": "not-required-for-linking; attachment reuse not approved",
+        "copiedQuestions": false
+      }
+    },
+    {
+      "id": "ncetm-place-value",
+      "title": "Multiplying by 10 – is it OK to just put a zero?",
+      "url": "https://www.ncetm.org.uk/features/multiplying-by-10-is-it-ok-to-just-put-a-zero/",
+      "publisher": "NCETM",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "article-verified",
+      "verifiedFacts": [
+        "자리값과 묶음의 개념 이해가 단순한 0 붙이기 요령보다 선행되어야 한다는 지도 설명"
+      ],
+      "unverified": ["한국 공식 성취기준 대응", "한국 학습자 오개념 발생 비율"],
+      "rights": {
+        "use": "paraphrased-pedagogical-reference-only",
+        "licenseVerification": "redistribution-not-verified; slides/questions not copied",
+        "copiedQuestions": false
+      }
+    },
+    {
+      "id": "oak-placeholder",
+      "title": "Explain the use of placeholders when multiplying whole numbers by 100",
+      "url": "https://www.thenational.academy/teachers/programmes/maths-primary-ks2/units/understand-what-happens-when-a-number-is-multiplied-or-divided-by-10-and-100/lessons/explain-the-use-of-placeholders-when-multiplying-whole-numbers-by-100",
+      "publisher": "Oak National Academy",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "lesson-page-verified",
+      "verifiedFacts": [
+        "단순 0 추가 패턴과 자리값 변화 의미 사이의 혼동을 설명하는 교수 안내"
+      ],
+      "unverified": ["슬라이드와 퀴즈의 전체 내용", "한국 공식 교육과정 매핑"],
+      "rights": {
+        "use": "reference-link-and-paraphrase-only",
+        "licenseVerification": "downloaded-materials reuse not evaluated",
+        "copiedQuestions": false
+      }
+    },
+    {
+      "id": "moe-2028-example-notice",
+      "title": "2028학년도 대입, 이렇게 준비하세요",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402&opType=N&s=moe&statusYN=W",
+      "publisher": "대한민국 교육부",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "notice-page-verified-questions-not-reviewed",
+      "verifiedFacts": [
+        "2028학년도 수능 예시문항 안내와 첨부 경로 제공",
+        "안내 게시물은 출처표시 공공누리 안내를 표시함"
+      ],
+      "unverified": [
+        "첨부 문항별 권리와 외부 포함물",
+        "문항 내용 전체와 난도 분포"
+      ],
+      "rights": {
+        "use": "reference-link-only",
+        "licenseVerification": "notice KOGL attribution visible; attachment item rights not inferred",
+        "copiedQuestions": false
+      }
+    },
+    {
+      "id": "kice-direct",
+      "title": "한국교육과정평가원 누리집 직접 열람 시도",
+      "url": "https://www.kice.re.kr/",
+      "publisher": "한국교육과정평가원",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "no-readable-content",
+      "verifiedFacts": [],
+      "unverified": ["평가원 직접 문항 본문", "문항별 이용 조건"],
+      "rights": {
+        "use": "none",
+        "licenseVerification": "unverified",
+        "copiedQuestions": false
+      }
+    },
+    {
+      "id": "suneung-direct",
+      "title": "대학수학능력시험 누리집 직접 열람 시도",
+      "url": "https://www.suneung.re.kr/",
+      "publisher": "대학수학능력시험 누리집",
+      "checkedAt": "2026-11-01T01:52:56.000Z",
+      "accessStatus": "no-readable-content",
+      "verifiedFacts": [],
+      "unverified": ["직접 문항 본문", "문항별 이용 조건"],
+      "rights": {
+        "use": "none",
+        "licenseVerification": "unverified",
+        "copiedQuestions": false
+      }
+    }
+  ],
+  "contentProvenance": {
+    "origin": "project-original",
+    "aiGenerated": true,
+    "externalQuestionsCopied": 0,
+    "newDraftQuestions": 30,
+    "humanApprovedQuestions": 0,
+    "draftOnly": true
+  }
+}

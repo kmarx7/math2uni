@@ -1,8 +1,10 @@
+import { problemCollectionSchema } from "@/contracts";
 import { z } from "zod";
 import {
   privateProblems,
   publicProblems,
   isPreview,
+  publicFamilies,
 } from "@/modules/question-bank/server";
 import { scoreProblem } from "@/modules/assessment";
 import { apiAccount, sameOrigin, forbiddenOrigin } from "@/modules/auth/server";
@@ -17,8 +19,19 @@ export async function GET(request?: Request) {
     : "M0-01";
   const { response } = await apiAccount();
   if (response) return response;
+  const parsedCollection = problemCollectionSchema.safeParse(
+    request
+      ? (new URL(request.url).searchParams.get("collection") ?? "core")
+      : "core",
+  );
+  if (!parsedCollection.success) return badRequest(parsedCollection.error);
+  const collection = parsedCollection.data;
   return Response.json(
-    { problems: publicProblems("practice", unitId), preview: isPreview() },
+    {
+      problems: publicProblems("practice", unitId, collection),
+      families: publicFamilies("practice", unitId, collection),
+      preview: isPreview(),
+    },
     { headers: noStore },
   );
 }
@@ -28,6 +41,7 @@ const inputSchema = z
       .string()
       .regex(/^M[0-8]-\d{2}$/)
       .default("M0-01"),
+    collection: problemCollectionSchema.default("core"),
     problemId: z.string().max(100),
     answer: z.string().max(64),
     requestId: z.uuid(),
@@ -45,9 +59,11 @@ export async function POST(request: Request) {
   } catch (error) {
     return badRequest(error);
   }
-  const problem = privateProblems("practice", input.unitId).find(
-    (p) => p.id === input.problemId,
-  );
+  const problem = privateProblems(
+    "practice",
+    input.unitId,
+    input.collection,
+  ).find((p) => p.id === input.problemId);
   if (!problem)
     return Response.json(
       { error: "연습 문항을 찾을 수 없습니다." },
@@ -63,6 +79,7 @@ export async function POST(request: Request) {
     const snapshot = await transactProgress(repository, account.id, (s) =>
       applySubmission(s, {
         unitId: problem.unitId,
+        collection: input.collection,
         requestId: input.requestId,
         answers: { [problem.id]: input.answer },
         feedback: [feedback],

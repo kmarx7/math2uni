@@ -1,0 +1,19 @@
+{
+  "version": "2026-11-01-master",
+  "status": "requested-not-aligned",
+  "targetCount": 170,
+  "levels": [
+    { "level": 0, "title": "수와 연산 기초", "count": 12 },
+    { "level": 1, "title": "문자와 식", "count": 14 },
+    { "level": 2, "title": "중학 대수", "count": 18 },
+    { "level": 3, "title": "중학 함수·기하·확률", "count": 22 },
+    { "level": 4, "title": "고교 공통수학", "count": 24 },
+    { "level": 5, "title": "대수", "count": 20 },
+    { "level": 6, "title": "미적분Ⅰ", "count": 22 },
+    { "level": 7, "title": "확률과 통계", "count": 18 },
+    { "level": 8, "title": "수능 실전", "count": 20 }
+  ],
+  "preserveExistingIds": true,
+  "existingProposalVersion": "0.1.0",
+  "alignmentDecision": "docs/decisions/007-level-allocation.md"
+}

@@ -2,10 +2,11 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/e2e",
   fullyParallel: true,
-  workers: 2,
-  globalTimeout: 240000,
-  timeout: 45000,
-  expect: { timeout: 12000 },
+  // One worker avoids cold Next dev compilation and fixture socket contention.
+  workers: 1,
+  globalTimeout: 600000,
+  timeout: 90000,
+  expect: { timeout: 20000 },
   reporter: "list",
   use: { baseURL: "http://localhost:3005", trace: "retain-on-failure" },
   projects: [{ name: "chromium", use: { browserName: "chromium" } }],

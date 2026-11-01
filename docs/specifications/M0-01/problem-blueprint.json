@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M0-01",
+  "contentVersion": "1.1.0-draft",
+  "reviewStatus": "reviewed",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "scope": "신규 확장 초안 30개. 기존 고정 6개와 생성 샘플 2개를 삭제·대체하거나 신규 수량에 포함하지 않는다.",
+  "families": [
+    {
+      "id": "identify",
+      "skillId": "place",
+      "title": "자리와 자릿값 식별",
+      "thinkingType": "개념 이해",
+      "strategy": "오른쪽에서 자리 이름을 정하고 숫자와 자리 단위를 연결한다",
+      "distinctFrom": "분해식의 합을 구하는 compose와 달리 지정 숫자의 위치·가치를 식별한다",
+      "difficulty": [
+        "D1",
+        "D2"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "문자열 자리 인덱스와 독립 십진 가중치로 목표 숫자·자릿값을 재계산한다"
+    },
+    {
+      "id": "compose",
+      "skillId": "compose",
+      "title": "십진 분해식의 합성",
+      "thinkingType": "표현 변환",
+      "strategy": "단위별 양을 자리표에 모아 표준 자연수로 바꾼다",
+      "distinctFrom": "표현이 주어진 식을 합성하는 작업이며 조건으로 자릿수를 추론하는 infer와 구별한다",
+      "difficulty": [
+        "D1",
+        "D2"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "각 항의 합과 십진 문자열 자리표를 비교한다"
+    },
+    {
+      "id": "infer",
+      "skillId": "infer",
+      "title": "자리 조건의 역추론",
+      "thinkingType": "복합 개념",
+      "strategy": "숫자 간 관계를 풀어 빈 자리를 정하고 모든 조건을 다시 확인한다",
+      "distinctFrom": "숫자 배치의 제약을 만족하는 해를 찾으며 최댓값·최솟값 선택은 요구하지 않는다",
+      "difficulty": [
+        "D2",
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "명시된 범위의 자연수를 전수 대입해 정답 유일성과 모든 조건을 확인한다"
+    },
+    {
+      "id": "m001x-zero-placeholder",
+      "skillId": "place",
+      "title": "0의 자리 유지 역할과 삭제 영향",
+      "thinkingType": "오류 발견",
+      "strategy": "0을 지운 전후 수를 비교한다. 삭제한 0보다 왼쪽의 숫자들은 한 자리 낮아지고, 오른쪽 숫자들의 자리 단위는 그대로임을 확인한다.",
+      "distinctFrom": "단순 합성이 아니라 0 삭제가 뒤 숫자의 위치와 수 전체에 주는 영향을 판별한다",
+      "difficulty": [
+        "D1",
+        "D2"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "원문 수에서 지정된 0 하나를 지운 결과를 명시적으로 생성하고 선택지의 유일성을 확인한다"
+    },
+    {
+      "id": "m001x-representation-match",
+      "skillId": "compose",
+      "title": "여러 표현의 동치 대응",
+      "thinkingType": "표현 변환",
+      "strategy": "말·자리표·분해식 중 같은 양을 뜻하는 표현끼리 대응한다",
+      "distinctFrom": "숫자 한 개를 산출하는 compose와 달리 여러 표현의 동치 여부를 판단한다",
+      "difficulty": [
+        "D2",
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "모든 표현을 독립 가중합으로 수치화하고 동치 선택지가 정확히 하나인지 확인한다"
+    },
+    {
+      "id": "m001x-regroup-equivalence",
+      "skillId": "compose",
+      "title": "표준·비표준 묶음의 동치",
+      "thinkingType": "단계별 풀이",
+      "strategy": "같은 단위 10개를 윗단위 1개로 교환해 같은 양임을 보인다",
+      "distinctFrom": "각 자리 수가 0~9로 주어진 표준 compose와 달리 10개 이상인 묶음을 재구성한다",
+      "difficulty": [
+        "D2",
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "비표준 묶음의 가중합과 표준 표현을 비교하고 교환 전후 보존을 확인한다"
+    },
+    {
+      "id": "m001x-compare-lexicographic",
+      "skillId": "infer",
+      "title": "높은 자리부터 수 비교",
+      "thinkingType": "개념 이해",
+      "strategy": "자릿수를 먼저 보고 같은 자릿수이면 높은 자리에서 처음 다른 숫자로 비교한다",
+      "distinctFrom": "표현이나 자릿값 한 개를 계산하는 것이 아니라 두 수의 순서 관계와 첫 차이를 판단한다",
+      "difficulty": [
+        "D1",
+        "D2"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "정수 대소 관계와 자리별 사전식 비교 모델이 같은 결과인지 확인한다"
+    },
+    {
+      "id": "m001x-digit-change",
+      "skillId": "infer",
+      "title": "한 자리 변화의 수량 효과",
+      "thinkingType": "시각적 탐구",
+      "strategy": "바뀐 자리의 단위 묶음이 몇 개 늘거나 줄었는지 전후 차이로 구한다",
+      "distinctFrom": "한 수의 자릿값 식별이 아니라 입력 자리 조작의 전후 변화량을 해석한다",
+      "difficulty": [
+        "D2",
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "전후 두 정수의 차와 해당 자리의 숫자 차×자리 단위를 독립 계산한다"
+    },
+    {
+      "id": "m001x-error-diagnosis",
+      "skillId": "place",
+      "title": "풀이 오류를 찾고 고치기",
+      "thinkingType": "오류 발견",
+      "strategy": "제시 풀이의 자리 이름·숫자·단위를 분리해 최초 잘못된 주장을 찾아 교정한다",
+      "distinctFrom": "zero-placeholder의 0 삭제 전용 상황과 달리 숫자 자체와 자릿값 혼동 등 풀이 주장 타당성을 검토한다",
+      "difficulty": [
+        "D2",
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "올바른 기준 풀이와 학생 풀이의 주장별 참·거짓을 비교하며 오류는 지정된 한 곳으로 제한한다"
+    },
+    {
+      "id": "m001x-constrained-extrema",
+      "skillId": "infer",
+      "title": "제약 아래 최댓값·최솟값과 전이",
+      "thinkingType": "심화·전이",
+      "strategy": "카드 중복·선행 0·추가 조건을 지키며 후보를 나열하고 높은 자리부터 최선 선택의 근거를 비교한다",
+      "distinctFrom": "조건을 만족하는 임의 해인 infer와 달리 가능한 후보 중 극값임을 증명한다",
+      "difficulty": [
+        "D3"
+      ],
+      "practiceCount": 2,
+      "assessmentCount": 1,
+      "validation": "각 카드 정확히 1회 사용, 첫 자리 0 금지 조건 아래 유한 후보를 전수 열거해 극값과 유일성을 확인한다. 추가 조건 전이 D4/D5는 후속 별도 검수 대상이다.",
+      "plannedDifficulty": [
+        "D4",
+        "D5"
+      ],
+      "advancedStatus": "현재 30초안에는 추가 제약을 갖는 D4/D5 문항이 없다. 단순 카드 극값을 심화 최상위로 과장하지 않는다."
+    }
+  ],
+  "counts": {
+    "newFamilies": 7,
+    "reusedFamilies": 3,
+    "totalDistinctFamilies": 10,
+    "newFixedDrafts": 30,
+    "newPracticeDrafts": 20,
+    "newAssessmentDrafts": 10,
+    "bankLongTermTarget": {
+      "min": 60,
+      "max": 250,
+      "status": "planning-only"
+    }
+  },
+  "inputPolicy": {
+    "allowed": [
+      "choice",
+      "integer"
+    ],
+    "integerRange": {
+      "min": 0,
+      "max": 9999
+    },
+    "numberDomain": "문제에 등장하는 자연수는 1~9999. 답안의 0은 개수·변화량 등 문맥상 허용 가능하며 개별 문항에서 정의한다.",
+    "forbidden": [
+      "eval",
+      "Function",
+      "arbitrary-expression-execution"
+    ]
+  },
+  "sessions": {
+    "legacy": {
+      "practiceIds": [
+        "p-place-1",
+        "p-compose-1",
+        "p-infer-1"
+      ],
+      "assessmentIds": [
+        "a-place-1",
+        "a-compose-1",
+        "a-infer-1"
+      ],
+      "completionPolicy": "기존 세 개념·블록·형성평가 80% 조건 보존"
+    },
+    "extension": {
+      "selection": "명시적 확장 연습/확장 형성평가 세트로 선택",
+      "assessmentCount": 10,
+      "partialSubmissionAllowed": false,
+      "answersExposedBeforeSubmission": false,
+      "affectsLegacyCompletion": false,
+      "independentFirstResponse": "힌트·해설·즉시 재시도와 구분"
+    }
+  },
+  "requiredPractice": {
+    "legacyBaseline": 3,
+    "extensionRecommended": 10,
+    "extensionBankCount": 20,
+    "advancedOptional": true,
+    "explanation": "문제은행 수량과 학습자가 반드시 풀어야 할 수량을 혼동하지 않는다. D4~D5는 기본 학습 완료의 필수 장벽으로 삼지 않는다."
+  },
+  "templateCandidates": [
+    {
+      "familyId": "identify",
+      "constraint": "1000~9999, 자리 단위 1/10/100/1000, 대상 숫자 0 제외. 기존 템플릿 제약 보존"
+    },
+    {
+      "familyId": "m001x-digit-change",
+      "constraint": "수와 자리 단위 유한 범위, 숫자 0~9, 교체 뒤 선행 자리 0 금지, 전후 값 독립 계산"
+    },
+    {
+      "familyId": "m001x-constrained-extrema",
+      "constraint": "서로 다른 숫자 카드 4개, 각 카드 정확히 1회, 첫 자리 0 금지, 모든 추가 조건을 전수 검사해 유일 극값 확인. 템플릿 구현/검증 전에는 고정 초안만 사용"
+    }
+  ],
+  "validationRules": [
+    "중복 ID·정규화 본문·선택지 중복 검사",
+    "선택지의 수학적 동치 정답은 정확히 하나",
+    "연습/평가 문항 집합과 본문 분리",
+    "정답 자기 채점 외 독립 계산 모델 또는 유한 전수 탐색",
+    "각 풀이 단계의 단위·조건·정답 정합성 확인",
+    "초안은 draft, 자동 검증만으로 사람 approved/published 상태 생성 금지",
+    "숫자만 바꾼 문항은 같은 familyId로 유지"
+  ],
+  "manualReviewRequired": [
+    "용어와 한국어 설명의 초보 학습자 적합성",
+    "풀이가 왜 성립하는지 설명하는 충분성",
+    "D4/D5 난도 적합성 및 선행 학습의 과부하",
+    "시각화·스크린리더의 의미 전달",
+    "출처/권리의 사람 확인"
+  ],
+  "designReview": {
+    "reviewer": "curriculum",
+    "actorType": "agent",
+    "decision": "implementation-ready",
+    "humanPublicationApproval": false,
+    "scope": "Research Agent의 신규30초안과 비교한 교육 설계 검토. 수학 독립 검사 통과를 개발 검토용 제공의 전제 조건으로 둔다.",
+    "reviewerRole": "curriculum"
+  }
+}

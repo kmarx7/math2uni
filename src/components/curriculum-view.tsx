@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useProgress } from "./progress-provider";
-import { getLesson } from "@/data/content";
+import { getLessonOutline } from "@/data/content-index";
 import { isComplete, unitProgress, mastery } from "@/modules/progress";
 import { useState } from "react";
 import { curriculum } from "@/data/curriculum";
@@ -52,7 +52,7 @@ export function CurriculumView() {
           </div>
           <div className="unit-list">
             {curriculum.units.map((u) => {
-              const doc = getLesson(u.id);
+              const doc = getLessonOutline(u.id);
               const complete =
                 state && doc
                   ? isComplete(
