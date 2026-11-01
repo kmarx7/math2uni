@@ -76,12 +76,14 @@ Content는 getLesson(unitId), Bank는 목적+unitId, API는 검증된 unitId를 
 
 ## ADR-008 · 전문 역할과 인계 품질 검사
 
-세 전문 서브에이전트를 실제 실행해 파일 소유권을 분리했다. 설치 CLI 0.166.0은 multi_agent stable/true이다. 사용자가 standalone 역할 TOML 세 개와 공통 설정을 프로젝트 `.codex/`에 설치했으며 `agents:validate`에서 템플릿과의 일치를 확인한다. 실제 CLI 에이전트 호출은 app-server 초기화 권한 오류로 미검증이다. 역할별 책임·실제 산출물·순차 대안은 [MULTI_AGENT.md](MULTI_AGENT.md)에 기록한다.
+세 전문 서브에이전트를 실제 실행해 파일 소유권을 분리했다. 설치 CLI 0.166.0은 multi_agent stable/true이다. 사용자가 standalone 역할 TOML 세 개와 공통 설정을 프로젝트 `.codex/`에 설치했고 `agents:validate`에서 템플릿과 일치함을 검사했다. 이후 사용자가 새 로컬 Codex 세션에서 세 custom agent를 모두 실행해 발견·완료를 확인했다. 현재 자동화 실행기 자체의 app-server 호출 권한은 별도 문제로 남는다. [MULTI_AGENT.md](MULTI_AGENT.md)에 기록한다.
 
 기존 단일 Next 앱 구조를 유지하며 새 외부 서비스/의존성을 추가하지 않는다. Content Quality Validator를 src/modules/content-quality에 추가하고 기존 Review Engine은 progress의 복습 함수로 유지한다. 공통 인계는 버전/해시·6소단원·15단계·문항 수·원형/기술/난도·검토 상태를 검사한다. 운영 단계 경로와 개발 preview의 구현/테스트 상태를 분리하고 승인 대기 콘텐츠에는 approvedContent=null을 명시한다.
 
 core/extended 은행·API·화면을 분리하고 확장 시도의 collection을 저장한다. 기존 schemaVersion 1에서 필드는 선택적이며 과거 기록은 core로 읽는다. 기본 숙달 함수는 extended를 제외하고 확장 평가는 기본 점수를 갱신하지 않는다. 전체 시도/오답/복습에는 확장을 포함한다. 이 변경은 DB DDL이나 사용자 기록 초기화를 요구하지 않는다.
 
 최신 LEVEL 수량 기준은 master-design.json에 기록했다. 기존 170제안을 재번호화하지 않으며 상세 재배치는 [ADR-007](decisions/007-level-allocation.md)의 검토 대상이다.
+
+새 master learning path는 `curriculum-proposal.ts`와 분리된 제안 계층으로 둔다. `Unit.level/order`는 기존 분류로 유지하고 `learningPath.entries`의 `pathLevel/pathOrder`만 새 경로 후보를 표시한다. 계약·ID 전수 대응·수량·선수 순서를 검증하지만 canonicalManifest와 활성 학습 registry는 건드리지 않는다. 최신 요청 수량과 조정 제안은 [ADR-009](decisions/009-learning-path-proposal.md)에 비교 기록한다.
 
 M0-01 신규 설명/조작의 공개 경계도 서버의 lessonForDelivery로 분리했다. 개발 검토에서는 확장 문서를 전달하고 production에서는 보존된 v1.0.0 문서를 사용한다. 클라이언트용 content-index에는 단원/블록 ID만 두며 실제 문서와 일치하는지 검사한다. 따라서 신규 초안 설명을 클라이언트 공유 모듈에서 직접 가져오지 않는다.

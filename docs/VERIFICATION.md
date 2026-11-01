@@ -150,6 +150,25 @@ M0-01은 기존9블록/3기술/기본평가3문항과 과거 완료를 보존하
 
 확장 시도는 collection=extended로 저장하고 기본 평가 점수·숙달·완료 판정에 섞지 않는다. 새로고침·오답노트의 올바른 확장 복습과 평가의 정확한 응답 집합을 브라우저에서 검사했다. 미승인 확장 문항은 production에서 비공개이고, 새 설명/조작도 서버 전달 게이트로 production에서는 보존된 v1.0.0 문서를 사용한다. 클라이언트 공유 완료 인덱스에는 본문·정답이 없다. 새 조작 화면 모바일/데스크톱 캡처를 직접 확인했으며 가로 넘침 검사와 키보드 조작이 통과했다.
 
-CLI 0.166.0, multi_agent stable/true를 확인했다. 세 standalone TOML과 공통 설정은 docs/agents 템플릿에서 프로젝트 `.codex/`로 복사되었고 설치본이 템플릿과 일치한다. `codex --strict-config ... exec`로 실제 호출을 시도했으나 in-process app-server 초기화가 `Operation not permitted`로 실패해 custom role discovery는 미검증이다. `--strict-config ... features list`는 CLI에서 지원되지 않는다. 실제 앞선 협업은 현재 세션의 서브에이전트 도구로 실행했으며 프로젝트 TOML 자동 로딩 검증과 구분한다.
+CLI 0.166.0, multi_agent stable/true를 확인했다. 세 standalone TOML과 공통 설정은 docs/agents 템플릿에서 프로젝트 `.codex/`로 복사되었고 설치본이 템플릿과 일치한다. 자동화 실행기의 `codex --strict-config ... exec`는 in-process app-server 초기화 `Operation not permitted`로 막혔다. 이후 사용자가 새 로컬 Codex 세션에서 custom role 세 개를 각각 실행해 발견·완료를 확인했고, 세 역할 모두 파일 변경 없이 설정된 범위를 보고했다고 확인했다. 이 수동 세션 검증은 사용자가 보고한 결과로 기록한다. `--strict-config ... features list`는 CLI에서 지원되지 않는다. 앞선 협업 도구 실행과 프로젝트 TOML 자동 로딩 확인을 구분한다.
 
 실제 Supabase 사용자·스키마·환경 비밀은 변경하지 않았다. E2E는 모의 HTTP fixture이며 실제 이메일·RLS 재검증이 아니다. 원문 공식 성취기준, KICE 직접 문항 본문, 사람 교육 검수·권리 확인·운영 게시 승인은 남아 있다. D4/D5·조건 카드 조작·확장 평가 회차별 통계·최신 배분의170상세목록·실물 모바일/스크린리더·학습 효과는 미완료/미검증이다. 신규30문항은 계속 draft, 승인 이력은 비어 있다.
+
+# 별도 마스터 경로 제안 구현 후속 검증 · 2026-11-01
+
+기존 170개 ID/분류와 운영 등록을 보존하는 `learningPath` 초안을 추가했다. 최신 요청 수량과 교육 검토 대안 12/14/18/22/24/20/22/20/18을 계획 화면에서 비교하고 JSON으로 확인할 수 있다. 170개 학습 콘텐츠가 추가된 것은 아니다.
+
+| 검사 | 결과 | 범위 |
+| --- | --- | --- |
+| `npm run lint` | PASS | 계약·경로 검증·계획 UI·테스트 |
+| `npm run typecheck` | PASS | Next route types + TypeScript strict |
+| `npm test` | PASS · 12파일/103개 | 기존 전체 + 경로 일대일 대응/수량/선수 순서/정본 격리 |
+| `npm run content:validate` | PASS · 14개 | 기존 M0-01 인계·문항 검증 묶음 |
+| `npm run agents:validate` | PASS | TOML 및 세 설치 파일/템플릿 일치. 런타임 호출은 사용자가 새 로컬 Codex 세션에서 세 역할 모두 실행했다고 확인 |
+| `npm run test:e2e` | 실행 차단 · exit 1 | 격리 fixture 서버 `127.0.0.1:54329` listen EPERM |
+| `npm run test:smoke` | PASS · 52개/1.9분 | 동일 Playwright 전체 모음, 데스크톱·모바일 1 worker. 계획 화면의 비교·필터·다운로드 포함 |
+| `npm run build` | PASS | Next.js 16.3.6, 17개 라우트 + Proxy |
+| `npm run curriculum:canonical` | FAIL · exit 1 | 의도한 출시 게이트. 정본 manifest 없음, 활성 등록 12개 |
+| `git diff --check` | PASS | 공백 오류 없음 |
+
+교육과정 검토는 최신 요청 수량을 설계 기준으로 보존하면서 통계 추정의 첫 학습을 LEVEL 7에 유지하는 안(LEVEL 7=20, LEVEL 8=18)을 제안한다. LEVEL 1/2 제목 확장도 승인 대기다. 교육부 수능 과목 체계는 공식 자료로 조사했지만 별책 8 공식 원문 파일 해시 대조가 완료되지 않아 성취기준 코드는 연결하지 않았다. 경로 배치의 교육적 적합성, 최신 수량/제목 결정과 상세 170단원 정본 등록은 계속 검토 중이다.

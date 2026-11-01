@@ -5,10 +5,13 @@ import Link from "next/link";
 import { ArrowLeft, Download, Search } from "lucide-react";
 import type { CurriculumProposal } from "@/contracts/curriculum-proposal";
 
-const roles = {
-  foundation: "선수 기반",
-  target: "수능 과목 대비",
-  integration: "통합·평가",
+const placementLabels = {
+  "first-instruction-candidate": "첫 개념 학습 후보",
+  "transfer-candidate": "전이·응용 후보",
+  checkpoint: "연결 점검 후보",
+  "strategy-practice": "문제해결 전략 연습 후보",
+  assessment: "독립 평가 후보",
+  "extension-scope-unverified": "공식 범위 미확인 확장 후보",
 };
 export function CurriculumPlan({
   proposal,
@@ -21,10 +24,15 @@ export function CurriculumPlan({
   const [level, setLevel] = useState("all");
   const [query, setQuery] = useState("");
   const units = proposal.curriculum.units;
+  const pathLevels = proposal.learningPath.levels;
+  const pathEntries = new Map(
+    proposal.learningPath.entries.map((entry) => [entry.unitId, entry]),
+  );
   const normalized = query.trim().toLocaleLowerCase("ko");
   const filtered = units.filter(
     (unit) =>
-      (level === "all" || unit.level === Number(level)) &&
+      (level === "all" ||
+        pathEntries.get(unit.id)?.pathLevel === Number(level)) &&
       [
         unit.id,
         unit.title,
@@ -51,7 +59,7 @@ export function CurriculumPlan({
     );
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `math90-curriculum-proposal-${proposal.version}.json`;
+    anchor.download = `math90-curriculum-proposal-${proposal.version}-path-${proposal.learningPath.version}.json`;
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
@@ -91,22 +99,46 @@ export function CurriculumPlan({
       </aside>
       <aside className="notice">
         <div>
-          <strong>최신 마스터 기준과 상세 단원 재배치 검토 중</strong>
+          <strong>새 학습 경로 배치 초안 · 사용자 검토 대기</strong>
           <p>
-            최신 요청의 LEVEL 0~8 수량은{" "}
-            {masterDesign.levels.map((item) => item.count).join(" / ")}입니다.
-            아래 목록은 기존 ID를 보존한 이전 제안 v{proposal.version}이며 최신
-            배분과 아직 정렬되지 않았습니다.
+            요청 기준은 {masterDesign.levels.map((item) => item.count).join(" / ")}
+            입니다. 교육 검토 초안은 {pathLevels
+              .map((item) => item.proposedCount)
+              .join(" / ")}로 배치하고, 확률·통계 추정의 첫 학습을 LEVEL 7에
+            유지하기 위해 LEVEL 7/8을 20/18로 조정했습니다. 이 경로는 정본이나
+            실제 학습 순서가 아닙니다. LEVEL 1/2 제목과 LEVEL 7/8 수량 조정은
+            검토 중입니다.
           </p>
           <details>
-            <summary>새 LEVEL별 설계 기준 보기</summary>
-            <ul>
-              {masterDesign.levels.map((item) => (
-                <li key={item.level}>
-                  LEVEL {item.level} · {item.title} · {item.count}단원
-                </li>
-              ))}
-            </ul>
+            <summary>요청 기준과 제안 경로 비교</summary>
+            <div className="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">LEVEL</th>
+                    <th scope="col">요청 제목</th>
+                    <th scope="col">요청 수</th>
+                    <th scope="col">경로 제안 제목</th>
+                    <th scope="col">제안 수</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pathLevels.map((item, index) => (
+                    <tr key={item.level}>
+                      <th scope="row">{item.level}</th>
+                      <td>{masterDesign.levels[index].title}</td>
+                      <td>{item.requestedCount}</td>
+                      <td>{item.title}</td>
+                      <td>{item.proposedCount}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="helper">
+              LEVEL 1/2 제목 확장과 LEVEL 7/8 수량 조정은 제안입니다. 공식 원문
+              대조와 사용자 검토 전에는 적용하지 않습니다.
+            </p>
           </details>
         </div>
       </aside>
@@ -134,7 +166,7 @@ export function CurriculumPlan({
         </div>
       </dl>
       <section className="plan-levels" aria-label="LEVEL별 구성">
-        {proposal.levels.map((item) => (
+        {pathLevels.map((item) => (
           <button
             type="button"
             key={item.level}
@@ -145,10 +177,14 @@ export function CurriculumPlan({
             }}
           >
             <span className="eyebrow">
-              LEVEL {item.level} · {item.count}단원
+              LEVEL {item.level} · {item.proposedCount}단원
             </span>
             <strong>{item.title}</strong>
-            <span>{roles[item.role]}</span>
+            <span>
+              {item.requestedCount === item.proposedCount
+                ? "요청 수량과 같음"
+                : `요청 ${item.requestedCount} · 조정 제안 ${item.proposedCount}`}
+            </span>
           </button>
         ))}
       </section>
@@ -172,7 +208,7 @@ export function CurriculumPlan({
             onChange={(event) => setLevel(event.target.value)}
           >
             <option value="all">전체 LEVEL</option>
-            {proposal.levels.map((item) => (
+            {pathLevels.map((item) => (
               <option key={item.level} value={item.level}>
                 LEVEL {item.level}
               </option>
@@ -202,6 +238,7 @@ export function CurriculumPlan({
       <div className="plan-units">
         {filtered.map((unit) => {
           const ready = registeredIds.includes(unit.id);
+          const pathEntry = pathEntries.get(unit.id);
           const prerequisites = [
             ...new Map(
               unit.prerequisites.flatMap((id) => {
@@ -218,7 +255,9 @@ export function CurriculumPlan({
             >
               <summary>
                 <span className="eyebrow">
-                  {unit.order} · {unit.id}
+                  LEVEL {pathEntry?.pathLevel} · 경로 {pathEntry?.pathOrder}번째
+                  <span aria-hidden="true"> · </span>
+                  {unit.id} · 기존 분류 LEVEL {unit.level} / {unit.order}번째
                 </span>
                 <strong>{unit.title}</strong>
                 <span className="plan-unit-state">
@@ -226,6 +265,13 @@ export function CurriculumPlan({
                 </span>
               </summary>
               <div className="plan-unit-body">
+                <h3>경로 배치 검토</h3>
+                <p>
+                  {pathEntry
+                    ? placementLabels[pathEntry.placementKind]
+                    : "경로 배치 없음"}
+                  . 제안 경로에만 표시되며 정본 등록이나 학습 완료를 뜻하지 않습니다.
+                </p>
                 <h3>학습 목표</h3>
                 <ul>
                   {unit.objectives.map((goal) => (
@@ -289,14 +335,14 @@ export function CurriculumPlan({
         })}
       </div>
       <section className="card plan-next">
-        <h2>다음 콘텐츠 묶음 · LEVEL 1 첫 5단원</h2>
+        <h2>다음 콘텐츠 묶음 · 첫 5개 제안 단원</h2>
         <p>
           정수와 절댓값 → 정수의 곱셈과 나눗셈 → 유리수의 사칙연산 → 거듭제곱과
           지수법칙 기초 → 문자와 식의 값
         </p>
         <p className="helper">
-          제안안의 구성 확인 후 M1-01~M1-05부터 학습 흐름을 구현합니다. 제안
-          ID는 확정 전이며 기존 학습 ID는 유지합니다.
+          경로 제목·수량 검토와 정본 구분은 학습 콘텐츠 승인과 별도입니다. 제안
+          ID를 유지하며 M1-01~M1-05부터 다음 콘텐츠를 설계합니다.
         </p>
       </section>
       <section className="card plan-sources">

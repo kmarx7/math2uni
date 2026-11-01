@@ -1,7 +1,34 @@
 import type { Unit } from "@/contracts";
-import type { CurriculumProposal } from "@/contracts/curriculum-proposal";
+import {
+  learningPathProposalSchema,
+  type CurriculumProposal,
+} from "@/contracts/curriculum-proposal";
 import { curriculum } from "./curriculum";
+import pathSeed from "./proposals/learning-path.json";
 import seeds from "./proposals/units.json";
+
+let pathOrder = 0;
+const level8PlacementKinds = new Map(
+  pathSeed.level8PlacementKinds.map(({ unitId, kind }) => [unitId, kind]),
+);
+const learningPath = learningPathProposalSchema.parse({
+  id: pathSeed.id,
+  version: pathSeed.version,
+  status: pathSeed.status,
+  baseProposalVersion: pathSeed.baseProposalVersion,
+  masterDesignVersion: pathSeed.masterDesignVersion,
+  levels: pathSeed.levels,
+  entries: pathSeed.unitIdsByLevel.flatMap(({ level, unitIds }) =>
+    unitIds.map((unitId) => ({
+      unitId,
+      pathLevel: level,
+      pathOrder: ++pathOrder,
+      placementKind:
+        level8PlacementKinds.get(unitId) ?? "first-instruction-candidate",
+    })),
+  ),
+  openDecisions: pathSeed.openDecisions,
+});
 
 const checkedAt = "2026-10-31T17:34:13.000Z";
 const proposedUnits: Unit[] = seeds.map((seed, index) => {
@@ -69,6 +96,7 @@ export const curriculumProposal: CurriculumProposal = {
       role: "integration",
     },
   ],
+  learningPath,
   sources: [
     {
       title: "교육부 · 2028 대학입시제도 개편 확정안 (2023-12-27)",

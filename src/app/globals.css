@@ -2503,6 +2503,28 @@ footer,
   font-size: 12px;
   color: var(--muted);
 }
+.course-plan .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 14px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.course-plan .table-scroll table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+.course-plan .table-scroll th,
+.course-plan .table-scroll td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.course-plan .table-scroll tbody tr:last-child > * {
+  border-bottom: 0;
+}
 .plan-toolbar {
   display: flex;
   align-items: flex-end;

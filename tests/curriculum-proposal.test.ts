@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import { curriculumProposal } from "@/data/curriculum-proposal";
 import { curriculum } from "@/data/curriculum";
+import masterDesign from "@/data/master-design.json";
 import { lessons } from "@/data/content";
 import { validateProposal } from "@/modules/curriculum/proposal";
 import { validateCurriculum } from "@/modules/curriculum";
@@ -44,6 +45,53 @@ describe("170-unit proposal review boundary", () => {
     expect(validateProposal(data, curriculum).join()).toContain(
       "미승인 제안 단원 공개 금지",
     );
+  });
+  it("keeps the requested distribution separate from a proposed learning path", () => {
+    const path = curriculumProposal.learningPath;
+    expect(path.status).toBe("proposed");
+    expect(path.levels.map((item) => item.requestedCount)).toEqual(
+      masterDesign.levels.map((item) => item.count),
+    );
+    expect(path.levels.map((item) => item.proposedCount)).toEqual([
+      12, 14, 18, 22, 24, 20, 22, 20, 18,
+    ]);
+    expect(path.entries).toHaveLength(170);
+    expect(path.entries.map((entry) => entry.pathOrder)).toEqual(
+      Array.from({ length: 170 }, (_, i) => i + 1),
+    );
+    expect(new Set(path.entries.map((entry) => entry.unitId)).size).toBe(170);
+    expect(path.entries.map((entry) => entry.unitId).sort()).toEqual(
+      curriculumProposal.curriculum.units.map((unit) => unit.id).sort(),
+    );
+    expect(path.entries.find((entry) => entry.unitId === "M7-19")?.pathLevel).toBe(7);
+    expect(path.entries.find((entry) => entry.unitId === "M7-20")?.pathLevel).toBe(7);
+    expect(path.entries.every((entry) => entry.pathLevel === 8
+      ? entry.placementKind !== "first-instruction-candidate"
+      : true,
+    )).toBe(true);
+    expect(curriculumProposal.curriculum.canonicalManifest).toEqual([]);
+    expect(curriculum.units).toHaveLength(12);
+  });
+  it("rejects duplicate path identities, wrong allocation, and prerequisite inversions", () => {
+    let data = clone();
+    data.learningPath.entries[20].unitId = data.learningPath.entries[19].unitId;
+    expect(validateProposal(data, curriculum).join()).toContain("중복");
+
+    data = clone();
+    data.learningPath.levels[7].proposedCount = 18;
+    expect(validateProposal(data, curriculum).join()).toContain(
+      "제안 수량 불일치",
+    );
+
+    data = clone();
+    const entry17 = data.learningPath.entries.find(
+      (entry) => entry.unitId === "M7-17",
+    )!;
+    const entry19 = data.learningPath.entries.find(
+      (entry) => entry.unitId === "M7-19",
+    )!;
+    [entry17.pathOrder, entry19.pathOrder] = [entry19.pathOrder, entry17.pathOrder];
+    expect(validateProposal(data, curriculum).join()).toContain("먼저 학습");
   });
   it("cannot represent a human approval or canonical release", () => {
     expect(

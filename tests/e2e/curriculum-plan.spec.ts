@@ -18,6 +18,11 @@ for (const viewport of viewports) {
       ).toBeVisible();
       await expect(page.locator(".plan-unit")).toHaveCount(170);
       await expect(
+        page.getByText("새 학습 경로 배치 초안 · 사용자 검토 대기", {
+          exact: true,
+        }),
+      ).toBeVisible();
+      await expect(
         page.getByText("정본 확정 전 제안안 · 콘텐츠 완성과 다릅니다", {
           exact: true,
         }),
@@ -51,7 +56,7 @@ for (const viewport of viewports) {
       await page.getByRole("button", { name: "제안안 JSON 내려받기" }).click();
       const download = await downloadEvent;
       expect(download.suggestedFilename()).toBe(
-        "math90-curriculum-proposal-0.1.0.json",
+        "math90-curriculum-proposal-0.1.0-path-0.2.0-proposed.json",
       );
       const stream = await download.createReadStream();
       const chunks: Buffer[] = [];
@@ -60,13 +65,18 @@ for (const viewport of viewports) {
       expect(proposal.status).toBe("proposed");
       expect(proposal.curriculum.units).toHaveLength(170);
       expect(proposal.curriculum.canonicalManifest).toEqual([]);
+      expect(proposal.learningPath.status).toBe("proposed");
+      expect(proposal.learningPath.entries).toHaveLength(170);
+      expect(proposal.learningPath.levels.map((item: { proposedCount: number }) => item.proposedCount)).toEqual([
+        12, 14, 18, 22, 24, 20, 22, 20, 18,
+      ]);
       expect((await page.request.get("/learn/M1-01")).status()).toBe(404);
       await page
         .getByRole("button", {
-          name: "LEVEL 1 · 20단원 수와 식·도형의 기초 선수 기반",
+          name: /LEVEL 1 · 14단원 수·문자식·초기 방정식/,
         })
         .click();
-      await expect(page.locator(".plan-unit")).toHaveCount(20);
+      await expect(page.locator(".plan-unit")).toHaveCount(14);
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= window.innerWidth,

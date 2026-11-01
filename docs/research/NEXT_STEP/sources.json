@@ -1,0 +1,106 @@
+{
+  "checkedAt": "2026-11-01",
+  "status": "partial-research; per-unit-standard-mapping-not-approved",
+  "sources": [
+    {
+      "sourceId": "moe-2028-reform-final",
+      "title": "2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 내신 5등급 체제 확정",
+      "publisher": "대한민국 교육부",
+      "publishedAt": "2023-12-27",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+      "checkedAt": "2026-11-01",
+      "verification": "official-page-opened",
+      "confirmedClaims": [
+        "2028학년도부터 통합형 수능이며 수학 선택과목을 두지 않는 개편을 확정함",
+        "수능 출제에서 심화수학(미적분Ⅱ·기하)을 제외한다고 안내함"
+      ],
+      "limits": "LEVEL별 단원 수, Math 90의 170분할, 개별 학습 순서를 정하지 않는다.",
+      "reuse": "교육부 페이지에 공공누리 출처표시 조건이 명시됨. 원문 장문이나 문제를 재배포하지 않고 출처를 표기한다."
+    },
+    {
+      "sourceId": "moe-2028-math-subjects-qa",
+      "title": "[카드뉴스] 2028 대학입시제도 개편 Q&A",
+      "publisher": "대한민국 교육부 디지털소통팀",
+      "publishedAt": "2024-01-03",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=340&boardSeq=97621&lev=0&m=020&opType=N&page=66&s=moe",
+      "checkedAt": "2026-11-01",
+      "verification": "official-page-opened",
+      "confirmedClaims": [
+        "2028 이후 수능 수학 과목을 대수·미적분Ⅰ·확률과 통계로 표기함",
+        "미적분Ⅰ에 미분계수·도함수·부정적분·정적분이 포함됨",
+        "공통수학에서 도형의 방정식 등 기하 기본 개념을 학습한다고 설명함",
+        "미적분Ⅱ와 기하는 고교에서 선택 학습 가능하지만 수능 심화수학 출제 범위와 구분됨"
+      ],
+      "limits": "입시제도 Q&A이며 170개 세부 단원/공식 성취기준을 Math 90 수준으로 나누지 않는다.",
+      "reuse": "교육부의 카드뉴스. 과목명·범위 요약에 한해 출처를 표기하며 이미지/문항을 복제하지 않는다."
+    },
+    {
+      "sourceId": "moe-curriculum-notice-2022-33",
+      "title": "[교육부 고시 제2022-33호] 초중등학교 교육과정 총론 및 각론 고시",
+      "publisher": "대한민국 교육부",
+      "publishedAt": "2022-12-22",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0404",
+      "checkedAt": "2026-11-01",
+      "verification": "official-page-opened; attachment-download-http-403-in-this-environment",
+      "confirmedClaims": [
+        "고시 제2022-33호의 각론 중 수학과 교육과정이 별책 8로 지정됨",
+        "교육부 페이지에 별책 5~14 묶음 첨부파일이 등록됨",
+        "학교급별 시행 시기 및 2027-02-28 검토/조치 기한 문구를 확인함"
+      ],
+      "limits": "공식 원문 다운로드가 현재 도구에서 403으로 막혀 첨부 파일의 로컬 사본·해시를 확인하지 못함.",
+      "reuse": "페이지는 교육부 저작물로 공공누리 출처표시 조건을 명시함. 전체 교육과정 본문이나 문항을 재수록하지 않는다."
+    },
+    {
+      "sourceId": "ncic-moe-appendix-8-index",
+      "title": "2022 개정 수학과 교육과정 [별책 8] 첨부파일 검색 결과",
+      "publisher": "국가교육과정정보센터(NCIC)",
+      "publishedAt": "2022 교육과정 자료 수록",
+      "url": "https://ncic.re.kr/srch/result_more.do?cate=attach&order=desc&page=2&search=2022+%EA%B0%9C%EC%A0%95&sort=date",
+      "checkedAt": "2026-11-01",
+      "verification": "official-index-opened",
+      "confirmedClaims": [
+        "NCIC 검색 결과에 [별책8] 수학과 교육과정 PDF와 HWP 항목이 표시됨",
+        "NCIC는 교육부 고시 별책 원문을 찾을 공식 교육과정 정보센터임을 교육부 고시 페이지가 안내함"
+      ],
+      "limits": "검색 결과에서 첨부 행은 확인했으나 현재 브라우저 도구가 원문 파일을 안정적으로 내려받지 못함.",
+      "reuse": "원문 문서의 이용조건을 별도로 확인하고 인용은 최소화한다."
+    },
+    {
+      "sourceId": "appendix-8-text-copy-crosscheck",
+      "title": "교육부 고시 제2022-33호 [별책 8] 수학과 교육과정 (검색 가능한 PDF 사본)",
+      "publisher": "문서 표기 발행기관: 대한민국 교육부; 조사 시 확인한 파일 호스트는 dataseoul S3이며 공식 호스트가 아님",
+      "publishedAt": "2022-12-22 고시 문서로 표기",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0404",
+      "retrievedCopyHost": "https://dataseoul.s3.ap-northeast-2.amazonaws.com/ (PDF 쿼리 URL은 일시 서명 링크여서 보존하지 않음)",
+      "checkedAt": "2026-11-01",
+      "verification": "text-crosschecked-on-external-host; file-identity/hash-not-compared-with-official-attachment",
+      "confirmedClaims": [
+        "PDF 본문 검색에서 중학교 9수, 공통수학 10공수1/10공수2, 대수 12대수, 미적분Ⅰ 12미적Ⅰ, 확률과 통계 12확통 코드 형태를 읽음",
+        "예: 9수01-03~05, 9수02-01/02/08; 10공수1-01-01; 10공수2-01-01; 12대수01-01; 12미적Ⅰ-01-01; 12확통02-01"
+      ],
+      "limits": "동일성 해시 검증 전이므로 코드를 운영 데이터에 등록하지 않는다. 이 결과는 주제 조사 후보이며 단원별 코드 매핑 승인 아님.",
+      "reuse": "코드/표제만 조사 메모에 최소 사용. 본문 설명과 평가 문항은 복제하지 않는다."
+    },
+    {
+      "sourceId": "moe-2028-sample-items-notice",
+      "title": "2028학년도 대입, 이렇게 준비하세요 (예시문항 안내)",
+      "publisher": "대한민국 교육부",
+      "publishedAt": "2025-04-15",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=0204",
+      "checkedAt": "2026-11-01",
+      "verification": "official-page-opened",
+      "confirmedClaims": [
+        "2028학년도 수능 변경 영역의 예시문항 문제지 자료가 안내됨",
+        "수학 선택과목 폐지와 수학 문항 수/시험 시간 현행 유지(30문항, 100분) 안내를 확인함",
+        "자료가 한국교육과정평가원 및 대학수학능력시험 누리집 자료로 연결됨"
+      ],
+      "limits": "예시문항은 범위 조사 자료일 뿐 Math 90 콘텐츠로 복제/재배포할 권한을 주지 않는다.",
+      "reuse": "문제 본문·그림·해설 복제를 하지 않는다."
+    }
+  ],
+  "unverified": [
+    "2022-33 별책8 원문 파일의 공식 호스트 다운로드 및 해시 대조",
+    "170개 각 unitId에 대한 코드별 성취기준 매핑",
+    "2022-33 이후 별책8의 정정/개정 고시가 조사 시점에 없다는 전수 확인"
+  ]
+}

@@ -13,6 +13,6 @@
 | developer.toml  | .codex/agents/developer.toml            |
 | config.toml     | .codex/config.toml의 agents 설정에 병합 |
 
-설치 상태 확인: 세 역할 TOML과 `config.toml`이 템플릿과 일치하고 TOML 구문 검사를 통과했다. Codex CLI의 실제 에이전트 호출은 현재 실행기에서 in-process app-server 초기화가 `Operation not permitted`로 실패해 아직 검증하지 못했다. 이 설치 뒤 시작한 Codex 세션에서 역할을 호출해 최종 확인한다. 기존 설정을 갱신할 때는 먼저 병합하고 통째로 덮어쓰지 않는다. CLI 호출이 불가능하면 각 역할 TOML의 developer_instructions와 [협업 워크플로](../MULTI_AGENT.md)의 입력·출력을 한 역할씩 실행한다.
+설치 상태 확인: 세 역할 TOML과 `config.toml`이 템플릿과 일치하고 TOML 구문 검사를 통과했다. 최초 호출 시도는 이 자동화 실행기의 in-process app-server 초기화가 `Operation not permitted`로 실패했다. 이후 사용자가 프로젝트 루트에서 새 로컬 Codex 세션을 열어 세 custom agent를 각각 실행했고, 모두 발견·완료되며 파일을 수정하지 않았다고 확인했다. 이 검증은 사용자의 새 로컬 Codex 세션 결과이며 현재 ChatGPT 세션이 설정을 다시 읽었다는 뜻은 아니다. 기존 설정을 갱신할 때는 먼저 병합하고 통째로 덮어쓰지 않는다. CLI 호출이 불가능하면 각 역할 TOML의 developer_instructions와 [협업 워크플로](../MULTI_AGENT.md)의 입력·출력을 한 역할씩 실행한다.
 
 `codex --strict-config ... features list`는 이 CLI에서 미지원이다. Python tomllib와 `agents:validate`는 TOML 문법·템플릿 일치 검사를 수행한다. 역할별 파일 소유권은 행동 규칙이며 별도의 OS 샌드박스 권한이 아니다.

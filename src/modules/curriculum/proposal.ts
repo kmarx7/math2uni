@@ -39,6 +39,65 @@ export function validateProposal(
       unit.concepts.map((concept) => [concept.id, unit] as const),
     ),
   );
+  const path = proposal.learningPath;
+  const pathLevels = [...path.levels].sort((a, b) => a.level - b.level);
+  if (path.baseProposalVersion !== proposal.version)
+    errors.push("학습 경로 기준 제안 버전 불일치");
+  if (pathLevels.some((item, i) => item.level !== i))
+    errors.push("학습 경로 LEVEL 0~8 중복 또는 누락");
+  if (
+    pathLevels.reduce((sum, item) => sum + item.requestedCount, 0) !== 170 ||
+    pathLevels.reduce((sum, item) => sum + item.proposedCount, 0) !== 170
+  )
+    errors.push("학습 경로 기준/제안 수량 합계는 각각 170이어야 합니다");
+  const unitIds = new Set(plan.units.map((unit) => unit.id));
+  const pathIds = path.entries.map((entry) => entry.unitId);
+  if (pathIds.length !== 170 || new Set(pathIds).size !== 170)
+    errors.push("학습 경로 단원 ID는 170개이며 중복이 없어야 합니다");
+  if (
+    pathIds.some((unitId) => !unitIds.has(unitId)) ||
+    [...unitIds].some((unitId) => !pathIds.includes(unitId))
+  )
+    errors.push("학습 경로 ID가 제안 교육과정과 정확히 일치하지 않습니다");
+  const entriesById = new Map(path.entries.map((entry) => [entry.unitId, entry]));
+  const entriesInOrder = [...path.entries].sort(
+    (a, b) => a.pathOrder - b.pathOrder,
+  );
+  if (entriesInOrder.some((entry, i) => entry.pathOrder !== i + 1))
+    errors.push("학습 경로 순서는 1~170 연속이어야 합니다");
+  if (
+    entriesInOrder.some(
+      (entry, i) => i > 0 && entry.pathLevel < entriesInOrder[i - 1].pathLevel,
+    )
+  )
+    errors.push("학습 경로 LEVEL 순서가 역전되었습니다");
+  for (const level of pathLevels) {
+    const entries = path.entries.filter(
+      (entry) => entry.pathLevel === level.level,
+    );
+    if (entries.length !== level.proposedCount)
+      errors.push(`학습 경로 LEVEL ${level.level} 제안 수량 불일치`);
+  }
+  if (
+    path.entries.some(
+      (entry) =>
+        entry.pathLevel === 8 &&
+        entry.placementKind === "first-instruction-candidate",
+    )
+  )
+    errors.push("LEVEL 8 항목은 역할 검토가 필요합니다");
+  for (const unit of plan.units) {
+    const entry = entriesById.get(unit.id);
+    if (!entry) continue;
+    for (const prerequisite of unit.prerequisites) {
+      const owner = concepts.get(prerequisite);
+      const ownerEntry = owner ? entriesById.get(owner.id) : undefined;
+      if (owner && ownerEntry && ownerEntry.pathOrder >= entry.pathOrder)
+        errors.push(
+          `선수 단원은 제안 경로에서 먼저 학습해야 합니다 ${unit.id}: ${owner.id}`,
+        );
+    }
+  }
   const titles = new Set<string>();
   const counters = new Map<number, number>();
   let previousLevel = -1;
