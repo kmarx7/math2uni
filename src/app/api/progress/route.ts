@@ -5,6 +5,7 @@ import { SupabaseProgressRepository } from "@/modules/progress/server";
 import { transactProgress } from "@/modules/progress/account-repository";
 import { completeLearningBlock } from "@/modules/progress/mutations";
 import { getLesson } from "@/data/content";
+import { draftLessonForPreview } from "@/modules/content/preview-server";
 import { noStore, readJson, badRequest } from "../http";
 export async function GET() {
   const { account, response } = await apiAccount();
@@ -38,7 +39,8 @@ export async function POST(request: Request) {
       })
       .strict()
       .parse(await readJson(request));
-    if (!getLesson(input.unitId)?.blocks.some((b) => b.id === input.blockId))
+    const lesson = getLesson(input.unitId) ?? draftLessonForPreview(input.unitId);
+    if (!lesson?.blocks.some((b) => b.id === input.blockId))
       throw new Error("Unknown block");
     blockId = input.blockId;
     unitId = input.unitId;

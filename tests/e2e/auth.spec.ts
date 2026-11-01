@@ -14,7 +14,13 @@ for (const variant of viewports) {
       await expect(
         page.getByRole("heading", { name: "나의 수학 여정에 로그인" }),
       ).toBeVisible();
-      for (const url of ["/api/practice", "/api/assessment", "/api/progress"])
+      for (const url of [
+        "/api/practice",
+        "/api/assessment",
+        "/api/progress",
+        "/api/practice?unitId=M1-01",
+        "/api/assessment?unitId=M1-01",
+      ])
         expect((await request.get(url)).status()).toBe(401);
       expect(
         await page.evaluate(

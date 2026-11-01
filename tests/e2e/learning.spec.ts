@@ -87,9 +87,8 @@ for (const variant of viewports) {
         ),
       ).toBe(true);
     });
-    test("curriculum distinguishes draft units; unreleased route is 404", async ({
+    test("curriculum distinguishes draft units and opens M1 only as a preview", async ({
       page,
-      request,
     }) => {
       await page.goto("/curriculum");
       await expect(page.locator(".unit-row")).toHaveCount(12);
@@ -102,7 +101,9 @@ for (const variant of viewports) {
           name: "LEVEL 8 정본 목록을 기다리고 있어요",
         }),
       ).toBeVisible();
-      expect((await request.get("/learn/M1-01")).status()).toBe(404);
+      await page.goto("/learn/M1-01");
+      await expect(page.getByRole("heading", { name: "정수와 절댓값", exact: true })).toBeVisible();
+      await expect(page.getByText("개발 미리보기 · 제안 교육과정 초안", { exact: true })).toBeVisible();
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= window.innerWidth,

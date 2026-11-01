@@ -2,6 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { curriculum } from "@/data/curriculum";
 import { supabaseConfig } from "@/lib/supabase/config";
+import { isDraftPreviewUnitId } from "@/data/proposal-preview-manifest";
 export async function proxy(request: NextRequest) {
   const config = supabaseConfig();
   const publicRoute =
@@ -50,6 +51,11 @@ export async function proxy(request: NextRequest) {
     learningPath &&
     !curriculum.units.some(
       (unit) => unit.id === learningPath[1] && unit.status === "published",
+    ) &&
+    !(
+      process.env.NODE_ENV === "development" &&
+      process.env.MATH90_CONTENT_PREVIEW === "1" &&
+      isDraftPreviewUnitId(learningPath[1])
     )
   ) {
     const unavailable = NextResponse.rewrite(

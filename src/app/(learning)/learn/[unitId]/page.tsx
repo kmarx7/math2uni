@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Lesson } from "@/components/lesson";
 import { lessonForDelivery } from "@/modules/content/server";
+import { draftLessonForPreview, draftUnitForPreview, isContentPreviewEnabled, nextDraftUnitForPreview } from "@/modules/content/preview-server";
 import { curriculum } from "@/data/curriculum";
 export default async function Page({
   params,
@@ -18,16 +19,20 @@ export default async function Page({
     process.env.MATH90_CONTENT_PREVIEW === "1"
       ? "extended"
       : "core";
-  const unit = curriculum.units.find(
+  const activeUnit = curriculum.units.find(
     (u) => u.id === unitId && u.status === "published",
   );
-  const lesson = lessonForDelivery(unitId);
+  const proposalUnit = isContentPreviewEnabled() ? draftUnitForPreview(unitId) : undefined;
+  const unit = activeUnit ?? proposalUnit;
+  const lesson = activeUnit ? lessonForDelivery(unitId) : draftLessonForPreview(unitId);
   if (!unit || !lesson) notFound();
   return (
     <Lesson
       key={`${unit.id}:${initialCollection}`}
       doc={lesson}
       unit={unit}
+      draftPreview={!activeUnit && !!proposalUnit}
+      nextDraftUnit={proposalUnit ? nextDraftUnitForPreview(unit.id) : undefined}
       initialCollection={initialCollection}
     />
   );

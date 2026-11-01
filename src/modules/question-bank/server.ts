@@ -18,6 +18,7 @@ import {
 } from "@/contracts";
 import { canPublish } from "@/modules/administration";
 import { toPublic } from "./core";
+import { proposalProblems, proposalProblemFamilies } from "@/data/proposal-problems";
 const approvals = z
   .array(reviewSchema.extend({ entityId: z.string().min(1) }))
   .parse(approvalData);
@@ -26,6 +27,7 @@ const expansionIssues = validateM001Expansion();
 const candidates = [
   ...fixedProblems,
   ...foundationProblems,
+  ...proposalProblems,
   generatePlace(4821, 100),
   generatePlace(5703, 1000),
 ];
@@ -82,7 +84,7 @@ export function publicFamilies(
     ),
   );
   const all = new Map(
-    [...families, ...foundationFamilies, ...m001ExpansionFamilies].map(
+    [...families, ...foundationFamilies, ...m001ExpansionFamilies, ...proposalProblemFamilies].map(
       (family) => [family.id, family],
     ),
   );

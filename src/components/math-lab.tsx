@@ -239,6 +239,69 @@ export function MathLab({ block }: { block: Interactive }) {
         </p>
       </div>
     );
+  if (block.interaction === "integer-number-line") {
+    const relation = a < b ? "<" : a > b ? ">" : "=";
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>정수의 위치·원점 거리·두 점 사이 거리</span>
+          <strong>{a} {relation} {b}</strong>
+          <p>|{a}| = {Math.abs(a)} · |{b}| = {Math.abs(b)} · 두 수 사이 거리 {Math.abs(a - b)}</p>
+        </div>
+        <Control label="첫 번째 정수" value={a} min={-10} max={10} change={setA} />
+        <Control label="두 번째 정수" value={b} min={-10} max={10} change={setB} />
+        <div className="signed-line" role="img" aria-label={`수직선에서 ${a}와 ${b}의 위치를 비교합니다`}>
+          <span className="line-start" style={{ left: `${((a + 10) / 20) * 100}%` }}>A = {a}</span>
+          <span className="line-end" style={{ left: `${((b + 10) / 20) * 100}%` }}>B = {b}</span>
+        </div>
+        <div className="line-ticks" aria-hidden="true">{[-10, -5, 0, 5, 10].map((tick) => <span key={tick}>{tick}</span>)}</div>
+        <p className="helper">수직선에서 오른쪽에 있는 수가 더 큽니다. 절댓값은 원점까지의 거리이고, 두 수 사이 거리는 두 위치의 차이의 절댓값입니다.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "signed-multiplication") {
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>부호와 크기를 나누어 곱하기</span>
+          <strong>({a}) × ({b}) = {a * b}</strong>
+          <p>{a === 0 || b === 0 ? "한 수가 0이면 곱은 0입니다." : a * b < 0 ? "부호가 서로 다르므로 곱은 음수입니다." : "부호가 같으므로 곱은 양수입니다."}</p>
+        </div>
+        <Control label="첫 번째 정수" value={a} min={-12} max={12} change={setA} />
+        <Control label="두 번째 정수" value={b} min={-12} max={12} change={setB} />
+        <p className="helper">먼저 부호를 판단하고, 절댓값끼리 곱한 뒤 원래 식에 대입해 확인해요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "powers") {
+    const exponent = Math.max(2, Math.min(5, c));
+    const factors = Array.from({ length: exponent }, () => `(${a})`).join(" × ");
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>거듭제곱은 같은 인수의 반복 곱</span>
+          <strong>({a})^{exponent} = {a ** exponent}</strong>
+          <p>{factors} = {a ** exponent}</p>
+        </div>
+        <Control label="밑" value={a} min={-5} max={5} change={setA} />
+        <Control label="지수 · 같은 인수의 개수" value={exponent} min={2} max={5} change={setC} />
+        <p className="helper">지수는 밑과 곱하는 수가 아니라, 밑이 인수로 반복되는 횟수예요. 괄호 안의 음수도 한 인수로 묶어 살펴보세요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "expression-value") {
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>값을 넣고 식의 결과 확인</span>
+          <strong>x = {a}일 때 2x + 5 = 2 × ({a}) + 5 = {2 * a + 5}</strong>
+          <p>문자를 괄호로 감싸 대입한 뒤 곱셈과 덧셈을 계산합니다.</p>
+        </div>
+        <Control label="문자 x에 넣을 수" value={a} min={-10} max={10} change={setA} />
+        <p className="helper">x가 음수이면 2x를 2 × (x)로 써서 부호와 곱셈을 확인해요. 문자의 값이 바뀌면 식의 값도 어떻게 달라지는지 관찰하세요.</p>
+      </div>
+    );
+  }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(
       (n) => a % n === 0,

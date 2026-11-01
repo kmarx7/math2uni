@@ -51,6 +51,10 @@
 - 신규 문항은 D1~D3 초안이다. 숫자만 바꾼 변형은 새 원형이 아니다. 기존 place-value 템플릿은 유한 범위 전수 검사하며 다른 생성기는 고정 초안을 충분히 검토한 뒤 확장한다.
 - 기존 인증 요구는 사용자의 앞선 요청으로 추가한 기능이다. 이를 제거하지 않는다. 계산·엔진·로컬 저장 계약은 DB/외부 AI 없이 테스트 가능하지만 현재 웹 학습 화면은 Supabase 계정 연결을 요구한다.
 
+## M1-01~M1-05 1차 제안 콘텐츠
+
+Curriculum Architect 소유 명세는 `docs/specifications/NEXT_BATCH/M1-xx/lesson-spec.json`, Research 소유 자료/원형/30문항 draft는 `docs/research/NEXT_BATCH/`, Orchestrator가 배정한 renderer용 JSON은 각 단원의 `content-draft.json`이다. Developer & QA preview 경계 검토는 `docs/reviews/NEXT_BATCH/developer-preview-audit.md`; 통합·교차 검토와 구현 결과는 `M1-batch-report.md` 및 단원별 validation/approval 기록에 남긴다. 이 콘텐츠는 proposal ID allowlist, `MATH90_CONTENT_PREVIEW=1`, development 세 조건으로만 제공한다. 평가/공식 완료는 구현하지 않았고, 연습만 `unitProgress[M1-xx]`와 attempts에 기록한다. 이 작업은 active curriculum, canonical manifest, production bank, M0-01 루트 진도를 바꾸지 않는다.
+
 ## 충돌과 미완료
 
 [ADR-007](decisions/007-level-allocation.md): 최신 12/14/18/22/24/20/22/18/20은 합계 170이지만 기존 170제안의 주제·ID 배분과 충돌한다. 기존 제안을 지우거나 ID를 재명명하지 않았다. 최신 배분에 맞춘 170상세 메타데이터 정렬은 완료되지 않았다. 정본/성취기준 검증도 별도다.

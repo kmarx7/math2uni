@@ -13,7 +13,8 @@
     "curriculum:canonical": "vitest run --config vitest.canonical.config.ts",
     "test:smoke": "playwright test",
     "agents:validate": "python3 scripts/validate-agent-config.py",
-    "content:validate": "vitest run tests/handoff.test.ts tests/m001-expansion.test.ts"
+    "content:validate": "vitest run tests/handoff.test.ts tests/m001-expansion.test.ts tests/m1-proposal-preview.test.ts",
+    "content:m1-drafts": "python3 scripts/generate-m1-content-drafts.py"
   },
   "dependencies": {
     "lucide-react": "^1.47.0",

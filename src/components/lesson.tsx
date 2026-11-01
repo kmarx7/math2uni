@@ -134,17 +134,21 @@ function BlockRenderer({
 export function Lesson({
   doc,
   unit,
+  draftPreview = false,
+  nextDraftUnit,
   initialCollection = "core",
 }: {
   doc: ContentDocument;
   unit: Unit;
+  draftPreview?: boolean;
+  nextDraftUnit?: Unit;
   initialCollection?: ProblemCollection;
 }) {
   const { state, completeBlock, saving } = useProgress();
   const progress = state
     ? unitProgress(state, unit.id)
     : { completedBlocks: [], assessmentScore: null };
-  const next = curriculum.units.find(
+  const next = draftPreview ? nextDraftUnit : curriculum.units.find(
     (candidate) =>
       candidate.order === unit.order + 1 &&
       candidate.status === "published" &&
@@ -174,6 +178,14 @@ export function Lesson({
         <ArrowLeft size={15} />
         대시보드로
       </Link>
+      {draftPreview && (
+        <aside className="notice" role="status">
+          <div>
+            <strong>개발 미리보기 · 제안 교육과정 초안</strong>
+            <p>이 단원은 정본 curriculum에 등록되지 않았습니다. 단계 확인과 연습 기록은 로그인한 계정의 {unit.id} 진도 칸에 저장되지만, 정본 진도나 공식 숙달 판정에는 반영되지 않습니다. 본문·문항·평가는 사람 검수 전입니다.</p>
+          </div>
+        </aside>
+      )}
       <div className="page-heading">
         <div>
           <div className="eyebrow">
@@ -293,20 +305,18 @@ export function Lesson({
                 : "이해를 쌓아, 단원 완료까지"}
             </h2>
             <p>
-              블록 확인 {completed}/{doc.blocks.length} · 형성평가{" "}
-              {progress.assessmentScore ?? 0}점 · 개념별 숙달도 80% 이상 필요
+              {draftPreview
+                ? `미리보기 블록 확인 ${completed}/${doc.blocks.length} · 평가/공식 완료 판정 미구현`
+                : `블록 확인 ${completed}/${doc.blocks.length} · 형성평가 ${progress.assessmentScore ?? 0}점 · 개념별 숙달도 80% 이상 필요`}
             </p>
             {next ? (
               <p>
                 다음 단원 · {next.id} {next.title}
               </p>
             ) : (
-              <p>
-                LEVEL 0의 마지막 단원입니다. LEVEL 1은 정본 목록 검토 후
-                이어집니다.
-              </p>
+              <p>{draftPreview ? "다음 단원 미리보기는 아직 준비되지 않았습니다." : "LEVEL 0의 마지막 단원입니다. LEVEL 1은 정본 목록 검토 후 이어집니다."}</p>
             )}
-            {done && next && (
+            {((done && !draftPreview) || draftPreview) && next && (
               <Link href={`/learn/${next.id}`} className="button">
                 다음 단원 학습하기
               </Link>

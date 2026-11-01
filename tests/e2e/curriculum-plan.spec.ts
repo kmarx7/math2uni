@@ -27,7 +27,7 @@ for (const viewport of viewports) {
           exact: true,
         }),
       ).toBeVisible();
-      await expect(page.locator('a[href^="/learn/M1-"]')).toHaveCount(0);
+      await expect(page.locator('a[href^="/learn/M1-"]')).toHaveCount(5);
       await page.getByLabel("LEVEL 필터").selectOption("7");
       await expect(page.locator(".plan-unit")).toHaveCount(20);
       await page.getByLabel("단원 검색").fill("모비율");
@@ -52,6 +52,11 @@ for (const viewport of viewports) {
       ).toBeVisible();
       await page.getByRole("button", { name: "전체 목록 보기" }).click();
       await expect(page.locator(".plan-unit")).toHaveCount(170);
+      await page.getByLabel("단원 검색").fill("M1-01");
+      await page.locator(".plan-unit summary").click();
+      await expect(page.getByRole("link", { name: "개발 미리보기 열기" })).toBeVisible();
+      await expect(page.locator("a[href^='/learn/M1-']")).toHaveCount(1);
+      await page.getByLabel("단원 검색").fill("");
       const downloadEvent = page.waitForEvent("download");
       await page.getByRole("button", { name: "제안안 JSON 내려받기" }).click();
       const download = await downloadEvent;
@@ -70,7 +75,7 @@ for (const viewport of viewports) {
       expect(proposal.learningPath.levels.map((item: { proposedCount: number }) => item.proposedCount)).toEqual([
         12, 14, 18, 22, 24, 20, 22, 20, 18,
       ]);
-      expect((await page.request.get("/learn/M1-01")).status()).toBe(404);
+      expect((await page.request.get("/learn/M1-01")).status()).toBe(200);
       await page
         .getByRole("button", {
           name: /LEVEL 1 · 14단원 수·문자식·초기 방정식/,

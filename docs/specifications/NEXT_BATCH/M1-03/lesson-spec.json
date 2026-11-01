@@ -1,0 +1,225 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-03",
+  "levelId": 1,
+  "title": "유리수의 사칙연산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "objectives": [
+    "유리수를 분수 꼴과 수직선의 위치로 표현하고 정수도 유리수임을 확인한다.",
+    "동치분수와 통분의 의미를 양의 보존으로 설명한다.",
+    "부호가 있는 유리수의 덧셈·뺄셈을 수직선 이동 및 동치분수로 계산한다.",
+    "곱셈·나눗셈의 크기와 부호를 각각 계산하고 역연산으로 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-03-prereq-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-02에서 정수 곱셈·나눗셈의 부호를 적용한다."
+    },
+    {
+      "id": "m1-03-prereq-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M0-08에서 분수의 동치·통분과 사칙연산의 기초를 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-03-skill-1",
+    "m1-03-skill-2",
+    "m1-03-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "유리수의 여러 표현 → 동치분수와 크기 → 덧셈의 이동 → 뺄셈을 반대수로 → 곱·몫의 부호와 크기 → 표현 선택과 검산",
+    "principleDerivation": "유리수 계산은 수직선에서의 위치·이동과 같은 양을 나타내는 동치분수에 기반한다. 분모가 다른 덧셈은 같은 크기의 눈금으로 바꾸어야 하고, 곱셈은 분자끼리·분모끼리의 곱으로 부분의 부분을 구한다. 나눗셈은 0이 아닌 수의 역수를 곱하는 것과 연결한다.",
+    "accessibility": "색상에만 의존하지 않고 기호·단위·텍스트를 병기한다. 모든 조작은 키보드와 명시적 레이블을 지원하며 계산 결과는 텍스트로도 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-03-u1",
+      "title": "유리수의 표현과 수직선",
+      "targetSkills": [
+        "m1-03-skill-1"
+      ],
+      "explanation": "정수와 분수를 포함해 p/q(q≠0) 꼴의 수를 위치로 나타낸다.",
+      "activity": "분수 눈금을 세분화해 같은 위치를 찾는다.",
+      "check": "분수·정수 표현이 같은 수인지 판별한다."
+    },
+    {
+      "id": "m1-03-u2",
+      "title": "동치분수와 크기 비교",
+      "targetSkills": [
+        "m1-03-skill-1"
+      ],
+      "explanation": "분자·분모에 같은 0이 아닌 수를 곱해도 값이 보존됨을 시각적으로 확인한다.",
+      "activity": "분수 막대와 수직선 눈금을 맞춘다.",
+      "check": "통분 전후 값이 보존됨을 설명한다."
+    },
+    {
+      "id": "m1-03-u3",
+      "title": "부호 있는 유리수의 덧셈",
+      "targetSkills": [
+        "m1-03-skill-2"
+      ],
+      "explanation": "같은 부호의 합과 다른 부호의 합을 수직선 이동으로 해석한다.",
+      "activity": "시작점과 이동 방향·거리를 순서대로 조작한다.",
+      "check": "합의 위치와 부호를 예측한다."
+    },
+    {
+      "id": "m1-03-u4",
+      "title": "뺄셈과 반대수",
+      "targetSkills": [
+        "m1-03-skill-2"
+      ],
+      "explanation": "빼기는 반대수를 더하는 것과 같은 결과를 준다.",
+      "activity": "빼는 수의 반대수를 수직선에 이동한다.",
+      "check": "뺄셈을 덧셈으로 변환해 계산한다."
+    },
+    {
+      "id": "m1-03-u5",
+      "title": "유리수의 곱셈·나눗셈",
+      "targetSkills": [
+        "m1-03-skill-3"
+      ],
+      "explanation": "부호와 절댓값 계산을 구분하고 나눗셈을 역수 곱으로 연결한다.",
+      "activity": "분수 넓이 모델과 역수 곱의 예를 비교한다.",
+      "check": "제수가 0이 아닌지 확인하고 검산한다."
+    },
+    {
+      "id": "m1-03-u6",
+      "title": "계산 전략·오류 교정",
+      "targetSkills": [
+        "m1-03-skill-3"
+      ],
+      "explanation": "약분·통분·부호 처리를 계산 전에 선택해 실수를 줄인다.",
+      "activity": "서로 다른 풀이를 같은 값으로 대조한다.",
+      "check": "틀린 풀이의 분모·부호·역수 오류를 분류한다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "rational-number-line",
+      "status": "specified",
+      "features": [
+        "분수 눈금 분할",
+        "수직선 이동 합성",
+        "동치분수 비교",
+        "키보드 입력과 분모 범위 제한"
+      ]
+    }
+  ],
+  "questionBlueprint": "docs/research/NEXT_BATCH/problem-blueprint.json#/2",
+  "assessmentPlan": [
+    "정수와 분수의 유리수 분류",
+    "동치분수·통분 설명",
+    "부호 있는 덧셈·뺄셈",
+    "곱셈·나눗셈 및 검산",
+    "오류 유형 분류"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "minimum": "각 핵심 기술을 서로 다른 사고 원형의 독립 응답으로 확인하고, 전체 제출 전에는 정답·해설을 반환하지 않는다.",
+    "masteryThreshold": "운영 데이터·검증 전 수치 기준 미확정",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "분모가 다르면 분자와 분모를 각각 더함",
+    "빼는 수의 부호만 바꾸고 연산 의미를 확인하지 않음",
+    "분수 곱셈에서 통분을 먼저 해야 한다고 생각함",
+    "나눗셈에서 첫 번째 수의 역수를 취함",
+    "음수 분수에서 부호를 분자·분모 양쪽에 중복 적용함"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드 매핑은 첨부 원문 확인 전까지 비워 둔다.",
+    "운영 curriculum/진도/채점에 등록되지 않은 제안 단원이다.",
+    "사람의 교육 검수와 게시 승인을 받지 않았다."
+  ]
+}

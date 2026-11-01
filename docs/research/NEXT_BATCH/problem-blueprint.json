@@ -1,0 +1,732 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-01",
+    "unitTitle": "정수와 절댓값",
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "M101-sign-magnitude",
+        "status": "draft",
+        "title": "부호와 절댓값 해석",
+        "reasoningStructure": "주어진 정수의 부호와 원점까지의 거리를 분리하여 읽는다",
+        "items": [
+          {
+            "id": "m101-01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-7의 절댓값은 얼마인가?",
+            "answer": {
+              "type": "exact-text",
+              "value": "7"
+            },
+            "rationale": "절댓값은 수직선에서 원점까지의 거리이므로 7이다.",
+            "misconceptionHypothesis": "음수이므로 절댓값도 음수라고 생각함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m101-02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+          "prompt": "|4|와 |-4|는 어떤 관계인가요?",
+            "answer": {
+              "type": "exact-text",
+              "value": "같다"
+            },
+            "rationale": "두 절댓값은 모두 원점에서 4만큼 떨어진 거리로 4이다.",
+            "misconceptionHypothesis": "기호 안의 음수와 양수를 비교함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m101-03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-3의 반대수는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "3"
+            },
+            "rationale": "수직선에서 원점 반대편 같은 거리에 있는 수는 3이다.",
+            "misconceptionHypothesis": "반대수를 절댓값과 혼동함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "M101-order-distance",
+        "status": "draft",
+        "title": "수직선 위치와 정수 비교",
+        "reasoningStructure": "수직선 방향과 절댓값을 함께 사용해 순서와 거리를 결정한다",
+        "items": [
+          {
+            "id": "m101-04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-2와 -5 중 더 작은 정수는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-5"
+            },
+            "rationale": "수직선에서 왼쪽에 있는 -5가 더 작다.",
+            "misconceptionHypothesis": "절댓값이 큰 수가 더 크다고 생각함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m101-05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-3과 4 사이의 거리는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "7"
+            },
+            "rationale": "거리 = |4-(-3)| = 7이다.",
+            "misconceptionHypothesis": "부호를 지워 4-3으로 계산함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m101-06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-6, 0, -2를 작은 수부터 배열하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "-6, -2, 0"
+            },
+            "rationale": "수직선에서 왼쪽에서 오른쪽 순서이다.",
+            "misconceptionHypothesis": "음수의 절댓값을 기준으로 오름차순 정렬함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "distinctFamilies": 2,
+      "draftItems": 6,
+      "humanApprovedItems": 0
+    }
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-02",
+    "unitTitle": "정수의 곱셈과 나눗셈",
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "M102-sign-product",
+        "status": "draft",
+        "title": "부호 규칙을 적용한 곱셈·나눗셈",
+        "reasoningStructure": "절댓값 계산과 부호 결정 단계를 분리한다",
+        "items": [
+          {
+            "id": "m102-01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-6)×3을 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "-18"
+            },
+            "rationale": "부호가 다르므로 음수이고 6×3=18이다.",
+            "misconceptionHypothesis": "음수 기호를 생략함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m102-02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-24)÷(-6)을 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "4"
+            },
+            "rationale": "같은 부호의 나눗셈은 양수이며 24÷6=4이다.",
+            "misconceptionHypothesis": "나눗셈 결과를 항상 음수로 둠",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m102-03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-2)×(-3)×4를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "24"
+            },
+            "rationale": "음수 두 개의 곱은 양수이고 2×3×4=24이다.",
+            "misconceptionHypothesis": "음수 기호 개수를 세지 않고 하나만 보고 부호 결정",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "M102-inverse-check",
+        "status": "draft",
+        "title": "역연산으로 정수 계산 검산",
+        "reasoningStructure": "곱셈과 나눗셈의 역관계를 사용해 결과를 확인한다",
+        "items": [
+          {
+            "id": "m102-04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "x×(-5)=35일 때 x는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-7"
+            },
+            "rationale": "35÷(-5)=-7이고 (-7)×(-5)=35로 검산된다.",
+            "misconceptionHypothesis": "양수 35를 음수 5로 나누어 양수로 답함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m102-05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-8)×x=-56일 때 x는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "7"
+            },
+            "rationale": "(-56)÷(-8)=7이며 7×(-8)=-56이다.",
+            "misconceptionHypothesis": "곱의 부호만 보고 크기 계산을 놓침",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m102-06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-45)÷x=9일 때 x는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-5"
+            },
+            "rationale": "x=(-45)÷9=-5이고 (-45)÷(-5)=9이다.",
+            "misconceptionHypothesis": "나누는 수와 몫의 관계를 바꿈",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "distinctFamilies": 2,
+      "draftItems": 6,
+      "humanApprovedItems": 0
+    }
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-03",
+    "unitTitle": "유리수의 사칙연산",
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "M103-fraction-representation",
+        "status": "draft",
+        "title": "분수의 동치와 통분",
+        "reasoningStructure": "분수 크기를 보존하는 동치 변형으로 덧셈·뺄셈한다",
+        "items": [
+          {
+            "id": "m103-01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "1/3+1/6을 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "1/2"
+            },
+            "rationale": "1/3=2/6이므로 2/6+1/6=3/6=1/2이다.",
+            "misconceptionHypothesis": "분자와 분모를 각각 더함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m103-02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "5/8-1/4를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "3/8"
+            },
+            "rationale": "1/4=2/8이므로 5/8-2/8=3/8이다.",
+            "misconceptionHypothesis": "분모를 통분하지 않고 빼기",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m103-03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "2/5와 3/7 중 큰 수는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "3/7"
+            },
+            "rationale": "공통분모 35로 바꾸면 14/35와 15/35이므로 3/7이 크다.",
+            "misconceptionHypothesis": "분자 또는 분모 하나만 비교함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "M103-signed-operations",
+        "status": "draft",
+        "title": "부호 있는 유리수의 연산",
+        "reasoningStructure": "부호와 분수 계산을 순서대로 적용하고 역연산으로 검산한다",
+        "items": [
+          {
+            "id": "m103-04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-2/3)×(9/4)를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "-3/2"
+            },
+            "rationale": "부호는 음수, 크기는 18/12=3/2이다.",
+            "misconceptionHypothesis": "곱셈에서도 분모 통분을 먼저 하려 함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m103-05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-3/5)÷(6/10)을 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "-1"
+            },
+            "rationale": "나눗셈을 역수 곱셈으로 바꾸면 (-3/5)×(10/6)=-1이다.",
+            "misconceptionHypothesis": "나누는 분수를 그대로 곱함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m103-06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "1/2+(-3/4)를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "-1/4"
+            },
+            "rationale": "2/4-3/4=-1/4이다.",
+            "misconceptionHypothesis": "음수 항을 더할 때 부호를 무시함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "distinctFamilies": 2,
+      "draftItems": 6,
+      "humanApprovedItems": 0
+    }
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-04",
+    "unitTitle": "거듭제곱과 지수법칙 기초",
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "M104-repeated-factor",
+        "status": "draft",
+        "title": "거듭제곱을 반복 곱으로 해석",
+        "reasoningStructure": "밑과 지수를 구분하고 괄호에 따른 부호를 판단한다",
+        "items": [
+          {
+            "id": "m104-01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "3^4를 곱셈으로 나타내고 값을 구하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "3×3×3×3=81"
+            },
+            "rationale": "지수 4는 밑 3을 네 번 곱한다는 뜻이다.",
+            "misconceptionHypothesis": "3×4로 계산함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m104-02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(-2)^3의 값은?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-8"
+            },
+            "rationale": "괄호 안의 -2를 세 번 곱하므로 -8이다.",
+            "misconceptionHypothesis": "홀수 지수에서도 양수로 생각함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m104-03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "-2^4의 값은?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-16"
+            },
+            "rationale": "거듭제곱이 먼저 계산되어 2^4=16, 앞의 음수를 붙인다.",
+            "misconceptionHypothesis": "괄호 없는 식을 (-2)^4로 오독",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "M104-natural-exponent-laws",
+        "status": "draft",
+        "title": "자연수 지수의 곱셈·나눗셈 법칙",
+        "reasoningStructure": "같은 밑의 반복 인수를 세어 지수법칙을 설명한다",
+        "items": [
+          {
+            "id": "m104-04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "2^3×2^2를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "32"
+            },
+            "rationale": "같은 밑의 인수 총 5개이므로 2^5=32이다.",
+            "misconceptionHypothesis": "지수를 곱함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m104-05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "5^4÷5^2를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "25"
+            },
+            "rationale": "공통 인수 두 개를 약분하면 5^2=25이다.",
+            "misconceptionHypothesis": "지수를 나누거나 밑을 나눔",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m104-06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "(3^2)^2를 계산하라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "81"
+            },
+            "rationale": "3^2를 두 번 곱하므로 3^4=81이다.",
+            "misconceptionHypothesis": "지수를 더함",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "distinctFamilies": 2,
+      "draftItems": 6,
+      "humanApprovedItems": 0
+    }
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-05",
+    "unitTitle": "문자와 식의 값",
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "M105-variable-model",
+        "status": "draft",
+        "title": "문자로 양과 관계 표현",
+        "reasoningStructure": "변수의 의미와 단위가 있는 상황을 식으로 표현한다",
+        "items": [
+          {
+            "id": "m105-01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "한 개에 700원인 연필 x개의 값(원)을 식으로 나타내라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "700x"
+            },
+            "rationale": "개당 가격에 개수를 곱한다.",
+            "misconceptionHypothesis": "700+x로 표현",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m105-02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "민수의 나이가 x살일 때 3년 뒤 나이는?",
+            "answer": {
+              "type": "exact-text",
+              "value": "x+3"
+            },
+            "rationale": "현재 나이에 3을 더한다.",
+            "misconceptionHypothesis": "3x로 표현",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m105-03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "가로가 x cm, 세로가 4 cm인 직사각형의 둘레를 식으로 나타내라.",
+            "answer": {
+              "type": "exact-text",
+              "value": "2x+8"
+            },
+            "rationale": "둘레는 x+4+x+4=2x+8이다.",
+            "misconceptionHypothesis": "넓이 식 4x와 혼동",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "M105-substitution",
+        "status": "draft",
+        "title": "대입과 식의 값",
+        "reasoningStructure": "문자에 수를 대입하고 연산 순서에 따라 계산한다",
+        "items": [
+          {
+            "id": "m105-04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "x=3일 때 2x+5의 값은?",
+            "answer": {
+              "type": "exact-text",
+              "value": "11"
+            },
+            "rationale": "2×3+5=6+5=11이다.",
+            "misconceptionHypothesis": "2와 x를 덧셈으로 처리",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m105-05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "a=-2일 때 a^2+3a의 값은?",
+            "answer": {
+              "type": "exact-text",
+              "value": "-2"
+            },
+            "rationale": "(-2)^2+3(-2)=4-6=-2이다.",
+            "misconceptionHypothesis": "a^2를 -(2^2)로 계산",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m105-06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "short-text",
+            "prompt": "m=4, n=1일 때 3m-2n의 값은?",
+            "answer": {
+              "type": "exact-text",
+              "value": "10"
+            },
+            "rationale": "3×4-2×1=12-2=10이다.",
+            "misconceptionHypothesis": "계수와 대입값의 곱을 놓침",
+            "verification": {
+              "method": "independent-arithmetic-reasoning",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "distinctFamilies": 2,
+      "draftItems": 6,
+      "humanApprovedItems": 0
+    }
+  }
+]

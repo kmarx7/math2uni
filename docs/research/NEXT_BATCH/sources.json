@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1",
+  "checkedAt": "2026-11-01",
+  "status": "partial-research",
+  "sources": [
+    {
+      "id": "moe-curriculum-notice-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0404",
+      "publisher": "대한민국 교육부",
+      "accessStatus": "notice-page-verified-attachment-not-reviewed",
+      "verifiedFacts": ["수학과 교육과정은 별책 8로 지정됨"],
+      "unverified": ["별책 8 첨부 원문 및 M1-01~M1-05별 성취기준 매핑"],
+      "use": "범위 확인 링크만; 공식 코드 추론이나 자료 재배포 없음",
+      "copiedQuestions": 0
+    },
+    {
+      "id": "moe-2028-exam-framework",
+      "title": "교육부 2028학년도 대학입시제도 개편 Q&A",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=340&boardSeq=97621&lev=0&m=020&opType=N&page=66&s=moe",
+      "publisher": "대한민국 교육부",
+      "accessStatus": "previous-research-verified",
+      "verifiedFacts": ["2028학년도 수능 수학 과목 체계가 대수·미적분Ⅰ·확률과 통계로 안내됨"],
+      "unverified": ["M1-01~M1-05 단원 세부 공식 매핑"],
+      "use": "향후 경로의 상위 범위 참고; 이번 중학 준비 단원 문항의 출처가 아님",
+      "copiedQuestions": 0
+    }
+  ],
+  "contentProvenance": {
+    "origin": "project-original",
+    "aiGenerated": true,
+    "externalQuestionsCopied": 0,
+    "draftQuestionCount": 30,
+    "humanReviewedQuestionCount": 0,
+    "humanApprovedQuestionCount": 0,
+    "productionPublicationAllowed": false
+  }
+}

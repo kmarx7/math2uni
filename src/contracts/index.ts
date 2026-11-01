@@ -63,6 +63,10 @@ export const blockSchema = z.discriminatedUnion("type", [
       "decimal",
       "ratio",
       "number-line",
+      "integer-number-line",
+      "signed-multiplication",
+      "powers",
+      "expression-value",
     ]),
     settings: z
       .object({

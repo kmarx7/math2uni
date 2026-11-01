@@ -16,9 +16,11 @@ const placementLabels = {
 export function CurriculumPlan({
   proposal,
   registeredIds,
+  previewIds = [],
 }: {
   proposal: CurriculumProposal;
   registeredIds: string[];
+  previewIds?: string[];
 }) {
   const resultRef = useRef<HTMLParagraphElement>(null);
   const [level, setLevel] = useState("all");
@@ -93,7 +95,7 @@ export function CurriculumPlan({
           <p>
             기존 12단원을 유지하고 나머지 158단원의 구성을 제안합니다. 공식
             성취기준 코드는 미연결이며, 사람 검수와 구성 확인을 거쳐 확정합니다.
-            미구현 단원은 학습할 수 없습니다.
+            M1-01~M1-05는 로컬 개발 미리보기만 제공하고, 나머지 미구현 단원은 열리지 않습니다.
           </p>
         </div>
       </aside>
@@ -151,7 +153,7 @@ export function CurriculumPlan({
           </dd>
         </div>
         <div>
-          <dt>학습 콘텐츠 초안</dt>
+          <dt>운영 학습 등록</dt>
           <dd>
             {implemented}
             <small>단원</small>
@@ -238,6 +240,7 @@ export function CurriculumPlan({
       <div className="plan-units">
         {filtered.map((unit) => {
           const ready = registeredIds.includes(unit.id);
+          const previewReady = previewIds.includes(unit.id);
           const pathEntry = pathEntries.get(unit.id);
           const prerequisites = [
             ...new Map(
@@ -261,7 +264,7 @@ export function CurriculumPlan({
                 </span>
                 <strong>{unit.title}</strong>
                 <span className="plan-unit-state">
-                  {ready ? "학습 초안 제공" : "설계 제안 · 준비 중"}
+                  {ready ? "학습 초안 제공" : previewReady ? "개발 미리보기 가능 · 제안 상태" : "설계 제안 · 준비 중"}
                 </span>
               </summary>
               <div className="plan-unit-body">
@@ -323,6 +326,10 @@ export function CurriculumPlan({
                 {ready ? (
                   <Link href={`/learn/${unit.id}`} className="button">
                     콘텐츠 초안 살펴보기
+                  </Link>
+                ) : previewReady ? (
+                  <Link href={`/learn/${unit.id}`} className="button secondary">
+                    개발 미리보기 열기
                   </Link>
                 ) : (
                   <p className="helper">

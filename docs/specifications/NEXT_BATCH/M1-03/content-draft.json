@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-03",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "유리수를 분수 꼴과 수직선의 위치로 표현하고 정수도 유리수임을 확인한다.\n동치분수와 통분의 의미를 양의 보존으로 설명한다.\n부호가 있는 유리수의 덧셈·뺄셈을 수직선 이동 및 동치분수로 계산한다.\n곱셈·나눗셈의 크기와 부호를 각각 계산하고 역연산으로 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-02에서 정수 곱셈·나눗셈의 부호를 적용한다.\nM0-08에서 분수의 동치·통분과 사칙연산의 기초를 확인한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-03-u1",
+          "title": "유리수의 표현과 수직선",
+          "body": "정수와 분수를 포함해 p/q(q≠0) 꼴의 수를 위치로 나타낸다.",
+          "activity": "분수 눈금을 세분화해 같은 위치를 찾는다.",
+          "check": "분수·정수 표현이 같은 수인지 판별한다."
+        },
+        {
+          "id": "m1-03-u2",
+          "title": "동치분수와 크기 비교",
+          "body": "분자·분모에 같은 0이 아닌 수를 곱해도 값이 보존됨을 시각적으로 확인한다.",
+          "activity": "분수 막대와 수직선 눈금을 맞춘다.",
+          "check": "통분 전후 값이 보존됨을 설명한다."
+        },
+        {
+          "id": "m1-03-u3",
+          "title": "부호 있는 유리수의 덧셈",
+          "body": "같은 부호의 합과 다른 부호의 합을 수직선 이동으로 해석한다.",
+          "activity": "시작점과 이동 방향·거리를 순서대로 조작한다.",
+          "check": "합의 위치와 부호를 예측한다."
+        },
+        {
+          "id": "m1-03-u4",
+          "title": "뺄셈과 반대수",
+          "body": "빼기는 반대수를 더하는 것과 같은 결과를 준다.",
+          "activity": "빼는 수의 반대수를 수직선에 이동한다.",
+          "check": "뺄셈을 덧셈으로 변환해 계산한다."
+        },
+        {
+          "id": "m1-03-u5",
+          "title": "유리수의 곱셈·나눗셈",
+          "body": "부호와 절댓값 계산을 구분하고 나눗셈을 역수 곱으로 연결한다.",
+          "activity": "분수 넓이 모델과 역수 곱의 예를 비교한다.",
+          "check": "제수가 0이 아닌지 확인하고 검산한다."
+        },
+        {
+          "id": "m1-03-u6",
+          "title": "계산 전략·오류 교정",
+          "body": "약분·통분·부호 처리를 계산 전에 선택해 실수를 줄인다.",
+          "activity": "서로 다른 풀이를 같은 값으로 대조한다.",
+          "check": "틀린 풀이의 분모·부호·역수 오류를 분류한다."
+        }
+      ],
+      "body": "유리수의 여러 표현 → 동치분수와 크기 → 덧셈의 이동 → 뺄셈을 반대수로 → 곱·몫의 부호와 크기 → 표현 선택과 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "분수 눈금 분할",
+      "interaction": "fraction-sum",
+      "settings": {
+        "initialA": 1,
+        "initialB": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "정수와 분수를 포함해 p/q(q≠0) 꼴의 수를 위치로 나타낸다.",
+        "분수 눈금을 세분화해 같은 위치를 찾는다.",
+        "분수·정수 표현이 같은 수인지 판별한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "분모가 다르면 분자와 분모를 각각 더함 · 빼는 수의 부호만 바꾸고 연산 의미를 확인하지 않음 · 분수 곱셈에서 통분을 먼저 해야 한다고 생각함 · 나눗셈에서 첫 번째 수의 역수를 취함 · 음수 분수에서 부호를 분자·분모 양쪽에 중복 적용함에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 독립 형성평가 초안은 아직 구현되지 않았습니다. 1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

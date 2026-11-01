@@ -2,6 +2,7 @@ import { CurriculumPlan } from "@/components/curriculum-plan";
 import { curriculumProposal } from "@/data/curriculum-proposal";
 import { curriculum } from "@/data/curriculum";
 import { validateProposal } from "@/modules/curriculum/proposal";
+import { draftPreviewUnitIds } from "@/modules/content/preview-server";
 
 export default function Page() {
   const errors = validateProposal(curriculumProposal, curriculum);
@@ -11,6 +12,7 @@ export default function Page() {
     <CurriculumPlan
       proposal={curriculumProposal}
       registeredIds={curriculum.registeredManifest}
+      previewIds={draftPreviewUnitIds()}
     />
   );
 }
