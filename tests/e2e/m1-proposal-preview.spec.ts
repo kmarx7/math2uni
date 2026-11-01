@@ -17,6 +17,11 @@ for (const viewport of viewports) {
         ["M1-08", "분배법칙과 식의 전개", "큰 직사각형을 두 부분으로 나누어 넓이를 더해요"],
         ["M1-09", "등식과 방정식의 의미", "저울의 균형을 유지하며 양변에 같은 수를 더해요"],
         ["M1-10", "일차방정식의 풀이", "양변에 같은 연산을 적용해 x를 구해요"],
+        ["M1-11", "일차방정식의 활용", "상황의 양을 문자와 단위로 정리해요"],
+        ["M1-12", "일차부등식", "양변을 계수로 나누고 해의 방향을 확인해요"],
+        ["M1-13", "좌표평면과 순서쌍", "첫째 좌표는 가로, 둘째 좌표는 세로 위치예요"],
+        ["M1-14", "정비례와 반비례", "정비례 · y/x가 일정해요"],
+        ["M1-15", "각과 평행선", "평행선에서 같은 각은 같고 같은 쪽 내각은 180°예요"],
       ];
       for (const [unitId, title, labTitle] of units) {
         await page.goto(`/learn/${unitId}`);
@@ -82,6 +87,24 @@ for (const viewport of viewports) {
       expect(state.unitProgress["M1-01"].assessmentScore).toBe(100);
       expect(state.attempts).toHaveLength(3);
       expect(state.attempts.every((attempt: { collection: string }) => attempt.collection === "proposal-preview")).toBe(true);
+    });
+    test("M1-06 assessment stores its score in that unit only", async ({ page }) => {
+      await page.goto("/learn/M1-06");
+      const response = await page.request.get("/api/assessment?unitId=M1-06&collection=proposal-preview");
+      expect(response.status()).toBe(200);
+      const data = await response.json();
+      expect(data.problems).toHaveLength(3);
+      expect(JSON.stringify(data.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+      const assessment = page.locator("#assessment");
+      await assessment.locator('input[type="radio"]').first().check();
+      await assessment.locator('input:not([type="radio"])').nth(0).fill("3");
+      await assessment.locator('input:not([type="radio"])').nth(1).fill("5");
+      await assessment.getByRole("button", { name: "전체 답안 제출" }).click();
+      await expect(assessment.getByText(/검토용 초안 결과/)).toContainText("100점");
+      const state = (await (await page.request.get("/api/progress")).json()).progress;
+      expect(state.assessmentScore).toBeNull();
+      expect(state.unitProgress["M1-06"].assessmentScore).toBe(100);
+      expect(state.attempts).toHaveLength(3);
     });
   });
 }

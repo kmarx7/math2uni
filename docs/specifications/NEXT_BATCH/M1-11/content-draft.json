@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-11",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "문장 속 미지수와 단위를 정해 상황의 양을 나타낸다.\n주어진 양 사이의 관계를 등식으로 나타낸다.\n일차방정식을 풀고 해가 상황에 맞는지 단위와 조건으로 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-10의 이항과 계수 정리 개념을 떠올려 설명한다.\nM1-10의 해의 대입 검산 개념을 떠올려 설명한다.\nM0-10의 비율과 백분율을 바탕으로 단위당 양을 읽는다.\nM0-10의 기준량 역산과 비율 적용 문제에서 구할 양을 구별한다.\nM0-10의 비율 관계를 식과 문장으로 연결한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-11-u1",
+          "title": "미지수와 단위 정하기",
+          "body": "구하려는 양을 문자로 놓고 단위를 함께 기록한다.",
+          "activity": "가격표에서 물건 수와 한 개 가격 카드를 짝지어 미지수 표를 만든다.",
+          "check": "무엇을 x라 두었는지와 단위를 말한다."
+        },
+        {
+          "id": "m1-11-u2",
+          "title": "문장 속 관계 읽기",
+          "body": "합, 차, 몇 배, 일정한 차이 같은 표현을 양 사이의 관계로 읽는다.",
+          "activity": "문장을 양·연산·단위 세 칸 표로 나눈다.",
+          "check": "문장에 나온 양의 관계를 말로 다시 표현한다."
+        },
+        {
+          "id": "m1-11-u3",
+          "title": "상황을 식으로 나타내기",
+          "body": "문장 조건을 등식이나 식으로 옮기고 각 항의 의미를 붙인다.",
+          "activity": "문장 카드와 수식 카드를 선으로 연결한다.",
+          "check": "수식의 각 항이 상황의 어느 양인지 설명한다."
+        },
+        {
+          "id": "m1-11-u4",
+          "title": "방정식 세우기",
+          "body": "미지수의 값에 따라 양쪽이 같아지는 조건을 식으로 쓴다.",
+          "activity": "수량표에서 일정한 비용과 추가 비용을 분리한다.",
+          "check": "식이 문제의 조건을 모두 담았는지 확인한다."
+        },
+        {
+          "id": "m1-11-u5",
+          "title": "풀고 상황에 대입하기",
+          "body": "기존 일차방정식 풀이 절차로 미지수를 구한다.",
+          "activity": "저울 변형과 문장 표를 함께 갱신한다.",
+          "check": "계산 결과를 처음 문장에 대입한다."
+        },
+        {
+          "id": "m1-11-u6",
+          "title": "단위·범위 검산",
+          "body": "해의 단위와 허용 범위를 확인하고 문장으로 답한다.",
+          "activity": "정수 개수·양수 조건 등 가능한 값을 거른다.",
+          "check": "수학적 해와 상황에서 가능한 답을 구분한다."
+        }
+      ],
+      "body": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "문장과 식 연결표: 단위 가격·수량·고정 비용을 바꾸면 양의 관계식과 총액을 함께 읽는다.",
+      "interaction": "linear-word-problem",
+      "settings": {
+        "initialA": 5,
+        "initialB": 3,
+        "initialC": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "구하려는 양을 문자로 놓고 단위를 함께 기록한다.",
+        "가격표에서 물건 수와 한 개 가격 카드를 짝지어 미지수 표를 만든다.",
+        "무엇을 x라 두었는지와 단위를 말한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "문장에 나온 수를 연산 기호 없이 나열한다. · 구하려는 양과 단위를 지정하지 않는다. · 계산 결과가 상황의 범위에 맞는지 확인하지 않는다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

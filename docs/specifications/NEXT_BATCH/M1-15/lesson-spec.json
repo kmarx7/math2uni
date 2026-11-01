@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-15",
+  "levelId": 1,
+  "title": "각과 평행선",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "맞꼭지각과 동위각",
+      "평행선의 각 계산"
+    ],
+    "prerequisiteUnits": [
+      "M0-02"
+    ],
+    "visualization": "평행선과 횡단선"
+  },
+  "objectives": [
+    "맞꼭지각, 동위각, 엇각, 한 직선 위의 이웃한 각을 구별한다.",
+    "평행선에서 동위각과 엇각이 같고 같은 쪽 내각의 합이 180°임을 설명한다.",
+    "각의 관계를 이용해 주어진 각을 계산하고 근거를 말한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-15-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M0-02의 덧셈·뺄셈을 이용해 180°에서 주어진 각의 크기를 뺄 수 있는지 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-15-skill-1",
+    "m1-15-skill-2",
+    "m1-15-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산",
+    "principleDerivation": "각의 관계를 이용해 주어진 각을 계산하고 근거를 말한다.",
+    "accessibility": "색상 외에 각·좌표·식의 이름과 텍스트 설명을 함께 제공한다. 모든 수치 조절은 키보드 입력 가능하며 갱신 결과는 aria-live 텍스트로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-15-u1",
+      "title": "각의 기본 관계",
+      "targetSkills": [
+        "m1-15-skill-1"
+      ],
+      "explanation": "교차하는 두 직선에서 맞꼭지각은 크기가 같고 이웃각은 합이 180°이다.",
+      "activity": "각 카드로 맞은편·이웃한 각을 표시한다.",
+      "check": "두 관계를 그림에서 구별한다."
+    },
+    {
+      "id": "m1-15-u2",
+      "title": "평행선과 횡단선",
+      "targetSkills": [
+        "m1-15-skill-1"
+      ],
+      "explanation": "두 평행선을 가로지르는 직선이 각의 위치 관계를 만든다.",
+      "activity": "평행한 두 선과 횡단선을 움직여 각 위치를 표시한다.",
+      "check": "동위각과 엇각의 위치를 말한다."
+    },
+    {
+      "id": "m1-15-u3",
+      "title": "동위각",
+      "targetSkills": [
+        "m1-15-skill-2"
+      ],
+      "explanation": "평행선에서 같은 위치의 동위각은 크기가 같다.",
+      "activity": "두 교점에서 같은 방향의 각을 색/기호로 표시한다.",
+      "check": "동위각을 찾아 크기를 비교한다."
+    },
+    {
+      "id": "m1-15-u4",
+      "title": "엇각",
+      "targetSkills": [
+        "m1-15-skill-2"
+      ],
+      "explanation": "평행선에서 엇각의 크기는 같다.",
+      "activity": "내부/외부와 횡단선 양쪽을 기준으로 각을 짝짓는다.",
+      "check": "엇각의 쌍과 근거를 설명한다."
+    },
+    {
+      "id": "m1-15-u5",
+      "title": "같은 쪽 내각",
+      "targetSkills": [
+        "m1-15-skill-3"
+      ],
+      "explanation": "평행선에서 횡단선 같은 쪽 내부의 두 각의 합은 180°이다.",
+      "activity": "직선각 타일로 두 각을 한 직선으로 합친다.",
+      "check": "한 각이 주어졌을 때 다른 각을 계산한다."
+    },
+    {
+      "id": "m1-15-u6",
+      "title": "복합 각 계산과 근거",
+      "targetSkills": [
+        "m1-15-skill-3"
+      ],
+      "explanation": "맞꼭지각·동위각·엇각·보각 관계를 이어 필요한 각을 구한다.",
+      "activity": "한 단계씩 표시하고 사용한 관계 이름을 기록한다.",
+      "check": "계산값과 사용한 각 관계를 함께 쓴다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-15-interactive",
+      "status": "specified",
+      "description": "평행선과 횡단선: 기준각을 조절해 동위각·엇각·같은 쪽 내각의 크기 관계를 시각적으로 확인한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 핵심 용어·표현 확인",
+      "D2: 한 단계 관계 적용",
+      "D3: 둘 이상 개념의 유형별 계산",
+      "D4: 문제 조건을 해석하는 응용",
+      "D5: 낯선 표현으로의 전이와 오류 분석"
+    ]
+  },
+  "assessmentPlan": [
+    "맞꼭지각, 동위각, 엇각, 한 직선 위의 이웃한 각을 구별한다.",
+    "평행선에서 동위각과 엇각이 같고 같은 쪽 내각의 합이 180°임을 설명한다.",
+    "계산 결과의 표현·근거·검산",
+    "대표 오개념을 구별하는 오류 분석"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "계산 답과 상황·그림·기호 표현 또는 오류 분석을 조합한다. 형성평가는 전체 응답 제출 뒤에만 결과를 공개한다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "동위각과 엇각의 위치를 혼동한다.",
+    "같은 쪽 내각도 같다고 생각한다.",
+    "맞꼭지각과 이웃각 관계를 혼동한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

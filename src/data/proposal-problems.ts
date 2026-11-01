@@ -2,8 +2,13 @@ import "server-only";
 import { problemSchema, type ProblemInstance } from "@/contracts";
 import blueprint from "../../docs/research/NEXT_BATCH/problem-blueprint.json";
 import algebraBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-problem-blueprint.json";
-import assessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-assessment-blueprint.json";
+import nextAlgebraBlueprint from "../../docs/research/NEXT_BATCH/M1-11-15-problem-blueprint.json";
+import firstAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-assessment-blueprint.json";
+import nextAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-assessment-blueprint.json";
 import { curriculumProposal } from "@/data/curriculum-proposal";
+
+const completeAlgebraBlueprint = [...algebraBlueprint, ...nextAlgebraBlueprint] as const;
+const assessmentBlueprint = [...firstAssessmentBlueprint, ...nextAssessmentBlueprint] as const;
 
 const choiceDrafts: Record<string, { id: string; label: string }[]> = {
   "m101-02": [{ id: "same", label: "같다" }, { id: "four", label: "4" }, { id: "zero", label: "0" }],
@@ -66,7 +71,7 @@ const firstBatchProblems: ProblemInstance[] = blueprint.flatMap((unit) =>
   ),
 );
 
-const algebraFamilies = algebraBlueprint.flatMap((unit) =>
+const algebraFamilies = completeAlgebraBlueprint.flatMap((unit) =>
   unit.families.map((family) => ({
     id: family.id,
     title: family.title,
@@ -75,9 +80,9 @@ const algebraFamilies = algebraBlueprint.flatMap((unit) =>
 );
 
 function algebraItemToProblem(
-  item: (typeof algebraBlueprint)[number]["families"][number]["items"][number],
-  unit: (typeof algebraBlueprint)[number],
-  family: (typeof algebraBlueprint)[number]["families"][number],
+  item: (typeof completeAlgebraBlueprint)[number]["families"][number]["items"][number],
+  unit: (typeof completeAlgebraBlueprint)[number],
+  family: (typeof completeAlgebraBlueprint)[number]["families"][number],
   familyIndex: number,
 ): ProblemInstance {
   const choices = "choices" in item && item.choices
@@ -110,13 +115,13 @@ function algebraItemToProblem(
     misconceptions: ["misconceptionHypothesis" in item ? item.misconceptionHypothesis : "조건과 계산을 다시 확인한다."],
     status: "draft",
     version: unit.contentVersion,
-    provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: "자체 제작 초안; docs/research/NEXT_BATCH/M1-06-10-research-report.md", aiGenerated: true },
+    provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: unit.unitId <= "M1-10" ? "자체 제작 초안; docs/research/NEXT_BATCH/M1-06-10-research-report.md" : "자체 제작 초안; docs/research/NEXT_BATCH/M1-11-15-research-report.md", aiGenerated: true },
     reviewHistory: [],
     purpose: "practice",
   });
 }
 
-const algebraProblems: ProblemInstance[] = algebraBlueprint.flatMap((unit) =>
+const algebraProblems: ProblemInstance[] = completeAlgebraBlueprint.flatMap((unit) =>
   unit.families.flatMap((family, familyIndex) =>
     family.items.map((item) => algebraItemToProblem(item, unit, family, familyIndex)),
   ),
@@ -124,9 +129,8 @@ const algebraProblems: ProblemInstance[] = algebraBlueprint.flatMap((unit) =>
 
 const assessmentProblems: ProblemInstance[] = assessmentBlueprint.flatMap((unit) => {
   const unitMeta = curriculumProposal.curriculum.units.find((candidate) => candidate.id === unit.unitId)!;
-  const practiceFamilies = blueprint
-    .find((candidate) => candidate.unitId === unit.unitId)!
-    .families;
+  const practiceFamilies = blueprint.find((candidate) => candidate.unitId === unit.unitId)?.families ??
+    completeAlgebraBlueprint.find((candidate) => candidate.unitId === unit.unitId)!.families;
   return unit.items.map((item, index) => {
     const family = practiceFamilies[index % practiceFamilies.length];
     const choices = item.choices
@@ -159,7 +163,7 @@ const assessmentProblems: ProblemInstance[] = assessmentBlueprint.flatMap((unit)
       misconceptions: [`${item.skillLabel}의 조건을 다시 확인한다.`],
       status: "draft",
       version: unit.contentVersion,
-      provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: "자체 제작 평가 초안; docs/research/NEXT_BATCH/M1-assessment-blueprint.json", aiGenerated: true },
+      provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: unit.unitId <= "M1-05" ? "자체 제작 평가 초안; docs/research/NEXT_BATCH/M1-assessment-blueprint.json" : "자체 제작 평가 초안; docs/research/NEXT_BATCH/M1-06-10-assessment-blueprint.json", aiGenerated: true },
       reviewHistory: [],
       purpose: "assessment",
     });

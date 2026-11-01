@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-UNITS = [f"M1-{i:02d}" for i in range(1, 11)]
+UNITS = [f"M1-{i:02d}" for i in range(1, 16)]
 INTERACTIONS = {
     "M1-01": {"interaction": "integer-number-line", "settings": {"initialA": -3, "initialB": 4}},
     "M1-02": {"interaction": "signed-multiplication", "settings": {"operation": "multiply", "initialA": -6, "initialB": 3}},
@@ -15,6 +15,11 @@ INTERACTIONS = {
     "M1-08": {"interaction": "distributive-area", "settings": {"initialA": 3, "initialB": 2, "initialC": 4}},
     "M1-09": {"interaction": "equation-balance", "settings": {"initialA": 3, "initialB": 8, "initialC": 2}},
     "M1-10": {"interaction": "linear-equation", "settings": {"initialA": 3, "initialB": 2, "initialC": 12}},
+    "M1-11": {"interaction": "linear-word-problem", "settings": {"initialA": 5, "initialB": 3, "initialC": 4}},
+    "M1-12": {"interaction": "inequality", "settings": {"initialA": -2, "initialB": 8}},
+    "M1-13": {"interaction": "coordinate-plane", "settings": {"initialA": -3, "initialB": 4}},
+    "M1-14": {"interaction": "proportion", "settings": {"initialA": 3, "initialB": 4, "initialC": 2}},
+    "M1-15": {"interaction": "parallel-angles", "settings": {"initialA": 60, "initialB": 12}},
 }
 PHASE_BLOCKS = [
     "goals", "diagnostic", "concept", "concept", "lab", "concept", "example",
@@ -22,7 +27,7 @@ PHASE_BLOCKS = [
     "review", "review",
 ]
 AVAILABLE = {f"phase-{i:02d}" for i in range(1, 9)} | {"phase-12", "phase-14"}
-ASSESSMENT_UNITS = {f"M1-{i:02d}" for i in range(1, 6)}
+ASSESSMENT_UNITS = {f"M1-{i:02d}" for i in range(1, 11)}
 
 for unit_id in UNITS:
     spec_path = ROOT / "docs/specifications/NEXT_BATCH" / unit_id / "lesson-spec.json"

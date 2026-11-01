@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-09",
+  "unitTitle": "등식과 방정식의 의미",
+  "concepts": [
+    "해와 항등식",
+    "등식의 성질"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a109-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "choice",
+      "prompt": "x=4일 때 x+2=6은 참인가?",
+      "answer": {
+        "type": "choice",
+        "value": "A"
+      },
+      "rationale": "x=4를 넣으면 4+2=6이므로 등식은 참이다.",
+      "skillLabel": "해와 항등식",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      },
+      "choices": {
+        "A": "참",
+        "B": "거짓"
+      }
+    },
+    {
+      "id": "a109-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "choice",
+      "prompt": "모든 x에서 참인 항등식은?",
+      "answer": {
+        "type": "choice",
+        "value": "B"
+      },
+      "rationale": "2(x+3)을 전개하면 2x+6으로 양변이 모든 x에서 같다.",
+      "skillLabel": "해와 항등식",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      },
+      "choices": {
+        "A": "x+3=7",
+        "B": "2(x+3)=2x+6",
+        "C": "2x=6"
+      }
+    },
+    {
+      "id": "a109-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "등식 7=7의 양변에 -3을 더했을 때 오른쪽 값은?",
+      "answer": {
+        "type": "integer",
+        "value": "4"
+      },
+      "rationale": "양변에 -3을 더하면 오른쪽은 7+(-3)=4다.",
+      "skillLabel": "등식의 성질",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

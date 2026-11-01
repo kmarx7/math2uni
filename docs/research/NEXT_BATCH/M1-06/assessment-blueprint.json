@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-06",
+  "unitTitle": "단항식의 계산",
+  "concepts": [
+    "계수와 차수",
+    "단항식의 곱셈과 나눗셈"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a106-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "choice",
+      "prompt": "(3x²)(-2x³)을 간단히 한 결과는?",
+      "answer": {
+        "type": "choice",
+        "value": "A"
+      },
+      "rationale": "계수 3×(-2)=-6이고 x의 지수는 2+3=5이므로 -6x⁵다.",
+      "skillLabel": "단항식의 곱셈과 나눗셈",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      },
+      "choices": {
+        "A": "-6x⁵",
+        "B": "-6x⁶",
+        "C": "x⁵"
+      }
+    },
+    {
+      "id": "a106-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "12a⁵b² ÷ 3a²b에서 a의 지수는?",
+      "answer": {
+        "type": "integer",
+        "value": "3"
+      },
+      "rationale": "나눗셈에서 같은 밑의 지수를 빼므로 a의 지수는 5-2=3이다.",
+      "skillLabel": "단항식의 곱셈과 나눗셈",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a106-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "-2mn⁴의 차수는?",
+      "answer": {
+        "type": "integer",
+        "value": "5"
+      },
+      "rationale": "단항식의 차수는 문자 지수의 합이므로 m¹n⁴의 차수는 1+4=5다.",
+      "skillLabel": "계수와 차수",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

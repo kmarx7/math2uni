@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-13",
+  "levelId": 1,
+  "title": "좌표평면과 순서쌍",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "두 축과 사분면",
+      "점의 좌표 해석"
+    ],
+    "prerequisiteUnits": [
+      "M1-01"
+    ],
+    "visualization": "좌표평면 점 이동"
+  },
+  "objectives": [
+    "좌표평면의 가로축·세로축과 원점을 설명한다.",
+    "순서쌍의 첫째 수와 둘째 수가 점의 위치를 어떻게 정하는지 읽고 쓴다.",
+    "사분면의 부호를 이용해 점의 위치와 좌표 변화를 해석한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-13-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-01의 부호와 절댓값 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "m1-13-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-01의 정수의 대소 비교 개념을 떠올려 설명한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-13-skill-1",
+    "m1-13-skill-2",
+    "m1-13-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산",
+    "principleDerivation": "사분면의 부호를 이용해 점의 위치와 좌표 변화를 해석한다.",
+    "accessibility": "색상 외에 각·좌표·식의 이름과 텍스트 설명을 함께 제공한다. 모든 수치 조절은 키보드 입력 가능하며 갱신 결과는 aria-live 텍스트로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-13-u1",
+      "title": "좌표축과 원점",
+      "targetSkills": [
+        "m1-13-skill-1"
+      ],
+      "explanation": "두 수직선이 만나는 점이 원점이며 가로축과 세로축을 구별한다.",
+      "activity": "축을 겹쳐 원점과 방향 표지를 놓는다.",
+      "check": "점의 위치를 가로 이동과 세로 이동으로 설명한다."
+    },
+    {
+      "id": "m1-13-u2",
+      "title": "순서쌍 읽기",
+      "targetSkills": [
+        "m1-13-skill-1"
+      ],
+      "explanation": "(x,y)에서 첫째 수는 가로, 둘째 수는 세로 위치를 정한다.",
+      "activity": "가로 이동 후 세로 이동해 점을 놓는다.",
+      "check": "순서쌍의 순서를 바꾸었을 때 점이 달라짐을 확인한다."
+    },
+    {
+      "id": "m1-13-u3",
+      "title": "점의 좌표 쓰기",
+      "targetSkills": [
+        "m1-13-skill-2"
+      ],
+      "explanation": "좌표평면의 점을 원점 기준 이동으로 읽어 순서쌍으로 나타낸다.",
+      "activity": "격자점에서 원점까지 수평·수직 이동을 센다.",
+      "check": "표시된 점의 좌표를 정확히 쓴다."
+    },
+    {
+      "id": "m1-13-u4",
+      "title": "사분면의 부호",
+      "targetSkills": [
+        "m1-13-skill-2"
+      ],
+      "explanation": "사분면마다 x,y 좌표의 부호 조합이 다르다.",
+      "activity": "각 사분면에 부호 카드를 놓는다.",
+      "check": "주어진 좌표가 속한 사분면을 판단한다."
+    },
+    {
+      "id": "m1-13-u5",
+      "title": "축 위의 점과 원점",
+      "targetSkills": [
+        "m1-13-skill-3"
+      ],
+      "explanation": "축 위 점은 해당 축에 수직인 좌표가 0이다.",
+      "activity": "x=0, y=0 점을 축에 놓는다.",
+      "check": "축 위 점을 사분면에 포함하지 않는다."
+    },
+    {
+      "id": "m1-13-u6",
+      "title": "좌표 변화와 대칭 기초",
+      "targetSkills": [
+        "m1-13-skill-3"
+      ],
+      "explanation": "한 좌표만 부호가 바뀌는 이동이 어느 축 방향인지 설명한다.",
+      "activity": "한 좌표를 고정하고 다른 좌표 부호를 바꿔 점을 옮긴다.",
+      "check": "이동 전후 바뀐 좌표를 구별한다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-13-interactive",
+      "status": "specified",
+      "description": "좌표평면 점 이동: 키보드 슬라이더로 x,y 좌표를 바꾸며 원점·축·사분면과 점의 위치를 확인한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 핵심 용어·표현 확인",
+      "D2: 한 단계 관계 적용",
+      "D3: 둘 이상 개념의 유형별 계산",
+      "D4: 문제 조건을 해석하는 응용",
+      "D5: 낯선 표현으로의 전이와 오류 분석"
+    ]
+  },
+  "assessmentPlan": [
+    "좌표평면의 가로축·세로축과 원점을 설명한다.",
+    "순서쌍의 첫째 수와 둘째 수가 점의 위치를 어떻게 정하는지 읽고 쓴다.",
+    "계산 결과의 표현·근거·검산",
+    "대표 오개념을 구별하는 오류 분석"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "계산 답과 상황·그림·기호 표현 또는 오류 분석을 조합한다. 형성평가는 전체 응답 제출 뒤에만 결과를 공개한다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "순서쌍에서 x,y 순서를 바꾼다.",
+    "축 위의 점을 사분면에 포함한다.",
+    "점의 좌표 부호와 사분면을 혼동한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

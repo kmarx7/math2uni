@@ -64,7 +64,8 @@ export function MathLab({ block }: { block: Interactive }) {
   const [a, setA] = useState(block.settings?.initialA ?? 3),
     [b, setB] = useState(block.settings?.initialB ?? 4),
     [c, setC] = useState(block.settings?.initialC ?? 2),
-    [subtract, setSubtract] = useState(false);
+    [subtract, setSubtract] = useState(false),
+    [inverse, setInverse] = useState(false);
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -383,6 +384,141 @@ export function MathLab({ block }: { block: Interactive }) {
         <Control label="상수항" value={b} min={-12} max={12} change={setB} />
         <Control label="오른쪽 값" value={c} min={-12} max={12} change={setC} />
         <p className="helper">먼저 양변에서 상수항을 빼고, x의 계수가 0이 아닐 때 양변을 그 계수로 나눕니다. 마지막에 원래 식에 대입해 확인해요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "linear-word-problem") {
+    const total = a * b + c;
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>상황의 양을 문자와 단위로 정리해요</span>
+          <strong>총액 = 한 개 가격 × 개수 + 고정 비용 = {a}×{b}+{c} = {total}원</strong>
+          <p>한 개 {a}원인 물건 {b}개와 고정 비용 {c}원을 더한 상황입니다.</p>
+        </div>
+        <Control label="한 개 가격 (원)" value={a} min={1} max={60} change={setA} />
+        <Control label="물건 개수" value={b} min={1} max={12} change={setB} />
+        <Control label="고정 비용 (원)" value={c} min={0} max={12} change={setC} />
+        <div className="table-scroll">
+          <table>
+            <tbody>
+              <tr><th scope="row">한 개 가격</th><td>{a}원</td></tr>
+              <tr><th scope="row">개수</th><td>{b}개</td></tr>
+              <tr><th scope="row">고정 비용</th><td>{c}원</td></tr>
+              <tr><th scope="row">관계식</th><td>총액 = {a}×{b}+{c} = {total}원</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="helper">문제에서 구하는 양을 x라 놓을 때도 단위를 함께 적고, 식의 각 항이 어떤 비용인지 대응시켜요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "inequality") {
+    const boundary = a === 0 ? null : fraction(a < 0 ? -b : b, Math.abs(a));
+    const boundaryNumber = a === 0 ? 0 : b / a;
+    const boundaryX = 20 + ((Math.max(-12, Math.min(12, boundaryNumber)) + 12) / 24) * 200;
+    const relation = a < 0 ? ">" : "<";
+    const solution = a === 0
+      ? b > 0 ? "모든 실수가 해입니다." : "해가 없습니다."
+      : `x ${relation} ${boundary}`;
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>양변을 계수로 나누고 해의 방향을 확인해요</span>
+          <strong>{a}x &lt; {b}</strong>
+          <p>{solution}</p>
+          <p>{a < 0 ? "음수로 나누어 순서가 뒤집혀 부등호 방향도 바뀝니다." : a > 0 ? "양수로 나누므로 부등호 방향은 유지됩니다." : "계수가 0이면 x에 따라 관계가 달라지지 않습니다."}</p>
+        </div>
+        <Control label="x의 계수" value={a} min={-6} max={6} change={setA} />
+        <Control label="오른쪽 값" value={b} min={-12} max={12} change={setB} />
+        {a !== 0 && (
+          <svg viewBox="0 0 240 52" role="img" aria-label={`수직선에서 ${solution}인 범위를 표시합니다.`} style={{ display: "block", width: "min(100%, 20rem)", margin: "1rem auto" }}>
+            <line x1="20" y1="24" x2="220" y2="24" stroke="currentColor" strokeWidth="2" />
+            <line x1={a > 0 ? 20 : boundaryX} y1="24" x2={a > 0 ? boundaryX : 220} y2="24" stroke="currentColor" strokeWidth="5" />
+            <circle cx={boundaryX} cy="24" r="7" fill="var(--surface, white)" stroke="currentColor" strokeWidth="2" />
+            <text x="20" y="48" textAnchor="middle">-12</text><text x="220" y="48" textAnchor="middle">12</text>
+            <text x={boundaryX} y="12" textAnchor="middle">{boundary}</text>
+            <text x={a > 0 ? 22 : 218} y="16" textAnchor={a > 0 ? "start" : "end"}>{a > 0 ? "←" : "→"}</text>
+          </svg>
+        )}
+        <p className="helper">같은 수를 더하거나 빼도 방향은 유지되지만, 음수를 곱하거나 나누면 수직선의 순서가 뒤집혀요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "coordinate-plane") {
+    const quadrant = a === 0 || b === 0
+      ? "축 위의 점"
+      : a > 0 ? (b > 0 ? "제1사분면" : "제4사분면") : (b > 0 ? "제2사분면" : "제3사분면");
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>첫째 좌표는 가로, 둘째 좌표는 세로 위치예요</span>
+          <strong>({a}, {b}) · {quadrant}</strong>
+          <p>x = {a}, y = {b}</p>
+        </div>
+        <Control label="x좌표 · 가로" value={a} min={-5} max={5} change={setA} />
+        <Control label="y좌표 · 세로" value={b} min={-5} max={5} change={setB} />
+        <div role="img" aria-label={`좌표평면에서 점 (${a}, ${b})는 ${quadrant}에 있습니다.`} style={{ position: "relative", width: "min(100%, 16rem)", aspectRatio: "1 / 1", border: "1px solid var(--line, #cbd5e1)", margin: "1rem auto", backgroundImage: "linear-gradient(to right, transparent 49.7%, #64748b 49.7%, #64748b 50.3%, transparent 50.3%), linear-gradient(to bottom, transparent 49.7%, #64748b 49.7%, #64748b 50.3%, transparent 50.3%)", backgroundSize: "100% 100%" }}>
+          <span style={{ position: "absolute", left: `${50 + a * 9}%`, top: `${50 - b * 9}%`, transform: "translate(-50%, -50%)", fontWeight: 700 }}>● ({a}, {b})</span>
+          <span style={{ position: "absolute", left: "52%", top: "48%" }}>O</span>
+        </div>
+        <p className="helper">x좌표가 0이면 y축 위, y좌표가 0이면 x축 위에 놓여 사분면에 속하지 않아요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "proportion") {
+    const directValue = a * b;
+    const inverseValue = a / b;
+    const graphXs = [1, 2, 3, 4, 5, 6];
+    const graphMaxY = inverse ? a : a * graphXs.length;
+    const graphPoints = graphXs.map((x, index) => {
+      const y = inverse ? a / x : a * x;
+      return `${35 + index * 34},${130 - (y / graphMaxY) * 100}`;
+    }).join(" ");
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>{inverse ? "반비례 · x와 y의 곱이 일정해요" : "정비례 · y/x가 일정해요"}</span>
+          <strong>{inverse ? `y = ${a}/${b} = ${Number(inverseValue.toFixed(2))}` : `y = ${a}×${b} = ${directValue}`}</strong>
+          <p>{inverse ? `xy = ${a}이므로 비례상수는 ${a}입니다.` : `y/x = ${a}이므로 비례상수는 ${a}입니다.`}</p>
+        </div>
+        <div className="question-actions">
+          <button type="button" className={!inverse ? "selected" : ""} aria-pressed={!inverse} onClick={() => setInverse(false)}>정비례 y=kx</button>
+          <button type="button" className={inverse ? "selected" : ""} aria-pressed={inverse} onClick={() => setInverse(true)}>반비례 y=k/x</button>
+        </div>
+        <Control label="비례상수 k" value={a} min={1} max={12} change={setA} />
+        <Control label="x값 (0 제외)" value={b} min={1} max={12} change={setB} />
+        <svg viewBox="0 0 250 155" role="img" aria-label={`${inverse ? "반비례" : "정비례"} 관계 ${inverse ? "y=k/x" : "y=kx"}의 표본 그래프입니다.`} style={{ display: "block", width: "min(100%, 20rem)", margin: "1rem auto" }}>
+          <line x1="28" y1="130" x2="240" y2="130" stroke="currentColor" strokeWidth="2" />
+          <line x1="28" y1="12" x2="28" y2="130" stroke="currentColor" strokeWidth="2" />
+          <polyline points={graphPoints} fill="none" stroke="currentColor" strokeWidth="3" />
+          {graphXs.map((x, index) => {
+            const y = inverse ? a / x : a * x;
+            return <circle key={x} cx={35 + index * 34} cy={130 - (y / graphMaxY) * 100} r="3.5" fill="currentColor" />;
+          })}
+          <text x="235" y="148" textAnchor="end">x</text><text x="14" y="16">y</text>
+        </svg>
+        <p className="helper">정비례는 y/x, 반비례는 xy가 일정합니다. 반비례식은 x=0에서 정의되지 않아요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "parallel-angles") {
+    const supplement = 180 - a;
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>평행선에서 같은 각은 같고 같은 쪽 내각은 180°예요</span>
+          <strong>기준각 {a}° · 동위각/엇각 {a}° · 같은 쪽 내각 {supplement}°</strong>
+          <p>{a}° + {supplement}° = 180°</p>
+        </div>
+        <Control label="기준각" value={a} min={0} max={180} change={setA} />
+        <svg viewBox="0 0 240 130" role="img" aria-label={`평행선 두 개를 가로지르는 선에서 기준각은 ${a}도이고 같은 쪽 내각은 ${supplement}도입니다.`} style={{ display: "block", width: "min(100%, 18rem)", margin: "1rem auto" }}>
+          <line x1="15" y1="35" x2="225" y2="35" stroke="currentColor" strokeWidth="2" />
+          <line x1="15" y1="95" x2="225" y2="95" stroke="currentColor" strokeWidth="2" />
+          <line x1="65" y1="10" x2="185" y2="120" stroke="currentColor" strokeWidth="2" />
+          <text x="22" y="28">평행선</text><text x="100" y="32">{a}°</text><text x="155" y="91">{supplement}°</text>
+        </svg>
+        <p className="helper">그림의 위치를 먼저 확인하고 동위각·엇각은 같음, 같은 쪽 내각은 합이 180°임을 적용해요.</p>
       </div>
     );
   }

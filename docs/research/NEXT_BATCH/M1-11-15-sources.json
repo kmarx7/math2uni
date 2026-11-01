@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1",
+  "checkedAt": "2026-11-02",
+  "status": "partial-research",
+  "sources": [
+    {
+      "id": "moe-2022-curriculum-notice",
+      "title": "교육부 2022 개정 초중등학교 교육과정 고시 안내",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "대한민국 교육부",
+      "accessStatus": "notice-page-verified-attachment-not-reviewed",
+      "verifiedFacts": ["수학과 교육과정 별책 8 지정"],
+      "unverified": ["M1-11~M1-15에 대응하는 개별 공식 성취기준 코드"],
+      "use": "범위 확인용 경로만 기록. 코드 추론·문항 복제 없음",
+      "copiedQuestions": 0
+    },
+    {
+      "id": "ncic-2022-curriculum-notice",
+      "title": "NCIC 2022 개정 교육과정 고시 자료",
+      "url": "https://www.ncic.re.kr/bbs/eduSian2022/view/547.do",
+      "publisher": "국가교육과정정보센터",
+      "accessStatus": "notice-page-verified-attachment-not-reviewed",
+      "verifiedFacts": ["2022 개정 교육과정 고시 자료 게시 확인"],
+      "unverified": ["별책 8 원문과 개별 M1 제안 단원 간 매핑"],
+      "use": "추가 확인 경로로만 기록",
+      "copiedQuestions": 0
+    }
+  ],
+  "contentProvenance": {
+    "origin": "project-original",
+    "aiGenerated": true,
+    "externalQuestionsCopied": 0,
+    "draftQuestionCount": 30,
+    "humanReviewedQuestionCount": 0,
+    "humanApprovedQuestionCount": 0,
+    "productionPublicationAllowed": false
+  }
+}

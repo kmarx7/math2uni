@@ -9,15 +9,18 @@
     "problemCount6": "pass",
     "distinctFamilyCount2": "pass",
     "answerRules": "pass",
-    "serverDeliveryGate": "pass"
+    "serverDeliveryGate": "pass",
+    "assessmentProblemCount3": "pass",
+    "assessmentPurposeAndCollection": "pass"
   },
   "humanMathReview": "pending",
   "humanPedagogyReview": "pending",
   "officialStandards": "unverified",
   "publicationApproved": false,
   "issues": [
-    "M1-06~M1-10 독립 형성평가 미구현",
     "문항 자동 검사 외 별도 사람 수학·교육 검수 필요",
-    "단원 구성·선수 관계·공식 코드 매핑은 제안 상태"
+    "단원 구성·선수 관계·공식 코드 매핑은 제안 상태",
+    "형성평가·연습 문항의 독립 사람 수학 검수 미완료",
+    "공식 매핑과 D3~D5 확장은 후속 검토 대상"
   ]
 }

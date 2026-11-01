@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-14",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "정비례 관계를 y=kx로 나타내고 비례상수 k의 의미를 설명한다.\n반비례 관계를 y=k/x로 나타내고 x가 0일 수 없음을 확인한다.\n표의 값과 식의 관계를 판별하고 그래프의 점과 연결한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-05의 문자로 양 나타내기 개념을 떠올려 설명한다.\nM1-05의 대입과 식의 값 개념을 떠올려 설명한다.\nM1-13의 두 축과 사분면 개념을 떠올려 설명한다.\nM1-13의 점의 좌표 해석 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-14-u1",
+          "title": "정비례 관계 관찰",
+          "body": "x가 일정한 배가 되면 y도 같은 배가 되는 관계를 찾는다.",
+          "activity": "표에서 y/x의 비를 비교한다.",
+          "check": "비가 일정한 표를 골라 이유를 설명한다."
+        },
+        {
+          "id": "m1-14-u2",
+          "title": "정비례식과 비례상수",
+          "body": "정비례는 y=kx이며 k는 y/x로 구한다.",
+          "activity": "쌍 (x,y)를 표에서 식으로 옮긴다.",
+          "check": "주어진 값에서 k와 식을 구한다."
+        },
+        {
+          "id": "m1-14-u3",
+          "title": "정비례 표와 그래프",
+          "body": "정비례 표의 점은 원점을 지나는 직선 위에 놓인다.",
+          "activity": "표의 점을 좌표평면에 놓고 직선으로 연결한다.",
+          "check": "그래프가 원점을 지나는지 확인한다."
+        },
+        {
+          "id": "m1-14-u4",
+          "title": "반비례 관계 관찰",
+          "body": "x가 일정 배가 될 때 y는 그 역수 배가 되는 관계를 찾는다.",
+          "activity": "표에서 xy의 곱이 일정한지 비교한다.",
+          "check": "곱이 일정한 표를 반비례로 구별한다."
+        },
+        {
+          "id": "m1-14-u5",
+          "title": "반비례식과 제한",
+          "body": "반비례는 y=k/x이며 x≠0이다.",
+          "activity": "xy의 일정한 값에서 빠진 값을 계산한다.",
+          "check": "x=0을 허용하지 않는 이유를 말한다."
+        },
+        {
+          "id": "m1-14-u6",
+          "title": "표·식·그래프 연결",
+          "body": "상황·표·식·그래프 사이의 대응을 해석한다.",
+          "activity": "직접/역비례 표 카드를 식과 그래프에 연결한다.",
+          "check": "여러 표현이 같은 관계인지 검산한다."
+        }
+      ],
+      "body": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "정비례·반비례 비교: 관계 유형과 x값을 바꾸면 식·비례상수·y값이 함께 갱신된다.",
+      "interaction": "proportion",
+      "settings": {
+        "initialA": 3,
+        "initialB": 4,
+        "initialC": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "x가 일정한 배가 되면 y도 같은 배가 되는 관계를 찾는다.",
+        "표에서 y/x의 비를 비교한다.",
+        "비가 일정한 표를 골라 이유를 설명한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "정비례와 반비례의 표에서 일정한 값이 비인지 곱인지 혼동한다. · 반비례에서 x=0을 허용한다. · 한 쌍으로 구한 비례상수를 다른 값에 적용할 때 식을 바꾼다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

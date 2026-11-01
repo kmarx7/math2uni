@@ -6,9 +6,9 @@
   "automatedChecks": {
     "assessmentProblemCount3": "pass",
     "purposeAssessment": "pass",
+    "answerRules": "pass",
     "fullSubmitOnly": "pass",
     "publicDTOAnswerFree": "pass",
-    "answerRules": "pass",
     "productionPreviewGate": "pass"
   },
   "humanMathReview": "pending",

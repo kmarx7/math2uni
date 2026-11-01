@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-12",
+  "levelId": 1,
+  "title": "일차부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "부등식의 성질",
+      "해의 범위"
+    ],
+    "prerequisiteUnits": [
+      "M1-10",
+      "M1-01"
+    ],
+    "visualization": "해의 수직선 표시"
+  },
+  "objectives": [
+    "부등호가 나타내는 대소 관계와 해의 집합을 설명한다.",
+    "부등식의 양변에 같은 수를 더하거나 빼고 양수를 곱하거나 나눌 수 있다.",
+    "음수를 곱하거나 나누면 부등호 방향이 바뀌는 이유를 수직선과 대소 비교로 설명한다.",
+    "일차부등식을 풀고 해의 범위를 수직선과 기호로 나타낸다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-12-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-10의 이항과 계수 정리 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "m1-12-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-10의 해의 대입 검산 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "m1-12-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-01의 부호와 절댓값 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "m1-12-readiness-4",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-01의 정수의 대소 비교 개념을 떠올려 설명한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-12-skill-1",
+    "m1-12-skill-2",
+    "m1-12-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산",
+    "principleDerivation": "일차부등식을 풀고 해의 범위를 수직선과 기호로 나타낸다.",
+    "accessibility": "색상 외에 각·좌표·식의 이름과 텍스트 설명을 함께 제공한다. 모든 수치 조절은 키보드 입력 가능하며 갱신 결과는 aria-live 텍스트로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-12-u1",
+      "title": "부등식과 해",
+      "targetSkills": [
+        "m1-12-skill-1"
+      ],
+      "explanation": "부등호는 두 식의 대소 관계를 나타내며 해는 관계를 참으로 하는 값이다.",
+      "activity": "수직선에서 조건을 만족하는 점을 색칠한다.",
+      "check": "주어진 수가 부등식의 해인지 대입해 확인한다."
+    },
+    {
+      "id": "m1-12-u2",
+      "title": "양변에 같은 수 더하기·빼기",
+      "targetSkills": [
+        "m1-12-skill-1"
+      ],
+      "explanation": "같은 수를 양변에 더하거나 빼도 대소 관계가 유지된다.",
+      "activity": "수직선의 두 점을 같은 방향으로 이동한다.",
+      "check": "변형 전후 대소 순서가 유지됨을 확인한다."
+    },
+    {
+      "id": "m1-12-u3",
+      "title": "양수의 곱셈·나눗셈",
+      "targetSkills": [
+        "m1-12-skill-2"
+      ],
+      "explanation": "양수로 곱하거나 나누면 부등호 방향을 유지한다.",
+      "activity": "양수 배율의 수직선 간격 변화를 비교한다.",
+      "check": "양수로 나눌 때 방향을 그대로 둔다."
+    },
+    {
+      "id": "m1-12-u4",
+      "title": "음수 곱셈과 방향 반전",
+      "targetSkills": [
+        "m1-12-skill-2"
+      ],
+      "explanation": "음수를 곱하면 수직선에서 순서가 뒤집혀 부등호 방향도 바뀐다.",
+      "activity": "수와 부등식 양변에 -1을 곱해 순서를 비교한다.",
+      "check": "음수로 곱하거나 나눌 때 방향을 바꾸는 이유를 설명한다."
+    },
+    {
+      "id": "m1-12-u5",
+      "title": "일차부등식 풀기",
+      "targetSkills": [
+        "m1-12-skill-3"
+      ],
+      "explanation": "동치 변형을 적용해 미지수의 범위를 구한다.",
+      "activity": "변형 단계마다 양변 연산과 부등호를 함께 기록한다.",
+      "check": "각 단계에서 부등호 방향과 계산을 확인한다."
+    },
+    {
+      "id": "m1-12-u6",
+      "title": "해의 범위 표현과 검산",
+      "targetSkills": [
+        "m1-12-skill-3"
+      ],
+      "explanation": "해를 부등식·수직선으로 나타내고 경계값 포함 여부를 구별한다.",
+      "activity": "열린 점과 닫힌 점으로 경계 포함 여부를 표시한다.",
+      "check": "경계값과 범위 안팎의 수를 대입해 확인한다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-12-interactive",
+      "status": "specified",
+      "description": "부등식 저울과 수직선: 계수의 부호를 바꾸며 나눗셈 전후의 부등호와 해의 방향을 관찰한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 핵심 용어·표현 확인",
+      "D2: 한 단계 관계 적용",
+      "D3: 둘 이상 개념의 유형별 계산",
+      "D4: 문제 조건을 해석하는 응용",
+      "D5: 낯선 표현으로의 전이와 오류 분석"
+    ]
+  },
+  "assessmentPlan": [
+    "부등호가 나타내는 대소 관계와 해의 집합을 설명한다.",
+    "부등식의 양변에 같은 수를 더하거나 빼고 양수를 곱하거나 나눌 수 있다.",
+    "계산 결과의 표현·근거·검산",
+    "대표 오개념을 구별하는 오류 분석"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "계산 답과 상황·그림·기호 표현 또는 오류 분석을 조합한다. 형성평가는 전체 응답 제출 뒤에만 결과를 공개한다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "음수로 나누어도 부등호 방향이 그대로라고 생각한다.",
+    "경계값 포함 여부를 부등호와 수직선에서 다르게 표시한다.",
+    "부등식의 해를 하나의 수로만 본다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

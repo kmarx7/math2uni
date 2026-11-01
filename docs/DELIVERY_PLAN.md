@@ -69,3 +69,11 @@ Python 수식 검증·AI 튜터·대량 생성·외부 배포는 각 기능의 �
 새 M1 시도는 인증된 계정의 `unitProgress[unitId]`에 기록한다. `proposal-preview` 시도는 정본 숙달도·오답노트·복습 일정에 포함하지 않고 M0-01 루트 점수도 변경하지 않는다. 제안 ID 10개 모두 운영 curriculum과 canonical 목록 밖에 있으며 개발 preview allowlist에서만 접근할 수 있다. 문항 상태는 draft, 사람 수학·교육 검수 0건, 게시 승인 0건이다. M1-06~M1-10 형성평가는 아직 준비되지 않았다.
 
 검증은 lint, typecheck, Vitest 107개, production build 통과다. `npm run test:e2e`는 테스트 서비스가 `127.0.0.1:54329`에 bind할 때 EPERM으로 시작하지 못해 이번 브라우저 흐름은 미검증이다. 세부 결과는 [M1 배치 2 QA](reviews/NEXT_BATCH/M1-batch-02-qa.md)를 본다.
+
+## M1-06~M1-15 · 세 번째 개발 묶음
+
+2026-11-02에는 M1-06~M1-10에 분리된 형성평가 초안 15개(3개씩)를 추가했다. M1-11~M1-15는 제안 ID와 선수 연결을 유지해 공통 화면에 등록했다. 각 신규 단원은 6개 소단원, 15단계 계획, 인터랙티브 수학 실험실, 2개 원형·6개 연습 초안을 제공한다. M1-11~15의 평가는 아직 준비되지 않았으므로 준비 중 상태를 유지한다. M1-01~15 연습 초안은 90개·30개 원형, 평가 초안은 M1-01~10의 30개다.
+
+모든 초안은 기존 개발 preview allowlist에서만 접근한다. 계정별 단원 기록을 쓰지만 M0-01 루트 점수·블록 기록이나 공식 숙달·복습 경계에 합치지 않는다. 공식 교육과정 고시 자료의 별책 8 표시를 확인했으나 이 다섯 단원과 개별 성취기준 코드의 매핑은 확인되지 않아 미기재했다. 자료 출처·확인 상태는 [조사 보고](research/NEXT_BATCH/M1-11-15-research-report.md)에 남겼다.
+
+검증: lint, typecheck, Vitest 107개, content:validate 18개, build 통과. `npm run test:e2e`는 test auth service가 `127.0.0.1:54329`에 bind할 때 EPERM으로 시작하지 못해 브라우저 플로우는 미검증이다. [M1 배치 3 QA](reviews/NEXT_BATCH/M1-batch-03-qa.md)를 참고한다.

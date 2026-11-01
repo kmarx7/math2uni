@@ -1,0 +1,375 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-06",
+    "unitTitle": "단항식의 계산",
+    "concepts": [
+      "계수와 차수",
+      "단항식의 곱셈과 나눗셈"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a106-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "choice",
+        "prompt": "(3x²)(-2x³)을 간단히 한 결과는?",
+        "answer": {
+          "type": "choice",
+          "value": "A"
+        },
+        "rationale": "계수 3×(-2)=-6이고 x의 지수는 2+3=5이므로 -6x⁵다.",
+        "skillLabel": "단항식의 곱셈과 나눗셈",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "-6x⁵",
+          "B": "-6x⁶",
+          "C": "x⁵"
+        }
+      },
+      {
+        "id": "a106-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "12a⁵b² ÷ 3a²b에서 a의 지수는?",
+        "answer": {
+          "type": "integer",
+          "value": "3"
+        },
+        "rationale": "나눗셈에서 같은 밑의 지수를 빼므로 a의 지수는 5-2=3이다.",
+        "skillLabel": "단항식의 곱셈과 나눗셈",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a106-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "-2mn⁴의 차수는?",
+        "answer": {
+          "type": "integer",
+          "value": "5"
+        },
+        "rationale": "단항식의 차수는 문자 지수의 합이므로 m¹n⁴의 차수는 1+4=5다.",
+        "skillLabel": "계수와 차수",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-07",
+    "unitTitle": "다항식의 덧셈과 뺄셈",
+    "concepts": [
+      "동류항",
+      "다항식의 정리"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a107-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "4x-7x에서 x의 계수는?",
+        "answer": {
+          "type": "integer",
+          "value": "-3"
+        },
+        "rationale": "동류항의 계수만 계산하여 4-7=-3이다.",
+        "skillLabel": "동류항",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a107-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "2x+3y-x+5y에서 y의 계수는?",
+        "answer": {
+          "type": "integer",
+          "value": "8"
+        },
+        "rationale": "y항은 3y+5y이므로 y의 계수는 8이다.",
+        "skillLabel": "동류항",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a107-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "(3x²+2x-1)+(x²-4x+5)를 정리했을 때 상수항은?",
+        "answer": {
+          "type": "integer",
+          "value": "4"
+        },
+        "rationale": "상수항은 -1+5=4다.",
+        "skillLabel": "다항식의 정리",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-08",
+    "unitTitle": "분배법칙과 식의 전개",
+    "concepts": [
+      "분배법칙",
+      "단항식과 다항식의 곱"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a108-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "3(x+4)를 전개했을 때 x의 계수는?",
+        "answer": {
+          "type": "integer",
+          "value": "3"
+        },
+        "rationale": "분배하면 3x+12이므로 x의 계수는 3이다.",
+        "skillLabel": "분배법칙",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a108-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "-2a(3a-5)를 전개했을 때 a의 계수는?",
+        "answer": {
+          "type": "integer",
+          "value": "10"
+        },
+        "rationale": "-2a×(-5)=10a이므로 a의 계수는 10이다.",
+        "skillLabel": "단항식과 다항식의 곱",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a108-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "2x(x²-3x+4)-x³을 정리했을 때 x²의 계수는?",
+        "answer": {
+          "type": "integer",
+          "value": "-6"
+        },
+        "rationale": "전개 후 x³항은 2x³-x³=x³, x²항은 -6x²이므로 계수는 -6이다.",
+        "skillLabel": "단항식과 다항식의 곱",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-09",
+    "unitTitle": "등식과 방정식의 의미",
+    "concepts": [
+      "해와 항등식",
+      "등식의 성질"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a109-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "choice",
+        "prompt": "x=4일 때 x+2=6은 참인가?",
+        "answer": {
+          "type": "choice",
+          "value": "A"
+        },
+        "rationale": "x=4를 넣으면 4+2=6이므로 등식은 참이다.",
+        "skillLabel": "해와 항등식",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "참",
+          "B": "거짓"
+        }
+      },
+      {
+        "id": "a109-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "choice",
+        "prompt": "모든 x에서 참인 항등식은?",
+        "answer": {
+          "type": "choice",
+          "value": "B"
+        },
+        "rationale": "2(x+3)을 전개하면 2x+6으로 양변이 모든 x에서 같다.",
+        "skillLabel": "해와 항등식",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "x+3=7",
+          "B": "2(x+3)=2x+6",
+          "C": "2x=6"
+        }
+      },
+      {
+        "id": "a109-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "등식 7=7의 양변에 -3을 더했을 때 오른쪽 값은?",
+        "answer": {
+          "type": "integer",
+          "value": "4"
+        },
+        "rationale": "양변에 -3을 더하면 오른쪽은 7+(-3)=4다.",
+        "skillLabel": "등식의 성질",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-10",
+    "unitTitle": "일차방정식의 풀이",
+    "concepts": [
+      "이항과 계수 정리",
+      "해의 대입 검산"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a110-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "3x+5=20을 만족하는 x는?",
+        "answer": {
+          "type": "integer",
+          "value": "5"
+        },
+        "rationale": "3x+5=20에서 5를 빼고 3으로 나누어 x=5다.",
+        "skillLabel": "이항과 계수 정리",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a110-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "integer",
+        "prompt": "5x-7=2x+8을 만족하는 x는?",
+        "answer": {
+          "type": "integer",
+          "value": "5"
+        },
+        "rationale": "문자항을 모으면 3x=15이므로 x=5다.",
+        "skillLabel": "이항과 계수 정리",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a110-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D2",
+        "inputType": "choice",
+        "prompt": "x=4가 2(x+4)=18의 해인지 판단하라.",
+        "answer": {
+          "type": "choice",
+          "value": "B"
+        },
+        "rationale": "x=4를 넣으면 왼쪽은 2(4+4)=16으로 오른쪽 18과 다르므로 해가 아니다.",
+        "skillLabel": "해의 대입 검산",
+        "verification": {
+          "method": "independent-arithmetic-or-algebra-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "해이다",
+          "B": "해가 아니다"
+        }
+      }
+    ]
+  }
+]

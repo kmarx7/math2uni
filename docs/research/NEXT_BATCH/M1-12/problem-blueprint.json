@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-12",
+  "unitTitle": "일차부등식",
+  "concepts": [
+    "부등식의 성질",
+    "해의 범위"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M112-solve-sign",
+      "status": "draft",
+      "title": "일차부등식 풀기와 부호 판단",
+      "reasoningStructure": "양변 연산을 기록하고 음수 나눗셈에서 방향을 뒤집는다",
+      "items": [
+        {
+          "id": "m112-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "3x-2<10의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "양변에 2를 더해 3x<12, 양변을 양수 3으로 나누면 x<4다.",
+          "skillLabel": "부등식의 성질",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x<4",
+            "B": "x>4",
+            "C": "x<−4"
+          }
+        },
+        {
+          "id": "m112-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "-2x<8의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "양변을 음수 -2로 나누므로 방향이 바뀌어 x>-4다.",
+          "skillLabel": "부등식의 성질",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x<−4",
+            "B": "x<4",
+            "C": "x>−4"
+          }
+        },
+        {
+          "id": "m112-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "5-3x≥-4를 풀면 x는 어떤 범위를 만족하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "5-3x≥-4에서 -3x≥-9이고, -3으로 나눌 때 방향이 바뀌어 x≤3이다.",
+          "skillLabel": "해의 범위",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x≥3",
+            "B": "x≤3",
+            "C": "x≤−3"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "M112-solution-set",
+      "status": "draft",
+      "title": "해의 집합과 경계",
+      "reasoningStructure": "경계 포함 여부 및 정수 해 집합을 구별한다",
+      "items": [
+        {
+          "id": "m112-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2x+1≤7을 만족하는 정수 중 가장 큰 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "2x+1≤7은 x≤3이므로 가장 큰 정수 해는 3이다.",
+          "skillLabel": "해의 범위",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m112-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-1<x≤2를 만족하는 정수는 모두 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "-1보다 크고 2 이하인 정수는 0,1,2의 세 개다.",
+          "skillLabel": "해의 범위",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m112-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x+2>2의 해를 고르면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "양변에서 2를 빼면 x>0이다.",
+          "skillLabel": "부등식의 성질",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x>0",
+            "B": "x<0",
+            "C": "x≥0"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

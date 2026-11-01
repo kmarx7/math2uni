@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-14",
+  "unitTitle": "정비례와 반비례",
+  "concepts": [
+    "비례상수",
+    "표와 그래프 연결"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M114-recognize-proportion",
+      "status": "draft",
+      "title": "비례 관계 판별",
+      "reasoningStructure": "표의 비 또는 곱과 식의 형태를 확인해 정비례·반비례를 구별한다",
+      "items": [
+        {
+          "id": "m114-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=4x이고 x=3일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "y=4x에 x=3을 넣으면 y=4×3=12다.",
+          "skillLabel": "비례상수",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m114-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "y=12/x는 어떤 관계인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "y=12/x 꼴은 xy=12가 일정한 반비례 관계다.",
+          "skillLabel": "표와 그래프 연결",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "정비례",
+            "B": "반비례",
+            "C": "어느 쪽도 아님"
+          }
+        },
+        {
+          "id": "m114-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "정비례 y=kx에서 x=6일 때 y=18이면 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "정비례상수 k=y/x=18/6=3이다.",
+          "skillLabel": "비례상수",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "M114-find-values",
+      "status": "draft",
+      "title": "비례상수와 값 구하기",
+      "reasoningStructure": "한 쌍의 값으로 상수를 찾고 다른 값에 적용한다",
+      "items": [
+        {
+          "id": "m114-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "반비례 y=k/x에서 x=4, y=3일 때 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "반비례상수 k=xy=4×3=12다.",
+          "skillLabel": "비례상수",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m114-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "정비례 y=2x에서 x=7일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "14"
+          },
+          "rationale": "y=2x에 x=7을 넣으면 y=14다.",
+          "skillLabel": "표와 그래프 연결",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m114-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "정비례 y=3x의 그래프에서 x=-2일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "y=3x에 x=-2를 넣으면 y=-6이다.",
+          "skillLabel": "표와 그래프 연결",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

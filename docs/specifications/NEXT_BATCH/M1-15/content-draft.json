@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-15",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "맞꼭지각, 동위각, 엇각, 한 직선 위의 이웃한 각을 구별한다.\n평행선에서 동위각과 엇각이 같고 같은 쪽 내각의 합이 180°임을 설명한다.\n각의 관계를 이용해 주어진 각을 계산하고 근거를 말한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M0-02의 덧셈·뺄셈을 이용해 180°에서 주어진 각의 크기를 뺄 수 있는지 확인한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-15-u1",
+          "title": "각의 기본 관계",
+          "body": "교차하는 두 직선에서 맞꼭지각은 크기가 같고 이웃각은 합이 180°이다.",
+          "activity": "각 카드로 맞은편·이웃한 각을 표시한다.",
+          "check": "두 관계를 그림에서 구별한다."
+        },
+        {
+          "id": "m1-15-u2",
+          "title": "평행선과 횡단선",
+          "body": "두 평행선을 가로지르는 직선이 각의 위치 관계를 만든다.",
+          "activity": "평행한 두 선과 횡단선을 움직여 각 위치를 표시한다.",
+          "check": "동위각과 엇각의 위치를 말한다."
+        },
+        {
+          "id": "m1-15-u3",
+          "title": "동위각",
+          "body": "평행선에서 같은 위치의 동위각은 크기가 같다.",
+          "activity": "두 교점에서 같은 방향의 각을 색/기호로 표시한다.",
+          "check": "동위각을 찾아 크기를 비교한다."
+        },
+        {
+          "id": "m1-15-u4",
+          "title": "엇각",
+          "body": "평행선에서 엇각의 크기는 같다.",
+          "activity": "내부/외부와 횡단선 양쪽을 기준으로 각을 짝짓는다.",
+          "check": "엇각의 쌍과 근거를 설명한다."
+        },
+        {
+          "id": "m1-15-u5",
+          "title": "같은 쪽 내각",
+          "body": "평행선에서 횡단선 같은 쪽 내부의 두 각의 합은 180°이다.",
+          "activity": "직선각 타일로 두 각을 한 직선으로 합친다.",
+          "check": "한 각이 주어졌을 때 다른 각을 계산한다."
+        },
+        {
+          "id": "m1-15-u6",
+          "title": "복합 각 계산과 근거",
+          "body": "맞꼭지각·동위각·엇각·보각 관계를 이어 필요한 각을 구한다.",
+          "activity": "한 단계씩 표시하고 사용한 관계 이름을 기록한다.",
+          "check": "계산값과 사용한 각 관계를 함께 쓴다."
+        }
+      ],
+      "body": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "평행선과 횡단선: 기준각을 조절해 동위각·엇각·같은 쪽 내각의 크기 관계를 시각적으로 확인한다.",
+      "interaction": "parallel-angles",
+      "settings": {
+        "initialA": 60,
+        "initialB": 12
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "교차하는 두 직선에서 맞꼭지각은 크기가 같고 이웃각은 합이 180°이다.",
+        "각 카드로 맞은편·이웃한 각을 표시한다.",
+        "두 관계를 그림에서 구별한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "동위각과 엇각의 위치를 혼동한다. · 같은 쪽 내각도 같다고 생각한다. · 맞꼭지각과 이웃각 관계를 혼동한다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

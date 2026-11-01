@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-13",
+  "unitTitle": "좌표평면과 순서쌍",
+  "concepts": [
+    "두 축과 사분면",
+    "점의 좌표 해석"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M113-read-coordinates",
+      "status": "draft",
+      "title": "좌표와 위치 읽기",
+      "reasoningStructure": "순서쌍의 두 성분과 부호를 축 및 사분면에 연결한다",
+      "items": [
+        {
+          "id": "m113-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "점 (-3,4)는 어느 사분면에 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x=-3<0이고 y=4>0이므로 제2사분면이다.",
+          "skillLabel": "두 축과 사분면",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "제1사분면",
+            "B": "제2사분면",
+            "C": "제3사분면"
+          }
+        },
+        {
+          "id": "m113-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "점 (5,-2)의 x좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "순서쌍 (5,-2)의 첫째 성분이 x좌표이므로 5다.",
+          "skillLabel": "점의 좌표 해석",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m113-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "점 (0,-4)는 어디에 놓이는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x좌표가 0인 점은 y축 위에 놓인다.",
+          "skillLabel": "두 축과 사분면",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x축",
+            "B": "y축",
+            "C": "제4사분면"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "M113-coordinate-transform",
+      "status": "draft",
+      "title": "좌표 변화 해석",
+      "reasoningStructure": "좌표 성분의 부호와 축 대칭 위치를 읽는다",
+      "items": [
+        {
+          "id": "m113-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x<0이고 y<0인 점은 어느 사분면인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x와 y가 모두 음수인 점은 제3사분면에 있다.",
+          "skillLabel": "두 축과 사분면",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "제2사분면",
+            "B": "제3사분면",
+            "C": "제4사분면"
+          }
+        },
+        {
+          "id": "m113-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "점 (2,3)을 x축에 대하여 대칭 이동하면 새 점의 y좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "-3"
+          },
+          "rationale": "x축 대칭은 x좌표를 유지하고 y좌표의 부호를 바꾸므로 새 y좌표는 -3이다.",
+          "skillLabel": "점의 좌표 해석",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m113-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "좌표평면의 원점의 좌표는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "원점은 두 축의 교점이며 좌표는 (0,0)이다.",
+          "skillLabel": "점의 좌표 해석",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(0,0)",
+            "B": "(0,1)",
+            "C": "(1,0)"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

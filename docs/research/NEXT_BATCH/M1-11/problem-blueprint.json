@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-11",
+  "unitTitle": "일차방정식의 활용",
+  "concepts": [
+    "미지수 설정",
+    "양의 관계식 구성"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M111-translate",
+      "status": "draft",
+      "title": "문장과 식의 대응",
+      "reasoningStructure": "상황 속 양과 연산을 정하고 같은 의미의 식을 고른다",
+      "items": [
+        {
+          "id": "m111-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "연필 한 자루의 가격이 x원일 때 연필 3자루의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "세 자루는 x원을 3번 더한 값이므로 3x원이다.",
+          "skillLabel": "미지수 설정",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "3x",
+            "B": "x+3",
+            "C": "x/3"
+          }
+        },
+        {
+          "id": "m111-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "현재 나이가 x살일 때 4년 후 나이를 나타내는 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "4년 후의 나이는 현재 나이 x에 4를 더한 x+4살이다.",
+          "skillLabel": "미지수 설정",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "4x",
+            "B": "x+4",
+            "C": "x-4"
+          }
+        },
+        {
+          "id": "m111-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "사탕 2개씩 든 봉지 3개의 사탕은 모두 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "봉지 3개마다 사탕 2개이므로 2×3=6개다.",
+          "skillLabel": "양의 관계식 구성",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "M111-solve-context",
+      "status": "draft",
+      "title": "상황 방정식의 풀이와 검산",
+      "reasoningStructure": "문장의 조건을 등식으로 세우고 해와 단위를 원문에 대입한다",
+      "items": [
+        {
+          "id": "m111-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "한 개 500원인 물건 3개와 배송비 200원의 총액은 몇 원인가?",
+          "answer": {
+            "type": "integer",
+            "value": "1700"
+          },
+          "rationale": "물건값 500×3=1500원에 배송비 200원을 더해 1700원이다.",
+          "skillLabel": "양의 관계식 구성",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m111-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "어떤 수의 3배에 4를 더했더니 25이다. 어떤 수인가?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "3x+4=25에서 4를 빼면 3x=21이므로 x=7이다.",
+          "skillLabel": "양의 관계식 구성",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m111-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "입장권 한 장의 가격을 x원이라 하자. 2장과 수수료 300원의 합이 2300원일 때 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "1000"
+          },
+          "rationale": "2x+300=2300에서 300을 빼고 2로 나누면 x=1000원이다.",
+          "skillLabel": "미지수 설정",
+          "misconceptionHypothesis": "기호·부호·단위 또는 관계 조건을 혼동할 수 있다.",
+          "verification": {
+            "method": "independent-arithmetic-or-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

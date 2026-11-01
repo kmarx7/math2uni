@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-07",
+  "unitTitle": "다항식의 덧셈과 뺄셈",
+  "concepts": [
+    "동류항",
+    "다항식의 정리"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a107-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "4x-7x에서 x의 계수는?",
+      "answer": {
+        "type": "integer",
+        "value": "-3"
+      },
+      "rationale": "동류항의 계수만 계산하여 4-7=-3이다.",
+      "skillLabel": "동류항",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a107-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "2x+3y-x+5y에서 y의 계수는?",
+      "answer": {
+        "type": "integer",
+        "value": "8"
+      },
+      "rationale": "y항은 3y+5y이므로 y의 계수는 8이다.",
+      "skillLabel": "동류항",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a107-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "(3x²+2x-1)+(x²-4x+5)를 정리했을 때 상수항은?",
+      "answer": {
+        "type": "integer",
+        "value": "4"
+      },
+      "rationale": "상수항은 -1+5=4다.",
+      "skillLabel": "다항식의 정리",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "unitId": "M1-13",
+  "contentVersion": "0.1.0-draft",
+  "status": "draft",
+  "automatedChecks": {
+    "contentSchema": "pass",
+    "phaseCount15": "pass",
+    "subunitCount6": "pass",
+    "problemCount6": "pass",
+    "distinctFamilyCount2": "pass",
+    "answerRules": "pass",
+    "serverDeliveryGate": "pass"
+  },
+  "humanMathReview": "pending",
+  "humanPedagogyReview": "pending",
+  "officialStandards": "unverified",
+  "publicationApproved": false,
+  "issues": [
+    "형성평가 미구현",
+    "사람 독립 수학·교육 검수 미완료",
+    "공식 성취기준 연결 없음"
+  ]
+}

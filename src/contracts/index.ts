@@ -72,6 +72,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "distributive-area",
       "equation-balance",
       "linear-equation",
+      "linear-word-problem",
+      "inequality",
+      "coordinate-plane",
+      "proportion",
+      "parallel-angles",
     ]),
     settings: z
       .object({

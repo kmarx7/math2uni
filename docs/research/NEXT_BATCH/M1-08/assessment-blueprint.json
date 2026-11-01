@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-08",
+  "unitTitle": "분배법칙과 식의 전개",
+  "concepts": [
+    "분배법칙",
+    "단항식과 다항식의 곱"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a108-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "3(x+4)를 전개했을 때 x의 계수는?",
+      "answer": {
+        "type": "integer",
+        "value": "3"
+      },
+      "rationale": "분배하면 3x+12이므로 x의 계수는 3이다.",
+      "skillLabel": "분배법칙",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a108-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "-2a(3a-5)를 전개했을 때 a의 계수는?",
+      "answer": {
+        "type": "integer",
+        "value": "10"
+      },
+      "rationale": "-2a×(-5)=10a이므로 a의 계수는 10이다.",
+      "skillLabel": "단항식과 다항식의 곱",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a108-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D2",
+      "inputType": "integer",
+      "prompt": "2x(x²-3x+4)-x³을 정리했을 때 x²의 계수는?",
+      "answer": {
+        "type": "integer",
+        "value": "-6"
+      },
+      "rationale": "전개 후 x³항은 2x³-x³=x³, x²항은 -6x²이므로 계수는 -6이다.",
+      "skillLabel": "단항식과 다항식의 곱",
+      "verification": {
+        "method": "independent-arithmetic-or-algebra-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

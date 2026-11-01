@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-13",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "좌표평면의 가로축·세로축과 원점을 설명한다.\n순서쌍의 첫째 수와 둘째 수가 점의 위치를 어떻게 정하는지 읽고 쓴다.\n사분면의 부호를 이용해 점의 위치와 좌표 변화를 해석한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-01의 부호와 절댓값 개념을 떠올려 설명한다.\nM1-01의 정수의 대소 비교 개념을 떠올려 설명한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-13-u1",
+          "title": "좌표축과 원점",
+          "body": "두 수직선이 만나는 점이 원점이며 가로축과 세로축을 구별한다.",
+          "activity": "축을 겹쳐 원점과 방향 표지를 놓는다.",
+          "check": "점의 위치를 가로 이동과 세로 이동으로 설명한다."
+        },
+        {
+          "id": "m1-13-u2",
+          "title": "순서쌍 읽기",
+          "body": "(x,y)에서 첫째 수는 가로, 둘째 수는 세로 위치를 정한다.",
+          "activity": "가로 이동 후 세로 이동해 점을 놓는다.",
+          "check": "순서쌍의 순서를 바꾸었을 때 점이 달라짐을 확인한다."
+        },
+        {
+          "id": "m1-13-u3",
+          "title": "점의 좌표 쓰기",
+          "body": "좌표평면의 점을 원점 기준 이동으로 읽어 순서쌍으로 나타낸다.",
+          "activity": "격자점에서 원점까지 수평·수직 이동을 센다.",
+          "check": "표시된 점의 좌표를 정확히 쓴다."
+        },
+        {
+          "id": "m1-13-u4",
+          "title": "사분면의 부호",
+          "body": "사분면마다 x,y 좌표의 부호 조합이 다르다.",
+          "activity": "각 사분면에 부호 카드를 놓는다.",
+          "check": "주어진 좌표가 속한 사분면을 판단한다."
+        },
+        {
+          "id": "m1-13-u5",
+          "title": "축 위의 점과 원점",
+          "body": "축 위 점은 해당 축에 수직인 좌표가 0이다.",
+          "activity": "x=0, y=0 점을 축에 놓는다.",
+          "check": "축 위 점을 사분면에 포함하지 않는다."
+        },
+        {
+          "id": "m1-13-u6",
+          "title": "좌표 변화와 대칭 기초",
+          "body": "한 좌표만 부호가 바뀌는 이동이 어느 축 방향인지 설명한다.",
+          "activity": "한 좌표를 고정하고 다른 좌표 부호를 바꿔 점을 옮긴다.",
+          "check": "이동 전후 바뀐 좌표를 구별한다."
+        }
+      ],
+      "body": "구체적 상황·그림 관찰 → 용어와 관계 확인 → 기호화 → 원리 설명 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "좌표평면 점 이동: 키보드 슬라이더로 x,y 좌표를 바꾸며 원점·축·사분면과 점의 위치를 확인한다.",
+      "interaction": "coordinate-plane",
+      "settings": {
+        "initialA": -3,
+        "initialB": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "두 수직선이 만나는 점이 원점이며 가로축과 세로축을 구별한다.",
+        "축을 겹쳐 원점과 방향 표지를 놓는다.",
+        "점의 위치를 가로 이동과 세로 이동으로 설명한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "순서쌍에서 x,y 순서를 바꾼다. · 축 위의 점을 사분면에 포함한다. · 점의 좌표 부호와 사분면을 혼동한다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}
