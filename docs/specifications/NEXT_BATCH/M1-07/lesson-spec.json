@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-07",
+  "levelId": 1,
+  "title": "다항식의 덧셈과 뺄셈",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "동류항",
+      "다항식의 정리"
+    ],
+    "prerequisiteUnits": [
+      "M1-06"
+    ],
+    "visualization": "대수 타일"
+  },
+  "objectives": [
+    "다항식의 항·계수·차수·상수항을 구별하고 정리 순서를 적용한다.",
+    "동류항을 식의 값 보존에 근거해 모아 다항식의 합과 차를 계산한다.",
+    "괄호 앞의 뺄셈이 모든 항의 부호에 미치는 영향을 설명한다.",
+    "서로 다른 표현을 같은 다항식으로 변환하고 오류를 교정한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-07-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-06에서 단항식의 구성과 동류항을 판별한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-07-skill-1",
+    "m1-07-skill-2",
+    "m1-07-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산",
+    "principleDerivation": "다항식은 여러 단항식의 합이다. 같은 문자와 지수의 항은 같은 종류의 양을 세는 것이므로 계수만 더하거나 뺄 수 있다. 괄호를 빼는 것은 괄호 안의 전체 합을 빼는 것이므로 각 항의 반대수를 더하는 것과 같다.",
+    "accessibility": "색은 보조 정보로만 사용하며 기호·텍스트 설명을 병기한다. 조작은 키보드로 가능하고 변경 결과와 상태를 보조기술에 읽히는 텍스트로 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-07-u1",
+      "title": "항과 다항식의 구조",
+      "targetSkills": [
+        "m1-07-skill-1"
+      ],
+      "explanation": "덧셈·뺄셈 기호를 기준으로 항을 나누고 차수를 읽는다.",
+      "activity": "항 카드에 계수·문자·차수 라벨을 붙인다.",
+      "check": "상수항과 최고차항을 찾는다."
+    },
+    {
+      "id": "m1-07-u2",
+      "title": "동류항과 대수 타일",
+      "targetSkills": [
+        "m1-07-skill-1"
+      ],
+      "explanation": "같은 문자·지수의 항끼리만 합칠 수 있다.",
+      "activity": "양·음 대수 타일로 같은 항을 묶는다.",
+      "check": "항을 합칠 수 있는 이유를 설명한다."
+    },
+    {
+      "id": "m1-07-u3",
+      "title": "다항식의 정리",
+      "targetSkills": [
+        "m1-07-skill-2"
+      ],
+      "explanation": "내림차순 등 약속된 순서로 항을 재배열한다.",
+      "activity": "항 카드를 차수 순서 트랙에 놓는다.",
+      "check": "누락된 차수 항을 0계수로 해석할 수 있다."
+    },
+    {
+      "id": "m1-07-u4",
+      "title": "다항식의 덧셈",
+      "targetSkills": [
+        "m1-07-skill-2"
+      ],
+      "explanation": "각 다항식의 동류항 계수를 합한다.",
+      "activity": "두 다항식 타일을 같은 종류별로 합친다.",
+      "check": "정리 후 같은 항을 빠짐없이 결합한다."
+    },
+    {
+      "id": "m1-07-u5",
+      "title": "다항식의 뺄셈",
+      "targetSkills": [
+        "m1-07-skill-3"
+      ],
+      "explanation": "빼는 다항식 각 항의 반대수를 더한다.",
+      "activity": "두 번째 다항식의 타일을 반대색으로 바꾼다.",
+      "check": "괄호 제거 후 부호를 점검한다."
+    },
+    {
+      "id": "m1-07-u6",
+      "title": "여러 항의 계산·오류 분석",
+      "targetSkills": [
+        "m1-07-skill-3"
+      ],
+      "explanation": "괄호와 정리 순서를 활용해 동류항만 결합한다.",
+      "activity": "서로 다른 두 풀이를 항별 대응표로 비교한다.",
+      "check": "동류가 아닌 항을 합친 오류를 고친다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-07-interactive",
+      "status": "specified",
+      "description": "대수 타일: x², x, 1의 양·음 타일을 놓고 동류항끼리만 묶어 합·차 결과를 산출한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 항·계수·차수 확인",
+      "D2: 동류항 정리",
+      "D3: 두 다항식의 합·차",
+      "D4: 세 식의 복합 계산과 오개념 분석",
+      "D5: 특정 계수 조건으로 다항식 역추론"
+    ]
+  },
+  "assessmentPlan": [
+    "다항식 용어 및 항 분류",
+    "동류항 판단·정리",
+    "합과 차 계산",
+    "부호 오류 풀이 진단"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "각 핵심 기능은 계산 응답 외에도 설명·표현 변환·오류 분석 중 적합한 독립 증거를 수집한다. 평가 전 정답·해설을 전달하지 않는다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "문자 부분이 달라도 항을 합친다.",
+    "뺄셈 괄호에서 첫 항만 부호를 바꾼다.",
+    "다항식 차수를 모든 항 차수의 합으로 본다.",
+    "항의 순서를 바꾸면 값이 변한다고 생각한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

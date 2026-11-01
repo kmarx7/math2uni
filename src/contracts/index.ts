@@ -67,6 +67,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "signed-multiplication",
       "powers",
       "expression-value",
+      "monomial-product",
+      "like-terms",
+      "distributive-area",
+      "equation-balance",
+      "linear-equation",
     ]),
     settings: z
       .object({
@@ -175,7 +180,7 @@ export const problemSchema = z.object({
   reviewHistory: z.array(reviewSchema),
   purpose: z.enum(["practice", "assessment"]),
 });
-export const problemCollectionSchema = z.enum(["core", "extended"]);
+export const problemCollectionSchema = z.enum(["core", "extended", "proposal-preview"]);
 export type ProblemCollection = z.infer<typeof problemCollectionSchema>;
 export type ProblemInstance = z.infer<typeof problemSchema>;
 export type ProblemFamily = { id: string; title: string; strategy: string };

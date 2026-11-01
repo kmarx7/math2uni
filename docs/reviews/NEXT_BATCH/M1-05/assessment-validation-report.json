@@ -1,0 +1,18 @@
+{
+  "unitId": "M1-05",
+  "contentVersion": "0.1.0-draft",
+  "collection": "proposal-preview",
+  "status": "draft",
+  "automatedChecks": {
+    "assessmentProblemCount3": "pass",
+    "purposeAssessment": "pass",
+    "fullSubmitOnly": "pass",
+    "publicDTOAnswerFree": "pass",
+    "answerRules": "pass",
+    "productionPreviewGate": "pass"
+  },
+  "humanMathReview": "pending",
+  "humanPedagogyReview": "pending",
+  "publicationApproved": false,
+  "humanApprovalCount": 0
+}

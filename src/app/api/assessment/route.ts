@@ -12,6 +12,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { SupabaseProgressRepository } from "@/modules/progress/server";
 import { transactProgress } from "@/modules/progress/account-repository";
 import { applySubmission } from "@/modules/progress/mutations";
+import { isDraftPreviewUnitId } from "@/data/proposal-preview-manifest";
 import { badRequest, noStore, readJson } from "../http";
 export async function GET(request?: Request) {
   const unitId = request
@@ -26,9 +27,14 @@ export async function GET(request?: Request) {
   );
   if (!parsedCollection.success) return badRequest(parsedCollection.error);
   const collection = parsedCollection.data;
+  if (collection === "proposal-preview" && (!isPreview() || !isDraftPreviewUnitId(unitId)))
+    return Response.json({ error: "검토용 평가를 찾을 수 없습니다." }, { status: 404, headers: noStore });
+  const problems = publicProblems("assessment", unitId, collection);
+  if (collection === "proposal-preview" && !problems.length)
+    return Response.json({ error: "이 단원의 검토용 평가는 아직 준비되지 않았습니다." }, { status: 404, headers: noStore });
   return Response.json(
     {
-      problems: publicProblems("assessment", unitId, collection),
+      problems,
       families: publicFamilies("assessment", unitId, collection),
       preview: isPreview(),
     },
@@ -59,10 +65,12 @@ export async function POST(request: Request) {
       })
       .strict()
       .parse(await readJson(request));
-    result = scoreAssessment(
-      privateProblems("assessment", input.unitId, input.collection),
-      input.answers,
-    );
+    if (input.collection === "proposal-preview" && (!isPreview() || !isDraftPreviewUnitId(input.unitId)))
+      return Response.json({ error: "검토용 평가를 찾을 수 없습니다." }, { status: 404, headers: noStore });
+    const problems = privateProblems("assessment", input.unitId, input.collection);
+    if (input.collection === "proposal-preview" && !problems.length)
+      return Response.json({ error: "이 단원의 검토용 평가는 아직 준비되지 않았습니다." }, { status: 404, headers: noStore });
+    result = scoreAssessment(problems, input.answers);
   } catch (error) {
     return badRequest(error);
   }

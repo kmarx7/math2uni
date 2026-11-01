@@ -18,7 +18,8 @@ import {
 } from "@/contracts";
 import { canPublish } from "@/modules/administration";
 import { toPublic } from "./core";
-import { proposalProblems, proposalProblemFamilies } from "@/data/proposal-problems";
+import { proposalProblems, proposalProblemFamilies, proposalAssessmentProblems } from "@/data/proposal-problems";
+import { isDraftPreviewUnitId } from "@/data/proposal-preview-manifest";
 const approvals = z
   .array(reviewSchema.extend({ entityId: z.string().min(1) }))
   .parse(approvalData);
@@ -27,7 +28,6 @@ const expansionIssues = validateM001Expansion();
 const candidates = [
   ...fixedProblems,
   ...foundationProblems,
-  ...proposalProblems,
   generatePlace(4821, 100),
   generatePlace(5703, 1000),
 ];
@@ -54,15 +54,22 @@ export function privateProblems(
 ) {
   if (collection === "extended" && expansionIssues.length)
     throw new Error("확장 문항의 수학·스키마 검증에 실패했습니다.");
-  const selected =
-    collection === "extended" ? m001ExpansionProblems : candidates;
+  if (collection === "proposal-preview" && (!isPreview() || !isDraftPreviewUnitId(unitId)))
+    return [];
+  const selected = collection === "extended"
+    ? m001ExpansionProblems
+    : collection === "proposal-preview"
+      ? [...proposalProblems, ...proposalAssessmentProblems]
+      : candidates;
   return selected
     .map(reviewed)
     .filter(
       (p) =>
         p.purpose === purpose &&
         p.unitId === unitId &&
-        (canPublish(p) || isPreview()),
+        (collection === "proposal-preview"
+          ? p.status === "draft" && isPreview()
+          : canPublish(p) || isPreview()),
     );
 }
 export function publicProblems(

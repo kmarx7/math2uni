@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-06",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "단항식의 계수·문자 부분·차수를 식에서 구별한다.\n단항식끼리 곱할 때 계수와 같은 문자 밑의 지수를 각각 계산한다.\n단항식의 나눗셈에서 약분 가능 조건과 결과의 범위를 확인한다.\n동류 단항식을 식의 구조에 따라 판별하고 계산 오류를 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-04에서 자연수 지수의 뜻과 기본 지수법칙을 설명한다.\nM1-05에서 문자·계수·대입을 구분한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-06-u1",
+          "title": "단항식의 구성과 계수",
+          "body": "수 부분과 문자 부분을 분리해 읽는다.",
+          "activity": "색·무늬가 있는 인수 카드를 수 부분/문자 부분 칸에 분류한다.",
+          "check": "계수와 문자 부분을 올바르게 표시한다."
+        },
+        {
+          "id": "m1-06-u2",
+          "title": "차수와 차수 비교",
+          "body": "단항식의 차수는 문자 지수의 합이며 계수는 포함하지 않는다.",
+          "activity": "문자 인수 묶음 수를 세어 차수표에 기록한다.",
+          "check": "계수와 차수를 혼동하지 않는다."
+        },
+        {
+          "id": "m1-06-u3",
+          "title": "동류 단항식 판별",
+          "body": "문자와 각 지수가 모두 같은 항만 동류항이다.",
+          "activity": "문자 타일을 같은 모양끼리 묶는다.",
+          "check": "계수만 달라진 항과 지수가 달라진 항을 구분한다."
+        },
+        {
+          "id": "m1-06-u4",
+          "title": "단항식의 곱셈",
+          "body": "계수는 곱하고 같은 문자의 지수는 인수 개수를 합쳐 계산한다.",
+          "activity": "인수 묶음을 펼친 뒤 다시 지수 표기로 접는다.",
+          "check": "법칙을 전개식으로 설명하고 계산한다."
+        },
+        {
+          "id": "m1-06-u5",
+          "title": "단항식의 나눗셈",
+          "body": "계수와 같은 문자 인수의 약분으로 몫을 구한다.",
+          "activity": "공통 인수에 취소선을 표시해 약분한다.",
+          "check": "0으로 나누지 않는 조건과 약분 결과를 확인한다."
+        },
+        {
+          "id": "m1-06-u6",
+          "title": "복합 계산과 검토",
+          "body": "곱셈·나눗셈의 우선 순서와 부호, 지수를 함께 점검한다.",
+          "activity": "잘못된 약분 풀이에서 첫 오류를 찾는다.",
+          "check": "계수·문자·차수 관점으로 풀이를 검산한다."
+        }
+      ],
+      "body": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "인수 색상 묶음: 계수와 문자 인수를 따로 조작하고 곱셈 전개/압축, 공통인수 약분 결과를 텍스트로 표시한다.",
+      "interaction": "monomial-product",
+      "settings": {
+        "initialA": 2,
+        "initialB": 2,
+        "initialC": 3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "수 부분과 문자 부분을 분리해 읽는다.",
+        "색·무늬가 있는 인수 카드를 수 부분/문자 부분 칸에 분류한다.",
+        "계수와 문자 부분을 올바르게 표시한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "계수를 차수에 포함한다. · 문자 부분이 같기만 하면 동류항이라고 생각한다. · 지수법칙을 다른 문자 밑에도 적용한다. · 분자나 분모의 일부 항만 임의로 약분한다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

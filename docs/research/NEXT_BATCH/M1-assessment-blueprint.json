@@ -1,0 +1,372 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-01",
+    "unitTitle": "정수와 절댓값",
+    "concepts": [
+      "부호와 절댓값",
+      "정수의 대소 비교"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a101-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "choice",
+        "prompt": "-4, 1, -7을 작은 수부터 배열한 것은?",
+        "answer": {
+          "type": "choice",
+          "value": "B"
+        },
+        "rationale": "수직선에서 -7<-4<1이다.",
+        "skillLabel": "정수의 대소 비교",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "-4, -7, 1",
+          "B": "-7, -4, 1",
+          "C": "1, -4, -7"
+        }
+      },
+      {
+        "id": "a101-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "-8과 5 사이의 거리를 정수로 입력하라.",
+        "answer": {
+          "type": "integer",
+          "value": "13"
+        },
+        "rationale": "|5-(-8)|=13이다.",
+        "skillLabel": "절댓값",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a101-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "|-9|의 값은?",
+        "answer": {
+          "type": "integer",
+          "value": "9"
+        },
+        "rationale": "절댓값은 원점까지의 거리이므로 9이다.",
+        "skillLabel": "부호와 절댓값",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-02",
+    "unitTitle": "정수의 곱셈과 나눗셈",
+    "concepts": [
+      "부호 결정",
+      "역연산 검산"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a102-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "(-7)×(-3)의 값은?",
+        "answer": {
+          "type": "integer",
+          "value": "21"
+        },
+        "rationale": "같은 부호의 곱은 양수이고 7×3=21이다.",
+        "skillLabel": "부호 결정",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a102-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "(-42)÷6의 값은?",
+        "answer": {
+          "type": "integer",
+          "value": "-7"
+        },
+        "rationale": "부호가 다르므로 음수이며 42÷6=7이다.",
+        "skillLabel": "정수의 나눗셈",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a102-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "x×4=-28을 만족하는 x는?",
+        "answer": {
+          "type": "integer",
+          "value": "-7"
+        },
+        "rationale": "역연산으로 x=-28÷4=-7이고 대입 시 -28이다.",
+        "skillLabel": "역연산 검산",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-03",
+    "unitTitle": "유리수의 사칙연산",
+    "concepts": [
+      "유리수의 표현",
+      "부호 있는 분수 계산"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a103-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "fraction",
+        "prompt": "2/3+1/4를 기약분수로 입력하라.",
+        "answer": {
+          "type": "fraction",
+          "value": "11/12"
+        },
+        "rationale": "공통분모 12에서 8/12+3/12=11/12이다.",
+        "skillLabel": "유리수의 표현",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a103-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "fraction",
+        "prompt": "5/6-3/4를 기약분수로 입력하라.",
+        "answer": {
+          "type": "fraction",
+          "value": "1/12"
+        },
+        "rationale": "공통분모 12에서 10/12-9/12=1/12이다.",
+        "skillLabel": "부호 있는 분수 계산",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a103-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "fraction",
+        "prompt": "(-4/9)÷(2/3)을 기약분수로 입력하라.",
+        "answer": {
+          "type": "fraction",
+          "value": "-2/3"
+        },
+        "rationale": "(-4/9)×(3/2)=-12/18=-2/3이다.",
+        "skillLabel": "부호 있는 분수 계산",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-04",
+    "unitTitle": "거듭제곱과 지수법칙 기초",
+    "concepts": [
+      "거듭제곱의 뜻",
+      "자연수 지수의 연산"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a104-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "4^3의 값을 정수로 입력하라.",
+        "answer": {
+          "type": "integer",
+          "value": "64"
+        },
+        "rationale": "4×4×4=64이다.",
+        "skillLabel": "거듭제곱의 뜻",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a104-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "2^3×2^4를 계산한 값을 정수로 입력하라.",
+        "answer": {
+          "type": "integer",
+          "value": "128"
+        },
+        "rationale": "같은 밑의 지수를 합쳐 2^7=128이다.",
+        "skillLabel": "자연수 지수의 연산",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a104-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "choice",
+        "prompt": "(-3)^2의 값은?",
+        "answer": {
+          "type": "choice",
+          "value": "C"
+        },
+        "rationale": "괄호 안의 -3을 두 번 곱해 9이다.",
+        "skillLabel": "거듭제곱과 부호",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "-9",
+          "B": "-6",
+          "C": "9"
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-05",
+    "unitTitle": "문자와 식의 값",
+    "concepts": [
+      "문자로 양 나타내기",
+      "대입과 식의 값"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "publicationApproved": false,
+    "items": [
+      {
+        "id": "a105-01",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "choice",
+        "prompt": "한 자루 900원인 볼펜 x자루와 500원짜리 지우개 한 개의 총액(원)을 나타내는 식은?",
+        "answer": {
+          "type": "choice",
+          "value": "A"
+        },
+        "rationale": "볼펜 값 900x에 지우개 값 500을 더해 900x+500이다.",
+        "skillLabel": "문자로 양 나타내기",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        },
+        "choices": {
+          "A": "900x+500",
+          "B": "900+x+500",
+          "C": "500x+900"
+        }
+      },
+      {
+        "id": "a105-02",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "integer",
+        "prompt": "a=5일 때 3a-4의 값은?",
+        "answer": {
+          "type": "integer",
+          "value": "11"
+        },
+        "rationale": "3×5-4=15-4=11이다.",
+        "skillLabel": "대입과 식의 값",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      },
+      {
+        "id": "a105-03",
+        "status": "draft",
+        "purpose": "assessment-draft",
+        "difficulty": "D1",
+        "inputType": "fraction",
+        "prompt": "x=1/2일 때 2x+3의 값을 기약분수로 입력하라.",
+        "answer": {
+          "type": "fraction",
+          "value": "4"
+        },
+        "rationale": "2×1/2+3=1+3=4이다.",
+        "skillLabel": "대입과 식의 값",
+        "verification": {
+          "method": "independent-arithmetic-or-definition-check",
+          "result": "author-self-check-only",
+          "humanVerified": false
+        }
+      }
+    ]
+  }
+]

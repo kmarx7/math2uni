@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-08",
+  "unitTitle": "분배법칙과 식의 전개",
+  "concepts": [
+    "분배법칙",
+    "단항식과 다항식의 곱"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M108-distributive-structure",
+      "status": "draft",
+      "title": "분배법칙 적용",
+      "reasoningStructure": "괄호 밖 항을 괄호 안의 각 항에 곱한다",
+      "items": [
+        {
+          "id": "m108-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "3(x+4)를 전개했을 때 상수항은?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "3을 x와 4 각각에 곱해 3x+12가 된다.",
+          "misconceptionHypothesis": "3을 첫 항에만 곱함",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m108-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-2(3a-5)를 전개했을 때 a의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "-2×3a=-6a, -2×(-5)=10이므로 계수는 -6이다.",
+          "misconceptionHypothesis": "음수 곱의 부호를 놓침",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m108-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "4(2x+1)-3x에서 x의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "전개하면 8x+4-3x=5x+4이다.",
+          "misconceptionHypothesis": "분배 후 동류항 정리 누락",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M108-monomial-polynomial-product",
+      "status": "draft",
+      "title": "단항식과 다항식의 곱",
+      "reasoningStructure": "각 항의 곱을 만든 뒤 필요한 동류항을 정리한다",
+      "items": [
+        {
+          "id": "m108-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2x(x²-3x+4)를 전개했을 때 x²의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "항별 곱은 2x³-6x²+8x이다.",
+          "misconceptionHypothesis": "x의 지수를 곱하지 않고 그대로 둠",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m108-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-3a²(2a-1)을 전개했을 때 a³의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "-3a²×2a=-6a³이다.",
+          "misconceptionHypothesis": "계수의 음수 부호를 무시",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m108-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "5y(2y+3)-4y²를 간단히 했을 때 y²의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "전개하면 10y²+15y-4y²=6y²+15y이다.",
+          "misconceptionHypothesis": "괄호 밖 곱과 뒤의 동류항 뺄셈 중 하나를 누락",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

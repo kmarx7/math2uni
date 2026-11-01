@@ -302,6 +302,90 @@ export function MathLab({ block }: { block: Interactive }) {
       </div>
     );
   }
+  if (block.interaction === "monomial-product") {
+    const coefficient = a * c;
+    const exponent = b + 1;
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>계수끼리 곱하고 같은 문자 인수를 모아요</span>
+          <strong>({a}x<sup>{b}</sup>)({c}x) = {coefficient}x<sup>{exponent}</sup></strong>
+          <p>{a}×{c}={coefficient}, 지수는 {b}+1={exponent}입니다.</p>
+        </div>
+        <Control label="첫째 계수" value={a} min={-6} max={6} change={setA} />
+        <Control label="첫째 x의 지수" value={b} min={1} max={5} change={setB} />
+        <Control label="둘째 계수" value={c} min={-6} max={6} change={setC} />
+        <p className="helper">곱셈을 인수의 반복으로 펼쳐 보면 같은 문자의 지수는 인수 개수를 합한 값입니다.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "like-terms") {
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>문자와 지수가 같은 항만 모아요</span>
+          <strong>{a}x + ({b}x) = {a + b}x</strong>
+          <p>같은 x 타일 {a}개와 {b}개를 모으면 모두 {a + b}개입니다.</p>
+        </div>
+        <Control label="첫째 항의 계수" value={a} min={-10} max={10} change={setA} />
+        <Control label="둘째 항의 계수" value={b} min={-10} max={10} change={setB} />
+        <p className="helper">계수만 계산하고 문자와 지수는 그대로 둡니다. x와 x²처럼 문자가 달라도 지수가 다른 항은 합칠 수 없어요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "distributive-area") {
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>큰 직사각형을 두 부분으로 나누어 넓이를 더해요</span>
+          <strong>{a}({b}+{c}) = {a}×{b} + {a}×{c} = {a * b + a * c}</strong>
+          <p>왼쪽 조각의 넓이 {a * b}와 오른쪽 조각의 넓이 {a * c}를 더하면 전체 넓이 {a * (b + c)}입니다.</p>
+        </div>
+        <div className="lab-controls">
+          <Control label="공통 높이" value={a} min={1} max={10} change={setA} />
+          <Control label="첫째 너비" value={b} min={1} max={10} change={setB} />
+          <Control label="둘째 너비" value={c} min={1} max={10} change={setC} />
+        </div>
+        <div role="img" aria-label={`높이 ${a}, 너비 ${b}와 ${c}인 두 직사각형의 넓이를 합합니다.`} className="ratio-track">
+          <span style={{ width: `${(b / (b + c)) * 100}%` }} />
+        </div>
+        <p className="helper">분배법칙은 괄호 안의 각 항에 괄호 밖의 수를 곱하는 넓이의 합으로 확인할 수 있어요.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "equation-balance") {
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>저울의 균형을 유지하며 양변에 같은 수를 더해요</span>
+          <strong>x + ({a}) = {b} → x = {b} - ({a}) = {b - a}</strong>
+          <p>양변에 {-a}를 더했으므로 등식의 균형은 유지됩니다.</p>
+        </div>
+        <Control label="x에 더한 수" value={a} min={-10} max={10} change={setA} />
+        <Control label="오른쪽 값" value={b} min={-10} max={10} change={setB} />
+        <p className="helper">한쪽만 바꾸면 등식이 깨져요. 양변에 같은 수를 더하거나 빼서 미지수를 한쪽에 남깁니다.</p>
+      </div>
+    );
+  }
+  if (block.interaction === "linear-equation") {
+    const numerator = c - b;
+    const solution = a === 0 ? null : fraction(a < 0 ? -numerator : numerator, Math.abs(a));
+    const equationState = a === 0 ? (b === c ? "모든 수가 해가 되는 등식입니다." : "해가 없는 등식입니다.") : `x = (${c} - (${b})) ÷ ${a} = ${solution}`;
+    return (
+      <div className="lab math-lab">
+        <div className="lab-result" aria-live="polite">
+          <span>양변에 같은 연산을 적용해 x를 구해요</span>
+          <strong>{a}x + ({b}) = {c}</strong>
+          <p>{equationState}</p>
+          {a !== 0 && <p>검산: {a}×({solution})+({b}) = {c}</p>}
+        </div>
+        <Control label="x의 계수" value={a} min={-6} max={6} change={setA} />
+        <Control label="상수항" value={b} min={-12} max={12} change={setB} />
+        <Control label="오른쪽 값" value={c} min={-12} max={12} change={setC} />
+        <p className="helper">먼저 양변에서 상수항을 빼고, x의 계수가 0이 아닐 때 양변을 그 계수로 나눕니다. 마지막에 원래 식에 대입해 확인해요.</p>
+      </div>
+    );
+  }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(
       (n) => a % n === 0,

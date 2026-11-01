@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-06",
+  "levelId": 1,
+  "title": "단항식의 계산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "계수와 차수",
+      "단항식의 곱셈과 나눗셈"
+    ],
+    "prerequisiteUnits": [
+      "M1-04",
+      "M1-05"
+    ],
+    "visualization": "인수 색상 묶음"
+  },
+  "objectives": [
+    "단항식의 계수·문자 부분·차수를 식에서 구별한다.",
+    "단항식끼리 곱할 때 계수와 같은 문자 밑의 지수를 각각 계산한다.",
+    "단항식의 나눗셈에서 약분 가능 조건과 결과의 범위를 확인한다.",
+    "동류 단항식을 식의 구조에 따라 판별하고 계산 오류를 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-06-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-04에서 자연수 지수의 뜻과 기본 지수법칙을 설명한다."
+    },
+    {
+      "id": "m1-06-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-05에서 문자·계수·대입을 구분한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-06-skill-1",
+    "m1-06-skill-2",
+    "m1-06-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산",
+    "principleDerivation": "단항식은 수와 문자들의 곱으로 본다. 곱셈에서는 계수끼리 곱하고 같은 문자끼리 인수를 합친다. 나눗셈은 분자·분모의 공통 인수를 없애는 과정이므로 0으로 나누지 않으며, 문자 지수의 차가 음수가 되는 경우는 이 단원의 다항식 범위를 벗어나는지 먼저 확인한다.",
+    "accessibility": "색은 보조 정보로만 사용하며 기호·텍스트 설명을 병기한다. 조작은 키보드로 가능하고 변경 결과와 상태를 보조기술에 읽히는 텍스트로 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-06-u1",
+      "title": "단항식의 구성과 계수",
+      "targetSkills": [
+        "m1-06-skill-1"
+      ],
+      "explanation": "수 부분과 문자 부분을 분리해 읽는다.",
+      "activity": "색·무늬가 있는 인수 카드를 수 부분/문자 부분 칸에 분류한다.",
+      "check": "계수와 문자 부분을 올바르게 표시한다."
+    },
+    {
+      "id": "m1-06-u2",
+      "title": "차수와 차수 비교",
+      "targetSkills": [
+        "m1-06-skill-1"
+      ],
+      "explanation": "단항식의 차수는 문자 지수의 합이며 계수는 포함하지 않는다.",
+      "activity": "문자 인수 묶음 수를 세어 차수표에 기록한다.",
+      "check": "계수와 차수를 혼동하지 않는다."
+    },
+    {
+      "id": "m1-06-u3",
+      "title": "동류 단항식 판별",
+      "targetSkills": [
+        "m1-06-skill-2"
+      ],
+      "explanation": "문자와 각 지수가 모두 같은 항만 동류항이다.",
+      "activity": "문자 타일을 같은 모양끼리 묶는다.",
+      "check": "계수만 달라진 항과 지수가 달라진 항을 구분한다."
+    },
+    {
+      "id": "m1-06-u4",
+      "title": "단항식의 곱셈",
+      "targetSkills": [
+        "m1-06-skill-2"
+      ],
+      "explanation": "계수는 곱하고 같은 문자의 지수는 인수 개수를 합쳐 계산한다.",
+      "activity": "인수 묶음을 펼친 뒤 다시 지수 표기로 접는다.",
+      "check": "법칙을 전개식으로 설명하고 계산한다."
+    },
+    {
+      "id": "m1-06-u5",
+      "title": "단항식의 나눗셈",
+      "targetSkills": [
+        "m1-06-skill-3"
+      ],
+      "explanation": "계수와 같은 문자 인수의 약분으로 몫을 구한다.",
+      "activity": "공통 인수에 취소선을 표시해 약분한다.",
+      "check": "0으로 나누지 않는 조건과 약분 결과를 확인한다."
+    },
+    {
+      "id": "m1-06-u6",
+      "title": "복합 계산과 검토",
+      "targetSkills": [
+        "m1-06-skill-3"
+      ],
+      "explanation": "곱셈·나눗셈의 우선 순서와 부호, 지수를 함께 점검한다.",
+      "activity": "잘못된 약분 풀이에서 첫 오류를 찾는다.",
+      "check": "계수·문자·차수 관점으로 풀이를 검산한다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-06-interactive",
+      "status": "specified",
+      "description": "인수 색상 묶음: 계수와 문자 인수를 따로 조작하고 곱셈 전개/압축, 공통인수 약분 결과를 텍스트로 표시한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 계수·문자·차수 식별",
+      "D2: 한 단계 단항식 곱셈",
+      "D3: 나눗셈과 동류 판별",
+      "D4: 여러 문자의 복합 연산·오류 분석",
+      "D5: 조건을 만족하는 단항식 역추론"
+    ]
+  },
+  "assessmentPlan": [
+    "항의 구성요소 식별과 설명",
+    "동류 여부 분류 및 근거",
+    "곱셈·나눗셈 계산과 전개 검산",
+    "복합식의 오류 찾기"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "각 핵심 기능은 계산 응답 외에도 설명·표현 변환·오류 분석 중 적합한 독립 증거를 수집한다. 평가 전 정답·해설을 전달하지 않는다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "계수를 차수에 포함한다.",
+    "문자 부분이 같기만 하면 동류항이라고 생각한다.",
+    "지수법칙을 다른 문자 밑에도 적용한다.",
+    "분자나 분모의 일부 항만 임의로 약분한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

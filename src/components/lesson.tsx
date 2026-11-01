@@ -116,6 +116,7 @@ function BlockRenderer({
           unitId={unitId}
           hintText={block.hint}
           allowExtension={allowExtension}
+          initialCollection={initialCollection}
         />
       );
     case "AssessmentBlock":
@@ -251,19 +252,20 @@ export function Lesson({
               {b.title.split(" · ")[0]}
             </a>
           ))}
-          <div className="mastery-summary">
-            <strong>기본 학습 개념별 숙달도</strong>
-            {unit.concepts.map((c) => (
-              <div key={c.id}>
-                <span>{c.label}</span>
-                <b>{mastery(state?.attempts ?? [], c.id)}%</b>
-              </div>
-            ))}
-            <p>
-              두 개 이상의 독립 정답이 필요해요. 반복·힌트 정답은 낮은 가중치로
-              기록해요.
-            </p>
-          </div>
+          {draftPreview ? (
+            <p className="helper">검토용 초안 문항은 공식 개념 숙달도에 반영하지 않습니다.</p>
+          ) : (
+            <div className="mastery-summary">
+              <strong>기본 학습 개념별 숙달도</strong>
+              {unit.concepts.map((c) => (
+                <div key={c.id}>
+                  <span>{c.label}</span>
+                  <b>{mastery(state?.attempts ?? [], c.id)}%</b>
+                </div>
+              ))}
+              <p>두 개 이상의 독립 정답이 필요해요. 반복·힌트 정답은 낮은 가중치로 기록해요.</p>
+            </div>
+          )}
         </nav>
         <div className="blocks">
           {doc.blocks.map((block, i) => (
@@ -306,7 +308,7 @@ export function Lesson({
             </h2>
             <p>
               {draftPreview
-                ? `미리보기 블록 확인 ${completed}/${doc.blocks.length} · 평가/공식 완료 판정 미구현`
+                ? `미리보기 블록 확인 ${completed}/${doc.blocks.length} · 초안 형성평가 ${progress.assessmentScore === null ? "미응시" : `${progress.assessmentScore}점`} · 공식 완료 판정 제외`
                 : `블록 확인 ${completed}/${doc.blocks.length} · 형성평가 ${progress.assessmentScore ?? 0}점 · 개념별 숙달도 80% 이상 필요`}
             </p>
             {next ? (

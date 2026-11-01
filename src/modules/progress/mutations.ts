@@ -72,7 +72,7 @@ export function applySubmission(
     ...state,
     attempts: [...state.attempts, ...added],
     assessmentScore:
-      unitId === "M0-01" && submission.collection !== "extended"
+      unitId === "M0-01" && (submission.collection ?? "core") === "core"
         ? (submission.score ?? state.assessmentScore)
         : state.assessmentScore,
     unitProgress: {
@@ -80,9 +80,7 @@ export function applySubmission(
       [unitId]: {
         ...unitProgress(state, unitId),
         assessmentScore:
-          (submission.collection !== "extended"
-            ? submission.score
-            : undefined) ?? unitProgress(state, unitId).assessmentScore,
+          submission.score ?? unitProgress(state, unitId).assessmentScore,
       },
     },
   });

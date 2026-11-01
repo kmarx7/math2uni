@@ -1,0 +1,23 @@
+{
+  "unitId": "M1-10",
+  "contentVersion": "0.1.0-draft",
+  "status": "draft",
+  "automatedChecks": {
+    "contentSchema": "pass",
+    "phaseCount15": "pass",
+    "subunitCount6": "pass",
+    "problemCount6": "pass",
+    "distinctFamilyCount2": "pass",
+    "answerRules": "pass",
+    "serverDeliveryGate": "pass"
+  },
+  "humanMathReview": "pending",
+  "humanPedagogyReview": "pending",
+  "officialStandards": "unverified",
+  "publicationApproved": false,
+  "issues": [
+    "M1-06~M1-10 독립 형성평가 미구현",
+    "문항 자동 검사 외 별도 사람 수학·교육 검수 필요",
+    "단원 구성·선수 관계·공식 코드 매핑은 제안 상태"
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-08",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "분배법칙을 곱셈과 덧셈의 넓이·수량 모델로 설명한다.\n단항식과 다항식의 곱을 각 항에 분배해 전개한다.\n음수 계수와 괄호가 포함된 전개에서 부호를 정확히 처리한다.\n전개 전후 식의 값을 대입으로 비교해 동치 여부를 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-07에서 다항식의 항과 동류항을 식의 구조에 따라 다룬다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-08-u1",
+          "title": "곱과 합의 묶음 의미",
+          "body": "묶음 전체에 같은 배수를 적용한다.",
+          "activity": "수량 카드로 3묶음의 (2+4)를 나눠 센다.",
+          "check": "전체 곱과 부분 곱의 합이 같은지 확인한다."
+        },
+        {
+          "id": "m1-08-u2",
+          "title": "직사각형 넓이 분할",
+          "body": "변의 합과 전체 넓이, 부분 넓이를 연결한다.",
+          "activity": "한 변을 x+2로 나누어 넓이 조각을 만든다.",
+          "check": "각 부분 넓이가 항으로 나타남을 설명한다."
+        },
+        {
+          "id": "m1-08-u3",
+          "title": "단항식의 분배",
+          "body": "바깥 단항식을 괄호 안의 모든 항에 곱한다.",
+          "activity": "화살표로 각 항과의 곱을 연결한다.",
+          "check": "빠진 항이 없는지 항 수로 검산한다."
+        },
+        {
+          "id": "m1-08-u4",
+          "title": "부호가 있는 전개",
+          "body": "음수 인수와 음수 항의 곱 부호를 별도로 처리한다.",
+          "activity": "양·음 타일 또는 부호표로 각 곱을 표시한다.",
+          "check": "괄호 밖 음수의 분배를 정확히 수행한다."
+        },
+        {
+          "id": "m1-08-u5",
+          "title": "전개 후 동류항 정리",
+          "body": "분배 후 동류항을 모아 표준 형태로 정리한다.",
+          "activity": "곱 항을 생성한 뒤 동류별로 합친다.",
+          "check": "전개와 정리 단계를 구별해 기록한다."
+        },
+        {
+          "id": "m1-08-u6",
+          "title": "전개 검산과 오류 교정",
+          "body": "대입 검산 및 넓이 구조로 전개 결과를 확인한다.",
+          "activity": "간단한 수를 대입해 양변 값을 비교한다.",
+          "check": "오류가 누락인지 부호인지 분류한다."
+        }
+      ],
+      "body": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "직사각형 넓이 분할: 길이 조각을 키보드로 바꾸면 부분 넓이 항과 전체 식이 텍스트로 갱신된다.",
+      "interaction": "distributive-area",
+      "settings": {
+        "initialA": 3,
+        "initialB": 2,
+        "initialC": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "묶음 전체에 같은 배수를 적용한다.",
+        "수량 카드로 3묶음의 (2+4)를 나눠 센다.",
+        "전체 곱과 부분 곱의 합이 같은지 확인한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "괄호 안 첫 항에만 곱한다. · a(b+c)를 ab+c로 전개한다. · -a(b-c)에서 바깥 음수의 영향을 놓친다. · 동류항 정리 전후 항 수만 보고 식의 동치를 확인하지 않는다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

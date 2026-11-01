@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-03",
+  "unitTitle": "유리수의 사칙연산",
+  "concepts": [
+    "유리수의 표현",
+    "부호 있는 분수 계산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a103-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "fraction",
+      "prompt": "2/3+1/4를 기약분수로 입력하라.",
+      "answer": {
+        "type": "fraction",
+        "value": "11/12"
+      },
+      "rationale": "공통분모 12에서 8/12+3/12=11/12이다.",
+      "skillLabel": "유리수의 표현",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a103-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "fraction",
+      "prompt": "5/6-3/4를 기약분수로 입력하라.",
+      "answer": {
+        "type": "fraction",
+        "value": "1/12"
+      },
+      "rationale": "공통분모 12에서 10/12-9/12=1/12이다.",
+      "skillLabel": "부호 있는 분수 계산",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a103-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "fraction",
+      "prompt": "(-4/9)÷(2/3)을 기약분수로 입력하라.",
+      "answer": {
+        "type": "fraction",
+        "value": "-2/3"
+      },
+      "rationale": "(-4/9)×(3/2)=-12/18=-2/3이다.",
+      "skillLabel": "부호 있는 분수 계산",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

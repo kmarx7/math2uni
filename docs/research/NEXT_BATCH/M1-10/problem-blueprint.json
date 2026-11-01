@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-10",
+  "unitTitle": "일차방정식의 풀이",
+  "concepts": [
+    "이항과 계수 정리",
+    "해의 대입 검산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M110-linear-solve",
+      "status": "draft",
+      "title": "일차방정식 풀이",
+      "reasoningStructure": "등식의 양변에 같은 연산을 적용해 미지수를 고립한다",
+      "items": [
+        {
+          "id": "m110-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "3x+2=14를 풀어라.",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "양변에서 2를 빼면 3x=12, 나누면 x=4이다.",
+          "misconceptionHypothesis": "상수항을 옮길 때 부호를 유지",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m110-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "5x-7=2x+8을 풀어라.",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "3x=15이므로 x=5이다.",
+          "misconceptionHypothesis": "문자항과 상수항을 같은 쪽으로 모을 때 부호 오류",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m110-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2(x+3)=18을 풀어라.",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "양변을 2로 나누면 x+3=9, 따라서 x=6이다.",
+          "misconceptionHypothesis": "괄호 전개 또는 양변 나눗셈 오류",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M110-substitution-check",
+      "status": "draft",
+      "title": "해의 대입 검산",
+      "reasoningStructure": "구한 값을 원래 방정식에 대입해 양변이 같은지 확인한다",
+      "items": [
+        {
+          "id": "m110-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x=3이 4x-1=11의 해인지 판단하라.",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "4×3-1=11이므로 해이다.",
+          "misconceptionHypothesis": "해를 원식이 아닌 변형식만으로 확인",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "해이다",
+            "B": "해가 아니다"
+          }
+        },
+        {
+          "id": "m110-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x+5=2의 해를 구하고 원식에 대입할 때 왼쪽 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x=-3이고 왼쪽은 -3+5=2로 오른쪽과 같다.",
+          "misconceptionHypothesis": "해를 구한 뒤 대입값 계산 생략",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m110-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2x+1=9의 해를 원식에 대입해 확인한 왼쪽 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "x=4이므로 2×4+1=9이다.",
+          "misconceptionHypothesis": "미지수 해와 식의 값 검산 혼동",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

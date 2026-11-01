@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-01",
+  "unitTitle": "정수와 절댓값",
+  "concepts": [
+    "부호와 절댓값",
+    "정수의 대소 비교"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a101-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "choice",
+      "prompt": "-4, 1, -7을 작은 수부터 배열한 것은?",
+      "answer": {
+        "type": "choice",
+        "value": "B"
+      },
+      "rationale": "수직선에서 -7<-4<1이다.",
+      "skillLabel": "정수의 대소 비교",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      },
+      "choices": {
+        "A": "-4, -7, 1",
+        "B": "-7, -4, 1",
+        "C": "1, -4, -7"
+      }
+    },
+    {
+      "id": "a101-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "-8과 5 사이의 거리를 정수로 입력하라.",
+      "answer": {
+        "type": "integer",
+        "value": "13"
+      },
+      "rationale": "|5-(-8)|=13이다.",
+      "skillLabel": "절댓값",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a101-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "|-9|의 값은?",
+      "answer": {
+        "type": "integer",
+        "value": "9"
+      },
+      "rationale": "절댓값은 원점까지의 거리이므로 9이다.",
+      "skillLabel": "부호와 절댓값",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

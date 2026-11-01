@@ -1,4 +1,5 @@
 import { test, expect } from "./fixtures";
+import { randomUUID } from "node:crypto";
 import { viewports } from "./viewports";
 
 for (const viewport of viewports) {
@@ -11,6 +12,11 @@ for (const viewport of viewports) {
         ["M1-03", "유리수의 사칙연산", "같은 크기의 분수 조각 더하기"],
         ["M1-04", "거듭제곱과 지수법칙 기초", "거듭제곱은 같은 인수의 반복 곱"],
         ["M1-05", "문자와 식의 값", "값을 넣고 식의 결과 확인"],
+        ["M1-06", "단항식의 계산", "계수끼리 곱하고 같은 문자 인수를 모아요"],
+        ["M1-07", "다항식의 덧셈과 뺄셈", "문자와 지수가 같은 항만 모아요"],
+        ["M1-08", "분배법칙과 식의 전개", "큰 직사각형을 두 부분으로 나누어 넓이를 더해요"],
+        ["M1-09", "등식과 방정식의 의미", "저울의 균형을 유지하며 양변에 같은 수를 더해요"],
+        ["M1-10", "일차방정식의 풀이", "양변에 같은 연산을 적용해 x를 구해요"],
       ];
       for (const [unitId, title, labTitle] of units) {
         await page.goto(`/learn/${unitId}`);
@@ -24,12 +30,12 @@ for (const viewport of viewports) {
       await page.goto("/learn/M1-01");
       await expect(page.getByRole("heading", { name: "정수와 절댓값", exact: true })).toBeVisible();
       await expect(page.getByText("개발 미리보기 · 제안 교육과정 초안", { exact: true })).toBeVisible();
-      await expect(page.getByText(/평가\/공식 완료 판정 미구현/)).toBeVisible();
+      await expect(page.getByText(/초안 형성평가 미응시/)).toBeVisible();
       const firstInteger = page.getByLabel("첫 번째 정수");
       await firstInteger.focus();
       await firstInteger.press("ArrowRight");
       await expect(page.locator(".lab-result strong")).toContainText("-2 < 4");
-      const bankResponse = await page.request.get("/api/practice?unitId=M1-01");
+      const bankResponse = await page.request.get("/api/practice?unitId=M1-01&collection=proposal-preview");
       expect(bankResponse.status()).toBe(200);
       const bank = await bankResponse.json();
       expect(bank.problems).toHaveLength(6);
@@ -51,6 +57,31 @@ for (const viewport of viewports) {
       expect(state.attempts).toHaveLength(1);
       expect(state.attempts[0]).toMatchObject({ unitId: "M1-01", problemId: "p-m1-01-m101-01", correct: false });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    });
+    test("M1-01 assessment hides answers until the complete submission and stores preview-only score", async ({ page }) => {
+      await page.goto("/learn/M1-01");
+      const assessmentResponse = await page.request.get("/api/assessment?unitId=M1-01&collection=proposal-preview");
+      expect(assessmentResponse.status()).toBe(200);
+      const bank = await assessmentResponse.json();
+      expect(bank.problems).toHaveLength(3);
+      expect(JSON.stringify(bank.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+      const partial = await page.request.post("/api/assessment", {
+        headers: { Origin: "http://localhost:3005" },
+        data: { unitId: "M1-01", collection: "proposal-preview", requestId: randomUUID(), answers: { [bank.problems[0].id]: "B" } },
+      });
+      expect(partial.status()).toBe(400);
+      const assessment = page.locator("#assessment");
+      await assessment.locator('input[type="radio"]').nth(1).check();
+      await assessment.locator('input:not([type="radio"])').nth(0).fill("13");
+      await assessment.locator('input:not([type="radio"])').nth(1).fill("9");
+      await assessment.getByRole("button", { name: "전체 답안 제출" }).click();
+      await expect(assessment.getByText(/검토용 초안 결과/)).toContainText("100점");
+      await page.reload();
+      const state = (await (await page.request.get("/api/progress")).json()).progress;
+      expect(state.assessmentScore).toBeNull();
+      expect(state.unitProgress["M1-01"].assessmentScore).toBe(100);
+      expect(state.attempts).toHaveLength(3);
+      expect(state.attempts.every((attempt: { collection: string }) => attempt.collection === "proposal-preview")).toBe(true);
     });
   });
 }

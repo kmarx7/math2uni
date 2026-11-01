@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-07",
+  "unitTitle": "다항식의 덧셈과 뺄셈",
+  "concepts": [
+    "동류항",
+    "다항식의 정리"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M107-like-terms",
+      "status": "draft",
+      "title": "동류항 모으기",
+      "reasoningStructure": "문자와 지수 부분이 같은 항만 계수를 더하거나 뺀다",
+      "items": [
+        {
+          "id": "m107-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "3x+5x를 간단히 하라. x의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "8"
+          },
+          "rationale": "동류항의 계수를 더하면 3+5=8이다.",
+          "misconceptionHypothesis": "문자까지 포함해 3x+5x를 8x²로 만듦",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m107-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "4a²-7a²를 간단히 하라. a²의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-3"
+          },
+          "rationale": "같은 a² 항이므로 4-7=-3이다.",
+          "misconceptionHypothesis": "음수 계수 계산에서 부호 오류",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m107-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2x+3y-x+5y에서 y의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "8"
+          },
+          "rationale": "y항은 3y+5y이므로 계수는 8이다.",
+          "misconceptionHypothesis": "서로 다른 문자의 항을 합침",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M107-polynomial-collection",
+      "status": "draft",
+      "title": "다항식 정리와 차수별 계수",
+      "reasoningStructure": "항을 차수별로 분류하고 내림차순으로 정리한다",
+      "items": [
+        {
+          "id": "m107-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x+4x²-2를 내림차순으로 정리했을 때 x²의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "차수 순으로 4x²+x-2이며 x²의 계수는 4이다.",
+          "misconceptionHypothesis": "항의 순서와 계수 값을 혼동",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m107-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "(2x²+x+1)+(x²-3x+4)를 간단히 했을 때 상수항은?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "상수항 1+4=5이며 전체는 3x²-2x+5이다.",
+          "misconceptionHypothesis": "차수가 다른 항끼리 합함",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m107-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "(5a-2)-(2a+3)을 간단히 했을 때 a의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "괄호 앞의 빼기를 적용해 5a-2-2a-3=3a-5이다.",
+          "misconceptionHypothesis": "두 번째 괄호 안 부호를 바꾸지 않음",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

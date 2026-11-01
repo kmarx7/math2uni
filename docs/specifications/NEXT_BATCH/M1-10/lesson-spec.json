@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-10",
+  "levelId": 1,
+  "title": "일차방정식의 풀이",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "이항과 계수 정리",
+      "해의 대입 검산"
+    ],
+    "prerequisiteUnits": [
+      "M1-07",
+      "M1-09"
+    ],
+    "visualization": "저울의 동치 변형"
+  },
+  "objectives": [
+    "일차방정식에서 미지수의 차수가 1인 구조를 확인한다.",
+    "양변에 같은 연산을 적용해 해를 보존하며 방정식을 푼다.",
+    "동류항 정리·괄호 전개·계수 정리를 필요한 순서로 수행한다.",
+    "구한 해를 원래 방정식에 대입해 검산하고 풀이 오류를 찾아 고친다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-10-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-07에서 다항식의 동류항을 정리한다."
+    },
+    {
+      "id": "m1-10-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-09에서 등식의 의미와 같은 연산의 양변 적용을 설명한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-10-skill-1",
+    "m1-10-skill-2",
+    "m1-10-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산",
+    "principleDerivation": "방정식 풀이의 각 줄은 이전 줄과 같은 해를 가져야 한다. 양변에 같은 수를 더하거나 빼는 것은 등식의 성질을 이용한다. 양변을 같은 0이 아닌 수로 나누는 것도 등식을 보존한다. 이항은 항이 이동하는 것이 아니라 양변에 같은 수를 더하거나 빼는 과정을 짧게 쓴 표현이다.",
+    "accessibility": "색은 보조 정보로만 사용하며 기호·텍스트 설명을 병기한다. 조작은 키보드로 가능하고 변경 결과와 상태를 보조기술에 읽히는 텍스트로 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m1-10-u1",
+      "title": "일차방정식의 구조",
+      "targetSkills": [
+        "m1-10-skill-1"
+      ],
+      "explanation": "미지수의 최고차수가 1인 방정식과 항을 식별한다.",
+      "activity": "방정식 카드에서 변수항·상수항을 색과 텍스트로 표시한다.",
+      "check": "일차식과 일차방정식을 구별한다."
+    },
+    {
+      "id": "m1-10-u2",
+      "title": "해와 동치 변형",
+      "targetSkills": [
+        "m1-10-skill-1"
+      ],
+      "explanation": "각 변형 단계가 해를 보존하는지 등식 성질로 설명한다.",
+      "activity": "저울 양쪽에 같은 연산을 적용한다.",
+      "check": "한 줄씩 변형 근거를 말한다."
+    },
+    {
+      "id": "m1-10-u3",
+      "title": "간단한 방정식과 이항",
+      "targetSkills": [
+        "m1-10-skill-2"
+      ],
+      "explanation": "양변에 같은 수를 더하거나 빼 변수항과 상수항을 정리한다.",
+      "activity": "저울에서 항을 반대쪽으로 옮기는 과정을 균형 조작으로 보인다.",
+      "check": "이항의 부호 변화 이유를 설명한다."
+    },
+    {
+      "id": "m1-10-u4",
+      "title": "계수 정리와 괄호",
+      "targetSkills": [
+        "m1-10-skill-2"
+      ],
+      "explanation": "분배법칙과 양변 나눗셈으로 미지수를 고립한다.",
+      "activity": "전개 전후 저울 식을 비교한다.",
+      "check": "0으로 나누지 않는 조건을 확인한다."
+    },
+    {
+      "id": "m1-10-u5",
+      "title": "문장제 모델링",
+      "targetSkills": [
+        "m1-10-skill-3"
+      ],
+      "explanation": "미지수와 관계를 정의해 일차방정식을 세운다.",
+      "activity": "상황의 양을 표와 식으로 대응한다.",
+      "check": "단위와 해의 의미를 문맥에서 해석한다."
+    },
+    {
+      "id": "m1-10-u6",
+      "title": "대입 검산과 오류 분석",
+      "targetSkills": [
+        "m1-10-skill-3"
+      ],
+      "explanation": "해를 원래 식에 대입하고 변형 중 오류를 찾는다.",
+      "activity": "각 풀이 줄의 참·거짓을 후보 해로 점검한다.",
+      "check": "답과 풀이의 타당성을 별도로 설명한다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 확인",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "공식과 원리 유도",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "응용 문제",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "심화·전이",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습",
+      "status": "specified-not-implemented"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결",
+      "status": "specified-not-implemented"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-10-interactive",
+      "status": "specified",
+      "description": "저울의 동치 변형: 양변에 동일한 덧셈·뺄셈·0이 아닌 수 나눗셈만 허용하고 매 단계 식을 텍스트로 제공한다."
+    }
+  ],
+  "difficultyProgression": {
+    "status": "proposed",
+    "levels": [
+      "D1: 한 단계 등식 변형",
+      "D2: 변수항·상수항 정리",
+      "D3: 양변에 변수항이 있는 방정식",
+      "D4: 괄호·분수 계수 또는 문장 모델링",
+      "D5: 매개 조건에 따른 해 존재·유일성 분석"
+    ]
+  },
+  "assessmentPlan": [
+    "방정식 구조 판별",
+    "한 단계·여러 단계 풀이",
+    "괄호·계수 포함 풀이",
+    "간단한 문장제 구성과 해 해석",
+    "원식 대입 검산 및 잘못된 변형 교정"
+  ],
+  "assessmentCriteria": {
+    "status": "draft-proposed",
+    "evidence": "각 핵심 기능은 계산 응답 외에도 설명·표현 변환·오류 분석 중 적합한 독립 증거를 수집한다. 평가 전 정답·해설을 전달하지 않는다.",
+    "masteryThreshold": "문항 파일럿 및 학습 기록 검증 전 확정하지 않음",
+    "scoreDoesNotGuaranteeExamOutcome": true
+  },
+  "misconceptionsToCheck": [
+    "이항을 부호 규칙 암기로만 처리한다.",
+    "양변에 서로 다른 연산을 적용한다.",
+    "양변을 0으로 나누거나 변수식으로 나누어 조건을 놓친다.",
+    "구한 해가 원래 식을 만족하는지 확인하지 않는다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "proposed-preserve-existing-scheduler"
+  },
+  "reviewStatusNotes": [
+    "교육 설계 초안이며 독립 검수 전이다.",
+    "공식 성취기준 코드는 검증되지 않아 연결하지 않았다.",
+    "제안 단원이며 정본 교육과정/진도/채점에 등록되지 않았다.",
+    "사람의 검수 및 게시 승인이 없다."
+  ]
+}

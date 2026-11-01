@@ -1,9 +1,12 @@
 import type { Attempt, ProgressState, Unit } from "@/contracts";
 export function mastery(attempts: Attempt[], skillId: string): number {
-  // Extended exploration is recorded and reviewed separately from core mastery.
+  // Existing extended attempts stay separate; draft proposal previews are also excluded.
   const latest = new Map<string, Attempt>();
   for (const a of attempts.filter(
-    (a) => a.skillId === skillId && a.collection !== "extended",
+    (a) =>
+      a.skillId === skillId &&
+      a.collection !== "extended" &&
+      a.collection !== "proposal-preview",
   )) {
     const key = `${a.problemId}@${a.version}`;
     const previous = latest.get(key);
@@ -20,7 +23,7 @@ export function mastery(attempts: Attempt[], skillId: string): number {
 const DAY = 86_400_000;
 export function reviewSchedule(attempts: Attempt[]) {
   const groups = new Map<string, Attempt[]>();
-  for (const a of attempts) {
+  for (const a of attempts.filter((attempt) => attempt.collection !== "proposal-preview")) {
     const key = `${a.problemId}@${a.version}`;
     groups.set(key, [...(groups.get(key) ?? []), a]);
   }

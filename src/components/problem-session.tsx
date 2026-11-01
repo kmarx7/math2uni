@@ -335,12 +335,17 @@ export function ProblemSession({
           완료 조건을 바꾸지 않습니다.
         </p>
       )}
+      {assessment && collection === "proposal-preview" && (
+        <p className="helper">검토용 형성평가 초안입니다. 전체 제출 결과는 검토용 진도 칸에만 저장되며 공식 점수·완료·숙달도에는 반영되지 않습니다.</p>
+      )}
       {score !== null && (
         <p className="assessment-score" role="status">
-          형성평가 결과 <strong>{score}점</strong> ·{" "}
-          {score >= 80
-            ? "잘했어요! 개념 숙달과 복습도 확인해요."
-            : "부족한 개념을 연습한 후 다시 도전해요."}
+          {collection === "proposal-preview" ? "검토용 초안 결과" : "형성평가 결과"} <strong>{score}점</strong> ·{" "}
+          {collection === "proposal-preview"
+            ? "정본 진도와 숙달도 판정에 반영되지 않습니다."
+            : score >= 80
+              ? "잘했어요! 개념 숙달과 복습도 확인해요."
+              : "부족한 개념을 연습한 후 다시 도전해요."}
         </p>
       )}
       <div aria-live="polite">

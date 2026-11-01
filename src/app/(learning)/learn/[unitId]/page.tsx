@@ -12,13 +12,6 @@ export default async function Page({
 }) {
   const { unitId } = await params;
   const query = await searchParams;
-  const initialCollection =
-    unitId === "M0-01" &&
-    query.collection === "extended" &&
-    process.env.NODE_ENV === "development" &&
-    process.env.MATH90_CONTENT_PREVIEW === "1"
-      ? "extended"
-      : "core";
   const activeUnit = curriculum.units.find(
     (u) => u.id === unitId && u.status === "published",
   );
@@ -26,6 +19,11 @@ export default async function Page({
   const unit = activeUnit ?? proposalUnit;
   const lesson = activeUnit ? lessonForDelivery(unitId) : draftLessonForPreview(unitId);
   if (!unit || !lesson) notFound();
+  const initialCollection = !activeUnit && proposalUnit
+    ? "proposal-preview"
+    : unitId === "M0-01" && query.collection === "extended" && process.env.NODE_ENV === "development" && process.env.MATH90_CONTENT_PREVIEW === "1"
+      ? "extended"
+      : "core";
   return (
     <Lesson
       key={`${unit.id}:${initialCollection}`}

@@ -6,10 +6,15 @@ import draftM102 from "../../../docs/specifications/NEXT_BATCH/M1-02/content-dra
 import draftM103 from "../../../docs/specifications/NEXT_BATCH/M1-03/content-draft.json";
 import draftM104 from "../../../docs/specifications/NEXT_BATCH/M1-04/content-draft.json";
 import draftM105 from "../../../docs/specifications/NEXT_BATCH/M1-05/content-draft.json";
+import draftM106 from "../../../docs/specifications/NEXT_BATCH/M1-06/content-draft.json";
+import draftM107 from "../../../docs/specifications/NEXT_BATCH/M1-07/content-draft.json";
+import draftM108 from "../../../docs/specifications/NEXT_BATCH/M1-08/content-draft.json";
+import draftM109 from "../../../docs/specifications/NEXT_BATCH/M1-09/content-draft.json";
+import draftM110 from "../../../docs/specifications/NEXT_BATCH/M1-10/content-draft.json";
 import { draftPreviewUnitIds } from "@/data/proposal-preview-manifest";
 
 const draftLessons = new Map<string, ContentDocument>(
-  [draftM101, draftM102, draftM103, draftM104, draftM105].map((draft) => [
+  [draftM101, draftM102, draftM103, draftM104, draftM105, draftM106, draftM107, draftM108, draftM109, draftM110].map((draft) => [
     draft.unitId,
     contentSchema.parse(draft),
   ]),

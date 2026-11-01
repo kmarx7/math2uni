@@ -12,6 +12,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { SupabaseProgressRepository } from "@/modules/progress/server";
 import { transactProgress } from "@/modules/progress/account-repository";
 import { applySubmission } from "@/modules/progress/mutations";
+import { isDraftPreviewUnitId } from "@/data/proposal-preview-manifest";
 import { badRequest, noStore, readJson } from "../http";
 export async function GET(request?: Request) {
   const unitId = request
@@ -26,6 +27,8 @@ export async function GET(request?: Request) {
   );
   if (!parsedCollection.success) return badRequest(parsedCollection.error);
   const collection = parsedCollection.data;
+  if (collection === "proposal-preview" && (!isPreview() || !isDraftPreviewUnitId(unitId)))
+    return Response.json({ error: "검토용 문항을 찾을 수 없습니다." }, { status: 404, headers: noStore });
   return Response.json(
     {
       problems: publicProblems("practice", unitId, collection),
@@ -59,6 +62,8 @@ export async function POST(request: Request) {
   } catch (error) {
     return badRequest(error);
   }
+  if (input.collection === "proposal-preview" && (!isPreview() || !isDraftPreviewUnitId(input.unitId)))
+    return Response.json({ error: "검토용 문항을 찾을 수 없습니다." }, { status: 404, headers: noStore });
   const problem = privateProblems(
     "practice",
     input.unitId,

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-04",
+  "unitTitle": "거듭제곱과 지수법칙 기초",
+  "concepts": [
+    "거듭제곱의 뜻",
+    "자연수 지수의 연산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a104-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "4^3의 값을 정수로 입력하라.",
+      "answer": {
+        "type": "integer",
+        "value": "64"
+      },
+      "rationale": "4×4×4=64이다.",
+      "skillLabel": "거듭제곱의 뜻",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a104-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "2^3×2^4를 계산한 값을 정수로 입력하라.",
+      "answer": {
+        "type": "integer",
+        "value": "128"
+      },
+      "rationale": "같은 밑의 지수를 합쳐 2^7=128이다.",
+      "skillLabel": "자연수 지수의 연산",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a104-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "choice",
+      "prompt": "(-3)^2의 값은?",
+      "answer": {
+        "type": "choice",
+        "value": "C"
+      },
+      "rationale": "괄호 안의 -3을 두 번 곱해 9이다.",
+      "skillLabel": "거듭제곱과 부호",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      },
+      "choices": {
+        "A": "-9",
+        "B": "-6",
+        "C": "9"
+      }
+    }
+  ]
+}

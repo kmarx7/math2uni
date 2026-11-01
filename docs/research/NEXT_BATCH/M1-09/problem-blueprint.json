@@ -1,0 +1,163 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-09",
+  "unitTitle": "등식과 방정식의 의미",
+  "concepts": [
+    "해와 항등식",
+    "등식의 성질"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M109-solution-identity",
+      "status": "draft",
+      "title": "해와 항등식 구별",
+      "reasoningStructure": "변수 값 대입 결과가 참인지 확인하고 모든 값에서 성립하는지 구별한다",
+      "items": [
+        {
+          "id": "m109-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x=2일 때 3x=6은 참인가? (1=참, 0=거짓)",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "3×2=6이므로 참이다.",
+          "misconceptionHypothesis": "등식의 양변을 계산하지 않음",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "참",
+            "B": "거짓"
+          }
+        },
+        {
+          "id": "m109-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x에 어떤 수를 넣어도 참인 등식은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "2(x+1)=2x+2는 분배법칙으로 모든 x에서 성립한다.",
+          "misconceptionHypothesis": "한 값에서 참인 등식을 항등식으로 판단",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x+3=7",
+            "B": "2(x+1)=2x+2",
+            "C": "3x=6"
+          }
+        },
+        {
+          "id": "m109-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x=1일 때 x+4=2는 참인가? (1=참, 0=거짓)",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "1+4=5이고 5≠2이므로 거짓이다.",
+          "misconceptionHypothesis": "등호를 계산 지시 기호로만 읽음",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "참",
+            "B": "거짓"
+          }
+        }
+      ]
+    },
+    {
+      "id": "M109-equivalence-property",
+      "status": "draft",
+      "title": "등식의 성질과 양변 변화",
+      "reasoningStructure": "양변에 같은 수를 더하거나 곱해도 등식 관계가 유지됨을 확인한다",
+      "items": [
+        {
+          "id": "m109-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "8=8의 양변에 3을 더하면 오른쪽 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "11"
+          },
+          "rationale": "양변에 같은 3을 더하므로 오른쪽은 8+3=11이다.",
+          "misconceptionHypothesis": "한쪽에만 수를 더해도 등식 유지된다고 생각",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m109-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x=4의 양변에 -2를 곱하면 x의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-2"
+          },
+          "rationale": "양변은 -2x=-8이 되므로 x의 계수는 -2이다.",
+          "misconceptionHypothesis": "한쪽만 곱하거나 부호를 잊음",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m109-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x+2=7의 양변에서 2를 빼면 오른쪽은?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "같은 수를 양변에서 빼면 x=5가 된다.",
+          "misconceptionHypothesis": "이항을 부호 없는 이동 규칙으로만 적용",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-10",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 확인",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "공식과 원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "심화·전이",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "일차방정식에서 미지수의 차수가 1인 구조를 확인한다.\n양변에 같은 연산을 적용해 해를 보존하며 방정식을 푼다.\n동류항 정리·괄호 전개·계수 정리를 필요한 순서로 수행한다.\n구한 해를 원래 방정식에 대입해 검산하고 풀이 오류를 찾아 고친다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M1-07에서 다항식의 동류항을 정리한다.\nM1-09에서 등식의 의미와 같은 연산의 양변 적용을 설명한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-10-u1",
+          "title": "일차방정식의 구조",
+          "body": "미지수의 최고차수가 1인 방정식과 항을 식별한다.",
+          "activity": "방정식 카드에서 변수항·상수항을 색과 텍스트로 표시한다.",
+          "check": "일차식과 일차방정식을 구별한다."
+        },
+        {
+          "id": "m1-10-u2",
+          "title": "해와 동치 변형",
+          "body": "각 변형 단계가 해를 보존하는지 등식 성질로 설명한다.",
+          "activity": "저울 양쪽에 같은 연산을 적용한다.",
+          "check": "한 줄씩 변형 근거를 말한다."
+        },
+        {
+          "id": "m1-10-u3",
+          "title": "간단한 방정식과 이항",
+          "body": "양변에 같은 수를 더하거나 빼 변수항과 상수항을 정리한다.",
+          "activity": "저울에서 항을 반대쪽으로 옮기는 과정을 균형 조작으로 보인다.",
+          "check": "이항의 부호 변화 이유를 설명한다."
+        },
+        {
+          "id": "m1-10-u4",
+          "title": "계수 정리와 괄호",
+          "body": "분배법칙과 양변 나눗셈으로 미지수를 고립한다.",
+          "activity": "전개 전후 저울 식을 비교한다.",
+          "check": "0으로 나누지 않는 조건을 확인한다."
+        },
+        {
+          "id": "m1-10-u5",
+          "title": "문장제 모델링",
+          "body": "미지수와 관계를 정의해 일차방정식을 세운다.",
+          "activity": "상황의 양을 표와 식으로 대응한다.",
+          "check": "단위와 해의 의미를 문맥에서 해석한다."
+        },
+        {
+          "id": "m1-10-u6",
+          "title": "대입 검산과 오류 분석",
+          "body": "해를 원래 식에 대입하고 변형 중 오류를 찾는다.",
+          "activity": "각 풀이 줄의 참·거짓을 후보 해로 점검한다.",
+          "check": "답과 풀이의 타당성을 별도로 설명한다."
+        }
+      ],
+      "body": "관찰·조작 → 말과 그림으로 설명 → 기호화 → 원리 유도 → 독립 적용·검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "저울의 동치 변형: 양변에 동일한 덧셈·뺄셈·0이 아닌 수 나눗셈만 허용하고 매 단계 식을 텍스트로 제공한다.",
+      "interaction": "linear-equation",
+      "settings": {
+        "initialA": 3,
+        "initialB": 2,
+        "initialC": 12
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "미지수의 최고차수가 1인 방정식과 항을 식별한다.",
+        "방정식 카드에서 변수항·상수항을 색과 텍스트로 표시한다.",
+        "일차식과 일차방정식을 구별한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "이항을 부호 규칙 암기로만 처리한다. · 양변에 서로 다른 연산을 적용한다. · 양변을 0으로 나누거나 변수식으로 나누어 조건을 놓친다. · 구한 해가 원래 식을 만족하는지 확인하지 않는다.에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

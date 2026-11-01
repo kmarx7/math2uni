@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-02",
+  "unitTitle": "정수의 곱셈과 나눗셈",
+  "concepts": [
+    "부호 결정",
+    "역연산 검산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "items": [
+    {
+      "id": "a102-01",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "(-7)×(-3)의 값은?",
+      "answer": {
+        "type": "integer",
+        "value": "21"
+      },
+      "rationale": "같은 부호의 곱은 양수이고 7×3=21이다.",
+      "skillLabel": "부호 결정",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a102-02",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "(-42)÷6의 값은?",
+      "answer": {
+        "type": "integer",
+        "value": "-7"
+      },
+      "rationale": "부호가 다르므로 음수이며 42÷6=7이다.",
+      "skillLabel": "정수의 나눗셈",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    },
+    {
+      "id": "a102-03",
+      "status": "draft",
+      "purpose": "assessment-draft",
+      "difficulty": "D1",
+      "inputType": "integer",
+      "prompt": "x×4=-28을 만족하는 x는?",
+      "answer": {
+        "type": "integer",
+        "value": "-7"
+      },
+      "rationale": "역연산으로 x=-28÷4=-7이고 대입 시 -28이다.",
+      "skillLabel": "역연산 검산",
+      "verification": {
+        "method": "independent-arithmetic-or-definition-check",
+        "result": "author-self-check-only",
+        "humanVerified": false
+      }
+    }
+  ]
+}

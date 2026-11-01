@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-06",
+  "unitTitle": "단항식의 계산",
+  "concepts": [
+    "계수와 차수",
+    "단항식의 곱셈과 나눗셈"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "M106-coefficient-degree",
+      "status": "draft",
+      "title": "계수와 차수 판별",
+      "reasoningStructure": "계수·문자 부분·차수를 구분한다",
+      "items": [
+        {
+          "id": "m106-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-4a²b에서 수 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-4"
+          },
+          "rationale": "수 계수는 문자 부분을 제외한 수 -4이다.",
+          "misconceptionHypothesis": "계수는 양수 크기만 뜻한다고 봄",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m106-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "7x³y²의 차수는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "단항식의 차수는 문자 지수의 합 3+2=5이다.",
+          "misconceptionHypothesis": "가장 큰 지수 3만 차수로 답함",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m106-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-2mn⁴의 계수와 차수의 곱은?",
+          "answer": {
+            "type": "integer",
+            "value": "-10"
+          },
+          "rationale": "계수 -2, 차수 1+4=5이므로 곱은 -10이다.",
+          "misconceptionHypothesis": "계수의 부호 또는 n의 차수를 누락",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M106-monomial-operations",
+      "status": "draft",
+      "title": "단항식의 곱셈과 나눗셈",
+      "reasoningStructure": "계수는 수처럼 계산하고 같은 문자의 지수를 묶는다",
+      "items": [
+        {
+          "id": "m106-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "(3x²)(-2x³)을 간단히 하라. x의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "계수 곱은 -6이고 x의 지수는 2+3=5이므로 -6x⁵이다.",
+          "misconceptionHypothesis": "계수를 더하거나 지수를 곱함",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m106-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "12a⁵b² ÷ 3a²b의 결과에서 a의 지수는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "12÷3=4, a^(5-2)=a³, b^(2-1)=b이므로 결과는 4a³b이다.",
+          "misconceptionHypothesis": "나눗셈에서 지수를 더함",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m106-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "(-5m²n)(2mn³)을 간단히 하라. 전체 차수는?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "곱은 -10m³n⁴이며 차수는 3+4=7이다.",
+          "misconceptionHypothesis": "계수 곱과 문자 지수 합산을 혼동",
+          "verification": {
+            "method": "independent-arithmetic-or-algebra-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 2,
+    "draftItems": 6,
+    "humanApprovedItems": 0
+  }
+}
