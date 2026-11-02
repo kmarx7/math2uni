@@ -68,6 +68,7 @@ export function MathLab({ block }: { block: Interactive }) {
     [inverse, setInverse] = useState(false);
   const [triangleCondition, setTriangleCondition] = useState("SSS");
   const [systemMethod, setSystemMethod] = useState("elimination");
+  const [radicalMode, setRadicalMode] = useState("simplify");
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -571,6 +572,32 @@ export function MathLab({ block }: { block: Interactive }) {
   if (block.interaction === "linear-function-graph") {
     const points = [-5,-4,-3,-2,-1,0,1,2,3,4,5].map((x) => `${30 + (x + 5) * 22},${130 - (Math.max(-10, Math.min(10, a * x + b)) + 10) * 5}`).join(" ");
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>기울기와 y절편이 직선의 모양을 정해요</span><strong>y={a}x+({b}) · 기울기 {a} · y절편 {b}</strong><p>x가 1 증가할 때 y는 {a}만큼 변합니다.</p></div><Control label="기울기 a" value={a} min={-5} max={5} change={setA}/><Control label="y절편 b" value={b} min={-10} max={10} change={setB}/><svg viewBox="0 0 280 160" role="img" aria-label={`직선 y=${a}x+(${b})의 그래프. 기울기 ${a}, y절편 ${b}.`} style={{display:"block",width:"min(100%,22rem)",margin:"1rem auto"}}><line x1="30" y1="80" x2="250" y2="80" stroke="currentColor" strokeWidth="1.5"/><line x1="140" y1="15" x2="140" y2="145" stroke="currentColor" strokeWidth="1.5"/><polyline points={points} fill="none" stroke="currentColor" strokeWidth="3"/><circle cx="140" cy={130-(Math.max(-10,Math.min(10,b))+10)*5} r="4" fill="currentColor"/><text x="250" y="96" textAnchor="end">x</text><text x="148" y="18">y</text><text x="145" y={Math.max(16,Math.min(150,130-(Math.max(-10,Math.min(10,b))+10)*5))}>{b}</text></svg><p className="helper">기울기는 가로 변화량이 1일 때 세로 변화량이고, y절편은 그래프가 y축과 만나는 y값입니다. a=0이면 수평선인 상수함수입니다.</p></div>;
+  }
+  if (block.interaction === "line-intersection") {
+    const denominator = a + 1;
+    const x = denominator === 0 ? null : (c - b) / denominator;
+    const y = x === null ? null : a * x + b;
+    const intersection = x === null ? (b === c ? "두 직선이 겹쳐 공통점이 무수히 많습니다." : "두 직선은 평행하여 교점이 없습니다.") : `교점은 (${fraction(c - b, denominator)}, ${Number(y!.toFixed(2))})입니다.`;
+    const points1 = [-5, 5].map((xv) => `${30 + (xv + 5) * 22},${130 - (Math.max(-10, Math.min(10, a * xv + b)) + 10) * 5}`).join(" ");
+    const points2 = [-5, 5].map((xv) => `${30 + (xv + 5) * 22},${130 - (Math.max(-10, Math.min(10, -xv + c)) + 10) * 5}`).join(" ");
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>두 그래프가 만나는 점은 두 식의 공통해예요</span><strong>y={a}x+({b}) 와 y=-x+({c})</strong><p>{intersection}</p></div><Control label="첫째 기울기" value={a} min={-5} max={5} change={setA}/><Control label="첫째 y절편" value={b} min={-10} max={10} change={setB}/><Control label="둘째 y절편" value={c} min={-10} max={10} change={setC}/><svg viewBox="0 0 280 160" role="img" aria-label={`두 직선 y=${a}x+(${b}), y=-x+(${c})의 교점을 비교하는 그래프`} style={{display:"block",width:"min(100%,22rem)",margin:"1rem auto"}}><line x1="30" y1="80" x2="250" y2="80" stroke="currentColor" strokeWidth="1"/><line x1="140" y1="15" x2="140" y2="145" stroke="currentColor" strokeWidth="1"/><polyline points={points1} fill="none" stroke="currentColor" strokeWidth="3"/><polyline points={points2} fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5 4"/></svg><p className="helper">교점의 좌표를 두 직선의 식에 대입하면 두 식을 동시에 만족하는지 확인할 수 있어요.</p></div>;
+  }
+  if (block.interaction === "square-root-area") {
+    const root = Math.sqrt(a);
+    const lower = Math.floor(root);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>넓이가 {a}인 정사각형의 한 변을 생각해요</span><strong>√{a} ≈ {root.toFixed(2)}</strong><p>{lower * lower} &lt; {a} &lt; {(lower + 1) * (lower + 1)}이므로 {lower} &lt; √{a} &lt; {lower + 1}입니다.</p></div><Control label="정사각형 넓이" value={a} min={1} max={100} change={setA}/><div className="ratio-track" role="img" aria-label={`정사각형 넓이는 ${a}, 한 변의 길이는 약 ${root.toFixed(2)}`}><span style={{width:`${root * 10}%`}}/></div><p className="helper">√a는 제곱하면 a가 되는 0 이상의 수입니다. 정수 제곱수 사이에서는 근삿값의 범위를 먼저 확인할 수 있어요.</p></div>;
+  }
+  if (block.interaction === "radical-simplify") {
+    let squareFactor = 1;
+    for (let factor = 1; factor * factor <= b; factor++) if (b % (factor * factor) === 0) squareFactor = factor;
+    const remaining = b / (squareFactor * squareFactor);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>근호 안의 완전제곱수를 밖으로 꺼내요</span><strong>{radicalMode === "simplify" ? `${a}√${b} = ${a * squareFactor}√${remaining}` : `1/√${b} = √${b}/${b}`}</strong><p>{radicalMode === "simplify" ? `${b} = ${squareFactor}² × ${remaining}이므로 √${b} = ${squareFactor}√${remaining}입니다.` : `분자와 분모에 √${b}를 곱하면 분모가 ${b}가 됩니다.`}</p></div><div className="question-actions" role="group" aria-label="근호 연습 방법"><button type="button" className={radicalMode === "simplify" ? "selected" : ""} aria-pressed={radicalMode === "simplify"} onClick={() => setRadicalMode("simplify")}>근호 간단히</button><button type="button" className={radicalMode === "rationalize" ? "selected" : ""} aria-pressed={radicalMode === "rationalize"} onClick={() => setRadicalMode("rationalize")}>분모 유리화</button></div><Control label="바깥 계수" value={a} min={1} max={8} change={setA}/><Control label="근호 안의 수" value={b} min={1} max={100} change={setB}/><p className="helper">양의 정수 제곱인 인수만 근호 밖으로 꺼냅니다. 유리화는 분모와 분자에 같은 근호를 곱해 값이 같은 식으로 바꾸는 과정입니다.</p></div>;
+  }
+  if (block.interaction === "polynomial-area") {
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>직사각형 넓이를 네 부분으로 나누어 전개해요</span><strong>(x+{a})(x+{b}) = x²+{a+b}x+{a*b}</strong><p>부분 넓이 x², {a}x, {b}x, {a*b}를 더하면 x²+{a+b}x+{a*b}입니다.</p></div><Control label="첫째 상수 길이" value={a} min={0} max={10} change={setA}/><Control label="둘째 상수 길이" value={b} min={0} max={10} change={setB}/><div className="ratio-track" role="img" aria-label={`곱셈의 넓이 모형에서 부분은 x제곱, ${a}x, ${b}x, ${a*b}입니다.`}><span style={{width:`${Math.max(5, (a/(a+b+1))*100)}%`}}/></div><p className="helper">분배법칙으로 각 부분의 넓이를 더합니다. 같은 문자 항끼리만 모아 x항의 계수를 정리하세요.</p></div>;
+  }
+  if (block.interaction === "factor-pairs") {
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>곱이 상수항, 합이 x의 계수가 되는 두 수를 찾아요</span><strong>x²+{a+b}x+{a*b} = (x+{a})(x+{b})</strong><p>{a}+{b}={a+b}, {a}×{b}={a*b}이므로 전개해 원래 식과 같은지 확인합니다.</p></div><Control label="첫째 인수의 수" value={a} min={0} max={10} change={setA}/><Control label="둘째 인수의 수" value={b} min={0} max={10} change={setB}/><p className="helper">인수분해는 전개의 반대 과정입니다. 두 수의 합과 곱을 모두 확인해야 합니다.</p></div>;
   }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(

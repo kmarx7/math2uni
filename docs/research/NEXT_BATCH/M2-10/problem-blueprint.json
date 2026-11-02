@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-10",
+  "unitTitle": "인수분해 기초",
+  "concepts": [
+    "공통인수",
+    "곱셈공식의 역이용"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m210-family-1",
+      "status": "draft",
+      "title": "정의·표현 확인",
+      "reasoningStructure": "개념의 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m210-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x²+5x+6을 인수분해하면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "곱이 6, 합이 5인 두 수 2,3을 찾아 (x+2)(x+3)이다.",
+          "skillLabel": "합과 곱의 인수쌍",
+          "misconceptionHypothesis": "합만 6이 되는 수를 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(x+2)(x+3)",
+            "B": "(x+1)(x+6)",
+            "C": "(x-2)(x-3)"
+          }
+        },
+        {
+          "id": "m210-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "6x+9의 공통인수를 묶으면?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "최대공약수 3을 묶어 3(2x+3)이다.",
+          "skillLabel": "공통인수",
+          "misconceptionHypothesis": "x까지 공통인수로 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m210-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x²-9를 인수분해하면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "차의 제곱으로 x²-3²=(x-3)(x+3)이다.",
+          "skillLabel": "곱셈공식의 역이용",
+          "misconceptionHypothesis": "두 항을 각각 제곱근으로 나눈 뒤 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(x-3)(x+3)",
+            "B": "(x-9)(x+1)",
+            "C": "(x-3)²"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m210-family-2",
+      "status": "draft",
+      "title": "계산·적용·검산",
+      "reasoningStructure": "조건에 맞게 계산하고 원래 표현으로 확인한다",
+      "items": [
+        {
+          "id": "m210-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x²+7x+12에서 두 수의 곱과 합은 각각?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "3×4=12이고 3+4=7이다.",
+          "skillLabel": "합과 곱의 인수쌍",
+          "misconceptionHypothesis": "합과 곱의 순서를 바꿔 읽는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "곱 12, 합 7",
+            "B": "곱 7, 합 12",
+            "C": "곱 12, 합 12"
+          }
+        },
+        {
+          "id": "m210-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "4x²+8x의 공통인수를 묶으면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "두 항의 공통인수 4x를 묶으면 4x(x+2)다.",
+          "skillLabel": "공통인수",
+          "misconceptionHypothesis": "계수 4만 묶고 x를 놓친다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "4x(x+2)",
+            "B": "4(x²+8x)",
+            "C": "x(4x+2)"
+          }
+        },
+        {
+          "id": "m210-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x²-16의 인수분해는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "16=4²이므로 x²-4²=(x-4)(x+4)다.",
+          "skillLabel": "곱셈공식의 역이용",
+          "misconceptionHypothesis": "제곱의 차를 완전제곱으로 쓴다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(x-4)(x+4)",
+            "B": "(x-8)(x+2)",
+            "C": "(x-4)²"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

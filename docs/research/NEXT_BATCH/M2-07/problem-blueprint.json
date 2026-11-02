@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-07",
+  "unitTitle": "제곱근과 실수",
+  "concepts": [
+    "제곱근의 정의",
+    "실수의 대소 관계"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m207-family-1",
+      "status": "draft",
+      "title": "정의·표현 확인",
+      "reasoningStructure": "개념의 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m207-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "√49의 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "√49는 제곱하여 49가 되는 0 이상의 수이므로 7이다.",
+          "skillLabel": "제곱근의 정의",
+          "misconceptionHypothesis": "제곱근 두 개 중 -7을 주제곱근으로 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m207-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "양수 36의 제곱근 중 음수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-6"
+          },
+          "rationale": "(-6)²=36이므로 음의 제곱근은 -6이다.",
+          "skillLabel": "양수의 두 제곱근",
+          "misconceptionHypothesis": "√36과 제곱근 전체를 구별하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m207-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "25와 36 사이에 있는 정수는?",
+          "answer": {
+            "type": "integer",
+            "value": "30"
+          },
+          "rationale": "25<30<36이다.",
+          "skillLabel": "실수의 대소 관계",
+          "misconceptionHypothesis": "제곱근 문제로 오해해 근삿값을 낸다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m207-family-2",
+      "status": "draft",
+      "title": "계산·적용·검산",
+      "reasoningStructure": "조건에 맞게 계산하고 원래 표현으로 확인한다",
+      "items": [
+        {
+          "id": "m207-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "√20은 어느 두 정수 사이인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "16<20<25이므로 4<√20<5다.",
+          "skillLabel": "완전제곱수 사이",
+          "misconceptionHypothesis": "제곱근을 20보다 큰 수로 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "4와 5",
+            "B": "3과 4",
+            "C": "5와 6"
+          }
+        },
+        {
+          "id": "m207-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "제곱하여 81이 되는 음수가 아닌 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "9²=81이고 9는 음수가 아니다.",
+          "skillLabel": "제곱근의 정의",
+          "misconceptionHypothesis": "81÷2로 계산한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m207-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "√50은 어느 두 정수 사이인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "49<50<64이므로 7<√50<8이다.",
+          "skillLabel": "근삿값 범위",
+          "misconceptionHypothesis": "50의 제곱근을 7이라고 단정한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "7과 8",
+            "B": "6과 7",
+            "C": "8과 9"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

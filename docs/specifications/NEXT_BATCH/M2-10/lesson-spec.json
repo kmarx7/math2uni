@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-10",
+  "levelId": 2,
+  "title": "인수분해 기초",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "공통인수",
+      "곱셈공식의 역이용"
+    ],
+    "prerequisiteUnits": [
+      "M2-09"
+    ],
+    "visualization": "대수 타일 묶기"
+  },
+  "objectives": [
+    "공통인수를 찾아 다항식을 곱의 꼴로 나타낸다.",
+    "간단한 이차식에서 합·곱 조건으로 인수 쌍을 찾는다.",
+    "전개하여 인수분해 결과를 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m2-10-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "다항식의 곱셈를 떠올리거나 간단한 식·수직선에 적용한다."
+    },
+    {
+      "id": "m2-10-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "공약수를 떠올리거나 간단한 식·수직선에 적용한다."
+    },
+    {
+      "id": "m2-10-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "정수의 곱과 합를 떠올리거나 간단한 식·수직선에 적용한다."
+    }
+  ],
+  "targetSkills": [
+    "m2-10-skill-1",
+    "m2-10-skill-2",
+    "m2-10-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "그림·식의 관계 관찰 → 용어와 조건 구분 → 수식 또는 그래프로 표현 → 원리 설명 → 원래 정의에 대입해 확인",
+    "principleDerivation": "간단한 이차식에서 합·곱 조건으로 인수 쌍을 찾는다.",
+    "accessibility": "그래프와 그림에 수치·텍스트 대안을 제공한다. 조작은 키보드로 가능하고 결과 문장은 aria-live로 전달한다."
+  },
+  "subunits": [
+    {
+      "id": "m2-10-u1",
+      "title": "인수와 곱",
+      "targetSkills": [
+        "m2-10-skill-1"
+      ],
+      "explanation": "인수와 곱의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "인수와 곱의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    },
+    {
+      "id": "m2-10-u2",
+      "title": "공통인수 묶기",
+      "targetSkills": [
+        "m2-10-skill-1"
+      ],
+      "explanation": "공통인수 묶기의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "공통인수 묶기의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    },
+    {
+      "id": "m2-10-u3",
+      "title": "합과 곱의 인수쌍",
+      "targetSkills": [
+        "m2-10-skill-2"
+      ],
+      "explanation": "합과 곱의 인수쌍의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "합과 곱의 인수쌍의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    },
+    {
+      "id": "m2-10-u4",
+      "title": "이차식 인수분해",
+      "targetSkills": [
+        "m2-10-skill-2"
+      ],
+      "explanation": "이차식 인수분해의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "이차식 인수분해의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    },
+    {
+      "id": "m2-10-u5",
+      "title": "곱셈공식 역이용",
+      "targetSkills": [
+        "m2-10-skill-2"
+      ],
+      "explanation": "곱셈공식 역이용의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "곱셈공식 역이용의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    },
+    {
+      "id": "m2-10-u6",
+      "title": "전개로 검산",
+      "targetSkills": [
+        "m2-10-skill-2"
+      ],
+      "explanation": "전개로 검산의 뜻을 그림이나 구체적인 수에서 시작해 기호로 옮깁니다. 답을 얻은 뒤에는 정의나 원래 식을 사용해 다시 확인합니다.",
+      "activity": "대수 타일 묶기 활동에서 한 조건을 바꾸어 결과가 어떻게 달라지는지 관찰합니다.",
+      "check": "전개로 검산의 정의나 계산 원리를 말로 설명하고 짧은 예에 적용합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m2-10-lab",
+      "kind": "math-lab",
+      "description": "대수 타일 묶기",
+      "features": [
+        "대수 타일 묶기",
+        "값 조절",
+        "결과 검산"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함"
+  },
+  "assessmentCriteria": [
+    "식·그림·그래프가 나타내는 관계를 설명한다.",
+    "계산한 결과를 정의 또는 원래 식으로 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "공통인수의 정의·조건 혼동",
+    "곱셈공식의 역이용의 표현·적용 범위 혼동"
+  ]
+}

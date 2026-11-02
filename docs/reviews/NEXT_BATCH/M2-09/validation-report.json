@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-09",
+  "contentVersion": "0.1.0-draft",
+  "status": "reviewed",
+  "reviewerRole": "automated-and-author-self-check",
+  "independentHumanReview": false,
+  "publicationApproved": false,
+  "checks": {
+    "schema": "passed-by-content-validation",
+    "answers": "passed-by-answer-contract-tests-and-author-self-check",
+    "officialMapping": "unverified",
+    "rights": "project-original-draft",
+    "familyAndItemCounts": "passed"
+  },
+  "issues": [
+    "독립 수학·교육 검수 대기",
+    "공식 성취기준 코드 매핑 미검증"
+  ]
+}

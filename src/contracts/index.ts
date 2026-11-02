@@ -87,6 +87,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "system-application",
       "function-mapping",
       "linear-function-graph",
+      "line-intersection",
+      "square-root-area",
+      "radical-simplify",
+      "polynomial-area",
+      "factor-pairs",
     ]),
     settings: z
       .object({
