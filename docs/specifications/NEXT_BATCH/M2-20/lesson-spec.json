@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-20",
+  "levelId": 2,
+  "title": "중학 수학 연결 점검",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "식과 함수의 연결",
+      "도형과 자료 조건 해석"
+    ],
+    "prerequisiteUnits": [
+      "M2-06",
+      "M2-12",
+      "M2-14",
+      "M2-17",
+      "M2-18",
+      "M2-19"
+    ],
+    "visualization": "조건별 개념 지도"
+  },
+  "objectives": [
+    "대수·함수·도형·자료의 문제에서 주어진 조건을 분류한다.",
+    "필요한 개념을 골라 식·그래프·도형·자료 표현으로 연결한다.",
+    "풀이 결과를 원래 상황에 대입하고 전략을 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m2-20-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "일차·이차식과 함수를 간단한 그림이나 수치에 적용해 본다."
+    },
+    {
+      "id": "m2-20-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "기하 조건과 비례를 간단한 그림이나 수치에 적용해 본다."
+    },
+    {
+      "id": "m2-20-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "평균과 산포를 간단한 그림이나 수치에 적용해 본다."
+    },
+    {
+      "id": "m2-20-readiness-4",
+      "status": "diagnostic-only-not-registered",
+      "description": "문장 조건 분류를 간단한 그림이나 수치에 적용해 본다."
+    }
+  ],
+  "targetSkills": [
+    "m2-20-skill-1",
+    "m2-20-skill-2",
+    "m2-20-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "상황과 그림 확인 → 기준과 조건 구분 → 식·도형·자료 표현 → 관계 설명 → 원래 조건으로 검산",
+    "principleDerivation": "필요한 개념을 골라 식·그래프·도형·자료 표현으로 연결한다.",
+    "accessibility": "도형·그래프에는 수치와 문장 설명을 제공한다. 조작은 키보드로 가능하고 동적 결과는 aria-live로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m2-20-u1",
+      "title": "조건 읽기와 표시",
+      "targetSkills": [
+        "m2-20-skill-1"
+      ],
+      "explanation": "조건 읽기와 표시를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "조건 읽기와 표시의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-20-u2",
+      "title": "식·함수 연결",
+      "targetSkills": [
+        "m2-20-skill-1"
+      ],
+      "explanation": "식·함수 연결를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "식·함수 연결의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-20-u3",
+      "title": "도형 관계 선택",
+      "targetSkills": [
+        "m2-20-skill-2"
+      ],
+      "explanation": "도형 관계 선택를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "도형 관계 선택의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-20-u4",
+      "title": "자료 대표값·산포",
+      "targetSkills": [
+        "m2-20-skill-2"
+      ],
+      "explanation": "자료 대표값·산포를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "자료 대표값·산포의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-20-u5",
+      "title": "풀이 전략 비교",
+      "targetSkills": [
+        "m2-20-skill-2"
+      ],
+      "explanation": "풀이 전략 비교를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "풀이 전략 비교의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-20-u6",
+      "title": "검산과 다음 복습",
+      "targetSkills": [
+        "m2-20-skill-2"
+      ],
+      "explanation": "검산과 다음 복습를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "조건별 개념 지도 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "검산과 다음 복습의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m2-20-lab",
+      "kind": "math-lab",
+      "description": "조건별 개념 지도",
+      "features": [
+        "조건별 개념 지도",
+        "값 조절",
+        "결과 설명"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함"
+  },
+  "assessmentCriteria": [
+    "조건과 선택한 수학 관계를 말이나 식으로 설명한다.",
+    "답을 원래 그림·상황·자료에 대조하여 확인한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "식과 함수의 연결의 조건·용어 혼동",
+    "도형과 자료 조건 해석의 해석과 적용 범위 혼동"
+  ]
+}

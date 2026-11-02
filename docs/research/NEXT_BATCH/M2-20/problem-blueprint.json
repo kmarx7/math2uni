@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-20",
+  "unitTitle": "중학 수학 연결 점검",
+  "concepts": [
+    "식과 함수의 연결",
+    "도형과 자료 조건 해석"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m220-family-1",
+      "status": "draft",
+      "title": "표현·조건 분류",
+      "reasoningStructure": "주어진 표현과 조건에서 알맞은 개념을 선택한다",
+      "items": [
+        {
+          "id": "m220-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²-7x+12=0의 큰 해는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "(x-3)(x-4)=0이므로 두 해는 3, 4이고 큰 해는 4다.",
+          "skillLabel": "식과 함수의 연결",
+          "misconceptionHypothesis": "인수의 수와 해의 부호를 혼동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m220-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x-2)²+1의 꼭짓점 x좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "완전제곱 꼴에서 꼭짓점은 (2,1)이다.",
+          "skillLabel": "식과 함수의 연결",
+          "misconceptionHypothesis": "괄호 안 부호를 반대로 읽는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m220-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "직각변 6, 8인 직각삼각형의 빗변은?",
+          "answer": {
+            "type": "integer",
+            "value": "10"
+          },
+          "rationale": "6²+8²=100이므로 빗변은 10이다.",
+          "skillLabel": "도형 조건 해석",
+          "misconceptionHypothesis": "변 길이를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m220-family-2",
+      "status": "draft",
+      "title": "두 개념 연결 풀이",
+      "reasoningStructure": "두 관계식을 차례로 적용하고 결과를 원문 조건에 되돌린다",
+      "items": [
+        {
+          "id": "m220-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "자료 1, 3, 5의 평균은?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "자료의 합 9를 3개로 나누면 평균 3이다.",
+          "skillLabel": "자료 조건 해석",
+          "misconceptionHypothesis": "중앙값과 계산을 구별하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m220-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "같은 호의 중심각이 80°이면 원주각은?",
+          "answer": {
+            "type": "integer",
+            "value": "40"
+          },
+          "rationale": "원주각은 중심각의 절반인 40°다.",
+          "skillLabel": "도형 조건 해석",
+          "misconceptionHypothesis": "중심각과 원주각을 같게 둔다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m220-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "가로 6, 세로 8인 직사각형의 대각선 길이와 넓이를 각각 구하시오.",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "대각선은 직각삼각형에서 √(6²+8²)=10이고 넓이는 6×8=48이다. 두 조건을 각각 적용한다.",
+          "skillLabel": "대수·기하·자료 연결",
+          "misconceptionHypothesis": "이웃한 변을 분자로 쓴다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "대각선 10, 넓이 48",
+            "B": "대각선 14, 넓이 48",
+            "C": "대각선 10, 넓이 14"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-20",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "대수·함수·도형·자료의 문제에서 주어진 조건을 분류한다.\n필요한 개념을 골라 식·그래프·도형·자료 표현으로 연결한다.\n풀이 결과를 원래 상황에 대입하고 전략을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "일차·이차식과 그래프를 구별한다. 직각·닮음 조건을 찾는다. 평균과 범위의 뜻을 설명한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m2-20-u1",
+          "title": "조건 읽기와 표시",
+          "body": "문제에서 주어진 값, 구할 값, 관계 조건을 서로 다른 표시로 적습니다. 직각 표시, 같은 호 표시, 변수 단위처럼 답의 방법을 결정하는 조건을 먼저 찾습니다.",
+          "activity": "문장을 ‘주어진 것 / 관계 / 구할 것’ 세 칸으로 나눠 옮겨 적으세요.",
+          "check": "계산 전에 무엇을 알고 무엇을 구하는지 분명히 했나요?"
+        },
+        {
+          "id": "m2-20-u2",
+          "title": "식·함수 연결",
+          "body": "식은 수 사이의 관계를 기호로 나타내고 함수 그래프는 입력과 출력 관계를 그림으로 보여줍니다. 표의 한 쌍 (x,y)는 그래프의 점이 될 수 있습니다.",
+          "activity": "y=2x+1이면 x=2일 때 y=5이며 표의 (2,5)는 그래프 위 점입니다.",
+          "check": "식·표·그래프에서 같은 x,y 관계를 찾았나요?"
+        },
+        {
+          "id": "m2-20-u3",
+          "title": "도형 관계 선택",
+          "body": "직각삼각형은 피타고라스 관계를 쓰고, 닮은 도형은 대응변의 비를 씁니다. 어떤 조건이 주어졌는지에 따라 알맞은 정리를 고릅니다.",
+          "activity": "직각 표시와 세 변의 길이가 주어지면 a²+b²=c²를 선택하고, 대응각과 대응변 비가 주어지면 닮음비를 선택하세요.",
+          "check": "공식 이름보다 적용 조건을 먼저 확인했나요?"
+        },
+        {
+          "id": "m2-20-u4",
+          "title": "자료 대표값·산포",
+          "body": "평균은 자료의 중심을, 범위·분산·표준편차는 자료가 퍼진 정도를 요약합니다. 평균이 같아도 자료의 퍼짐은 다를 수 있습니다.",
+          "activity": "1,4,7과 3,4,5는 평균이 모두 4지만 범위는 각각 6과 2입니다.",
+          "check": "중심과 퍼짐을 서로 다른 정보로 구분했나요?"
+        },
+        {
+          "id": "m2-20-u5",
+          "title": "풀이 전략 비교",
+          "body": "복합 문제는 조건을 식·도형·표 중 가장 간단한 표현으로 옮긴 뒤 한 단계씩 해결합니다. 계산을 마치면 중간 결과가 다음 단계의 조건으로 쓰이는지 확인합니다.",
+          "activity": "가로 6, 세로 8인 직사각형에서 대각선은 √(6²+8²)=10이고 넓이는 6×8=48입니다.",
+          "check": "대각선에 피타고라스 정리를, 넓이에 곱셈을 각각 적용했나요?"
+        },
+        {
+          "id": "m2-20-u6",
+          "title": "검산과 다음 복습",
+          "body": "마지막 답을 원문 조건에 넣어 말이 되는지 확인합니다. 길이는 양수, 각은 도형 조건을 만족해야 하며 평균·면적 등은 단위를 붙입니다.",
+          "activity": "앞 예의 대각선 10은 6보다 크고 8보다 크며, 직사각형 넓이는 48 제곱단위입니다.",
+          "check": "답이 원래 조건과 단위에 맞는지 확인했나요?"
+        }
+      ],
+      "body": "상황과 그림 확인 → 기준과 조건 구분 → 식·도형·자료 표현 → 관계 설명 → 원래 조건으로 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "조건별 개념 지도",
+      "interaction": "middle-review",
+      "settings": {
+        "initialA": 3,
+        "initialB": 4,
+        "initialC": 5
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "가로 6, 세로 8은 직각을 이루므로 대각선과 함께 직각삼각형을 만듭니다.",
+        "대각선은 √(6²+8²)=√100=10입니다.",
+        "넓이는 가로×세로=6×8=48 제곱단위입니다. 두 결과를 각각 원래 도형과 단위에 대조합니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건의 의미를 먼저 정하고, 풀이 뒤에는 모든 원래 조건에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "식과 함수의 연결의 조건·용어 혼동 · 도형과 자료 조건 해석의 해석과 적용 범위 혼동을 다시 확인하고 관련 소단원으로 돌아가세요. 풀이 기록은 계정별 제안 미리보기 안에서 구분 저장됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 공식 성취·평가가 아니며 다음 단원은 제안 순서입니다. 복습 간격은 검증 대기입니다."
+    }
+  ]
+}

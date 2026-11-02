@@ -71,6 +71,7 @@ export function MathLab({ block }: { block: Interactive }) {
   const [radicalMode, setRadicalMode] = useState("simplify");
   const [quadraticMethod, setQuadraticMethod] = useState("factor");
   const [opensDown, setOpensDown] = useState(false);
+  const [reviewTopic, setReviewTopic] = useState("algebra");
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -627,6 +628,38 @@ export function MathLab({ block }: { block: Interactive }) {
     const largeBase = leftBase * b;
     const largeHeight = leftHeight * b;
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>닮은 도형은 대응각이 같고 대응변의 비가 일정해요</span><strong>길이비 {b}:1 · 대응변 {a}→{a*b} · 넓이비 {b*b}:1</strong><p>둘레비는 길이비와 같은 {b}:1이고, 넓이비는 길이비를 제곱한 {b*b}:1입니다.</p></div><Control label="작은 도형의 대응변" value={a} min={1} max={12} change={setA}/><Control label="확대 비율" value={b} min={1} max={6} change={setB}/><Control label="다른 대응변" value={c} min={1} max={12} change={setC}/><svg viewBox="0 0 320 150" role="img" aria-label={`닮은 도형의 확대 개념도. 작은 삼각형 대응변 ${a}, ${c}; 확대 비율 ${b}; 큰 삼각형 대응변 ${a*b}, ${c*b}`} style={{display:"block",width:"min(100%,24rem)",margin:"1rem auto"}}><path d={`M12 125 L${12+leftBase/2} ${125-leftHeight} L${12+leftBase} 125 Z M160 125 L${160+largeBase/2} ${125-largeHeight} L${160+largeBase} 125 Z`} fill="none" stroke="currentColor" strokeWidth="2"/><text x={12+leftBase/2} y="144" textAnchor="middle">{a}</text><text x={160+largeBase/2} y="144" textAnchor="middle">{a*b}</text><text x="160" y="16" textAnchor="middle">길이 × {b}</text></svg><p className="helper">그림은 확대 비율을 보여 주는 개념도입니다. 둘레비는 길이비와 같고, 넓이비는 길이비의 제곱입니다.</p></div>;
+  }
+  if (block.interaction === "pythagorean-model") {
+    const hypotenuse = Math.sqrt(a*a+b*b);
+    const scale = 100 / Math.max(a,b,hypotenuse);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>직각삼각형 세 변에 만든 정사각형의 넓이를 비교해요</span><strong>{a}² + {b}² = {a*a+b*b} = c² · c≈{hypotenuse.toFixed(2)}</strong><p>빗변 길이는 √({a*a+b*b})이고, 두 작은 정사각형 넓이의 합은 {a*a+b*b}입니다.</p></div><Control label="첫째 직각변" value={a} min={1} max={20} change={setA}/><Control label="둘째 직각변" value={b} min={1} max={20} change={setB}/><svg viewBox="0 0 300 145" role="img" aria-label={`세 정사각형 넓이 ${a*a}, ${b*b}, ${a*a+b*b}의 관계`} style={{display:"block",width:"min(100%,24rem)",margin:"1rem auto"}}><rect x="10" y={130-a*scale} width={a*scale} height={a*scale} fill="currentColor" opacity=".2" stroke="currentColor"/><rect x="85" y={130-b*scale} width={b*scale} height={b*scale} fill="currentColor" opacity=".35" stroke="currentColor"/><rect x="165" y={130-hypotenuse*scale} width={hypotenuse*scale} height={hypotenuse*scale} fill="currentColor" opacity=".12" stroke="currentColor"/><text x="10" y="142">{a*a}</text><text x="85" y="142">{b*b}</text><text x="165" y="142">{a*a+b*b}</text></svg><p className="helper">정리는 직각삼각형에서만 성립합니다. c는 직각의 맞은편에 있는 빗변입니다.</p></div>;
+  }
+  if (block.interaction === "trig-ratios") {
+    const hypotenuse = Math.sqrt(a*a+b*b);
+    const angle = Math.atan2(a,b) * 180 / Math.PI;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>각 θ에 대해 마주 보는 변·이웃한 변·빗변을 구별해요</span><strong>sinθ={a}/{hypotenuse.toFixed(2)} · cosθ={b}/{hypotenuse.toFixed(2)} · tanθ={a}/{b}</strong><p>θ≈{angle.toFixed(1)}°이며, tanθ=마주 보는 변÷이웃한 변={Number((a/b).toFixed(3))}입니다.</p></div><Control label="θ에 마주 보는 변" value={a} min={1} max={20} change={setA}/><Control label="θ에 이웃한 변" value={b} min={1} max={20} change={setB}/><svg viewBox="0 0 240 150" role="img" aria-label={`직각삼각형 변 길이 ${a}, ${b}, 빗변 ${hypotenuse.toFixed(2)}와 각 ${angle.toFixed(1)}도`} style={{display:"block",width:"min(100%,20rem)",margin:"1rem auto"}}><path d="M25 125 L205 125 L205 25 Z" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M190 125 L190 110 L205 110" fill="none" stroke="currentColor" strokeWidth="2"/><text x="110" y="145">이웃한 변 {b}</text><text x="208" y="78">마주 보는 변 {a}</text><text x="100" y="65">빗변 {hypotenuse.toFixed(2)}</text></svg><p className="helper">sin은 마주 보는 변/빗변, cos은 이웃한 변/빗변, tan은 마주 보는 변/이웃한 변입니다.</p></div>;
+  }
+  if (block.interaction === "circle-theorems") {
+    const inscribed = a/2;
+    const radians = (deg:number) => (deg*Math.PI)/180;
+    const p1={x:130+58*Math.cos(radians(-90-a/2)),y:78+58*Math.sin(radians(-90-a/2))};
+    const p2={x:130+58*Math.cos(radians(-90+a/2)),y:78+58*Math.sin(radians(-90+a/2))};
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>같은 호를 보는 중심각은 원주각의 두 배예요</span><strong>중심각 {a}° · 원주각 {inscribed}°</strong><p>원의 접점에서 반지름과 접선은 서로 수직이므로 그 각은 90°입니다.</p></div><Control label="중심각" value={a} min={0} max={180} change={setA}/><svg viewBox="0 0 260 165" role="img" aria-label={`중심각 ${a}도와 같은 호의 원주각 ${inscribed}도`} style={{display:"block",width:"min(100%,22rem)",margin:"1rem auto"}}><circle cx="130" cy="78" r="58" fill="none" stroke="currentColor" strokeWidth="2"/><line x1="130" y1="78" x2={p1.x} y2={p1.y} stroke="currentColor"/><line x1="130" y1="78" x2={p2.x} y2={p2.y} stroke="currentColor"/><line x1="130" y1="136" x2={p1.x} y2={p1.y} stroke="currentColor"/><line x1="130" y1="136" x2={p2.x} y2={p2.y} stroke="currentColor"/><circle cx="130" cy="78" r="3" fill="currentColor"/><text x="130" y="73" textAnchor="middle">중심 {a}°</text><text x="130" y="158" textAnchor="middle">원주 {inscribed}°</text></svg><p className="helper">두 각이 같은 호를 볼 때 중심각은 원주각의 두 배입니다. 각의 위치와 바라보는 호를 함께 확인하세요.</p></div>;
+  }
+  if (block.interaction === "spread-data") {
+    const values=[a,b,c];
+    const mean=values.reduce((sum,v)=>sum+v,0)/3;
+    const variance=values.reduce((sum,v)=>sum+(v-mean)**2,0)/3;
+    const xMean=2;
+    const covariance=values.reduce((sum,v,i)=>sum+((i+1)-xMean)*(v-mean),0)/3;
+    const xVariance=2/3;
+    const correlation=variance===0?null:covariance/Math.sqrt(xVariance*variance);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>자료의 흩어진 정도와 두 변수의 방향을 살펴요</span><strong>평균 {Number(mean.toFixed(2))} · 분산 {Number(variance.toFixed(2))} · 표준편차 {Math.sqrt(variance).toFixed(2)}</strong><p>x=1,2,3일 때의 상관계수는 {correlation===null?"정의되지 않음":correlation.toFixed(2)}입니다.</p></div><Control label="첫째 자료 y₁" value={a} min={0} max={15} change={setA}/><Control label="둘째 자료 y₂" value={b} min={0} max={15} change={setB}/><Control label="셋째 자료 y₃" value={c} min={0} max={15} change={setC}/><svg viewBox="0 0 240 150" role="img" aria-label={`산점도 자료는 (1,${a}), (2,${b}), (3,${c})`} style={{display:"block",width:"min(100%,20rem)",margin:"1rem auto"}}><line x1="25" y1="125" x2="220" y2="125" stroke="currentColor"/><line x1="25" y1="15" x2="25" y2="125" stroke="currentColor"/>{values.map((v,i)=><g key={i}><circle cx={55+i*60} cy={125-v*7} r="5" fill="currentColor"/><text x={55+i*60} y="143" textAnchor="middle">{i+1}</text></g>)}<text x="215" y="145">x</text><text x="12" y="18">y</text></svg><p className="helper">모집단 분산은 자료 수로 나눕니다. 예를 들어 y=(2,4,6)은 양의 경향, (6,4,2)는 음의 경향, (2,6,2)는 선형 상관 없음, (0,15,1)은 약한 양의 경향을 보여요. 표준편차는 분산의 양의 제곱근입니다.</p></div>;
+  }
+  if (block.interaction === "middle-review") {
+    const topics:Record<string,{title:string,body:string}>={algebra:{title:"식·함수",body:`x²-(${a+b})x+(${a*b})=0의 해는 ${a}, ${b}입니다.`},geometry:{title:"도형·삼각비",body:`직각변 ${a}, ${b}이면 빗변은 √(${a*a+b*b})≈${Math.sqrt(a*a+b*b).toFixed(2)}입니다.`},data:{title:"자료·산포",body:`자료 ${a}, ${b}, ${c}의 평균은 ${((a+b+c)/3).toFixed(2)}입니다.`}};
+    const selected=topics[reviewTopic];
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>연결 개념을 고르고 공통 조건을 다시 확인해요</span><strong>{selected.title} 연결 점검</strong><p>{selected.body}</p></div><div className="question-actions" role="group" aria-label="복습 주제 선택">{Object.entries(topics).map(([id,item])=><button key={id} type="button" className={reviewTopic===id?"selected":""} aria-pressed={reviewTopic===id} onClick={()=>setReviewTopic(id)}>{item.title}</button>)}</div><Control label="첫째 수" value={a} min={0} max={12} change={setA}/><Control label="둘째 수" value={b} min={0} max={12} change={setB}/><Control label="셋째 자료" value={c} min={0} max={12} change={setC}/><p className="helper">이 종합 활동은 제안 단원의 복습 안내입니다. 공식 평가나 정본 숙달도 판정이 아닙니다.</p></div>;
   }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(

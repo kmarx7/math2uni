@@ -1,0 +1,872 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-16",
+    "unitTitle": "피타고라스 정리",
+    "concepts": [
+      "직각삼각형의 변 관계",
+      "거리 계산"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m216-family-1",
+        "status": "draft",
+        "title": "조건·식 표현 판별",
+        "reasoningStructure": "직각 조건과 빗변을 판별하고 피타고라스 식을 선택한다",
+        "items": [
+          {
+            "id": "m216-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "직각변의 길이가 3과 4일 때 빗변 c를 구하는 식은?",
+            "answer": {
+              "type": "choice",
+              "value": "B"
+            },
+            "rationale": "피타고라스 정리에서 빗변의 제곱은 두 직각변 제곱의 합이므로 c=√(3²+4²)다.",
+            "skillLabel": "직각삼각형의 변 관계",
+            "misconceptionHypothesis": "빗변을 두 직각변의 합으로 구한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "3+4",
+              "B": "√(3²+4²)",
+              "C": "√(4²-3²)"
+            }
+          },
+          {
+            "id": "m216-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "직각의 맞은편에 있는 변의 이름은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "직각의 맞은편 변을 빗변이라고 한다.",
+            "skillLabel": "직각삼각형의 변 관계",
+            "misconceptionHypothesis": "가장 긴 변이면 각의 위치와 관계없이 빗변이라 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "빗변",
+              "B": "직각변",
+              "C": "높이"
+            }
+          },
+          {
+            "id": "m216-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "직각삼각형에서 a,b가 직각변이고 c가 빗변일 때 맞는 관계는?",
+            "answer": {
+              "type": "choice",
+              "value": "B"
+            },
+            "rationale": "피타고라스 정리는 직각변 제곱의 합이 빗변 제곱과 같다고 말한다.",
+            "skillLabel": "직각삼각형의 변 관계",
+            "misconceptionHypothesis": "변의 길이를 제곱하지 않고 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "a+b=c",
+              "B": "a²+b²=c²",
+              "C": "a²+b²=2c"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m216-family-2",
+        "status": "draft",
+        "title": "미지의 길이·거리 계산",
+        "reasoningStructure": "피타고라스 관계를 적용해 길이를 계산하고 조건으로 검산한다",
+        "items": [
+          {
+            "id": "m216-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "직각변이 8, 15인 직각삼각형의 빗변은?",
+            "answer": {
+              "type": "integer",
+              "value": "17"
+            },
+            "rationale": "c=√(8²+15²)=√289=17이다.",
+            "skillLabel": "직각삼각형의 변 관계",
+            "misconceptionHypothesis": "모든 삼각형에서 성립한다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m216-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "빗변 13, 한 직각변 5일 때 다른 직각변은?",
+            "answer": {
+              "type": "integer",
+              "value": "12"
+            },
+            "rationale": "b=√(13²-5²)=√144=12다.",
+            "skillLabel": "직각삼각형의 변 관계",
+            "misconceptionHypothesis": "두 변을 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m216-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "두 점 사이 가로 차가 6, 세로 차가 8이다. 거리는?",
+            "answer": {
+              "type": "integer",
+              "value": "10"
+            },
+            "rationale": "직각삼각형의 빗변으로 보면 √(6²+8²)=10이다.",
+            "skillLabel": "거리 계산",
+            "misconceptionHypothesis": "가로와 세로 차를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-17",
+    "unitTitle": "삼각비의 기초",
+    "concepts": [
+      "사인·코사인·탄젠트",
+      "직각삼각형의 길이"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m217-family-1",
+        "status": "draft",
+        "title": "기준각에 따른 비 정의",
+        "reasoningStructure": "기준각을 정해 sin, cos, tan의 변 비를 표현한다",
+        "items": [
+          {
+            "id": "m217-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "직각삼각형에서 마주 보는 변 3, 빗변 5일 때 sinθ는?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "sinθ=마주 보는 변/빗변=3/5다.",
+            "skillLabel": "사인·코사인·탄젠트",
+            "misconceptionHypothesis": "cos의 비를 쓴다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "3/5",
+              "B": "4/5",
+              "C": "5/3"
+            }
+          },
+          {
+            "id": "m217-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "이웃한 변 4, 빗변 5일 때 cosθ는?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "cosθ=이웃한 변/빗변=4/5다.",
+            "skillLabel": "사인·코사인·탄젠트",
+            "misconceptionHypothesis": "마주 보는 변을 분자로 둔다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "4/5",
+              "B": "3/5",
+              "C": "5/4"
+            }
+          },
+          {
+            "id": "m217-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "마주 보는 변 3, 이웃한 변 4일 때 tanθ는?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "tanθ=마주 보는 변/이웃한 변=3/4다.",
+            "skillLabel": "탄젠트",
+            "misconceptionHypothesis": "빗변을 분모로 사용한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "3/4",
+              "B": "3/5",
+              "C": "4/3"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m217-family-2",
+        "status": "draft",
+        "title": "삼각비로 길이 구하기",
+        "reasoningStructure": "주어진 변 비를 이용해 미지 길이 또는 다른 비를 계산한다",
+        "items": [
+          {
+            "id": "m217-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "fraction",
+            "prompt": "직각삼각형에서 마주 보는 변이 5, 빗변이 13이면 sinθ는?",
+            "answer": {
+              "type": "fraction",
+              "value": "5/13"
+            },
+            "rationale": "sinθ=마주 보는 변/빗변=5/13이다.",
+            "skillLabel": "사인·코사인·탄젠트",
+            "misconceptionHypothesis": "빗변과 각변을 혼동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m217-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "fraction",
+            "prompt": "직각삼각형에서 이웃한 변이 12, 빗변이 13이면 cosθ는?",
+            "answer": {
+              "type": "fraction",
+              "value": "12/13"
+            },
+            "rationale": "cosθ=이웃한 변/빗변=12/13이다.",
+            "skillLabel": "사인·코사인·탄젠트",
+            "misconceptionHypothesis": "이웃한 변을 빗변으로 나눈다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "빗변",
+              "B": "이웃한 변",
+              "C": "마주 보는 변"
+            }
+          },
+          {
+            "id": "m217-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "fraction",
+            "prompt": "마주 보는 변 5, 이웃한 변 12인 각 θ의 tanθ는?",
+            "answer": {
+              "type": "fraction",
+              "value": "5/12"
+            },
+            "rationale": "tanθ=마주 보는 변/이웃한 변=5/12다.",
+            "skillLabel": "사인·코사인·탄젠트",
+            "misconceptionHypothesis": "12/5로 뒤집는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-18",
+    "unitTitle": "원과 삼각형의 성질",
+    "concepts": [
+      "원주각과 중심각",
+      "원의 접선 관계"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m218-family-1",
+        "status": "draft",
+        "title": "원과 각의 조건 판별",
+        "reasoningStructure": "중심각·원주각·접선의 조건을 그림에서 식별한다",
+        "items": [
+          {
+            "id": "m218-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "같은 호를 보는 중심각이 100°이면 원주각은?",
+            "answer": {
+              "type": "integer",
+              "value": "50"
+            },
+            "rationale": "중심각은 원주각의 두 배이므로 원주각은 50°다.",
+            "skillLabel": "원주각과 중심각",
+            "misconceptionHypothesis": "중심각과 원주각을 같다고 본다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m218-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "원주각이 35°일 때 같은 호의 중심각은?",
+            "answer": {
+              "type": "integer",
+              "value": "70"
+            },
+            "rationale": "중심각=2×원주각=70°다.",
+            "skillLabel": "원주각과 중심각",
+            "misconceptionHypothesis": "원주각을 두 배로 나눠야 한다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m218-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "접점에서 반지름과 접선이 이루는 각은?",
+            "answer": {
+              "type": "integer",
+              "value": "90"
+            },
+            "rationale": "접점에서 반지름은 접선에 수직이다.",
+            "skillLabel": "원의 접선 관계",
+            "misconceptionHypothesis": "중심각의 관계를 적용한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m218-family-2",
+        "status": "draft",
+        "title": "호와 접선 관계 적용",
+        "reasoningStructure": "같은 호의 각과 접선·반지름의 관계로 미지 각을 구한다",
+        "items": [
+          {
+            "id": "m218-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "원의 같은 호 AB를 보는 두 원주각 중 하나가 35°이다. 다른 원주각은?",
+            "answer": {
+              "type": "integer",
+              "value": "35"
+            },
+            "rationale": "같은 호 AB를 보는 원주각은 크기가 같으므로 35°다.",
+            "skillLabel": "중심각·원주각·접선 관계",
+            "misconceptionHypothesis": "중심각에서 180°를 뺀다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m218-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "접점에서 반지름과 접선이 이루는 각은 몇 도인가?",
+            "answer": {
+              "type": "integer",
+              "value": "90"
+            },
+            "rationale": "접점에 그은 반지름은 접선과 수직이므로 90°다.",
+            "skillLabel": "중심각·원주각·접선 관계",
+            "misconceptionHypothesis": "48°를 그대로 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m218-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "접점에서 반지름과 접선의 관계는?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "반지름과 접선은 접점에서 수직이다.",
+            "skillLabel": "원의 접선 관계",
+            "misconceptionHypothesis": "접선과 현이 항상 수직이라고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "수직",
+              "B": "평행",
+              "C": "같은 직선"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-19",
+    "unitTitle": "산포도와 산점도",
+    "concepts": [
+      "분산과 표준편차",
+      "상관관계 해석"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m219-family-1",
+        "status": "draft",
+        "title": "중심과 퍼짐 계산",
+        "reasoningStructure": "평균·편차·분산·표준편차로 한 변수 자료를 요약한다",
+        "items": [
+          {
+            "id": "m219-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 2, 2, 5의 평균은?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "합 9를 자료 수 3으로 나누면 평균은 3이다.",
+            "skillLabel": "분산과 표준편차",
+            "misconceptionHypothesis": "자료 수로 나누지 않는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m219-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 2, 2, 5의 모집단 분산은?",
+            "answer": {
+              "type": "integer",
+              "value": "2"
+            },
+            "rationale": "평균 3에서 편차 제곱은 1,1,4이고 합 6을 자료 수 3으로 나누면 2다.",
+            "skillLabel": "분산과 표준편차",
+            "misconceptionHypothesis": "표준편차를 분산으로 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m219-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "산점도의 점들이 왼쪽 아래에서 오른쪽 위로 모이는 경향은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "두 변수가 함께 증가하는 양의 상관 경향이다.",
+            "skillLabel": "상관관계 해석",
+            "misconceptionHypothesis": "인과관계를 증명한다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "양의 상관",
+              "B": "음의 상관",
+              "C": "상관 없음"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m219-family-2",
+        "status": "draft",
+        "title": "산점도 관계 해석",
+        "reasoningStructure": "산점도에서 상관의 방향과 강도를 구분해 해석한다",
+        "items": [
+          {
+            "id": "m219-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "산점도에서 점들이 일정한 방향 없이 흩어져 있다. 선형 상관을 어떻게 해석하는가?",
+            "answer": {
+              "type": "choice",
+              "value": "C"
+            },
+            "rationale": "점들이 한 방향의 직선 경향을 보이지 않으면 선형 상관이 거의 없다고 해석한다.",
+            "skillLabel": "상관관계 해석",
+            "misconceptionHypothesis": "모든 산점도에 양의 상관이나 음의 상관이 있다고 본다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "양의 상관",
+              "B": "음의 상관",
+              "C": "상관이 거의 없음"
+            }
+          },
+          {
+            "id": "m219-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "산점도의 점들이 오른쪽으로 갈수록 내려가는 경향은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "한 변수가 커질 때 다른 변수가 작아지는 음의 상관 경향이다.",
+            "skillLabel": "상관관계 해석",
+            "misconceptionHypothesis": "두 변수의 인과관계라고 단정한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "음의 상관",
+              "B": "양의 상관",
+              "C": "상관 없음"
+            }
+          },
+          {
+            "id": "m219-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "표준편차는 무엇의 양의 제곱근인가?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "표준편차는 분산의 양의 제곱근이다.",
+            "skillLabel": "분산과 표준편차",
+            "misconceptionHypothesis": "평균의 제곱근이라고 본다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "분산",
+              "B": "평균",
+              "C": "범위"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-20",
+    "unitTitle": "중학 수학 연결 점검",
+    "concepts": [
+      "식과 함수의 연결",
+      "도형과 자료 조건 해석"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m220-family-1",
+        "status": "draft",
+        "title": "표현·조건 분류",
+        "reasoningStructure": "주어진 표현과 조건에서 알맞은 개념을 선택한다",
+        "items": [
+          {
+            "id": "m220-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "x²-7x+12=0의 큰 해는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "(x-3)(x-4)=0이므로 두 해는 3, 4이고 큰 해는 4다.",
+            "skillLabel": "식과 함수의 연결",
+            "misconceptionHypothesis": "인수의 수와 해의 부호를 혼동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m220-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x-2)²+1의 꼭짓점 x좌표는?",
+            "answer": {
+              "type": "integer",
+              "value": "2"
+            },
+            "rationale": "완전제곱 꼴에서 꼭짓점은 (2,1)이다.",
+            "skillLabel": "식과 함수의 연결",
+            "misconceptionHypothesis": "괄호 안 부호를 반대로 읽는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m220-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "직각변 6, 8인 직각삼각형의 빗변은?",
+            "answer": {
+              "type": "integer",
+              "value": "10"
+            },
+            "rationale": "6²+8²=100이므로 빗변은 10이다.",
+            "skillLabel": "도형 조건 해석",
+            "misconceptionHypothesis": "변 길이를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m220-family-2",
+        "status": "draft",
+        "title": "두 개념 연결 풀이",
+        "reasoningStructure": "두 관계식을 차례로 적용하고 결과를 원문 조건에 되돌린다",
+        "items": [
+          {
+            "id": "m220-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 1, 3, 5의 평균은?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "자료의 합 9를 3개로 나누면 평균 3이다.",
+            "skillLabel": "자료 조건 해석",
+            "misconceptionHypothesis": "중앙값과 계산을 구별하지 않는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m220-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "같은 호의 중심각이 80°이면 원주각은?",
+            "answer": {
+              "type": "integer",
+              "value": "40"
+            },
+            "rationale": "원주각은 중심각의 절반인 40°다.",
+            "skillLabel": "도형 조건 해석",
+            "misconceptionHypothesis": "중심각과 원주각을 같게 둔다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m220-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "가로 6, 세로 8인 직사각형의 대각선 길이와 넓이를 각각 구하시오.",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "대각선은 직각삼각형에서 √(6²+8²)=10이고 넓이는 6×8=48이다. 두 조건을 각각 적용한다.",
+            "skillLabel": "대수·기하·자료 연결",
+            "misconceptionHypothesis": "이웃한 변을 분자로 쓴다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "대각선 10, 넓이 48",
+              "B": "대각선 14, 넓이 48",
+              "C": "대각선 10, 넓이 14"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  }
+]

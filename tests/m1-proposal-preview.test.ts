@@ -37,11 +37,11 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 210 practice and 30 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(210);
+  it("validates 240 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(240);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id)).size).toBe(240);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(210);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id)).size).toBe(270);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(240);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
       expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);
@@ -109,6 +109,23 @@ describe("M1 proposal preview boundary", () => {
       expect(proposalAssessmentProblems.some((problem) => problem.unitId === unitId)).toBe(false);
       expect(lessonForDelivery(unitId)).toBeUndefined();
     }
+    const noCorrelation = proposalProblems.find((problem) => problem.unitId === "M2-19" && problem.prompt.includes("일정한 방향 없이"));
+    expect(noCorrelation?.answerRule).toEqual({ kind: "choice", expected: "C" });
+    const integratedGeometry = proposalProblems.find((problem) => problem.unitId === "M2-20" && problem.prompt.includes("직사각형의 대각선 길이"));
+    expect(integratedGeometry?.answerRule).toEqual({ kind: "choice", expected: "A" });
+    for (const unitId of ["M2-16", "M2-17", "M2-18", "M2-19", "M2-20"]) {
+      expect(getDraftUnitForPreview(unitId)?.status).toBe("draft");
+      const lesson = getDraftLessonForPreview(unitId)!;
+      expect(lesson.learningPhases).toHaveLength(15);
+      const conceptBlock = lesson.blocks.find((block) => block.id === "concept");
+      expect(conceptBlock?.type === "ExplanationBlock" ? conceptBlock.sections : []).toHaveLength(6);
+      expect(lesson.blocks.some((block) => block.type === "AssessmentBlock")).toBe(false);
+      const unitProblems = proposalProblems.filter((problem) => problem.unitId === unitId);
+      expect(unitProblems).toHaveLength(6);
+      expect(new Set(unitProblems.map((problem) => problem.familyId)).size).toBe(2);
+      expect(proposalAssessmentProblems.some((problem) => problem.unitId === unitId)).toBe(false);
+      expect(lessonForDelivery(unitId)).toBeUndefined();
+    }
   });
 
   it("serves answer-free practice DTOs only in development preview", () => {
@@ -132,15 +149,19 @@ describe("M1 proposal preview boundary", () => {
     expect(publicProblems("practice", "M2-08", "proposal-preview")).toHaveLength(6);
     expect(JSON.stringify(publicProblems("practice", "M2-08", "proposal-preview"))).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     expect(publicProblems("practice", "M2-11", "proposal-preview")).toHaveLength(6);
+    expect(publicProblems("practice", "M2-16", "proposal-preview")).toHaveLength(6);
+    expect(JSON.stringify(publicProblems("practice", "M2-16", "proposal-preview"))).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     expect(JSON.stringify(publicProblems("practice", "M2-11", "proposal-preview"))).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     setNodeEnv("production");
     expect(publicProblems("practice", "M1-01", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-01", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-08", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-11", "proposal-preview")).toEqual([]);
+    expect(publicProblems("practice", "M2-16", "proposal-preview")).toEqual([]);
     expect(draftUnitForPreview("M2-01")).toBeUndefined();
     expect(draftUnitForPreview("M2-10")).toBeUndefined();
     expect(draftUnitForPreview("M2-15")).toBeUndefined();
+    expect(draftUnitForPreview("M2-20")).toBeUndefined();
     expect(draftLessonForPreview("M2-01")).toBeUndefined();
   });
 

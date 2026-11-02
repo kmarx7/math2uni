@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-17",
+  "levelId": 2,
+  "title": "삼각비의 기초",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "사인·코사인·탄젠트",
+      "직각삼각형의 길이"
+    ],
+    "prerequisiteUnits": [
+      "M2-15",
+      "M2-16"
+    ],
+    "visualization": "각과 삼각비 변화"
+  },
+  "objectives": [
+    "기준각에 따라 마주 보는 변과 이웃한 변을 구별한다.",
+    "sin·cos·tan을 직각삼각형 변의 비로 나타낸다.",
+    "주어진 변의 길이에서 간단한 삼각비를 계산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m2-17-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "닮음과 대응변 비를 간단한 그림이나 수치에 적용해 본다."
+    },
+    {
+      "id": "m2-17-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "피타고라스 정리를 간단한 그림이나 수치에 적용해 본다."
+    },
+    {
+      "id": "m2-17-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "분수의 의미를 간단한 그림이나 수치에 적용해 본다."
+    }
+  ],
+  "targetSkills": [
+    "m2-17-skill-1",
+    "m2-17-skill-2",
+    "m2-17-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "상황과 그림 확인 → 기준과 조건 구분 → 식·도형·자료 표현 → 관계 설명 → 원래 조건으로 검산",
+    "principleDerivation": "sin·cos·tan을 직각삼각형 변의 비로 나타낸다.",
+    "accessibility": "도형·그래프에는 수치와 문장 설명을 제공한다. 조작은 키보드로 가능하고 동적 결과는 aria-live로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m2-17-u1",
+      "title": "기준각 정하기",
+      "targetSkills": [
+        "m2-17-skill-1"
+      ],
+      "explanation": "기준각 정하기를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "기준각 정하기의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-17-u2",
+      "title": "마주 보는 변",
+      "targetSkills": [
+        "m2-17-skill-1"
+      ],
+      "explanation": "마주 보는 변를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "마주 보는 변의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-17-u3",
+      "title": "이웃한 변과 빗변",
+      "targetSkills": [
+        "m2-17-skill-2"
+      ],
+      "explanation": "이웃한 변과 빗변를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "이웃한 변과 빗변의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-17-u4",
+      "title": "사인과 코사인",
+      "targetSkills": [
+        "m2-17-skill-2"
+      ],
+      "explanation": "사인과 코사인를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "사인과 코사인의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-17-u5",
+      "title": "탄젠트",
+      "targetSkills": [
+        "m2-17-skill-2"
+      ],
+      "explanation": "탄젠트를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "탄젠트의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m2-17-u6",
+      "title": "길이비를 삼각비로",
+      "targetSkills": [
+        "m2-17-skill-2"
+      ],
+      "explanation": "길이비를 삼각비로를 그림과 구체적인 자료로 확인하고 수학적 표현으로 옮깁니다. 결과를 얻으면 처음 조건과 비교합니다.",
+      "activity": "각과 삼각비 변화 활동에서 값을 바꾸고 그림·비율·통계 결과가 어떻게 변하는지 관찰합니다.",
+      "check": "길이비를 삼각비로의 핵심 관계를 설명하고 짧은 사례에 적용합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m2-17-lab",
+      "kind": "math-lab",
+      "description": "각과 삼각비 변화",
+      "features": [
+        "각과 삼각비 변화",
+        "값 조절",
+        "결과 설명"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함"
+  },
+  "assessmentCriteria": [
+    "조건과 선택한 수학 관계를 말이나 식으로 설명한다.",
+    "답을 원래 그림·상황·자료에 대조하여 확인한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "사인·코사인·탄젠트의 조건·용어 혼동",
+    "직각삼각형의 길이의 해석과 적용 범위 혼동"
+  ]
+}

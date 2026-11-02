@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-18",
+  "unitTitle": "원과 삼각형의 성질",
+  "concepts": [
+    "원주각과 중심각",
+    "원의 접선 관계"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m218-family-1",
+      "status": "draft",
+      "title": "원과 각의 조건 판별",
+      "reasoningStructure": "중심각·원주각·접선의 조건을 그림에서 식별한다",
+      "items": [
+        {
+          "id": "m218-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "같은 호를 보는 중심각이 100°이면 원주각은?",
+          "answer": {
+            "type": "integer",
+            "value": "50"
+          },
+          "rationale": "중심각은 원주각의 두 배이므로 원주각은 50°다.",
+          "skillLabel": "원주각과 중심각",
+          "misconceptionHypothesis": "중심각과 원주각을 같다고 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m218-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "원주각이 35°일 때 같은 호의 중심각은?",
+          "answer": {
+            "type": "integer",
+            "value": "70"
+          },
+          "rationale": "중심각=2×원주각=70°다.",
+          "skillLabel": "원주각과 중심각",
+          "misconceptionHypothesis": "원주각을 두 배로 나눠야 한다고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m218-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "접점에서 반지름과 접선이 이루는 각은?",
+          "answer": {
+            "type": "integer",
+            "value": "90"
+          },
+          "rationale": "접점에서 반지름은 접선에 수직이다.",
+          "skillLabel": "원의 접선 관계",
+          "misconceptionHypothesis": "중심각의 관계를 적용한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m218-family-2",
+      "status": "draft",
+      "title": "호와 접선 관계 적용",
+      "reasoningStructure": "같은 호의 각과 접선·반지름의 관계로 미지 각을 구한다",
+      "items": [
+        {
+          "id": "m218-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "원의 같은 호 AB를 보는 두 원주각 중 하나가 35°이다. 다른 원주각은?",
+          "answer": {
+            "type": "integer",
+            "value": "35"
+          },
+          "rationale": "같은 호 AB를 보는 원주각은 크기가 같으므로 35°다.",
+          "skillLabel": "중심각·원주각·접선 관계",
+          "misconceptionHypothesis": "중심각에서 180°를 뺀다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m218-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "접점에서 반지름과 접선이 이루는 각은 몇 도인가?",
+          "answer": {
+            "type": "integer",
+            "value": "90"
+          },
+          "rationale": "접점에 그은 반지름은 접선과 수직이므로 90°다.",
+          "skillLabel": "중심각·원주각·접선 관계",
+          "misconceptionHypothesis": "48°를 그대로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m218-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "접점에서 반지름과 접선의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "반지름과 접선은 접점에서 수직이다.",
+          "skillLabel": "원의 접선 관계",
+          "misconceptionHypothesis": "접선과 현이 항상 수직이라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "수직",
+            "B": "평행",
+            "C": "같은 직선"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

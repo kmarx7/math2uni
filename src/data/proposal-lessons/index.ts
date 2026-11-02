@@ -36,10 +36,15 @@ import draftM212 from "../../../docs/specifications/NEXT_BATCH/M2-12/content-dra
 import draftM213 from "../../../docs/specifications/NEXT_BATCH/M2-13/content-draft.json";
 import draftM214 from "../../../docs/specifications/NEXT_BATCH/M2-14/content-draft.json";
 import draftM215 from "../../../docs/specifications/NEXT_BATCH/M2-15/content-draft.json";
+import draftM216 from "../../../docs/specifications/NEXT_BATCH/M2-16/content-draft.json";
+import draftM217 from "../../../docs/specifications/NEXT_BATCH/M2-17/content-draft.json";
+import draftM218 from "../../../docs/specifications/NEXT_BATCH/M2-18/content-draft.json";
+import draftM219 from "../../../docs/specifications/NEXT_BATCH/M2-19/content-draft.json";
+import draftM220 from "../../../docs/specifications/NEXT_BATCH/M2-20/content-draft.json";
 import { draftPreviewUnitIds } from "@/data/proposal-preview-manifest";
 
 const draftLessons = new Map<string, ContentDocument>(
-  [draftM101, draftM102, draftM103, draftM104, draftM105, draftM106, draftM107, draftM108, draftM109, draftM110, draftM111, draftM112, draftM113, draftM114, draftM115, draftM116, draftM117, draftM118, draftM119, draftM120, draftM201, draftM202, draftM203, draftM204, draftM205, draftM206, draftM207, draftM208, draftM209, draftM210, draftM211, draftM212, draftM213, draftM214, draftM215].map((draft) => [
+  [draftM101, draftM102, draftM103, draftM104, draftM105, draftM106, draftM107, draftM108, draftM109, draftM110, draftM111, draftM112, draftM113, draftM114, draftM115, draftM116, draftM117, draftM118, draftM119, draftM120, draftM201, draftM202, draftM203, draftM204, draftM205, draftM206, draftM207, draftM208, draftM209, draftM210, draftM211, draftM212, draftM213, draftM214, draftM215, draftM216, draftM217, draftM218, draftM219, draftM220].map((draft) => [
     draft.unitId,
     contentSchema.parse(draft),
   ]),

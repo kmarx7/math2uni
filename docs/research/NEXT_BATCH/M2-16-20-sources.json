@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1",
+  "units": ["M2-16", "M2-17", "M2-18", "M2-19", "M2-20"],
+  "sources": [
+    {
+      "title": "교육부 2022 개정 교육과정 고시 자료",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&search=%29",
+      "status": "reference-recorded-not-revalidated-in-this-batch",
+      "use": "공식 교육과정 원문 확인 경로 기록; 단원별 코드·문구 매핑 미확정"
+    },
+    {
+      "title": "NCIC 교육과정 자료 검색",
+      "url": "https://ncic.re.kr/srch/result_more.do?cate=attach&order=desc&page=2&search=2022+개정",
+      "status": "reference-recorded-not-revalidated-in-this-batch",
+      "use": "공식 교육과정 원문 확인 경로 기록; 단원별 코드·문구 매핑 미확정"
+    }
+  ],
+  "copyright": "문항 초안은 자체 제작으로 기록; 외부 기출·교재 문항 복사 없음",
+  "humanReviewCount": 0,
+  "publicationApprovalCount": 0
+}

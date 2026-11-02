@@ -97,6 +97,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "quadratic-vertex",
       "quadratic-extrema",
       "similarity-scale",
+      "pythagorean-model",
+      "trig-ratios",
+      "circle-theorems",
+      "spread-data",
+      "middle-review",
     ]),
     settings: z
       .object({

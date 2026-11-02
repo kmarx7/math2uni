@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-16",
+  "unitTitle": "피타고라스 정리",
+  "concepts": [
+    "직각삼각형의 변 관계",
+    "거리 계산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m216-family-1",
+      "status": "draft",
+      "title": "조건·식 표현 판별",
+      "reasoningStructure": "직각 조건과 빗변을 판별하고 피타고라스 식을 선택한다",
+      "items": [
+        {
+          "id": "m216-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "직각변의 길이가 3과 4일 때 빗변 c를 구하는 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "피타고라스 정리에서 빗변의 제곱은 두 직각변 제곱의 합이므로 c=√(3²+4²)다.",
+          "skillLabel": "직각삼각형의 변 관계",
+          "misconceptionHypothesis": "빗변을 두 직각변의 합으로 구한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "3+4",
+            "B": "√(3²+4²)",
+            "C": "√(4²-3²)"
+          }
+        },
+        {
+          "id": "m216-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "직각의 맞은편에 있는 변의 이름은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "직각의 맞은편 변을 빗변이라고 한다.",
+          "skillLabel": "직각삼각형의 변 관계",
+          "misconceptionHypothesis": "가장 긴 변이면 각의 위치와 관계없이 빗변이라 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "빗변",
+            "B": "직각변",
+            "C": "높이"
+          }
+        },
+        {
+          "id": "m216-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "직각삼각형에서 a,b가 직각변이고 c가 빗변일 때 맞는 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "피타고라스 정리는 직각변 제곱의 합이 빗변 제곱과 같다고 말한다.",
+          "skillLabel": "직각삼각형의 변 관계",
+          "misconceptionHypothesis": "변의 길이를 제곱하지 않고 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "a+b=c",
+            "B": "a²+b²=c²",
+            "C": "a²+b²=2c"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m216-family-2",
+      "status": "draft",
+      "title": "미지의 길이·거리 계산",
+      "reasoningStructure": "피타고라스 관계를 적용해 길이를 계산하고 조건으로 검산한다",
+      "items": [
+        {
+          "id": "m216-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "직각변이 8, 15인 직각삼각형의 빗변은?",
+          "answer": {
+            "type": "integer",
+            "value": "17"
+          },
+          "rationale": "c=√(8²+15²)=√289=17이다.",
+          "skillLabel": "직각삼각형의 변 관계",
+          "misconceptionHypothesis": "모든 삼각형에서 성립한다고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m216-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "빗변 13, 한 직각변 5일 때 다른 직각변은?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "b=√(13²-5²)=√144=12다.",
+          "skillLabel": "직각삼각형의 변 관계",
+          "misconceptionHypothesis": "두 변을 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m216-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "두 점 사이 가로 차가 6, 세로 차가 8이다. 거리는?",
+          "answer": {
+            "type": "integer",
+            "value": "10"
+          },
+          "rationale": "직각삼각형의 빗변으로 보면 √(6²+8²)=10이다.",
+          "skillLabel": "거리 계산",
+          "misconceptionHypothesis": "가로와 세로 차를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

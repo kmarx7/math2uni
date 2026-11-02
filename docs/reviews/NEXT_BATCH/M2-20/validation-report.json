@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-20",
+  "contentVersion": "0.1.0-draft",
+  "status": "reviewed",
+  "reviewerRole": "automated-and-author-self-check",
+  "independentHumanReview": false,
+  "publicationApproved": false,
+  "checks": {
+    "schema": "passed-by-content-validation-and-typecheck",
+    "answers": "automated-grade-path-passed; independent-math-review-pending",
+    "officialMapping": "unverified",
+    "rights": "project-original-draft"
+  },
+  "issues": [
+    "사람의 독립 교육·수학 검수 대기",
+    "공식 성취기준 코드 미검증",
+    "Playwright E2E 환경에서 실행 불가(EPERM)"
+  ]
+}

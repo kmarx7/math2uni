@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-17",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "기준각에 따라 마주 보는 변과 이웃한 변을 구별한다.\nsin·cos·tan을 직각삼각형 변의 비로 나타낸다.\n주어진 변의 길이에서 간단한 삼각비를 계산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "닮음에서 대응변의 비를 읽는다. 피타고라스 정리로 빠진 변을 구한다. 분수의 비를 계산한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m2-17-u1",
+          "title": "기준각 정하기",
+          "body": "삼각비를 읽기 전에 직각이 아닌 기준각 θ를 표시합니다. 기준각을 바꾸면 마주 보는 변과 이웃한 변도 바뀌지만 빗변은 그대로입니다.",
+          "activity": "삼각형의 두 예각 중 하나를 θ로 고르고 그 각을 기준으로 변 세 개를 다시 표시하세요.",
+          "check": "변의 이름을 정하기 전에 기준각을 먼저 표시했나요?"
+        },
+        {
+          "id": "m2-17-u2",
+          "title": "마주 보는 변",
+          "body": "기준각 θ의 꼭짓점과 맞닿지 않고 그 맞은편에 있는 변을 마주 보는 변이라고 합니다. 이 변은 빗변이 아닙니다.",
+          "activity": "θ의 맞은편 변에 O(opposite)를 표시하고, θ를 반대쪽 예각으로 옮겨 이름이 달라지는지 확인하세요.",
+          "check": "마주 보는 변은 θ의 위치에 따라 달라진다는 점을 설명할 수 있나요?"
+        },
+        {
+          "id": "m2-17-u3",
+          "title": "이웃한 변과 빗변",
+          "body": "빗변은 직각의 맞은편 변으로 기준각과 관계없이 같습니다. 기준각에 이웃한 변은 θ와 맞닿은 두 변 가운데 빗변이 아닌 직각변입니다.",
+          "activity": "3-4-5 삼각형에서 θ에 3의 끝을 두면 4가 이웃한 변이고 5가 빗변입니다.",
+          "check": "기준각과 맞닿은 변 중 빗변을 제외했나요?"
+        },
+        {
+          "id": "m2-17-u4",
+          "title": "사인과 코사인",
+          "body": "sinθ=마주 보는 변/빗변이고 cosθ=이웃한 변/빗변입니다. 두 비 모두 분모가 빗변이며, 어느 직각변을 쓰는지가 다릅니다.",
+          "activity": "3-4-5 삼각형에서 θ의 맞은편이 3이면 sinθ=3/5이고, 이웃한 변이 4이면 cosθ=4/5입니다.",
+          "check": "sin과 cos의 분자 위치를 기준각에 맞게 구분했나요?"
+        },
+        {
+          "id": "m2-17-u5",
+          "title": "탄젠트",
+          "body": "tanθ=마주 보는 변/이웃한 변입니다. 빗변이 필요하지 않으므로 두 직각변의 비만 알 때 유용합니다.",
+          "activity": "3-4-5 삼각형에서 θ의 맞은편이 3, 이웃한 변이 4이면 tanθ=3/4입니다.",
+          "check": "탄젠트의 분모가 빗변이 아니라 이웃한 변임을 확인했나요?"
+        },
+        {
+          "id": "m2-17-u6",
+          "title": "길이비를 삼각비로",
+          "body": "삼각비 값과 한 변의 길이를 알면 비례식으로 다른 길이를 구할 수 있습니다. 예를 들어 sinθ=3/5이고 빗변이 10이면 마주 보는 변은 10×3/5=6입니다.",
+          "activity": "sinθ=3/5, 빗변=10을 식 O/10=3/5로 바꾸면 O=6입니다.",
+          "check": "비의 분자와 분모가 가리키는 변을 정확히 연결했나요?"
+        }
+      ],
+      "body": "상황과 그림 확인 → 기준과 조건 구분 → 식·도형·자료 표현 → 관계 설명 → 원래 조건으로 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "각과 삼각비 변화",
+      "interaction": "trig-ratios",
+      "settings": {
+        "initialA": 3,
+        "initialB": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "기준각 θ의 맞은편 변은 3, 빗변은 5이므로 sinθ=3/5입니다.",
+        "마주 보는 변과 이웃한 변의 비는 tanθ=3/4입니다.",
+        "빗변 10에서 sinθ=3/5를 쓰면 O/10=3/5이므로 마주 보는 변 O=6입니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건의 의미를 먼저 정하고, 풀이 뒤에는 모든 원래 조건에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "사인·코사인·탄젠트의 조건·용어 혼동 · 직각삼각형의 길이의 해석과 적용 범위 혼동을 다시 확인하고 관련 소단원으로 돌아가세요. 풀이 기록은 계정별 제안 미리보기 안에서 구분 저장됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 공식 성취·평가가 아니며 다음 단원은 제안 순서입니다. 복습 간격은 검증 대기입니다."
+    }
+  ]
+}

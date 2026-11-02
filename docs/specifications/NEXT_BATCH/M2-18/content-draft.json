@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-18",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "같은 호를 보는 중심각과 원주각의 관계를 설명한다.\n원의 반지름과 접선이 접점에서 수직임을 적용한다.\n각의 위치와 호의 조건을 그림에서 확인한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "중심·반지름·현을 구별한다. 삼각형의 각의 합 180°와 수직인 두 직선의 각을 확인한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m2-18-u1",
+          "title": "원과 중심",
+          "body": "원에서 중심은 원 위 모든 점까지 거리가 같은 점입니다. 중심에서 원 위 점까지 이은 선분은 반지름이고, 원 위 두 점 사이의 둥근 부분은 호입니다.",
+          "activity": "중심 O와 원 위 점 A,B를 표시하고 OA, OB가 같은 길이의 반지름인지 살펴보세요.",
+          "check": "중심·반지름·호를 그림에서 각각 찾을 수 있나요?"
+        },
+        {
+          "id": "m2-18-u2",
+          "title": "호와 중심각",
+          "body": "중심각의 꼭짓점은 원의 중심에 있습니다. 중심각은 두 반지름이 이루며, 그 각의 두 변이 만나는 원 위 점 사이의 호를 봅니다.",
+          "activity": "∠AOB가 보는 작은 호 AB를 색칠해 각과 호의 대응을 표시하세요.",
+          "check": "각의 꼭짓점이 중심인지 확인했나요?"
+        },
+        {
+          "id": "m2-18-u3",
+          "title": "원주각 읽기",
+          "body": "원주각의 꼭짓점은 원 위에 있고 두 변은 원의 다른 점을 지납니다. 원주각과 중심각의 관계를 쓸 때 두 각이 같은 호를 보는지 확인해야 합니다.",
+          "activity": "원 위 점 C에서 A,B를 잇는 두 현을 그려 ∠ACB와 호 AB를 표시하세요.",
+          "check": "중심각과 원주각이 같은 호를 보는 조건을 확인했나요?"
+        },
+        {
+          "id": "m2-18-u4",
+          "title": "중심각과 원주각",
+          "body": "같은 호를 보는 중심각은 원주각의 두 배입니다. 따라서 원주각은 중심각의 절반이고, 중심각은 원주각의 두 배입니다.",
+          "activity": "중심각이 110°라면 같은 호의 원주각은 110°÷2=55°입니다.",
+          "check": "두 각이 같은 호를 보는 조건을 먼저 확인하고 2배 관계를 적용했나요?"
+        },
+        {
+          "id": "m2-18-u5",
+          "title": "같은 호의 원주각",
+          "body": "같은 호를 보는 원주각은 크기가 같습니다. 꼭짓점이 원의 서로 다른 위치에 있어도 같은 두 끝점을 잇는 호를 바라보면 각의 크기가 같습니다.",
+          "activity": "같은 현 AB를 바라보는 두 원주각을 그리고 각의 꼭짓점을 옮겨 보세요.",
+          "check": "두 원주각이 같은 호를 보는지 확인했나요?"
+        },
+        {
+          "id": "m2-18-u6",
+          "title": "접선과 반지름",
+          "body": "접선은 원과 한 점에서 만나는 직선입니다. 접점에 그은 반지름은 접선과 수직이므로 두 선이 이루는 각은 90°입니다.",
+          "activity": "접점 T에서 반지름 OT와 접선 l을 그리고 ∠OTL=90°를 표시하세요.",
+          "check": "수직 관계가 성립하는 점은 원과 접선의 접점인가요?"
+        }
+      ],
+      "body": "상황과 그림 확인 → 기준과 조건 구분 → 식·도형·자료 표현 → 관계 설명 → 원래 조건으로 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "원 위 각 이동",
+      "interaction": "circle-theorems",
+      "settings": {
+        "initialA": 50,
+        "initialB": 0
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "중심각과 원주각이 같은 호를 보는지 그림에서 확인합니다.",
+        "같은 호의 중심각이 110°이면 원주각은 그 절반입니다.",
+        "110°÷2=55°이므로 원주각은 55°입니다. 각의 범위와 같은 호 조건을 다시 확인합니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건의 의미를 먼저 정하고, 풀이 뒤에는 모든 원래 조건에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "원주각과 중심각의 조건·용어 혼동 · 원의 접선 관계의 해석과 적용 범위 혼동을 다시 확인하고 관련 소단원으로 돌아가세요. 풀이 기록은 계정별 제안 미리보기 안에서 구분 저장됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 공식 성취·평가가 아니며 다음 단원은 제안 순서입니다. 복습 간격은 검증 대기입니다."
+    }
+  ]
+}
