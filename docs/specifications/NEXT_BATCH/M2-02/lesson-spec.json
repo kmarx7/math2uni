@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-02",
+  "levelId": 2,
+  "title": "연립일차방정식의 풀이",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "대입법",
+      "가감법"
+    ],
+    "prerequisiteUnits": [
+      "M2-01",
+      "M1-07"
+    ],
+    "visualization": "동치 식 변형"
+  },
+  "objectives": [
+    "대입법에서 한 식의 문자를 다른 식으로 바꾸는 이유를 설명한다.",
+    "계수를 맞추어 더하거나 빼는 가감법을 적용한다.",
+    "구한 순서쌍을 두 원래 식에 대입해 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m2-2-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "일차방정식 풀이를 떠올리거나 간단한 예에 적용해 본다."
+    },
+    {
+      "id": "m2-2-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "동류항 계산를 떠올리거나 간단한 예에 적용해 본다."
+    },
+    {
+      "id": "m2-2-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "등식의 성질를 떠올리거나 간단한 예에 적용해 본다."
+    }
+  ],
+  "targetSkills": [
+    "m2-2-skill-1",
+    "m2-2-skill-2",
+    "m2-2-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "상황·표·그림 확인 → 변수와 조건 구분 → 식 또는 대응 표현 → 풀이 원리 설명 → 원래 조건에 대입해 검산",
+    "principleDerivation": "계수를 맞추어 더하거나 빼는 가감법을 적용한다.",
+    "accessibility": "기호와 숫자에 설명 텍스트를 함께 제공한다. 실험실은 키보드로 조작할 수 있고 aria-live 결과 설명을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m2-2-u1",
+      "title": "대입법의 뜻",
+      "targetSkills": [
+        "m2-2-skill-1"
+      ],
+      "explanation": "대입법의 뜻에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "대입법의 뜻의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    },
+    {
+      "id": "m2-2-u2",
+      "title": "대입법으로 정리",
+      "targetSkills": [
+        "m2-2-skill-1"
+      ],
+      "explanation": "대입법으로 정리에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "대입법으로 정리의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    },
+    {
+      "id": "m2-2-u3",
+      "title": "가감법의 뜻",
+      "targetSkills": [
+        "m2-2-skill-2"
+      ],
+      "explanation": "가감법의 뜻에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "가감법의 뜻의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    },
+    {
+      "id": "m2-2-u4",
+      "title": "계수 맞추기",
+      "targetSkills": [
+        "m2-2-skill-2"
+      ],
+      "explanation": "계수 맞추기에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "계수 맞추기의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    },
+    {
+      "id": "m2-2-u5",
+      "title": "가감법 풀이",
+      "targetSkills": [
+        "m2-2-skill-2"
+      ],
+      "explanation": "가감법 풀이에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "가감법 풀이의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    },
+    {
+      "id": "m2-2-u6",
+      "title": "두 식에 대입해 검산",
+      "targetSkills": [
+        "m2-2-skill-2"
+      ],
+      "explanation": "두 식에 대입해 검산에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+      "activity": "동치 식 변형 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+      "check": "두 식에 대입해 검산의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m2-2-lab",
+      "kind": "math-lab",
+      "description": "동치 식 변형",
+      "features": [
+        "동치 식 변형",
+        "값 조절",
+        "결과 검산"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함"
+  },
+  "assessmentCriteria": [
+    "각 문자의 뜻과 조건을 분명히 설명한다.",
+    "결과를 원래 식·표·그래프와 대조해 확인한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "대입법의 뜻이나 적용 조건 혼동",
+    "가감법의 기호·변화량·해석 혼동"
+  ]
+}

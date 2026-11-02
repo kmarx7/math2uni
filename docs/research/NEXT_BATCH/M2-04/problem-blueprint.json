@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-04",
+  "unitTitle": "일차함수의 의미",
+  "concepts": [
+    "함수의 대응",
+    "일차함수의 식"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m204-family-1",
+      "status": "draft",
+      "title": "두 조건과 공통해 확인",
+      "reasoningStructure": "조건별 식을 확인하고 공통으로 만족하는 값을 찾는다",
+      "items": [
+        {
+          "id": "m204-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "함수 y=2x+1에서 x=3일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "y=2×3+1=7이다.",
+          "skillLabel": "일차함수의 식",
+          "misconceptionHypothesis": "상수 1을 곱셈 안에 넣는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m204-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=3x-2에서 x=0일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "-2"
+          },
+          "rationale": "x=0을 대입하면 y=-2다.",
+          "skillLabel": "함수의 대응",
+          "misconceptionHypothesis": "x=0이면 출력도 0이라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m204-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x가 1,2,3일 때 y=2x의 출력 합은?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "출력은 2,4,6이고 합은 12다.",
+          "skillLabel": "함수의 대응",
+          "misconceptionHypothesis": "입력 합 6을 출력 합으로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m204-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "정해진 전략이나 상황 모델로 해를 구하고 검산한다",
+      "items": [
+        {
+          "id": "m204-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "각 입력 x에 출력 y가 하나씩 정해지는 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "입력마다 출력이 하나씩 정해지는 것이 함수의 대응이다.",
+          "skillLabel": "함수의 대응",
+          "misconceptionHypothesis": "한 출력에 입력이 둘인 경우와 혼동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "함수",
+            "B": "함수가 아님",
+            "C": "정보 부족"
+          }
+        },
+        {
+          "id": "m204-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=-x+4에서 x=5일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "-1"
+          },
+          "rationale": "-5+4=-1이다.",
+          "skillLabel": "일차함수의 식",
+          "misconceptionHypothesis": "음수 곱셈 부호를 놓친다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m204-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=4x+3에서 x가 1 증가할 때 y의 변화량은?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x의 계수 4가 입력 1 증가에 대한 출력 변화량이다.",
+          "skillLabel": "함수의 대응",
+          "misconceptionHypothesis": "상수항 3을 변화량으로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

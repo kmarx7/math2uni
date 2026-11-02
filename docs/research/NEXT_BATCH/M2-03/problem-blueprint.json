@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-03",
+  "unitTitle": "연립방정식의 활용",
+  "concepts": [
+    "두 미지수 설정",
+    "조건과 해의 적합성"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m203-family-1",
+      "status": "draft",
+      "title": "두 조건과 공통해 확인",
+      "reasoningStructure": "조건별 식을 확인하고 공통으로 만족하는 값을 찾는다",
+      "items": [
+        {
+          "id": "m203-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "어른 표 x장과 어린이 표 y장, 합계 5장이다. x=2이면 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "x+y=5에 x=2를 넣어 y=3이다.",
+          "skillLabel": "두 미지수 설정",
+          "misconceptionHypothesis": "전체 5장을 어른 표 수로만 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m203-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "사과 2개와 배 1개가 5000원, 사과 1개와 배 1개가 3500원이다. 사과 한 개 가격은?",
+          "answer": {
+            "type": "integer",
+            "value": "1500"
+          },
+          "rationale": "두 식을 빼면 사과 가격이 1500원이다.",
+          "skillLabel": "조건과 해의 적합성",
+          "misconceptionHypothesis": "두 금액을 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m203-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "성인 2명·학생 1명의 입장료가 13000원이고 성인 1명·학생 1명이 8000원이다. 성인 요금은?",
+          "answer": {
+            "type": "integer",
+            "value": "5000"
+          },
+          "rationale": "두 식을 빼면 성인 요금 5000원이다.",
+          "skillLabel": "조건과 해의 적합성",
+          "misconceptionHypothesis": "학생 요금을 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m203-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "정해진 전략이나 상황 모델로 해를 구하고 검산한다",
+      "items": [
+        {
+          "id": "m203-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "십의 자리 숫자 x와 일의 자리 숫자 y의 합이 9, 차가 3이다. 십의 자리 숫자는?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "x+y=9, x-y=3을 더하면 2x=12이므로 x=6이다.",
+          "skillLabel": "두 미지수 설정",
+          "misconceptionHypothesis": "자릿값을 거꾸로 읽는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m203-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "볼펜 2자루와 노트 1권은 4000원, 볼펜 1자루와 노트 1권은 2500원이다. 볼펜 가격은?",
+          "answer": {
+            "type": "integer",
+            "value": "1500"
+          },
+          "rationale": "첫째 금액에서 둘째 금액을 빼면 볼펜 한 자루는 1500원이다.",
+          "skillLabel": "조건과 해의 적합성",
+          "misconceptionHypothesis": "수량 2를 반영하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m203-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "두 수의 합이 14, 큰 수가 작은 수보다 4 크다. 작은 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "x+y=14, x-y=4에서 x=9, y=5다.",
+          "skillLabel": "두 미지수 설정",
+          "misconceptionHypothesis": "작은 수와 큰 수의 역할을 뒤바꾼다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

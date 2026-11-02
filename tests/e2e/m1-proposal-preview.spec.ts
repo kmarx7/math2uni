@@ -27,6 +27,11 @@ for (const viewport of viewports) {
         ["M1-18", "입체도형과 부피", "같은 밑면을 층층이 쌓아 부피를 구해요"],
         ["M1-19", "자료의 정리와 대표값", "자료를 크기순으로 정리하고 대표값을 비교해요"],
         ["M1-20", "수와 식 기초 종합", "문자식과 표에서 같은 관계를 확인해요"],
+        ["M2-01", "연립일차방정식의 뜻", "두 조건을 동시에 만족하는 순서쌍을 찾아요"],
+        ["M2-02", "연립일차방정식의 풀이", "두 식에 같은 값을 대입해 해를 확인해요"],
+        ["M2-03", "연립방정식의 활용", "두 종류의 표 수량을 두 조건으로 표현해요"],
+        ["M2-04", "일차함수의 의미", "입력 하나에 출력 하나를 대응해요"],
+        ["M2-05", "일차함수의 그래프", "기울기와 y절편이 직선의 모양을 정해요"],
       ];
       for (const [unitId, title, labTitle] of units) {
         await page.goto(`/learn/${unitId}`);
@@ -67,6 +72,16 @@ for (const viewport of viewports) {
       expect(state.attempts).toHaveLength(1);
       expect(state.attempts[0]).toMatchObject({ unitId: "M1-01", problemId: "p-m1-01-m101-01", correct: false });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    });
+    test("M2 proposal practice returns public questions without answer data", async ({ page }) => {
+      await page.goto("/learn/M2-01");
+      await expect(page.getByRole("heading", { name: "연립일차방정식의 뜻", exact: true })).toBeVisible();
+      const response = await page.request.get("/api/practice?unitId=M2-01&collection=proposal-preview");
+      expect(response.status()).toBe(200);
+      const data = await response.json();
+      expect(data.problems).toHaveLength(6);
+      expect(data.families).toHaveLength(2);
+      expect(JSON.stringify(data.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     });
     test("M1-01 assessment hides answers until the complete submission and stores preview-only score", async ({ page }) => {
       await page.goto("/learn/M1-01");

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-02",
+  "unitTitle": "연립일차방정식의 풀이",
+  "concepts": [
+    "대입법",
+    "가감법"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m202-family-1",
+      "status": "draft",
+      "title": "두 조건과 공통해 확인",
+      "reasoningStructure": "조건별 식을 확인하고 공통으로 만족하는 값을 찾는다",
+      "items": [
+        {
+          "id": "m202-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x+y=11, x-y=3을 더해 구한 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "더하면 2x=14이므로 x=7이다.",
+          "skillLabel": "가감법",
+          "misconceptionHypothesis": "x 계수가 2가 된 것을 놓친다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m202-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=2x+1, x+y=10의 해에서 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "y를 대입하면 3x+1=10, x=3이다.",
+          "skillLabel": "대입법",
+          "misconceptionHypothesis": "y 식을 더해야 하는데 빼기로 처리한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m202-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "2x+y=13, x+y=8의 해에서 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "첫 식에서 둘째 식을 빼면 x=5, 따라서 y=3이다.",
+          "skillLabel": "가감법",
+          "misconceptionHypothesis": "뺄셈 후 x를 y로 읽는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m202-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "정해진 전략이나 상황 모델로 해를 구하고 검산한다",
+      "items": [
+        {
+          "id": "m202-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x=2y, x+y=12일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "2y+y=12이므로 3y=12, y=4다.",
+          "skillLabel": "대입법",
+          "misconceptionHypothesis": "x=2y를 x+y에 넣을 때 곱셈을 놓친다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m202-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "3x+y=17, 3x-y=7의 해에서 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "두 식을 더하면 6x=24이므로 x=4다.",
+          "skillLabel": "가감법",
+          "misconceptionHypothesis": "부호가 반대인 y항을 더하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m202-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x+y=9, 2x-y=6의 해에서 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "두 식을 더하면 3x=15이므로 x=5다.",
+          "skillLabel": "가감법",
+          "misconceptionHypothesis": "두 식에서 y항의 부호를 같게 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

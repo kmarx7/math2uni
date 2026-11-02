@@ -82,6 +82,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "volume-model",
       "data-summary",
       "expression-table",
+      "system-pair",
+      "system-solve",
+      "system-application",
+      "function-mapping",
+      "linear-function-graph",
     ]),
     settings: z
       .object({

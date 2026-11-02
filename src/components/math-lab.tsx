@@ -67,6 +67,7 @@ export function MathLab({ block }: { block: Interactive }) {
     [subtract, setSubtract] = useState(false),
     [inverse, setInverse] = useState(false);
   const [triangleCondition, setTriangleCondition] = useState("SSS");
+  const [systemMethod, setSystemMethod] = useState("elimination");
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -549,6 +550,27 @@ export function MathLab({ block }: { block: Interactive }) {
   if (block.interaction === "expression-table") {
     const rows = [0, 1, 2, 3, 4].map((x) => ({ x, y: a * x + b }));
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>문자식과 표에서 같은 관계를 확인해요</span><strong>y = {a}x + {b}</strong><p>x가 1 늘면 y는 {a}만큼 변하고, x=0이면 y={b}입니다.</p></div><Control label="x의 계수" value={a} min={-5} max={5} change={setA}/><Control label="처음 값" value={b} min={-10} max={10} change={setB}/><div className="table-scroll"><table><caption>y={a}x+({b})의 값 표</caption><thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead><tbody>{rows.map(({x,y}) => <tr key={x}><td>{x}</td><td>{y}</td></tr>)}</tbody></table></div><p className="helper">각 x를 식에 대입해 y를 구하고, 표의 순서쌍 (x,y)와 연결합니다. 일차 관계의 기초 표현 연습입니다.</p></div>;
+  }
+  if (block.interaction === "system-pair") {
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>두 조건을 동시에 만족하는 순서쌍을 찾아요</span><strong>(x, y) = ({a}, {b})</strong><p>x+y={a + b}, x-y={a - b}를 모두 만족하므로 공통해는 ({a}, {b})입니다.</p></div><Control label="첫째 수 x" value={a} min={-10} max={10} change={setA}/><Control label="둘째 수 y" value={b} min={-10} max={10} change={setB}/><div className="lab-result"><p>조건 1: x + y = {a + b}</p><p>조건 2: x - y = {a - b}</p></div><p className="helper">각 방정식의 해를 따로 찾는 것이 아니라 두 식을 동시에 참으로 만드는 같은 순서쌍을 찾습니다.</p></div>;
+  }
+  if (block.interaction === "system-solve") {
+    const first = a + b;
+    const second = a - b;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>두 식에 같은 값을 대입해 해를 확인해요</span><strong>x+y={first}, x-y={second}의 해는 ({a}, {b})</strong><p>{systemMethod === "elimination" ? `두 식을 더하면 2x=${first + second}, x=${a}입니다.` : `첫째 식 y=${first}-x를 둘째 식에 넣으면 2x=${first + second}, x=${a}입니다.`}</p></div><div className="question-actions" role="group" aria-label="연립방정식 풀이 방법"><button type="button" className={systemMethod === "elimination" ? "selected" : ""} aria-pressed={systemMethod === "elimination"} onClick={() => setSystemMethod("elimination")}>가감법 보기</button><button type="button" className={systemMethod === "substitution" ? "selected" : ""} aria-pressed={systemMethod === "substitution"} onClick={() => setSystemMethod("substitution")}>대입법 보기</button></div><Control label="공통해 x" value={a} min={-8} max={8} change={setA}/><Control label="공통해 y" value={b} min={-8} max={8} change={setB}/><p className="helper">같은 해를 두 원래 식에 각각 대입해 등식이 모두 성립하는지 검산합니다.</p></div>;
+  }
+  if (block.interaction === "system-application") {
+    const total = a + b;
+    const cost = a * 3000 + b * 1000;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>두 종류의 표 수량을 두 조건으로 표현해요</span><strong>어른 {a}장 · 어린이 {b}장 = 총 {total}장</strong><p>요금 조건: 3000x + 1000y = {cost}원</p></div><Control label="어른 표 수" value={a} min={0} max={10} change={setA}/><Control label="어린이 표 수" value={b} min={0} max={10} change={setB}/><div className="table-scroll"><table><caption>표 종류별 수량과 요금</caption><thead><tr><th scope="col">종류</th><th scope="col">수량</th><th scope="col">한 장 요금</th><th scope="col">금액</th></tr></thead><tbody><tr><th scope="row">어른</th><td>{a}</td><td>3000원</td><td>{a * 3000}원</td></tr><tr><th scope="row">어린이</th><td>{b}</td><td>1000원</td><td>{b * 1000}원</td></tr></tbody></table></div><p className="helper">x, y가 각각 무엇을 세는지 먼저 정하고, 장수 조건과 금액 조건을 서로 다른 식으로 세웁니다.</p></div>;
+  }
+  if (block.interaction === "function-mapping") {
+    const value = a * c + b;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>입력 하나에 출력 하나를 대응해요</span><strong>y={a}x+({b}), x={c}일 때 y={value}</strong><p>입력 x마다 정해진 규칙으로 출력 y가 하나씩 정해집니다.</p></div><Control label="계수 a" value={a} min={-5} max={5} change={setA}/><Control label="상수 b" value={b} min={-10} max={10} change={setB}/><Control label="입력 x" value={c} min={-5} max={5} change={setC}/><div className="table-scroll"><table><caption>y={a}x+({b}) 대응표</caption><thead><tr><th scope="col">입력 x</th><th scope="col">출력 y</th></tr></thead><tbody>{[-2,-1,0,1,2].map((x) => <tr key={x}><td>{x}</td><td>{a*x+b}</td></tr>)}</tbody></table></div><p className="helper">함수는 허용된 각 입력에 출력이 정확히 하나 대응하는 관계입니다. a가 0이 아니면 일차함수이고, a=0이면 상수함수입니다.</p></div>;
+  }
+  if (block.interaction === "linear-function-graph") {
+    const points = [-5,-4,-3,-2,-1,0,1,2,3,4,5].map((x) => `${30 + (x + 5) * 22},${130 - (Math.max(-10, Math.min(10, a * x + b)) + 10) * 5}`).join(" ");
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>기울기와 y절편이 직선의 모양을 정해요</span><strong>y={a}x+({b}) · 기울기 {a} · y절편 {b}</strong><p>x가 1 증가할 때 y는 {a}만큼 변합니다.</p></div><Control label="기울기 a" value={a} min={-5} max={5} change={setA}/><Control label="y절편 b" value={b} min={-10} max={10} change={setB}/><svg viewBox="0 0 280 160" role="img" aria-label={`직선 y=${a}x+(${b})의 그래프. 기울기 ${a}, y절편 ${b}.`} style={{display:"block",width:"min(100%,22rem)",margin:"1rem auto"}}><line x1="30" y1="80" x2="250" y2="80" stroke="currentColor" strokeWidth="1.5"/><line x1="140" y1="15" x2="140" y2="145" stroke="currentColor" strokeWidth="1.5"/><polyline points={points} fill="none" stroke="currentColor" strokeWidth="3"/><circle cx="140" cy={130-(Math.max(-10,Math.min(10,b))+10)*5} r="4" fill="currentColor"/><text x="250" y="96" textAnchor="end">x</text><text x="148" y="18">y</text><text x="145" y={Math.max(16,Math.min(150,130-(Math.max(-10,Math.min(10,b))+10)*5))}>{b}</text></svg><p className="helper">기울기는 가로 변화량이 1일 때 세로 변화량이고, y절편은 그래프가 y축과 만나는 y값입니다. a=0이면 수평선인 상수함수입니다.</p></div>;
   }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(

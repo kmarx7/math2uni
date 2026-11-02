@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-01",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "두 미지수와 두 조건을 각각 식으로 나타낸다.\n연립방정식의 해를 두 식을 동시에 만족하는 순서쌍으로 설명한다.\n후보 순서쌍을 각 방정식에 대입해 공통해인지 확인한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "일차방정식의 해를 떠올리거나 간단한 예에 적용해 본다.\n순서쌍의 순서를 떠올리거나 간단한 예에 적용해 본다.\n등식에 값 대입를 떠올리거나 간단한 예에 적용해 본다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m2-1-u1",
+          "title": "두 양을 문자로 나타내기",
+          "body": "두 양을 문자로 나타내기에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "두 양을 문자로 나타내기의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        },
+        {
+          "id": "m2-1-u2",
+          "title": "조건마다 방정식 만들기",
+          "body": "조건마다 방정식 만들기에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "조건마다 방정식 만들기의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        },
+        {
+          "id": "m2-1-u3",
+          "title": "한 식의 해와 공통해",
+          "body": "한 식의 해와 공통해에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "한 식의 해와 공통해의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        },
+        {
+          "id": "m2-1-u4",
+          "title": "순서쌍 대입 확인",
+          "body": "순서쌍 대입 확인에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "순서쌍 대입 확인의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        },
+        {
+          "id": "m2-1-u5",
+          "title": "해가 되는 쌍 찾기",
+          "body": "해가 되는 쌍 찾기에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "해가 되는 쌍 찾기의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        },
+        {
+          "id": "m2-1-u6",
+          "title": "두 조건을 함께 해석",
+          "body": "두 조건을 함께 해석에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+          "activity": "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+          "check": "두 조건을 함께 해석의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+        }
+      ],
+      "body": "상황·표·그림 확인 → 변수와 조건 구분 → 식 또는 대응 표현 → 풀이 원리 설명 → 원래 조건에 대입해 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "두 저울 조건",
+      "interaction": "system-pair",
+      "settings": {
+        "initialA": 3,
+        "initialB": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "두 양을 문자로 나타내기에서 무엇을 알고 무엇을 찾아야 하는지 문장과 수식으로 나누어 봅니다. 계산이 끝나면 주어진 모든 조건에 다시 대입합니다.",
+        "두 저울 조건 활동에서 값을 바꾸고 조건 또는 출력의 변화를 관찰합니다.",
+        "두 양을 문자로 나타내기의 핵심 규칙을 말로 설명하고 작은 사례를 해결합니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건의 의미를 먼저 정하고, 풀이 뒤에는 모든 원래 조건에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "공통해의 뜻이나 적용 조건 혼동 · 두 조건의 식 표현의 기호·변화량·해석 혼동을 다시 확인하고 관련 소단원으로 돌아가세요. 풀이 기록은 계정별 제안 미리보기 안에서 구분 저장됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 공식 성취·평가가 아니며 다음 단원은 제안 순서입니다. 복습 간격은 검증 대기입니다."
+    }
+  ]
+}

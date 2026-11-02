@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-05",
+  "unitTitle": "일차함수의 그래프",
+  "concepts": [
+    "기울기와 절편",
+    "식과 그래프 변환"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m205-family-1",
+      "status": "draft",
+      "title": "두 조건과 공통해 확인",
+      "reasoningStructure": "조건별 식을 확인하고 공통으로 만족하는 값을 찾는다",
+      "items": [
+        {
+          "id": "m205-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=3x+2의 기울기는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "x의 계수가 기울기다.",
+          "skillLabel": "기울기와 절편",
+          "misconceptionHypothesis": "y절편 2를 기울기로 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m205-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=-2x+5의 y절편은?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "x=0일 때 y=5이므로 y절편은 5다.",
+          "skillLabel": "기울기와 절편",
+          "misconceptionHypothesis": "기울기 -2를 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m205-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "(1,3),(3,7)을 지나는 직선의 기울기는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "기울기=(7-3)/(3-1)=4/2=2다.",
+          "skillLabel": "기울기 삼각형",
+          "misconceptionHypothesis": "x와 y의 변화량을 반대로 나눈다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m205-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "정해진 전략이나 상황 모델로 해를 구하고 검산한다",
+      "items": [
+        {
+          "id": "m205-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=x-4의 그래프는 y축과 어느 점에서 만나는가?",
+          "answer": {
+            "type": "integer",
+            "value": "-4"
+          },
+          "rationale": "x=0일 때 y=-4이므로 (0,-4)에서 만난다.",
+          "skillLabel": "식과 그래프 변환",
+          "misconceptionHypothesis": "기울기 1을 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m205-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "기울기 2, y절편 -3인 직선의 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "기울기-절편형 y=mx+b에 넣으면 y=2x-3이다.",
+          "skillLabel": "기울기와 절편",
+          "misconceptionHypothesis": "절편 부호를 양수로 쓴다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "y=2x-3",
+            "B": "y=-3x+2",
+            "C": "y=2x+3"
+          }
+        },
+        {
+          "id": "m205-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=-x+1에서 x가 2 증가하면 y의 변화량은?",
+          "answer": {
+            "type": "integer",
+            "value": "-2"
+          },
+          "rationale": "기울기 -1에 x 변화량 2를 곱해 y 변화는 -2다.",
+          "skillLabel": "기울기 삼각형",
+          "misconceptionHypothesis": "기울기의 부호를 무시한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}
