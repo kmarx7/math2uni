@@ -1,0 +1,181 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-04",
+  "unitTitle": "항등식과 미정계수",
+  "concepts": [
+    "계수 비교",
+    "수치 대입법"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m304-family-1",
+      "status": "draft",
+      "title": "계수 비교",
+      "reasoningStructure": "항등식 양변을 정리하여 같은 차수 계수를 연결한다",
+      "items": [
+        {
+          "id": "m304-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "모든 x에 대해 A(x+2)+B=3x+11일 때 (A,B)는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "왼쪽은 Ax+2A+B다. x 계수에서 A=3, 상수항에서 2A+B=11이므로 B=5다.",
+          "skillLabel": "계수 비교",
+          "misconceptionHypothesis": "상수항 비교에서 2A를 빼먹는다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(3,5)",
+            "B": "(5,3)",
+            "C": "(3,11)"
+          }
+        },
+        {
+          "id": "m304-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "모든 x에 대해 ax²+3x+b=2x²+3x−4일 때 (a,b)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "같은 차수의 계수를 비교하여 a=2, b=−4다.",
+          "skillLabel": "계수 비교",
+          "misconceptionHypothesis": "x 계수만 비교하고 상수항을 놓친다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "(−4,2)",
+            "B": "(2,−4)",
+            "C": "(2,4)"
+          }
+        },
+        {
+          "id": "m304-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "모든 x에 대해 (a+1)x+2=x+5를 만족하는 a가 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "x 계수는 a=0을 요구하지만 상수항 2=5가 되어 모순이므로 그런 a는 없다.",
+          "skillLabel": "계수 비교",
+          "misconceptionHypothesis": "한 계수 조건만 만족하면 항등식이라고 본다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "a=3",
+            "B": "a=0",
+            "C": "만족하는 a가 없다"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m304-family-2",
+      "status": "draft",
+      "title": "수치 대입으로 미정계수 찾기",
+      "reasoningStructure": "쉬운 서로 다른 x값을 넣어 계수 조건을 만들고 검산한다",
+      "items": [
+        {
+          "id": "m304-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "모든 x에 대해 Ax+B=5x+7이다. x=0,1을 차례로 대입해 구한 A는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "x=0에서 B=7, x=1에서 A+7=12이므로 A=5다.",
+          "skillLabel": "수치 대입법",
+          "misconceptionHypothesis": "x=0만 대입해 상수항만 찾고 멈춘다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m304-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "모든 x에 대해 kx²+1=3x²+1이다. x=1을 대입해 구한 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "x=1에서 k+1=4이므로 k=3이다. 원래 항등식에도 맞는다.",
+          "skillLabel": "수치 대입법",
+          "misconceptionHypothesis": "대입 후 양변의 상수항 1을 처리하지 않는다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m304-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "Ax+B를 정할 때 두 계수 정보를 얻도록 고를 x값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "서로 다른 x값 0과 1은 B와 A+B라는 서로 다른 식을 준다.",
+          "skillLabel": "수치 대입법",
+          "misconceptionHypothesis": "같은 x값을 두 번 넣어도 새로운 조건이 생긴다고 생각한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "0과 1",
+            "B": "1과 1",
+            "C": "0과 0"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

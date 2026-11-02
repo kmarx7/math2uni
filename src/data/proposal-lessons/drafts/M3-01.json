@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-01",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "한 문자 다항식의 항·계수·지수를 구별하고, 문자 지수는 0 이상의 정수여야 함을 판별한다.\n동류항을 정리하고 0이 아닌 다항식의 차수와 최고차항의 계수를 결정한다.\n다항식을 한 문자에 대해 차수가 큰 항부터 배열하고 누락된 차수를 알아본다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "문자식에서 항을 구분하고, 같은 문자와 지수를 가진 항의 계수를 더하며, 지수의 크기를 비교하는 방법을 확인한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-01-u1",
+          "title": "항과 다항식",
+          "body": "한 문자 x에 대한 다항식은 각 항의 x 지수가 0 이상의 정수인 식입니다. 이 초안에서는 음의 지수와 분수 지수는 범위에 넣지 않습니다. 항은 덧셈이나 뺄셈 기호로 나뉘는 한 덩어리이며, 3x²−2x+5의 항은 3x², −2x, 5입니다. 빼기 기호는 다음 항의 부호에 포함합니다.",
+          "activity": "3x²−2x+5에서 항을 분리하고, 각 지수가 0 이상의 정수인지 확인하세요. x⁻¹+3과 x^(1/2)+3은 이 범위의 다항식인지 설명하세요.",
+          "check": "각 항의 지수가 0 이상의 정수인지 확인해 한 문자 다항식을 구별할 수 있나요?"
+        },
+        {
+          "id": "m3-01-u2",
+          "title": "계수와 상수항",
+          "body": "계수는 문자 부분에 곱해진 수입니다. −2x의 계수는 −2이고 x²의 계수는 생략된 1입니다. 문자 없이 수만 있는 항은 상수항이며 여기서는 5입니다.",
+          "activity": "−4x³+7x−9에서 각 항의 계수와 상수항을 표로 나누세요.",
+          "check": "음수 부호와 생략된 계수 1을 놓치지 않았나요?"
+        },
+        {
+          "id": "m3-01-u3",
+          "title": "항의 차수와 다항식의 범위",
+          "body": "이 단원에서는 실수 계수를 갖는 한 문자 다항식을 다룹니다. 각 항에서 문자의 지수는 0 이상의 정수여야 합니다. 4x³의 항의 차수는 3, −7x의 차수는 1, 상수 6은 x⁰의 계수가 있는 항이므로 차수 0입니다. x⁻¹이나 x^(1/2)은 이 정의에 맞지 않아 다항식의 항이 아닙니다.",
+          "activity": "4x³−7x+6, x⁻¹+3, x^(1/2)+1을 지수 조건으로 분류하고 다항식인 식에서 각 항의 차수를 표시하세요.",
+          "check": "각 문자의 지수가 0 이상의 정수인지 확인하고, 상수항의 차수를 0으로 설명하나요?"
+        },
+        {
+          "id": "m3-01-u4",
+          "title": "동류항과 정리",
+          "body": "문자와 지수가 같은 항은 동류항입니다. 3x²+2x−x²+5x는 x²항끼리, x항끼리 계수를 더해 2x²+7x가 됩니다. 다른 차수 항은 합칠 수 없습니다.",
+          "activity": "4x²−3x+2x²+x를 차수별로 묶고 동류항만 합치세요.",
+          "check": "x²항과 x항을 서로 더하지 않았나요?"
+        },
+        {
+          "id": "m3-01-u5",
+          "title": "다항식의 차수와 최고차항",
+          "body": "0이 아닌 항 중 차수가 가장 큰 항을 최고차항이라 하며 그 차수가 다항식의 차수입니다. −2x⁵+3x²−1의 최고차항은 −2x⁵, 차수는 5입니다.",
+          "activity": "−3x⁴+8x−2에서 최고차항과 다항식의 차수를 찾아보세요.",
+          "check": "계수의 절댓값이 큰 항이 아니라 차수가 큰 항을 골랐나요?"
+        },
+        {
+          "id": "m3-01-u6",
+          "title": "내림차순 배열과 누락 항",
+          "body": "내림차순은 차수가 높은 항부터 낮은 항 순서로 쓰는 것입니다. 2x−3x³+4−x²는 −3x³−x²+2x+4입니다. x² 다음에 x항이 없으면 그 계수는 0입니다.",
+          "activity": "x⁴−3x²+1을 차수 4,3,2,1,0의 계수 줄로 쓰면 1,0,−3,0,1입니다.",
+          "check": "없는 항을 마음대로 만들지 않고 계수 0으로 표시했나요?"
+        }
+      ],
+      "body": "항의 구조 확인 → 조건 분류 → 식으로 표현 → 계산·전개 → 원래 식으로 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "항과 차수 분류",
+      "interaction": "polynomial-terms",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3,
+        "initialC": 1
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "문제: 4x²−3x+2+x²+5x−7을 정리하고 차수와 최고차항의 계수를 말하시오.",
+        "x²항, x항, 상수항을 각각 묶는다.",
+        "(4+1)x²+(−3+5)x+(2−7)=5x²+2x−5로 정리한다.",
+        "가장 큰 지수는 2이고 최고차항 계수는 5다.",
+        "정답: 5x²+2x−5, 차수 2, 최고차항 계수 5."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "먼저 항을 부호까지 나누고, 각 항의 지수를 적은 다음 같은 차수끼리만 모으세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "항을 잘못 나누었으면 빼기 기호를 다음 항에 붙입니다. 차수를 혼동했다면 계수의 크기가 아니라 지수를 비교합니다. 내림차순에서 빠진 차수는 계수 0으로 표시합니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "이 제안 콘텐츠는 개발 검토용 초안이며 공식 성취·평가가 아닙니다. 개념별 복습 간격은 검증 대기입니다."
+    }
+  ]
+}

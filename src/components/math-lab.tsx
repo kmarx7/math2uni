@@ -10,6 +10,30 @@ function fraction(n: number, d: number) {
   const common = gcd(n, d) || 1;
   return d / common === 1 ? String(n / common) : `${n / common}/${d / common}`;
 }
+function signedConstant(value: number) {
+  if (value === 0) return "";
+  return value < 0 ? ` − ${Math.abs(value)}` : ` + ${value}`;
+}
+function signedVariableTerm(coefficient: number, variable: string) {
+  if (coefficient === 0) return "";
+  const magnitude = Math.abs(coefficient);
+  const term = `${magnitude === 1 ? "" : magnitude}${variable}`;
+  return coefficient < 0 ? ` − ${term}` : ` + ${term}`;
+}
+function polynomial(terms: Array<[number, string]>) {
+  const visible = terms.filter(([coefficient]) => coefficient !== 0);
+  if (visible.length === 0) return "0";
+  return visible.map(([coefficient, variable], index) => {
+    const magnitude = Math.abs(coefficient);
+    const body = variable ? `${magnitude === 1 ? "" : magnitude}${variable}` : String(magnitude);
+    return index === 0
+      ? `${coefficient < 0 ? "−" : ""}${body}`
+      : `${coefficient < 0 ? " − " : " + "}${body}`;
+  }).join("");
+}
+function divisorXMinus(value: number) {
+  return `x${value < 0 ? ` + ${Math.abs(value)}` : value > 0 ? ` − ${value}` : ""}`;
+}
 function FractionBar({ n, d }: { n: number; d: number }) {
   return (
     <div
@@ -598,6 +622,37 @@ export function MathLab({ block }: { block: Interactive }) {
   }
   if (block.interaction === "polynomial-area") {
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>직사각형 넓이를 네 부분으로 나누어 전개해요</span><strong>(x+{a})(x+{b}) = x²+{a+b}x+{a*b}</strong><p>부분 넓이 x², {a}x, {b}x, {a*b}를 더하면 x²+{a+b}x+{a*b}입니다.</p></div><Control label="첫째 상수 길이" value={a} min={0} max={10} change={setA}/><Control label="둘째 상수 길이" value={b} min={0} max={10} change={setB}/><div className="ratio-track" role="img" aria-label={`곱셈의 넓이 모형에서 부분은 x제곱, ${a}x, ${b}x, ${a*b}입니다.`}><span style={{width:`${Math.max(5, (a/(a+b+1))*100)}%`}}/></div><p className="helper">분배법칙으로 각 부분의 넓이를 더합니다. 같은 문자 항끼리만 모아 x항의 계수를 정리하세요.</p></div>;
+  }
+  if (block.interaction === "polynomial-terms") {
+    const degree = a !== 0 ? 2 : b !== 0 ? 1 : c !== 0 ? 0 : -1;
+    const expression = polynomial([[a, "x²"], [b, "x"], [c, ""]]);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>항별 계수와 차수를 분류해요</span><strong>{expression}</strong><p>계수는 ({a}, {b}, {c})이고 {degree < 0 ? "영다항식은 이 활동의 차수 판별 범위 밖이에요." : `차수는 ${degree}입니다.`} 빠진 차수의 계수는 0이에요.</p></div><Control label="x²의 계수" value={a} min={-8} max={8} change={setA}/><Control label="x의 계수" value={b} min={-8} max={8} change={setB}/><Control label="상수항" value={c} min={-8} max={8} change={setC}/><p className="helper">내림차순 표준형은 높은 차수부터 씁니다. 계수가 0인 항은 생략할 수 있지만, 차수별 계수표에서는 0으로 기록해요.</p></div>;
+  }
+  if (block.interaction === "polynomial-multiplication") {
+    const x2 = a + b, x = a * b + c, constant = a * c;
+    const firstFactor = `x${signedConstant(a)}`;
+    const secondFactor = `x²${signedVariableTerm(b, "x")}${signedConstant(c)}`;
+    const expanded = polynomial([[1, "x³"], [x2, "x²"], [x, "x"], [constant, ""]]);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>곱의 각 부분을 모두 전개해요</span><strong>({firstFactor})({secondFactor}) = {expanded}</strong><p>x를 세 항에 곱하고 {a}도 세 항에 곱한 뒤 같은 차수끼리 모아요.</p></div><Control label="첫째 괄호의 상수항" value={a} min={-5} max={5} change={setA}/><Control label="둘째 괄호의 x 계수" value={b} min={-5} max={5} change={setB}/><Control label="둘째 괄호의 상수항" value={c} min={-5} max={5} change={setC}/><table><caption>분배법칙의 여섯 곱</caption><thead><tr><th scope="col">곱하는 항</th><th scope="col">x²</th><th scope="col">{signedVariableTerm(b, "x").trim() || "0"}</th><th scope="col">{c || 0}</th></tr></thead><tbody><tr><th scope="row">x</th><td>x³</td><td>{b === 0 ? "0" : `${b < 0 ? "−" : ""}${Math.abs(b) === 1 ? "" : Math.abs(b)}x²`}</td><td>{c}x</td></tr><tr><th scope="row">{a || 0}</th><td>{a === 0 ? "0" : `${a < 0 ? "−" : ""}${Math.abs(a) === 1 ? "" : Math.abs(a)}x²`}</td><td>{a * b === 0 ? "0" : `${a*b < 0 ? "−" : ""}${Math.abs(a*b) === 1 ? "" : Math.abs(a*b)}x`}</td><td>{a*c}</td></tr></tbody></table><p className="helper">여섯 칸을 빠짐없이 채우고, 차수가 같은 항만 합칩니다.</p></div>;
+  }
+  if (block.interaction === "polynomial-division") {
+    const quotientConstant = a, remainderX = b - 1, remainderConstant = c - a;
+    const quotient = `x${signedConstant(quotientConstant)}`;
+    const remainder = polynomial([[remainderX, "x"], [remainderConstant, ""]]);
+    const dividend = polynomial([[1, "x³"], [a, "x²"], [b, "x"], [c, ""]]);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>몫과 나머지를 식으로 검산해요</span><strong>Q={quotient}, R={remainder}</strong><p>(x²+1)({quotient}) + ({remainder}) = {dividend}. 나머지 차수는 제수보다 낮습니다.</p></div><Control label="x²의 계수" value={a} min={-5} max={5} change={setA}/><Control label="x의 계수" value={b} min={-5} max={5} change={setB}/><Control label="상수항" value={c} min={-5} max={5} change={setC}/><p className="helper">계산한 몫을 제수에 곱하고 나머지를 더해 처음 식으로 돌아오는지 확인합니다.</p></div>;
+  }
+  if (block.interaction === "identity-coefficients") {
+    const left = `(x${signedConstant(a)})(x${signedConstant(b)})`;
+    const right = polynomial([[1, "x²"], [a + b, "x"], [a * b, ""]]);
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>항등식의 같은 차수 계수를 비교해요</span><strong>{left} = {right}</strong><p>x²의 계수는 양쪽 모두 1, x의 계수는 {a}+{b}={a+b}, 상수항은 {a}×{b}={a*b}입니다.</p></div><Control label="첫째 상수항" value={a} min={-8} max={8} change={setA}/><Control label="둘째 상수항" value={b} min={-8} max={8} change={setB}/><table><caption>차수별 계수 비교</caption><thead><tr><th scope="col">차수</th><th scope="col">왼쪽</th><th scope="col">오른쪽</th></tr></thead><tbody><tr><th scope="row">x²</th><td>1</td><td>1</td></tr><tr><th scope="row">x</th><td>{a+b}</td><td>{a+b}</td></tr><tr><th scope="row">상수</th><td>{a*b}</td><td>{a*b}</td></tr></tbody></table></div>;
+  }
+  if (block.interaction === "remainder-theorem") {
+    const value = a * a + b * a + c;
+    const expression = polynomial([[1, "x²"], [b, "x"], [c, ""]]);
+    const divisor = divisorXMinus(a);
+    const squaredValue = a < 0 ? `(${a})²` : `${a}²`;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>P(a)가 나머지예요</span><strong>P({a}) = {value}</strong><p>다항식 P(x)={expression}를 {divisor}로 나눌 때 나머지는 P({a})={squaredValue}+({b})×({a})+({c})={value}입니다.</p></div><Control label="나누는 식 x−a의 a" value={a} min={-8} max={8} change={setA}/><Control label="x의 계수" value={b} min={-8} max={8} change={setB}/><Control label="상수항" value={c} min={-8} max={8} change={setC}/><p className="helper">x−a를 0으로 만드는 x=a를 다항식에 대입합니다. 나머지 정리는 나눗셈의 나머지 정의에서 나옵니다.</p></div>;
   }
   if (block.interaction === "factor-pairs") {
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>곱이 상수항, 합이 x의 계수가 되는 두 수를 찾아요</span><strong>x²+{a+b}x+{a*b} = (x+{a})(x+{b})</strong><p>{a}+{b}={a+b}, {a}×{b}={a*b}이므로 전개해 원래 식과 같은지 확인합니다.</p></div><Control label="첫째 인수의 수" value={a} min={0} max={10} change={setA}/><Control label="둘째 인수의 수" value={b} min={0} max={10} change={setB}/><p className="helper">인수분해는 전개의 반대 과정입니다. 두 수의 합과 곱을 모두 확인해야 합니다.</p></div>;

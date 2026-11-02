@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-05",
+  "checkedAt": "2026-11-02",
+  "sources": [
+    {
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0404",
+      "checked": "2026-11-02; 고시 페이지에서 2022-12-22 고시 및 수학과 별책 8 명시 확인",
+      "use": "공식 자료 경로 확인. 별책8 본문을 단원별로 대조하지 않아 M3 제안 단원과 성취기준 코드의 직접 매핑은 미확인. 문항·설명 문구를 복제하지 않음.",
+      "rights": "이번 초안에 원문 문장/표/문항을 복사하지 않음. 별책 첨부파일의 재사용 라이선스는 이 검토에서 확인하지 않음."
+    }
+  ],
+  "officialStandardMapping": "unverified",
+  "contentRights": "project-original-draft; no external question/text copied",
+  "humanReviewCount": 0,
+  "publicationApprovalCount": 0
+}

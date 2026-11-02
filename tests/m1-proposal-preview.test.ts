@@ -37,11 +37,11 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 240 practice and 30 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(240);
+  it("validates 270 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(270);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id)).size).toBe(270);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(240);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(300);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(270);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
       expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);
@@ -128,6 +128,31 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
+  it("validates M3 draft lessons, five interactions, 30 practice items and corrected division answer", () => {
+    const expectedInteractions = ["polynomial-terms", "polynomial-multiplication", "polynomial-division", "identity-coefficients", "remainder-theorem"];
+    const unitIds = ["M3-01", "M3-02", "M3-03", "M3-04", "M3-05"];
+    for (const [index, unitId] of unitIds.entries()) {
+      expect(getDraftUnitForPreview(unitId)?.status).toBe("draft");
+      const lesson = getDraftLessonForPreview(unitId)!;
+      expect(lesson.learningPhases).toHaveLength(15);
+      expect(lesson.blocks.some((block) => block.type === "AssessmentBlock")).toBe(false);
+      const interactive = lesson.blocks.find((block) => block.type === "InteractiveBlock");
+      expect(interactive?.type === "InteractiveBlock" ? interactive.interaction : undefined).toBe(expectedInteractions[index]);
+      const unitProblems = proposalProblems.filter((problem) => problem.unitId === unitId);
+      expect(unitProblems).toHaveLength(6);
+      expect(new Set(unitProblems.map((problem) => problem.familyId)).size).toBe(2);
+      expect(unitProblems.every((problem) => problem.purpose === "practice" && problem.status === "draft")).toBe(true);
+      expect(proposalAssessmentProblems.some((problem) => problem.unitId === unitId)).toBe(false);
+      expect(lessonForDelivery(unitId)).toBeUndefined();
+    }
+    const division = proposalProblems.find((problem) => problem.id === "p-m3-03-m303-p03");
+    expect(division?.answerRule).toEqual({ kind: "choice", expected: "B" });
+    expect(division?.choices?.find((choice) => choice.id === "B")?.label).toBe("Q=x+2, R=2x+3");
+    expect(division?.explanation).toContain("(x²+1)(x+2)+(2x+3)");
+    expect(scoreProblem(division!, "B").status).toBe("correct");
+    expect(scoreProblem(division!, "A").status).toBe("incorrect");
+  });
+
   it("serves answer-free practice DTOs only in development preview", () => {
     setNodeEnv("development");
     process.env.MATH90_CONTENT_PREVIEW = "1";
@@ -146,6 +171,10 @@ describe("M1 proposal preview boundary", () => {
     expect(publicProblems("practice", "M2-01", "proposal-preview")).toHaveLength(6);
     expect(JSON.stringify(publicProblems("practice", "M2-01", "proposal-preview"))).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     expect(publicProblems("assessment", "M2-01", "proposal-preview")).toEqual([]);
+    const m3Public = publicProblems("practice", "M3-03", "proposal-preview");
+    expect(m3Public).toHaveLength(6);
+    expect(JSON.stringify(m3Public)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+    expect(publicProblems("assessment", "M3-03", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-08", "proposal-preview")).toHaveLength(6);
     expect(JSON.stringify(publicProblems("practice", "M2-08", "proposal-preview"))).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
     expect(publicProblems("practice", "M2-11", "proposal-preview")).toHaveLength(6);
@@ -158,11 +187,14 @@ describe("M1 proposal preview boundary", () => {
     expect(publicProblems("practice", "M2-08", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-11", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-16", "proposal-preview")).toEqual([]);
+    expect(publicProblems("practice", "M3-03", "proposal-preview")).toEqual([]);
     expect(draftUnitForPreview("M2-01")).toBeUndefined();
     expect(draftUnitForPreview("M2-10")).toBeUndefined();
     expect(draftUnitForPreview("M2-15")).toBeUndefined();
     expect(draftUnitForPreview("M2-20")).toBeUndefined();
     expect(draftLessonForPreview("M2-01")).toBeUndefined();
+    expect(draftUnitForPreview("M3-01")).toBeUndefined();
+    expect(draftLessonForPreview("M3-01")).toBeUndefined();
   });
 
   it("keeps preview attempts out of official mastery and review lists", () => {

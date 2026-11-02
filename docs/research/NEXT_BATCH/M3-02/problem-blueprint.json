@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-02",
+  "unitTitle": "다항식의 곱셈 확장",
+  "concepts": [
+    "세 항의 전개",
+    "대칭식의 전개"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m302-family-1",
+      "status": "draft",
+      "title": "다항식 곱의 전개",
+      "reasoningStructure": "분배법칙의 모든 곱을 만들고 차수별로 합친다",
+      "items": [
+        {
+          "id": "m302-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "(x+1)(x²+2x+3)의 전개 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x를 곱한 줄은 x³+2x²+3x, 1을 곱한 줄은 x²+2x+3이므로 x³+3x²+5x+3이다.",
+          "skillLabel": "세 항의 전개",
+          "misconceptionHypothesis": "한 항과의 곱을 빠뜨려 중간항 계수가 작아진다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x³+3x²+5x+3",
+            "B": "x³+2x²+5x+3",
+            "C": "x³+3x²+4x+3"
+          }
+        },
+        {
+          "id": "m302-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(2x−1)(x²+x+1)의 전개 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "2x를 곱하면 2x³+2x²+2x, −1을 곱하면 −x²−x−1이다. 합은 2x³+x²+x−1이다.",
+          "skillLabel": "세 항의 전개",
+          "misconceptionHypothesis": "−1을 곱할 때 부호를 바꾸지 않는다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "2x³+3x²+x−1",
+            "B": "2x³+x²+x−1",
+            "C": "2x³+x²−x−1"
+          }
+        },
+        {
+          "id": "m302-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(x+2)(x²−2x+4)의 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "전개하면 x³−2x²+4x+2x²−4x+8이며 중간항이 지워져 x³+8이다.",
+          "skillLabel": "세 항의 전개",
+          "misconceptionHypothesis": "동류항을 모으기 전에 결과를 잘못 줄인다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x³+4",
+            "B": "x³−4",
+            "C": "x³+8"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m302-family-2",
+      "status": "draft",
+      "title": "곱셈 공식 적용",
+      "reasoningStructure": "제곱식과 합차 곱의 대칭 구조를 사용해 전개를 빠르게 한다",
+      "items": [
+        {
+          "id": "m302-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "(x+3)²의 전개 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "(x+3)(x+3)=x²+6x+9다.",
+          "skillLabel": "대칭식의 전개",
+          "misconceptionHypothesis": "중간항 6x를 빼먹는다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x²+6x+9",
+            "B": "x²+3x+9",
+            "C": "x²+9"
+          }
+        },
+        {
+          "id": "m302-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(2a−b)²의 전개 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "a=2a, b=b인 차의 제곱이므로 4a²−4ab+b²다.",
+          "skillLabel": "대칭식의 전개",
+          "misconceptionHypothesis": "중간항의 계수나 부호를 틀린다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "4a²−2ab+b²",
+            "B": "4a²−4ab+b²",
+            "C": "4a²+4ab+b²"
+          }
+        },
+        {
+          "id": "m302-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(x+4)(x−4)의 결과는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "교차항 −4x와 4x가 서로 지워져 x²−16이다.",
+          "skillLabel": "대칭식의 전개",
+          "misconceptionHypothesis": "합차 곱을 x²+16으로 계산한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x²+16",
+            "B": "x²−8x+16",
+            "C": "x²−16"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

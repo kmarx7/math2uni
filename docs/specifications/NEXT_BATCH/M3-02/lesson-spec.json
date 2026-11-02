@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-02",
+  "levelId": 3,
+  "title": "다항식의 곱셈 확장",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "세 항의 전개",
+      "대칭식의 전개"
+    ],
+    "prerequisiteUnits": [
+      "M3-01",
+      "M2-09"
+    ],
+    "visualization": "넓이와 부피 분할"
+  },
+  "objectives": [
+    "분배법칙으로 세 항을 포함한 다항식의 곱을 빠짐없이 전개한다.",
+    "각 항의 곱에서 계수와 지수를 계산해 동류항을 정리한다.",
+    "완전제곱식 (a+b)², (a−b)²과 합차 곱 (a+b)(a−b)의 곱셈 공식을 일반 전개와 연결해 설명한다. 제안 개념의 “대칭식 전개”는 이 단원에서 이 공식들을 가리키며, 일반적인 대칭다항식 전체를 뜻하지 않음을 구별한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-02-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "분배법칙으로 단항식과 다항식의 곱을 전개한다."
+    },
+    {
+      "id": "m3-02-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "동류항을 차수에 따라 모아 정리한다."
+    },
+    {
+      "id": "m3-02-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "문자 지수의 곱셈 법칙 xᵐ·xⁿ=xᵐ⁺ⁿ을 적용한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-02-skill-1",
+    "m3-02-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "선수 확인 → 조건과 표현 파악 → 구체적 예시 → 원리·식 유도 → 단계별 풀이 → 변형 적용 → 검산·복습",
+    "principleDerivation": "분배법칙으로 모든 항의 곱을 만든다. 완전제곱식에서는 같은 교차항이 두 번 생겨 ±2ab가 되고, 합차 곱에서는 교차항이 상쇄되어 a²−b²가 된다. 이 단원에서 제안어 “대칭식 전개”는 이 곱셈 공식의 범위로 한정해 설명한다.",
+    "accessibility": "식과 기호에는 읽을 수 있는 문장 설명을 함께 제공한다. 표·시각화에는 대체 텍스트와 수치 결과를 제공하고, 조작은 키보드로 가능하며 변경 결과는 aria-live로 알린다."
+  },
+  "subunits": [
+    {
+      "id": "m3-02-u1",
+      "title": "곱의 항을 빠짐없이 만들기",
+      "targetSkills": [
+        "m3-02-skill-1"
+      ],
+      "explanation": "다항식의 곱은 한 괄호의 각 항을 다른 괄호의 각 항에 곱하는 분배법칙입니다. (x+2)(x²−x+3)에서는 x가 세 항과 곱해지고 2도 세 항과 곱해져 총 여섯 곱이 생깁니다.",
+      "activity": "행·열 표의 각 칸에 항의 곱을 하나씩 적으세요.",
+      "check": "각 항이 반대 괄호의 모든 항과 한 번씩 곱해졌나요?"
+    },
+    {
+      "id": "m3-02-u2",
+      "title": "단항식 곱과 지수",
+      "targetSkills": [
+        "m3-02-skill-1"
+      ],
+      "explanation": "계수는 계수끼리 곱하고 같은 문자는 지수를 더합니다. 2x·(3x²)=6x³입니다. 부호도 함께 곱하므로 −x·3x²=−3x³입니다.",
+      "activity": "계수 곱과 문자 지수 합을 서로 다른 칸에 기록하세요.",
+      "check": "x²·x³을 x⁶이 아니라 x⁵로 계산했나요?"
+    },
+    {
+      "id": "m3-02-u3",
+      "title": "세 항의 전개",
+      "targetSkills": [
+        "m3-02-skill-1"
+      ],
+      "explanation": "세 항끼리 곱한 결과는 먼저 모두 적고, 그다음 차수가 같은 항을 모읍니다. (x+1)(x²+x+1)=x³+2x²+2x+1입니다. 중간 곱을 생략하면 빠뜨리기 쉬우므로 배열로 확인합니다.",
+      "activity": "표의 여섯 칸을 읽어 다항식을 만든 다음 같은 차수끼리 합치세요.",
+      "check": "전개 단계에서 동류항을 너무 일찍 합쳐 항을 빠뜨리지 않았나요?"
+    },
+    {
+      "id": "m3-02-u4",
+      "title": "완전제곱식 (a+b)² 공식",
+      "targetSkills": [
+        "m3-02-skill-2"
+      ],
+      "explanation": "이 단원에서 제안 개념 “대칭식 전개”의 첫 범위는 완전제곱식 곱셈 공식입니다. (a+b)²=(a+b)(a+b)=a²+ab+ab+b²=a²+2ab+b²입니다. 가운데 항 ab가 두 번 생깁니다. 이는 모든 대칭다항식을 뜻하는 일반 용어와 구별해 사용합니다.",
+      "activity": "정사각형을 a×a, a×b, b×a, b×b 네 부분으로 나누어 넓이를 더하세요.",
+      "check": "(a+b)²의 가운데 항을 두 번 생기는 ab로 설명하고, 여기서 “대칭식 전개”가 가리키는 범위를 말할 수 있나요?"
+    },
+    {
+      "id": "m3-02-u5",
+      "title": "차의 제곱과 합차 곱 공식",
+      "targetSkills": [
+        "m3-02-skill-2"
+      ],
+      "explanation": "두 번째 범위는 (a−b)²=a²−2ab+b²인 차의 제곱과 (a+b)(a−b)=a²−b²인 합차 곱입니다. 전자는 가운데 항이 −2ab이고, 후자는 교차항 −ab와 +ab가 서로 없어집니다. 둘을 서로 다른 곱셈 공식으로 구별합니다.",
+      "activity": "두 식의 전개표에서 교차항이 어떻게 합쳐지는지 비교하세요.",
+      "check": "(a−b)²의 가운데 항을 +2ab로 쓰거나 합차 공식에 가운데 항을 남기지 않았나요?"
+    },
+    {
+      "id": "m3-02-u6",
+      "title": "문자식에 공식 적용하기",
+      "targetSkills": [
+        "m3-02-skill-2"
+      ],
+      "explanation": "공식은 a,b 자리에 다항식도 들어갈 수 있습니다. (x+2y)²=x²+4xy+4y²입니다. 괄호 전체가 한 항처럼 대입되므로 각 항의 제곱과 두 배의 곱을 정확히 씁니다.",
+      "activity": "a=x, b=2y를 공식에 대입한 줄과 결과를 나란히 놓으세요.",
+      "check": "2y를 제곱할 때 계수 2도 제곱했나요?"
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-02-lab",
+      "kind": "math-lab",
+      "description": "넓이와 부피 분할",
+      "features": [
+        "넓이와 부피 분할",
+        "항별/계수별 입력 조작",
+        "단계와 결과를 텍스트·표로 확인",
+        "결과 검산"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함; 형성평가 기준만 설계"
+  },
+  "assessmentCriteria": [
+    "두 다항식 곱에서 모든 항의 곱을 빠뜨리지 않고 전개해 동류항을 정리한다.",
+    "완전제곱식과 합차 곱의 공식을 유도·적용하고, 이 단원의 “대칭식 전개” 범위와 일반적인 대칭다항식을 구분한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "두 괄호의 첫 항끼리만 곱한다.",
+    "(a+b)²에서 가운데 항 2ab를 빠뜨린다.",
+    "(a−b)²의 가운데 항 부호를 양수로 쓴다.",
+    "(a+b)(a−b)에 남는 상수/교차항을 잘못 처리한다."
+  ],
+  "workedExample": {
+    "prompt": "(x+2)(x²−x+3)을 전개하고 x=1에서 확인하시오.",
+    "steps": [
+      "x를 세 항에 곱해 x³−x²+3x를 얻는다.",
+      "2를 세 항에 곱해 2x²−2x+6을 얻는다.",
+      "더해 x³+x²+x+6을 얻는다. x=1에서 원래 식은 3×3=9, 전개식은 1+1+1+6=9다."
+    ],
+    "answer": "x³+x²+x+6"
+  }
+}

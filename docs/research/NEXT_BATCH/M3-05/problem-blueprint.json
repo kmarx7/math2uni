@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-05",
+  "unitTitle": "나머지정리",
+  "concepts": [
+    "다항식의 대입값",
+    "일차식으로 나눈 나머지"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m305-family-1",
+      "status": "draft",
+      "title": "P(a)로 나머지 계산",
+      "reasoningStructure": "x−a 또는 x+a의 근을 찾아 해당 값을 다항식에 대입한다",
+      "items": [
+        {
+          "id": "m305-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "P(x)=2x²−x+4를 x−2로 나눌 때 나머지는?",
+          "answer": {
+            "type": "integer",
+            "value": "10"
+          },
+          "rationale": "나머지는 P(2)=2·4−2+4=10이다.",
+          "skillLabel": "다항식의 대입값",
+          "misconceptionHypothesis": "제수의 상수항 2를 근으로 보지 않고 부호도 확인하지 않는다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m305-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "P(x)=x³−2x+1을 x+1로 나눌 때 나머지는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x+1=x−(−1)이므로 P(−1)=−1+2+1=2다.",
+          "skillLabel": "일차식으로 나눈 나머지",
+          "misconceptionHypothesis": "x+1에서 1을 그대로 대입한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m305-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "P(x)=x²+3x+1을 2x−4로 나눌 때 나머지는?",
+          "answer": {
+            "type": "integer",
+            "value": "11"
+          },
+          "rationale": "2x−4=0의 해는 2다. P(2)=4+6+1=11이 나머지다.",
+          "skillLabel": "일차식으로 나눈 나머지",
+          "misconceptionHypothesis": "제수의 상수항 4를 대입한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m305-family-2",
+      "status": "draft",
+      "title": "나머지 조건으로 계수·인수 판단",
+      "reasoningStructure": "나머지값이나 0 조건으로 미정계수와 인수 관계를 추론한다",
+      "items": [
+        {
+          "id": "m305-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²+kx−6이 x−2로 나누어떨어질 때 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "나머지가 0이므로 P(2)=4+2k−6=0, 따라서 k=1이다.",
+          "skillLabel": "일차식으로 나눈 나머지",
+          "misconceptionHypothesis": "P(2)를 0이 아닌 나머지처럼 둔다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m305-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x²+ax+3을 x+1로 나눈 나머지가 5일 때 a는?",
+          "answer": {
+            "type": "integer",
+            "value": "-1"
+          },
+          "rationale": "P(−1)=1−a+3=5이므로 4−a=5에서 a=−1이다.",
+          "skillLabel": "다항식의 대입값",
+          "misconceptionHypothesis": "x+1에서 P(1)을 계산한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m305-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "P(1)=0일 때 P(x)의 인수인 일차식은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "나머지정리에서 x−1로 나눈 나머지가 P(1)=0이므로 x−1은 인수다.",
+          "skillLabel": "다항식의 대입값",
+          "misconceptionHypothesis": "x+1을 인수로 고른다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "x−1",
+            "B": "x+1",
+            "C": "x"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

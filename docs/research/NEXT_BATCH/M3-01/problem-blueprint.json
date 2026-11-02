@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-01",
+  "unitTitle": "다항식의 구조와 정리",
+  "concepts": [
+    "차수와 계수",
+    "내림차순 정리"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m301-family-1",
+      "status": "draft",
+      "title": "항·계수·차수 판별",
+      "reasoningStructure": "각 항의 구조에서 계수·상수항·차수 정보를 분류한다",
+      "items": [
+        {
+          "id": "m301-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "-4x³+2x−1에서 −4x³의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "-4"
+          },
+          "rationale": "계수는 문자를 제외한 곱해진 수로 −4다.",
+          "skillLabel": "차수와 계수",
+          "misconceptionHypothesis": "차수 3을 계수라고 답한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m301-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "5x⁴−2x²+1의 차수는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "0이 아닌 항 중 최고 차수가 4다.",
+          "skillLabel": "차수와 계수",
+          "misconceptionHypothesis": "가장 큰 계수와 다항식 차수를 혼동한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m301-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "2x²−3x+7의 상수항은?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "문자 없이 수만 있는 항은 7이다.",
+          "skillLabel": "차수와 계수",
+          "misconceptionHypothesis": "−3을 상수항으로 고른다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m301-family-2",
+      "status": "draft",
+      "title": "표준형과 항의 누락 분석",
+      "reasoningStructure": "다항식을 내림차순으로 고치고 차수별 계수 구조를 해석한다",
+      "items": [
+        {
+          "id": "m301-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "2x−3x³+4−x²를 내림차순으로 나타낸 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "차수 3,2,1,0 순으로 −3x³−x²+2x+4다.",
+          "skillLabel": "내림차순 정리",
+          "misconceptionHypothesis": "부호를 놓치거나 상수항을 중간에 둔다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "−3x³−x²+2x+4",
+            "B": "−3x³+x²+2x+4",
+            "C": "−3x³−x²+2x−4"
+          }
+        },
+        {
+          "id": "m301-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "다항식이 아닌 식을 고르시오.",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x⁻¹은 음의 지수이므로 x에 대한 다항식 항이 아니다.",
+          "skillLabel": "내림차순 정리",
+          "misconceptionHypothesis": "분모에 문자가 있어도 다항식이라고 본다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "3x²−2x+1",
+            "B": "x⁻¹+3",
+            "C": "0.5x³−1"
+          }
+        },
+        {
+          "id": "m301-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x⁴−3x²+1을 차수별로 쓸 때 x³의 계수는?",
+          "answer": {
+            "type": "integer",
+            "value": "0"
+          },
+          "rationale": "x³항이 없으므로 해당 차수의 계수는 0이다.",
+          "skillLabel": "내림차순 정리",
+          "misconceptionHypothesis": "빠진 항의 계수를 1로 추측한다.",
+          "verification": {
+            "method": "author-independent-calculation-and-definition-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

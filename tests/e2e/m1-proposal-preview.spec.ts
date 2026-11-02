@@ -47,6 +47,11 @@ for (const viewport of viewports) {
         ["M2-18", "원과 삼각형의 성질", "같은 호를 보는 중심각은 원주각의 두 배예요"],
         ["M2-19", "산포도와 산점도", "자료의 흩어진 정도와 두 변수의 방향을 살펴요"],
         ["M2-20", "중학 수학 연결 점검", "연결 개념을 고르고 공통 조건을 다시 확인해요"],
+        ["M3-01", "다항식의 구조와 정리", "항별 계수와 차수를 분류해요"],
+        ["M3-02", "다항식의 곱셈 확장", "곱의 각 부분을 모두 전개해요"],
+        ["M3-03", "다항식의 나눗셈", "몫과 나머지를 식으로 검산해요"],
+        ["M3-04", "항등식과 미정계수", "항등식의 같은 차수 계수를 비교해요"],
+        ["M3-05", "나머지정리", "P(a)가 나머지예요"],
       ];
       for (const [unitId, title, labTitle] of units) {
         await page.goto(`/learn/${unitId}`);
@@ -97,6 +102,24 @@ for (const viewport of viewports) {
       expect(data.problems).toHaveLength(6);
       expect(data.families).toHaveLength(2);
       expect(JSON.stringify(data.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+    });
+    test("M3-03 practice stays draft-only and stores progress under its unit", async ({ page }) => {
+      await page.goto("/learn/M3-03");
+      const response = await page.request.get("/api/practice?unitId=M3-03&collection=proposal-preview");
+      expect(response.status()).toBe(200);
+      const bank = await response.json();
+      expect(bank.problems).toHaveLength(6);
+      expect(JSON.stringify(bank.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+      await expect(page.getByText(/초안 형성평가 미응시/)).toBeVisible();
+      const practice = page.locator("#practice");
+      const firstAnswer = practice.locator('input:not([type="radio"])').first();
+      await firstAnswer.fill("B");
+      await practice.getByRole("button", { name: "답안 확인" }).click();
+      await page.reload();
+      const progress = (await (await page.request.get("/api/progress")).json()).progress;
+      expect(progress.unitProgress["M3-03"]).toBeDefined();
+      expect(progress.assessmentScore).toBeNull();
+      expect(progress.unitProgress["M3-03"].assessmentScore).toBeNull();
     });
     test("M1-01 assessment hides answers until the complete submission and stores preview-only score", async ({ page }) => {
       await page.goto("/learn/M1-01");

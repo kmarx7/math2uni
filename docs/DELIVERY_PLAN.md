@@ -110,3 +110,10 @@ M2-11~M2-15의 제안 미리보기에 인수분해·근의 공식으로 이차�
 새 데이터는 기존 제안 ID와 `unitProgress[unitId]` 격리를 사용한다. 운영 curriculum·공식 숙달도·평가 완료 경계에는 반영하지 않았고 production 공개는 차단된다. 문항은 전부 draft, 사람 검수·게시 승인 0개이며 공식 성취기준 매핑은 미검증이다.
 
 검증: lint, typecheck, Vitest 107개, content:validate 18개, production build 통과. Playwright E2E는 인증 테스트 서버의 127.0.0.1:54329 bind가 환경에서 EPERM으로 거부되어 실행되지 않았다. 상세 내용은 [M2 배치 4 QA](reviews/NEXT_BATCH/M2-batch-04-qa.md)를 참고한다.
+
+
+## M3-01~M3-05 · 다항식 첫 묶음
+
+개발 미리보기에 다항식 구조·곱셈·나눗셈·항등식·나머지정리의 M3-01~05를 추가한다. 각 단원은 6개 개념 섹션, 15단계 학습 흐름, 공유 수학 실험실의 전용 조작 컴포넌트, 2개 문제 원형과 6개 연습 초안을 갖는다. 이번에는 연습 30문항만 추가하며 평가 문항은 추가하지 않는다. 모든 콘텐츠는 draft이며 승인·게시 0건, 공식 성취기준 매핑은 미검증이다.
+
+검증 상세와 명령별 결과는 [M3 배치 QA](reviews/NEXT_BATCH/M3-batch-01-qa.md), 단원별 구현/승인 대기 기록은 각 `reviews/NEXT_BATCH/M3-xx/`를 참고한다.
