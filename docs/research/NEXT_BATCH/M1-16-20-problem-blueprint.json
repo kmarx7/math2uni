@@ -1,0 +1,832 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-16",
+    "unitTitle": "삼각형과 다각형",
+    "concepts": [
+      "삼각형의 합동 조건",
+      "다각형의 각"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m116-family-1",
+        "status": "draft",
+        "title": "개념과 조건 확인",
+        "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+        "items": [
+          {
+            "id": "m116-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "삼각형의 세 내각이 45°, 65°, x°이다. x는?",
+            "answer": {
+              "type": "integer",
+              "value": "70"
+            },
+            "rationale": "삼각형 내각의 합은 180°이므로 x=180-45-65=70°",
+            "skillLabel": "삼각형의 각",
+            "misconceptionHypothesis": "내각의 합을 360°로 혼동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m116-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "두 삼각형에서 세 대응변의 길이가 각각 같다. 합동 조건은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "세 변의 대응이 같으므로 SSS 조건으로 합동이다.",
+            "skillLabel": "삼각형의 합동 조건",
+            "misconceptionHypothesis": "변 하나와 각 하나만 같은 것으로 충분하다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "SSS",
+              "B": "SSA",
+              "C": "한 변만 같음"
+            }
+          },
+          {
+            "id": "m116-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "정오각형 한 내각의 크기는?",
+            "answer": {
+              "type": "integer",
+              "value": "108"
+            },
+            "rationale": "오각형 내각의 합은 (5-2)×180=540°, 정오각형은 540÷5=108°이다.",
+            "skillLabel": "다각형의 각",
+            "misconceptionHypothesis": "외각의 합 360°를 변의 수로 나눈다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m116-family-2",
+        "status": "draft",
+        "title": "계산·상황 적용",
+        "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+        "items": [
+          {
+            "id": "m116-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "삼각형 두 변의 길이와 그 사이각이 각각 같다. 합동 조건은?",
+            "answer": {
+              "type": "choice",
+              "value": "B"
+            },
+            "rationale": "두 변과 끼인각이 같으므로 SAS이다.",
+            "skillLabel": "삼각형의 합동 조건",
+            "misconceptionHypothesis": "두 변과 끼이지 않은 각도 언제나 합동이라고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "SSA",
+              "B": "SAS",
+              "C": "AAA"
+            }
+          },
+          {
+            "id": "m116-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "정육각형 내각의 합은 몇 도인가?",
+            "answer": {
+              "type": "integer",
+              "value": "720"
+            },
+            "rationale": "(6-2)×180=720°이다.",
+            "skillLabel": "다각형의 각",
+            "misconceptionHypothesis": "변의 수에 180°를 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m116-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "삼각형에서 한 변과 그 양 끝각이 각각 대응하여 같다. 합동 조건은?",
+            "answer": {
+              "type": "choice",
+              "value": "C"
+            },
+            "rationale": "한 변과 양 끝각이 같으므로 ASA이다.",
+            "skillLabel": "삼각형의 합동 조건",
+            "misconceptionHypothesis": "각만 같은 AAA를 합동 조건으로 본다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "AAA",
+              "B": "SSA",
+              "C": "ASA"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-17",
+    "unitTitle": "평면도형의 넓이",
+    "concepts": [
+      "단위와 넓이",
+      "도형의 분할과 합성"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m117-family-1",
+        "status": "draft",
+        "title": "개념과 조건 확인",
+        "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+        "items": [
+          {
+            "id": "m117-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "가로 8cm, 세로 5cm인 직사각형의 넓이는?",
+            "answer": {
+              "type": "integer",
+              "value": "40"
+            },
+            "rationale": "넓이=가로×세로=8×5=40cm²이다.",
+            "skillLabel": "직사각형 넓이",
+            "misconceptionHypothesis": "둘레와 넓이 계산을 혼동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m117-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "밑변 10cm, 수직 높이 6cm인 삼각형의 넓이는?",
+            "answer": {
+              "type": "integer",
+              "value": "30"
+            },
+            "rationale": "10×6÷2=30cm²이다.",
+            "skillLabel": "삼각형 넓이",
+            "misconceptionHypothesis": "높이가 아니라 빗변을 사용한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m117-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "밑변 7cm, 높이 4cm인 평행사변형의 넓이는?",
+            "answer": {
+              "type": "integer",
+              "value": "28"
+            },
+            "rationale": "평행사변형은 밑변×수직 높이이므로 7×4=28cm²이다.",
+            "skillLabel": "평행사변형 넓이",
+            "misconceptionHypothesis": "비스듬한 변 길이를 높이로 사용한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m117-family-2",
+        "status": "draft",
+        "title": "계산·상황 적용",
+        "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+        "items": [
+          {
+            "id": "m117-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "넓이가 54cm²인 직사각형의 한 변이 9cm이다. 다른 변은?",
+            "answer": {
+              "type": "integer",
+              "value": "6"
+            },
+            "rationale": "54÷9=6cm이다.",
+            "skillLabel": "직사각형 넓이",
+            "misconceptionHypothesis": "넓이에 변의 길이를 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m117-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "밑변 12cm, 높이 5cm인 삼각형 넓이는?",
+            "answer": {
+              "type": "integer",
+              "value": "30"
+            },
+            "rationale": "12×5÷2=30cm²이다.",
+            "skillLabel": "삼각형 넓이",
+            "misconceptionHypothesis": "2로 나누는 것을 잊는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m117-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "두 직사각형 넓이가 24cm², 15cm²이다. 겹치지 않게 붙인 도형의 전체 넓이는?",
+            "answer": {
+              "type": "integer",
+              "value": "39"
+            },
+            "rationale": "겹치지 않으므로 24+15=39cm²이다.",
+            "skillLabel": "도형의 분할과 합성",
+            "misconceptionHypothesis": "변 길이만 더하거나 넓이를 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-18",
+    "unitTitle": "입체도형과 부피",
+    "concepts": [
+      "전개도와 겉넓이",
+      "기둥과 뿔의 부피"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m118-family-1",
+        "status": "draft",
+        "title": "개념과 조건 확인",
+        "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+        "items": [
+          {
+            "id": "m118-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "가로 3cm, 세로 4cm, 높이 5cm인 직육면체의 부피는?",
+            "answer": {
+              "type": "integer",
+              "value": "60"
+            },
+            "rationale": "3×4×5=60cm³이다.",
+            "skillLabel": "직육면체 부피",
+            "misconceptionHypothesis": "세 길이 중 하나를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m118-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "한 층에 단위 정육면체 12개가 있고 4층이다. 전체 개수는?",
+            "answer": {
+              "type": "integer",
+              "value": "48"
+            },
+            "rationale": "12×4=48개다.",
+            "skillLabel": "단위 정육면체",
+            "misconceptionHypothesis": "층 수를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m118-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "한 모서리가 3cm인 정육면체의 부피는?",
+            "answer": {
+              "type": "integer",
+              "value": "27"
+            },
+            "rationale": "3×3×3=27cm³이다.",
+            "skillLabel": "직육면체 부피",
+            "misconceptionHypothesis": "3×3으로 넓이만 구한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m118-family-2",
+        "status": "draft",
+        "title": "계산·상황 적용",
+        "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+        "items": [
+          {
+            "id": "m118-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "밑면 넓이 20cm²인 기둥의 높이가 6cm이다. 부피는?",
+            "answer": {
+              "type": "integer",
+              "value": "120"
+            },
+            "rationale": "기둥 부피=밑면 넓이×높이=20×6=120cm³이다.",
+            "skillLabel": "기둥 부피",
+            "misconceptionHypothesis": "높이로 나눈다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m118-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "한 층에 5×4개의 단위 정육면체를 놓고 3층 쌓았다. 총 몇 개인가?",
+            "answer": {
+              "type": "integer",
+              "value": "60"
+            },
+            "rationale": "한 층은 20개, 세 층은 20×3=60개다.",
+            "skillLabel": "단위 정육면체",
+            "misconceptionHypothesis": "5+4+3으로 계산한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m118-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "모서리가 2cm인 정육면체 6개의 겉넓이 합은?",
+            "answer": {
+              "type": "integer",
+              "value": "144"
+            },
+            "rationale": "한 면 넓이는 2×2=4cm², 면은 6개이므로 한 정육면체 겉넓이는 24cm². 6개 합은 144cm²다.",
+            "skillLabel": "겉넓이",
+            "misconceptionHypothesis": "부피 공식으로 계산한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-19",
+    "unitTitle": "자료의 정리와 대표값",
+    "concepts": [
+      "도수와 상대도수",
+      "평균과 중앙값"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m119-family-1",
+        "status": "draft",
+        "title": "개념과 조건 확인",
+        "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+        "items": [
+          {
+            "id": "m119-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 2, 4, 6의 평균은?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "(2+4+6)÷3=4다.",
+            "skillLabel": "평균",
+            "misconceptionHypothesis": "자료 수가 아니라 합으로 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m119-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 1, 5, 8의 중앙값은?",
+            "answer": {
+              "type": "integer",
+              "value": "5"
+            },
+            "rationale": "이미 크기순이므로 가운데 값은 5다.",
+            "skillLabel": "중앙값",
+            "misconceptionHypothesis": "가장 큰 값이나 평균을 고른다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m119-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "자료 3, 3, 4, 7에서 최빈값은?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "가장 자주 나타나는 수는 3이다.",
+            "skillLabel": "최빈값",
+            "misconceptionHypothesis": "가장 큰 값이 최빈값이라 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m119-family-2",
+        "status": "draft",
+        "title": "계산·상황 적용",
+        "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+        "items": [
+          {
+            "id": "m119-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 2, 9, 5의 범위는?",
+            "answer": {
+              "type": "integer",
+              "value": "7"
+            },
+            "rationale": "범위=최댓값-최솟값=9-2=7이다.",
+            "skillLabel": "범위",
+            "misconceptionHypothesis": "최댓값과 최솟값을 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m119-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "다섯 자료의 합이 40이다. 평균은?",
+            "answer": {
+              "type": "integer",
+              "value": "8"
+            },
+            "rationale": "평균=합÷자료 수=40÷5=8이다.",
+            "skillLabel": "평균",
+            "misconceptionHypothesis": "합을 자료 수와 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m119-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "fraction",
+            "prompt": "자료 2, 4, 10의 평균은?",
+            "answer": {
+              "type": "fraction",
+              "value": "16/3"
+            },
+            "rationale": "합 16을 자료 3개로 나누면 16/3이다.",
+            "skillLabel": "평균",
+            "misconceptionHypothesis": "중앙값 4를 평균으로 고른다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M1-20",
+    "unitTitle": "수와 식 기초 종합",
+    "concepts": [
+      "연산과 문자 연결",
+      "일차 관계 모델링"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m120-family-1",
+        "status": "draft",
+        "title": "개념과 조건 확인",
+        "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+        "items": [
+          {
+            "id": "m120-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "택시 기본요금 3000원과 1km당 800원일 때 xkm 요금을 식으로 나타내면?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "거리 요금 800x에 기본요금 3000을 더한다.",
+            "skillLabel": "문장과 식",
+            "misconceptionHypothesis": "고정 요금에도 x를 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "800x+3000",
+              "B": "3800x",
+              "C": "800x"
+            }
+          },
+          {
+            "id": "m120-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "2x+3=11의 해 x는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "양변에서 3을 빼면 2x=8, 나누면 x=4다.",
+            "skillLabel": "방정식의 해석",
+            "misconceptionHypothesis": "상수항만 답으로 쓴다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m120-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "3x+1≤10을 만족하는 정수 중 가장 큰 수는?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "3x+1≤10에서 3x≤9, x≤3이므로 가장 큰 정수는 3이다.",
+            "skillLabel": "부등식과 범위",
+            "misconceptionHypothesis": "부등호 방향을 그대로 둔다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m120-family-2",
+        "status": "draft",
+        "title": "계산·상황 적용",
+        "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+        "items": [
+          {
+            "id": "m120-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "정비례 y=5x에서 x=4일 때 y는?",
+            "answer": {
+              "type": "integer",
+              "value": "20"
+            },
+            "rationale": "y=5×4=20이다.",
+            "skillLabel": "비례 관계",
+            "misconceptionHypothesis": "비례상수에 x를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m120-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "자료 2, 6, 10의 평균은?",
+            "answer": {
+              "type": "integer",
+              "value": "6"
+            },
+            "rationale": "(2+6+10)÷3=6이다.",
+            "skillLabel": "자료를 활용한 종합 점검",
+            "misconceptionHypothesis": "중앙값만 확인한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m120-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "choice",
+            "prompt": "한 개 1200원인 공책 x권과 배송비 500원의 총액은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "변하는 비용 1200x와 고정비 500을 더한다.",
+            "skillLabel": "문장과 식",
+            "misconceptionHypothesis": "배송비를 공책 수만큼 반복한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "1200x+500",
+              "B": "1700x",
+              "C": "1200x"
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-20",
+  "unitTitle": "수와 식 기초 종합",
+  "concepts": [
+    "연산과 문자 연결",
+    "일차 관계 모델링"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m120-family-1",
+      "status": "draft",
+      "title": "개념과 조건 확인",
+      "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m120-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "택시 기본요금 3000원과 1km당 800원일 때 xkm 요금을 식으로 나타내면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "거리 요금 800x에 기본요금 3000을 더한다.",
+          "skillLabel": "문장과 식",
+          "misconceptionHypothesis": "고정 요금에도 x를 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "800x+3000",
+            "B": "3800x",
+            "C": "800x"
+          }
+        },
+        {
+          "id": "m120-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "2x+3=11의 해 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "양변에서 3을 빼면 2x=8, 나누면 x=4다.",
+          "skillLabel": "방정식의 해석",
+          "misconceptionHypothesis": "상수항만 답으로 쓴다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m120-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "3x+1≤10을 만족하는 정수 중 가장 큰 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "3x+1≤10에서 3x≤9, x≤3이므로 가장 큰 정수는 3이다.",
+          "skillLabel": "부등식과 범위",
+          "misconceptionHypothesis": "부등호 방향을 그대로 둔다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m120-family-2",
+      "status": "draft",
+      "title": "계산·상황 적용",
+      "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+      "items": [
+        {
+          "id": "m120-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "정비례 y=5x에서 x=4일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "20"
+          },
+          "rationale": "y=5×4=20이다.",
+          "skillLabel": "비례 관계",
+          "misconceptionHypothesis": "비례상수에 x를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m120-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "자료 2, 6, 10의 평균은?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "(2+6+10)÷3=6이다.",
+          "skillLabel": "자료를 활용한 종합 점검",
+          "misconceptionHypothesis": "중앙값만 확인한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m120-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "한 개 1200원인 공책 x권과 배송비 500원의 총액은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "변하는 비용 1200x와 고정비 500을 더한다.",
+          "skillLabel": "문장과 식",
+          "misconceptionHypothesis": "배송비를 공책 수만큼 반복한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "1200x+500",
+            "B": "1700x",
+            "C": "1200x"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

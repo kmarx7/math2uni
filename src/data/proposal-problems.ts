@@ -3,11 +3,12 @@ import { problemSchema, type ProblemInstance } from "@/contracts";
 import blueprint from "../../docs/research/NEXT_BATCH/problem-blueprint.json";
 import algebraBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-problem-blueprint.json";
 import nextAlgebraBlueprint from "../../docs/research/NEXT_BATCH/M1-11-15-problem-blueprint.json";
+import latestAlgebraBlueprint from "../../docs/research/NEXT_BATCH/M1-16-20-problem-blueprint.json";
 import firstAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-assessment-blueprint.json";
 import nextAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-assessment-blueprint.json";
 import { curriculumProposal } from "@/data/curriculum-proposal";
 
-const completeAlgebraBlueprint = [...algebraBlueprint, ...nextAlgebraBlueprint] as const;
+const completeAlgebraBlueprint = [...algebraBlueprint, ...nextAlgebraBlueprint, ...latestAlgebraBlueprint] as const;
 const assessmentBlueprint = [...firstAssessmentBlueprint, ...nextAssessmentBlueprint] as const;
 
 const choiceDrafts: Record<string, { id: string; label: string }[]> = {
@@ -115,7 +116,7 @@ function algebraItemToProblem(
     misconceptions: ["misconceptionHypothesis" in item ? item.misconceptionHypothesis : "조건과 계산을 다시 확인한다."],
     status: "draft",
     version: unit.contentVersion,
-    provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: unit.unitId <= "M1-10" ? "자체 제작 초안; docs/research/NEXT_BATCH/M1-06-10-research-report.md" : "자체 제작 초안; docs/research/NEXT_BATCH/M1-11-15-research-report.md", aiGenerated: true },
+    provenance: { author: "Math 90 Research & Content draft", license: "project-original", source: unit.unitId <= "M1-10" ? "자체 제작 초안; docs/research/NEXT_BATCH/M1-06-10-research-report.md" : unit.unitId <= "M1-15" ? "자체 제작 초안; docs/research/NEXT_BATCH/M1-11-15-research-report.md" : "자체 제작 초안; docs/research/NEXT_BATCH/M1-16-20-research-report.md", aiGenerated: true },
     reviewHistory: [],
     purpose: "practice",
   });

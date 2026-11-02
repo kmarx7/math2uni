@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-20",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "문장 속 양과 단위를 식으로 나타낸다.\n정수·유리수 연산과 일차방정식·부등식의 기초를 적용한다.\n비례 관계와 자료 해석을 포함한 간단한 상황에서 풀이 전략을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "문자식과 대입를 떠올려 말하거나 간단한 예로 확인한다.\n일차방정식 풀이를 떠올려 말하거나 간단한 예로 확인한다.\n부등식의 수직선를 떠올려 말하거나 간단한 예로 확인한다.\n비례 관계를 떠올려 말하거나 간단한 예로 확인한다.\n자료의 평균과 중앙값를 떠올려 말하거나 간단한 예로 확인한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m1-20-u1",
+          "title": "문장을 식으로 바꾸기",
+          "body": "문장을 식으로 바꾸기의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 문장을 식으로 바꾸기에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "문장을 식으로 바꾸기의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        },
+        {
+          "id": "m1-20-u2",
+          "title": "연산과 문자식",
+          "body": "연산과 문자식의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 연산과 문자식에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "연산과 문자식의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        },
+        {
+          "id": "m1-20-u3",
+          "title": "방정식의 해석",
+          "body": "방정식의 해석의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 방정식의 해석에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "방정식의 해석의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        },
+        {
+          "id": "m1-20-u4",
+          "title": "부등식과 범위",
+          "body": "부등식과 범위의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 부등식과 범위에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "부등식과 범위의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        },
+        {
+          "id": "m1-20-u5",
+          "title": "비례식과 표",
+          "body": "비례식과 표의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 비례식과 표에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "비례식과 표의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        },
+        {
+          "id": "m1-20-u6",
+          "title": "자료를 활용한 종합 점검",
+          "body": "자료를 활용한 종합 점검의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+          "activity": "식·표·그래프 연결에서 자료를 활용한 종합 점검에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+          "check": "자료를 활용한 종합 점검의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+        }
+      ],
+      "body": "구체물·그림 관찰 → 용어와 조건 확인 → 수학적 표현 → 원리 설명 → 독립 적용·점검"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "식·표·그래프 연결",
+      "interaction": "expression-table",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3,
+        "initialC": 1
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "문장을 식으로 바꾸기의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+        "식·표·그래프 연결에서 문장을 식으로 바꾸기에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+        "문장을 식으로 바꾸기의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건과 개념을 구분하고, 계산 뒤에는 원래 관계나 정의에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "연산과 문자 연결의 정의나 조건 혼동 · 일차 관계 모델링의 단위·표현·적용 범위 혼동에 해당하는지 확인한 다음, 해당 소단원의 설명과 활동으로 돌아가세요. 모든 오답은 학습 기록에 남고 다시 풀기 결과와 첫 응답은 구분됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 단계 확인과 풀이 기록은 계정에 저장되지만 정본 진도·공식 숙달 판정은 아닙니다. 형성평가는 아직 준비 중입니다.  1일·3일·7일 복습 간격은 제안이며 검증 전입니다."
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-16",
+  "unitTitle": "삼각형과 다각형",
+  "concepts": [
+    "삼각형의 합동 조건",
+    "다각형의 각"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m116-family-1",
+      "status": "draft",
+      "title": "개념과 조건 확인",
+      "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m116-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "삼각형의 세 내각이 45°, 65°, x°이다. x는?",
+          "answer": {
+            "type": "integer",
+            "value": "70"
+          },
+          "rationale": "삼각형 내각의 합은 180°이므로 x=180-45-65=70°",
+          "skillLabel": "삼각형의 각",
+          "misconceptionHypothesis": "내각의 합을 360°로 혼동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m116-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "두 삼각형에서 세 대응변의 길이가 각각 같다. 합동 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "세 변의 대응이 같으므로 SSS 조건으로 합동이다.",
+          "skillLabel": "삼각형의 합동 조건",
+          "misconceptionHypothesis": "변 하나와 각 하나만 같은 것으로 충분하다고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "SSS",
+            "B": "SSA",
+            "C": "한 변만 같음"
+          }
+        },
+        {
+          "id": "m116-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "정오각형 한 내각의 크기는?",
+          "answer": {
+            "type": "integer",
+            "value": "108"
+          },
+          "rationale": "오각형 내각의 합은 (5-2)×180=540°, 정오각형은 540÷5=108°이다.",
+          "skillLabel": "다각형의 각",
+          "misconceptionHypothesis": "외각의 합 360°를 변의 수로 나눈다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m116-family-2",
+      "status": "draft",
+      "title": "계산·상황 적용",
+      "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+      "items": [
+        {
+          "id": "m116-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "삼각형 두 변의 길이와 그 사이각이 각각 같다. 합동 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "두 변과 끼인각이 같으므로 SAS이다.",
+          "skillLabel": "삼각형의 합동 조건",
+          "misconceptionHypothesis": "두 변과 끼이지 않은 각도 언제나 합동이라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "SSA",
+            "B": "SAS",
+            "C": "AAA"
+          }
+        },
+        {
+          "id": "m116-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "정육각형 내각의 합은 몇 도인가?",
+          "answer": {
+            "type": "integer",
+            "value": "720"
+          },
+          "rationale": "(6-2)×180=720°이다.",
+          "skillLabel": "다각형의 각",
+          "misconceptionHypothesis": "변의 수에 180°를 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m116-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "삼각형에서 한 변과 그 양 끝각이 각각 대응하여 같다. 합동 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "한 변과 양 끝각이 같으므로 ASA이다.",
+          "skillLabel": "삼각형의 합동 조건",
+          "misconceptionHypothesis": "각만 같은 AAA를 합동 조건으로 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "AAA",
+            "B": "SSA",
+            "C": "ASA"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

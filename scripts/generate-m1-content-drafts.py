@@ -1,9 +1,14 @@
 """Build reviewable JSON lesson drafts from the Curriculum Agent specifications."""
 import json
+import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-UNITS = [f"M1-{i:02d}" for i in range(1, 16)]
+parser = argparse.ArgumentParser()
+parser.add_argument("--start", type=int, default=1)
+parser.add_argument("--end", type=int, default=20)
+args = parser.parse_args()
+UNITS = [f"M1-{i:02d}" for i in range(args.start, args.end + 1)]
 INTERACTIONS = {
     "M1-01": {"interaction": "integer-number-line", "settings": {"initialA": -3, "initialB": 4}},
     "M1-02": {"interaction": "signed-multiplication", "settings": {"operation": "multiply", "initialA": -6, "initialB": 3}},
@@ -20,6 +25,11 @@ INTERACTIONS = {
     "M1-13": {"interaction": "coordinate-plane", "settings": {"initialA": -3, "initialB": 4}},
     "M1-14": {"interaction": "proportion", "settings": {"initialA": 3, "initialB": 4, "initialC": 2}},
     "M1-15": {"interaction": "parallel-angles", "settings": {"initialA": 60, "initialB": 12}},
+    "M1-16": {"interaction": "triangle-congruence", "settings": {"initialA": 5, "initialB": 5, "initialC": 6}},
+    "M1-17": {"interaction": "area-model", "settings": {"initialA": 8, "initialB": 5, "initialC": 3}},
+    "M1-18": {"interaction": "volume-model", "settings": {"initialA": 3, "initialB": 4, "initialC": 5}},
+    "M1-19": {"interaction": "data-summary", "settings": {"initialA": 4, "initialB": 6, "initialC": 8}},
+    "M1-20": {"interaction": "expression-table", "settings": {"initialA": 2, "initialB": 3, "initialC": 1}},
 }
 PHASE_BLOCKS = [
     "goals", "diagnostic", "concept", "concept", "lab", "concept", "example",

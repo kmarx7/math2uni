@@ -77,6 +77,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "coordinate-plane",
       "proportion",
       "parallel-angles",
+      "triangle-congruence",
+      "area-model",
+      "volume-model",
+      "data-summary",
+      "expression-table",
     ]),
     settings: z
       .object({

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-17",
+  "unitTitle": "평면도형의 넓이",
+  "concepts": [
+    "단위와 넓이",
+    "도형의 분할과 합성"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m117-family-1",
+      "status": "draft",
+      "title": "개념과 조건 확인",
+      "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m117-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "가로 8cm, 세로 5cm인 직사각형의 넓이는?",
+          "answer": {
+            "type": "integer",
+            "value": "40"
+          },
+          "rationale": "넓이=가로×세로=8×5=40cm²이다.",
+          "skillLabel": "직사각형 넓이",
+          "misconceptionHypothesis": "둘레와 넓이 계산을 혼동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m117-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "밑변 10cm, 수직 높이 6cm인 삼각형의 넓이는?",
+          "answer": {
+            "type": "integer",
+            "value": "30"
+          },
+          "rationale": "10×6÷2=30cm²이다.",
+          "skillLabel": "삼각형 넓이",
+          "misconceptionHypothesis": "높이가 아니라 빗변을 사용한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m117-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "밑변 7cm, 높이 4cm인 평행사변형의 넓이는?",
+          "answer": {
+            "type": "integer",
+            "value": "28"
+          },
+          "rationale": "평행사변형은 밑변×수직 높이이므로 7×4=28cm²이다.",
+          "skillLabel": "평행사변형 넓이",
+          "misconceptionHypothesis": "비스듬한 변 길이를 높이로 사용한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m117-family-2",
+      "status": "draft",
+      "title": "계산·상황 적용",
+      "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+      "items": [
+        {
+          "id": "m117-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "넓이가 54cm²인 직사각형의 한 변이 9cm이다. 다른 변은?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "54÷9=6cm이다.",
+          "skillLabel": "직사각형 넓이",
+          "misconceptionHypothesis": "넓이에 변의 길이를 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m117-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "밑변 12cm, 높이 5cm인 삼각형 넓이는?",
+          "answer": {
+            "type": "integer",
+            "value": "30"
+          },
+          "rationale": "12×5÷2=30cm²이다.",
+          "skillLabel": "삼각형 넓이",
+          "misconceptionHypothesis": "2로 나누는 것을 잊는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m117-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "두 직사각형 넓이가 24cm², 15cm²이다. 겹치지 않게 붙인 도형의 전체 넓이는?",
+          "answer": {
+            "type": "integer",
+            "value": "39"
+          },
+          "rationale": "겹치지 않으므로 24+15=39cm²이다.",
+          "skillLabel": "도형의 분할과 합성",
+          "misconceptionHypothesis": "변 길이만 더하거나 넓이를 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

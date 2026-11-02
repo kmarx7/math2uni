@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-17",
+  "levelId": 1,
+  "title": "평면도형의 넓이",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "단위와 넓이",
+      "도형의 분할과 합성"
+    ],
+    "prerequisiteUnits": [
+      "M1-16",
+      "M0-03"
+    ],
+    "visualization": "넓이 재배열"
+  },
+  "objectives": [
+    "넓이를 단위 정사각형의 수로 설명한다.",
+    "직사각형·삼각형·평행사변형의 넓이를 밑변과 수직 높이로 계산한다.",
+    "복합 도형을 나누어 넓이를 구하고 단위를 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-17-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "곱셈과 나눗셈를 떠올려 말하거나 간단한 예로 확인한다."
+    },
+    {
+      "id": "m1-17-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "직사각형의 변과 넓이를 떠올려 말하거나 간단한 예로 확인한다."
+    },
+    {
+      "id": "m1-17-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "길이 단위와 제곱 단위를 떠올려 말하거나 간단한 예로 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-17-skill-1",
+    "m1-17-skill-2",
+    "m1-17-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "구체물·그림 관찰 → 용어와 조건 확인 → 수학적 표현 → 원리 설명 → 독립 적용·점검",
+    "principleDerivation": "직사각형·삼각형·평행사변형의 넓이를 밑변과 수직 높이로 계산한다.",
+    "accessibility": "색상에만 의존하지 않고 도형 이름·수치·텍스트 설명을 함께 제공합니다. 조작 요소는 키보드로 사용할 수 있고 계산 결과는 aria-live 텍스트로 안내합니다."
+  },
+  "subunits": [
+    {
+      "id": "m1-17-u1",
+      "title": "넓이의 단위",
+      "targetSkills": [
+        "m1-17-skill-1"
+      ],
+      "explanation": "넓이의 단위의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 넓이의 단위에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "넓이의 단위의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-17-u2",
+      "title": "직사각형 넓이",
+      "targetSkills": [
+        "m1-17-skill-1"
+      ],
+      "explanation": "직사각형 넓이의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 직사각형 넓이에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "직사각형 넓이의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-17-u3",
+      "title": "삼각형 넓이 유도",
+      "targetSkills": [
+        "m1-17-skill-1"
+      ],
+      "explanation": "삼각형 넓이 유도의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 삼각형 넓이 유도에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "삼각형 넓이 유도의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-17-u4",
+      "title": "평행사변형 넓이",
+      "targetSkills": [
+        "m1-17-skill-2"
+      ],
+      "explanation": "평행사변형 넓이의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 평행사변형 넓이에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "평행사변형 넓이의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-17-u5",
+      "title": "복합 도형 분할",
+      "targetSkills": [
+        "m1-17-skill-2"
+      ],
+      "explanation": "복합 도형 분할의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 복합 도형 분할에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "복합 도형 분할의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-17-u6",
+      "title": "단위와 풀이 점검",
+      "targetSkills": [
+        "m1-17-skill-2"
+      ],
+      "explanation": "단위와 풀이 점검의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "넓이 재배열에서 단위와 풀이 점검에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "단위와 풀이 점검의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-17-lab",
+      "kind": "math-lab",
+      "description": "넓이 재배열",
+      "features": [
+        "넓이 재배열",
+        "수치 조절",
+        "결과 설명"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항은 이번 묶음에서 준비하지 않음"
+  },
+  "assessmentCriteria": [
+    "목표 개념을 말·그림·기호 중 둘 이상으로 설명한다.",
+    "조건에 맞게 풀이하고 계산 또는 단위를 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "단위와 넓이의 정의나 조건 혼동",
+    "도형의 분할과 합성의 단위·표현·적용 범위 혼동"
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-19",
+  "unitTitle": "자료의 정리와 대표값",
+  "concepts": [
+    "도수와 상대도수",
+    "평균과 중앙값"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m119-family-1",
+      "status": "draft",
+      "title": "개념과 조건 확인",
+      "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m119-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "자료 2, 4, 6의 평균은?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "(2+4+6)÷3=4다.",
+          "skillLabel": "평균",
+          "misconceptionHypothesis": "자료 수가 아니라 합으로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m119-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "자료 1, 5, 8의 중앙값은?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "이미 크기순이므로 가운데 값은 5다.",
+          "skillLabel": "중앙값",
+          "misconceptionHypothesis": "가장 큰 값이나 평균을 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m119-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "자료 3, 3, 4, 7에서 최빈값은?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "가장 자주 나타나는 수는 3이다.",
+          "skillLabel": "최빈값",
+          "misconceptionHypothesis": "가장 큰 값이 최빈값이라 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m119-family-2",
+      "status": "draft",
+      "title": "계산·상황 적용",
+      "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+      "items": [
+        {
+          "id": "m119-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "자료 2, 9, 5의 범위는?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "범위=최댓값-최솟값=9-2=7이다.",
+          "skillLabel": "범위",
+          "misconceptionHypothesis": "최댓값과 최솟값을 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m119-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "다섯 자료의 합이 40이다. 평균은?",
+          "answer": {
+            "type": "integer",
+            "value": "8"
+          },
+          "rationale": "평균=합÷자료 수=40÷5=8이다.",
+          "skillLabel": "평균",
+          "misconceptionHypothesis": "합을 자료 수와 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m119-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "fraction",
+          "prompt": "자료 2, 4, 10의 평균은?",
+          "answer": {
+            "type": "fraction",
+            "value": "16/3"
+          },
+          "rationale": "합 16을 자료 3개로 나누면 16/3이다.",
+          "skillLabel": "평균",
+          "misconceptionHypothesis": "중앙값 4를 평균으로 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

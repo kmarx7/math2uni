@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-16",
+  "levelId": 1,
+  "title": "삼각형과 다각형",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "삼각형의 합동 조건",
+      "다각형의 각"
+    ],
+    "prerequisiteUnits": [
+      "M1-15"
+    ],
+    "visualization": "삼각형 합동 겹치기"
+  },
+  "objectives": [
+    "삼각형의 변과 각 대응을 표시한다.",
+    "SSS·SAS·ASA 조건이 주어졌을 때 합동을 판단하고 SSA와 구별한다.",
+    "다각형의 내각의 합과 정다각형의 한 내각을 구한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m1-16-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "삼각형의 변·각 이름를 떠올려 말하거나 간단한 예로 확인한다."
+    },
+    {
+      "id": "m1-16-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "평행선의 각 관계를 떠올려 말하거나 간단한 예로 확인한다."
+    },
+    {
+      "id": "m1-16-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "각의 합과 보각를 떠올려 말하거나 간단한 예로 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m1-16-skill-1",
+    "m1-16-skill-2",
+    "m1-16-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "구체물·그림 관찰 → 용어와 조건 확인 → 수학적 표현 → 원리 설명 → 독립 적용·점검",
+    "principleDerivation": "SSS·SAS·ASA 조건이 주어졌을 때 합동을 판단하고 SSA와 구별한다.",
+    "accessibility": "색상에만 의존하지 않고 도형 이름·수치·텍스트 설명을 함께 제공합니다. 조작 요소는 키보드로 사용할 수 있고 계산 결과는 aria-live 텍스트로 안내합니다."
+  },
+  "subunits": [
+    {
+      "id": "m1-16-u1",
+      "title": "삼각형 요소와 대응",
+      "targetSkills": [
+        "m1-16-skill-1"
+      ],
+      "explanation": "삼각형 요소와 대응의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 삼각형 요소와 대응에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "삼각형 요소와 대응의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-16-u2",
+      "title": "SSS 합동",
+      "targetSkills": [
+        "m1-16-skill-1"
+      ],
+      "explanation": "SSS 합동의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 SSS 합동에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "SSS 합동의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-16-u3",
+      "title": "SAS 합동",
+      "targetSkills": [
+        "m1-16-skill-1"
+      ],
+      "explanation": "SAS 합동의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 SAS 합동에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "SAS 합동의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-16-u4",
+      "title": "ASA와 SSA 구별",
+      "targetSkills": [
+        "m1-16-skill-2"
+      ],
+      "explanation": "ASA와 SSA 구별의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 ASA와 SSA 구별에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "ASA와 SSA 구별의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-16-u5",
+      "title": "다각형 내각의 합",
+      "targetSkills": [
+        "m1-16-skill-2"
+      ],
+      "explanation": "다각형 내각의 합의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 다각형 내각의 합에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "다각형 내각의 합의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    },
+    {
+      "id": "m1-16-u6",
+      "title": "정다각형의 각",
+      "targetSkills": [
+        "m1-16-skill-2"
+      ],
+      "explanation": "정다각형의 각의 뜻을 그림·수·말로 확인하고, 조건이 무엇인지 먼저 짚습니다. 계산한 뒤에는 정의와 단위를 다시 살펴봅니다.",
+      "activity": "삼각형 합동 겹치기에서 정다각형의 각에 해당하는 요소를 직접 바꾸거나 표시합니다.",
+      "check": "정다각형의 각의 핵심 조건을 한 문장으로 말하고, 짧은 사례에 적용합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m1-16-lab",
+      "kind": "math-lab",
+      "description": "삼각형 합동 겹치기",
+      "features": [
+        "삼각형 합동 겹치기",
+        "수치 조절",
+        "결과 설명"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항은 이번 묶음에서 준비하지 않음"
+  },
+  "assessmentCriteria": [
+    "목표 개념을 말·그림·기호 중 둘 이상으로 설명한다.",
+    "조건에 맞게 풀이하고 계산 또는 단위를 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "삼각형의 합동 조건의 정의나 조건 혼동",
+    "다각형의 각의 단위·표현·적용 범위 혼동"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-20",
+  "contentVersion": "0.1.0-draft",
+  "status": "reviewed",
+  "reviewerRole": "automated-and-author-self-check",
+  "independentHumanReview": false,
+  "publicationApproved": false,
+  "checks": {
+    "schema": "passed",
+    "answers": "passed-by-unit-test-and-author-self-check",
+    "prerequisites": "proposal-metadata-preserved",
+    "officialMapping": "unverified",
+    "rights": "project-original-draft",
+    "familyAndItemCounts": "passed"
+  },
+  "issues": [
+    "독립 수학교육 전문가의 설명·문항 검수 대기",
+    "공식 성취기준 코드 매핑 미검증"
+  ]
+}

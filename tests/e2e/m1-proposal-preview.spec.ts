@@ -5,7 +5,7 @@ import { viewports } from "./viewports";
 for (const viewport of viewports) {
   test.describe(viewport.name, () => {
     test.use(viewport.options);
-    test("all five proposal units render their own interactive concept", async ({ page }) => {
+    test("proposal units render their own interactive concepts", async ({ page }) => {
       const units = [
         ["M1-01", "정수와 절댓값", "정수의 위치·원점 거리·두 점 사이 거리"],
         ["M1-02", "정수의 곱셈과 나눗셈", "부호와 크기를 나누어 곱하기"],
@@ -22,6 +22,11 @@ for (const viewport of viewports) {
         ["M1-13", "좌표평면과 순서쌍", "첫째 좌표는 가로, 둘째 좌표는 세로 위치예요"],
         ["M1-14", "정비례와 반비례", "정비례 · y/x가 일정해요"],
         ["M1-15", "각과 평행선", "평행선에서 같은 각은 같고 같은 쪽 내각은 180°예요"],
+        ["M1-16", "삼각형과 다각형", "대응하는 조건으로 삼각형을 비교해요"],
+        ["M1-17", "평면도형의 넓이", "직사각형을 대각선으로 나눠 삼각형 넓이를 찾아요"],
+        ["M1-18", "입체도형과 부피", "같은 밑면을 층층이 쌓아 부피를 구해요"],
+        ["M1-19", "자료의 정리와 대표값", "자료를 크기순으로 정리하고 대표값을 비교해요"],
+        ["M1-20", "수와 식 기초 종합", "문자식과 표에서 같은 관계를 확인해요"],
       ];
       for (const [unitId, title, labTitle] of units) {
         await page.goto(`/learn/${unitId}`);

@@ -66,6 +66,7 @@ export function MathLab({ block }: { block: Interactive }) {
     [c, setC] = useState(block.settings?.initialC ?? 2),
     [subtract, setSubtract] = useState(false),
     [inverse, setInverse] = useState(false);
+  const [triangleCondition, setTriangleCondition] = useState("SSS");
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -521,6 +522,33 @@ export function MathLab({ block }: { block: Interactive }) {
         <p className="helper">그림의 위치를 먼저 확인하고 동위각·엇각은 같음, 같은 쪽 내각은 합이 180°임을 적용해요.</p>
       </div>
     );
+  }
+  if (block.interaction === "triangle-congruence") {
+    const labels: Record<string, string> = { SSS: "세 변의 길이가 각각 같으면 합동입니다.", SAS: "두 변과 그 사이각이 각각 같으면 합동입니다.", ASA: "한 변과 그 양 끝각이 각각 같으면 합동입니다." };
+    return <div className="lab math-lab">
+      <div className="lab-result" aria-live="polite"><span>대응하는 조건으로 삼각형을 비교해요</span><strong>{triangleCondition} 합동 조건</strong><p>{labels[triangleCondition]}</p></div>
+      <div className="question-actions" role="group" aria-label="합동 조건 선택">{Object.keys(labels).map((condition) => <button key={condition} type="button" className={triangleCondition === condition ? "selected" : ""} aria-pressed={triangleCondition === condition} onClick={() => setTriangleCondition(condition)}>{condition}</button>)}</div>
+      <Control label="첫째 대응변" value={a} min={3} max={10} change={setA} /><Control label="둘째 대응변" value={b} min={3} max={10} change={setB} /><Control label="셋째 대응변" value={c} min={3} max={10} change={setC} />
+      <svg viewBox="0 0 260 130" role="img" aria-label={`대응하는 변 길이 ${a}, ${b}, ${c}인 두 삼각형`} style={{ display: "block", width: "min(100%, 22rem)", margin: "1rem auto" }}><path d="M20 110 L75 18 L130 110 Z M145 110 L200 18 L255 110 Z" fill="none" stroke="currentColor" strokeWidth="2"/><text x="70" y="126" textAnchor="middle">{a}</text><text x="105" y="64">{b}</text><text x="35" y="64">{c}</text><text x="195" y="126" textAnchor="middle">{a}</text><text x="230" y="64">{b}</text><text x="160" y="64">{c}</text></svg>
+      <p className="helper">모양만 보지 말고 대응하는 변과 각을 확인하세요. SSA는 일반적인 합동 조건이 아닙니다.</p>
+    </div>;
+  }
+  if (block.interaction === "area-model") {
+    const area = a * b / 2;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>직사각형을 대각선으로 나눠 삼각형 넓이를 찾아요</span><strong>{a} × {b} ÷ 2 = {area}</strong><p>직사각형 넓이 {a * b}의 절반이므로 삼각형 넓이는 {area}입니다.</p></div><Control label="밑변" value={a} min={1} max={20} change={setA}/><Control label="수직 높이" value={b} min={1} max={20} change={setB}/><svg viewBox="0 0 220 140" role="img" aria-label={`밑변 ${a}, 수직 높이 ${b}인 삼각형과 이를 포함하는 직사각형`} style={{ display: "block", width: "min(100%, 20rem)", margin: "1rem auto" }}><rect x="25" y="20" width="170" height="100" fill="none" stroke="currentColor" strokeWidth="2"/><path d="M25 120 L195 20 L195 120 Z" fill="currentColor" opacity=".2" stroke="currentColor" strokeWidth="2"/><text x="110" y="137" textAnchor="middle">밑변 {a}</text><text x="202" y="75">높이 {b}</text></svg><p className="helper">삼각형의 높이는 빗변이 아니라 밑변에 수직인 거리입니다.</p></div>;
+  }
+  if (block.interaction === "volume-model") {
+    const volume = a * b * c;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>같은 밑면을 층층이 쌓아 부피를 구해요</span><strong>{a} × {b} × {c} = {volume} 세제곱 단위</strong><p>한 층에 {a * b}개씩 {c}개 층이므로 모두 {volume}개입니다.</p></div><Control label="가로 단위 수" value={a} min={1} max={10} change={setA}/><Control label="세로 단위 수" value={b} min={1} max={10} change={setB}/><Control label="층 수" value={c} min={1} max={10} change={setC}/><div className="lab-result" role="img" aria-label={`${c}개 층에 각각 ${a * b}개의 단위 정육면체, 총 ${volume}개`}>{Array.from({length: Math.min(c, 5)}, (_, i) => <p key={i}>층 {i + 1}: {a} × {b} = {a * b}개</p>)}{c > 5 && <p>… 전체 {c}개 층</p>}</div><p className="helper">부피는 세 방향 길이의 곱이며 단위는 cm³처럼 세제곱 단위로 씁니다.</p></div>;
+  }
+  if (block.interaction === "data-summary") {
+    const values = [a, b, c].sort((x, y) => x - y);
+    const mean = (a + b + c) / 3;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>자료를 크기순으로 정리하고 대표값을 비교해요</span><strong>평균 {Number(mean.toFixed(2))} · 중앙값 {values[1]}</strong><p>정렬한 자료 {values.join(", ")} · 범위 {values[2] - values[0]}</p></div><Control label="자료 A" value={a} min={0} max={30} change={setA}/><Control label="자료 B" value={b} min={0} max={30} change={setB}/><Control label="자료 C" value={c} min={0} max={30} change={setC}/><p className="helper">평균은 합을 자료 수로 나눈 값, 중앙값은 크기순 가운데 값입니다. 극단값이 있으면 두 대표값은 다르게 움직일 수 있어요.</p></div>;
+  }
+  if (block.interaction === "expression-table") {
+    const rows = [0, 1, 2, 3, 4].map((x) => ({ x, y: a * x + b }));
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>문자식과 표에서 같은 관계를 확인해요</span><strong>y = {a}x + {b}</strong><p>x가 1 늘면 y는 {a}만큼 변하고, x=0이면 y={b}입니다.</p></div><Control label="x의 계수" value={a} min={-5} max={5} change={setA}/><Control label="처음 값" value={b} min={-10} max={10} change={setB}/><div className="table-scroll"><table><caption>y={a}x+({b})의 값 표</caption><thead><tr><th scope="col">x</th><th scope="col">y</th></tr></thead><tbody>{rows.map(({x,y}) => <tr key={x}><td>{x}</td><td>{y}</td></tr>)}</tbody></table></div><p className="helper">각 x를 식에 대입해 y를 구하고, 표의 순서쌍 (x,y)와 연결합니다. 일차 관계의 기초 표현 연습입니다.</p></div>;
   }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(

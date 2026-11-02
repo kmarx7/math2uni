@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M1-18",
+  "unitTitle": "입체도형과 부피",
+  "concepts": [
+    "전개도와 겉넓이",
+    "기둥과 뿔의 부피"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m118-family-1",
+      "status": "draft",
+      "title": "개념과 조건 확인",
+      "reasoningStructure": "핵심 정의나 조건을 식·표·그림에 적용한다",
+      "items": [
+        {
+          "id": "m118-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "가로 3cm, 세로 4cm, 높이 5cm인 직육면체의 부피는?",
+          "answer": {
+            "type": "integer",
+            "value": "60"
+          },
+          "rationale": "3×4×5=60cm³이다.",
+          "skillLabel": "직육면체 부피",
+          "misconceptionHypothesis": "세 길이 중 하나를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m118-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "한 층에 단위 정육면체 12개가 있고 4층이다. 전체 개수는?",
+          "answer": {
+            "type": "integer",
+            "value": "48"
+          },
+          "rationale": "12×4=48개다.",
+          "skillLabel": "단위 정육면체",
+          "misconceptionHypothesis": "층 수를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m118-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "한 모서리가 3cm인 정육면체의 부피는?",
+          "answer": {
+            "type": "integer",
+            "value": "27"
+          },
+          "rationale": "3×3×3=27cm³이다.",
+          "skillLabel": "직육면체 부피",
+          "misconceptionHypothesis": "3×3으로 넓이만 구한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m118-family-2",
+      "status": "draft",
+      "title": "계산·상황 적용",
+      "reasoningStructure": "조건을 해석해 계산하고 결과를 점검한다",
+      "items": [
+        {
+          "id": "m118-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "밑면 넓이 20cm²인 기둥의 높이가 6cm이다. 부피는?",
+          "answer": {
+            "type": "integer",
+            "value": "120"
+          },
+          "rationale": "기둥 부피=밑면 넓이×높이=20×6=120cm³이다.",
+          "skillLabel": "기둥 부피",
+          "misconceptionHypothesis": "높이로 나눈다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m118-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "한 층에 5×4개의 단위 정육면체를 놓고 3층 쌓았다. 총 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "60"
+          },
+          "rationale": "한 층은 20개, 세 층은 20×3=60개다.",
+          "skillLabel": "단위 정육면체",
+          "misconceptionHypothesis": "5+4+3으로 계산한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m118-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "모서리가 2cm인 정육면체 6개의 겉넓이 합은?",
+          "answer": {
+            "type": "integer",
+            "value": "144"
+          },
+          "rationale": "한 면 넓이는 2×2=4cm², 면은 6개이므로 한 정육면체 겉넓이는 24cm². 6개 합은 144cm²다.",
+          "skillLabel": "겉넓이",
+          "misconceptionHypothesis": "부피 공식으로 계산한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

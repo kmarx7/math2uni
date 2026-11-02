@@ -20,10 +20,10 @@ afterEach(() => {
 });
 
 describe("M1 proposal preview boundary", () => {
-  it("keeps ten draft lessons outside production delivery", () => {
+  it("keeps twenty draft lessons outside production delivery", () => {
     setNodeEnv("production");
     process.env.MATH90_CONTENT_PREVIEW = "1";
-    for (const unitId of Array.from({ length: 15 }, (_, index) => `M1-${String(index + 1).padStart(2, "0")}`)) {
+    for (const unitId of Array.from({ length: 20 }, (_, index) => `M1-${String(index + 1).padStart(2, "0")}`)) {
       expect(getDraftUnitForPreview(unitId)?.status).toBe("draft");
       expect(getDraftLessonForPreview(unitId)?.learningPhases).toHaveLength(15);
       const lesson = getDraftLessonForPreview(unitId)!;
@@ -37,11 +37,11 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 60 practice and 15 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(90);
+  it("validates 120 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(120);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id)).size).toBe(120);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(90);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id)).size).toBe(150);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(120);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
       expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);
@@ -66,6 +66,12 @@ describe("M1 proposal preview boundary", () => {
     const sixthAssessment = proposalAssessmentProblems.filter((problem) => problem.unitId === "M1-06");
     expect(sixthAssessment).toHaveLength(3);
     expect(scoreAssessment(sixthAssessment, Object.fromEntries(sixthAssessment.map((problem) => [problem.id, problem.answerRule.expected]))).score).toBe(100);
+    for (const unitId of ["M1-16", "M1-17", "M1-18", "M1-19", "M1-20"]) {
+      const unitProblems = proposalProblems.filter((problem) => problem.unitId === unitId);
+      expect(unitProblems).toHaveLength(6);
+      expect(new Set(unitProblems.map((problem) => problem.familyId)).size).toBe(2);
+      expect(proposalAssessmentProblems.some((problem) => problem.unitId === unitId)).toBe(false);
+    }
   });
 
   it("serves answer-free practice DTOs only in development preview", () => {
