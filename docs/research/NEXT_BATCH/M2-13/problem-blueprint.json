@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-13",
+  "unitTitle": "이차함수의 그래프",
+  "concepts": [
+    "꼭짓점과 대칭축",
+    "평행이동"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m213-family-1",
+      "status": "draft",
+      "title": "정의와 표현 확인",
+      "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+      "items": [
+        {
+          "id": "m213-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x-2)²+3 그래프 꼭짓점의 x좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "꼭짓점 꼴 y=(x-h)²+k에서 h=2다.",
+          "skillLabel": "꼭짓점과 대칭축",
+          "misconceptionHypothesis": "괄호 안 부호를 그대로 음수로 읽는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m213-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x+1)²-4의 대칭축은?",
+          "answer": {
+            "type": "integer",
+            "value": "-1"
+          },
+          "rationale": "x+1=x-(-1)이므로 대칭축은 x=-1이다.",
+          "skillLabel": "대칭축",
+          "misconceptionHypothesis": "상수항 -4를 대칭축으로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m213-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=(x-2)²+3에서 x=3일 때 y는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "(3-2)²+3=1+3=4다.",
+          "skillLabel": "평행이동",
+          "misconceptionHypothesis": "제곱 후 상수항을 더하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m213-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+      "items": [
+        {
+          "id": "m213-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x-4)²+1의 꼭짓점 y좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "꼭짓점은 (4,1)이므로 y좌표는 1이다.",
+          "skillLabel": "꼭짓점 읽기",
+          "misconceptionHypothesis": "괄호 안 수 4를 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m213-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "y=x² 그래프를 오른쪽으로 3만큼 옮기면 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "오른쪽 이동은 x를 x-3으로 바꾸므로 y=(x-3)²다.",
+          "skillLabel": "평행이동",
+          "misconceptionHypothesis": "x+3으로 써서 왼쪽 이동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "y=(x-3)²",
+            "B": "y=(x+3)²",
+            "C": "y=x²+3"
+          }
+        },
+        {
+          "id": "m213-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=(x-1)²+5의 대칭축은?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "꼭짓점 x좌표가 1이므로 대칭축은 x=1이다.",
+          "skillLabel": "대칭축",
+          "misconceptionHypothesis": "y좌표 5와 혼동한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

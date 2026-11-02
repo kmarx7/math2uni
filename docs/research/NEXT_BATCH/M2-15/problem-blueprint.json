@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-15",
+  "unitTitle": "닮음과 비례",
+  "concepts": [
+    "닮음 조건",
+    "대응변의 길이비"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m215-family-1",
+      "status": "draft",
+      "title": "정의와 표현 확인",
+      "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+      "items": [
+        {
+          "id": "m215-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "닮은 두 삼각형에서 작은 변 3에 대응하는 큰 변이 9이다. 길이비(큰:작은)는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "9÷3=3이므로 큰 도형은 3배 확대되었다.",
+          "skillLabel": "대응변의 길이비",
+          "misconceptionHypothesis": "작은 변을 큰 변으로 나눈다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m215-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "닮음비가 2:1일 때 작은 삼각형의 변 5에 대응하는 큰 변은?",
+          "answer": {
+            "type": "integer",
+            "value": "10"
+          },
+          "rationale": "대응변 길이는 2배이므로 5×2=10이다.",
+          "skillLabel": "대응변의 길이비",
+          "misconceptionHypothesis": "넓이비 4를 길이에 곱한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m215-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "길이비가 3:1인 닮은 도형의 넓이비(큰:작은)는?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "넓이비는 길이비의 제곱이므로 3²:1=9:1이다.",
+          "skillLabel": "닮음 조건",
+          "misconceptionHypothesis": "넓이도 3배라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m215-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+      "items": [
+        {
+          "id": "m215-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "작은 도형 둘레가 12, 길이비(큰:작은)가 2:1이다. 큰 도형 둘레는?",
+          "answer": {
+            "type": "integer",
+            "value": "24"
+          },
+          "rationale": "모든 대응 길이가 2배이므로 둘레도 12×2=24다.",
+          "skillLabel": "대응변의 길이비",
+          "misconceptionHypothesis": "넓이비 4를 둘레에 적용한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m215-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "닮은 도형에서 대응각의 크기는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "닮은 도형은 대응각이 각각 같다.",
+          "skillLabel": "닮음 조건",
+          "misconceptionHypothesis": "대응변의 길이도 모두 같다고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "같다",
+            "B": "비례하여 달라진다",
+            "C": "항상 90°다"
+          }
+        },
+        {
+          "id": "m215-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "작은 변 4가 닮은 큰 도형에서 12가 되었다. 작은 변 7에 대응하는 큰 변은?",
+          "answer": {
+            "type": "integer",
+            "value": "21"
+          },
+          "rationale": "확대비는 12÷4=3이므로 7×3=21이다.",
+          "skillLabel": "대응변의 길이비",
+          "misconceptionHypothesis": "두 도형의 변 길이를 더한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

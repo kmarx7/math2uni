@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-14",
+  "unitTitle": "이차함수와 최대·최소",
+  "concepts": [
+    "완전제곱식",
+    "정의역 안의 최댓값과 최솟값"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m214-family-1",
+      "status": "draft",
+      "title": "정의와 표현 확인",
+      "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+      "items": [
+        {
+          "id": "m214-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=-(x-2)²+7의 최댓값은?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "아래로 열린 포물선의 꼭짓점 y값 7이 최댓값이다.",
+          "skillLabel": "정의역 안의 최댓값과 최솟값",
+          "misconceptionHypothesis": "x좌표 2를 최댓값으로 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m214-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x+3)²-2의 최솟값은?",
+          "answer": {
+            "type": "integer",
+            "value": "-2"
+          },
+          "rationale": "위로 열린 포물선의 꼭짓점 y값 -2가 최솟값이다.",
+          "skillLabel": "완전제곱식",
+          "misconceptionHypothesis": "대칭축 x=-3을 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m214-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=-(x-1)²+5의 꼭짓점 x좌표는?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "x-1=0에서 꼭짓점 x좌표는 1이다.",
+          "skillLabel": "완전제곱식",
+          "misconceptionHypothesis": "아래로 열리므로 x좌표도 음수로 바꾼다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m214-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+      "items": [
+        {
+          "id": "m214-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=(x-4)²+2의 최솟값은?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "제곱항은 0 이상이고 x=4에서 0이므로 최솟값은 2다.",
+          "skillLabel": "정의역 안의 최댓값과 최솟값",
+          "misconceptionHypothesis": "제곱항이 최소일 때 4라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m214-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "아래로 열린 포물선의 꼭짓점은 어떤 값이 되는가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "아래로 열린 그래프에서는 꼭짓점이 가장 높은 점이므로 최댓값이다.",
+          "skillLabel": "정의역 안의 최댓값과 최솟값",
+          "misconceptionHypothesis": "꼭짓점이면 항상 최솟값이라고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          },
+          "choices": {
+            "A": "최댓값",
+            "B": "최솟값",
+            "C": "둘 다 아님"
+          }
+        },
+        {
+          "id": "m214-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=-(x-3)²+8의 최댓값은?",
+          "answer": {
+            "type": "integer",
+            "value": "8"
+          },
+          "rationale": "제곱항 앞이 음수이며 꼭짓점 y값은 8이다.",
+          "skillLabel": "정의역 안의 최댓값과 최솟값",
+          "misconceptionHypothesis": "x좌표 3을 답한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-11",
+  "unitTitle": "이차방정식의 풀이",
+  "concepts": [
+    "인수분해와 해",
+    "근의 공식"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m211-family-1",
+      "status": "draft",
+      "title": "정의와 표현 확인",
+      "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+      "items": [
+        {
+          "id": "m211-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²-5x+6=0의 큰 해는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "(x-2)(x-3)=0이므로 두 해는 2와 3이다.",
+          "skillLabel": "인수분해와 해",
+          "misconceptionHypothesis": "인수의 부호를 방정식 해에 그대로 옮긴다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m211-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²-16=0의 양의 해는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x²=16에서 x=±4이므로 양의 해는 4다.",
+          "skillLabel": "근의 공식",
+          "misconceptionHypothesis": "음의 해만 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m211-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x²+5x+6=0 두 해의 합은?",
+          "answer": {
+            "type": "integer",
+            "value": "-5"
+          },
+          "rationale": "(x+2)(x+3)=0이므로 해는 -2,-3이고 합은 -5다.",
+          "skillLabel": "인수분해와 해",
+          "misconceptionHypothesis": "인수의 상수를 해와 같은 부호로 본다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m211-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+      "items": [
+        {
+          "id": "m211-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²-3x-10=0의 큰 해는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "(x-5)(x+2)=0이므로 큰 해는 5다.",
+          "skillLabel": "인수분해와 해",
+          "misconceptionHypothesis": "곱이 -10인 쌍에서 부호를 반대로 고른다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m211-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²=25의 해는 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x=5와 x=-5 두 해가 있다.",
+          "skillLabel": "근의 공식",
+          "misconceptionHypothesis": "주제곱근 하나만 방정식 해로 센다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m211-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x²-7x+12=0의 작은 해는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "(x-3)(x-4)=0이므로 작은 해는 3이다.",
+          "skillLabel": "인수분해와 해",
+          "misconceptionHypothesis": "합 7, 곱 12인 수를 찾지 못한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

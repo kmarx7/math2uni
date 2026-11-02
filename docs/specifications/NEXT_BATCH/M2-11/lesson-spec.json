@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-11",
+  "levelId": 2,
+  "title": "이차방정식의 풀이",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "인수분해와 해",
+      "근의 공식"
+    ],
+    "prerequisiteUnits": [
+      "M2-10",
+      "M2-08"
+    ],
+    "visualization": "영이 되는 곱"
+  },
+  "objectives": [
+    "이차방정식의 해를 곱이 0이 되는 조건과 연결한다.",
+    "인수분해와 근의 공식을 사용해 간단한 이차방정식을 푼다.",
+    "구한 근을 원래 방정식에 대입해 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m2-11-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "인수분해를 기억해 예시 식에 적용해 본다."
+    },
+    {
+      "id": "m2-11-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "제곱근과 근호 계산를 기억해 예시 식에 적용해 본다."
+    },
+    {
+      "id": "m2-11-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "방정식의 해를 기억해 예시 식에 적용해 본다."
+    }
+  ],
+  "targetSkills": [
+    "m2-11-skill-1",
+    "m2-11-skill-2",
+    "m2-11-skill-3"
+  ],
+  "instructionalStrategy": {
+    "sequence": "상황·그림·식 관찰 → 변수와 조건 구분 → 수학적 표현 → 풀이 원리 설명 → 정의역·원래 조건으로 점검",
+    "principleDerivation": "인수분해와 근의 공식을 사용해 간단한 이차방정식을 푼다.",
+    "accessibility": "색상만으로 조건을 구분하지 않고 식·숫자·문장 대안을 함께 제공한다. 모든 조작은 키보드로 가능하고 결과는 aria-live로 안내한다."
+  },
+  "subunits": [
+    {
+      "id": "m2-11-u1",
+      "title": "이차방정식과 해",
+      "targetSkills": [
+        "m2-11-skill-1"
+      ],
+      "explanation": "이차방정식과 해의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "이차방정식과 해의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    },
+    {
+      "id": "m2-11-u2",
+      "title": "곱이 0인 조건",
+      "targetSkills": [
+        "m2-11-skill-1"
+      ],
+      "explanation": "곱이 0인 조건의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "곱이 0인 조건의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    },
+    {
+      "id": "m2-11-u3",
+      "title": "인수분해로 풀기",
+      "targetSkills": [
+        "m2-11-skill-2"
+      ],
+      "explanation": "인수분해로 풀기의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "인수분해로 풀기의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    },
+    {
+      "id": "m2-11-u4",
+      "title": "근의 공식 구조",
+      "targetSkills": [
+        "m2-11-skill-2"
+      ],
+      "explanation": "근의 공식 구조의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "근의 공식 구조의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    },
+    {
+      "id": "m2-11-u5",
+      "title": "판별식과 근",
+      "targetSkills": [
+        "m2-11-skill-2"
+      ],
+      "explanation": "판별식과 근의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "판별식과 근의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    },
+    {
+      "id": "m2-11-u6",
+      "title": "대입해 검산",
+      "targetSkills": [
+        "m2-11-skill-2"
+      ],
+      "explanation": "대입해 검산의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+      "activity": "영이 되는 곱에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+      "check": "대입해 검산의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m2-11-lab",
+      "kind": "math-lab",
+      "description": "영이 되는 곱",
+      "features": [
+        "영이 되는 곱",
+        "값 조절",
+        "결과 점검"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 2,
+    "draftItemCount": 6,
+    "assessment": "별도 평가 문항 미포함"
+  },
+  "assessmentCriteria": [
+    "식과 그래프 또는 상황이 나타내는 조건을 설명한다.",
+    "계산한 해를 원래 조건과 정의역에 대조해 확인한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated"
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "인수분해와 해의 조건이나 부호 혼동",
+    "근의 공식의 해석 범위·비례 관계 혼동"
+  ]
+}

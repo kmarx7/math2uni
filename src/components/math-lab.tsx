@@ -69,6 +69,8 @@ export function MathLab({ block }: { block: Interactive }) {
   const [triangleCondition, setTriangleCondition] = useState("SSS");
   const [systemMethod, setSystemMethod] = useState("elimination");
   const [radicalMode, setRadicalMode] = useState("simplify");
+  const [quadraticMethod, setQuadraticMethod] = useState("factor");
+  const [opensDown, setOpensDown] = useState(false);
   if (block.interaction === "place-value") return <PlaceLab />;
   const op = block.settings?.operation ?? "add";
   if (
@@ -598,6 +600,33 @@ export function MathLab({ block }: { block: Interactive }) {
   }
   if (block.interaction === "factor-pairs") {
     return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>곱이 상수항, 합이 x의 계수가 되는 두 수를 찾아요</span><strong>x²+{a+b}x+{a*b} = (x+{a})(x+{b})</strong><p>{a}+{b}={a+b}, {a}×{b}={a*b}이므로 전개해 원래 식과 같은지 확인합니다.</p></div><Control label="첫째 인수의 수" value={a} min={0} max={10} change={setA}/><Control label="둘째 인수의 수" value={b} min={0} max={10} change={setB}/><p className="helper">인수분해는 전개의 반대 과정입니다. 두 수의 합과 곱을 모두 확인해야 합니다.</p></div>;
+  }
+  if (block.interaction === "quadratic-roots") {
+    const sum = a + b;
+    const product = a * b;
+    const discriminant = (a - b) ** 2;
+    const factorX = (root: number) => root >= 0 ? `(x-${root})` : `(x+${Math.abs(root)})`;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>방정식의 해는 곱이 0이 되는 값이에요</span><strong>x²-({sum})x+({product})=0</strong><p>{quadraticMethod === "factor" ? `${factorX(a)}${factorX(b)}=0이므로 해는 x=${a}, ${b}입니다.` : `근의 공식에서 판별식은 ${discriminant}이고, x=(${sum}±√${discriminant})÷2이므로 해는 ${a}, ${b}입니다.`}</p></div><div className="question-actions" role="group" aria-label="이차방정식 풀이 방법"><button type="button" className={quadraticMethod === "factor" ? "selected" : ""} aria-pressed={quadraticMethod === "factor"} onClick={() => setQuadraticMethod("factor")}>인수분해</button><button type="button" className={quadraticMethod === "formula" ? "selected" : ""} aria-pressed={quadraticMethod === "formula"} onClick={() => setQuadraticMethod("formula")}>근의 공식</button></div><Control label="첫째 해" value={a} min={-10} max={10} change={setA}/><Control label="둘째 해" value={b} min={-10} max={10} change={setB}/><p className="helper">두 해를 인수로 만들고, 전개해 원래 방정식과 같은지 확인합니다. 근의 공식은 판별식과 계수의 부호를 주의해요.</p></div>;
+  }
+  if (block.interaction === "quadratic-area") {
+    const root = (-a + Math.sqrt(a * a + 4 * b)) / 2;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>직사각형의 넓이 조건을 이차방정식으로 나타내요</span><strong>x(x+{a})={b} · 양의 길이 x≈{root.toFixed(2)}</strong><p>방정식 x²+{a}x-{b}=0의 양의 해를 사용합니다. 음수 해는 길이 조건에 맞지 않습니다.</p></div><Control label="두 변의 차" value={a} min={0} max={12} change={setA}/><Control label="직사각형 넓이" value={b} min={1} max={60} change={setB}/><div className="ratio-track" role="img" aria-label={`변의 길이는 약 ${root.toFixed(2)}와 ${(root+a).toFixed(2)}, 넓이는 ${b}`}><span style={{width:`${Math.min(100,root*8)}%`}}/></div><p className="helper">문제에 나온 길이는 양수여야 하므로 두 근 가운데 상황에 맞는 값만 선택합니다.</p></div>;
+  }
+  if (block.interaction === "quadratic-vertex" || block.interaction === "quadratic-extrema") {
+    const extrema = block.interaction === "quadratic-extrema";
+    const sign = extrema && opensDown ? -1 : 1;
+    const y = (x: number) => sign * (x - a) ** 2 + b;
+    const points = Array.from({length:21},(_,i)=>i-10).map((x)=>`${30+(x+10)*10},${130-(Math.max(-10,Math.min(10,y(x)))+10)*5}`).join(" ");
+    const output = extrema ? (opensDown ? `구간 [${a-c}, ${a+c}]의 최댓값은 ${b}` : `구간 [${a-c}, ${a+c}]의 최솟값은 ${b}`) : `꼭짓점 (${a}, ${b}), 대칭축 x=${a}`;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>{extrema ? "꼭짓점과 정의역에서 최댓값·최솟값을 확인해요" : "꼭짓점과 대칭축이 포물선의 위치를 정해요"}</span><strong>{extrema && opensDown ? "y=-(x-h)²+k" : "y=(x-h)²+k"} · {output}</strong><p>{extrema ? "대칭인 구간에서 꼭짓점이 최솟값 또는 최댓값을 이룹니다." : "완전제곱 꼴에서 꼭짓점은 (h,k)이고 대칭축은 x=h입니다."}</p></div>{extrema && <div className="question-actions" role="group" aria-label="포물선 방향 선택"><button type="button" className={!opensDown ? "selected" : ""} aria-pressed={!opensDown} onClick={()=>setOpensDown(false)}>위로 열림</button><button type="button" className={opensDown ? "selected" : ""} aria-pressed={opensDown} onClick={()=>setOpensDown(true)}>아래로 열림</button></div>}<Control label="꼭짓점 x좌표 h" value={a} min={-5} max={5} change={setA}/><Control label="꼭짓점 y좌표 k" value={b} min={-8} max={8} change={setB}/>{extrema && <Control label="구간의 반길이" value={c} min={1} max={8} change={setC}/>}<svg viewBox="0 0 260 160" role="img" aria-label={`포물선의 꼭짓점은 (${a}, ${b}), 대칭축은 x=${a}`} style={{display:"block",width:"min(100%,21rem)",margin:"1rem auto"}}><line x1="30" y1="80" x2="230" y2="80" stroke="currentColor" strokeWidth="1"/><line x1="130" y1="15" x2="130" y2="145" stroke="currentColor" strokeWidth="1"/><polyline points={points} fill="none" stroke="currentColor" strokeWidth="3"/><circle cx={30+(a+10)*10} cy={130-(Math.max(-10,Math.min(10,b))+10)*5} r="4" fill="currentColor"/></svg><p className="helper">완전제곱 꼴에서 꼭짓점을 읽고 그래프를 확인하세요. 최댓값·최솟값은 지정된 구간을 함께 살펴야 합니다.</p></div>;
+  }
+  if (block.interaction === "similarity-scale") {
+    const unit = 60 / b;
+    const leftBase = unit * 2;
+    const leftHeight = unit * 1.2;
+    const largeBase = leftBase * b;
+    const largeHeight = leftHeight * b;
+    return <div className="lab math-lab"><div className="lab-result" aria-live="polite"><span>닮은 도형은 대응각이 같고 대응변의 비가 일정해요</span><strong>길이비 {b}:1 · 대응변 {a}→{a*b} · 넓이비 {b*b}:1</strong><p>둘레비는 길이비와 같은 {b}:1이고, 넓이비는 길이비를 제곱한 {b*b}:1입니다.</p></div><Control label="작은 도형의 대응변" value={a} min={1} max={12} change={setA}/><Control label="확대 비율" value={b} min={1} max={6} change={setB}/><Control label="다른 대응변" value={c} min={1} max={12} change={setC}/><svg viewBox="0 0 320 150" role="img" aria-label={`닮은 도형의 확대 개념도. 작은 삼각형 대응변 ${a}, ${c}; 확대 비율 ${b}; 큰 삼각형 대응변 ${a*b}, ${c*b}`} style={{display:"block",width:"min(100%,24rem)",margin:"1rem auto"}}><path d={`M12 125 L${12+leftBase/2} ${125-leftHeight} L${12+leftBase} 125 Z M160 125 L${160+largeBase/2} ${125-largeHeight} L${160+largeBase} 125 Z`} fill="none" stroke="currentColor" strokeWidth="2"/><text x={12+leftBase/2} y="144" textAnchor="middle">{a}</text><text x={160+largeBase/2} y="144" textAnchor="middle">{a*b}</text><text x="160" y="16" textAnchor="middle">길이 × {b}</text></svg><p className="helper">그림은 확대 비율을 보여 주는 개념도입니다. 둘레비는 길이비와 같고, 넓이비는 길이비의 제곱입니다.</p></div>;
   }
   if (op === "factors") {
     const factors = Array.from({ length: a }, (_, i) => i + 1).filter(

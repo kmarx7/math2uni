@@ -1,0 +1,822 @@
+[
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-11",
+    "unitTitle": "이차방정식의 풀이",
+    "concepts": [
+      "인수분해와 해",
+      "근의 공식"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m211-family-1",
+        "status": "draft",
+        "title": "정의와 표현 확인",
+        "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+        "items": [
+          {
+            "id": "m211-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "x²-5x+6=0의 큰 해는?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "(x-2)(x-3)=0이므로 두 해는 2와 3이다.",
+            "skillLabel": "인수분해와 해",
+            "misconceptionHypothesis": "인수의 부호를 방정식 해에 그대로 옮긴다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m211-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "x²-16=0의 양의 해는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "x²=16에서 x=±4이므로 양의 해는 4다.",
+            "skillLabel": "근의 공식",
+            "misconceptionHypothesis": "음의 해만 고른다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m211-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "x²+5x+6=0 두 해의 합은?",
+            "answer": {
+              "type": "integer",
+              "value": "-5"
+            },
+            "rationale": "(x+2)(x+3)=0이므로 해는 -2,-3이고 합은 -5다.",
+            "skillLabel": "인수분해와 해",
+            "misconceptionHypothesis": "인수의 상수를 해와 같은 부호로 본다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m211-family-2",
+        "status": "draft",
+        "title": "풀이·상황 적용",
+        "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+        "items": [
+          {
+            "id": "m211-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "x²-3x-10=0의 큰 해는?",
+            "answer": {
+              "type": "integer",
+              "value": "5"
+            },
+            "rationale": "(x-5)(x+2)=0이므로 큰 해는 5다.",
+            "skillLabel": "인수분해와 해",
+            "misconceptionHypothesis": "곱이 -10인 쌍에서 부호를 반대로 고른다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m211-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "x²=25의 해는 몇 개인가?",
+            "answer": {
+              "type": "integer",
+              "value": "2"
+            },
+            "rationale": "x=5와 x=-5 두 해가 있다.",
+            "skillLabel": "근의 공식",
+            "misconceptionHypothesis": "주제곱근 하나만 방정식 해로 센다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m211-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "x²-7x+12=0의 작은 해는?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "(x-3)(x-4)=0이므로 작은 해는 3이다.",
+            "skillLabel": "인수분해와 해",
+            "misconceptionHypothesis": "합 7, 곱 12인 수를 찾지 못한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-12",
+    "unitTitle": "이차방정식의 활용",
+    "concepts": [
+      "수량의 이차 관계",
+      "해의 조건 검토"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m212-family-1",
+        "status": "draft",
+        "title": "정의와 표현 확인",
+        "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+        "items": [
+          {
+            "id": "m212-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "직사각형 변이 x와 x+2이고 넓이가 24이다. 양의 x는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "x(x+2)=24, x²+2x-24=0=(x+6)(x-4)이므로 길이 x=4다.",
+            "skillLabel": "해의 조건 검토",
+            "misconceptionHypothesis": "음수 해 -6을 길이로 선택한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m212-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "연속한 두 양의 정수의 곱이 20이다. 작은 수는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "x(x+1)=20에서 x²+x-20=0=(x+5)(x-4), 양수 해는 4다.",
+            "skillLabel": "수량의 이차 관계",
+            "misconceptionHypothesis": "연속한 정수를 x와 x+2로 둔다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m212-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "정사각형의 한 변이 x+3이고 넓이가 49이다. 양의 변 길이는?",
+            "answer": {
+              "type": "integer",
+              "value": "7"
+            },
+            "rationale": "정사각형 한 변은 √49=7이다.",
+            "skillLabel": "해의 조건 검토",
+            "misconceptionHypothesis": "넓이를 변 길이로 착각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m212-family-2",
+        "status": "draft",
+        "title": "풀이·상황 적용",
+        "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+        "items": [
+          {
+            "id": "m212-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "가로 x, 세로 x+5인 직사각형 넓이가 36이다. 양의 가로는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "x(x+5)=36에서 x²+5x-36=0=(x+9)(x-4), 양수 해 4다.",
+            "skillLabel": "수량의 이차 관계",
+            "misconceptionHypothesis": "근은 모두 길이로 허용한다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m212-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "두 연속한 자연수의 곱이 42이다. 작은 수는?",
+            "answer": {
+              "type": "integer",
+              "value": "6"
+            },
+            "rationale": "x(x+1)=42에서 x²+x-42=0=(x+7)(x-6), 자연수 해는 6이다.",
+            "skillLabel": "해의 조건 검토",
+            "misconceptionHypothesis": "자연수 조건을 확인하지 않는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m212-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "가로 x, 세로 x+1인 직사각형 넓이가 12이다. 가로 x는?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "x(x+1)=12에서 x²+x-12=0=(x+4)(x-3), 길이는 3이다.",
+            "skillLabel": "수량의 이차 관계",
+            "misconceptionHypothesis": "x+1 조건을 빠뜨린다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-13",
+    "unitTitle": "이차함수의 그래프",
+    "concepts": [
+      "꼭짓점과 대칭축",
+      "평행이동"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m213-family-1",
+        "status": "draft",
+        "title": "정의와 표현 확인",
+        "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+        "items": [
+          {
+            "id": "m213-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x-2)²+3 그래프 꼭짓점의 x좌표는?",
+            "answer": {
+              "type": "integer",
+              "value": "2"
+            },
+            "rationale": "꼭짓점 꼴 y=(x-h)²+k에서 h=2다.",
+            "skillLabel": "꼭짓점과 대칭축",
+            "misconceptionHypothesis": "괄호 안 부호를 그대로 음수로 읽는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m213-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x+1)²-4의 대칭축은?",
+            "answer": {
+              "type": "integer",
+              "value": "-1"
+            },
+            "rationale": "x+1=x-(-1)이므로 대칭축은 x=-1이다.",
+            "skillLabel": "대칭축",
+            "misconceptionHypothesis": "상수항 -4를 대칭축으로 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m213-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "y=(x-2)²+3에서 x=3일 때 y는?",
+            "answer": {
+              "type": "integer",
+              "value": "4"
+            },
+            "rationale": "(3-2)²+3=1+3=4다.",
+            "skillLabel": "평행이동",
+            "misconceptionHypothesis": "제곱 후 상수항을 더하지 않는다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m213-family-2",
+        "status": "draft",
+        "title": "풀이·상황 적용",
+        "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+        "items": [
+          {
+            "id": "m213-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x-4)²+1의 꼭짓점 y좌표는?",
+            "answer": {
+              "type": "integer",
+              "value": "1"
+            },
+            "rationale": "꼭짓점은 (4,1)이므로 y좌표는 1이다.",
+            "skillLabel": "꼭짓점 읽기",
+            "misconceptionHypothesis": "괄호 안 수 4를 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m213-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "y=x² 그래프를 오른쪽으로 3만큼 옮기면 식은?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "오른쪽 이동은 x를 x-3으로 바꾸므로 y=(x-3)²다.",
+            "skillLabel": "평행이동",
+            "misconceptionHypothesis": "x+3으로 써서 왼쪽 이동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "y=(x-3)²",
+              "B": "y=(x+3)²",
+              "C": "y=x²+3"
+            }
+          },
+          {
+            "id": "m213-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "y=(x-1)²+5의 대칭축은?",
+            "answer": {
+              "type": "integer",
+              "value": "1"
+            },
+            "rationale": "꼭짓점 x좌표가 1이므로 대칭축은 x=1이다.",
+            "skillLabel": "대칭축",
+            "misconceptionHypothesis": "y좌표 5와 혼동한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-14",
+    "unitTitle": "이차함수와 최대·최소",
+    "concepts": [
+      "완전제곱식",
+      "정의역 안의 최댓값과 최솟값"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m214-family-1",
+        "status": "draft",
+        "title": "정의와 표현 확인",
+        "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+        "items": [
+          {
+            "id": "m214-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=-(x-2)²+7의 최댓값은?",
+            "answer": {
+              "type": "integer",
+              "value": "7"
+            },
+            "rationale": "아래로 열린 포물선의 꼭짓점 y값 7이 최댓값이다.",
+            "skillLabel": "정의역 안의 최댓값과 최솟값",
+            "misconceptionHypothesis": "x좌표 2를 최댓값으로 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m214-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x+3)²-2의 최솟값은?",
+            "answer": {
+              "type": "integer",
+              "value": "-2"
+            },
+            "rationale": "위로 열린 포물선의 꼭짓점 y값 -2가 최솟값이다.",
+            "skillLabel": "완전제곱식",
+            "misconceptionHypothesis": "대칭축 x=-3을 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m214-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "y=-(x-1)²+5의 꼭짓점 x좌표는?",
+            "answer": {
+              "type": "integer",
+              "value": "1"
+            },
+            "rationale": "x-1=0에서 꼭짓점 x좌표는 1이다.",
+            "skillLabel": "완전제곱식",
+            "misconceptionHypothesis": "아래로 열리므로 x좌표도 음수로 바꾼다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m214-family-2",
+        "status": "draft",
+        "title": "풀이·상황 적용",
+        "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+        "items": [
+          {
+            "id": "m214-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "y=(x-4)²+2의 최솟값은?",
+            "answer": {
+              "type": "integer",
+              "value": "2"
+            },
+            "rationale": "제곱항은 0 이상이고 x=4에서 0이므로 최솟값은 2다.",
+            "skillLabel": "정의역 안의 최댓값과 최솟값",
+            "misconceptionHypothesis": "제곱항이 최소일 때 4라고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m214-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "아래로 열린 포물선의 꼭짓점은 어떤 값이 되는가?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "아래로 열린 그래프에서는 꼭짓점이 가장 높은 점이므로 최댓값이다.",
+            "skillLabel": "정의역 안의 최댓값과 최솟값",
+            "misconceptionHypothesis": "꼭짓점이면 항상 최솟값이라고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "최댓값",
+              "B": "최솟값",
+              "C": "둘 다 아님"
+            }
+          },
+          {
+            "id": "m214-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "y=-(x-3)²+8의 최댓값은?",
+            "answer": {
+              "type": "integer",
+              "value": "8"
+            },
+            "rationale": "제곱항 앞이 음수이며 꼭짓점 y값은 8이다.",
+            "skillLabel": "정의역 안의 최댓값과 최솟값",
+            "misconceptionHypothesis": "x좌표 3을 답한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "1",
+    "unitId": "M2-15",
+    "unitTitle": "닮음과 비례",
+    "concepts": [
+      "닮음 조건",
+      "대응변의 길이비"
+    ],
+    "contentVersion": "0.1.0-draft",
+    "reviewStatus": "draft",
+    "officialMappingStatus": "unverified",
+    "publicationApproved": false,
+    "families": [
+      {
+        "id": "m215-family-1",
+        "status": "draft",
+        "title": "정의와 표현 확인",
+        "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+        "items": [
+          {
+            "id": "m215-p01",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "닮은 두 삼각형에서 작은 변 3에 대응하는 큰 변이 9이다. 길이비(큰:작은)는?",
+            "answer": {
+              "type": "integer",
+              "value": "3"
+            },
+            "rationale": "9÷3=3이므로 큰 도형은 3배 확대되었다.",
+            "skillLabel": "대응변의 길이비",
+            "misconceptionHypothesis": "작은 변을 큰 변으로 나눈다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m215-p02",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "닮음비가 2:1일 때 작은 삼각형의 변 5에 대응하는 큰 변은?",
+            "answer": {
+              "type": "integer",
+              "value": "10"
+            },
+            "rationale": "대응변 길이는 2배이므로 5×2=10이다.",
+            "skillLabel": "대응변의 길이비",
+            "misconceptionHypothesis": "넓이비 4를 길이에 곱한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m215-p03",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "길이비가 3:1인 닮은 도형의 넓이비(큰:작은)는?",
+            "answer": {
+              "type": "integer",
+              "value": "9"
+            },
+            "rationale": "넓이비는 길이비의 제곱이므로 3²:1=9:1이다.",
+            "skillLabel": "닮음 조건",
+            "misconceptionHypothesis": "넓이도 3배라고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      },
+      {
+        "id": "m215-family-2",
+        "status": "draft",
+        "title": "풀이·상황 적용",
+        "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+        "items": [
+          {
+            "id": "m215-p04",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "integer",
+            "prompt": "작은 도형 둘레가 12, 길이비(큰:작은)가 2:1이다. 큰 도형 둘레는?",
+            "answer": {
+              "type": "integer",
+              "value": "24"
+            },
+            "rationale": "모든 대응 길이가 2배이므로 둘레도 12×2=24다.",
+            "skillLabel": "대응변의 길이비",
+            "misconceptionHypothesis": "넓이비 4를 둘레에 적용한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          },
+          {
+            "id": "m215-p05",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D1",
+            "inputType": "choice",
+            "prompt": "닮은 도형에서 대응각의 크기는?",
+            "answer": {
+              "type": "choice",
+              "value": "A"
+            },
+            "rationale": "닮은 도형은 대응각이 각각 같다.",
+            "skillLabel": "닮음 조건",
+            "misconceptionHypothesis": "대응변의 길이도 모두 같다고 생각한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            },
+            "choices": {
+              "A": "같다",
+              "B": "비례하여 달라진다",
+              "C": "항상 90°다"
+            }
+          },
+          {
+            "id": "m215-p06",
+            "status": "draft",
+            "purpose": "practice-draft",
+            "difficulty": "D2",
+            "inputType": "integer",
+            "prompt": "작은 변 4가 닮은 큰 도형에서 12가 되었다. 작은 변 7에 대응하는 큰 변은?",
+            "answer": {
+              "type": "integer",
+              "value": "21"
+            },
+            "rationale": "확대비는 12÷4=3이므로 7×3=21이다.",
+            "skillLabel": "대응변의 길이비",
+            "misconceptionHypothesis": "두 도형의 변 길이를 더한다.",
+            "verification": {
+              "method": "independent-definition-and-arithmetic-check",
+              "result": "author-self-check-only",
+              "humanVerified": false
+            }
+          }
+        ],
+        "counts": {
+          "distinctFamilies": 1,
+          "draftItems": 3,
+          "humanApprovedItems": 0
+        }
+      }
+    ]
+  }
+]

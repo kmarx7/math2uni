@@ -92,6 +92,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "radical-simplify",
       "polynomial-area",
       "factor-pairs",
+      "quadratic-roots",
+      "quadratic-area",
+      "quadratic-vertex",
+      "quadratic-extrema",
+      "similarity-scale",
     ]),
     settings: z
       .object({

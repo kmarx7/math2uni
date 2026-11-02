@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-15",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "대응각이 같고 대응변의 비가 일정한 도형을 닮음으로 설명한다.\n닮은 도형에서 대응변의 길이를 구한다.\n길이비·둘레비와 넓이비의 관계를 구별한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "삼각형의 각과 합동를 기억해 예시 식에 적용해 본다.\n비와 비율를 기억해 예시 식에 적용해 본다.\n넓이의 단위를 기억해 예시 식에 적용해 본다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m2-15-u1",
+          "title": "대응하는 꼭짓점",
+          "body": "대응하는 꼭짓점의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "대응하는 꼭짓점의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        },
+        {
+          "id": "m2-15-u2",
+          "title": "닮음 조건",
+          "body": "닮음 조건의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "닮음 조건의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        },
+        {
+          "id": "m2-15-u3",
+          "title": "대응변의 비",
+          "body": "대응변의 비의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "대응변의 비의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        },
+        {
+          "id": "m2-15-u4",
+          "title": "빠진 변의 길이",
+          "body": "빠진 변의 길이의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "빠진 변의 길이의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        },
+        {
+          "id": "m2-15-u5",
+          "title": "둘레비",
+          "body": "둘레비의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "둘레비의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        },
+        {
+          "id": "m2-15-u6",
+          "title": "넓이비와 길이비",
+          "body": "넓이비와 길이비의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+          "activity": "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+          "check": "넓이비와 길이비의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+        }
+      ],
+      "body": "상황·그림·식 관찰 → 변수와 조건 구분 → 수학적 표현 → 풀이 원리 설명 → 정의역·원래 조건으로 점검"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "닮은 삼각형 확대",
+      "interaction": "similarity-scale",
+      "settings": {
+        "initialA": 3,
+        "initialB": 2,
+        "initialC": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "대응하는 꼭짓점의 의미를 구체적인 수와 그림에서 확인한 다음 기호로 옮깁니다. 계산 결과는 원래 식이나 주어진 상황에 다시 대입합니다.",
+        "닮은 삼각형 확대에서 수치를 조절하고 조건 또는 그래프의 변화를 확인합니다.",
+        "대응하는 꼭짓점의 정의를 말로 설명하고 간단한 예를 독립적으로 해결합니다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "서로 다른 문제 원형 연습",
+      "purpose": "practice",
+      "hint": "조건의 의미를 먼저 정하고, 풀이 뒤에는 모든 원래 조건에 대입해 확인해 보세요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "닮음 조건의 조건이나 부호 혼동 · 대응변의 길이비의 해석 범위·비례 관계 혼동을 다시 확인하고 관련 소단원으로 돌아가세요. 풀이 기록은 계정별 제안 미리보기 안에서 구분 저장됩니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안 콘텐츠 미리보기입니다. 공식 성취·평가가 아니며 다음 단원은 제안 순서입니다. 복습 간격은 검증 대기입니다."
+    }
+  ]
+}

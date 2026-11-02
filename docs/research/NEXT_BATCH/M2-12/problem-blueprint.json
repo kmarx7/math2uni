@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M2-12",
+  "unitTitle": "이차방정식의 활용",
+  "concepts": [
+    "수량의 이차 관계",
+    "해의 조건 검토"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m212-family-1",
+      "status": "draft",
+      "title": "정의와 표현 확인",
+      "reasoningStructure": "조건이나 성질을 식·그래프·도형에 연결한다",
+      "items": [
+        {
+          "id": "m212-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "직사각형 변이 x와 x+2이고 넓이가 24이다. 양의 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x(x+2)=24, x²+2x-24=0=(x+6)(x-4)이므로 길이 x=4다.",
+          "skillLabel": "해의 조건 검토",
+          "misconceptionHypothesis": "음수 해 -6을 길이로 선택한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m212-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "연속한 두 양의 정수의 곱이 20이다. 작은 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x(x+1)=20에서 x²+x-20=0=(x+5)(x-4), 양수 해는 4다.",
+          "skillLabel": "수량의 이차 관계",
+          "misconceptionHypothesis": "연속한 정수를 x와 x+2로 둔다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m212-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "정사각형의 한 변이 x+3이고 넓이가 49이다. 양의 변 길이는?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "정사각형 한 변은 √49=7이다.",
+          "skillLabel": "해의 조건 검토",
+          "misconceptionHypothesis": "넓이를 변 길이로 착각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m212-family-2",
+      "status": "draft",
+      "title": "풀이·상황 적용",
+      "reasoningStructure": "계산 결과를 원래 조건과 대조해 검산한다",
+      "items": [
+        {
+          "id": "m212-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "가로 x, 세로 x+5인 직사각형 넓이가 36이다. 양의 가로는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x(x+5)=36에서 x²+5x-36=0=(x+9)(x-4), 양수 해 4다.",
+          "skillLabel": "수량의 이차 관계",
+          "misconceptionHypothesis": "근은 모두 길이로 허용한다고 생각한다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m212-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "두 연속한 자연수의 곱이 42이다. 작은 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "x(x+1)=42에서 x²+x-42=0=(x+7)(x-6), 자연수 해는 6이다.",
+          "skillLabel": "해의 조건 검토",
+          "misconceptionHypothesis": "자연수 조건을 확인하지 않는다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        },
+        {
+          "id": "m212-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "가로 x, 세로 x+1인 직사각형 넓이가 12이다. 가로 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "x(x+1)=12에서 x²+x-12=0=(x+4)(x-3), 길이는 3이다.",
+          "skillLabel": "수량의 이차 관계",
+          "misconceptionHypothesis": "x+1 조건을 빠뜨린다.",
+          "verification": {
+            "method": "independent-definition-and-arithmetic-check",
+            "result": "author-self-check-only",
+            "humanVerified": false
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 3,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}
