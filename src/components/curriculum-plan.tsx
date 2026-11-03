@@ -101,15 +101,14 @@ export function CurriculumPlan({
       </aside>
       <aside className="notice">
         <div>
-          <strong>새 학습 경로 배치 초안 · 사용자 검토 대기</strong>
+          <strong>Math 90 개발 경로 결정 · 공식 정본 아님</strong>
           <p>
-            요청 기준은 {masterDesign.levels.map((item) => item.count).join(" / ")}
-            입니다. 교육 검토 초안은 {pathLevels
-              .map((item) => item.proposedCount)
-              .join(" / ")}로 배치하고, 확률·통계 추정의 첫 학습을 LEVEL 7에
-            유지하기 위해 LEVEL 7/8을 20/18로 조정했습니다. 이 경로는 정본이나
-            실제 학습 순서가 아닙니다. LEVEL 1/2 제목과 LEVEL 7/8 수량 조정은
-            검토 중입니다.
+            개발에 사용할 제안 경로의 LEVEL별 제목·수량·순서를 이 기준으로
+            고정했습니다. 기준 수량은 {masterDesign.levels.map((item) => item.count).join(" / ")}
+            이고, 제안 경로 수량은 {pathLevels.map((item) => item.proposedCount).join(" / ")}
+            입니다. LEVEL 1/2 제목은 해당 단원 구성을 드러내도록 확장했고, M7-19·M7-20은
+            LEVEL 8의 첫 두 학습 단원으로 배치했습니다. 정본 등록, 공식 성취기준 연결,
+            사람의 콘텐츠 검수와 관리자 승인은 별도 확인 절차로 남아 있습니다.
           </p>
           <details>
             <summary>요청 기준과 제안 경로 비교</summary>
@@ -118,10 +117,10 @@ export function CurriculumPlan({
                 <thead>
                   <tr>
                     <th scope="col">LEVEL</th>
-                    <th scope="col">요청 제목</th>
-                    <th scope="col">요청 수</th>
-                    <th scope="col">경로 제안 제목</th>
-                    <th scope="col">제안 수</th>
+                    <th scope="col">기준 제목</th>
+                    <th scope="col">기준 수량</th>
+                    <th scope="col">개발 경로 제목</th>
+                    <th scope="col">경로 수량</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -138,8 +137,8 @@ export function CurriculumPlan({
               </table>
             </div>
             <p className="helper">
-              LEVEL 1/2 제목 확장과 LEVEL 7/8 수량 조정은 제안입니다. 공식 원문
-              대조와 사용자 검토 전에는 적용하지 않습니다.
+              표의 제목과 수량은 현재 개발 제안 경로의 고정 선택입니다. 정본 등록,
+              공식 교육과정 성취기준 연결, 사람의 문항 승인은 별도 절차입니다.
             </p>
           </details>
         </div>
@@ -184,8 +183,8 @@ export function CurriculumPlan({
             <strong>{item.title}</strong>
             <span>
               {item.requestedCount === item.proposedCount
-                ? "요청 수량과 같음"
-                : `요청 ${item.requestedCount} · 조정 제안 ${item.proposedCount}`}
+                ? "기준 수량과 같음"
+                : `기준 ${item.requestedCount} · 경로 ${item.proposedCount}`}
             </span>
           </button>
         ))}

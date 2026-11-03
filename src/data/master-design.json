@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-01-master",
-  "status": "requested-not-aligned",
+  "version": "2026-11-03-master",
+  "status": "path-aligned-canonical-pending",
   "targetCount": 170,
   "levels": [
     { "level": 0, "title": "수와 연산 기초", "count": 12 },

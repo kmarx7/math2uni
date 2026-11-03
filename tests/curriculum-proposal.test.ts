@@ -52,8 +52,20 @@ describe("170-unit proposal review boundary", () => {
     expect(path.levels.map((item) => item.requestedCount)).toEqual(
       masterDesign.levels.map((item) => item.count),
     );
+    expect(path.version).toBe("0.3.0-proposed");
     expect(path.levels.map((item) => item.proposedCount)).toEqual([
-      12, 14, 18, 22, 24, 20, 22, 20, 18,
+      12, 14, 18, 22, 24, 20, 22, 18, 20,
+    ]);
+    expect(path.levels.map((item) => item.title)).toEqual([
+      "수와 연산 기초",
+      "수·문자와 식·초기 방정식",
+      "중학 대수·공통수학 대수 진입",
+      "중학 함수·기하·확률",
+      "고교 공통수학",
+      "대수",
+      "미적분Ⅰ",
+      "확률과 통계",
+      "수능 실전",
     ]);
     expect(path.entries).toHaveLength(170);
     expect(path.entries.map((entry) => entry.pathOrder)).toEqual(
@@ -63,12 +75,16 @@ describe("170-unit proposal review boundary", () => {
     expect(path.entries.map((entry) => entry.unitId).sort()).toEqual(
       curriculumProposal.curriculum.units.map((unit) => unit.id).sort(),
     );
-    expect(path.entries.find((entry) => entry.unitId === "M7-19")?.pathLevel).toBe(7);
-    expect(path.entries.find((entry) => entry.unitId === "M7-20")?.pathLevel).toBe(7);
-    expect(path.entries.every((entry) => entry.pathLevel === 8
-      ? entry.placementKind !== "first-instruction-candidate"
-      : true,
-    )).toBe(true);
+    const level8Entries = path.entries.filter((entry) => entry.pathLevel === 8).sort((a, b) => a.pathOrder - b.pathOrder);
+    expect(level8Entries.slice(0, 2).map((entry) => entry.unitId)).toEqual(["M7-19", "M7-20"]);
+    expect(level8Entries.slice(0, 2).every((entry) => entry.placementKind === "first-instruction-candidate")).toBe(true);
+    const m718 = path.entries.find((entry) => entry.unitId === "M7-18")!;
+    const m719 = path.entries.find((entry) => entry.unitId === "M7-19")!;
+    const m720 = path.entries.find((entry) => entry.unitId === "M7-20")!;
+    expect(m718.pathOrder).toBeLessThan(m719.pathOrder);
+    expect(m719.pathOrder).toBeLessThan(m720.pathOrder);
+    expect(m719.pathLevel).toBe(8);
+    expect(m720.pathLevel).toBe(8);
     expect(curriculumProposal.curriculum.canonicalManifest).toEqual([]);
     expect(curriculum.units).toHaveLength(12);
   });
@@ -78,7 +94,7 @@ describe("170-unit proposal review boundary", () => {
     expect(validateProposal(data, curriculum).join()).toContain("중복");
 
     data = clone();
-    data.learningPath.levels[7].proposedCount = 18;
+    data.learningPath.levels[7].proposedCount = 19;
     expect(validateProposal(data, curriculum).join()).toContain(
       "제안 수량 불일치",
     );
@@ -92,6 +108,32 @@ describe("170-unit proposal review boundary", () => {
     )!;
     [entry17.pathOrder, entry19.pathOrder] = [entry19.pathOrder, entry17.pathOrder];
     expect(validateProposal(data, curriculum).join()).toContain("먼저 학습");
+  });
+  it("fixes the proposed path titles and counts and limits LEVEL 8 first instruction to M7-19/M7-20", () => {
+    let data = clone();
+    data.learningPath.levels[1].title = "예전 LEVEL 제목";
+    expect(validateProposal(data, curriculum).join()).toContain("LEVEL 1 고정 제목 불일치");
+
+    data = clone();
+    data.learningPath.levels[8].requestedCount = 18;
+    expect(validateProposal(data, curriculum).join()).toContain("LEVEL 8 고정 수량은 20이어야 합니다");
+
+    const allowed = new Set(["M7-19", "M7-20"]);
+    for (const entry of curriculumProposal.learningPath.entries.filter((candidate) => candidate.pathLevel === 8 && !allowed.has(candidate.unitId))) {
+      data = clone();
+      data.learningPath.entries.find((candidate) => candidate.unitId === entry.unitId)!.placementKind = "first-instruction-candidate";
+      expect(validateProposal(data, curriculum).join()).toContain(`LEVEL 8 첫 개념 학습은 M7-19/M7-20만 허용됩니다: ${entry.unitId}`);
+    }
+
+    data = clone();
+    data.learningPath.entries.find((entry) => entry.unitId === "M7-19")!.placementKind = "transfer-candidate";
+    expect(validateProposal(data, curriculum).join()).toContain("LEVEL 8 첫 개념 학습 배치 불일치 M7-19");
+
+    data = clone();
+    const path18 = data.learningPath.entries.find((entry) => entry.unitId === "M7-18")!;
+    const path19 = data.learningPath.entries.find((entry) => entry.unitId === "M7-19")!;
+    [path18.pathOrder, path19.pathOrder] = [path19.pathOrder, path18.pathOrder];
+    expect(validateProposal(data, curriculum).join()).toContain("M7-18 → M7-19 → M7-20");
   });
   it("cannot represent a human approval or canonical release", () => {
     expect(

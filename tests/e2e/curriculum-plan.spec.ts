@@ -18,7 +18,7 @@ for (const viewport of viewports) {
       ).toBeVisible();
       await expect(page.locator(".plan-unit")).toHaveCount(170);
       await expect(
-        page.getByText("새 학습 경로 배치 초안 · 사용자 검토 대기", {
+        page.getByText("Math 90 개발 경로 결정 · 공식 정본 아님", {
           exact: true,
         }),
       ).toBeVisible();
@@ -29,8 +29,21 @@ for (const viewport of viewports) {
       ).toBeVisible();
       await expect(page.locator('a[href^="/learn/M1-"]')).toHaveCount(5);
       await page.getByLabel("LEVEL 필터").selectOption("7");
+      await expect(page.locator(".plan-unit")).toHaveCount(18);
+      await page.getByLabel("LEVEL 필터").selectOption("8");
       await expect(page.locator(".plan-unit")).toHaveCount(20);
+      await page.getByLabel("단원 검색").fill("M7-19");
+      await expect(page.locator(".plan-unit")).toHaveCount(1);
+      await page.locator(".plan-unit summary").click();
+      await expect(page.locator(".plan-unit")).toContainText("첫 개념 학습 후보");
+      await page.getByLabel("단원 검색").fill("M7-20");
+      await expect(page.locator(".plan-unit")).toHaveCount(1);
+      await page.locator(".plan-unit summary").click();
+      await expect(page.locator(".plan-unit")).toContainText("첫 개념 학습 후보");
+      await page.getByLabel("LEVEL 필터").selectOption("7");
       await page.getByLabel("단원 검색").fill("모비율");
+      await expect(page.locator(".plan-unit")).toHaveCount(0);
+      await page.getByLabel("LEVEL 필터").selectOption("8");
       await expect(page.locator(".plan-unit")).toHaveCount(1);
       await page.locator(".plan-unit summary").click();
       await expect(

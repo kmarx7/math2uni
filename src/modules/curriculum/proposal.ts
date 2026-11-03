@@ -2,6 +2,19 @@ import type { Curriculum } from "@/contracts";
 import { curriculumProposalSchema } from "@/contracts/curriculum-proposal";
 import { validateCurriculum } from "./index";
 
+const resolvedDevelopmentLevels = [
+  { title: "수와 연산 기초", count: 12 },
+  { title: "수·문자와 식·초기 방정식", count: 14 },
+  { title: "중학 대수·공통수학 대수 진입", count: 18 },
+  { title: "중학 함수·기하·확률", count: 22 },
+  { title: "고교 공통수학", count: 24 },
+  { title: "대수", count: 20 },
+  { title: "미적분Ⅰ", count: 22 },
+  { title: "확률과 통계", count: 18 },
+  { title: "수능 실전", count: 20 },
+] as const;
+const level8FirstInstructionUnits = new Set(["M7-19", "M7-20"]);
+
 /** Read-only review validation. This function never registers or publishes units. */
 export function validateProposal(
   input: unknown,
@@ -41,6 +54,19 @@ export function validateProposal(
   );
   const path = proposal.learningPath;
   const pathLevels = [...path.levels].sort((a, b) => a.level - b.level);
+  resolvedDevelopmentLevels.forEach((expected, level) => {
+    const item = pathLevels[level];
+    if (!item) return;
+    if (item.title !== expected.title)
+      errors.push(`학습 경로 LEVEL ${level} 고정 제목 불일치`);
+    if (
+      item.requestedCount !== expected.count ||
+      item.proposedCount !== expected.count
+    )
+      errors.push(
+        `학습 경로 LEVEL ${level} 고정 수량은 ${expected.count}이어야 합니다`,
+      );
+  });
   if (path.baseProposalVersion !== proposal.version)
     errors.push("학습 경로 기준 제안 버전 불일치");
   if (pathLevels.some((item, i) => item.level !== i))
@@ -78,14 +104,37 @@ export function validateProposal(
     if (entries.length !== level.proposedCount)
       errors.push(`학습 경로 LEVEL ${level.level} 제안 수량 불일치`);
   }
-  if (
-    path.entries.some(
-      (entry) =>
-        entry.pathLevel === 8 &&
-        entry.placementKind === "first-instruction-candidate",
+  const level8Entries = entriesInOrder.filter((entry) => entry.pathLevel === 8);
+  for (const entry of level8Entries) {
+    if (
+      entry.placementKind === "first-instruction-candidate" &&
+      !level8FirstInstructionUnits.has(entry.unitId)
     )
+      errors.push(
+        `LEVEL 8 첫 개념 학습은 M7-19/M7-20만 허용됩니다: ${entry.unitId}`,
+      );
+  }
+  for (const unitId of level8FirstInstructionUnits) {
+    const entry = entriesById.get(unitId);
+    if (
+      entry &&
+      (entry.pathLevel !== 8 || entry.placementKind !== "first-instruction-candidate")
+    )
+      errors.push(`LEVEL 8 첫 개념 학습 배치 불일치 ${unitId}`);
+  }
+  if (
+    level8Entries[0]?.unitId !== "M7-19" ||
+    level8Entries[1]?.unitId !== "M7-20"
   )
-    errors.push("LEVEL 8 항목은 역할 검토가 필요합니다");
+    errors.push("LEVEL 8 첫 두 단원은 M7-19, M7-20 순서여야 합니다");
+  const pathM718 = entriesById.get("M7-18");
+  const pathM719 = entriesById.get("M7-19");
+  const pathM720 = entriesById.get("M7-20");
+  if (
+    pathM718 && pathM719 && pathM720 &&
+    !(pathM718.pathOrder < pathM719.pathOrder && pathM719.pathOrder < pathM720.pathOrder)
+  )
+    errors.push("학습 경로에서 M7-18 → M7-19 → M7-20 순서를 유지해야 합니다");
   for (const unit of plan.units) {
     const entry = entriesById.get(unit.id);
     if (!entry) continue;

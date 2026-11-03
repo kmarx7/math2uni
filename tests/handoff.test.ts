@@ -3,6 +3,7 @@ import { getLessonOutline } from "@/data/content-index";
 import { lessons } from "@/data/content";
 import masterDesign from "@/data/master-design.json";
 import { curriculumProposal } from "@/data/curriculum-proposal";
+import { curriculum } from "@/data/curriculum";
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
@@ -45,8 +46,8 @@ describe("cross-agent handoff contracts", () => {
       ).toEqual(doc.blocks.map((block) => block.id));
   });
 
-  it("records the requested 170 allocation without relabelling existing proposal identities", () => {
-    expect(masterDesign.status).toBe("requested-not-aligned");
+  it("records the aligned 170 development allocation without relabelling existing proposal identities", () => {
+    expect(masterDesign.status).toBe("path-aligned-canonical-pending");
     expect(masterDesign.levels.map((item) => item.count)).toEqual([
       12, 14, 18, 22, 24, 20, 22, 18, 20,
     ]);
@@ -56,6 +57,14 @@ describe("cross-agent handoff contracts", () => {
     expect(curriculumProposal.levels.map((item) => item.count)).toEqual([
       12, 20, 20, 22, 20, 24, 24, 20, 8,
     ]);
+    expect(curriculumProposal.learningPath.version).toBe("0.3.0-proposed");
+    expect(curriculumProposal.learningPath.levels.map((item) => item.proposedCount)).toEqual([
+      12, 14, 18, 22, 24, 20, 22, 18, 20,
+    ]);
+    expect(curriculumProposal.curriculum.canonicalManifest).toEqual([]);
+    expect(curriculumProposal.curriculum.units.slice(0, curriculum.units.length).map((unit) => unit.id)).toEqual(
+      curriculum.units.map((unit) => unit.id),
+    );
   });
 
   it("matches the reviewed design to six subunits, fifteen phases and thirty drafts", () => {

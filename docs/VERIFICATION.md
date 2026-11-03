@@ -172,3 +172,19 @@ CLI 0.166.0, multi_agent stable/true를 확인했다. 세 standalone TOML과 공
 | `git diff --check` | PASS | 공백 오류 없음 |
 
 교육과정 검토는 최신 요청 수량을 설계 기준으로 보존하면서 통계 추정의 첫 학습을 LEVEL 7에 유지하는 안(LEVEL 7=20, LEVEL 8=18)을 제안한다. LEVEL 1/2 제목 확장도 승인 대기다. 교육부 수능 과목 체계는 공식 자료로 조사했지만 별책 8 공식 원문 파일 해시 대조가 완료되지 않아 성취기준 코드는 연결하지 않았다. 경로 배치의 교육적 적합성, 최신 수량/제목 결정과 상세 170단원 정본 등록은 계속 검토 중이다.
+
+# 개발 경로 배분 확정 및 동기화 · 2026-11-03
+
+사용자의 최신 목표 수량 `12/14/18/22/24/20/22/18/20`을 Math 90 개발 경로 v0.3.0의 기준으로 고정했다. 기존 ID·단원명·역사적 `Unit.level/order`는 바꾸지 않고 별도 `pathLevel/pathOrder`에 170개 ID를 일대일 배치했다. LEVEL 1·2 표시명을 실제 배치 내용에 맞게 확장했으며, M7-19·M7-20은 LEVEL 8 첫 두 `first-instruction-candidate`로 분류했다. 이전 날짜가 붙은 v0.2.0 기록의 20/18 검토안은 당시 상태의 기록이며 이 결정으로 대체됐다.
+
+| 검사 | 결과 | 범위 |
+| --- | --- | --- |
+| `npm run lint` | 통과 | 앱·계획 UI·경로 검증 |
+| `npm run typecheck` | 통과 | Next.js route types 및 TypeScript |
+| `npm test` | 통과 · 134개 | 전체 Vitest, 경로 ID/수량/선수 순서 및 LEVEL 8 예외 검사 포함 |
+| `npm run content:validate` | 통과 · 19개 | 콘텐츠 인계·문항 검증 회귀 |
+| `npm run test:e2e` | 실행 차단 | 테스트 서버 `127.0.0.1:54329` bind에서 EPERM; 브라우저 경로 미검증 |
+| `npm run build` | 통과 | Next.js 16.3.6 production build |
+| `git diff --check` | 통과 | 공백/패치 검사 |
+
+M7-19·20의 LEVEL 8 첫 교수 배치는 요청 수량을 따르기 위한 Math 90 내부 설계다. 공식 성취기준과 시험 직접 출제 범위는 미검증이며 공식 정본·사람의 교육/문항/권리 검수·운영 승인은 완료되지 않았다. canonicalManifest는 비어 있고 개발 경로 결정으로 production 공개를 허용하지 않는다. 전체 실행 기록은 [개발 경로 결정](decisions/007-level-allocation.md), [마스터 경로안](reviews/NEXT_STEP/curriculum-path-proposal.md), [ROADMAP](ROADMAP.md)과 함께 읽는다.

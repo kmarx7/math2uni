@@ -72,7 +72,7 @@ Content는 getLesson(unitId), Bank는 목적+unitId, API는 검증된 unitId를 
 
 `/curriculum/plan`은 기존 인증 레이아웃 아래 읽기 전용 계획 화면이다. 서버가 제안 데이터를 검증하고 공개 메타데이터만 클라이언트에 전달한다. 검색·필터·선수 단원 탐색·JSON 내려받기는 브라우저 상태만 바꾸며 DB/진도/승인을 기록하지 않는다. 제안 모듈은 학습·채점·진도·인증 경계에 import하지 않는다. 기존 운영 목록은 12개이고 미구현 학습 경로는 404를 유지한다.
 
-학습 완료·콘텐츠 초안·교육과정 구성 제안·사람의 게시 승인은 각각 다른 상태다. 제안안 확인 후 ID/순서 manifest와 변경 근거를 확정하고 M1-01~M1-05부터 실제 콘텐츠를 추가한다. [CURRICULUM_PROPOSAL.md](CURRICULUM_PROPOSAL.md)에 전체 목록과 근거를 기록했다.
+학습 완료·콘텐츠 초안·교육과정 구성 제안·사람의 게시 승인은 각각 다른 상태다. 기존 `Unit.level/order`와 제안 단원 정체성을 보존하는 별도 `learningPath` v0.3.0을 사용자 지정 수량 `12/14/18/22/24/20/22/18/20`으로 정리했다. 현재 M1~M3 제안 60개가 개발 미리보기로 연결되며, 제안 curriculum은 `coverage: partial` 및 빈 canonicalManifest를 유지한다. 경로 결정은 [ADR-007](decisions/007-level-allocation.md), [ADR-009](decisions/009-learning-path-proposal.md), 전체 목록은 [CURRICULUM_PROPOSAL.md](CURRICULUM_PROPOSAL.md)에 기록했다. 공식 성취기준 매핑·사람 콘텐츠 검수·운영 승인은 별도 게이트다.
 
 ## ADR-008 · 전문 역할과 인계 품질 검사
 

@@ -1,5 +1,9 @@
 # Math 90 협업과 인계
 
+## 2026-11-03 현재 진행 상태
+
+Math 90 제안 경로 v0.3.0의 내부 배분 결정은 완료했다. LEVEL 수량은 `12/14/18/22/24/20/22/18/20`이며 기존 ID와 역사적 `Unit.level/order`를 보존한다. 기존 LEVEL 0 12개 외에 M1-01~20, M2-01~20, M3-01~20의 제안 단원 60개가 개발 프리뷰에 연결됐다. 다음 묶음은 M3-21~22와 M4-01~03이다. 경로는 여전히 proposed이며 공식 성취기준 검증·전문가 검수·사람 게시 승인은 완료되지 않았다. 최신 QA는 `docs/reviews/NEXT_BATCH/M3-batch-04-qa.md`에서 확인한다.
+
 ## 현재 구조와 실행 상태
 
 기존 Next.js 16.3/React/TypeScript 앱, Zod 계약, 서버 전용 문제은행, Vitest/Playwright, Supabase 계정 기록을 보존한다. monorepo 이동·새 AI API·Python 서버·DB 변경·새 외부 의존성은 이번 작업에 없다. 한 단원은 초보 학습자에게 읽기 쉬운 텍스트·자리표와 안전한 정수 입력으로 구현한다. KaTeX/MathLive/JSXGraph가 설치·구현되었다고 주장하지 않는다.
@@ -55,9 +59,9 @@
 
 Curriculum Architect 소유 명세는 `docs/specifications/NEXT_BATCH/M1-xx/lesson-spec.json`, Research 소유 자료/원형/30문항 draft는 `docs/research/NEXT_BATCH/`, Orchestrator가 배정한 renderer용 JSON은 각 단원의 `content-draft.json`이다. Developer & QA preview 경계 검토는 `docs/reviews/NEXT_BATCH/developer-preview-audit.md`; 통합·교차 검토와 구현 결과는 `M1-batch-report.md` 및 단원별 validation/approval 기록에 남긴다. 이 콘텐츠는 proposal ID allowlist, `MATH90_CONTENT_PREVIEW=1`, development 세 조건으로만 제공한다. 평가/공식 완료는 구현하지 않았고, 연습만 `unitProgress[M1-xx]`와 attempts에 기록한다. 이 작업은 active curriculum, canonical manifest, production bank, M0-01 루트 진도를 바꾸지 않는다.
 
-## 충돌과 미완료
+## 정리된 결정과 남은 검증
 
-[ADR-007](decisions/007-level-allocation.md): 최신 12/14/18/22/24/20/22/18/20은 합계 170이지만 기존 170제안의 주제·ID 배분과 충돌한다. 기존 제안을 지우거나 ID를 재명명하지 않았다. 최신 배분에 맞춘 170상세 메타데이터 정렬은 완료되지 않았다. 정본/성취기준 검증도 별도다.
+[ADR-007](decisions/007-level-allocation.md)과 [ADR-009](decisions/009-learning-path-proposal.md): 사용자 수량과 LEVEL 1·2 표시명 결정을 제안 경로에 반영했다. M7-19·M7-20은 LEVEL 8 첫 교수 후보로 분류한다. 기존 제안 메타데이터의 `Unit.level/order`와 ID는 그대로 보존한다. 남은 것은 공식 성취기준/원본 목록 대조, 사람 콘텐츠 검수, canonical 등록 및 운영 게시 승인이다.
 
 필수 검사: lint, typecheck, 전체 단위 검사, content:validate, agents:validate, test:e2e(환경 차단 시 동일 Playwright 별칭 결과 구분), build. 새로운 결함이 있으면 수정·회귀 검사 후 보고한다. 수학적 해설의 의미 전체·실물 모바일·스크린리더·실제 성적 효과는 자동 검사만으로 보증하지 않는다.
 
