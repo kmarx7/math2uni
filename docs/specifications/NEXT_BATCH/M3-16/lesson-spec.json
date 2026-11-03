@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-16",
+  "levelId": "LEVEL 3",
+  "title": "연립일차부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "해집합의 교집합",
+      "경계 포함 여부"
+    ],
+    "prerequisiteUnits": [
+      "M1-12"
+    ],
+    "visualization": "겹치는 수직선 구간"
+  },
+  "objectives": [
+    "일차부등식의 해를 수직선 위의 구간으로 나타낸다.",
+    "두 부등식의 공통해를 두 해집합의 교집합으로 구한다.",
+    "등호 포함 여부에 따라 경계를 열린 점 또는 닫힌 점으로 나타내고 구간 표기로 옮긴다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-16-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-12 선수 기능 확인: 일차부등식을 풀고 등호 포함 여부에 맞게 수직선에 나타낸다."
+    }
+  ],
+  "targetSkills": [
+    "m3-16-skill-1",
+    "m3-16-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "각 부등식의 해를 따로 구하기 → 수직선에 표시하기 → 겹치는 구간 찾기 → 경계 포함 여부 결정하기 → 원래 부등식에 대입해 확인하기",
+    "principleDerivation": "연립일차부등식의 해는 모든 부등식을 동시에 만족하는 수이다. 따라서 해집합은 각 부등식 해집합의 교집합이며, 공통 구간의 끝점은 그 끝점을 포함하는 조건이 모두 성립할 때에만 포함된다.",
+    "accessibility": "모든 그래프·수형도에는 색에만 의존하지 않는 선/기호와 텍스트 대체 설명을 제공한다. 입력은 레이블이 있는 키보드 조작으로 제공하고 결과를 텍스트로 읽을 수 있게 한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-16-u1",
+      "title": "한 부등식의 해집합",
+      "targetSkills": [
+        "m3-16-skill-1"
+      ],
+      "explanation": "부등식의 해는 조건을 만족하는 모든 수이며 수직선에서는 한 점 또는 구간으로 나타난다.",
+      "activity": "x>2는 2보다 큰 모든 수를 뜻한다.",
+      "check": "x>2의 해를 오른쪽으로 표시하고 경계 2를 열린 점으로 둔다."
+    },
+    {
+      "id": "m3-16-u2",
+      "title": "부등식 방향과 해",
+      "targetSkills": [
+        "m3-16-skill-1"
+      ],
+      "explanation": "양변에 음수를 곱하거나 나누면 부등호 방향이 바뀐다. 나머지 풀이 규칙은 등식 변형과 같지만 부호 변화를 확인한다.",
+      "activity": "−2x<6은 x>−3이다.",
+      "check": "양변 나누기 전후의 부등호 방향 카드를 비교한다."
+    },
+    {
+      "id": "m3-16-u3",
+      "title": "두 해집합의 교집합",
+      "targetSkills": [
+        "m3-16-skill-1"
+      ],
+      "explanation": "연립 조건의 공통해는 두 수직선 구간에 동시에 포함되는 부분이다.",
+      "activity": "x>1, x≤4의 공통해는 1<x≤4이다.",
+      "check": "두 구간을 서로 다른 선 모양으로 표시한 뒤 겹치는 부분을 고른다."
+    },
+    {
+      "id": "m3-16-u4",
+      "title": "경계의 포함 여부",
+      "targetSkills": [
+        "m3-16-skill-2"
+      ],
+      "explanation": "끝점은 그 점을 허용하는 모든 조건의 교집합에서 허용될 때만 포함된다.",
+      "activity": "x≥−2와 x<3의 해는 −2≤x<3이다.",
+      "check": "끝점마다 각 조건의 포함 여부를 체크해 교집합 경계를 표시한다."
+    },
+    {
+      "id": "m3-16-u5",
+      "title": "공집합과 한 점",
+      "targetSkills": [
+        "m3-16-skill-2"
+      ],
+      "explanation": "구간이 겹치지 않으면 해가 없고, 두 경계가 같은 한 점에서만 만날 수도 있다.",
+      "activity": "x<0과 x≥0의 공통해는 없다.",
+      "check": "수직선의 겹침 길이를 0으로 줄여 공집합과 단일 점을 구분한다."
+    },
+    {
+      "id": "m3-16-u6",
+      "title": "구간 표기와 검산",
+      "targetSkills": [
+        "m3-16-skill-2"
+      ],
+      "explanation": "수직선·부등식·구간 표기는 같은 해집합을 다른 표현으로 쓴 것이다. 경계와 임의의 내부 수를 원식에 대입해 확인한다.",
+      "activity": "−1≤x<2는 [−1,2)로 쓸 수 있다.",
+      "check": "세 표현 사이를 연결하고 선택한 수를 원래 두 부등식에 대입한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-16-lab",
+      "kind": "math-lab",
+      "interaction": "linear-inequality-intersection",
+      "description": "겹치는 수직선 구간",
+      "features": [
+        "핵심 조건을 바꾸면 표시 결과와 설명을 함께 갱신",
+        "입력 범위와 허용 조작을 제한하고 계산 과정을 텍스트로 제시",
+        "키보드 조작과 그래프/표 대체 설명 제공"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "두 구간의 교집합 계산",
+      "경계 포함/제외 및 공집합 분류",
+      "문장 조건을 연립부등식으로 바꾸기"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "서로 다른 풀이 추론 구조만 별도 원형으로 센다. 숫자·부호만 바꾼 문항은 새 원형이 아니다."
+  },
+  "assessmentCriteria": [
+    "일차부등식의 해를 수직선 위의 구간으로 나타낸다.",
+    "두 부등식의 공통해를 두 해집합의 교집합으로 구한다.",
+    "등호 포함 여부에 따라 경계를 열린 점 또는 닫힌 점으로 나타내고 구간 표기로 옮긴다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 관련 선수 개념 또는 바로 앞 절차로 돌아가 도움 없는 회상과 새 예제로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "두 부등식 해를 합집합으로 합친다.",
+    "음수로 나누면서 부등호를 바꾸지 않는다.",
+    "한 조건에서 제외된 경계를 다른 조건 때문에 포함한다.",
+    "수직선의 열린 점과 닫힌 점을 혼동한다."
+  ],
+  "workedExample": {
+    "prompt": "x+1>3, 2x≤8을 함께 만족하는 x의 범위를 구하시오.",
+    "steps": [
+      "첫 부등식에서 x>2이다.",
+      "둘째 부등식에서 x≤4이다.",
+      "두 해집합의 교집합은 2<x≤4이다.",
+      "경계 2는 제외하고 4는 포함한다.",
+      "x=3은 두 부등식을 만족하며 x=2는 첫 부등식을 만족하지 않는다."
+    ],
+    "answer": "2<x≤4"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "cross-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "명세와 renderer draft 및 3원형/6연습 초안을 독립 교육과정·수학 검토 보고서와 대조했다. 개발 preview 구현 핸드오프만 허용한다.",
+    "sourceVerification": "교육부/2028 제도 자료는 맥락만 확인했다. 제안 단원에 대한 공식 성취기준 코드 및 직접 매핑은 미검증이며 []로 유지한다.",
+    "reviewerRole": "Curriculum Architect; independent curriculum/math reviewer cross-review (docs/reviews/NEXT_STEP/M3-16-20-independent-review.md)"
+  },
+  "implementationReadiness": {
+    "status": "ready-for-developer-preview",
+    "publicationReady": false,
+    "pending": [
+      "Developer의 공통 렌더러·인터랙션 구현과 독립 QA",
+      "자동 콘텐츠/채점/저장·접근성·E2E 검사",
+      "사람의 교육·수학 문항 검수 및 별도 게시 승인"
+    ]
+  }
+}

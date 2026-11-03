@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-19",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "가능한 결과를 빠짐없이 나누고 서로 겹치지 않게 분류한다. 서로 배타적인 선택 경우의 수를 합의 법칙으로 센다. 연속된 선택 단계의 경우의 수를 곱의 법칙으로 세고 간단한 수형도로 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M0-03 선수 기능 확인: 사물이나 기호를 하나씩 빠짐없이 세고 같은 대상을 중복 세지 않는다. M1-19 선수 기능 확인: 자료를 범주별로 정리하고 표/목록에서 항목 수를 읽는다. 진단 결과는 숙달도에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-19-u1",
+          "title": "결과와 선택 구분",
+          "body": "경우의 수는 문제에서 구별하는 서로 다른 결과의 개수다. 같은 결과를 다른 경로로 만들 수 있는지 먼저 정한다.",
+          "activity": "주사위에서 1 또는 2가 나오는 결과는 두 가지다.",
+          "check": "결과 카드와 선택 경로를 나란히 기록한다."
+        },
+        {
+          "id": "m3-19-u2",
+          "title": "빠짐없는 분류",
+          "body": "가능한 경우를 빠짐없이, 서로 겹치지 않게 나누어야 정확히 셀 수 있다.",
+          "activity": "짝수 한 자리 자연수는 2,4,6,8이다.",
+          "check": "목록표에 누락/중복 체크 칸을 둔다."
+        },
+        {
+          "id": "m3-19-u3",
+          "title": "합의 법칙",
+          "body": "서로 겹치지 않는 갈래 A 또는 B 중 하나를 고르면 전체 경우 수는 A의 수와 B의 수의 합이다.",
+          "activity": "상의 3종류 또는 모자 2종류 중 하나만 고르면 3+2=5가지다.",
+          "check": "서로 다른 색상 갈래를 두고 각 갈래 크기를 합한다."
+        },
+        {
+          "id": "m3-19-u4",
+          "title": "곱의 법칙",
+          "body": "한 결과가 여러 단계 선택을 모두 포함하고 각 단계 선택이 이어지면 단계별 수를 곱한다.",
+          "activity": "셔츠 2벌과 바지 3벌의 한 벌씩 조합은 2×3=6가지다.",
+          "check": "수형도 가지 수와 곱셈식을 대응한다."
+        },
+        {
+          "id": "m3-19-u5",
+          "title": "수형도와 표",
+          "body": "수형도는 단계별 선택을 가지로 나타내고 표는 같은 결과를 규칙적으로 나열한다. 작은 경우를 직접 세어 계산식을 점검한다.",
+          "activity": "문자 A,B와 숫자 1,2로 만든 순서쌍은 4개다.",
+          "check": "두 단계 수형도의 끝 가지와 표의 칸을 비교한다."
+        },
+        {
+          "id": "m3-19-u6",
+          "title": "합과 곱의 혼합",
+          "body": "먼저 서로 겹치지 않는 큰 갈래를 나눈 다음 각 갈래 안의 단계 선택을 곱하고 마지막에 합할 수 있다.",
+          "activity": "버스 2경로(각 3정류장) 또는 도보 1경로면 2×3+1=7개 선택이다.",
+          "check": "갈래마다 단계 계산을 하고 마지막 합을 적는다."
+        }
+      ],
+      "body": "정의와 조건 확인 → 시각적 탐구 → 원리 연결 → 계산 → 원래 조건 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "수형도를 직접 조작해요",
+      "interaction": "counting-tree",
+      "settings": {
+        "initialA": 3,
+        "initialB": 4,
+        "initialC": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "버스 노선 3개 또는 기차 노선 2개 중 하나를 고르고, 이어서 간식 4개 중 하나를 골라요.",
+        "버스 노선을 먼저 고르면 버스 3가지마다 간식 4가지가 있어 3×4=12가지예요.",
+        "기차 노선은 2가지마다 간식 4가지가 있어 2×4=8가지예요.",
+        "버스 이동과 기차 이동은 서로 다른 갈래이므로 12+8=20가지예요.",
+        "작은 수형도를 그려 두 갈래의 끝 선택을 빠짐없이 세면 20개예요.",
+        "정답: 20가지"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 조건을 빠짐없이 적고 풀이 이유를 확인해요. 문항은 연구용 초안으로 사람 검수 전 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "경계·부호·선택 순서를 혼동했다면 해당 소단원의 표현과 조건을 다시 확인하고, 다른 예제로 다시 풀어요. 이 설명은 검수 전 초안이에요."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습은 제안 일정이며 효과는 검증되지 않았어요. 다음 단원으로 이동하기 전에 오늘의 핵심 개념을 스스로 설명해요."
+    }
+  ]
+}

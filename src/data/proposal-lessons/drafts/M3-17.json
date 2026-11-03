@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-17",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "이차식의 실근을 수직선의 부호 구간 경계로 해석한다. 이차항 계수와 근의 위치를 사용해 각 구간에서 이차식의 부호를 판단한다. 포물선의 그래프와 부등호를 연결해 이차부등식의 해집합을 구하고 경계를 확인한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M3-12 선수 기능 확인: 이차함수 그래프의 x절편과 위·아래 방향을 읽는다. M3-16 선수 기능 확인: 열린 경계와 닫힌 경계가 있는 구간을 표시한다. 진단 결과는 숙달도에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-17-u1",
+          "title": "이차식과 포물선",
+          "body": "이차식 ax²+bx+c는 그래프 y=ax²+bx+c의 각 x에서의 높이다.",
+          "activity": "x²−1의 값은 그래프 높이와 같다.",
+          "check": "몇 x값의 식 값과 그래프 위치를 함께 비교한다."
+        },
+        {
+          "id": "m3-17-u2",
+          "title": "실근과 부호 경계",
+          "body": "f(x)=0의 실근은 그래프가 x축과 만나는 x좌표이며 부호 구간 경계를 이룬다.",
+          "activity": "x²−1=0의 근은 −1,1이다.",
+          "check": "근을 수직선에 표시하고 구간을 나눈다."
+        },
+        {
+          "id": "m3-17-u3",
+          "title": "최고차항 계수의 방향",
+          "body": "a>0이면 포물선이 위로 열리고 양 끝에서 f(x)>0이며, a<0이면 아래로 열린다.",
+          "activity": "x²−1은 바깥 구간에서 양수이다.",
+          "check": "대표점 대입과 포물선 모양으로 각 구간 부호를 확인한다."
+        },
+        {
+          "id": "m3-17-u4",
+          "title": "부등호와 구간 선택",
+          "body": "> 또는 <는 그래프가 x축 위·아래인 구간을 고르고, ≥ 또는 ≤는 영점도 포함한다.",
+          "activity": "x²−1≤0의 해는 −1≤x≤1이다.",
+          "check": "부등호별 색칠 구간을 비교하고 끝점 포함을 표기한다."
+        },
+        {
+          "id": "m3-17-u5",
+          "title": "중근과 부호 유지",
+          "body": "중근에서는 그래프가 x축에 닿고 되돌아가므로 양쪽 구간 부호가 같을 수 있다.",
+          "activity": "(x−2)²≥0은 모든 실수에서 성립한다.",
+          "check": "중근의 양쪽에서 대표값을 대입한다."
+        },
+        {
+          "id": "m3-17-u6",
+          "title": "그래프와 해집합 검산",
+          "body": "부등식의 해는 그래프 위치와 부호표가 일치해야 한다. 인수분해와 그래프가 다른 구간을 가리키면 계산을 재검토한다.",
+          "activity": "x²−4>0은 x<−2 또는 x>2이다.",
+          "check": "인수·부호표·그래프 표현을 맞춰본다."
+        }
+      ],
+      "body": "정의와 조건 확인 → 시각적 탐구 → 원리 연결 → 계산 → 원래 조건 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "포물선 부호 구간를 직접 조작해요",
+      "interaction": "quadratic-inequality-sign",
+      "settings": {
+        "initialA": 1,
+        "initialB": 4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "(x−1)(x−4)≤0을 풀어요.",
+        "영점은 x=1과 x=4예요.",
+        "최고차항 계수가 양수이므로 포물선은 위로 열려요.",
+        "두 영점 사이에서는 식의 값이 음수이고, 영점에서는 0이에요.",
+        "≤ 조건이므로 두 끝점도 포함해요.",
+        "정답: 1≤x≤4"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 조건을 빠짐없이 적고 풀이 이유를 확인해요. 문항은 연구용 초안으로 사람 검수 전 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "경계·부호·선택 순서를 혼동했다면 해당 소단원의 표현과 조건을 다시 확인하고, 다른 예제로 다시 풀어요. 이 설명은 검수 전 초안이에요."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습은 제안 일정이며 효과는 검증되지 않았어요. 다음 단원으로 이동하기 전에 오늘의 핵심 개념을 스스로 설명해요."
+    }
+  ]
+}

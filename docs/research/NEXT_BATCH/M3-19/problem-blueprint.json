@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-19",
+  "unitTitle": "경우의 수 기초",
+  "concepts": [
+    "합의 법칙",
+    "곱의 법칙"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m319-family-1",
+      "status": "draft",
+      "title": "서로 겹치지 않는 갈래를 합하기",
+      "reasoningStructure": "한 번에 하나만 고르는 배타적 선택지를 나누고 각 갈래의 경우 수를 더한다.",
+      "items": [
+        {
+          "id": "m319-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "서로 다른 버스 노선 3개 또는 서로 다른 기차 노선 2개 중 하나를 골라 이동한다. 가능한 노선 선택은 모두 몇 가지인가?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "버스와 기차는 서로 겹치지 않는 선택 갈래이므로 3+2=5가지이다.",
+          "skillLabel": "m3-19-skill-1",
+          "misconceptionHypothesis": "합의 법칙에서 두 갈래의 경우 수를 곱한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m319-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "음료를 정확히 하나 고른다. 주스 4종 또는 차 3종이 있을 때 선택 방법은 몇 가지인가?",
+          "answer": {
+            "type": "integer",
+            "value": "7"
+          },
+          "rationale": "한 번에 하나만 선택하며 주스와 차 갈래는 서로 겹치지 않으므로 4+3=7가지이다.",
+          "skillLabel": "m3-19-skill-1",
+          "misconceptionHypothesis": "종류 수를 선택할 수 있는 독립 단계로 착각해 곱한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m319-family-2",
+      "status": "draft",
+      "title": "연속된 선택 단계 곱하기",
+      "reasoningStructure": "앞 선택 하나마다 뒤 선택이 이어지는 짝을 세어 단계별 선택 수를 곱한다.",
+      "items": [
+        {
+          "id": "m319-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "셔츠 4벌 중 한 벌과 바지 3벌 중 한 벌을 함께 고른다. 옷차림은 몇 가지인가?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "각 셔츠마다 바지 3가지가 가능하므로 4×3=12가지이다.",
+          "skillLabel": "m3-19-skill-2",
+          "misconceptionHypothesis": "두 단계에서 같은 선택 하나만 골라 더한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m319-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "숫자 1,2,3,4,5 중 서로 다른 두 숫자를 차례로 써 두 자리 수를 만든다. 몇 개를 만들 수 있는가?",
+          "answer": {
+            "type": "integer",
+            "value": "20"
+          },
+          "rationale": "십의 자리에 5가지, 일의 자리에 남은 4가지이므로 5×4=20개이다.",
+          "skillLabel": "m3-19-skill-2",
+          "misconceptionHypothesis": "두 번째 자리에서도 이미 쓴 숫자를 다시 사용할 수 있다고 센다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m319-family-3",
+      "status": "draft",
+      "title": "갈래별 곱셈을 한 뒤 합하기",
+      "reasoningStructure": "서로 다른 큰 갈래 안에서는 연속 선택을 곱하고, 배타적인 갈래의 결과를 마지막에 합한다.",
+      "items": [
+        {
+          "id": "m319-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "배지 종류 A는 색 2가지와 크기 3가지, 종류 B는 색 2가지와 크기 3가지로 만든다. 배지를 하나 고르는 방법은 몇 가지인가?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "A는 2×3=6가지, B도 2×3=6가지이며 종류가 달라 겹치지 않으므로 6+6=12가지이다.",
+          "skillLabel": "m3-19-skill-2",
+          "misconceptionHypothesis": "A와 B의 갈래를 더하지 않고 모든 수를 한 번에 곱한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m319-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "이동 방법 A에서는 출발 지점 2곳과 시간 3개 중 하나씩 고르고, 방법 B에서는 출발 지점 3곳과 시간 2개 중 하나씩 고른다. A 또는 B 중 하나를 선택할 때 전체 조합은 몇 가지인가?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "A는 2×3=6가지, B는 3×2=6가지이다. 방법 A와 B는 배타적이므로 6+6=12가지이다.",
+          "skillLabel": "m3-19-skill-2",
+          "misconceptionHypothesis": "각 갈래의 단계별 선택은 합하고 갈래 사이 선택은 곱한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

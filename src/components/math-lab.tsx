@@ -4,6 +4,7 @@ import type { Block } from "@/contracts";
 import { PlaceLab } from "./place-lab";
 import { M3MathLab } from "./m3-math-labs";
 import { M3RootsLab } from "./m3-roots-labs";
+import { M3InequalitiesLab } from "./m3-inequalities-labs";
 type Interactive = Extract<Block, { type: "InteractiveBlock" }>;
 function gcd(a: number, b: number): number {
   return b ? gcd(b, a % b) : Math.abs(a);
@@ -101,6 +102,7 @@ export function MathLab({ block }: { block: Interactive }) {
   if (block.interaction === "place-value") return <PlaceLab />;
   if (["factor-theorem", "polynomial-factorization", "complex-plane", "complex-operations", "quadratic-discriminant"].includes(block.interaction)) return <M3MathLab block={block} />;
   if (["root-coefficient", "quadratic-intersection", "quadratic-interval-optimization", "polynomial-root-factory", "system-intersections"].includes(block.interaction)) return <M3RootsLab block={block} />;
+  if (["linear-inequality-intersection", "quadratic-inequality-sign", "parameter-case-table", "counting-tree", "permutation-combination-cards"].includes(block.interaction)) return <M3InequalitiesLab block={block} />;
   const op = block.settings?.operation ?? "add";
   if (
     block.interaction === "fraction" ||

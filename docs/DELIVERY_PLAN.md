@@ -133,3 +133,12 @@ M2-11~M2-15의 제안 미리보기에 인수분해·근의 공식으로 이차�
 각 단원에 전용 상호작용을 연결했다. 새 문제는 연습 전용이며 평가 문항은 없다. 콘텐츠는 draft, 사람 검수/승인/게시 0건이고 공식 성취기준 매핑은 미검증이다. NCIC 자료는 검색 결과만 확인되었고 직접 URL은 환경에서 404였으므로, 공식 자료의 직접 확인으로 보고하지 않는다. 기존 정본 curriculum과 학습 점수 경계는 변경하지 않았고 생산 환경의 미승인 콘텐츠 전달은 차단된다.
 
 검증: lint, typecheck, Vitest 125개, Next.js 16.3.6 production build 통과. Playwright E2E는 테스트 인증 서버가 `127.0.0.1:54329`에 bind할 때 `EPERM`을 반환해 브라우저 학습 흐름을 시작하지 못했다. 상세 명령별 결과는 [M3 배치 QA](reviews/NEXT_BATCH/M3-batch-03-qa.md)에 기록한다.
+
+
+## M3-16~M3-20 · 부등식과 경우의 수 개발 묶음
+
+2026-11-03에는 제안 ID와 선수 관계를 유지해 연립일차부등식, 이차부등식, 방정식·부등식 종합, 경우의 수 기초, 순열·조합 기초의 M3-16~20을 개발 미리보기에 추가했다. Curriculum Architect가 단원별 6개 소단원·15단계 명세를 작성했고 Research & Content가 renderer 수업 초안 5개와 15개 문제 원형·연습 초안 30개를 만들었다. 독립 Curriculum reviewer는 30개 문항 답·풀이를 재계산하고 개발 preview 인계만 확인했다.
+
+각 단원에 수직선 교집합, 이차식 부호표, 매개변수 경계 분기표, 합·곱 수형도, 순열·조합 선택 카드 활동을 구현했다. 문항은 server-only 정답 데이터를 갖는 연습 전용 draft다. 평가용 문항은 추가하지 않았다. 콘텐츠는 사람의 검수·승인·게시 0건이며 공식 성취기준 매핑은 미검증이다. 운영 curriculum과 정본 점수 경계는 바꾸지 않았다.
+
+검증: lint, typecheck, Vitest 133개, content:validate 19개, Next.js 16.3.6 production build 통과. Playwright E2E는 인증 테스트 서비스의 `127.0.0.1:54329` bind가 EPERM으로 거부되어 시작하지 못했다. 상세 결과는 [M3 배치 4 QA](reviews/NEXT_BATCH/M3-batch-04-qa.md)를 참고한다.

@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-17",
+  "unitTitle": "이차부등식",
+  "concepts": [
+    "이차식의 부호",
+    "그래프로 해석한 해집합"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m317-family-1",
+      "status": "draft",
+      "title": "두 근 사이 부호 구간 선택",
+      "reasoningStructure": "서로 다른 두 실근이 만드는 구간을 나누고 위로 열린 포물선의 부호가 근 사이에서 음수임을 이용한다.",
+      "items": [
+        {
+          "id": "m317-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "(x−1)(x−4)<0의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "두 근은 1,4이고 최고차항 계수가 양수인 이차식은 두 근 사이에서 음수이므로 1<x<4이다.",
+          "skillLabel": "m3-17-skill-1",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x<1 또는 x>4"
+            },
+            {
+              "id": "B",
+              "label": "1<x<4"
+            },
+            {
+              "id": "C",
+              "label": "1≤x≤4"
+            }
+          ],
+          "misconceptionHypothesis": "근 사이가 아니라 바깥 구간에서 곱이 음수라고 판단한다."
+        },
+        {
+          "id": "m317-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(x+2)(x−3)≥0의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "근은 −2,3이며 위로 열린 포물선은 바깥쪽 구간에서 양수이다. 등호를 포함하므로 끝점도 포함한다.",
+          "skillLabel": "m3-17-skill-1",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≤−2 또는 x≥3"
+            },
+            {
+              "id": "B",
+              "label": "−2<x<3"
+            },
+            {
+              "id": "C",
+              "label": "−2≤x≤3"
+            }
+          ],
+          "misconceptionHypothesis": "≥에서 두 영점을 제외하거나 가운데 구간을 선택한다."
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m317-family-2",
+      "status": "draft",
+      "title": "중근·무근과 계수 부호로 분류",
+      "reasoningStructure": "판별 가능한 근의 존재·중복과 최고차항의 부호를 확인해 부등식의 해집합을 판정한다.",
+      "items": [
+        {
+          "id": "m317-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(x−2)²≥0을 만족하는 실수 x의 집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "제곱은 항상 0 이상이므로 모든 실수가 해이다.",
+          "skillLabel": "m3-17-skill-1",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "모든 실수"
+            },
+            {
+              "id": "B",
+              "label": "x=2만"
+            },
+            {
+              "id": "C",
+              "label": "∅"
+            }
+          ],
+          "misconceptionHypothesis": "제곱값이 음수가 될 수 있다고 생각한다."
+        },
+        {
+          "id": "m317-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x²+1<0을 만족하는 실수 x의 집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "실수 x에 대해 x²≥0이므로 x²+1≥1이다. 따라서 0보다 작을 수 없어 해가 없다.",
+          "skillLabel": "m3-17-skill-2",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "모든 실수"
+            },
+            {
+              "id": "B",
+              "label": "x≠0"
+            },
+            {
+              "id": "C",
+              "label": "∅"
+            }
+          ],
+          "misconceptionHypothesis": "x²+1의 최소값이 1임을 놓치고 근호를 도입한다."
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m317-family-3",
+      "status": "draft",
+      "title": "포물선 그래프에서 해집합 읽기",
+      "reasoningStructure": "그래프의 열린 방향과 x절편을 읽은 뒤 그래프가 x축 위·아래에 놓이는 구간을 부등호와 연결한다.",
+      "items": [
+        {
+          "id": "m317-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "위로 열린 포물선의 x절편이 −2와 3이다. 그래프가 x축 이하인 x의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "위로 열린 포물선은 두 절편 사이에서 x축 아래에 있고 절편에서는 0이므로 [−2,3]이다.",
+          "skillLabel": "m3-17-skill-2",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≤−2 또는 x≥3"
+            },
+            {
+              "id": "B",
+              "label": "−2≤x≤3"
+            },
+            {
+              "id": "C",
+              "label": "−2<x<3"
+            }
+          ],
+          "misconceptionHypothesis": "위로 열린 포물선에서 두 근 사이가 양수라고 판단한다."
+        },
+        {
+          "id": "m317-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "아래로 열린 포물선의 x절편이 1과 4이다. 그래프가 x축 위에 있는 x의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "아래로 열린 포물선은 두 절편 사이에서 양수이고 x절편에서는 0이므로 (1,4)이다.",
+          "skillLabel": "m3-17-skill-2",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1<x<4"
+            },
+            {
+              "id": "B",
+              "label": "x≤1 또는 x≥4"
+            },
+            {
+              "id": "C",
+              "label": "1≤x≤4"
+            }
+          ],
+          "misconceptionHypothesis": "아래로 열린 포물선의 부호를 위로 열린 포물선과 같게 본다."
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

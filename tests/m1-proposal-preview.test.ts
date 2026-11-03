@@ -37,11 +37,11 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 330 practice and 30 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(330);
+  it("validates 360 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(360);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(360);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(330);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(390);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(360);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
       expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);
@@ -188,6 +188,7 @@ describe("M1 proposal preview boundary", () => {
     expect(publicProblems("practice", "M2-11", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M2-16", "proposal-preview")).toEqual([]);
     expect(publicProblems("practice", "M3-03", "proposal-preview")).toEqual([]);
+    expect(publicProblems("practice", "M3-20", "proposal-preview")).toEqual([]);
     expect(draftUnitForPreview("M2-01")).toBeUndefined();
     expect(draftUnitForPreview("M2-10")).toBeUndefined();
     expect(draftUnitForPreview("M2-15")).toBeUndefined();

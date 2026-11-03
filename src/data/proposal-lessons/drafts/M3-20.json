@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-20",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "선택한 대상의 순서가 결과를 구별하는지 문제 문맥에서 판별한다. 서로 다른 대상 중 일부를 순서 있게 배열하는 경우를 작은 집합의 나열로 센다. 같은 대상을 순서 없이 고르는 경우를 조합으로 해석하고 순열과 비교해 중복 계산을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M3-19 선수 기능 확인: 선택 단계를 수형도와 곱의 법칙으로 세고 빠짐없이 나열한다. M0-04 선수 기능 확인: 곱셈과 묶음/반복 표기를 읽고 계산한다. 진단 결과는 숙달도에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-20-u1",
+          "title": "선택 결과의 순서",
+          "body": "문맥이 역할·자리·순위를 구별하면 대상의 순서가 결과에 포함된다.",
+          "activity": "회장과 부회장 선택에서는 A,B와 B,A가 다르다.",
+          "check": "같은 카드 두 장을 직책 칸에 순서대로 놓는다."
+        },
+        {
+          "id": "m3-20-u2",
+          "title": "순서 있는 두 자리 선택",
+          "body": "서로 다른 n개 중 두 자리를 순서 있게 채우면 첫 자리 n가지, 다음 자리 n−1가지다.",
+          "activity": "A,B,C 중 두 명을 대표와 부대표로 뽑으면 3×2=6가지다.",
+          "check": "수형도 또는 순서쌍을 모두 나열한다."
+        },
+        {
+          "id": "m3-20-u3",
+          "title": "순열과 위치 배열",
+          "body": "순서 있는 선택을 순열로 부르며, 각 위치에 들어가는 대상을 구별해 센다.",
+          "activity": "A,B,C를 모두 나열하면 3×2×1=6가지다.",
+          "check": "세 장 카드의 모든 배열을 나열해 곱의 법칙과 비교한다."
+        },
+        {
+          "id": "m3-20-u4",
+          "title": "순서 없는 선택",
+          "body": "팀이나 묶음처럼 순서를 구별하지 않으면 같은 대상 묶음의 재배열은 하나의 결과다.",
+          "activity": "A,B,C 중 두 명을 고르면 AB, AC, BC 세 묶음이다.",
+          "check": "순서쌍 여섯 개를 같은 묶음끼리 짝짓는다."
+        },
+        {
+          "id": "m3-20-u5",
+          "title": "조합과 중복 나누기",
+          "body": "순열 목록을 순서 없는 선택으로 바꿀 때 각 묶음이 몇 번 반복되었는지 확인한다.",
+          "activity": "3명 중 2명 순서는 각 조가 2번 나타나므로 6÷2=3이다.",
+          "check": "순서 있는 표를 묶음별로 정렬해 반복 수를 센다."
+        },
+        {
+          "id": "m3-20-u6",
+          "title": "문맥에 맞는 방법 선택",
+          "body": "같은 대상이라도 자리를 맡기면 순열, 단순히 함께 고르면 조합이다. 답의 단위와 결과 정의를 먼저 쓴다.",
+          "activity": "5명 중 대표 2명(회장·부회장)은 순서 있음, 2명 팀은 순서 없음이다.",
+          "check": "문제 카드에서 결과 정의를 표시하고 계산 전 분류한다."
+        }
+      ],
+      "body": "정의와 조건 확인 → 시각적 탐구 → 원리 연결 → 계산 → 원래 조건 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "선택 카드 배열를 직접 조작해요",
+      "interaction": "permutation-combination-cards",
+      "settings": {
+        "initialA": 4,
+        "initialB": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "학생 4명 중 회장과 부회장을 한 명씩 정하는 방법과, 두 명으로 이루어진 팀을 만드는 방법을 비교해요.",
+        "회장 자리는 4가지, 부회장은 남은 3명 중 하나라서 4×3=12가지예요.",
+        "두 명 팀은 두 사람의 순서를 구별하지 않아요.",
+        "순서 있는 짝 12개에서 같은 두 명의 순서를 바꾼 짝을 둘씩 묶어요.",
+        "따라서 팀은 12÷2=6가지예요.",
+        "정답: 직책 배정 12가지, 팀 6가지"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 조건을 빠짐없이 적고 풀이 이유를 확인해요. 문항은 연구용 초안으로 사람 검수 전 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "경계·부호·선택 순서를 혼동했다면 해당 소단원의 표현과 조건을 다시 확인하고, 다른 예제로 다시 풀어요. 이 설명은 검수 전 초안이에요."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습은 제안 일정이며 효과는 검증되지 않았어요. 다음 단원으로 이동하기 전에 오늘의 핵심 개념을 스스로 설명해요."
+    }
+  ]
+}

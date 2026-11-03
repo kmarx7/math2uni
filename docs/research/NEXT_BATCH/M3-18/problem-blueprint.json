@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-18",
+  "unitTitle": "방정식·부등식 종합",
+  "concepts": [
+    "매개변수 조건 분류",
+    "해의 범위와 개수"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m318-family-1",
+      "status": "draft",
+      "title": "연립방정식 후보와 부등식 구간 교차",
+      "reasoningStructure": "합·곱 연립방정식으로 순서쌍 후보를 구한 뒤 이차부등식 조건을 각 후보에 적용한다.",
+      "items": [
+        {
+          "id": "m318-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x+y=3, xy=2, x²−3x+2≤0을 모두 만족하는 순서쌍은 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x,y는 합이 3이고 곱이 2이므로 (1,2),(2,1)이다. 부등식은 (x−1)(x−2)≤0, 즉 1≤x≤2이므로 두 후보의 x좌표가 모두 허용된다.",
+          "skillLabel": "m3-18-skill-1",
+          "misconceptionHypothesis": "x와 y의 순서쌍을 한 번만 세거나 부등식을 후보에 대입하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m318-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x+y=3, xy=2, x²−3x+2≤0, x≤1을 모두 만족하는 순서쌍은 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "방정식 후보는 (1,2),(2,1)이다. 이차부등식은 x=1,2를 모두 허용하지만 x≤1은 x=1인 첫 후보만 허용한다.",
+          "skillLabel": "m3-18-skill-2",
+          "misconceptionHypothesis": "x≤1에서 등호를 빼거나 첫째·둘째 좌표를 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m318-family-2",
+      "status": "draft",
+      "title": "매개변수 경계에서 서로 다른 순서쌍 세기",
+      "reasoningStructure": "후보 좌표를 매개변수 경계와 비교하고 등호 포함에 따라 해 개수가 바뀌는 구간을 나눈다.",
+      "items": [
+        {
+          "id": "m318-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x+y=3, xy=2이고 추가 조건이 x≤a이다. 해가 정확히 한 순서쌍일 때 a의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "후보의 x좌표는 1과 2다. 한 후보만 포함하려면 1≤a<2여야 한다. a=1에서는 x=1 후보가 포함된다.",
+          "skillLabel": "m3-18-skill-1",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a<1"
+            },
+            {
+              "id": "B",
+              "label": "1≤a<2"
+            },
+            {
+              "id": "C",
+              "label": "a≥2"
+            }
+          ],
+          "misconceptionHypothesis": "a=1에서 x=1 후보를 빼거나 a=2에서 x=2 후보를 빠뜨린다."
+        },
+        {
+          "id": "m318-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "같은 연립방정식과 x≤a 조건에서 두 순서쌍이 모두 해가 되는 가장 작은 정수 a는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "두 후보 x좌표 중 큰 값이 2이므로 둘 다 포함하려면 a≥2이다. 가장 작은 정수는 2다.",
+          "skillLabel": "m3-18-skill-2",
+          "misconceptionHypothesis": "x의 허용 경계가 x<a라고 잘못 읽거나 y좌표를 기준으로 분류한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m318-family-3",
+      "status": "draft",
+      "title": "포물선과 수평선의 교점으로 임계값 찾기",
+      "reasoningStructure": "이차함수의 꼭짓점 높이와 수평선 y=k의 교점 개수를 연결하여 매개변수 임계값을 찾는다.",
+      "items": [
+        {
+          "id": "m318-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=x²−3x+2와 y=k가 한 점에서 만날 때 k는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "포물선의 꼭짓점은 x=3/2이고 함수값은 9/4−9/2+2=−1/4이다. 수평선이 꼭짓점 높이 k=−1/4일 때 한 점에서 접한다.",
+          "skillLabel": "m3-18-skill-2",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1/4"
+            },
+            {
+              "id": "B",
+              "label": "0"
+            },
+            {
+              "id": "C",
+              "label": "1"
+            }
+          ],
+          "misconceptionHypothesis": "꼭짓점 x좌표와 함수값을 혼동해 k를 3/2로 둔다."
+        },
+        {
+          "id": "m318-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "x²−3x+2=2는 서로 다른 실근을 몇 개 가지는가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "정리하면 x²−3x=0, 즉 x(x−3)=0이므로 x=0,3 두 실근이다. 그래프로는 y=x²−3x+2와 y=2의 교점 두 개다.",
+          "skillLabel": "m3-18-skill-1",
+          "misconceptionHypothesis": "판별식 또는 그래프 교점 개수를 중근 조건과 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author recalculation from stated conditions; substitution or exhaustive small-case count",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

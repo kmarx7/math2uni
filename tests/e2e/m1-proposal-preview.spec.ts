@@ -121,6 +121,21 @@ for (const viewport of viewports) {
       expect(progress.assessmentScore).toBeNull();
       expect(progress.unitProgress["M3-03"].assessmentScore).toBeNull();
     });
+    test("M3-16 number-line lab responds to keyboard input and exposes draft practice only", async ({ page }) => {
+      await page.goto("/learn/M3-16");
+      await expect(page.getByRole("heading", { name: "연립일차부등식", exact: true })).toBeVisible();
+      const lab = page.getByLabel(/수직선에서 첫째 구간/);
+      await expect(lab).toBeVisible();
+      await page.getByRole("slider", { name: "둘째 구간 왼쪽 끝" }).focus();
+      await page.getByRole("slider", { name: "둘째 구간 왼쪽 끝" }).press("ArrowRight");
+      await expect(page.locator(".lab-result")).toContainText("[1, 3]");
+      const response = await page.request.get("/api/practice?unitId=M3-16&collection=proposal-preview");
+      expect(response.status()).toBe(200);
+      const bank = await response.json();
+      expect(bank.problems).toHaveLength(6);
+      expect(bank.families).toHaveLength(3);
+      expect(JSON.stringify(bank.problems)).not.toMatch(/answerRule|answerDisplay|explanation|steps/);
+    });
     test("M1-01 assessment hides answers until the complete submission and stores preview-only score", async ({ page }) => {
       await page.goto("/learn/M1-01");
       const assessmentResponse = await page.request.get("/api/assessment?unitId=M1-01&collection=proposal-preview");

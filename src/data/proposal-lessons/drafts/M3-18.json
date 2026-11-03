@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-18",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "연립방정식의 해를 순서쌍으로 구하고, 추가 부등식 조건을 만족하는 순서쌍만 남긴다. 이차부등식으로 허용되는 변수의 구간을 구한 뒤 방정식의 해 또는 교점과 교집합을 취한다. 매개변수 경계에 따라 연립 조건의 서로 다른 해의 범위와 개수를 분류하고 각 후보를 원래 모든 조건에 대입해 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M3-13 선수 기능 확인: 꼭짓점과 구간 끝점에서 함수값을 비교한다. M3-15 선수 기능 확인: 연립 조건을 모두 만족하는 해를 찾고 순서쌍을 검산한다. M3-17 선수 기능 확인: 이차부등식의 해를 부호 구간으로 구한다. 진단 결과는 숙달도에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-18-u1",
+          "title": "여러 조건을 만족하는 해",
+          "body": "연립 조건의 해는 모든 방정식과 부등식을 동시에 만족하는 수 또는 순서쌍이다. 각 조건을 따로 푼 뒤 후보를 교차 확인한다.",
+          "activity": "x+y=3, xy=2의 해 후보 (1,2),(2,1)에 x≤a 조건을 추가한다.",
+          "check": "어떤 후보도 모든 조건을 통과해야 최종 해다."
+        },
+        {
+          "id": "m3-18-u2",
+          "title": "연립방정식에서 후보 찾기",
+          "body": "두 식 x+y=3, xy=2를 만족하는 순서쌍은 두 수가 합 3, 곱 2인 경우다. x와 y는 1,2이며 순서쌍을 모두 기록한다.",
+          "activity": "x²−3x+2=0을 풀어 x=1,2를 얻고 y=3−x로 복원한다.",
+          "check": "후보는 (1,2),(2,1)이다."
+        },
+        {
+          "id": "m3-18-u3",
+          "title": "이차부등식으로 허용 범위 구하기",
+          "body": "이차식의 부호 구간은 해당 부등식을 만족하는 변수 범위를 정한다.",
+          "activity": "x²−3x+2≤0은 (x−1)(x−2)≤0이므로 1≤x≤2이다.",
+          "check": "양 끝점에서 식값은 0이므로 포함한다."
+        },
+        {
+          "id": "m3-18-u4",
+          "title": "후보 해와 구간의 교집합",
+          "body": "연립방정식이 만든 후보를 부등식의 허용 구간과 대조하고, 모든 조건이 유지되는 후보만 남긴다.",
+          "activity": "(1,2),(2,1)은 모두 x의 첫 좌표가 [1,2] 안에 있다.",
+          "check": "두 순서쌍 모두 x²−3x+2≤0을 만족한다."
+        },
+        {
+          "id": "m3-18-u5",
+          "title": "매개변수에 따른 해 변화",
+          "body": "x≤a 같은 매개변수 조건은 a가 후보 좌표를 지날 때 해 개수가 달라진다. 경계 a=1,2를 각각 포함 여부까지 조사한다.",
+          "activity": "x≤a를 더하면 a<1에서 0개, 1≤a<2에서 1개, a≥2에서 2개다.",
+          "check": "a=1에서 (1,2)가 포함되고 a=2에서 두 후보가 모두 포함된다."
+        },
+        {
+          "id": "m3-18-u6",
+          "title": "해 개수와 원식 검산",
+          "body": "해 개수는 서로 다른 순서쌍을 세며 경계값을 중복 집계하지 않는다. 각 분기 결과는 원래 연립방정식과 모든 부등식에 대입한다.",
+          "activity": "a=1일 때 최종 해는 (1,2) 하나다.",
+          "check": "(1,2)는 합 3, 곱 2, 이차부등식 등호, x≤1을 모두 만족한다."
+        }
+      ],
+      "body": "정의와 조건 확인 → 시각적 탐구 → 원리 연결 → 계산 → 원래 조건 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "조건 분기표를 직접 조작해요",
+      "interaction": "parameter-case-table",
+      "settings": {
+        "initialA": 1,
+        "initialB": 2
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "x+y=3, xy=2, x²−3x+2≤0, x≤1을 모두 만족하는 순서쌍을 찾아요.",
+        "x,y는 합이 3이고 곱이 2이므로 두 수는 1과 2예요.",
+        "순서쌍 후보는 (1,2)와 (2,1) 두 개예요.",
+        "x²−3x+2=(x−1)(x−2)이므로 부등식의 해는 1≤x≤2예요.",
+        "두 후보는 이 구간을 만족하지만 x≤1 조건에는 x좌표가 1인 (1,2)만 남아요.",
+        "각 원래 식을 확인하면 (1,2)는 합 3, 곱 2이며 x²−3x+2=0, x≤1이에요.",
+        "정답: (1,2) 한 개"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 조건을 빠짐없이 적고 풀이 이유를 확인해요. 문항은 연구용 초안으로 사람 검수 전 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "경계·부호·선택 순서를 혼동했다면 해당 소단원의 표현과 조건을 다시 확인하고, 다른 예제로 다시 풀어요. 이 설명은 검수 전 초안이에요."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습은 제안 일정이며 효과는 검증되지 않았어요. 다음 단원으로 이동하기 전에 오늘의 핵심 개념을 스스로 설명해요."
+    }
+  ]
+}

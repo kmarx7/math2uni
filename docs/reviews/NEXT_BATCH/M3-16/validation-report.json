@@ -1,0 +1,21 @@
+{
+  "unitId": "M3-16",
+  "contentVersion": "0.1.0-draft",
+  "checks": {
+    "lessonSchema": "passed (contentSchema/Zod and Vitest)",
+    "problemSchema": "passed (problemSchema and Vitest)",
+    "answerAndExplanation": "passed (independent Curriculum review recalculated all batch answers; implementation checks answer rules and explanation presence; draft only)",
+    "interactionContract": "passed (typed contract, deterministic helper tests, SSR accessibility markup; browser E2E blocked before startup)",
+    "publicDtoAnswerFree": "passed (Vitest)",
+    "productionGate": "passed (Vitest)",
+    "unitProgressIsolation": "passed (Vitest; writes remain in unitProgress[unitId])"
+  },
+  "practiceDraftCount": 6,
+  "problemFamilyCount": 3,
+  "assessmentCount": 0,
+  "humanVerified": false,
+  "humanApprover": null,
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "e2e": "blocked before test execution (sandbox denied listen on 127.0.0.1:54329)"
+}

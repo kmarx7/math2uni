@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-19",
+  "levelId": "LEVEL 3",
+  "title": "경우의 수 기초",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "합의 법칙",
+      "곱의 법칙"
+    ],
+    "prerequisiteUnits": [
+      "M0-03",
+      "M1-19"
+    ],
+    "visualization": "수형도"
+  },
+  "objectives": [
+    "가능한 결과를 빠짐없이 나누고 서로 겹치지 않게 분류한다.",
+    "서로 배타적인 선택 경우의 수를 합의 법칙으로 센다.",
+    "연속된 선택 단계의 경우의 수를 곱의 법칙으로 세고 간단한 수형도로 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-19-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M0-03 선수 기능 확인: 사물이나 기호를 하나씩 빠짐없이 세고 같은 대상을 중복 세지 않는다."
+    },
+    {
+      "id": "m3-19-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-19 선수 기능 확인: 자료를 범주별로 정리하고 표/목록에서 항목 수를 읽는다."
+    }
+  ],
+  "targetSkills": [
+    "m3-19-skill-1",
+    "m3-19-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "무엇을 한 가지 결과로 볼지 정하기 → 경우를 겹치지 않게 분류 → 한 경로의 선택 단계 나누기 → 합 또는 곱 선택 → 목록·수형도로 확인",
+    "principleDerivation": "서로 겹치지 않는 선택지 중 하나를 고르는 경우의 수는 각 선택지 수의 합이다. 한 결과를 만들기 위해 순서대로 여러 단계를 모두 선택해야 하고 각 단계의 선택 수가 일정하면 곱으로 센다. 같은 결과를 두 갈래에 중복 포함하면 합의 법칙 적용이 틀리므로 분류의 배타성과 완전성을 확인한다.",
+    "accessibility": "모든 그래프·수형도에는 색에만 의존하지 않는 선/기호와 텍스트 대체 설명을 제공한다. 입력은 레이블이 있는 키보드 조작으로 제공하고 결과를 텍스트로 읽을 수 있게 한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-19-u1",
+      "title": "결과와 선택 구분",
+      "targetSkills": [
+        "m3-19-skill-1"
+      ],
+      "explanation": "경우의 수는 문제에서 구별하는 서로 다른 결과의 개수다. 같은 결과를 다른 경로로 만들 수 있는지 먼저 정한다.",
+      "activity": "주사위에서 1 또는 2가 나오는 결과는 두 가지다.",
+      "check": "결과 카드와 선택 경로를 나란히 기록한다."
+    },
+    {
+      "id": "m3-19-u2",
+      "title": "빠짐없는 분류",
+      "targetSkills": [
+        "m3-19-skill-1"
+      ],
+      "explanation": "가능한 경우를 빠짐없이, 서로 겹치지 않게 나누어야 정확히 셀 수 있다.",
+      "activity": "짝수 한 자리 자연수는 2,4,6,8이다.",
+      "check": "목록표에 누락/중복 체크 칸을 둔다."
+    },
+    {
+      "id": "m3-19-u3",
+      "title": "합의 법칙",
+      "targetSkills": [
+        "m3-19-skill-1"
+      ],
+      "explanation": "서로 겹치지 않는 갈래 A 또는 B 중 하나를 고르면 전체 경우 수는 A의 수와 B의 수의 합이다.",
+      "activity": "상의 3종류 또는 모자 2종류 중 하나만 고르면 3+2=5가지다.",
+      "check": "서로 다른 색상 갈래를 두고 각 갈래 크기를 합한다."
+    },
+    {
+      "id": "m3-19-u4",
+      "title": "곱의 법칙",
+      "targetSkills": [
+        "m3-19-skill-2"
+      ],
+      "explanation": "한 결과가 여러 단계 선택을 모두 포함하고 각 단계 선택이 이어지면 단계별 수를 곱한다.",
+      "activity": "셔츠 2벌과 바지 3벌의 한 벌씩 조합은 2×3=6가지다.",
+      "check": "수형도 가지 수와 곱셈식을 대응한다."
+    },
+    {
+      "id": "m3-19-u5",
+      "title": "수형도와 표",
+      "targetSkills": [
+        "m3-19-skill-2"
+      ],
+      "explanation": "수형도는 단계별 선택을 가지로 나타내고 표는 같은 결과를 규칙적으로 나열한다. 작은 경우를 직접 세어 계산식을 점검한다.",
+      "activity": "문자 A,B와 숫자 1,2로 만든 순서쌍은 4개다.",
+      "check": "두 단계 수형도의 끝 가지와 표의 칸을 비교한다."
+    },
+    {
+      "id": "m3-19-u6",
+      "title": "합과 곱의 혼합",
+      "targetSkills": [
+        "m3-19-skill-2"
+      ],
+      "explanation": "먼저 서로 겹치지 않는 큰 갈래를 나눈 다음 각 갈래 안의 단계 선택을 곱하고 마지막에 합할 수 있다.",
+      "activity": "버스 2경로(각 3정류장) 또는 도보 1경로면 2×3+1=7개 선택이다.",
+      "check": "갈래마다 단계 계산을 하고 마지막 합을 적는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-19-lab",
+      "kind": "math-lab",
+      "interaction": "counting-tree",
+      "description": "수형도",
+      "features": [
+        "핵심 조건을 바꾸면 표시 결과와 설명을 함께 갱신",
+        "입력 범위와 허용 조작을 제한하고 계산 과정을 텍스트로 제시",
+        "키보드 조작과 그래프/표 대체 설명 제공"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "배타적인 갈래를 나누어 합하기",
+      "연속 선택을 곱하기",
+      "합·곱 혼합과 수형도 검산"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "서로 다른 풀이 추론 구조만 별도 원형으로 센다. 숫자·부호만 바꾼 문항은 새 원형이 아니다."
+  },
+  "assessmentCriteria": [
+    "가능한 결과를 빠짐없이 나누고 서로 겹치지 않게 분류한다.",
+    "서로 배타적인 선택 경우의 수를 합의 법칙으로 센다.",
+    "연속된 선택 단계의 경우의 수를 곱의 법칙으로 세고 간단한 수형도로 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 관련 선수 개념 또는 바로 앞 절차로 돌아가 도움 없는 회상과 새 예제로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "서로 겹치는 분류에 합의 법칙을 적용한다.",
+    "단계별 선택을 더한다.",
+    "한 결과의 순서가 문제에서 구별되는지 확인하지 않는다.",
+    "수형도 가지의 끝을 중복 또는 누락한다."
+  ],
+  "workedExample": {
+    "prompt": "상의 2벌 중 하나와 바지 3벌 중 하나를 골라 입는 방법은 몇 가지인가?",
+    "steps": [
+      "한 벌의 옷차림은 상의 선택과 바지 선택을 모두 포함한다.",
+      "상의마다 바지 3벌을 각각 조합할 수 있다.",
+      "곱의 법칙으로 2×3=6이다.",
+      "수형도에는 첫 단계 2가지에서 각각 3가지 가지가 뻗는다."
+    ],
+    "answer": "6가지"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "cross-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "명세와 renderer draft 및 3원형/6연습 초안을 독립 교육과정·수학 검토 보고서와 대조했다. 개발 preview 구현 핸드오프만 허용한다.",
+    "sourceVerification": "교육부/2028 제도 자료는 맥락만 확인했다. 제안 단원에 대한 공식 성취기준 코드 및 직접 매핑은 미검증이며 []로 유지한다.",
+    "reviewerRole": "Curriculum Architect; independent curriculum/math reviewer cross-review (docs/reviews/NEXT_STEP/M3-16-20-independent-review.md)"
+  },
+  "implementationReadiness": {
+    "status": "ready-for-developer-preview",
+    "publicationReady": false,
+    "pending": [
+      "Developer의 공통 렌더러·인터랙션 구현과 독립 QA",
+      "자동 콘텐츠/채점/저장·접근성·E2E 검사",
+      "사람의 교육·수학 문항 검수 및 별도 게시 승인"
+    ]
+  }
+}

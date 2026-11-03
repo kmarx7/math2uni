@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-18",
+  "levelId": "LEVEL 3",
+  "title": "방정식·부등식 종합",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "매개변수 조건 분류",
+      "해의 범위와 개수"
+    ],
+    "prerequisiteUnits": [
+      "M3-13",
+      "M3-15",
+      "M3-17"
+    ],
+    "visualization": "조건 분기표"
+  },
+  "objectives": [
+    "연립방정식의 해를 순서쌍으로 구하고, 추가 부등식 조건을 만족하는 순서쌍만 남긴다.",
+    "이차부등식으로 허용되는 변수의 구간을 구한 뒤 방정식의 해 또는 교점과 교집합을 취한다.",
+    "매개변수 경계에 따라 연립 조건의 서로 다른 해의 범위와 개수를 분류하고 각 후보를 원래 모든 조건에 대입해 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-18-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-13 선수 기능 확인: 꼭짓점과 구간 끝점에서 함수값을 비교한다."
+    },
+    {
+      "id": "m3-18-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-15 선수 기능 확인: 연립 조건을 모두 만족하는 해를 찾고 순서쌍을 검산한다."
+    },
+    {
+      "id": "m3-18-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-17 선수 기능 확인: 이차부등식의 해를 부호 구간으로 구한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-18-skill-1",
+    "m3-18-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "각 조건의 역할 분류 → 연립방정식으로 후보 해 구성 → 이차부등식으로 허용 구간 산출 → 후보와 구간의 교집합 → 매개변수 임계값별 해 개수 분류 → 모든 원식 검산",
+    "principleDerivation": "연립방정식이 만드는 후보 순서쌍 집합에 이차부등식과 매개변수 부등식이 허용하는 조건을 추가하면 최종 해는 모든 조건을 만족하는 집합의 교집합이다. 해의 구조는 방정식의 근/교점이 바뀌거나 경계가 후보 값을 지나갈 때 달라지므로 임계값과 등호 포함 여부를 분리해 센다.",
+    "accessibility": "모든 그래프·수형도에는 색에만 의존하지 않는 선/기호와 텍스트 대체 설명을 제공한다. 입력은 레이블이 있는 키보드 조작으로 제공하고 결과를 텍스트로 읽을 수 있게 한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-18-u1",
+      "title": "여러 조건을 만족하는 해",
+      "targetSkills": [
+        "m3-18-skill-1"
+      ],
+      "explanation": "연립 조건의 해는 모든 방정식과 부등식을 동시에 만족하는 수 또는 순서쌍이다. 각 조건을 따로 푼 뒤 후보를 교차 확인한다.",
+      "activity": "x+y=3, xy=2의 해 후보 (1,2),(2,1)에 x≤a 조건을 추가한다.",
+      "check": "어떤 후보도 모든 조건을 통과해야 최종 해다."
+    },
+    {
+      "id": "m3-18-u2",
+      "title": "연립방정식에서 후보 찾기",
+      "targetSkills": [
+        "m3-18-skill-1"
+      ],
+      "explanation": "두 식 x+y=3, xy=2를 만족하는 순서쌍은 두 수가 합 3, 곱 2인 경우다. x와 y는 1,2이며 순서쌍을 모두 기록한다.",
+      "activity": "x²−3x+2=0을 풀어 x=1,2를 얻고 y=3−x로 복원한다.",
+      "check": "후보는 (1,2),(2,1)이다."
+    },
+    {
+      "id": "m3-18-u3",
+      "title": "이차부등식으로 허용 범위 구하기",
+      "targetSkills": [
+        "m3-18-skill-1"
+      ],
+      "explanation": "이차식의 부호 구간은 해당 부등식을 만족하는 변수 범위를 정한다.",
+      "activity": "x²−3x+2≤0은 (x−1)(x−2)≤0이므로 1≤x≤2이다.",
+      "check": "양 끝점에서 식값은 0이므로 포함한다."
+    },
+    {
+      "id": "m3-18-u4",
+      "title": "후보 해와 구간의 교집합",
+      "targetSkills": [
+        "m3-18-skill-2"
+      ],
+      "explanation": "연립방정식이 만든 후보를 부등식의 허용 구간과 대조하고, 모든 조건이 유지되는 후보만 남긴다.",
+      "activity": "(1,2),(2,1)은 모두 x의 첫 좌표가 [1,2] 안에 있다.",
+      "check": "두 순서쌍 모두 x²−3x+2≤0을 만족한다."
+    },
+    {
+      "id": "m3-18-u5",
+      "title": "매개변수에 따른 해 변화",
+      "targetSkills": [
+        "m3-18-skill-2"
+      ],
+      "explanation": "x≤a 같은 매개변수 조건은 a가 후보 좌표를 지날 때 해 개수가 달라진다. 경계 a=1,2를 각각 포함 여부까지 조사한다.",
+      "activity": "x≤a를 더하면 a<1에서 0개, 1≤a<2에서 1개, a≥2에서 2개다.",
+      "check": "a=1에서 (1,2)가 포함되고 a=2에서 두 후보가 모두 포함된다."
+    },
+    {
+      "id": "m3-18-u6",
+      "title": "해 개수와 원식 검산",
+      "targetSkills": [
+        "m3-18-skill-2"
+      ],
+      "explanation": "해 개수는 서로 다른 순서쌍을 세며 경계값을 중복 집계하지 않는다. 각 분기 결과는 원래 연립방정식과 모든 부등식에 대입한다.",
+      "activity": "a=1일 때 최종 해는 (1,2) 하나다.",
+      "check": "(1,2)는 합 3, 곱 2, 이차부등식 등호, x≤1을 모두 만족한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-18-lab",
+      "kind": "math-lab",
+      "interaction": "parameter-case-table",
+      "description": "조건 분기표",
+      "features": [
+        "핵심 조건을 바꾸면 표시 결과와 설명을 함께 갱신",
+        "입력 범위와 허용 조작을 제한하고 계산 과정을 텍스트로 제시",
+        "키보드 조작과 그래프/표 대체 설명 제공"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "M3-15 방식의 연립방정식으로 순서쌍 후보를 만들고 추가 이차부등식의 허용 구간과 교차하기",
+      "매개변수 경계가 연립해 후보를 통과할 때 서로 다른 순서쌍 해의 개수 분류하기",
+      "이차함수 꼭짓점/구간 끝점 또는 그래프 교점으로 매개변수 임계 조건을 찾고 모든 원식 검산하기"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "서로 다른 풀이 추론 구조만 별도 원형으로 센다. 숫자·부호만 바꾼 문항은 새 원형이 아니다."
+  },
+  "assessmentCriteria": [
+    "연립방정식의 후보 해를 빠짐없이 구하고 모든 순서쌍을 기록한다.",
+    "이차부등식의 해집합을 구해 방정식 해와 교집합을 취한다.",
+    "매개변수 임계값과 등호 포함을 분리해 서로 다른 해의 범위를/개수를 정확히 분류한다.",
+    "최종 해를 원래 모든 방정식과 부등식에 대입해 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 관련 선수 개념 또는 바로 앞 절차로 돌아가 도움 없는 회상과 새 예제로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "연립방정식의 한 식만 만족하는 순서쌍을 최종 해로 센다.",
+    "이차부등식으로 정한 변수 구간을 다른 변수 또는 순서쌍 전체에 잘못 적용한다.",
+    "매개변수 경계에서 등호 포함 여부를 확인하지 않는다.",
+    "같은 후보 해를 조건별로 여러 번 세거나 서로 다른 순서쌍을 하나로 합친다.",
+    "최종 후보를 원래 모든 조건에 대입해 확인하지 않는다."
+  ],
+  "workedExample": {
+    "prompt": "x+y=3, xy=2, x²−3x+2≤0, x≤a를 모두 만족하는 순서쌍 (x,y)의 개수를 a에 따라 구하시오.",
+    "steps": [
+      "연립방정식에서 x,y는 합 3, 곱 2인 두 수이므로 후보 순서쌍은 (1,2),(2,1)이다.",
+      "두 후보의 첫 좌표는 각각 1,2이며 x²−3x+2=(x−1)(x−2)≤0의 허용 구간은 1≤x≤2다. 따라서 두 후보 모두 이 조건을 만족한다.",
+      "남은 매개변수 조건은 x≤a다. a<1이면 두 후보 모두 탈락한다.",
+      "1≤a<2이면 x=1인 (1,2)만 남는다.",
+      "a≥2이면 (1,2),(2,1)이 모두 남는다. a=1과 a=2에서 각각 등호를 확인했다.",
+      "각 남은 순서쌍은 x+y=3, xy=2, x²−3x+2≤0 및 x≤a를 만족한다."
+    ],
+    "answer": "a<1이면 0개; 1≤a<2이면 1개; a≥2이면 2개"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "cross-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "명세와 renderer draft 및 3원형/6연습 초안을 독립 교육과정·수학 검토 보고서와 대조했다. 개발 preview 구현 핸드오프만 허용한다.",
+    "sourceVerification": "교육부/2028 제도 자료는 맥락만 확인했다. 제안 단원에 대한 공식 성취기준 코드 및 직접 매핑은 미검증이며 []로 유지한다.",
+    "reviewerRole": "Curriculum Architect; independent curriculum/math reviewer cross-review (docs/reviews/NEXT_STEP/M3-16-20-independent-review.md)"
+  },
+  "implementationReadiness": {
+    "status": "ready-for-developer-preview",
+    "publicationReady": false,
+    "pending": [
+      "Developer의 공통 렌더러·인터랙션 구현과 독립 QA",
+      "자동 콘텐츠/채점/저장·접근성·E2E 검사",
+      "사람의 교육·수학 문항 검수 및 별도 게시 승인"
+    ]
+  }
+}
