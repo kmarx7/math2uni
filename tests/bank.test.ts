@@ -42,7 +42,7 @@ describe("reviewed question bank", () => {
         expect(p.steps.join()).toContain(p.answerDisplay);
         expect(canPublish(p)).toBe(false);
       }
-  });
+  }, 15_000);
   it.each([
     [999, 10],
     [10000, 100],

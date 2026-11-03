@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-13",
+  "levelId": "LEVEL 3",
+  "title": "이차함수의 구간 최적화",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "꼭짓점의 위치",
+      "매개변수별 최대·최소"
+    ],
+    "prerequisiteUnits": [
+      "M3-12",
+      "M2-14"
+    ],
+    "visualization": "구간과 꼭짓점 이동"
+  },
+  "objectives": [
+    "완전제곱식이나 꼭짓점형에서 꼭짓점의 x좌표와 함수값을 찾는다.",
+    "닫힌 구간 [p,q]에서 꼭짓점이 구간 안에 있는지와 포물선이 위·아래로 열리는지를 판단한다.",
+    "꼭짓점이 구간 안에 있으면 그 값과 양 끝값을, 밖에 있으면 양 끝값을 비교해 최댓값·최솟값을 구한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-13-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-12 선수 기능 확인: 이차함수의 그래프와 꼭짓점, 대칭축을 읽는다."
+    },
+    {
+      "id": "m3-13-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-14 선수 기능 확인: 닫힌 구간의 양 끝점 포함 여부와 부등식 범위를 해석한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-13-skill-1",
+    "m3-13-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "함수와 닫힌 구간 확인 → 꼭짓점·열림 방향 찾기 → 꼭짓점의 구간 포함 여부 판정 → 양 끝점 값 계산 → 후보 비교 → 최대·최소 검산",
+    "principleDerivation": "닫힌 유계 구간에서는 이차함수의 최댓값·최솟값이 꼭짓점 또는 양 끝점에서 나온다. 꼭짓점이 구간 안이면 열림 방향에 따라 그 점이 최소 또는 최대 후보이고, 나머지 극값은 끝점 값과 비교한다. 꼭짓점이 밖이면 함수는 구간에서 단조여서 끝점 두 값을 비교하면 된다.",
+    "accessibility": "수식은 말로 읽을 수 있는 문장과 함께 제시한다. 그래프에는 축 이름·범위와 텍스트 대체표를 제공하고, 슬라이더와 선택은 키보드로 조작할 수 있게 한다. 애니메이션은 필수 정보 전달에 사용하지 않으며 변경 결과를 aria-live 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-13-u1",
+      "title": "꼭짓점과 대칭축",
+      "targetSkills": [
+        "m3-13-skill-1"
+      ],
+      "explanation": "f(x)=a(x−h)²+k에서 꼭짓점은 (h,k), 대칭축은 x=h다. a>0이면 위로 열리고 a<0이면 아래로 열린다.",
+      "activity": "꼭짓점형에서 h,k와 열림 방향을 읽고 포물선의 중심점을 이동한다.",
+      "check": "f(x)=−(x−1)²+4의 꼭짓점은 (1,4), 아래로 열린다."
+    },
+    {
+      "id": "m3-13-u2",
+      "title": "닫힌 구간과 후보점",
+      "targetSkills": [
+        "m3-13-skill-1"
+      ],
+      "explanation": "닫힌 구간 [p,q]는 p≤x≤q로 양 끝점을 포함한다. 구간 안에 있는 꼭짓점과 두 끝점만 최댓값·최솟값 후보로 확인한다.",
+      "activity": "수직선에서 p,q 포함점을 표시하고 꼭짓점 h가 범위에 들어가는지 판단한다.",
+      "check": "[−1,2]에서는 −1과 2를 포함한다."
+    },
+    {
+      "id": "m3-13-u3",
+      "title": "꼭짓점이 구간 안에 있을 때",
+      "targetSkills": [
+        "m3-13-skill-1"
+      ],
+      "explanation": "a>0이면 꼭짓점이 구간 안에서 가장 낮은 점이어서 최솟값 후보가 된다. a<0이면 가장 높은 점이어서 최댓값 후보가 된다. 반대쪽 극값은 끝점 값과 비교한다.",
+      "activity": "꼭짓점이 구간 안에 있는 위·아래 포물선을 비교하고 후보값 표를 채운다.",
+      "check": "위로 열린 포물선의 꼭짓점이 [p,q] 안이면 최솟값은 꼭짓점에서 나온다."
+    },
+    {
+      "id": "m3-13-u4",
+      "title": "꼭짓점이 구간 밖에 있을 때",
+      "targetSkills": [
+        "m3-13-skill-2"
+      ],
+      "explanation": "꼭짓점이 닫힌 구간 밖이면 구간 안에서 그래프는 한 방향으로 움직인다. 따라서 최댓값과 최솟값은 양 끝점 값 중 큰 것과 작은 것이다.",
+      "activity": "꼭짓점을 구간 왼쪽·오른쪽에 놓고 함수값이 한 방향으로 바뀌는 것을 관찰한다.",
+      "check": "꼭짓점이 p보다 작으면 [p,q]에서는 끝점 값을 비교한다."
+    },
+    {
+      "id": "m3-13-u5",
+      "title": "최대·최소 후보 비교",
+      "targetSkills": [
+        "m3-13-skill-2"
+      ],
+      "explanation": "후보점 x=p, x=q, 그리고 p≤h≤q인 경우 x=h에 f(x)를 대입한다. 함수값을 비교해 최댓값·최솟값을 고르고, 값이 같으면 서로 다른 x에서 같은 극값이 될 수 있다.",
+      "activity": "세 후보 표에 x와 f(x)를 따로 채워 최대·최소 위치와 값을 구분한다.",
+      "check": "“최댓값 4”와 “x=1에서 최댓값”을 다른 칸에 쓴다."
+    },
+    {
+      "id": "m3-13-u6",
+      "title": "매개변수와 구간 변화",
+      "targetSkills": [
+        "m3-13-skill-2"
+      ],
+      "explanation": "매개변수 h 또는 구간 끝점이 움직이면 꼭짓점이 구간 안에 들어오는 경계에서 최대·최소를 나누어 분석한다. 경계의 포함 여부와 끝점 값을 확인한다.",
+      "activity": "h 슬라이더를 p에서 q 사이로 이동하고, 꼭짓점 포함 여부와 후보값 표를 갱신한다.",
+      "check": "f_h(x)=−(x−h)²+3를 닫힌 구간 [0,4]에서 살펴볼 때 0≤h≤4이면 꼭짓점이 구간 안이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-13-lab",
+      "kind": "math-lab",
+      "interaction": "quadratic-interval-optimization",
+      "description": "닫힌 구간, 꼭짓점, 양 끝 함수값을 함께 비교",
+      "features": [
+        "구간의 두 끝점과 꼭짓점 위치를 슬라이더로 조절하고 후보값 표를 갱신",
+        "열림 방향에 따라 최대·최소 후보를 텍스트로 설명",
+        "구간 끝점 포함 표시를 텍스트·기호로 제공하며 키보드 접근 가능"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "꼭짓점이 구간 안인지 판정하고 극값 후보 고르기",
+      "꼭짓점과 두 끝점의 함수값을 비교해 최대·최소 계산",
+      "매개변수에 따라 꼭짓점 포함 구간과 극값을 나누기"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 풀이에 필요한 핵심 추론이 달라야 한다. 수치·부호만 바꾼 문항은 같은 원형이며, 전략 선택·조건 해석·표현 전환이 달라야 별도 원형으로 제안한다."
+  },
+  "assessmentCriteria": [
+    "닫힌 구간의 양 끝점 포함 여부와 꼭짓점의 위치를 정확히 판단한다.",
+    "꼭짓점과 양 끝점의 함수값을 빠짐없이 계산한다.",
+    "열림 방향과 후보값 비교로 최대·최소의 값과 위치를 구분해 답한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 해당 절차의 바로 앞 정의·그래프 해석·대수 변환으로 돌아가 다시 판단한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "꼭짓점의 함수값만 조사해 반대쪽 극값을 놓친다.",
+    "꼭짓점이 구간 밖인데도 극값이라고 답한다.",
+    "닫힌 구간의 끝점을 빼고 계산한다.",
+    "최댓값이 나오는 x좌표와 최댓값 자체를 혼동한다.",
+    "위로 열린 포물선은 최댓값을 갖지 않는다고 구간 조건 없이 말한다."
+  ],
+  "workedExample": {
+    "prompt": "f(x)=−(x−1)²+4의 닫힌 구간 [−1,2]에서 최댓값과 최솟값을 구하시오.",
+    "steps": [
+      "구간은 −1≤x≤2이고 양 끝점을 포함한다.",
+      "꼭짓점은 (1,4)이며 −1≤1≤2이므로 구간 안에 있다.",
+      "a=−1<0이라 아래로 열리므로 꼭짓점에서 최댓값 4를 얻는다.",
+      "끝점 값을 계산한다: f(−1)=−(−1−1)²+4=0, f(2)=−(2−1)²+4=3.",
+      "세 후보값 0,4,3을 비교하면 최댓값은 4 (x=1), 최솟값은 0 (x=−1)이다."
+    ],
+    "answer": "최댓값 4는 x=1에서, 최솟값 0은 x=−1에서 얻는다."
+  },
+  "designReview": {
+    "status": "pending-research-cross-review",
+    "reviewerRole": "Curriculum Architect author; independent review pending",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content 자료조사·문항 초안",
+      "Curriculum 독립 교차 검토",
+      "Developer 독립 수학 계산·구현 QA",
+      "사람 콘텐츠 검수와 공개 승인"
+    ]
+  }
+}

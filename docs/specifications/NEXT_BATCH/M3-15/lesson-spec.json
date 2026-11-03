@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-15",
+  "levelId": "LEVEL 3",
+  "title": "연립방정식의 확장",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "일차·이차 연립",
+      "대칭형 연립"
+    ],
+    "prerequisiteUnits": [
+      "M3-14",
+      "M2-02"
+    ],
+    "visualization": "두 곡선의 공통 조건"
+  },
+  "objectives": [
+    "연립방정식의 해를 모든 식을 동시에 만족하는 순서쌍으로 해석한다.",
+    "일차식과 이차식의 연립에서 대입해 이차방정식을 만들고 모든 교점을 구한다.",
+    "x+y와 xy가 주어진 대칭형 연립을 근과 계수의 관계 또는 이차방정식으로 풀고 순서쌍의 순서를 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-15-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-14 선수 기능 확인: 인수분해된 다항방정식에서 각 인수를 0으로 두어 후보 근을 찾고 원식에 대입한다."
+    },
+    {
+      "id": "m3-15-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-02 선수 기능 확인: 연립일차방정식에서 한 문자를 다른 문자로 나타내어 대입하고, 해를 (x,y) 순서쌍으로 쓴다."
+    }
+  ],
+  "targetSkills": [
+    "m3-15-skill-1",
+    "m3-15-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "각 식이 나타내는 조건 읽기 → 공통 변수 표현 선택 → 대입해 단일 방정식 만들기 → 모든 후보 순서쌍 복원 → 각 원식에 대입 검산",
+    "principleDerivation": "연립방정식의 해는 두 조건을 모두 만족하는 점이다. 직선과 포물선의 교점은 두 식의 y값을 같게 두어 x 방정식으로 찾고 y를 복원한다. 합 S와 곱 P가 주어지면 두 수는 u²−Su+P=0의 두 근이다.",
+    "accessibility": "수식은 말로 읽을 수 있는 문장과 함께 제시한다. 그래프에는 축 이름·범위와 텍스트 대체표를 제공하고, 슬라이더와 선택은 키보드로 조작할 수 있게 한다. 애니메이션은 필수 정보 전달에 사용하지 않으며 변경 결과를 aria-live 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-15-u1",
+      "title": "연립방정식의 공통해",
+      "targetSkills": [
+        "m3-15-skill-1"
+      ],
+      "explanation": "연립방정식의 해는 각 방정식의 좌변과 우변을 동시에 만족하는 순서쌍이다. 그래프에서는 두 곡선이 만나는 점이다.",
+      "activity": "직선과 포물선 위의 점을 각각 찍고 두 그래프에 공통인 점만 선택한다.",
+      "check": "해를 구한 뒤 x와 y를 서로 바꾸어도 되는지는 식의 대칭 여부로 확인한다."
+    },
+    {
+      "id": "m3-15-u2",
+      "title": "일차·이차 연립과 대입",
+      "targetSkills": [
+        "m3-15-skill-1"
+      ],
+      "explanation": "일차식에서 y를 x로 나타내어 이차식에 대입하면 x에 대한 이차방정식이 된다. 그 방정식의 각 실근을 원래 일차식에 넣어 y를 구한다.",
+      "activity": "y=x+1, y=x²−1의 두 식을 같게 놓고 교점 x를 찾는다.",
+      "check": "y=x+1이면 x=2일 때 y=3이다."
+    },
+    {
+      "id": "m3-15-u3",
+      "title": "교점과 해 개수",
+      "targetSkills": [
+        "m3-15-skill-1"
+      ],
+      "explanation": "일차 그래프와 포물선의 교점 수는 대입 후 얻는 이차방정식의 실근 개수와 같다. 교점이 없거나 접하는 경우도 판별식으로 분류할 수 있다.",
+      "activity": "직선의 위치를 옮겨 포물선과 두 번·한 번·전혀 만나지 않는 경우를 탐색한다.",
+      "check": "서로 다른 두 실근이면 서로 다른 교점 두 개가 생긴다."
+    },
+    {
+      "id": "m3-15-u4",
+      "title": "모든 순서쌍 복원",
+      "targetSkills": [
+        "m3-15-skill-2"
+      ],
+      "explanation": "이차방정식의 x해를 각각 원래 식에 대입해 y를 구한다. 서로 다른 x마다 순서쌍을 만든 뒤 두 원래 방정식에 모두 대입해 확인한다.",
+      "activity": "교점 표의 각 x행에서 y를 계산하고 (x,y) 쌍을 기록한다.",
+      "check": "x=−1,2에서 y=x+1이면 순서쌍은 (−1,0),(2,3)이다."
+    },
+    {
+      "id": "m3-15-u5",
+      "title": "합과 곱으로 이루어진 대칭형",
+      "targetSkills": [
+        "m3-15-skill-2"
+      ],
+      "explanation": "두 수 u,v의 합이 S이고 곱이 P면 u,v는 z²−Sz+P=0의 근이다. 두 근은 순서가 정해지지 않아 순서쌍 (u,v),(v,u)를 모두 확인한다.",
+      "activity": "x+y=S, xy=P를 근 합·곱 표에 연결해 두 값을 찾는다.",
+      "check": "x+y=5, xy=6이면 두 수는 2와 3이다."
+    },
+    {
+      "id": "m3-15-u6",
+      "title": "대칭형 해와 검산",
+      "targetSkills": [
+        "m3-15-skill-2"
+      ],
+      "explanation": "대칭형 식은 x와 y를 바꾸어도 조건이 같으므로 보통 서로 바꾼 순서쌍도 해가 된다. 두 값이 같으면 한 순서쌍만 생길 수 있다. 모든 후보를 원래 식에 넣는다.",
+      "activity": "구한 후보쌍과 순서를 바꾼 쌍을 원식에 대입해 둘 다 만족하는지 확인한다.",
+      "check": "(2,3),(3,2)는 합 5와 곱 6을 모두 만족한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-15-lab",
+      "kind": "math-lab",
+      "interaction": "system-intersections",
+      "description": "두 그래프의 교점과 대칭형 순서쌍을 비교",
+      "features": [
+        "직선·포물선 계수 또는 합·곱 조건을 조절해 공통 해를 표시",
+        "교점 표에 x, y, 두 식의 값과 검산 결과를 함께 제공",
+        "키보드 가능한 입력과 그래프 대체표, 결과의 텍스트 설명 제공"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "일차·이차 연립을 대입해 교점 계산",
+      "판별식으로 교점 개수 분류 후 순서쌍 복원",
+      "합·곱 대칭 조건에서 순서쌍과 순서 교환 여부 판단"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 풀이에 필요한 핵심 추론이 달라야 한다. 수치·부호만 바꾼 문항은 같은 원형이며, 전략 선택·조건 해석·표현 전환이 달라야 별도 원형으로 제안한다."
+  },
+  "assessmentCriteria": [
+    "두 식이 동시에 성립하는 교점·순서쌍으로 문제를 해석한다.",
+    "대입으로 얻은 이차방정식의 모든 실근을 찾고 다른 변수를 복원한다.",
+    "대칭형에서는 순서 교환 가능성을 확인하고 원래 조건에 모두 대입한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 해당 절차의 바로 앞 정의·그래프 해석·대수 변환으로 돌아가 다시 판단한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "한 방정식만 만족하는 순서쌍을 해로 고른다.",
+    "x값만 적고 y값을 복원하지 않는다.",
+    "대칭형에서 (x,y)와 (y,x)를 구분하지 않는다.",
+    "합과 곱으로 만든 이차방정식의 계수 부호를 잘못 쓴다.",
+    "그래프에서 보인 교점만 세고 접하는 경우나 중복 여부를 놓친다."
+  ],
+  "workedExample": {
+    "prompt": "연립방정식 y=x+1, y=x²−1의 모든 실수 해를 순서쌍으로 구하시오.",
+    "steps": [
+      "교점에서는 두 y값이 같으므로 x+1=x²−1이다.",
+      "정리하면 x²−x−2=0이다.",
+      "인수분해하면 (x−2)(x+1)=0이므로 x=2 또는 x=−1이다.",
+      "y=x+1에 넣으면 x=2일 때 y=3, x=−1일 때 y=0이다.",
+      "후보 순서쌍은 (2,3), (−1,0)이다.",
+      "검산: (2,3)은 3=2+1=4−1을, (−1,0)은 0=−1+1=1−1을 만족한다."
+    ],
+    "answer": "(x,y)=(2,3), (−1,0)"
+  },
+  "designReview": {
+    "status": "pending-research-cross-review",
+    "reviewerRole": "Curriculum Architect author; independent review pending",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content 자료조사·문항 초안",
+      "Curriculum 독립 교차 검토",
+      "Developer 독립 수학 계산·구현 QA",
+      "사람 콘텐츠 검수와 공개 승인"
+    ]
+  }
+}

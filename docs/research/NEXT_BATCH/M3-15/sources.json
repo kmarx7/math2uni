@@ -1,0 +1,32 @@
+[
+  {
+    "id": "moe-2022-curriculum-announcement",
+    "title": "2022 개정 초·중등학교 및 특수교육 교육과정 확정·발표",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=93459&lev=0&searchType=null",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "page-verified; contextual only; no unit-level mapping asserted",
+    "rights": "교육부 페이지 출처표시 조건을 확인; 교육과정 세부 텍스트를 복제하지 않음",
+    "use": "2022 개정 교육과정 발표 맥락만 확인; 단원 또는 성취기준의 직접 근거로 사용하지 않음"
+  },
+  {
+    "id": "ncic-2022-curriculum-announcement",
+    "title": "2022 개정 초중등학교 교육과정 고시 안내",
+    "publisher": "국가교육과정정보센터(NCIC)",
+    "url": "https://www.ncic.re.kr/bbs/eduSian2022/view/547.do",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "official-site search result located; direct URL fetch failed with 404 in this environment; not fully page-verified",
+    "rights": "공식 고시 안내 페이지만 확인; 첨부 원문을 복제하지 않음",
+    "use": "Search result indicated the 2022 curriculum notice and 별책 8; because the direct page could not be fetched, treat this only as a search lead, not verified evidence. No unit/standard mapping is asserted."
+  },
+  {
+    "id": "pedagogy-misconception-evidence-status",
+    "title": "교수법 및 오개념 근거 상태",
+    "publisher": "Research & Content Agent 조사 기록",
+    "url": null,
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "not-verified; no unit-specific empirical source established",
+    "rights": "외부 주장을 인용하지 않음",
+    "use": "오개념 빈도·교수법 효과 진술은 author hypotheses only"
+  }
+]

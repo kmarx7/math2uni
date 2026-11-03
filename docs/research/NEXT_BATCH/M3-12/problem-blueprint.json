@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-12",
+  "unitTitle": "이차방정식과 이차함수",
+  "concepts": [
+    "교점과 실근",
+    "그래프와 판별식"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m312-family-1",
+      "status": "draft",
+      "title": "x축과 포물선의 교점",
+      "reasoningStructure": "y=0으로 놓아 이차방정식을 풀고 실근을 교점 x좌표로 해석한다.",
+      "items": [
+        {
+          "id": "m312-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=x²−5x+6의 그래프와 x축은 몇 점에서 만나는가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x²−5x+6=(x−2)(x−3)이므로 서로 다른 근 2,3에서 만난다.",
+          "skillLabel": "m3-12-skill-1",
+          "misconceptionHypothesis": "인수 두 개를 보고 근이 하나라고 착각한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m312-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=x²−5x+6의 그래프와 x축 교점의 x좌표의 합은?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "x²−5x+6=0의 근은 2,3이므로 합은 5다.",
+          "skillLabel": "m3-12-skill-1",
+          "misconceptionHypothesis": "교점의 y좌표까지 더하려 한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m312-family-2",
+      "status": "draft",
+      "title": "수평선 교점 개수 판별",
+      "reasoningStructure": "f(x)=k를 이차식으로 정리해 D의 부호를 계산한다.",
+      "items": [
+        {
+          "id": "m312-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=x²와 y=9는 몇 점에서 만나는가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x²=9에서 x=−3,3이므로 서로 다른 교점 2개다.",
+          "skillLabel": "m3-12-skill-2",
+          "misconceptionHypothesis": "제곱근의 ±를 하나만 적는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m312-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=(x−1)²와 y=0은 몇 점에서 만나는가?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "(x−1)²=0은 중근 x=1 하나이므로 접점 1개다.",
+          "skillLabel": "m3-12-skill-2",
+          "misconceptionHypothesis": "중근을 서로 다른 두 교점으로 센다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m312-family-3",
+      "status": "draft",
+      "title": "접하는 수평선의 높이",
+      "reasoningStructure": "포물선 꼭짓점의 함수값을 구해 접하는 수평선 y=k의 k를 찾는다.",
+      "items": [
+        {
+          "id": "m312-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "y=x²−4x+1의 그래프에 접하는 수평선 y=k의 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "-3"
+          },
+          "rationale": "x²−4x+1=(x−2)²−3이므로 꼭짓점의 y값이 −3이다.",
+          "skillLabel": "m3-12-skill-2",
+          "misconceptionHypothesis": "꼭짓점 x좌표 2를 k로 답한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m312-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "y=x²+2x+5의 그래프에 접하는 수평선 y=k의 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "x²+2x+5=(x+1)²+4이므로 최솟값이 4이고 y=4에서 접한다.",
+          "skillLabel": "m3-12-skill-2",
+          "misconceptionHypothesis": "완전제곱식의 상수항 부호를 잘못 읽는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

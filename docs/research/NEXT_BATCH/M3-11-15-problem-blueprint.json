@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "units": [
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-11",
+      "unitTitle": "근과 계수의 관계",
+      "concepts": [
+        "두 근의 합과 곱",
+        "대칭식의 값"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m311-family-1",
+          "status": "draft",
+          "title": "계수에서 근의 합과 곱 읽기",
+          "reasoningStructure": "a,b,c를 표준형에서 읽고 α+β=−b/a, αβ=c/a를 각각 계산한다.",
+          "items": [
+            {
+              "id": "m311-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "fraction",
+              "prompt": "2x²−7x+3=0의 두 근 α,β의 합 α+β는?",
+              "answer": {
+                "type": "fraction",
+                "value": "7/2"
+              },
+              "rationale": "α+β=−b/a=−(−7)/2=7/2이다.",
+              "skillLabel": "m3-11-skill-1",
+              "misconceptionHypothesis": "최고차항 계수 a로 나누지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m311-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "3x²+6x−9=0의 두 근 α,β의 곱 αβ는?",
+              "answer": {
+                "type": "integer",
+                "value": "-3"
+              },
+              "rationale": "αβ=c/a=−9/3=−3이다.",
+              "skillLabel": "m3-11-skill-1",
+              "misconceptionHypothesis": "상수항만 읽고 a로 나누는 것을 잊는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m311-family-2",
+          "status": "draft",
+          "title": "합과 곱으로 대칭식 계산",
+          "reasoningStructure": "주어진 S=α+β,P=αβ를 대칭식 항등식에 대입한다.",
+          "items": [
+            {
+              "id": "m311-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "두 근의 합이 5, 곱이 6일 때 α²+β²는?",
+              "answer": {
+                "type": "integer",
+                "value": "13"
+              },
+              "rationale": "α²+β²=(α+β)²−2αβ=25−12=13이다.",
+              "skillLabel": "m3-11-skill-2",
+              "misconceptionHypothesis": "(α+β)²을 α²+β²와 같다고 본다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m311-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "두 근의 합이 7, 곱이 10일 때 (α−β)²은?",
+              "answer": {
+                "type": "integer",
+                "value": "9"
+              },
+              "rationale": "(α−β)²=(α+β)²−4αβ=49−40=9이다.",
+              "skillLabel": "m3-11-skill-2",
+              "misconceptionHypothesis": "차의 제곱에서 곱의 항을 −2P로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m311-family-3",
+          "status": "draft",
+          "title": "근 조건에서 계수 복원",
+          "reasoningStructure": "근의 합 또는 곱 조건을 Vieta 관계에 대입해 미정 계수를 푼다.",
+          "items": [
+            {
+              "id": "m311-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "3x²+bx+6=0의 두 근의 합이 4일 때 b는?",
+              "answer": {
+                "type": "integer",
+                "value": "-12"
+              },
+              "rationale": "−b/3=4이므로 b=−12이다.",
+              "skillLabel": "m3-11-skill-1",
+              "misconceptionHypothesis": "합 공식의 부호를 반대로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m311-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "2x²−10x+c=0의 두 근의 곱이 4일 때 c는?",
+              "answer": {
+                "type": "integer",
+                "value": "8"
+              },
+              "rationale": "c/2=4이므로 c=8이다.",
+              "skillLabel": "m3-11-skill-1",
+              "misconceptionHypothesis": "곱을 c라고 바로 둔다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 3,
+        "draftItems": 6,
+        "humanApprovedItems": 0,
+        "assessmentItems": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-12",
+      "unitTitle": "이차방정식과 이차함수",
+      "concepts": [
+        "교점과 실근",
+        "그래프와 판별식"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m312-family-1",
+          "status": "draft",
+          "title": "x축과 포물선의 교점",
+          "reasoningStructure": "y=0으로 놓아 이차방정식을 풀고 실근을 교점 x좌표로 해석한다.",
+          "items": [
+            {
+              "id": "m312-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "y=x²−5x+6의 그래프와 x축은 몇 점에서 만나는가?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "x²−5x+6=(x−2)(x−3)이므로 서로 다른 근 2,3에서 만난다.",
+              "skillLabel": "m3-12-skill-1",
+              "misconceptionHypothesis": "인수 두 개를 보고 근이 하나라고 착각한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m312-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "y=x²−5x+6의 그래프와 x축 교점의 x좌표의 합은?",
+              "answer": {
+                "type": "integer",
+                "value": "5"
+              },
+              "rationale": "x²−5x+6=0의 근은 2,3이므로 합은 5다.",
+              "skillLabel": "m3-12-skill-1",
+              "misconceptionHypothesis": "교점의 y좌표까지 더하려 한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m312-family-2",
+          "status": "draft",
+          "title": "수평선 교점 개수 판별",
+          "reasoningStructure": "f(x)=k를 이차식으로 정리해 D의 부호를 계산한다.",
+          "items": [
+            {
+              "id": "m312-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "y=x²와 y=9는 몇 점에서 만나는가?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "x²=9에서 x=−3,3이므로 서로 다른 교점 2개다.",
+              "skillLabel": "m3-12-skill-2",
+              "misconceptionHypothesis": "제곱근의 ±를 하나만 적는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m312-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "y=(x−1)²와 y=0은 몇 점에서 만나는가?",
+              "answer": {
+                "type": "integer",
+                "value": "1"
+              },
+              "rationale": "(x−1)²=0은 중근 x=1 하나이므로 접점 1개다.",
+              "skillLabel": "m3-12-skill-2",
+              "misconceptionHypothesis": "중근을 서로 다른 두 교점으로 센다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m312-family-3",
+          "status": "draft",
+          "title": "접하는 수평선의 높이",
+          "reasoningStructure": "포물선 꼭짓점의 함수값을 구해 접하는 수평선 y=k의 k를 찾는다.",
+          "items": [
+            {
+              "id": "m312-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "y=x²−4x+1의 그래프에 접하는 수평선 y=k의 k는?",
+              "answer": {
+                "type": "integer",
+                "value": "-3"
+              },
+              "rationale": "x²−4x+1=(x−2)²−3이므로 꼭짓점의 y값이 −3이다.",
+              "skillLabel": "m3-12-skill-2",
+              "misconceptionHypothesis": "꼭짓점 x좌표 2를 k로 답한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m312-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "y=x²+2x+5의 그래프에 접하는 수평선 y=k의 k는?",
+              "answer": {
+                "type": "integer",
+                "value": "4"
+              },
+              "rationale": "x²+2x+5=(x+1)²+4이므로 최솟값이 4이고 y=4에서 접한다.",
+              "skillLabel": "m3-12-skill-2",
+              "misconceptionHypothesis": "완전제곱식의 상수항 부호를 잘못 읽는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 3,
+        "draftItems": 6,
+        "humanApprovedItems": 0,
+        "assessmentItems": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-13",
+      "unitTitle": "이차함수의 구간 최적화",
+      "concepts": [
+        "꼭짓점의 위치",
+        "매개변수별 최대·최소"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m313-family-1",
+          "status": "draft",
+          "title": "구간 안 꼭짓점과 끝점 비교",
+          "reasoningStructure": "꼭짓점이 닫힌 구간 안인지 확인한 뒤 꼭짓점과 양 끝점의 함숫값을 비교한다.",
+          "items": [
+            {
+              "id": "m313-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "f(x)=(x−2)²+1을 [0,5]에서 최소화한 값은?",
+              "answer": {
+                "type": "integer",
+                "value": "1"
+              },
+              "rationale": "꼭짓점 x=2가 구간에 있고 위로 열리므로 최솟값은 f(2)=1이다.",
+              "skillLabel": "m3-13-skill-1",
+              "misconceptionHypothesis": "상수항 1을 놓치거나 끝점만 비교한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m313-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "f(x)=−(x+1)²+4를 [−3,1]에서 최대화한 값은?",
+              "answer": {
+                "type": "integer",
+                "value": "4"
+              },
+              "rationale": "꼭짓점 x=−1이 구간에 있고 아래로 열리므로 최댓값은 4이다.",
+              "skillLabel": "m3-13-skill-1",
+              "misconceptionHypothesis": "아래로 열린 포물선에서 꼭짓점을 최솟값으로 고른다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m313-family-2",
+          "status": "draft",
+          "title": "꼭짓점이 구간 밖일 때 끝점 비교",
+          "reasoningStructure": "꼭짓점이 구간 밖임을 확인하고 두 끝점의 함수값을 비교한다.",
+          "items": [
+            {
+              "id": "m313-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "f(x)=x²를 [2,4]에서 최소화한 값은?",
+              "answer": {
+                "type": "integer",
+                "value": "4"
+              },
+              "rationale": "꼭짓점 0은 구간 밖이다. f(2)=4, f(4)=16이므로 최솟값은 4다.",
+              "skillLabel": "m3-13-skill-2",
+              "misconceptionHypothesis": "구간에 없는 x=0을 후보로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m313-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "f(x)=−(x−4)²를 [0,2]에서 최대화한 값은?",
+              "answer": {
+                "type": "integer",
+                "value": "-4"
+              },
+              "rationale": "꼭짓점 4는 구간 밖이다. f(0)=−16, f(2)=−4이므로 최댓값은 −4다.",
+              "skillLabel": "m3-13-skill-2",
+              "misconceptionHypothesis": "음수 제곱의 부호를 양수로 계산한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m313-family-3",
+          "status": "draft",
+          "title": "상황을 이차식으로 바꾸어 최적화",
+          "reasoningStructure": "상황 조건에서 허용 구간과 넓이식을 세운 뒤 꼭짓점과 끝점을 비교한다.",
+          "items": [
+            {
+              "id": "m313-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "둘레가 12인 직사각형의 한 변을 x라 하면 다른 변은 6−x이다. 가능한 x에서 넓이 x(6−x)의 최댓값은?",
+              "answer": {
+                "type": "integer",
+                "value": "9"
+              },
+              "rationale": "넓이는 −(x−3)²+9이고 0≤x≤6에서 꼭짓점 x=3이 허용되므로 최댓값 9다.",
+              "skillLabel": "m3-13-skill-2",
+              "misconceptionHypothesis": "둘레 12를 한 변 길이로 착각한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m313-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "둘레가 16인 직사각형의 한 변을 x라 하면 다른 변은 8−x이다. 넓이의 최댓값은?",
+              "answer": {
+                "type": "integer",
+                "value": "16"
+              },
+              "rationale": "넓이 x(8−x)=−(x−4)²+16이며 x=4는 0≤x≤8에 있어 최댓값은 16이다.",
+              "skillLabel": "m3-13-skill-2",
+              "misconceptionHypothesis": "둘레 절반 8을 한 변으로 고정한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 3,
+        "draftItems": 6,
+        "humanApprovedItems": 0,
+        "assessmentItems": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-14",
+      "unitTitle": "삼차·사차방정식 기초",
+      "concepts": [
+        "인수분해에 의한 풀이",
+        "치환에 의한 차수 낮추기"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m314-family-1",
+          "status": "draft",
+          "title": "인수분해된 삼차방정식의 해 모으기",
+          "reasoningStructure": "곱이 0인 조건을 각 일차인수 방정식으로 나누어 해결한다.",
+          "items": [
+            {
+              "id": "m314-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "(x−2)(x+1)(x−3)=0의 가장 큰 실근은?",
+              "answer": {
+                "type": "integer",
+                "value": "3"
+              },
+              "rationale": "각 인수를 0으로 두면 x=2,−1,3이므로 가장 큰 근은 3이다.",
+              "skillLabel": "m3-14-skill-1",
+              "misconceptionHypothesis": "인수의 부호를 뒤집어 근을 반대로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m314-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "x(x−4)(x+2)=0의 서로 다른 실근은 몇 개인가?",
+              "answer": {
+                "type": "integer",
+                "value": "3"
+              },
+              "rationale": "각 인수에서 x=0,4,−2가 나오며 서로 달라 실근은 3개다.",
+              "skillLabel": "m3-14-skill-1",
+              "misconceptionHypothesis": "인수 하나만 풀고 나머지를 놓친다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m314-family-2",
+          "status": "draft",
+          "title": "x² 치환으로 사차방정식 풀기",
+          "reasoningStructure": "t=x²로 낮춘 이차방정식을 풀고 t≥0 조건으로 실근을 복원한다.",
+          "items": [
+            {
+              "id": "m314-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x⁴−5x²+4=0의 실근은 모두 몇 개인가?",
+              "answer": {
+                "type": "integer",
+                "value": "4"
+              },
+              "rationale": "t=x²이면 t=1,4다. 둘 다 양수여서 x=±1,±2의 네 실근이다.",
+              "skillLabel": "m3-14-skill-2",
+              "misconceptionHypothesis": "t의 두 값을 각각 한 개의 x값으로만 복원한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m314-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "x⁴−13x²+36=0의 모든 실근의 합은?",
+              "answer": {
+                "type": "integer",
+                "value": "0"
+              },
+              "rationale": "t=x²이면 (t−4)(t−9)=0이므로 x=±2,±3이다. 합은 0이다.",
+              "skillLabel": "m3-14-skill-2",
+              "misconceptionHypothesis": "± 한쪽 해만 쓰거나 t 음수 가능성을 따지지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m314-family-3",
+          "status": "draft",
+          "title": "묶어내기와 구조 분해",
+          "reasoningStructure": "공통인수나 식의 구조를 먼저 드러낸 뒤 각 인수의 근을 구한다.",
+          "items": [
+            {
+              "id": "m314-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x³−4x=0의 가장 큰 실근은?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "x(x²−4)=x(x−2)(x+2)이므로 실근은 0,2,−2이고 가장 큰 근은 2다.",
+              "skillLabel": "m3-14-skill-1",
+              "misconceptionHypothesis": "공통인수 x를 놓치거나 차의 제곱을 잘못 분해한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m314-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "x⁴−16=0의 서로 다른 실근은 몇 개인가?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "(x²−4)(x²+4)=0이다. 실수에서 x²=4는 ±2를 주고 x²=−4는 해가 없다.",
+              "skillLabel": "m3-14-skill-1",
+              "misconceptionHypothesis": "x²+4=0에도 실근이 있다고 생각한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 3,
+        "draftItems": 6,
+        "humanApprovedItems": 0,
+        "assessmentItems": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-15",
+      "unitTitle": "연립방정식의 확장",
+      "concepts": [
+        "일차·이차 연립",
+        "대칭형 연립"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m315-family-1",
+          "status": "draft",
+          "title": "일차·이차 연립을 대입해 풀기",
+          "reasoningStructure": "두 식을 같게 놓아 이차방정식으로 만들고 교점 순서쌍을 복원한다.",
+          "items": [
+            {
+              "id": "m315-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "y=x+1과 y=x²−1의 교점 x좌표 두 개의 합은?",
+              "answer": {
+                "type": "integer",
+                "value": "1"
+              },
+              "rationale": "x+1=x²−1에서 x²−x−2=0의 근은 2,−1이므로 합은 1이다.",
+              "skillLabel": "m3-15-skill-1",
+              "misconceptionHypothesis": "대입식의 이항 부호를 잘못 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m315-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "y=2x와 y=x²의 서로 다른 교점은 몇 개인가?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "x²=2x에서 x(x−2)=0이므로 x=0,2 두 교점이다.",
+              "skillLabel": "m3-15-skill-1",
+              "misconceptionHypothesis": "x=0 근을 빠뜨린다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m315-family-2",
+          "status": "draft",
+          "title": "합과 곱이 주어진 대칭형 연립",
+          "reasoningStructure": "x,y를 근으로 하는 이차방정식을 만들고 서로 다른 순서쌍을 확인한다.",
+          "items": [
+            {
+              "id": "m315-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x+y=5, xy=6을 만족하는 순서쌍 중 x가 더 큰 경우의 x는?",
+              "answer": {
+                "type": "integer",
+                "value": "3"
+              },
+              "rationale": "z²−5z+6=0은 (z−2)(z−3)=0이므로 수는 2,3이고 x가 큰 쌍은 (3,2)다.",
+              "skillLabel": "m3-15-skill-2",
+              "misconceptionHypothesis": "근의 순서를 고정해 x를 작은 값으로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m315-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x+y=6, xy=9를 만족하는 서로 다른 순서쌍은 몇 개인가?",
+              "answer": {
+                "type": "integer",
+                "value": "1"
+              },
+              "rationale": "z²−6z+9=(z−3)²이므로 x=y=3이고 순서쌍은 (3,3) 하나다.",
+              "skillLabel": "m3-15-skill-2",
+              "misconceptionHypothesis": "같은 두 값을 바꾼 것을 별개의 쌍으로 센다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m315-family-3",
+          "status": "draft",
+          "title": "합과 제곱합에서 곱 복원",
+          "reasoningStructure": "(x+y)²=x²+2xy+y²를 이용해 xy를 구하고 후보를 확인한다.",
+          "items": [
+            {
+              "id": "m315-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "x+y=7, x²+y²=25일 때 xy는?",
+              "answer": {
+                "type": "integer",
+                "value": "12"
+              },
+              "rationale": "49=25+2xy이므로 2xy=24, xy=12다.",
+              "skillLabel": "m3-15-skill-2",
+              "misconceptionHypothesis": "제곱합에 2xy를 더해야 함을 놓친다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m315-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "x+y=4, x²+y²=10일 때 xy는?",
+              "answer": {
+                "type": "integer",
+                "value": "3"
+              },
+              "rationale": "16=10+2xy이므로 2xy=6, xy=3이다.",
+              "skillLabel": "m3-15-skill-2",
+              "misconceptionHypothesis": "(x+y)²을 x²+y²로 둔다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "author independent arithmetic check against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 3,
+        "draftItems": 6,
+        "humanApprovedItems": 0,
+        "assessmentItems": 0
+      }
+    }
+  ],
+  "summary": {
+    "unitCount": 5,
+    "distinctFamilies": 15,
+    "practiceDraftItems": 30,
+    "assessmentItems": 0,
+    "humanApprovedItems": 0
+  }
+}

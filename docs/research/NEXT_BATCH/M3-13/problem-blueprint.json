@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-13",
+  "unitTitle": "이차함수의 구간 최적화",
+  "concepts": [
+    "꼭짓점의 위치",
+    "매개변수별 최대·최소"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m313-family-1",
+      "status": "draft",
+      "title": "구간 안 꼭짓점과 끝점 비교",
+      "reasoningStructure": "꼭짓점이 닫힌 구간 안인지 확인한 뒤 꼭짓점과 양 끝점의 함숫값을 비교한다.",
+      "items": [
+        {
+          "id": "m313-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "f(x)=(x−2)²+1을 [0,5]에서 최소화한 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "꼭짓점 x=2가 구간에 있고 위로 열리므로 최솟값은 f(2)=1이다.",
+          "skillLabel": "m3-13-skill-1",
+          "misconceptionHypothesis": "상수항 1을 놓치거나 끝점만 비교한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m313-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "f(x)=−(x+1)²+4를 [−3,1]에서 최대화한 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "꼭짓점 x=−1이 구간에 있고 아래로 열리므로 최댓값은 4이다.",
+          "skillLabel": "m3-13-skill-1",
+          "misconceptionHypothesis": "아래로 열린 포물선에서 꼭짓점을 최솟값으로 고른다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m313-family-2",
+      "status": "draft",
+      "title": "꼭짓점이 구간 밖일 때 끝점 비교",
+      "reasoningStructure": "꼭짓점이 구간 밖임을 확인하고 두 끝점의 함수값을 비교한다.",
+      "items": [
+        {
+          "id": "m313-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "f(x)=x²를 [2,4]에서 최소화한 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "꼭짓점 0은 구간 밖이다. f(2)=4, f(4)=16이므로 최솟값은 4다.",
+          "skillLabel": "m3-13-skill-2",
+          "misconceptionHypothesis": "구간에 없는 x=0을 후보로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m313-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "f(x)=−(x−4)²를 [0,2]에서 최대화한 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "-4"
+          },
+          "rationale": "꼭짓점 4는 구간 밖이다. f(0)=−16, f(2)=−4이므로 최댓값은 −4다.",
+          "skillLabel": "m3-13-skill-2",
+          "misconceptionHypothesis": "음수 제곱의 부호를 양수로 계산한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m313-family-3",
+      "status": "draft",
+      "title": "상황을 이차식으로 바꾸어 최적화",
+      "reasoningStructure": "상황 조건에서 허용 구간과 넓이식을 세운 뒤 꼭짓점과 끝점을 비교한다.",
+      "items": [
+        {
+          "id": "m313-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "둘레가 12인 직사각형의 한 변을 x라 하면 다른 변은 6−x이다. 가능한 x에서 넓이 x(6−x)의 최댓값은?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "넓이는 −(x−3)²+9이고 0≤x≤6에서 꼭짓점 x=3이 허용되므로 최댓값 9다.",
+          "skillLabel": "m3-13-skill-2",
+          "misconceptionHypothesis": "둘레 12를 한 변 길이로 착각한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m313-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "둘레가 16인 직사각형의 한 변을 x라 하면 다른 변은 8−x이다. 넓이의 최댓값은?",
+          "answer": {
+            "type": "integer",
+            "value": "16"
+          },
+          "rationale": "넓이 x(8−x)=−(x−4)²+16이며 x=4는 0≤x≤8에 있어 최댓값은 16이다.",
+          "skillLabel": "m3-13-skill-2",
+          "misconceptionHypothesis": "둘레 절반 8을 한 변으로 고정한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

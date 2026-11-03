@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-14",
+  "levelId": "LEVEL 3",
+  "title": "삼차·사차방정식 기초",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "인수분해에 의한 풀이",
+      "치환에 의한 차수 낮추기"
+    ],
+    "prerequisiteUnits": [
+      "M3-07",
+      "M3-10"
+    ],
+    "visualization": "인수별 해 모으기"
+  },
+  "objectives": [
+    "인수분해된 삼차·사차방정식에서 영곱 성질을 적용해 모든 실근을 찾는다.",
+    "묶어내기와 인수분해로 풀 수 있는 간단한 삼차방정식을 해결한다.",
+    "x⁴와 x²만 있는 식에서 t=x²로 치환하고 t≥0 조건을 사용해 실근을 빠짐없이 구한다.",
+    "이 단원은 인수분해 가능한 특정 유형을 다루며 임의의 삼차·사차방정식에 일반 근의 공식이 있다고 오해하지 않는다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-14-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-07 선수 기능 확인: 다항식의 인수분해와 묶어내기를 한다."
+    },
+    {
+      "id": "m3-14-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-10 선수 기능 확인: 이차방정식을 인수분해해 풀고 영곱 성질을 적용한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-14-skill-1",
+    "m3-14-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "방정식의 구조 살피기 → 공통인수/묶기 또는 치환 선택 → 인수별 방정식으로 분리 → 실수해 조건 적용 → 각 해를 원식에 대입 검산",
+    "principleDerivation": "곱이 0이면 곱의 인수 중 적어도 하나가 0이다. x⁴과 x² 구조는 t=x²로 낮추며, 실수 x에 대해서는 t≥0이므로 치환된 해를 모두 실수 x로 되돌릴 수 있는지 확인해야 한다.",
+    "accessibility": "수식은 말로 읽을 수 있는 문장과 함께 제시한다. 그래프에는 축 이름·범위와 텍스트 대체표를 제공하고, 슬라이더와 선택은 키보드로 조작할 수 있게 한다. 애니메이션은 필수 정보 전달에 사용하지 않으며 변경 결과를 aria-live 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-14-u1",
+      "title": "삼차방정식과 영곱 성질",
+      "targetSkills": [
+        "m3-14-skill-1"
+      ],
+      "explanation": "다항식의 곱이 0이면 적어도 한 인수가 0이다. 인수분해 뒤 각 인수의 방정식을 모두 풀어 원래 방정식의 해를 모은다.",
+      "activity": "인수 카드 (x−a),(x−b),(x−c)를 선택하면 각각의 해를 수직선에 표시한다.",
+      "check": "(x−1)(x+2)(x−3)=0의 실근은 1,−2,3이다."
+    },
+    {
+      "id": "m3-14-u2",
+      "title": "묶어내기로 삼차식 정리",
+      "targetSkills": [
+        "m3-14-skill-1"
+      ],
+      "explanation": "네 항을 두 쌍으로 나누어 공통인수를 묶고, 괄호가 같아지는지 확인한다. 묶은 두 항의 공통 괄호를 다시 인수로 꺼낸다.",
+      "activity": "x³−3x²−4x+12에서 앞 두 항·뒤 두 항을 묶어 같은 괄호를 찾는다.",
+      "check": "x²(x−3)−4(x−3)=(x−3)(x²−4)이다."
+    },
+    {
+      "id": "m3-14-u3",
+      "title": "이차인수까지 풀기",
+      "targetSkills": [
+        "m3-14-skill-1"
+      ],
+      "explanation": "삼차식이 일차인수와 이차인수의 곱이면 일차인수의 근과 이차방정식의 실근을 모두 구한다. 제곱 차 인수도 각각 풀어 실근을 모은다.",
+      "activity": "각 인수를 독립 방정식으로 풀어 해 목록을 만든 뒤 중복 여부를 확인한다.",
+      "check": "(x−3)(x−2)(x+2)=0의 실근은 3,2,−2다."
+    },
+    {
+      "id": "m3-14-u4",
+      "title": "짝수 거듭제곱 구조",
+      "targetSkills": [
+        "m3-14-skill-2"
+      ],
+      "explanation": "x⁴−5x²+4처럼 x⁴와 x²가 반복되면 t=x²로 둔다. t²−5t+4=0을 풀어 t의 후보를 얻는다.",
+      "activity": "x²와 x⁴ 타일을 t와 t² 타일로 바꿔 차수가 낮아지는 것을 표시한다.",
+      "check": "x⁴−5x²+4=0은 t²−5t+4=0으로 바뀐다."
+    },
+    {
+      "id": "m3-14-u5",
+      "title": "치환 해를 x로 되돌리기",
+      "targetSkills": [
+        "m3-14-skill-2"
+      ],
+      "explanation": "실수 x에서는 x²≥0이므로 t의 해 중 음수는 가능한 x가 없다. t>0이면 x=±√t, t=0이면 x=0이다.",
+      "activity": "t 후보마다 가능/불가능을 표시하고 가능한 경우에만 ±제곱근 카드를 만든다.",
+      "check": "t=1,4이면 x=±1,±2이며 t=−1이면 실수 x가 없다."
+    },
+    {
+      "id": "m3-14-u6",
+      "title": "유형 선택과 범위 확인",
+      "targetSkills": [
+        "m3-14-skill-2"
+      ],
+      "explanation": "인수분해, 묶어내기, x² 치환처럼 구조가 보이는 유형을 다룬다. 일반적인 모든 삼차·사차방정식에 적용되는 이 단원의 공식은 없으므로, 주어진 식이 학습한 구조에 맞는지 확인한다.",
+      "activity": "식 카드에서 인수분해형·짝수 거듭제곱형을 분류하고 필요한 전략을 고른다.",
+      "check": "근을 구한 뒤 각 근을 원래 식에 넣어 0이 되는지 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-14-lab",
+      "kind": "math-lab",
+      "interaction": "polynomial-root-factory",
+      "description": "인수분해와 치환으로 구한 근을 모으고 원식으로 확인",
+      "features": [
+        "묶어내기 또는 t=x² 치환 과정을 단계별로 선택",
+        "치환 t의 음수 후보를 실수 x가 될 수 없는 이유와 함께 표시",
+        "모든 조작은 키보드 가능; 해 목록과 검산 결과를 텍스트로 제공"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "묶어내기와 이차인수 분해로 삼차방정식 풀이",
+      "각 인수의 근을 빠짐없이 열거",
+      "t=x² 치환 후 t≥0을 확인해 사차방정식 풀이"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 풀이에 필요한 핵심 추론이 달라야 한다. 수치·부호만 바꾼 문항은 같은 원형이며, 전략 선택·조건 해석·표현 전환이 달라야 별도 원형으로 제안한다."
+  },
+  "assessmentCriteria": [
+    "구조에 맞는 인수분해 또는 치환 전략을 선택한다.",
+    "각 인수와 치환 결과의 가능한 해를 빠짐없이 찾는다.",
+    "실수 조건과 ± 경우를 확인하고 모든 해를 원식에 대입한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 해당 절차의 바로 앞 정의·그래프 해석·대수 변환으로 돌아가 다시 판단한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "곱이 0일 때 한 인수만 풀고 나머지를 놓친다.",
+    "t=x²의 근을 x의 근으로 그대로 쓴다.",
+    "t<0인 해도 실수 x의 제곱이라고 허용한다.",
+    "t>0에서 x=√t만 쓰고 −√t를 빼먹는다.",
+    "특정 인수분해 유형을 모든 고차방정식에 일반화한다."
+  ],
+  "workedExample": {
+    "prompt": "x⁴−5x²+4=0의 모든 실근을 구하시오.",
+    "steps": [
+      "식에 x⁴와 x²가 있으므로 t=x²로 둔다. 실수 x에서는 t≥0이다.",
+      "t²−5t+4=0을 인수분해하면 (t−1)(t−4)=0이다.",
+      "따라서 t=1 또는 t=4이며 둘 다 t≥0을 만족한다.",
+      "t=1이면 x²=1이므로 x=±1이다.",
+      "t=4이면 x²=4이므로 x=±2이다.",
+      "원식에 대입하면 1−5+4=0, 16−20+4=0이므로 네 값이 모두 해다."
+    ],
+    "answer": "실근은 x=−2,−1,1,2이다."
+  },
+  "designReview": {
+    "status": "pending-research-cross-review",
+    "reviewerRole": "Curriculum Architect author; independent review pending",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content 자료조사·문항 초안",
+      "Curriculum 독립 교차 검토",
+      "Developer 독립 수학 계산·구현 QA",
+      "사람 콘텐츠 검수와 공개 승인"
+    ]
+  }
+}

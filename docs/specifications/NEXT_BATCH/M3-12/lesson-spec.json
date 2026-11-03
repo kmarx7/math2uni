@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-12",
+  "levelId": "LEVEL 3",
+  "title": "이차방정식과 이차함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "교점과 실근",
+      "그래프와 판별식"
+    ],
+    "prerequisiteUnits": [
+      "M3-10",
+      "M2-13"
+    ],
+    "visualization": "포물선과 직선 교점"
+  },
+  "objectives": [
+    "y=ax²+bx+c의 그래프에서 y=0인 점의 x좌표가 ax²+bx+c=0의 실근임을 설명한다.",
+    "이차함수와 직선 y=k의 교점 문제를 이차방정식으로 바꾸어 푼다.",
+    "판별식의 부호, 그래프의 위치, 실근의 개수를 서로 연결해 해석한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-12-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-10 선수 기능 확인: 이차방정식의 판별식 D=b²−4ac로 실근 개수를 분류한다."
+    },
+    {
+      "id": "m3-12-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-13 선수 기능 확인: 이차함수의 그래프와 꼭짓점의 위치를 읽는다."
+    }
+  ],
+  "targetSkills": [
+    "m3-12-skill-1",
+    "m3-12-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "그래프의 두 양을 식으로 놓기 → 교점에서는 두 y값이 같음을 쓰기 → 이차방정식으로 정리 → 실근·D·교점 개수 연결 → 좌표와 조건 검산",
+    "principleDerivation": "f(x)=g(x)의 교점 x좌표는 f(x)−g(x)=0의 해다. 이차식이 되면 D>0은 두 교점, D=0은 접하는 한 교점, D<0은 실수 교점이 없음을 뜻한다.",
+    "accessibility": "수식은 말로 읽을 수 있는 문장과 함께 제시한다. 그래프에는 축 이름·범위와 텍스트 대체표를 제공하고, 슬라이더와 선택은 키보드로 조작할 수 있게 한다. 애니메이션은 필수 정보 전달에 사용하지 않으며 변경 결과를 aria-live 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-12-u1",
+      "title": "이차함수와 방정식",
+      "targetSkills": [
+        "m3-12-skill-1"
+      ],
+      "explanation": "f(x)=ax²+bx+c라 놓으면 f(x)=0을 만족하는 x가 방정식 ax²+bx+c=0의 실근이다. 그래프에서는 y=0인 x축 위에 놓인 점을 찾는다.",
+      "activity": "포물선에서 x축에 놓인 점을 선택하고 해당 좌표의 y값이 0인지 표로 확인한다.",
+      "check": "y=x²−4x+3의 x축 교점의 x좌표는 방정식의 근이다."
+    },
+    {
+      "id": "m3-12-u2",
+      "title": "교점의 x좌표",
+      "targetSkills": [
+        "m3-12-skill-1"
+      ],
+      "explanation": "두 그래프 y=f(x), y=g(x)의 교점에서는 같은 x에서 y값도 같으므로 f(x)=g(x)다. 두 식을 같게 놓고 정리하면 교점 x좌표를 찾는 방정식이 된다.",
+      "activity": "포물선 y=x²−1과 직선 y=x+1을 움직여 교점의 x좌표와 방정식 x²−x−2=0을 연결한다.",
+      "check": "두 그래프 교점의 x좌표는 두 함수값이 같은 x다."
+    },
+    {
+      "id": "m3-12-u3",
+      "title": "직선 y=k와 포물선",
+      "targetSkills": [
+        "m3-12-skill-1"
+      ],
+      "explanation": "y=f(x)와 수평선 y=k의 교점은 f(x)=k를 만족한다. 이를 f(x)−k=0으로 정리해 판별식 또는 인수분해를 적용한다.",
+      "activity": "k 슬라이더를 움직이며 수평선이 포물선과 만나거나 접하거나 만나지 않는 높이를 기록한다.",
+      "check": "y=x²와 y=4의 교점 x좌표는 x²=4에서 −2,2다."
+    },
+    {
+      "id": "m3-12-u4",
+      "title": "판별식과 교점 개수",
+      "targetSkills": [
+        "m3-12-skill-2"
+      ],
+      "explanation": "이차방정식이 f(x)=0 또는 f(x)=k 꼴일 때 D>0이면 서로 다른 두 실근, D=0이면 중근 하나, D<0이면 실근이 없다. 그래프의 교점 개수와 같은 분류다.",
+      "activity": "같은 식에 대해 D의 값과 그림의 교점 개수를 나란히 표시한다.",
+      "check": "x²−4x+3=0은 D=16−12=4>0이므로 x축과 두 점에서 만난다."
+    },
+    {
+      "id": "m3-12-u5",
+      "title": "그래프 해석과 식 풀이",
+      "targetSkills": [
+        "m3-12-skill-2"
+      ],
+      "explanation": "그래프는 해의 위치와 개수를 보여 주고, 인수분해나 근의 공식은 정확한 좌표를 구한다. 그림만으로 근의 정확한 값을 단정하지 않고 대수식으로 확인한다.",
+      "activity": "교점 근삿값을 먼저 읽은 뒤 인수분해 결과와 비교한다.",
+      "check": "x²−4x+3=(x−1)(x−3)이므로 x축 교점은 (1,0),(3,0)이다."
+    },
+    {
+      "id": "m3-12-u6",
+      "title": "교점 조건 종합",
+      "targetSkills": [
+        "m3-12-skill-2"
+      ],
+      "explanation": "포물선과 직선의 교점 조건을 이차방정식으로 바꾼 뒤 교점의 개수와 좌표를 구한다. 직선의 기울기·절편과 포물선의 계수를 원래 조건에 맞게 검산한다.",
+      "activity": "그래프 카드에서 교점이 몇 개인지 예측하고, 차가 되는 이차식의 D로 확인한다.",
+      "check": "해가 x=1,3이면 각각 원래 두 함수의 y값이 같은지 대입한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-12-lab",
+      "kind": "math-lab",
+      "interaction": "quadratic-intersection",
+      "description": "포물선과 y=k 또는 직선의 교점을 식·그래프로 연결",
+      "features": [
+        "포물선 계수와 직선 위치를 조절하고 교점 좌표·개수를 함께 표시",
+        "그래프는 접근 가능한 대체 설명과 표 형식의 교점 정보를 제공",
+        "마우스 없이 키보드로 조절; 교점 조건의 이차방정식과 D를 단계 텍스트로 제시"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "이차함수의 x축 교점을 실근으로 해석",
+      "포물선과 y=k의 교점 개수를 판별식으로 추론",
+      "두 그래프의 교점 방정식을 만들고 좌표를 계산"
+    ],
+    "assessment": "별도 평가 문항은 추가하지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 풀이에 필요한 핵심 추론이 달라야 한다. 수치·부호만 바꾼 문항은 같은 원형이며, 전략 선택·조건 해석·표현 전환이 달라야 별도 원형으로 제안한다."
+  },
+  "assessmentCriteria": [
+    "f(x)=0 또는 f(x)=g(x) 교점 조건을 올바른 방정식으로 만든다.",
+    "실근·판별식·그래프 교점 개수의 대응을 설명한다.",
+    "필요하면 교점 좌표를 계산하고 원래 두 식으로 확인한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 생기면 해당 절차의 바로 앞 정의·그래프 해석·대수 변환으로 돌아가 다시 판단한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "방정식의 해를 (x,y) 좌표 전체로 혼동한다.",
+    "f(x)=g(x) 대신 f(x)=0만 사용해 일반 직선 교점을 놓친다.",
+    "D=0일 때 교점이 두 개라고 센다.",
+    "그래프의 대략적 그림을 정확한 근 값이라고 단정한다."
+  ],
+  "workedExample": {
+    "prompt": "y=x²−4x+3과 x축의 교점 개수와 좌표를 구하고, 판별식으로 확인하시오.",
+    "steps": [
+      "x축은 y=0이므로 x²−4x+3=0을 푼다.",
+      "식은 (x−1)(x−3)=0으로 인수분해된다.",
+      "따라서 x=1 또는 x=3이고 교점은 (1,0),(3,0)이다.",
+      "표준형 계수는 a=1,b=−4,c=3이다.",
+      "D=b²−4ac=(−4)²−4·1·3=16−12=4>0이므로 서로 다른 실근 두 개와 일치한다."
+    ],
+    "answer": "교점은 (1,0),(3,0) 두 개이며 D=4>0"
+  },
+  "designReview": {
+    "status": "pending-research-cross-review",
+    "reviewerRole": "Curriculum Architect author; independent review pending",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content 자료조사·문항 초안",
+      "Curriculum 독립 교차 검토",
+      "Developer 독립 수학 계산·구현 QA",
+      "사람 콘텐츠 검수와 공개 승인"
+    ]
+  }
+}

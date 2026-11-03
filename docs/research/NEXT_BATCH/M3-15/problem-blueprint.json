@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-15",
+  "unitTitle": "연립방정식의 확장",
+  "concepts": [
+    "일차·이차 연립",
+    "대칭형 연립"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m315-family-1",
+      "status": "draft",
+      "title": "일차·이차 연립을 대입해 풀기",
+      "reasoningStructure": "두 식을 같게 놓아 이차방정식으로 만들고 교점 순서쌍을 복원한다.",
+      "items": [
+        {
+          "id": "m315-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "y=x+1과 y=x²−1의 교점 x좌표 두 개의 합은?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "x+1=x²−1에서 x²−x−2=0의 근은 2,−1이므로 합은 1이다.",
+          "skillLabel": "m3-15-skill-1",
+          "misconceptionHypothesis": "대입식의 이항 부호를 잘못 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m315-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "y=2x와 y=x²의 서로 다른 교점은 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "x²=2x에서 x(x−2)=0이므로 x=0,2 두 교점이다.",
+          "skillLabel": "m3-15-skill-1",
+          "misconceptionHypothesis": "x=0 근을 빠뜨린다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m315-family-2",
+      "status": "draft",
+      "title": "합과 곱이 주어진 대칭형 연립",
+      "reasoningStructure": "x,y를 근으로 하는 이차방정식을 만들고 서로 다른 순서쌍을 확인한다.",
+      "items": [
+        {
+          "id": "m315-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x+y=5, xy=6을 만족하는 순서쌍 중 x가 더 큰 경우의 x는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "z²−5z+6=0은 (z−2)(z−3)=0이므로 수는 2,3이고 x가 큰 쌍은 (3,2)다.",
+          "skillLabel": "m3-15-skill-2",
+          "misconceptionHypothesis": "근의 순서를 고정해 x를 작은 값으로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m315-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x+y=6, xy=9를 만족하는 서로 다른 순서쌍은 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "z²−6z+9=(z−3)²이므로 x=y=3이고 순서쌍은 (3,3) 하나다.",
+          "skillLabel": "m3-15-skill-2",
+          "misconceptionHypothesis": "같은 두 값을 바꾼 것을 별개의 쌍으로 센다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m315-family-3",
+      "status": "draft",
+      "title": "합과 제곱합에서 곱 복원",
+      "reasoningStructure": "(x+y)²=x²+2xy+y²를 이용해 xy를 구하고 후보를 확인한다.",
+      "items": [
+        {
+          "id": "m315-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "x+y=7, x²+y²=25일 때 xy는?",
+          "answer": {
+            "type": "integer",
+            "value": "12"
+          },
+          "rationale": "49=25+2xy이므로 2xy=24, xy=12다.",
+          "skillLabel": "m3-15-skill-2",
+          "misconceptionHypothesis": "제곱합에 2xy를 더해야 함을 놓친다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m315-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "x+y=4, x²+y²=10일 때 xy는?",
+          "answer": {
+            "type": "integer",
+            "value": "3"
+          },
+          "rationale": "16=10+2xy이므로 2xy=6, xy=3이다.",
+          "skillLabel": "m3-15-skill-2",
+          "misconceptionHypothesis": "(x+y)²을 x²+y²로 둔다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

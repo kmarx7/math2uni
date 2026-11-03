@@ -10,6 +10,7 @@ import latestM2Blueprint from "../../docs/research/NEXT_BATCH/M2-11-15-problem-b
 import latestM216Blueprint from "../../docs/research/NEXT_BATCH/M2-16-20-problem-blueprint.json";
 import m3Blueprint from "../../docs/research/NEXT_BATCH/M3-01-05-problem-blueprint.json";
 import { m3NextProblemFamilies, m3NextProblems } from "@/data/proposal-m3-06-10-problems";
+import { m3LatestProblemFamilies, m3LatestProblems } from "@/data/proposal-m3-11-15-problems";
 import firstAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-assessment-blueprint.json";
 import nextAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-assessment-blueprint.json";
 import { curriculumProposal } from "@/data/curriculum-proposal";
@@ -177,6 +178,6 @@ const assessmentProblems: ProblemInstance[] = assessmentBlueprint.flatMap((unit)
   });
 });
 
-export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies];
-export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems];
+export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies, ...m3LatestProblemFamilies];
+export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems, ...m3LatestProblems];
 export const proposalAssessmentProblems: ProblemInstance[] = assessmentProblems;

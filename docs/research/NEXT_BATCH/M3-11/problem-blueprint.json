@@ -1,0 +1,222 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-11",
+  "unitTitle": "근과 계수의 관계",
+  "concepts": [
+    "두 근의 합과 곱",
+    "대칭식의 값"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m311-family-1",
+      "status": "draft",
+      "title": "계수에서 근의 합과 곱 읽기",
+      "reasoningStructure": "a,b,c를 표준형에서 읽고 α+β=−b/a, αβ=c/a를 각각 계산한다.",
+      "items": [
+        {
+          "id": "m311-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "fraction",
+          "prompt": "2x²−7x+3=0의 두 근 α,β의 합 α+β는?",
+          "answer": {
+            "type": "fraction",
+            "value": "7/2"
+          },
+          "rationale": "α+β=−b/a=−(−7)/2=7/2이다.",
+          "skillLabel": "m3-11-skill-1",
+          "misconceptionHypothesis": "최고차항 계수 a로 나누지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m311-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "3x²+6x−9=0의 두 근 α,β의 곱 αβ는?",
+          "answer": {
+            "type": "integer",
+            "value": "-3"
+          },
+          "rationale": "αβ=c/a=−9/3=−3이다.",
+          "skillLabel": "m3-11-skill-1",
+          "misconceptionHypothesis": "상수항만 읽고 a로 나누는 것을 잊는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m311-family-2",
+      "status": "draft",
+      "title": "합과 곱으로 대칭식 계산",
+      "reasoningStructure": "주어진 S=α+β,P=αβ를 대칭식 항등식에 대입한다.",
+      "items": [
+        {
+          "id": "m311-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "두 근의 합이 5, 곱이 6일 때 α²+β²는?",
+          "answer": {
+            "type": "integer",
+            "value": "13"
+          },
+          "rationale": "α²+β²=(α+β)²−2αβ=25−12=13이다.",
+          "skillLabel": "m3-11-skill-2",
+          "misconceptionHypothesis": "(α+β)²을 α²+β²와 같다고 본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m311-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "두 근의 합이 7, 곱이 10일 때 (α−β)²은?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "(α−β)²=(α+β)²−4αβ=49−40=9이다.",
+          "skillLabel": "m3-11-skill-2",
+          "misconceptionHypothesis": "차의 제곱에서 곱의 항을 −2P로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m311-family-3",
+      "status": "draft",
+      "title": "근 조건에서 계수 복원",
+      "reasoningStructure": "근의 합 또는 곱 조건을 Vieta 관계에 대입해 미정 계수를 푼다.",
+      "items": [
+        {
+          "id": "m311-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "3x²+bx+6=0의 두 근의 합이 4일 때 b는?",
+          "answer": {
+            "type": "integer",
+            "value": "-12"
+          },
+          "rationale": "−b/3=4이므로 b=−12이다.",
+          "skillLabel": "m3-11-skill-1",
+          "misconceptionHypothesis": "합 공식의 부호를 반대로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m311-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "2x²−10x+c=0의 두 근의 곱이 4일 때 c는?",
+          "answer": {
+            "type": "integer",
+            "value": "8"
+          },
+          "rationale": "c/2=4이므로 c=8이다.",
+          "skillLabel": "m3-11-skill-1",
+          "misconceptionHypothesis": "곱을 c라고 바로 둔다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author independent arithmetic check against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  }
+}

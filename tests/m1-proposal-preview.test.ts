@@ -37,11 +37,11 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 300 practice and 30 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(300);
+  it("validates 330 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(330);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(330);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(300);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(360);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(330);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
       expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);

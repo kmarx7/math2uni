@@ -1,0 +1,212 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-15",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "일차식과 이차식의 연립에서 대입해 모든 교점 순서쌍을 구하고, 합·곱이 주어진 대칭형 연립은 이차방정식으로 바꾸어 순서를 확인해요."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "한 일차식에서 y를 x로 나타내고 이차방정식의 실근을 구해요. 순서쌍 (x,y)의 순서를 구분해요. 진단 결과는 숙달도에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-15-u1",
+          "title": "연립의 해는 공통 조건",
+          "body": "연립방정식의 해는 모든 방정식을 동시에 만족하는 순서쌍 (x,y)예요. 그래프에서는 두 곡선의 교점이에요.",
+          "activity": "직선 위 점과 포물선 위 점을 표시한 후 두 식에 공통인 점을 선택해요.",
+          "check": "한 식만 만족하는 점도 연립의 해인가요?"
+        },
+        {
+          "id": "m3-15-u2",
+          "title": "일차·이차식에서 대입",
+          "body": "일차식에서 y를 x로 나타내 이차식에 대입해요. 그러면 교점 x좌표를 찾는 이차방정식이 돼요.",
+          "activity": "y=x+1을 y=x²−1에 대입하고 같은 x 조건을 만든 뒤 교점을 표시해요.",
+          "check": "대입한 뒤 두 원래 식 중 어느 것을 써 y를 구하나요?"
+        },
+        {
+          "id": "m3-15-u3",
+          "title": "모든 교점 x를 찾기",
+          "body": "대입해 얻은 이차방정식의 모든 실근을 구해요. 판별식으로 교점 개수를 먼저 판단할 수 있지만 좌표를 요구하면 각 근을 계산해요.",
+          "activity": "수평선·직선 위치를 조절해 교점이 0·1·2개인 경우와 이차식의 판별식을 나란히 보여요.",
+          "check": "한 근을 찾은 뒤 다른 근도 확인했나요?"
+        },
+        {
+          "id": "m3-15-u4",
+          "title": "순서쌍으로 복원하고 검산",
+          "body": "각 x근을 일차식에 넣어 y를 구하고 (x,y)로 써요. 각 순서쌍을 원래 두 식에 모두 대입해요.",
+          "activity": "x와 y를 별도 열에 적고 두 식의 좌우 값을 확인해요.",
+          "check": "(x,y)와 (y,x)를 임의로 바꿔도 되나요?"
+        },
+        {
+          "id": "m3-15-u5",
+          "title": "합과 곱 조건을 이차식으로",
+          "body": "x+y=S, xy=P이면 x,y는 z²−Sz+P=0의 두 근이에요. 먼저 합·곱으로 이차식을 만들고 두 수를 찾아요.",
+          "activity": "S,P를 조절해 z²−Sz+P=0의 근 카드로 x,y 후보를 읽어요.",
+          "check": "합은 z항의 계수에 어떤 부호로 나타나나요?"
+        },
+        {
+          "id": "m3-15-u6",
+          "title": "대칭형 순서와 특수 경우",
+          "body": "대칭 조건에서는 x,y를 바꾼 순서쌍도 조건을 만족해요. 두 값이 같으면 한 쌍만 생길 수 있고, 다른 값이면 두 순서를 모두 검산해요.",
+          "activity": "(x,y),(y,x) 카드를 만들고 두 값이 같을 때 중복 카드를 합쳐요.",
+          "check": "두 근이 같으면 순서쌍은 몇 개인가요?"
+        }
+      ],
+      "body": "정의 확인 → 시각적 탐구 → 원리 연결 → 계산 → 조건 확인 → 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "직선과 포물선의 공통점과 대칭 조건을 풀어요",
+      "interaction": "system-intersections",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3,
+        "initialC": 1,
+        "accessibleTextOutput": true,
+        "keyboardOperable": true,
+        "reducedMotion": true
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "연립방정식 y=x+1, y=x²−1의 모든 실수 해를 순서쌍으로 구하시오.",
+        "교점에서 y값이 같으므로 x+1=x²−1이다.",
+        "정리하면 x²−x−2=0이다.",
+        "(x−2)(x+1)=0이므로 x=2 또는 x=−1이다.",
+        "y=x+1에 대입하면 각각 y=3, y=0이다.",
+        "후보 순서쌍은 (2,3), (−1,0)이다.",
+        "검산하면 3=2+1=2²−1이고 0=−1+1=(−1)²−1이다.",
+        "정답: (2,3), (−1,0)"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "먼저 조건과 정의를 확인하고, 계산 단계를 적은 뒤 원래 식에 대입해 검산해요. 이 콘텐츠는 연구용 초안입니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답은 정답을 외우기보다 해당 소단원의 정의·조건·전략을 다시 확인한 뒤 다른 문항으로 재시도하도록 안내합니다. 연구용 초안이며 공개 승인 상태가 아닙니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습 간격은 제안이며 효과가 검증되지 않았습니다. 다음 단원 연결은 선수 개념을 확인한 뒤 제안합니다."
+    }
+  ]
+}
