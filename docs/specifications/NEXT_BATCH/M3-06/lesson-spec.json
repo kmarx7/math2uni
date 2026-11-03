@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-06",
+  "levelId": "LEVEL 3",
+  "title": "인수정리",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "인수와 근의 관계",
+      "다항식의 인수 판정"
+    ],
+    "prerequisiteUnits": [
+      "M3-05",
+      "M2-10"
+    ],
+    "visualization": "영점과 인수 대응"
+  },
+  "objectives": [
+    "P(x)를 x−a로 나눈 나머지가 P(a)임을 이용해 P(a)=0과 x−a가 인수라는 조건의 동치를 설명한다.",
+    "x−a와 x+a의 대응 대입값을 구분하고, 다항식의 인수 여부를 대입으로 판정한다.",
+    "주어진 인수 조건에서 미정계수를 구하고 대입 및 나눗셈 관계로 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-06-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "문자에 주어진 수를 대입할 때 괄호와 거듭제곱을 포함해 식의 값을 계산한다."
+    },
+    {
+      "id": "m3-06-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "다항식 P(x)에 수 a를 대입해 P(a)를 부호와 항별 계산을 바르게 하여 구한다."
+    },
+    {
+      "id": "m3-06-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "방정식 P(x)=0의 해는 대입했을 때 식의 값이 0이 되는 수임을 안다."
+    }
+  ],
+  "targetSkills": [
+    "m3-06-skill-1",
+    "m3-06-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "선수 확인 → 조건·표현 파악 → 구체적 예시 → 원리 유도 → 단계별 풀이 → 다른 구조 적용 → 검산·복습",
+    "principleDerivation": "P(x)=(x−a)Q(x)+r에 x=a를 대입해 P(a)=r임을 확인하고, r=0일 때 인수 조건을 얻는다.",
+    "accessibility": "기호와 식을 읽는 말로 함께 제시하고, 표에는 대체 텍스트와 수치 결과를 제공한다. 모든 조작은 키보드로 가능하고 변경 결과를 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-06-u1",
+      "title": "근·인수·영점의 말",
+      "targetSkills": [
+        "m3-06-skill-1"
+      ],
+      "explanation": "방정식 P(x)=0의 해 a는 P(a)=0을 만족한다. 이때 나머지정리에 따라 x−a로 나눈 나머지는 0이므로 x−a는 P(x)의 인수다. “a가 근”과 “x−a가 인수”는 같은 조건을 서로 다른 표현으로 말한 것이다.",
+      "activity": "P(x)=x²−1에서 x=1, x=−1을 대입해 0이 되는 값을 표시하고 각 값에 대응하는 인수 카드를 연결한다.",
+      "check": "a=−1이면 대응 인수는 x+1임을 설명한다."
+    },
+    {
+      "id": "m3-06-u2",
+      "title": "인수정리 유도",
+      "targetSkills": [
+        "m3-06-skill-1"
+      ],
+      "explanation": "P(x)=(x−a)Q(x)+r에서 x=a를 넣으면 P(a)=r이다. 따라서 P(a)=0일 필요충분조건은 나머지가 0인 것이고, 이는 x−a가 인수라는 뜻이다.",
+      "activity": "곱셈식 (x−a)Q(x)+r에서 a를 움직이고, a일 때 첫 항이 0이 되는 것을 식으로 확인한다.",
+      "check": "P(a)=0이면 나머지가 0이라고 나눗셈 관계를 써서 설명한다."
+    },
+    {
+      "id": "m3-06-u3",
+      "title": "x−a와 x+a의 부호",
+      "targetSkills": [
+        "m3-06-skill-1"
+      ],
+      "explanation": "x−a의 대응값은 a다. x+a=x−(−a)이므로 x+a의 대응값은 −a다. 식의 부호를 괄호로 바꿔 읽으면 대입값을 외우지 않아도 된다.",
+      "activity": "나누는 일차식과 대입값을 두 열로 짝짓고, 부호를 뒤집을 때 연결선을 바꾼다.",
+      "check": "x+3의 인수 판정에 P(−3)을 사용한다."
+    },
+    {
+      "id": "m3-06-u4",
+      "title": "다항식의 인수 판정",
+      "targetSkills": [
+        "m3-06-skill-2"
+      ],
+      "explanation": "후보가 x−a 꼴이면 P(a)를 계산한다. 값이 0일 때만 인수라고 결론 내린다. 한 후보에서 값이 0이 아니면 그 후보는 인수가 아니다.",
+      "activity": "후보 x−1, x+2를 선택하면 계산값 P(1), P(−2)만 보이도록 하는 표를 채운다.",
+      "check": "P(1)=4이면 x−1이 인수가 아니라고 말한다."
+    },
+    {
+      "id": "m3-06-u5",
+      "title": "인수 조건으로 계수 찾기",
+      "targetSkills": [
+        "m3-06-skill-2"
+      ],
+      "explanation": "P(x)에 미지수 k가 있을 때 x−a가 인수라는 조건은 P(a)=0이라는 방정식이다. 구한 k를 원래 P(a)에 다시 넣어 0인지 확인한다.",
+      "activity": "P(x)=x²+kx−6에서 x−2 카드가 인수라는 조건을 P(2)=0으로 번역한다.",
+      "check": "4+2k−6=0에서 k=1을 얻고 대입 검산한다."
+    },
+    {
+      "id": "m3-06-u6",
+      "title": "인수 확인과 범위",
+      "targetSkills": [
+        "m3-06-skill-2"
+      ],
+      "explanation": "인수정리는 특정 일차식의 인수 여부를 알려 준다. 인수 하나를 찾았다고 나머지 인수까지 자동으로 결정되는 것은 아니다. 필요하면 다항식 나눗셈이나 전개로 전체 인수분해를 확인한다.",
+      "activity": "인수 후보를 정한 뒤 곱셈으로 원래 다항식이 복원되는지 확인하는 체크 칸을 둔다.",
+      "check": "P(x)=(x−2)(x²+1)인지 전개해 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-06-lab",
+      "kind": "math-lab",
+      "description": "영점과 인수 대응",
+      "features": [
+        "근값·인수 대응표",
+        "다항식 값 항별 계산",
+        "후보 인수 판정과 곱셈 검산"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 9,
+    "familyCriteria": [
+      "P(a) 직접 계산으로 후보 인수 판정",
+      "x+a 부호 변환을 포함한 인수 판정",
+      "인수 조건으로 계수 방정식 구성"
+    ],
+    "assessment": "별도 평가 문항은 만들지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 필요한 핵심 추론이 달라야 한다. 같은 절차에서 수치·부호만 바꾼 문항은 하나의 원형으로 묶고, 새 원형은 전략 선택이나 조건 번역의 차이를 근거로 제안한다."
+  },
+  "assessmentCriteria": [
+    "P(x)를 x−a로 나눈 나머지가 P(a)임을 이용해 P(a)=0과 x−a가 인수라는 조건의 동치를 설명한다.",
+    "x−a와 x+a의 대응 대입값을 구분하고, 다항식의 인수 여부를 대입으로 판정한다.",
+    "주어진 인수 조건에서 미정계수를 구하고 대입 및 나눗셈 관계로 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형과 선수 기능에 따라 해당 예제보다 앞선 정의·표현 단계로 되돌린다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "P(a)=0이면 x+a가 인수라고 부호를 잘못 대응한다.",
+    "P(a)≠0인데도 x−a를 인수라고 한다.",
+    "근 a와 인수 x−a의 부호를 혼동한다."
+  ],
+  "workedExample": {
+    "prompt": "P(x)=x³−2x²−x+2일 때 x−2가 인수인지 판정하고, 인수임을 알면 P(x)를 완전히 인수분해하시오.",
+    "steps": [
+      "인수정리에 따라 P(2)를 계산한다.",
+      "P(2)=8−8−2+2=0이므로 x−2는 인수다.",
+      "나누거나 묶어 P(x)=(x−2)(x²−1)로 쓴다.",
+      "차의 제곱을 적용하면 P(x)=(x−2)(x−1)(x+1)이다.",
+      "전개 검산: (x−2)(x²−1)=x³−2x²−x+2."
+    ],
+    "answer": "x−2는 인수이고 P(x)=(x−2)(x−1)(x+1)"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "moe-2022-curriculum-announcement",
+    "title": "2022 개정 초·중등학교 및 특수교육 교육과정 확정·발표",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=93459&lev=0&searchType=null",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "page-verified; not used to assert unit-specific standard mapping",
+    "rights": "교육부 페이지에 공공누리 출처표시 조건 명시. 원문 성취기준을 복제·재배포하지 않음.",
+    "use": "교육과정 고시 맥락만 확인. 특정 제안 단원의 공식 매핑 근거 아님."
+  },
+  {
+    "id": "pedagogy-misconception-evidence-status",
+    "title": "교수법·오개념에 관한 주장 상태",
+    "publisher": "Research & Content Agent 조사 기록",
+    "url": null,
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "not-verified; no independent empirical or pedagogy source identified for unit-specific misconceptions or effectiveness",
+    "rights": "외부 자료 인용 없음.",
+    "use": "해당 단원 설명·활동·오개념은 author hypotheses only이며 검증된 연구 근거로 해석하면 안 됨."
+  }
+]

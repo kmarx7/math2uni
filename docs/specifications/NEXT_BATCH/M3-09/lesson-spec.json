@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-09",
+  "levelId": "LEVEL 3",
+  "title": "복소수의 계산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "켤레복소수",
+      "복소수의 사칙연산"
+    ],
+    "prerequisiteUnits": [
+      "M3-08",
+      "M1-03"
+    ],
+    "visualization": "켤레쌍 계산표"
+  },
+  "objectives": [
+    "복소수의 켤레를 정의하고 z·z̄=a²+b²임을 i²=−1로 유도한다.",
+    "복소수의 덧셈·뺄셈·곱셈을 실수부와 허수부별로 계산한다.",
+    "분모가 0이 아닌 복소수의 나눗셈에서 켤레를 곱해 a+bi 꼴로 정리하고 결과를 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-09-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "a+bi에서 두 성분을 구분한다."
+    },
+    {
+      "id": "m3-09-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "부호 있는 정수의 덧셈·곱셈 및 분수 약분을 한다."
+    },
+    {
+      "id": "m3-09-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "분배법칙과 i²=−1을 적용한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-09-skill-1",
+    "m3-09-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "선수 확인 → 조건·표현 파악 → 구체적 예시 → 원리 유도 → 단계별 풀이 → 다른 구조 적용 → 검산·복습",
+    "principleDerivation": "분배법칙과 i²=−1로 실수부·허수부를 계산한다. 나눗셈은 0이 아닌 분모의 켤레를 사용해 실수 분모로 바꾼다.",
+    "accessibility": "기호와 식을 읽는 말로 함께 제시하고, 표에는 대체 텍스트와 수치 결과를 제공한다. 모든 조작은 키보드로 가능하고 변경 결과를 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-09-u1",
+      "title": "켤레복소수",
+      "targetSkills": [
+        "m3-09-skill-1"
+      ],
+      "explanation": "z=a+bi의 켤레복소수는 z̄=a−bi다. 허수부의 부호만 바꾸고 실수부는 그대로 둔다.",
+      "activity": "성분 카드의 허수부 부호만 뒤집어 켤레 카드를 만든다.",
+      "check": "z=−3+2i이면 z̄=−3−2i다."
+    },
+    {
+      "id": "m3-09-u2",
+      "title": "켤레의 곱",
+      "targetSkills": [
+        "m3-09-skill-1"
+      ],
+      "explanation": "(a+bi)(a−bi)=a²−(bi)²=a²−b²i²=a²+b²이다. 따라서 결과는 실수이며 a,b가 동시에 0이 아닐 때 양수다.",
+      "activity": "곱셈표에서 교차항 +abi와 −abi가 상쇄되는 과정을 표시한다.",
+      "check": "(2+3i)(2−3i)=4+9=13이다."
+    },
+    {
+      "id": "m3-09-u3",
+      "title": "덧셈과 뺄셈",
+      "targetSkills": [
+        "m3-09-skill-1"
+      ],
+      "explanation": "실수부끼리, 허수부끼리 계산한다. (a+bi)±(c+di)=(a±c)+(b±d)i다. 뺄셈은 두 성분 모두에서 뒤 복소수의 부호를 바꾼다.",
+      "activity": "성분별 두 줄 계산표에서 괄호를 풀고 각 줄을 계산한다.",
+      "check": "(4−i)−(1+3i)=3−4i다."
+    },
+    {
+      "id": "m3-09-u4",
+      "title": "곱셈",
+      "targetSkills": [
+        "m3-09-skill-2"
+      ],
+      "explanation": "분배법칙으로 네 곱을 만든 다음 i²=−1을 적용한다. (a+bi)(c+di)=(ac−bd)+(ad+bc)i다.",
+      "activity": "FOIL 네 칸 표에 각 곱과 i² 치환을 기록한다.",
+      "check": "(1+2i)(3−i)=3−i+6i−2i²=5+5i다."
+    },
+    {
+      "id": "m3-09-u5",
+      "title": "나눗셈과 분모 조건",
+      "targetSkills": [
+        "m3-09-skill-2"
+      ],
+      "explanation": "나누는 복소수 c+di가 0이 아니어야 한다. 이를 위해 분자와 분모에 켤레 c−di를 곱하면 분모는 c²+d²가 된다. c,d가 실수이고 둘 다 0이 아니므로 c²+d²>0이다. 분모가 0인 나눗셈은 정의되지 않는다.",
+      "activity": "분모 성분을 입력해 (c,d)=(0,0)일 때 계산을 중단하고, 그 외 켤레 곱셈을 단계별 표시한다.",
+      "check": "(3+2i)/(1−i)=(3+2i)(1+i)/2다."
+    },
+    {
+      "id": "m3-09-u6",
+      "title": "결과를 표준형으로 검산",
+      "targetSkills": [
+        "m3-09-skill-2"
+      ],
+      "explanation": "나눗셈 결과는 실수부+허수부 i 꼴로 정리한다. 앞 단계의 분모 제곱합, i² 치환, 분자 전개를 각각 확인하고 원래 분모가 0이 아니었는지 재확인한다.",
+      "activity": "분자 전개·실수분모·약분의 세 체크를 순서대로 완료한다.",
+      "check": "(3+2i)/(1−i)=(1+5i)/2=(1/2)+(5/2)i다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-09-lab",
+      "kind": "math-lab",
+      "description": "켤레쌍 계산표",
+      "features": [
+        "켤레 성분 토글",
+        "복소수 연산 단계표",
+        "분모 0 차단 및 나눗셈 검산"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 9,
+    "familyCriteria": [
+      "성분별 합·차",
+      "분배와 i²를 이용한 곱",
+      "켤레를 이용한 비영 분모 나눗셈"
+    ],
+    "assessment": "별도 평가 문항은 만들지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 필요한 핵심 추론이 달라야 한다. 같은 절차에서 수치·부호만 바꾼 문항은 하나의 원형으로 묶고, 새 원형은 전략 선택이나 조건 번역의 차이를 근거로 제안한다."
+  },
+  "assessmentCriteria": [
+    "복소수의 켤레를 정의하고 z·z̄=a²+b²임을 i²=−1로 유도한다.",
+    "복소수의 덧셈·뺄셈·곱셈을 실수부와 허수부별로 계산한다.",
+    "분모가 0이 아닌 복소수의 나눗셈에서 켤레를 곱해 a+bi 꼴로 정리하고 결과를 검산한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형과 선수 기능에 따라 해당 예제보다 앞선 정의·표현 단계로 되돌린다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "켤레에서 실수부 부호까지 바꾼다.",
+    "곱에서 i²=−1을 적용하지 않는다.",
+    "분모가 0인 경우를 허용하거나 분모의 켤레만 곱한다."
+  ],
+  "workedExample": {
+    "prompt": "(3+2i)/(1−i)를 a+bi 꼴로 계산하시오.",
+    "steps": [
+      "분모 1−i는 0이 아니므로 나눗셈이 정의된다. 켤레 1+i를 분자와 분모에 곱한다.",
+      "분자는 (3+2i)(1+i)=3+3i+2i+2i²=1+5i다.",
+      "분모는 (1−i)(1+i)=1−i²=2다.",
+      "따라서 결과는 (1+5i)/2=1/2+(5/2)i다."
+    ],
+    "answer": "1/2+(5/2)i"
+  }
+}

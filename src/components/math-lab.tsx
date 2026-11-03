@@ -2,6 +2,7 @@
 import { useState } from "react";
 import type { Block } from "@/contracts";
 import { PlaceLab } from "./place-lab";
+import { M3MathLab } from "./m3-math-labs";
 type Interactive = Extract<Block, { type: "InteractiveBlock" }>;
 function gcd(a: number, b: number): number {
   return b ? gcd(b, a % b) : Math.abs(a);
@@ -97,6 +98,7 @@ export function MathLab({ block }: { block: Interactive }) {
   const [opensDown, setOpensDown] = useState(false);
   const [reviewTopic, setReviewTopic] = useState("algebra");
   if (block.interaction === "place-value") return <PlaceLab />;
+  if (["factor-theorem", "polynomial-factorization", "complex-plane", "complex-operations", "quadratic-discriminant"].includes(block.interaction)) return <M3MathLab block={block} />;
   const op = block.settings?.operation ?? "add";
   if (
     block.interaction === "fraction" ||

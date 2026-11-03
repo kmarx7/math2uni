@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-09",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "복소수의 켤레를 정의하고 z·z̄=a²+b²임을 i²=−1로 유도한다.\n복소수의 덧셈·뺄셈·곱셈을 실수부와 허수부별로 계산한다.\n분모가 0이 아닌 복소수의 나눗셈에서 켤레를 곱해 a+bi 꼴로 정리하고 결과를 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "기호·부호가 있는 대입과 다항식 계산, 일차방정식 풀이를 확인해요. 진단 결과는 초안이며 숙달도에 자동 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-09-u1",
+          "title": "켤레복소수는 허수부 부호만 바꿔요",
+          "body": "z=a+bi의 켤레복소수는 z̄=a−bi예요. 실수부는 그대로이고 허수부의 부호만 반대예요. 예: z=3−2i이면 z̄=3+2i예요.",
+          "activity": "복소평면에서 켤레 점이 실수축을 기준으로 대칭임을 좌표로 설명해요. 텍스트 표에는 두 점의 x좌표가 같고 y좌표 부호가 반대라고 적어요.",
+          "check": "내 말 또는 식으로 켤레복소수는 허수부 부호만 바꿔요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-09-u2",
+          "title": "켤레의 곱은 실수가 돼요",
+          "body": "(a+bi)(a−bi)=a²−(bi)²=a²+b²이에요. b²i²=−b²이므로 빼면 더하기가 돼요. 예: (2+3i)(2−3i)=4+9=13.",
+          "activity": "켤레 쌍 곱의 전개에서 가운데 항이 상쇄되고 i² 항이 실수로 바뀌는 과정을 한 줄씩 보여줘요.",
+          "check": "내 말 또는 식으로 켤레의 곱은 실수가 돼요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-09-u3",
+          "title": "덧셈과 뺄셈은 같은 성분끼리 계산해요",
+          "body": "(a+bi)+(c+di)=(a+c)+(b+d)i예요. 뺄셈은 괄호 앞의 음수를 두 성분에 모두 적용해요. 예: (4+2i)−(1−3i)=3+5i.",
+          "activity": "실수부 줄과 허수부 줄을 분리해 계산하고 마지막에 a+bi로 합쳐요.",
+          "check": "내 말 또는 식으로 덧셈과 뺄셈은 같은 성분끼리 계산해요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-09-u4",
+          "title": "곱셈은 분배한 뒤 i²을 바꿔요",
+          "body": "(a+bi)(c+di)=ac+adi+bci+bd i²=(ac−bd)+(ad+bc)i예요. 예: (1+2i)(3−i)=3−i+6i−2i²=5+5i.",
+          "activity": "네 곱을 격자 표로 보여주고 i² 셀만 −1로 바꾸어 더해요.",
+          "check": "내 말 또는 식으로 곱셈은 분배한 뒤 i²을 바꿔요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-09-u5",
+          "title": "나눗셈은 분모의 켤레를 곱해요",
+          "body": "분모 c+di가 0이 아니어야 해요. 분자와 분모에 c−di를 곱하면 분모는 c²+d²인 실수가 돼요. 예: (1+i)/(2−i)에 (2+i)/(2+i)를 곱하면 (1+i)(2+i)/(5)=(1+3i)/5=1/5+3/5i예요.",
+          "activity": "분모와 켤레의 곱이 0이 아닌 실수인지 먼저 확인하고, 분자·분모에 같은 켤레를 곱하는 조작을 텍스트로 읽어줘요.",
+          "check": "내 말 또는 식으로 나눗셈은 분모의 켤레를 곱해요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-09-u6",
+          "title": "결과를 표준형과 검산으로 확인해요",
+          "body": "계산 결과는 실수부와 허수부를 모아 a+bi 꼴로 정리해요. 나눗셈 결과 u+vi는 원래 분모에 곱해 분자를 복원하는 방식으로 확인할 수 있어요.",
+          "activity": "성분 칸을 정렬해 표준형을 만들고, 곱셈 역검산을 선택적으로 표시해요.",
+          "check": "내 말 또는 식으로 결과를 표준형과 검산으로 확인해요의 핵심을 설명할 수 있나요?"
+        }
+      ],
+      "body": "정의 확인 → 구조 표시 → 원리 적용 → 계산 → 범위 확인 → 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "개념 시각화 실험실",
+      "interaction": "complex-operations",
+      "settings": {
+        "accessibleTextOutput": true,
+        "keyboardOperable": true,
+        "reducedMotion": true,
+        "initialA": 2,
+        "initialB": 3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "(3+2i)/(1−i)를 a+bi 꼴로 계산하시오.",
+        "분모 1−i는 0이 아니므로 나눗셈이 정의된다. 켤레 1+i를 분자와 분모에 곱한다.",
+        "분자는 (3+2i)(1+i)=3+3i+2i+2i²=1+5i다.",
+        "분모는 (1−i)(1+i)=1−i²=2다.",
+        "따라서 결과는 (1+5i)/2=1/2+(5/2)i다.",
+        "정답: 1/2+(5/2)i"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "먼저 어떤 정의·조건이 적용되는지 적고, 단계별로 계산한 뒤 결과를 원래 식에 대조하세요. 이 콘텐츠는 연구용 초안입니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "틀린 답만 표시하지 않고 해당 소단원의 정의·부호·전략 선택 단계로 돌아가 다시 설명해요. 이 초안은 진단 피드백 설계이며 공개 승인 상태가 아닙니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "복습 간격 제안은 1일·3일·7일이며 효과 검증 전입니다. 이 제안 콘텐츠는 개발 검토용 초안이고 공식 성취·평가·게시 콘텐츠가 아닙니다."
+    }
+  ]
+}

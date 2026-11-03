@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-08",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "허수단위 i를 i²=−1인 수로 정의하고 음수의 제곱근을 i를 사용해 표현한다.\n복소수를 a+bi(a,b는 실수)로 나타내고 실수부 Re(z)=a, 허수부 Im(z)=b를 정확히 읽는다.\nb=0인 실수와 b≠0인 비실수 복소수를 구별하고 허수부의 부호를 보존한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "기호·부호가 있는 대입과 다항식 계산, 일차방정식 풀이를 확인해요. 진단 결과는 초안이며 숙달도에 자동 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-08-u1",
+          "title": "실수에서 제곱근을 찾을 수 없는 수를 살펴요",
+          "body": "실수 x는 항상 x²≥0이에요. 따라서 실수 범위에서 x²=−1을 만족하는 수는 없어요. 이 문제를 다루기 위해 허수단위 i를 i²=−1로 정의하고 새로운 수 체계인 복소수를 사용해요.",
+          "activity": "실수 제곱 결과의 수직선 범위를 살펴본 뒤 −1의 제곱근을 i와 −i로 확장해요. 음성 없이도 설명되도록 수식과 텍스트를 함께 제공해요.",
+          "check": "내 말 또는 식으로 실수에서 제곱근을 찾을 수 없는 수를 살펴요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-08-u2",
+          "title": "허수단위로 음수 제곱근을 표현해요",
+          "body": "i²=−1이고, a>0일 때 주제곱근(principal square root)은 √(−a)=i√a로 써요. 예를 들어 √(−9)=3i예요. 이는 제곱근 기호가 가리키는 한 값이에요. 방정식 z²=−9의 해를 모두 구하면 z=3i와 z=−3i, 즉 ±3i예요. 실제로 두 값을 제곱하면 각각 −9가 돼요. 따라서 √(−9)=3i와 z²=−9의 두 해 ±3i를 구별해요.",
+          "activity": "제곱근 카드 −4, −9, −16에 대해 양의 크기와 i를 분리해 고르게 하고 제곱 검산을 보여줘요.",
+          "check": "내 말 또는 식으로 허수단위로 음수 제곱근을 표현해요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-08-u3",
+          "title": "복소수를 a+bi 꼴로 읽어요",
+          "body": "복소수는 a+bi 꼴로 나타내며 a,b는 실수예요. a를 실수부 Re(z), b를 허수부 Im(z)라 해요. z=−4−3i이면 Re(z)=−4, Im(z)=−3이에요. i의 계수 −3이 허수부이며, 허수부 자체는 실수 −3이에요.",
+          "activity": "복소평면 가로축을 실수부, 세로축을 허수부로 표시하고 좌표 (a,b)를 텍스트로 읽어줘요.",
+          "check": "내 말 또는 식으로 복소수를 a+bi 꼴로 읽어요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-08-u4",
+          "title": "부호와 0 계수를 포함해 표준형을 써요",
+          "body": "z=a+bi에서 b=0이면 실수 a이고, a=0이면 순허수 bi예요. 예: 5=5+0i, −2i=0−2i. 표준형은 실수부와 i의 계수를 각각 드러내요.",
+          "activity": "복소수 카드를 실수·순허수·일반 복소수로 분류하고 각 좌표와 표준형을 제공해요.",
+          "check": "내 말 또는 식으로 부호와 0 계수를 포함해 표준형을 써요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-08-u5",
+          "title": "같은 복소수인지 성분별로 판단해요",
+          "body": "두 복소수 a+bi와 c+di가 같으려면 실수부 a=c, 허수부 b=d가 각각 성립해야 해요. 예: 2+3i와 2+3i는 같고 2+3i와 2−3i는 달라요.",
+          "activity": "좌표 두 점이 일치하는지 두 축 성분별 체크를 통해 판정해요.",
+          "check": "내 말 또는 식으로 같은 복소수인지 성분별로 판단해요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-08-u6",
+          "title": "복소수에는 실수의 크기 비교를 그대로 적용하지 않아요",
+          "body": "실수는 수직선에서 대소를 비교하지만 복소수 전체에는 실수처럼 자연스러운 대소 순서를 주지 않아요. 이 단원에서는 성분·표현·같음과 제곱 관계를 다뤄요.",
+          "activity": "복소평면의 두 점을 선택해 거리가 비교 가능하더라도 복소수 자체의 대소와 구별해 설명해요.",
+          "check": "내 말 또는 식으로 복소수에는 실수의 크기 비교를 그대로 적용하지 않아요의 핵심을 설명할 수 있나요?"
+        }
+      ],
+      "body": "정의 확인 → 구조 표시 → 원리 적용 → 계산 → 범위 확인 → 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "개념 시각화 실험실",
+      "interaction": "complex-plane",
+      "settings": {
+        "accessibleTextOutput": true,
+        "keyboardOperable": true,
+        "reducedMotion": true,
+        "initialA": -4,
+        "initialB": -3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "z=−4−3i일 때 실수부와 허수부를 구하고, z²=−1을 만족하는 수를 i를 사용해 나타내시오.",
+        "복소수 표준형 z=a+bi와 비교하면 a=−4, b=−3이다.",
+        "따라서 Re(z)=−4, Im(z)=−3이다.",
+        "i는 i²=−1로 정의되므로 z²=−1의 해는 i와 −i이다.",
+        "확인: i²=−1, (−i)²=(−1)²i²=−1.",
+        "정답: Re(z)=−4, Im(z)=−3; z²=−1의 해는 ±i"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "먼저 어떤 정의·조건이 적용되는지 적고, 단계별로 계산한 뒤 결과를 원래 식에 대조하세요. 이 콘텐츠는 연구용 초안입니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "틀린 답만 표시하지 않고 해당 소단원의 정의·부호·전략 선택 단계로 돌아가 다시 설명해요. 이 초안은 진단 피드백 설계이며 공개 승인 상태가 아닙니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "복습 간격 제안은 1일·3일·7일이며 효과 검증 전입니다. 이 제안 콘텐츠는 개발 검토용 초안이고 공식 성취·평가·게시 콘텐츠가 아닙니다."
+    }
+  ]
+}

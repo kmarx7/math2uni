@@ -1,0 +1,293 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-08",
+  "unitTitle": "복소수의 뜻",
+  "concepts": [
+    "허수단위",
+    "실수부와 허수부"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m308-family-1",
+      "status": "draft",
+      "title": "제곱근 표현",
+      "reasoningStructure": "i²=−1을 이용해 음수의 제곱근을 허수단위로 나타낸다.",
+      "items": [
+        {
+          "id": "m308-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "i²의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "허수단위의 정의로 i²=−1이다. (A 1, B −1, C i)",
+          "skillLabel": "m3-08-skill-1",
+          "misconceptionHypothesis": "i를 변수로 보고 i²=i라고 한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": "M3-08: original draft",
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1"
+            },
+            {
+              "id": "B",
+              "label": "−1"
+            },
+            {
+              "id": "C",
+              "label": "i"
+            }
+          ]
+        },
+        {
+          "id": "m308-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "√(−25)=□i에서 □는?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "√25=5이므로 √(−25)=5i다.",
+          "skillLabel": "m3-08-skill-1",
+          "misconceptionHypothesis": "음수 부호를 계수에 붙인다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m308-family-2",
+      "status": "draft",
+      "title": "성분 판독",
+      "reasoningStructure": "a+bi의 실수부와 허수부를 부호까지 분리한다.",
+      "items": [
+        {
+          "id": "m308-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "z=−3+4i의 실수부와 허수부를 바르게 나타낸 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "Re(z)=−3, Im(z)=4. (A −3,4 / B −3,4i / C 3,−4)",
+          "skillLabel": "m3-08-skill-1",
+          "misconceptionHypothesis": "허수부에 i까지 포함한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "실수부 −3, 허수부 4"
+            },
+            {
+              "id": "B",
+              "label": "실수부 −3, 허수부 4i"
+            },
+            {
+              "id": "C",
+              "label": "실수부 3, 허수부 −4"
+            }
+          ]
+        },
+        {
+          "id": "m308-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "−7을 a+bi 표준형으로 나타내면?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "−7=−7+0i이므로 실수부 −7, 허수부 0이다. (A 0−7i, B 7+0i, C −7+0i)",
+          "skillLabel": "m3-08-skill-2",
+          "misconceptionHypothesis": "실수를 복소수 형식으로 표현할 때 0 성분을 누락한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "0−7i"
+            },
+            {
+              "id": "B",
+              "label": "7+0i"
+            },
+            {
+              "id": "C",
+              "label": "−7+0i"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m308-family-3",
+      "status": "draft",
+      "title": "복소수 동일성 판단",
+      "reasoningStructure": "두 성분을 각각 비교하고 실수의 대소와 복소수의 순서를 구별한다.",
+      "items": [
+        {
+          "id": "m308-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "2−5i와 같은 복소수는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "실수부와 허수부가 각각 같아야 한다. (A 2+5i, B 2−5i, C −2−5i)",
+          "skillLabel": "m3-08-skill-2",
+          "misconceptionHypothesis": "실수부 부호만 비교한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2+5i"
+            },
+            {
+              "id": "B",
+              "label": "2−5i"
+            },
+            {
+              "id": "C",
+              "label": "−2−5i"
+            }
+          ]
+        },
+        {
+          "id": "m308-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "복소수 −1과 1 중 어느 것이 더 큰가에 대한 설명으로 맞는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "복소수 전체의 대소는 실수처럼 정의되지 않으며, 두 수가 실수일 때는 실수 대소를 비교할 수 있다. (A −1이 항상 큼, B 복소평면 오른쪽이 큼, C 복소수 순서 일반은 정의하지 않음)",
+          "skillLabel": "m3-08-skill-2",
+          "misconceptionHypothesis": "좌표 위치를 복소수의 대소와 동일시한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1이 항상 큼"
+            },
+            {
+              "id": "B",
+              "label": "복소평면 오른쪽이 큼"
+            },
+            {
+              "id": "C",
+              "label": "복소수 순서 일반은 정의하지 않음"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "provenance": {
+    "authorship": "originally authored practice drafts",
+    "externalItemsCopied": false,
+    "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+    "humanVerified": false,
+    "humanApprovedCount": 0
+  }
+}

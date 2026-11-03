@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M3-08",
+  "levelId": "LEVEL 3",
+  "title": "복소수의 뜻",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "허수단위",
+      "실수부와 허수부"
+    ],
+    "prerequisiteUnits": [
+      "M2-07",
+      "M2-11"
+    ],
+    "visualization": "수의 범위 확장표"
+  },
+  "objectives": [
+    "허수단위 i를 i²=−1인 수로 정의하고 음수의 제곱근을 i를 사용해 표현한다.",
+    "복소수를 a+bi(a,b는 실수)로 나타내고 실수부 Re(z)=a, 허수부 Im(z)=b를 정확히 읽는다.",
+    "b=0인 실수와 b≠0인 비실수 복소수를 구별하고 허수부의 부호를 보존한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m3-08-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "실수와 음수의 제곱을 계산한다."
+    },
+    {
+      "id": "m3-08-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "제곱근 기호가 제곱하여 원래 수가 되는 비음수 값을 뜻함을 안다."
+    },
+    {
+      "id": "m3-08-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "정수·유리수·실수의 포함 관계를 말한다."
+    }
+  ],
+  "targetSkills": [
+    "m3-08-skill-1",
+    "m3-08-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "선수 확인 → 조건·표현 파악 → 구체적 예시 → 원리 유도 → 단계별 풀이 → 다른 구조 적용 → 검산·복습",
+    "principleDerivation": "i²=−1을 새 수의 정의로 사용하고, a+bi의 두 실수 성분을 유일하게 비교한다.",
+    "accessibility": "기호와 식을 읽는 말로 함께 제시하고, 표에는 대체 텍스트와 수치 결과를 제공한다. 모든 조작은 키보드로 가능하고 변경 결과를 텍스트로 확인한다."
+  },
+  "subunits": [
+    {
+      "id": "m3-08-u1",
+      "title": "실수에서 생긴 한계",
+      "targetSkills": [
+        "m3-08-skill-1"
+      ],
+      "explanation": "실수 범위에서는 어떤 실수도 제곱해 −1이 되지 않는다. 방정식 x²=−1을 다루기 위해 새로운 수 i를 도입하고 i²=−1로 정의한다. i는 문자 변수나 √−1의 실수값이 아니다.",
+      "activity": "수의 제곱표에서 실수 제곱이 음수가 되지 않는 것을 확인한 뒤 i² 타일을 −1에 연결한다.",
+      "check": "i²의 값은 −1이다."
+    },
+    {
+      "id": "m3-08-u2",
+      "title": "허수단위로 음수 제곱근 표현",
+      "targetSkills": [
+        "m3-08-skill-1"
+      ],
+      "explanation": "양의 실수 r에 대해 (i√r)²=i²(√r)²=−r이므로 음수 −r의 제곱근은 ±i√r이다. 기호 √(−r)를 쓰는 맥락에서는 주값을 i√r로 나타내며, 방정식 x²=−r의 두 해는 ±i√r이다.",
+      "activity": "제곱 확인 칸에 i²와 (√r)²를 따로 대입해 부호를 추적한다.",
+      "check": "x²=−9의 해는 x=±3i이다."
+    },
+    {
+      "id": "m3-08-u3",
+      "title": "복소수의 표준형",
+      "targetSkills": [
+        "m3-08-skill-1"
+      ],
+      "explanation": "복소수는 z=a+bi 꼴이며 a,b는 실수이고 i²=−1이다. a를 실수부의 값, b를 허수부의 값으로 정한다. 허수부는 bi가 아니라 i의 계수 b다.",
+      "activity": "두 입력칸 a,b를 채우면 a+bi 꼴로 조합하고 각 성분을 따로 읽는다.",
+      "check": "z=−2+5i에서 실수부는 −2, 허수부는 5다."
+    },
+    {
+      "id": "m3-08-u4",
+      "title": "부호와 0 계수",
+      "targetSkills": [
+        "m3-08-skill-2"
+      ],
+      "explanation": "z=a+bi에서 a와 b는 부호를 포함한 실수다. 4−3i는 4+(−3)i이므로 실수부 4, 허수부 −3이다. b=0이면 z는 실수이고, a=0,b≠0이면 순허수 형태다.",
+      "activity": "실수부·허수부 축을 가진 표에서 음수 계수도 그대로 적고, 0 성분을 구분한다.",
+      "check": "z=−i의 실수부는 0, 허수부는 −1이다."
+    },
+    {
+      "id": "m3-08-u5",
+      "title": "같은 복소수인지 판별",
+      "targetSkills": [
+        "m3-08-skill-2"
+      ],
+      "explanation": "a+bi 표준형은 실수부와 허수부가 각각 하나로 정해진다. 따라서 a+bi=c+di일 필요충분조건은 a=c이고 b=d이다.",
+      "activity": "두 복소수를 성분 쌍 (a,b),(c,d)로 바꾸어 성분별 같음 여부를 확인한다.",
+      "check": "2+3i와 2+4i는 허수부가 달라 서로 다르다."
+    },
+    {
+      "id": "m3-08-u6",
+      "title": "실수 포함과 표현 연습",
+      "targetSkills": [
+        "m3-08-skill-2"
+      ],
+      "explanation": "모든 실수 a는 a+0i로 복소수에 포함된다. 허수부가 0이 아닌 수는 실수가 아니다. 복소수라는 큰 범위 안에 실수가 들어간다는 점을 예로 확인한다.",
+      "activity": "실수/복소수 분류표에 3, −2i, 1−i를 넣고 두 성분으로 분류한다.",
+      "check": "3=3+0i는 실수이자 복소수이고, −2i는 실수가 아닌 복소수다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m3-08-lab",
+      "kind": "math-lab",
+      "description": "수의 범위 확장표",
+      "features": [
+        "실수부·허수부 성분 쌍 편집",
+        "i² 치환 확인",
+        "실수 포함 관계 분류"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 9,
+    "familyCriteria": [
+      "표준형에서 성분 판독",
+      "제곱근 방정식의 i 표현",
+      "동일성·실수 여부 성분 비교"
+    ],
+    "assessment": "별도 평가 문항은 만들지 않는다. 형성평가 기준과 채점 근거만 설계한다.",
+    "distinctReasoningRule": "원형은 필요한 핵심 추론이 달라야 한다. 같은 절차에서 수치·부호만 바꾼 문항은 하나의 원형으로 묶고, 새 원형은 전략 선택이나 조건 번역의 차이를 근거로 제안한다."
+  },
+  "assessmentCriteria": [
+    "허수단위 i를 i²=−1인 수로 정의하고 음수의 제곱근을 i를 사용해 표현한다.",
+    "복소수를 a+bi(a,b는 실수)로 나타내고 실수부 Re(z)=a, 허수부 Im(z)=b를 정확히 읽는다.",
+    "b=0인 실수와 b≠0인 비실수 복소수를 구별하고 허수부의 부호를 보존한다."
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형과 선수 기능에 따라 해당 예제보다 앞선 정의·표현 단계로 되돌린다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "허수부를 bi로 보고 계수 b를 답하지 않는다.",
+    "−3i의 허수부를 3으로 바꾼다.",
+    "i²를 1로 계산하거나 x²=−r에 한 해만 적는다."
+  ],
+  "workedExample": {
+    "prompt": "z=−4−3i일 때 실수부와 허수부를 구하고, z²=−1을 만족하는 수를 i를 사용해 나타내시오.",
+    "steps": [
+      "복소수 표준형 z=a+bi와 비교하면 a=−4, b=−3이다.",
+      "따라서 Re(z)=−4, Im(z)=−3이다.",
+      "i는 i²=−1로 정의되므로 z²=−1의 해는 i와 −i이다.",
+      "확인: i²=−1, (−i)²=(−1)²i²=−1."
+    ],
+    "answer": "Re(z)=−4, Im(z)=−3; z²=−1의 해는 ±i"
+  }
+}

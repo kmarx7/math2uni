@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-10",
+  "unitTitle": "이차방정식과 판별식",
+  "concepts": [
+    "판별식의 부호",
+    "복소수 범위의 근"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m310-family-1",
+      "status": "draft",
+      "title": "표준형에서 D 계산",
+      "reasoningStructure": "a,b,c를 부호와 함께 읽고 D=b²−4ac를 산출한다.",
+      "items": [
+        {
+          "id": "m310-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "x²−3x+2=0에서 판별식 D는?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "a=1,b=−3,c=2이므로 D=9−8=1이다.",
+          "skillLabel": "m3-10-skill-1",
+          "misconceptionHypothesis": "b의 제곱이나 4ac를 실수한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": "M3-10: original draft",
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m310-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x²−6x+9=0의 실근 분류는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "D=36−36=0이므로 중근 하나다. (A 서로 다른 두 실근, B 중근, C 실근 없음)",
+          "skillLabel": "m3-10-skill-1",
+          "misconceptionHypothesis": "D=0을 서로 다른 두 근으로 센다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 다른 두 실근"
+            },
+            {
+              "id": "B",
+              "label": "중근"
+            },
+            {
+              "id": "C",
+              "label": "실근 없음"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m310-family-2",
+      "status": "draft",
+      "title": "D 부호로 근 분류",
+      "reasoningStructure": "양수·0·음수에 따른 실근 개수와 유형을 구분한다.",
+      "items": [
+        {
+          "id": "m310-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "2x²+x+1=0의 실근 개수는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "D=1−8=−7<0이므로 실근은 없다. (A 2개, B 1개, C 0개)",
+          "skillLabel": "m3-10-skill-2",
+          "misconceptionHypothesis": "음수 D를 양수처럼 취급한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2개"
+            },
+            {
+              "id": "B",
+              "label": "1개"
+            },
+            {
+              "id": "C",
+              "label": "0개"
+            }
+          ]
+        },
+        {
+          "id": "m310-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x²+2x+5=0에서 D는?",
+          "answer": {
+            "type": "integer",
+            "value": "-16"
+          },
+          "rationale": "D=2²−4·1·5=4−20=−16이다.",
+          "skillLabel": "m3-10-skill-1",
+          "misconceptionHypothesis": "−4ac 부호를 잘못 적용한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m310-family-3",
+      "status": "draft",
+      "title": "음수 D의 복소수 근",
+      "reasoningStructure": "√(−k)=i√k를 적용해 두 근과 켤레 관계를 표현한다.",
+      "items": [
+        {
+          "id": "m310-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "x²−4x+13=0의 복소수 근은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "D=16−52=−36, 따라서 x=(4±6i)/2=2±3i다. (A 2±3i, B −2±3i, C 4±6i)",
+          "skillLabel": "m3-10-skill-2",
+          "misconceptionHypothesis": "−b 부호 또는 2a로 나누는 것을 누락한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2±3i"
+            },
+            {
+              "id": "B",
+              "label": "−2±3i"
+            },
+            {
+              "id": "C",
+              "label": "4±6i"
+            }
+          ]
+        },
+        {
+          "id": "m310-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "x²+4=0의 해에 대한 설명으로 맞는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "실근은 없고 복소수 근은 ±2i다. (A 실근 ±2, B 복소수 근 ±2i, C 해 없음)",
+          "skillLabel": "m3-10-skill-2",
+          "misconceptionHypothesis": "실수 범위와 복소수 범위를 구분하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "실근 ±2"
+            },
+            {
+              "id": "B",
+              "label": "복소수 근 ±2i"
+            },
+            {
+              "id": "C",
+              "label": "해 없음"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "provenance": {
+    "authorship": "originally authored practice drafts",
+    "externalItemsCopied": false,
+    "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+    "humanVerified": false,
+    "humanApprovedCount": 0
+  }
+}

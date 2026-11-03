@@ -1,0 +1,279 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-07",
+  "unitTitle": "인수분해의 확장",
+  "concepts": [
+    "치환과 묶기",
+    "고차식 인수분해"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m307-family-1",
+      "status": "draft",
+      "title": "치환 후 이차식 인수분해",
+      "reasoningStructure": "거듭제곱의 반복을 새 문자로 치환하고 인수분해한 뒤 되돌린다.",
+      "items": [
+        {
+          "id": "m307-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x⁴−9를 인수분해한 것으로 옳은 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x⁴−9=(x²−3)(x²+3)이다. (A (x²−3)(x²+3), B (x²−9)(x²+1), C (x−3)(x+3))",
+          "skillLabel": "m3-07-skill-1",
+          "misconceptionHypothesis": "제곱 차의 두 항을 각각 x±3으로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": "M3-07: original draft",
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(x²−3)(x²+3)"
+            },
+            {
+              "id": "B",
+              "label": "(x²−9)(x²+1)"
+            },
+            {
+              "id": "C",
+              "label": "(x−3"
+            }
+          ]
+        },
+        {
+          "id": "m307-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "A=x²로 놓을 때 x⁴−5x²+6은 A에 대한 식으로 A²−5A+□이다. □는?",
+          "answer": {
+            "type": "integer",
+            "value": "6"
+          },
+          "rationale": "x⁴→A², x²→A로 바뀌고 상수 6은 유지된다.",
+          "skillLabel": "m3-07-skill-1",
+          "misconceptionHypothesis": "상수항도 치환한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m307-family-2",
+      "status": "draft",
+      "title": "항 묶기",
+      "reasoningStructure": "여러 항을 묶어 공통 이항식을 만든다.",
+      "items": [
+        {
+          "id": "m307-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x³+2x²+3x+6을 묶어 인수분해하면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x²(x+2)+3(x+2)=(x+2)(x²+3). (A (x+3)(x²+2), B (x+2)(x²+3), C (x²+2)(x+3))",
+          "skillLabel": "m3-07-skill-1",
+          "misconceptionHypothesis": "묶은 뒤 공통 괄호를 놓친다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(x+3)(x²+2)"
+            },
+            {
+              "id": "B",
+              "label": "(x+2)(x²+3)"
+            },
+            {
+              "id": "C",
+              "label": "(x²+2"
+            }
+          ]
+        },
+        {
+          "id": "m307-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "x⁴−5x²+4=(x²−1)(x²−□)에서 □는?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "치환 A=x²에서 A²−5A+4=(A−1)(A−4)다.",
+          "skillLabel": "m3-07-skill-2",
+          "misconceptionHypothesis": "곱과 합 조건을 확인하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m307-family-3",
+      "status": "draft",
+      "title": "전략 선택과 범위 확인",
+      "reasoningStructure": "구조에 따라 전략과 실수 범위의 인수분해 가능성을 판단한다.",
+      "items": [
+        {
+          "id": "m307-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "x³−x²+2x−2에 가장 직접적인 전략은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "(x³−x²)+(2x−2)=(x−1)(x²+2)이므로 묶기가 직접적이다. (A 묶기, B A=x² 치환, C 완전제곱식)",
+          "skillLabel": "m3-07-skill-2",
+          "misconceptionHypothesis": "문항 모양과 무관하게 치환만 시도한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "묶기"
+            },
+            {
+              "id": "B",
+              "label": "A=x² 치환"
+            },
+            {
+              "id": "C",
+              "label": "완전제곱식"
+            }
+          ]
+        },
+        {
+          "id": "m307-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "실수 범위에서 x⁴+4를 인수분해하는 설명으로 맞는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "x⁴+4=(x²−2x+2)(x²+2x+2)로 두 실수 이차식 곱으로 쓸 수 있다. (A 항상 네 실수 일차식으로, B 인수분해 불가, C 위의 곱)",
+          "skillLabel": "m3-07-skill-2",
+          "misconceptionHypothesis": "실수 이차식 인수분해와 일차식 인수분해를 구분하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "항상 네 실수 일차식으로"
+            },
+            {
+              "id": "B",
+              "label": "인수분해 불가"
+            },
+            {
+              "id": "C",
+              "label": "위의 곱"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "provenance": {
+    "authorship": "originally authored practice drafts",
+    "externalItemsCopied": false,
+    "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+    "humanVerified": false,
+    "humanApprovedCount": 0
+  }
+}

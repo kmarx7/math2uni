@@ -1,0 +1,19 @@
+{
+  "unitId": "M3-10",
+  "contentVersion": "0.1.0-draft",
+  "checks": {
+    "lessonSchema": "passed (Zod/contentSchema and Vitest)",
+    "problemSchema": "passed (Zod and Vitest)",
+    "answerAndExplanation": "passed (problem answer rules, score path and rationale presence; author originals remain unapproved)",
+    "interactionContract": "passed (Zod contract and TypeScript build; browser interaction not yet E2E-verified)",
+    "publicDtoAnswerFree": "passed (Vitest)",
+    "productionGate": "passed (Vitest)"
+  },
+  "practiceDraftCount": 6,
+  "problemFamilyCount": 3,
+  "assessmentCount": 0,
+  "humanVerified": false,
+  "humanApprover": null,
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false
+}

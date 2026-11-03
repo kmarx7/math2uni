@@ -1,0 +1,1435 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "units": [
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-06",
+      "unitTitle": "인수정리",
+      "concepts": [
+        "인수와 근의 관계",
+        "다항식의 인수 판정"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m306-family-1",
+          "status": "draft",
+          "title": "P(a) 직접 판정",
+          "reasoningStructure": "주어진 다항식에 a를 대입해 0 여부를 계산한다.",
+          "items": [
+            {
+              "id": "m306-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "P(x)=x²−5x+6일 때 x−2가 인수인지 판정하는 데 필요한 P(2)의 값은?",
+              "answer": {
+                "type": "integer",
+                "value": "0"
+              },
+              "rationale": "P(2)=4−10+6=0이므로 x−2는 인수다.",
+              "skillLabel": "m3-06-skill-2",
+              "misconceptionHypothesis": "P(2)를 계산할 때 2²을 2로 계산한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": "M3-06: original draft",
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m306-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "P(x)=x²−1의 인수로 옳은 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "P(1)=0이므로 x−1은 인수다. (보기: A x−1, B x−2, C x+2)",
+              "skillLabel": "m3-06-skill-2",
+              "misconceptionHypothesis": "P(1)=0에서 x+1을 선택한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "x−1"
+                },
+                {
+                  "id": "B",
+                  "label": "x−2"
+                },
+                {
+                  "id": "C",
+                  "label": "x+2"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m306-family-2",
+          "status": "draft",
+          "title": "부호가 있는 인수 번역",
+          "reasoningStructure": "x+a 꼴을 x−(−a)로 바꾸어 대입값을 정한다.",
+          "items": [
+            {
+              "id": "m306-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "P(x)=x²+3x+2일 때 x+1에 대응하는 대입값은?",
+              "answer": {
+                "type": "integer",
+                "value": "-1"
+              },
+              "rationale": "x+1=x−(−1)이므로 대입값은 −1이다.",
+              "skillLabel": "m3-06-skill-1",
+              "misconceptionHypothesis": "x+1의 대입값을 1로 본다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m306-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "P(x)=x²−4x+1에서 x−1은 인수인가?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "P(1)=1−4+1=−2로 0이 아니므로 인수가 아니다. (A 예, B 아니요)",
+              "skillLabel": "m3-06-skill-2",
+              "misconceptionHypothesis": "인수 후보가 주어지면 무조건 인수라고 가정한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "예"
+                },
+                {
+                  "id": "B",
+                  "label": "아니요"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m306-family-3",
+          "status": "draft",
+          "title": "조건에서 계수 결정",
+          "reasoningStructure": "인수 조건을 P(a)=0 방정식으로 번역해 미정계수를 구한다.",
+          "items": [
+            {
+              "id": "m306-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "integer",
+              "prompt": "P(x)=x²+kx−8에서 x−2가 인수일 때 k는?",
+              "answer": {
+                "type": "integer",
+                "value": "2"
+              },
+              "rationale": "P(2)=4+2k−8=0이므로 2k=4, k=2다.",
+              "skillLabel": "m3-06-skill-2",
+              "misconceptionHypothesis": "부호 또는 대입을 실수한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m306-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "P(x)=x³−x²−4x+4에서 인수정리로 바로 확인되는 인수는?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "P(1)=1−1−4+4=0이므로 x−1이다. (A x−1, B x+1, C x−2)",
+              "skillLabel": "m3-06-skill-2",
+              "misconceptionHypothesis": "계산 결과와 인수 부호를 혼동한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "x−1"
+                },
+                {
+                  "id": "B",
+                  "label": "x+1"
+                },
+                {
+                  "id": "C",
+                  "label": "x−2"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "provenance": {
+        "authorship": "originally authored practice drafts",
+        "externalItemsCopied": false,
+        "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+        "humanVerified": false,
+        "humanApprovedCount": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-07",
+      "unitTitle": "인수분해의 확장",
+      "concepts": [
+        "치환과 묶기",
+        "고차식 인수분해"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m307-family-1",
+          "status": "draft",
+          "title": "치환 후 이차식 인수분해",
+          "reasoningStructure": "거듭제곱의 반복을 새 문자로 치환하고 인수분해한 뒤 되돌린다.",
+          "items": [
+            {
+              "id": "m307-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "choice",
+              "prompt": "x⁴−9를 인수분해한 것으로 옳은 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "x⁴−9=(x²−3)(x²+3)이다. (A (x²−3)(x²+3), B (x²−9)(x²+1), C (x−3)(x+3))",
+              "skillLabel": "m3-07-skill-1",
+              "misconceptionHypothesis": "제곱 차의 두 항을 각각 x±3으로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": "M3-07: original draft",
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "(x²−3)(x²+3)"
+                },
+                {
+                  "id": "B",
+                  "label": "(x²−9)(x²+1)"
+                },
+                {
+                  "id": "C",
+                  "label": "(x−3"
+                }
+              ]
+            },
+            {
+              "id": "m307-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "A=x²로 놓을 때 x⁴−5x²+6은 A에 대한 식으로 A²−5A+□이다. □는?",
+              "answer": {
+                "type": "integer",
+                "value": "6"
+              },
+              "rationale": "x⁴→A², x²→A로 바뀌고 상수 6은 유지된다.",
+              "skillLabel": "m3-07-skill-1",
+              "misconceptionHypothesis": "상수항도 치환한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m307-family-2",
+          "status": "draft",
+          "title": "항 묶기",
+          "reasoningStructure": "여러 항을 묶어 공통 이항식을 만든다.",
+          "items": [
+            {
+              "id": "m307-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "x³+2x²+3x+6을 묶어 인수분해하면?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "x²(x+2)+3(x+2)=(x+2)(x²+3). (A (x+3)(x²+2), B (x+2)(x²+3), C (x²+2)(x+3))",
+              "skillLabel": "m3-07-skill-1",
+              "misconceptionHypothesis": "묶은 뒤 공통 괄호를 놓친다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "(x+3)(x²+2)"
+                },
+                {
+                  "id": "B",
+                  "label": "(x+2)(x²+3)"
+                },
+                {
+                  "id": "C",
+                  "label": "(x²+2"
+                }
+              ]
+            },
+            {
+              "id": "m307-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x⁴−5x²+4=(x²−1)(x²−□)에서 □는?",
+              "answer": {
+                "type": "integer",
+                "value": "4"
+              },
+              "rationale": "치환 A=x²에서 A²−5A+4=(A−1)(A−4)다.",
+              "skillLabel": "m3-07-skill-2",
+              "misconceptionHypothesis": "곱과 합 조건을 확인하지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m307-family-3",
+          "status": "draft",
+          "title": "전략 선택과 범위 확인",
+          "reasoningStructure": "구조에 따라 전략과 실수 범위의 인수분해 가능성을 판단한다.",
+          "items": [
+            {
+              "id": "m307-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "x³−x²+2x−2에 가장 직접적인 전략은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "(x³−x²)+(2x−2)=(x−1)(x²+2)이므로 묶기가 직접적이다. (A 묶기, B A=x² 치환, C 완전제곱식)",
+              "skillLabel": "m3-07-skill-2",
+              "misconceptionHypothesis": "문항 모양과 무관하게 치환만 시도한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "묶기"
+                },
+                {
+                  "id": "B",
+                  "label": "A=x² 치환"
+                },
+                {
+                  "id": "C",
+                  "label": "완전제곱식"
+                }
+              ]
+            },
+            {
+              "id": "m307-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "실수 범위에서 x⁴+4를 인수분해하는 설명으로 맞는 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "x⁴+4=(x²−2x+2)(x²+2x+2)로 두 실수 이차식 곱으로 쓸 수 있다. (A 항상 네 실수 일차식으로, B 인수분해 불가, C 위의 곱)",
+              "skillLabel": "m3-07-skill-2",
+              "misconceptionHypothesis": "실수 이차식 인수분해와 일차식 인수분해를 구분하지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "항상 네 실수 일차식으로"
+                },
+                {
+                  "id": "B",
+                  "label": "인수분해 불가"
+                },
+                {
+                  "id": "C",
+                  "label": "위의 곱"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "provenance": {
+        "authorship": "originally authored practice drafts",
+        "externalItemsCopied": false,
+        "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+        "humanVerified": false,
+        "humanApprovedCount": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-08",
+      "unitTitle": "복소수의 뜻",
+      "concepts": [
+        "허수단위",
+        "실수부와 허수부"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m308-family-1",
+          "status": "draft",
+          "title": "제곱근 표현",
+          "reasoningStructure": "i²=−1을 이용해 음수의 제곱근을 허수단위로 나타낸다.",
+          "items": [
+            {
+              "id": "m308-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "choice",
+              "prompt": "i²의 값은?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "허수단위의 정의로 i²=−1이다. (A 1, B −1, C i)",
+              "skillLabel": "m3-08-skill-1",
+              "misconceptionHypothesis": "i를 변수로 보고 i²=i라고 한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": "M3-08: original draft",
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "1"
+                },
+                {
+                  "id": "B",
+                  "label": "−1"
+                },
+                {
+                  "id": "C",
+                  "label": "i"
+                }
+              ]
+            },
+            {
+              "id": "m308-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "√(−25)=□i에서 □는?",
+              "answer": {
+                "type": "integer",
+                "value": "5"
+              },
+              "rationale": "√25=5이므로 √(−25)=5i다.",
+              "skillLabel": "m3-08-skill-1",
+              "misconceptionHypothesis": "음수 부호를 계수에 붙인다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m308-family-2",
+          "status": "draft",
+          "title": "성분 판독",
+          "reasoningStructure": "a+bi의 실수부와 허수부를 부호까지 분리한다.",
+          "items": [
+            {
+              "id": "m308-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "z=−3+4i의 실수부와 허수부를 바르게 나타낸 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "Re(z)=−3, Im(z)=4. (A −3,4 / B −3,4i / C 3,−4)",
+              "skillLabel": "m3-08-skill-1",
+              "misconceptionHypothesis": "허수부에 i까지 포함한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "실수부 −3, 허수부 4"
+                },
+                {
+                  "id": "B",
+                  "label": "실수부 −3, 허수부 4i"
+                },
+                {
+                  "id": "C",
+                  "label": "실수부 3, 허수부 −4"
+                }
+              ]
+            },
+            {
+              "id": "m308-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "−7을 a+bi 표준형으로 나타내면?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "−7=−7+0i이므로 실수부 −7, 허수부 0이다. (A 0−7i, B 7+0i, C −7+0i)",
+              "skillLabel": "m3-08-skill-2",
+              "misconceptionHypothesis": "실수를 복소수 형식으로 표현할 때 0 성분을 누락한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "0−7i"
+                },
+                {
+                  "id": "B",
+                  "label": "7+0i"
+                },
+                {
+                  "id": "C",
+                  "label": "−7+0i"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m308-family-3",
+          "status": "draft",
+          "title": "복소수 동일성 판단",
+          "reasoningStructure": "두 성분을 각각 비교하고 실수의 대소와 복소수의 순서를 구별한다.",
+          "items": [
+            {
+              "id": "m308-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "2−5i와 같은 복소수는?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "실수부와 허수부가 각각 같아야 한다. (A 2+5i, B 2−5i, C −2−5i)",
+              "skillLabel": "m3-08-skill-2",
+              "misconceptionHypothesis": "실수부 부호만 비교한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "2+5i"
+                },
+                {
+                  "id": "B",
+                  "label": "2−5i"
+                },
+                {
+                  "id": "C",
+                  "label": "−2−5i"
+                }
+              ]
+            },
+            {
+              "id": "m308-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "복소수 −1과 1 중 어느 것이 더 큰가에 대한 설명으로 맞는 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "복소수 전체의 대소는 실수처럼 정의되지 않으며, 두 수가 실수일 때는 실수 대소를 비교할 수 있다. (A −1이 항상 큼, B 복소평면 오른쪽이 큼, C 복소수 순서 일반은 정의하지 않음)",
+              "skillLabel": "m3-08-skill-2",
+              "misconceptionHypothesis": "좌표 위치를 복소수의 대소와 동일시한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "−1이 항상 큼"
+                },
+                {
+                  "id": "B",
+                  "label": "복소평면 오른쪽이 큼"
+                },
+                {
+                  "id": "C",
+                  "label": "복소수 순서 일반은 정의하지 않음"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "provenance": {
+        "authorship": "originally authored practice drafts",
+        "externalItemsCopied": false,
+        "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+        "humanVerified": false,
+        "humanApprovedCount": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-09",
+      "unitTitle": "복소수의 계산",
+      "concepts": [
+        "켤레복소수",
+        "복소수의 사칙연산"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m309-family-1",
+          "status": "draft",
+          "title": "성분별 합·차",
+          "reasoningStructure": "실수부와 허수부를 따로 더하거나 빼고 부호를 처리한다.",
+          "items": [
+            {
+              "id": "m309-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "choice",
+              "prompt": "z=4−3i의 켤레복소수는?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "허수부 부호만 바꾸어 4+3i다. (A 4+3i, B −4−3i, C 4−3i)",
+              "skillLabel": "m3-09-skill-1",
+              "misconceptionHypothesis": "실수부까지 부호를 바꾼다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": "M3-09: original draft",
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "4+3i"
+                },
+                {
+                  "id": "B",
+                  "label": "−4−3i"
+                },
+                {
+                  "id": "C",
+                  "label": "4−3i"
+                }
+              ]
+            },
+            {
+              "id": "m309-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "choice",
+              "prompt": "(2+i)+(3−4i)는?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "실수부 2+3=5, 허수부 1−4=−3이므로 5−3i다. (A 5+5i, B 1−3i, C 5−3i)",
+              "skillLabel": "m3-09-skill-1",
+              "misconceptionHypothesis": "실수와 허수 성분을 교차해 더한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "5+5i"
+                },
+                {
+                  "id": "B",
+                  "label": "1−3i"
+                },
+                {
+                  "id": "C",
+                  "label": "5−3i"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m309-family-2",
+          "status": "draft",
+          "title": "분배 곱셈과 i² 치환",
+          "reasoningStructure": "분배법칙 이후 i²=−1을 반영해 표준형으로 정리한다.",
+          "items": [
+            {
+              "id": "m309-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "(1+2i)(1−2i)는?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "켤레의 곱은 1²+2²=5다. (A −3, B 5, C 1+4i)",
+              "skillLabel": "m3-09-skill-2",
+              "misconceptionHypothesis": "i² 부호를 틀린다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "−3"
+                },
+                {
+                  "id": "B",
+                  "label": "5"
+                },
+                {
+                  "id": "C",
+                  "label": "1+4i"
+                }
+              ]
+            },
+            {
+              "id": "m309-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "(2+i)(3−i)의 표준형은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "6−2i+3i−i²=7+i다. (A 7+i, B 5+i, C 7−i)",
+              "skillLabel": "m3-09-skill-2",
+              "misconceptionHypothesis": "마지막 −i²를 −1로 쓴다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "7+i"
+                },
+                {
+                  "id": "B",
+                  "label": "5+i"
+                },
+                {
+                  "id": "C",
+                  "label": "7−i"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m309-family-3",
+          "status": "draft",
+          "title": "켤레를 활용한 나눗셈",
+          "reasoningStructure": "분모 비영 조건 확인, 켤레 곱, 표준형 검산을 수행한다.",
+          "items": [
+            {
+              "id": "m309-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "(1+i)/(1−i)의 값은?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "켤레 1+i를 곱하면 (1+i)²/2=2i/2=i다. (A 1, B −i, C i)",
+              "skillLabel": "m3-09-skill-2",
+              "misconceptionHypothesis": "분자·분모에 켤레를 곱하면서 분모 0 여부를 확인하지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "1"
+                },
+                {
+                  "id": "B",
+                  "label": "−i"
+                },
+                {
+                  "id": "C",
+                  "label": "i"
+                }
+              ]
+            },
+            {
+              "id": "m309-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "복소수 z로 나눌 수 있는 조건은?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "분모 z가 0이 아니어야 한다. (A Im(z)≠0, B z≠0, C Re(z)≠0)",
+              "skillLabel": "m3-09-skill-2",
+              "misconceptionHypothesis": "허수부만 0이 아니어야 한다고 생각한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "Im(z)≠0"
+                },
+                {
+                  "id": "B",
+                  "label": "z≠0"
+                },
+                {
+                  "id": "C",
+                  "label": "Re(z"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "provenance": {
+        "authorship": "originally authored practice drafts",
+        "externalItemsCopied": false,
+        "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+        "humanVerified": false,
+        "humanApprovedCount": 0
+      }
+    },
+    {
+      "schemaVersion": "1",
+      "unitId": "M3-10",
+      "unitTitle": "이차방정식과 판별식",
+      "concepts": [
+        "판별식의 부호",
+        "복소수 범위의 근"
+      ],
+      "contentVersion": "0.1.0-draft",
+      "reviewStatus": "draft",
+      "officialMappingStatus": "unverified",
+      "publicationApproved": false,
+      "families": [
+        {
+          "id": "m310-family-1",
+          "status": "draft",
+          "title": "표준형에서 D 계산",
+          "reasoningStructure": "a,b,c를 부호와 함께 읽고 D=b²−4ac를 산출한다.",
+          "items": [
+            {
+              "id": "m310-p01",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D1",
+              "inputType": "integer",
+              "prompt": "x²−3x+2=0에서 판별식 D는?",
+              "answer": {
+                "type": "integer",
+                "value": "1"
+              },
+              "rationale": "a=1,b=−3,c=2이므로 D=9−8=1이다.",
+              "skillLabel": "m3-10-skill-1",
+              "misconceptionHypothesis": "b의 제곱이나 4ac를 실수한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": "M3-10: original draft",
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            },
+            {
+              "id": "m310-p02",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "x²−6x+9=0의 실근 분류는?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "D=36−36=0이므로 중근 하나다. (A 서로 다른 두 실근, B 중근, C 실근 없음)",
+              "skillLabel": "m3-10-skill-1",
+              "misconceptionHypothesis": "D=0을 서로 다른 두 근으로 센다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "서로 다른 두 실근"
+                },
+                {
+                  "id": "B",
+                  "label": "중근"
+                },
+                {
+                  "id": "C",
+                  "label": "실근 없음"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m310-family-2",
+          "status": "draft",
+          "title": "D 부호로 근 분류",
+          "reasoningStructure": "양수·0·음수에 따른 실근 개수와 유형을 구분한다.",
+          "items": [
+            {
+              "id": "m310-p03",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "choice",
+              "prompt": "2x²+x+1=0의 실근 개수는?",
+              "answer": {
+                "type": "choice",
+                "value": "C"
+              },
+              "rationale": "D=1−8=−7<0이므로 실근은 없다. (A 2개, B 1개, C 0개)",
+              "skillLabel": "m3-10-skill-2",
+              "misconceptionHypothesis": "음수 D를 양수처럼 취급한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "2개"
+                },
+                {
+                  "id": "B",
+                  "label": "1개"
+                },
+                {
+                  "id": "C",
+                  "label": "0개"
+                }
+              ]
+            },
+            {
+              "id": "m310-p04",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D2",
+              "inputType": "integer",
+              "prompt": "x²+2x+5=0에서 D는?",
+              "answer": {
+                "type": "integer",
+                "value": "-16"
+              },
+              "rationale": "D=2²−4·1·5=4−20=−16이다.",
+              "skillLabel": "m3-10-skill-1",
+              "misconceptionHypothesis": "−4ac 부호를 잘못 적용한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              }
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        },
+        {
+          "id": "m310-family-3",
+          "status": "draft",
+          "title": "음수 D의 복소수 근",
+          "reasoningStructure": "√(−k)=i√k를 적용해 두 근과 켤레 관계를 표현한다.",
+          "items": [
+            {
+              "id": "m310-p05",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "x²−4x+13=0의 복소수 근은?",
+              "answer": {
+                "type": "choice",
+                "value": "A"
+              },
+              "rationale": "D=16−52=−36, 따라서 x=(4±6i)/2=2±3i다. (A 2±3i, B −2±3i, C 4±6i)",
+              "skillLabel": "m3-10-skill-2",
+              "misconceptionHypothesis": "−b 부호 또는 2a로 나누는 것을 누락한다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "2±3i"
+                },
+                {
+                  "id": "B",
+                  "label": "−2±3i"
+                },
+                {
+                  "id": "C",
+                  "label": "4±6i"
+                }
+              ]
+            },
+            {
+              "id": "m310-p06",
+              "status": "draft",
+              "purpose": "practice-draft",
+              "difficulty": "D3",
+              "inputType": "choice",
+              "prompt": "x²+4=0의 해에 대한 설명으로 맞는 것은?",
+              "answer": {
+                "type": "choice",
+                "value": "B"
+              },
+              "rationale": "실근은 없고 복소수 근은 ±2i다. (A 실근 ±2, B 복소수 근 ±2i, C 해 없음)",
+              "skillLabel": "m3-10-skill-2",
+              "misconceptionHypothesis": "실수 범위와 복소수 범위를 구분하지 않는다.",
+              "contentVersion": "0.1.0-draft",
+              "provenance": {
+                "sourceType": "original-author-created",
+                "sourceReference": null,
+                "rightsStatus": "original-draft-no-third-party-reproduction"
+              },
+              "verification": {
+                "method": "independent hand derivation against definitions and substitution",
+                "result": "author-self-check-only",
+                "humanVerified": false,
+                "autoGrade": "supported"
+              },
+              "choices": [
+                {
+                  "id": "A",
+                  "label": "실근 ±2"
+                },
+                {
+                  "id": "B",
+                  "label": "복소수 근 ±2i"
+                },
+                {
+                  "id": "C",
+                  "label": "해 없음"
+                }
+              ]
+            }
+          ],
+          "counts": {
+            "distinctFamilies": 1,
+            "draftItems": 2,
+            "humanApprovedItems": 0
+          }
+        }
+      ],
+      "provenance": {
+        "authorship": "originally authored practice drafts",
+        "externalItemsCopied": false,
+        "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+        "humanVerified": false,
+        "humanApprovedCount": 0
+      }
+    }
+  ],
+  "summary": {
+    "units": 5,
+    "distinctFamilies": 15,
+    "practiceDraftItems": 30,
+    "humanVerifiedItems": 0,
+    "humanApprovedItems": 0
+  }
+}

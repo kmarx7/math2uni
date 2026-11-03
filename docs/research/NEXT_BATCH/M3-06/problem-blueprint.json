@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-06",
+  "unitTitle": "인수정리",
+  "concepts": [
+    "인수와 근의 관계",
+    "다항식의 인수 판정"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m306-family-1",
+      "status": "draft",
+      "title": "P(a) 직접 판정",
+      "reasoningStructure": "주어진 다항식에 a를 대입해 0 여부를 계산한다.",
+      "items": [
+        {
+          "id": "m306-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "P(x)=x²−5x+6일 때 x−2가 인수인지 판정하는 데 필요한 P(2)의 값은?",
+          "answer": {
+            "type": "integer",
+            "value": "0"
+          },
+          "rationale": "P(2)=4−10+6=0이므로 x−2는 인수다.",
+          "skillLabel": "m3-06-skill-2",
+          "misconceptionHypothesis": "P(2)를 계산할 때 2²을 2로 계산한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": "M3-06: original draft",
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m306-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "P(x)=x²−1의 인수로 옳은 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "P(1)=0이므로 x−1은 인수다. (보기: A x−1, B x−2, C x+2)",
+          "skillLabel": "m3-06-skill-2",
+          "misconceptionHypothesis": "P(1)=0에서 x+1을 선택한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x−1"
+            },
+            {
+              "id": "B",
+              "label": "x−2"
+            },
+            {
+              "id": "C",
+              "label": "x+2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m306-family-2",
+      "status": "draft",
+      "title": "부호가 있는 인수 번역",
+      "reasoningStructure": "x+a 꼴을 x−(−a)로 바꾸어 대입값을 정한다.",
+      "items": [
+        {
+          "id": "m306-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "P(x)=x²+3x+2일 때 x+1에 대응하는 대입값은?",
+          "answer": {
+            "type": "integer",
+            "value": "-1"
+          },
+          "rationale": "x+1=x−(−1)이므로 대입값은 −1이다.",
+          "skillLabel": "m3-06-skill-1",
+          "misconceptionHypothesis": "x+1의 대입값을 1로 본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m306-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "P(x)=x²−4x+1에서 x−1은 인수인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "P(1)=1−4+1=−2로 0이 아니므로 인수가 아니다. (A 예, B 아니요)",
+          "skillLabel": "m3-06-skill-2",
+          "misconceptionHypothesis": "인수 후보가 주어지면 무조건 인수라고 가정한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예"
+            },
+            {
+              "id": "B",
+              "label": "아니요"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m306-family-3",
+      "status": "draft",
+      "title": "조건에서 계수 결정",
+      "reasoningStructure": "인수 조건을 P(a)=0 방정식으로 번역해 미정계수를 구한다.",
+      "items": [
+        {
+          "id": "m306-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "P(x)=x²+kx−8에서 x−2가 인수일 때 k는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "P(2)=4+2k−8=0이므로 2k=4, k=2다.",
+          "skillLabel": "m3-06-skill-2",
+          "misconceptionHypothesis": "부호 또는 대입을 실수한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m306-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "P(x)=x³−x²−4x+4에서 인수정리로 바로 확인되는 인수는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "P(1)=1−1−4+4=0이므로 x−1이다. (A x−1, B x+1, C x−2)",
+          "skillLabel": "m3-06-skill-2",
+          "misconceptionHypothesis": "계산 결과와 인수 부호를 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x−1"
+            },
+            {
+              "id": "B",
+              "label": "x+1"
+            },
+            {
+              "id": "C",
+              "label": "x−2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "provenance": {
+    "authorship": "originally authored practice drafts",
+    "externalItemsCopied": false,
+    "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+    "humanVerified": false,
+    "humanApprovedCount": 0
+  }
+}

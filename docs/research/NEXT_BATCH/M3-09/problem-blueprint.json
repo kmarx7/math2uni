@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-09",
+  "unitTitle": "복소수의 계산",
+  "concepts": [
+    "켤레복소수",
+    "복소수의 사칙연산"
+  ],
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m309-family-1",
+      "status": "draft",
+      "title": "성분별 합·차",
+      "reasoningStructure": "실수부와 허수부를 따로 더하거나 빼고 부호를 처리한다.",
+      "items": [
+        {
+          "id": "m309-p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "z=4−3i의 켤레복소수는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "허수부 부호만 바꾸어 4+3i다. (A 4+3i, B −4−3i, C 4−3i)",
+          "skillLabel": "m3-09-skill-1",
+          "misconceptionHypothesis": "실수부까지 부호를 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": "M3-09: original draft",
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4+3i"
+            },
+            {
+              "id": "B",
+              "label": "−4−3i"
+            },
+            {
+              "id": "C",
+              "label": "4−3i"
+            }
+          ]
+        },
+        {
+          "id": "m309-p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "(2+i)+(3−4i)는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "실수부 2+3=5, 허수부 1−4=−3이므로 5−3i다. (A 5+5i, B 1−3i, C 5−3i)",
+          "skillLabel": "m3-09-skill-1",
+          "misconceptionHypothesis": "실수와 허수 성분을 교차해 더한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5+5i"
+            },
+            {
+              "id": "B",
+              "label": "1−3i"
+            },
+            {
+              "id": "C",
+              "label": "5−3i"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m309-family-2",
+      "status": "draft",
+      "title": "분배 곱셈과 i² 치환",
+      "reasoningStructure": "분배법칙 이후 i²=−1을 반영해 표준형으로 정리한다.",
+      "items": [
+        {
+          "id": "m309-p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(1+2i)(1−2i)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "켤레의 곱은 1²+2²=5다. (A −3, B 5, C 1+4i)",
+          "skillLabel": "m3-09-skill-2",
+          "misconceptionHypothesis": "i² 부호를 틀린다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−3"
+            },
+            {
+              "id": "B",
+              "label": "5"
+            },
+            {
+              "id": "C",
+              "label": "1+4i"
+            }
+          ]
+        },
+        {
+          "id": "m309-p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(2+i)(3−i)의 표준형은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "6−2i+3i−i²=7+i다. (A 7+i, B 5+i, C 7−i)",
+          "skillLabel": "m3-09-skill-2",
+          "misconceptionHypothesis": "마지막 −i²를 −1로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "7+i"
+            },
+            {
+              "id": "B",
+              "label": "5+i"
+            },
+            {
+              "id": "C",
+              "label": "7−i"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m309-family-3",
+      "status": "draft",
+      "title": "켤레를 활용한 나눗셈",
+      "reasoningStructure": "분모 비영 조건 확인, 켤레 곱, 표준형 검산을 수행한다.",
+      "items": [
+        {
+          "id": "m309-p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "(1+i)/(1−i)의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "켤레 1+i를 곱하면 (1+i)²/2=2i/2=i다. (A 1, B −i, C i)",
+          "skillLabel": "m3-09-skill-2",
+          "misconceptionHypothesis": "분자·분모에 켤레를 곱하면서 분모 0 여부를 확인하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1"
+            },
+            {
+              "id": "B",
+              "label": "−i"
+            },
+            {
+              "id": "C",
+              "label": "i"
+            }
+          ]
+        },
+        {
+          "id": "m309-p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "복소수 z로 나눌 수 있는 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "분모 z가 0이 아니어야 한다. (A Im(z)≠0, B z≠0, C Re(z)≠0)",
+          "skillLabel": "m3-09-skill-2",
+          "misconceptionHypothesis": "허수부만 0이 아니어야 한다고 생각한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand derivation against definitions and substitution",
+            "result": "author-self-check-only",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "Im(z)≠0"
+            },
+            {
+              "id": "B",
+              "label": "z≠0"
+            },
+            {
+              "id": "C",
+              "label": "Re(z"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "provenance": {
+    "authorship": "originally authored practice drafts",
+    "externalItemsCopied": false,
+    "rights": "No third-party problem text reproduced; own draft text; external-source facts are used only as contextual references and cited separately.",
+    "humanVerified": false,
+    "humanApprovedCount": 0
+  }
+}

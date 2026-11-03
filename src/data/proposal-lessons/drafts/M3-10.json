@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-10",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "ax²+bx+c=0에서 a≠0임을 확인하고 D=b²−4ac를 계산한다.\nD의 부호에 따라 서로 다른 두 실근, 중근, 실근 없음(복소수 범위의 두 근)을 판별한다.\nD<0일 때 근의 공식과 i를 사용해 복소수 근을 구하고 원식에 대입해 확인한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "기호·부호가 있는 대입과 다항식 계산, 일차방정식 풀이를 확인해요. 진단 결과는 초안이며 숙달도에 자동 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-10-u1",
+          "title": "먼저 표준형과 계수를 확인해요",
+          "body": "이차방정식은 ax²+bx+c=0 꼴이며 a≠0이에요. 판별식을 쓸 때 a,b,c의 부호를 괄호와 함께 읽어요. 예: x²−4x+13=0이면 a=1,b=−4,c=13이에요.",
+          "activity": "각 항에서 계수 카드를 추출하고 b가 음수인 경우 괄호 표기를 안내해요.",
+          "check": "내 말 또는 식으로 먼저 표준형과 계수를 확인해요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-10-u2",
+          "title": "근의 공식에서 판별식을 얻어요",
+          "body": "근의 공식 x=(-b±√(b²−4ac))/(2a)에서 루트 안의 D=b²−4ac가 실근 개수와 종류를 가려요. D를 먼저 계산하면 제곱근을 평가하기 전에 분류할 수 있어요.",
+          "activity": "근의 공식에서 루트 안을 강조하고 a,b,c가 바뀔 때 계산을 단계별로 다시 보여줘요.",
+          "check": "내 말 또는 식으로 근의 공식에서 판별식을 얻어요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-10-u3",
+          "title": "D가 양수면 서로 다른 두 실근이에요",
+          "body": "D>0이면 √D가 양의 실수이므로 ±가 서로 다른 두 값을 만들어요. 예: x²−5x+6=0에서 D=25−24=1이므로 두 실근이 있어요.",
+          "activity": "수직선 위에서 근의 공식의 두 결과를 다른 점으로 표시하고 식으로도 개수를 적어요.",
+          "check": "내 말 또는 식으로 D가 양수면 서로 다른 두 실근이에요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-10-u4",
+          "title": "D가 0이면 중근 하나예요",
+          "body": "D=0이면 √D=0이라 ± 부분이 사라져 x=−b/(2a) 하나만 나와요. 예: x²−4x+4=0은 D=16−16=0이고 (x−2)²=0이므로 중근 2예요.",
+          "activity": "두 갈래 ± 표시가 한 위치로 겹치는 것을 수직선과 문장으로 보여줘요.",
+          "check": "내 말 또는 식으로 D가 0이면 중근 하나예요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-10-u5",
+          "title": "D가 음수면 실근은 없고 복소수 근을 얻어요",
+          "body": "D<0이면 실수 범위에서 √D를 계산할 수 없어 실근이 없어요. 복소수 범위에서는 √D=i√(−D)로 쓰며 두 켤레복소수 근을 얻어요. 예: x²−4x+13=0은 D=−36이므로 x=2±3i예요.",
+          "activity": "음수 D를 −k로 바꾸고 i√k로 표현하는 과정을 제공해요. 실근 개수 0과 복소수 근 2개를 분리 표기해요.",
+          "check": "내 말 또는 식으로 D가 음수면 실근은 없고 복소수 근을 얻어요의 핵심을 설명할 수 있나요?"
+        },
+        {
+          "id": "m3-10-u6",
+          "title": "분류 뒤 근을 구하고 대입 검산해요",
+          "body": "먼저 D 부호로 실근 개수와 유형을 분류하고, 요구하면 근의 공식으로 값을 구해요. 복소수 근은 원래 식에 대입하거나 근의 합·곱으로 확인할 수 있어요.",
+          "activity": "분류 선택 후 근 계산을 공개하고, 근을 대입한 잔차가 0인지 단계별로 확인해요.",
+          "check": "내 말 또는 식으로 분류 뒤 근을 구하고 대입 검산해요의 핵심을 설명할 수 있나요?"
+        }
+      ],
+      "body": "정의 확인 → 구조 표시 → 원리 적용 → 계산 → 범위 확인 → 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "개념 시각화 실험실",
+      "interaction": "quadratic-discriminant",
+      "settings": {
+        "accessibleTextOutput": true,
+        "keyboardOperable": true,
+        "reducedMotion": true,
+        "initialA": 1,
+        "initialB": -4
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "x²−4x+13=0의 판별식으로 실근 개수를 판정하고 복소수 범위의 근을 구하시오.",
+        "표준형 계수는 a=1,b=−4,c=13이고 a≠0이다.",
+        "D=b²−4ac=(−4)²−4·1·13=16−52=−36<0이므로 실근은 없다.",
+        "복소수 범위에서 √D=√(−36)=6i다.",
+        "근의 공식에 대입하면 x=(4±6i)/2=2±3i다.",
+        "검산: (2±3i)²−4(2±3i)+13=(−5±12i)−8∓12i+13=0.",
+        "정답: 실근은 없고 복소수 범위의 근은 x=2±3i"
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "먼저 어떤 정의·조건이 적용되는지 적고, 단계별로 계산한 뒤 결과를 원래 식에 대조하세요. 이 콘텐츠는 연구용 초안입니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "틀린 답만 표시하지 않고 해당 소단원의 정의·부호·전략 선택 단계로 돌아가 다시 설명해요. 이 초안은 진단 피드백 설계이며 공개 승인 상태가 아닙니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "복습 간격 제안은 1일·3일·7일이며 효과 검증 전입니다. 이 제안 콘텐츠는 개발 검토용 초안이고 공식 성취·평가·게시 콘텐츠가 아닙니다."
+    }
+  ]
+}
