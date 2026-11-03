@@ -1,0 +1,32 @@
+[
+  {
+    "id": "moe-2022-curriculum-order-2022-33",
+    "title": "[교육부 고시 제2022-33호] 초중등학교 교육과정 총론 및 각론 고시",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&statusYN=W",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "교육부 공식 페이지 확인; 본문에 수학과 교육과정은 별책 8이라고 표시. 수학과 첨부 원문은 조항별 검토하지 않음.",
+    "rights": "공식 고시 페이지를 교육과정의 공식 발행처와 첨부의 존재 확인에만 사용. 페이지/첨부/문항을 복제하지 않음.",
+    "use": "공식 수학과 교육과정 문서가 존재한다는 맥락 자료. M4-04~08 제안 단원이나 성취기준 코드의 직접 매핑 근거로 사용하지 않음."
+  },
+  {
+    "id": "moe-2028-integrated-csat-confirmation",
+    "title": "2028 입시부터 선택과목 없는 통합형 수능 확정안",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "교육부 공식 보도 페이지 확인. 통합형 수능 개편 배경과 심화수학 제외 결정문이 보이나, 이 배치의 세부 단원 출제 범위는 대조하지 않음.",
+    "rights": "정책 맥락을 출처와 함께 요약. 첨부 파일 및 기출 문항을 복제하지 않음.",
+    "use": "수능 개편 배경만 설명하며, 제안 단원의 필수성·직접 출제 여부를 추론하지 않음."
+  },
+  {
+    "id": "pedagogy-and-misconception-evidence-status",
+    "title": "교수법·오개념 근거 확인 상태",
+    "publisher": "Research & Content Agent 조사 기록",
+    "url": null,
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "각 단원에 특정한 교수법 효과나 학생 오개념 빈도를 뒷받침하는 실증 자료를 확인하지 않음.",
+    "rights": "외부 연구 결과를 인용하지 않음.",
+    "use": "문항의 대표 오개념은 초안 설계 가설로만 기록하며, 학생 집단에서 보고된 실증 사실처럼 서술하지 않음."
+  }
+]

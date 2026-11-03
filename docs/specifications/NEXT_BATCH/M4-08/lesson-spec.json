@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-08",
+  "levelId": "LEVEL 4",
+  "title": "도형의 대칭이동",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "축·원점 대칭",
+      "대칭 후 방정식"
+    ],
+    "prerequisiteUnits": [
+      "M4-07"
+    ],
+    "visualization": "도형 대칭 겹치기"
+  },
+  "objectives": [
+    "x축·y축·원점 대칭에 따른 점 좌표의 부호 변화를 구분한다.",
+    "대칭된 그래프와 도형의 방정식을 변수 치환으로 만들고 대응 점으로 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-08-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-07: 점 좌표와 도형 방정식의 평행이동 규칙을 구분하고 대입 검산한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-08-skill-1",
+    "m4-08-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "격자 점을 축·원점에 겹쳐 대칭하기 → 대칭별 좌표 부호 규칙 표 작성 → 원점 대칭을 두 축 대칭의 합성으로 확인 → 그래프·도형의 식을 변수 치환으로 바꾸기 → 점과 원 표준형으로 검산 → 대칭 합성과 역관계 확인",
+    "principleDerivation": "점의 상은 x축 대칭 (x,y)→(x,−y), y축 대칭 (x,y)→(−x,y), 원점 대칭 (x,y)→(−x,−y)다. 원래 식 F(x,y)=0의 대칭상은 각 변환이 자기 역변환인 점을 이용해 해당 부호를 변수에 대입하여 구한다. x축·y축 대칭을 연달아 하면 원점 대칭이다.",
+    "naturalNumberConvention": "좌표·정수·실수·제곱근을 쓰는 각 예제에서 기호와 조건을 먼저 밝힌다. 제곱근과 나눗셈은 정의 조건을 확인한다.",
+    "accessibility": "색에만 의존하지 않고 기호·좌표·표와 문장을 함께 제공한다. 입력에는 레이블과 키보드 조작을 지원하며 도형에는 텍스트 대체 설명을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-08-u1",
+      "title": "x축 대칭",
+      "targetSkills": [
+        "m4-08-skill-1"
+      ],
+      "explanation": "x축 대칭은 x좌표를 유지하고 y좌표 부호를 바꾼다.",
+      "activity": "점과 상을 x축 위아래에 놓고 수직 거리를 비교한다.",
+      "check": "(2,−3)의 x축 대칭 좌표를 쓴다."
+    },
+    {
+      "id": "m4-08-u2",
+      "title": "y축 대칭",
+      "targetSkills": [
+        "m4-08-skill-1"
+      ],
+      "explanation": "y축 대칭은 y좌표를 유지하고 x좌표 부호를 바꾼다.",
+      "activity": "점과 상을 y축 양쪽에 놓고 수평 거리를 비교한다.",
+      "check": "(−4,1)의 y축 대칭 좌표를 구한다."
+    },
+    {
+      "id": "m4-08-u3",
+      "title": "원점 대칭",
+      "targetSkills": [
+        "m4-08-skill-1"
+      ],
+      "explanation": "원점 대칭은 두 좌표의 부호를 바꾸며 원점 중심 반 바퀴 회전과 같다.",
+      "activity": "점과 상을 잇는 선분의 중점이 원점인지 확인한다.",
+      "check": "(3,−2)의 원점 대칭 좌표를 찾는다."
+    },
+    {
+      "id": "m4-08-u4",
+      "title": "대칭된 방정식",
+      "targetSkills": [
+        "m4-08-skill-2"
+      ],
+      "explanation": "대칭된 좌표가 원래 식에 대응하도록 x 또는 y의 부호를 바꾸어 식을 쓴다.",
+      "activity": "직선 y=2x+1을 y축에 대칭해 대응 점으로 확인한다.",
+      "check": "대칭식이 (0,1)을 통과하는지 검산한다."
+    },
+    {
+      "id": "m4-08-u5",
+      "title": "원의 중심 대칭",
+      "targetSkills": [
+        "m4-08-skill-2"
+      ],
+      "explanation": "원의 중심은 같은 대칭 규칙으로 옮겨지고 반지름은 유지된다.",
+      "activity": "중심과 원의 일부를 축에 겹쳐 대칭시킨다.",
+      "check": "중심 (2,−1), 반지름 3인 원을 x축 대칭한다."
+    },
+    {
+      "id": "m4-08-u6",
+      "title": "대칭 합성과 되돌리기",
+      "targetSkills": [
+        "m4-08-skill-2"
+      ],
+      "explanation": "x축과 y축 대칭을 연달아 하면 원점 대칭이고 같은 대칭을 두 번 하면 처음으로 돌아온다.",
+      "activity": "좌표와 식에 동일 변환을 두 번 적용한다.",
+      "check": "변환 전후 한 점과 방정식이 일치하는지 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-08-lab",
+      "kind": "math-lab",
+      "interaction": "도형 대칭 겹치기",
+      "description": "점과 원을 축·원점에 대해 반사해 좌표 부호, 대칭 중심, 변환된 식을 함께 표시한다. 색상 외에도 기호와 문장을 사용한다.",
+      "features": [
+        "입력과 도형 조건을 제한해 재현 가능한 결과를 제공한다.",
+        "중간 과정과 도형의 대응을 시각·텍스트로 함께 제시한다.",
+        "키보드 조작과 대체 설명을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "점 좌표의 축·원점 대칭 수행",
+      "그래프·원·직선 방정식의 대칭 치환과 검증",
+      "대칭 합성·역관계 또는 조건에서 대칭상 역추론"
+    ],
+    "assessment": "여섯 문항은 서로 다른 사고 유형을 가진 연습 초안 목표다. 별도 평가 문항은 생성하지 않고 형성평가 기준만 설계한다.",
+    "distinctReasoningRule": "수치·부호만 바꾼 문항은 별도 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "개발 제안 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "x축·y축·원점 대칭에 따른 점 좌표의 부호 변화를 구분한다.",
+        "대칭된 그래프와 도형의 방정식을 변수 치환으로 만들고 대응 점으로 확인한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 관련 선수 기술 또는 해당 소단원으로 돌아간다. 다른 수치나 표현을 가진 새 항목에서 도움 없는 회상을 확인한다. 간격은 검증 전 설계안이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "x축과 y축 대칭에서 바꿀 좌표 부호를 맞바꾼다.",
+    "축 대칭에서 두 좌표 부호를 모두 바꾼다.",
+    "점 좌표 변환과 방정식 변수 치환을 같은 방향으로 적용한다.",
+    "원점 대칭을 90도 회전으로 오해한다."
+  ],
+  "workedExample": {
+    "prompt": "직선 y=2x+1을 y축에 대칭한 식을 구하시오.",
+    "steps": [
+      "y축 대칭은 점 (x,y)를 (−x,y)로 보낸다.",
+      "대칭된 점 (X,Y)가 원래 직선에서 왔다면 원래 x좌표는 −X이고 y좌표는 Y다.",
+      "원래 식에 대입하면 Y=2(−X)+1이다.",
+      "변수 이름을 다시 x,y로 쓰면 y=−2x+1이다. 점 (0,1)은 y축 위에 있어 그대로 남는다."
+    ],
+    "answer": "y=−2x+1"
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum 설계 초안이다. 독립 검토와 Research 대조 전에는 구현 인계나 사람 게시 승인으로 볼 수 없다.",
+    "sourceVerification": "제안 metadata만 저장소에서 확인했다. 공식 성취기준·수능 직접 출제 매핑은 검증하지 않았다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research 자료·권리·오개념·문항 검토",
+      "독립 수학·교수설계 검토 및 답 재계산",
+      "Developer 프리뷰 구현과 QA",
+      "사람의 교육·문항 검수 및 게시 승인"
+    ]
+  }
+}

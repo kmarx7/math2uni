@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-04",
+  "levelId": "LEVEL 4",
+  "title": "점과 직선 사이의 거리",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "수선의 거리",
+      "거리 공식의 활용"
+    ],
+    "prerequisiteUnits": [
+      "M4-03",
+      "M2-16"
+    ],
+    "visualization": "점에서 직선으로 수선"
+  },
+  "objectives": [
+    "점과 직선 사이의 최단 거리가 수선의 길이임을 그림과 말로 설명한다.",
+    "점의 좌표와 직선의 계수로 거리를 계산하고 특수 사례를 통해 결과를 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-04-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-03: 기울기와 수직 조건을 읽고 점에서 직선에 내린 수선이 직선과 직각임을 설명한다."
+    },
+    {
+      "id": "m4-04-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-16: 직각삼각형의 두 직각변과 빗변 사이에 피타고라스 정리를 적용한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-04-skill-1",
+    "m4-04-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "여러 선분 중 수선이 최단임을 관찰 → 수평·수직선까지 좌표 차를 구하기 → ax+by+c=0의 법선 방향을 확인 → 점 대입값과 법선 길이를 이용해 거리 공식의 구조를 설명 → 특수 사례와 계수 배율로 검산",
+    "principleDerivation": "직선 ax+by+c=0의 법선 방향은 (a,b)다. 점 P(x₀,y₀)에서 직선까지의 수선 거리는 |ax₀+by₀+c|/√(a²+b²)다. (a,b)=(0,0)이면 직선 방정식이 아니므로 제외한다. 수평·수직선에 적용했을 때 좌표 차의 절댓값과 일치하는지 먼저 살핀다.",
+    "naturalNumberConvention": "좌표와 계수는 정수·실수를 포함할 수 있다. 제곱근과 나눗셈을 쓰기 전에 정의 조건을 확인하며, 거리는 음수가 될 수 없다.",
+    "accessibility": "색으로만 조건을 구분하지 않고 수식·좌표·문장을 함께 제공한다. 조작에는 레이블을 붙이고 키보드로 접근 가능하게 하며, 도형에는 텍스트 대체 설명을 둔다."
+  },
+  "subunits": [
+    {
+      "id": "m4-04-u1",
+      "title": "수선과 최단 거리",
+      "targetSkills": [
+        "m4-04-skill-1"
+      ],
+      "explanation": "점에서 직선에 내린 수직 선분이 그 점과 직선 사이의 최단 거리다.",
+      "activity": "한 점에서 직선으로 여러 선분을 그리고 직각인 선분을 표시한다.",
+      "check": "비스듬한 선분보다 수선이 짧은 이유를 직각삼각형으로 설명한다."
+    },
+    {
+      "id": "m4-04-u2",
+      "title": "수평선·수직선까지 거리",
+      "targetSkills": [
+        "m4-04-skill-1"
+      ],
+      "explanation": "x=k까지 거리는 |x₀−k|, y=k까지 거리는 |y₀−k|다.",
+      "activity": "격자에서 점을 옮기며 가장 짧은 가로·세로 선분의 길이를 잰다.",
+      "check": "P(2,−1)에서 x=−2까지 거리가 4임을 확인한다."
+    },
+    {
+      "id": "m4-04-u3",
+      "title": "직선의 법선 방향",
+      "targetSkills": [
+        "m4-04-skill-1"
+      ],
+      "explanation": "ax+by+c=0에서 (a,b)는 직선에 수직인 방향을 나타낸다. a와 b가 모두 0이면 직선이 아니다.",
+      "activity": "직선 위의 두 점의 변화와 (a,b)의 방향을 비교한다.",
+      "check": "2x−y+1=0의 법선 방향을 (2,−1)로 읽는다."
+    },
+    {
+      "id": "m4-04-u4",
+      "title": "거리 공식의 구조",
+      "targetSkills": [
+        "m4-04-skill-2"
+      ],
+      "explanation": "점 좌표를 직선식에 넣은 값의 절댓값을 √(a²+b²)로 나누면 수선 거리다.",
+      "activity": "같은 직선의 계수를 모두 2배 하여 계산된 거리가 유지되는지 비교한다.",
+      "check": "공식에서 절댓값과 분모가 필요한 까닭을 각각 설명한다."
+    },
+    {
+      "id": "m4-04-u5",
+      "title": "점과 직선 사이의 거리 계산",
+      "targetSkills": [
+        "m4-04-skill-2"
+      ],
+      "explanation": "P(x₀,y₀)에서 ax+by+c=0까지의 거리는 |ax₀+by₀+c|/√(a²+b²)다.",
+      "activity": "점과 직선식을 바꾸며 대입값과 법선 길이를 따로 표시한다.",
+      "check": "P(1,2)와 3x+4y−5=0 사이의 거리를 6/5로 계산한다."
+    },
+    {
+      "id": "m4-04-u6",
+      "title": "특수 사례로 결과 검산",
+      "targetSkills": [
+        "m4-04-skill-2"
+      ],
+      "explanation": "점이 직선 위에 있으면 거리는 0이다. 수평·수직선에서는 좌표 차와 공식을 비교할 수 있다.",
+      "activity": "점이 직선을 가로지를 때 직선식의 부호와 거리의 부호를 비교한다.",
+      "check": "절댓값과 (a,b)≠(0,0)을 확인해 계산을 검산한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-04-lab",
+      "kind": "math-lab",
+      "interaction": "점에서 직선으로 수선",
+      "description": "제한된 정수 좌표와 직선 계수를 바꾸어 법선 방향, 직선식 대입값, 수선 거리를 단계별로 확인한다.",
+      "features": [
+        "수평·수직선과 직선 위 점을 포함해 경계 사례를 표시한다.",
+        "중간 계산과 도형의 대응을 시각·텍스트로 제공한다.",
+        "키보드 조작과 대체 설명을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "수선과 좌표 차로 수평·수직선까지 거리 해석",
+      "대입값과 법선 길이를 구분해 일반 거리 공식 적용",
+      "계수 배율이나 직선 위 점 같은 조건으로 거리식 검증"
+    ],
+    "assessment": "6개는 검수 대기 연습 초안의 목표 수이며 평가 문항을 생성하지 않는다. 형성평가 기준만 설계한다.",
+    "distinctReasoningRule": "수치나 부호만 바꾼 항목은 새 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 프리뷰는 기존 완료·숙달 기록을 바꾸지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "수선의 길이를 점과 직선 사이 거리로 해석한다.",
+        "거리 공식을 정확히 적용하고 특수 사례로 검산한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 관련 선수 기술 또는 해당 소단원으로 되돌리고, 이후 수치나 표현을 바꾼 항목으로 도움 없는 회상을 확인한다. 간격 정책의 학습 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "수선이 아닌 임의의 선분을 점과 직선 사이의 거리로 본다.",
+    "거리 공식의 절댓값을 빼서 음수 답을 허용한다.",
+    "ax₀+by₀+c만 계산하고 √(a²+b²)로 나누지 않는다.",
+    "(a,b)=(0,0)인 식을 직선으로 취급한다."
+  ],
+  "workedExample": {
+    "prompt": "P(1,2)와 직선 3x+4y−5=0 사이의 거리를 구하시오.",
+    "steps": [
+      "직선 계수는 a=3, b=4, c=−5이고 P의 좌표는 (1,2)다.",
+      "분자는 |3·1+4·2−5|=6이다.",
+      "법선 방향 (3,4)의 길이는 √(3²+4²)=5다.",
+      "따라서 거리는 6/5다. 직선 계수를 모두 2배 해도 분자와 분모가 함께 2배 되어 거리는 같다."
+    ],
+    "answer": "6/5"
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "교육 설계 초안이며 Research와 독립 검토 이후에만 개발 프리뷰 대상으로 인계한다. 사람 게시 승인을 뜻하지 않는다.",
+    "sourceVerification": "제안 metadata만 저장소에서 확인했다. 공식 성취기준·수능 범위 매핑은 검증하지 않았다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research의 출처·권리·오개념·문항 초안 검토",
+      "독립 수학·교수설계 검토 및 정답 재계산",
+      "개발 프리뷰 구현과 QA",
+      "사람의 교육·문항 검수 및 별도 게시 승인"
+    ]
+  }
+}

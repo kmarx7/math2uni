@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-08",
+  "contentVersion": "0.1.0-draft",
+  "status": "automated-checks-passed-with-known-instructional-gaps",
+  "automatedChecks": {
+    "lessonSchema": "passed",
+    "practiceItems": "6-draft-items-3-families",
+    "answerRules": "all-expected-answers-grade-correct",
+    "publicAnswerSecrecy": "passed",
+    "productionDraftGate": "passed",
+    "unitProgressIsolation": "passed",
+    "humanReview": "pending",
+    "publicationApproval": "pending"
+  },
+  "batchChecks": {
+    "lint": "passed-clean",
+    "typecheck": "passed-npm-run-typecheck",
+    "test": "passed-19-files-148-tests",
+    "test:e2e": "blocked-before-tests-listen-EPERM-127.0.0.1-54329",
+    "build": "passed-npm-run-build",
+    "diffCheck": "passed-git-diff-check"
+  },
+  "knownLimitations": [
+    "대칭 순서 합성 사례를 풀이 단계와 함께 worked example로 보강할 필요가 있다."
+  ],
+  "officialStandards": [],
+  "publicationAllowed": false
+}

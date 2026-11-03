@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-04",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "점과 직선 사이의 최단 거리가 수선의 길이임을 설명하고, 좌표와 직선식으로 거리를 구한 뒤 특수 사례로 확인해요."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "M4-03: 기울기와 수직 조건을 읽고 점에서 직선으로 내린 수선이 직각임을 설명해요. M2-16: 직각삼각형에 피타고라스 정리를 적용해요. 진단은 준비 안내용이며 숙달도나 완료 점수에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-04-u1",
+          "title": "수선과 최단 거리",
+          "body": "점에서 직선에 내린 수직 선분이 최단 거리다.",
+          "activity": "한 점에서 직선 위 여러 점으로 선분을 그려 수선과 비교한다.",
+          "check": "직각삼각형에서 수선이 가장 짧은 이유를 설명한다."
+        },
+        {
+          "id": "m4-04-u2",
+          "title": "수평선·수직선까지 거리",
+          "body": "x=k까지는 |x₀-k|, y=k까지는 |y₀-k|만큼 이동한다.",
+          "activity": "격자 위 점을 옮겨 가장 짧은 가로·세로 선분 길이를 비교한다.",
+          "check": "P(2,-1)에서 x=-2까지 좌표 차로 거리를 구한다."
+        },
+        {
+          "id": "m4-04-u3",
+          "title": "직선의 법선 방향",
+          "body": "ax+by+c=0에서 (a,b)는 직선에 수직인 방향이다. a,b가 모두 0이면 직선 방정식이 아니다.",
+          "activity": "직선 위 두 점의 변화와 (a,b)를 함께 표시한다.",
+          "check": "2x-y+1=0의 법선 방향을 읽는다."
+        },
+        {
+          "id": "m4-04-u4",
+          "title": "거리 공식의 구조",
+          "body": "점 좌표를 직선식에 넣은 값의 절댓값을 √(a²+b²)로 나누면 수선 거리다.",
+          "activity": "계수를 동시에 같은 배수로 바꾸어 분자와 분모의 변화를 비교한다.",
+          "check": "절댓값과 분모가 필요한 까닭을 설명한다."
+        },
+        {
+          "id": "m4-04-u5",
+          "title": "점과 직선 사이의 거리 계산",
+          "body": "P(x₀,y₀)에서 ax+by+c=0까지 거리는 |ax₀+by₀+c|/√(a²+b²)다.",
+          "activity": "점과 직선식을 바꾸며 대입값과 법선 길이를 나누어 표시한다.",
+          "check": "P(1,2), 3x+4y-5=0을 차례로 계산한다."
+        },
+        {
+          "id": "m4-04-u6",
+          "title": "특수 사례로 결과 검산",
+          "body": "점이 직선 위면 거리는 0이며 수평·수직선에서는 좌표 차와 공식 결과가 같다.",
+          "activity": "직선식을 가로지를 때 식의 부호와 거리의 비음수성을 비교한다.",
+          "check": "절댓값과 (a,b)≠(0,0)을 확인해 검산한다."
+        }
+      ],
+      "body": "수선의 뜻 → 축에 평행한 직선 → 법선 방향 → 공식의 구조 → 계산 → 특수 사례 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "점에서 직선으로 수선 (미리보기 대응: coordinate-plane)",
+      "interaction": "coordinate-plane",
+      "settings": {
+        "initialA": 3,
+        "initialB": 4
+      },
+      "description": "명세의 m4-04-lab에 대한 임시 renderer 대응 표현입니다. 점·직선 계수의 제한 조작과 수선 길이를 보여 주는 전용 활동은 별도 구현·QA 전입니다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "점과 직선 사이의 거리 계산",
+      "steps": [
+        "P(1,2)와 직선 3x+4y−5=0 사이의 거리를 구해요.",
+        "a=3, b=4, c=−5, (x₀,y₀)=(1,2)예요.",
+        "분자는 |3·1+4·2−5|=|6|=6이에요.",
+        "분모는 √(3²+4²)=√25=5예요.",
+        "따라서 거리는 6/5예요. 계수를 모두 2배 해도 분자와 분모가 함께 2배라 같은 거리가 나와요."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "이 문항은 연구용 초안이에요. 제출 전에 정답과 해설을 보내지 않으며, 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "점 대입값, 절댓값, 법선 길이, 직선 조건 중 어느 부분을 놓쳤는지 확인하고 해당 개념으로 돌아가요. 오개념은 검증된 빈도 자료가 아니라 검토할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습은 제안 간격이며 효과는 검증 전이에요. 거리 공식을 설명하고 원과 직선의 위치 관계로 이어지는 준비 개념을 확인해요."
+    }
+  ]
+}

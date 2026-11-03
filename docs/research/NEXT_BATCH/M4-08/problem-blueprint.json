@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-08",
+  "unitTitle": "도형의 대칭이동",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-08-family-1",
+      "status": "draft",
+      "title": "축·원점 대칭으로 점 좌표 구하기",
+      "reasoningStructure": "대칭축에 수직인 좌표의 부호만 바꾸거나 원점 대칭에서 두 좌표 부호를 바꾼다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-08-skill-1",
+      "distinctFrom": "방정식 변환이나 대칭 합성 추론과 달리 한 점의 좌표 대응을 직접 수행한다.",
+      "items": [
+        {
+          "id": "m408p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "점 (2,-3)을 x축에 대칭한 점은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x축 대칭은 (x,y)→(x,-y)이므로 (2,3)이다.",
+          "skillLabel": "m4-08-skill-1",
+          "misconceptionHypothesis": "x축 대칭에서 x좌표의 부호를 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(2,3)"
+            },
+            {
+              "id": "B",
+              "label": "(-2,-3)"
+            },
+            {
+              "id": "C",
+              "label": "(-2,3)"
+            }
+          ]
+        },
+        {
+          "id": "m408p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "점 (-4,1)을 y축에 대칭한 점은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "y축 대칭은 (x,y)→(-x,y)이므로 (4,1)이다.",
+          "skillLabel": "m4-08-skill-1",
+          "misconceptionHypothesis": "y축 대칭에서 y좌표의 부호를 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(-4,-1)"
+            },
+            {
+              "id": "B",
+              "label": "(4,1)"
+            },
+            {
+              "id": "C",
+              "label": "(4,-1)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-08-family-2",
+      "status": "draft",
+      "title": "그래프·도형 방정식에 대칭 치환 적용하기",
+      "reasoningStructure": "대칭상의 한 점이 원래 도형의 식을 만족하도록 변수의 부호를 바꿔 새 방정식을 만든다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-08-skill-2",
+      "distinctFrom": "좌표 점 하나의 대칭과 달리 직선·원 전체가 만족하는 식을 바꾸고 대응 점으로 확인한다.",
+      "items": [
+        {
+          "id": "m408p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "직선 y=2x+1을 y축에 대칭한 직선은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "y축 대칭은 원래 x에 -x를 넣어 y=2(-x)+1=-2x+1을 얻는다.",
+          "skillLabel": "m4-08-skill-2",
+          "misconceptionHypothesis": "그래프 점 이동과 식의 치환에서 부호 방향을 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "y=-2x+1"
+            },
+            {
+              "id": "B",
+              "label": "y=2x-1"
+            },
+            {
+              "id": "C",
+              "label": "y=-2x-1"
+            }
+          ]
+        },
+        {
+          "id": "m408p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "원 (x-2)²+(y+1)²=9를 x축에 대칭한 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "중심 (2,-1)이 (2,1)로 옮고 반지름은 그대로이므로 (x-2)²+(y-1)²=9다.",
+          "skillLabel": "m4-08-skill-2",
+          "misconceptionHypothesis": "x축 대칭에서 x좌표를 바꾸거나 반지름을 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(x+2)²+(y+1)²=9"
+            },
+            {
+              "id": "B",
+              "label": "(x-2)²+(y-1)²=3"
+            },
+            {
+              "id": "C",
+              "label": "(x-2)²+(y-1)²=9"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-08-family-3",
+      "status": "draft",
+      "title": "대칭의 합성·역관계로 조건 역추론하기",
+      "reasoningStructure": "두 축 대칭의 합성과 같은 대칭을 다시 적용하는 역관계를 이용해 점이나 식이 원래대로 돌아오는지 검증한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-08-skill-2",
+      "distinctFrom": "단일 점/식 변환을 수행하는 대신 변환의 합성과 불변 조건을 이용해 결과를 추론한다.",
+      "items": [
+        {
+          "id": "m408p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "점 (3,-2)에 먼저 x축 대칭, 다음 y축 대칭을 하면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x축 대칭으로 (3,2), y축 대칭으로 (-3,2)가 된다. 이는 원점 대칭 결과와 같다.",
+          "skillLabel": "m4-08-skill-2",
+          "misconceptionHypothesis": "대칭 두 번에서 같은 좌표의 부호를 다시 원래대로 되돌린다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(3,2)"
+            },
+            {
+              "id": "B",
+              "label": "(-3,2)"
+            },
+            {
+              "id": "C",
+              "label": "(-3,-2)"
+            }
+          ]
+        },
+        {
+          "id": "m408p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "직선 y=2x+1을 x축과 y축에 차례로 대칭하면 마지막 직선의 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x축 대칭으로 y=-2x-1, 이어 y축 대칭으로 y=2x-1이다. 두 변환은 원점 대칭과 같고 결과는 y=2x-1이다.",
+          "skillLabel": "m4-08-skill-2",
+          "misconceptionHypothesis": "원점 대칭을 한 축 대칭으로 처리하거나 상수항 부호를 유지한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "y=2x-1"
+            },
+            {
+              "id": "B",
+              "label": "y=-2x+1"
+            },
+            {
+              "id": "C",
+              "label": "y=-2x-1"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 세 사고 구조에 두 문항씩 연습 초안 여섯 개를 둔다. 평가 문항은 추가하지 않고 필수 학습량과 은행 크기를 구분한다."
+  },
+  "sourceStatus": "교육부 고시 페이지의 수학과 별책 존재 및 2028 정책 맥락만 확인; 첨부 원문·단원별 공식 매핑 미검증. 모든 문항은 자체 초안이며 제3자 문항을 재현하지 않음."
+}

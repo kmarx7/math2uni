@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-04",
+  "contentVersion": "0.1.0-draft",
+  "status": "automated-checks-passed-with-known-instructional-gaps",
+  "automatedChecks": {
+    "lessonSchema": "passed",
+    "practiceItems": "6-draft-items-3-families",
+    "answerRules": "all-expected-answers-grade-correct",
+    "publicAnswerSecrecy": "passed",
+    "productionDraftGate": "passed",
+    "unitProgressIsolation": "passed",
+    "humanReview": "pending",
+    "publicationApproval": "pending"
+  },
+  "batchChecks": {
+    "lint": "passed-clean",
+    "typecheck": "passed-npm-run-typecheck",
+    "test": "passed-19-files-148-tests",
+    "test:e2e": "blocked-before-tests-listen-EPERM-127.0.0.1-54329",
+    "build": "passed-npm-run-build",
+    "diffCheck": "passed-git-diff-check"
+  },
+  "knownLimitations": [
+    "법선 계수 (a,b)=(0,0)은 유효한 직선이 아니므로 프리뷰에서 유효한 계수로 대체하며, 일반 공식 유도는 worked example에 더 보강할 필요가 있다."
+  ],
+  "officialStandards": [],
+  "publicationAllowed": false
+}

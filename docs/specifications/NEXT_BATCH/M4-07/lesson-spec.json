@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-07",
+  "levelId": "LEVEL 4",
+  "title": "도형의 평행이동",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "좌표의 이동",
+      "방정식의 이동"
+    ],
+    "prerequisiteUnits": [
+      "M4-02",
+      "M4-05"
+    ],
+    "visualization": "도형과 좌표 이동"
+  },
+  "objectives": [
+    "점과 도형의 평행이동을 이동벡터와 좌표 덧셈으로 나타낸다.",
+    "그래프·방정식의 이동 규칙을 적용하고 원래 점과 새 점을 대응시켜 부호를 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-07-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-02: 좌표평면에서 점과 직선 그래프를 읽고 방정식의 변화를 해석한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "m4-07-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-05: 원의 중심·반지름과 표준형을 연결해 중심 이동을 읽는다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-07-skill-1",
+    "m4-07-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "격자에서 같은 화살표로 점·도형 옮기기 → 이동벡터를 좌표에 더하기 → 그래프의 수평·수직 이동 읽기 → 원래 방정식에 역방향 변수 치환 유도 → 원 중심·반지름으로 검산 → 이동 합성·역이동 확인",
+    "principleDerivation": "오른쪽 h, 위쪽 k만큼 평행이동하면 각 점 (x,y)는 (x+h,y+k)가 된다. 원래 그래프 F(x,y)=0의 상은 F(x−h,y−k)=0이다. 식 안 치환 부호가 점의 이동과 반대처럼 보이므로 원래 점을 이동해 새 식에 대입하여 검산한다.",
+    "naturalNumberConvention": "좌표·정수·실수·제곱근을 쓰는 각 예제에서 기호와 조건을 먼저 밝힌다. 제곱근과 나눗셈은 정의 조건을 확인한다.",
+    "accessibility": "색에만 의존하지 않고 기호·좌표·표와 문장을 함께 제공한다. 입력에는 레이블과 키보드 조작을 지원하며 도형에는 텍스트 대체 설명을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-07-u1",
+      "title": "이동벡터와 점",
+      "targetSkills": [
+        "m4-07-skill-1"
+      ],
+      "explanation": "(h,k) 이동은 x좌표에 h, y좌표에 k를 더한다. 음수는 왼쪽 또는 아래쪽이다.",
+      "activity": "격자 위 점을 벡터 화살표만큼 옮기고 좌표를 기록한다.",
+      "check": "(−1,2)를 오른쪽 3, 아래 1 옮긴다."
+    },
+    {
+      "id": "m4-07-u2",
+      "title": "도형의 모든 점 이동",
+      "targetSkills": [
+        "m4-07-skill-1"
+      ],
+      "explanation": "평행이동은 모든 점에 같은 벡터를 더해 모양과 크기를 유지한다.",
+      "activity": "삼각형 세 꼭짓점을 같은 벡터만큼 이동해 변 길이를 비교한다.",
+      "check": "꼭짓점 모두에 같은 변화량이 적용됐는지 확인한다."
+    },
+    {
+      "id": "m4-07-u3",
+      "title": "그래프의 이동",
+      "targetSkills": [
+        "m4-07-skill-1"
+      ],
+      "explanation": "y=f(x)는 오른쪽 h, 위쪽 k 이동 뒤 y=f(x−h)+k가 된다.",
+      "activity": "기준점과 이동점 짝을 연결해 좌표 변화량을 읽는다.",
+      "check": "y=x²를 오른쪽 2, 위 1 이동한 식을 쓴다."
+    },
+    {
+      "id": "m4-07-u4",
+      "title": "방정식의 변수 치환",
+      "targetSkills": [
+        "m4-07-skill-2"
+      ],
+      "explanation": "F(x,y)=0은 (h,k) 이동 뒤 F(x−h,y−k)=0이 된다.",
+      "activity": "원 중심 이동과 괄호 안 부호를 나란히 비교한다.",
+      "check": "x²+y²=4를 왼쪽 1, 위 3 이동한다."
+    },
+    {
+      "id": "m4-07-u5",
+      "title": "원으로 결과 확인",
+      "targetSkills": [
+        "m4-07-skill-2"
+      ],
+      "explanation": "원 중심은 이동벡터만큼 바뀌고 반지름은 그대로다.",
+      "activity": "중심 좌표와 새 원 표준형을 각각 읽어 비교한다.",
+      "check": "(x−1)²+(y+2)²=9를 오른쪽 2, 아래 1 이동한다."
+    },
+    {
+      "id": "m4-07-u6",
+      "title": "연속 이동과 역이동",
+      "targetSkills": [
+        "m4-07-skill-2"
+      ],
+      "explanation": "연속 이동은 벡터를 더하고, 반대 벡터를 적용하면 원래 자리로 돌아온다.",
+      "activity": "두 화살표를 합성한 뒤 역벡터를 적용한다.",
+      "check": "좌표에 이동과 역이동을 차례로 적용해 원래 값을 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-07-lab",
+      "kind": "math-lab",
+      "interaction": "도형과 좌표 이동",
+      "description": "정수 이동벡터를 조절해 점·삼각형·원의 좌표와 방정식을 함께 갱신한다. 대응하는 원래 점과 새 점, 치환 부호를 텍스트로 표시한다.",
+      "features": [
+        "입력과 도형 조건을 제한해 재현 가능한 결과를 제공한다.",
+        "중간 과정과 도형의 대응을 시각·텍스트로 함께 제시한다.",
+        "키보드 조작과 대체 설명을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "점·꼭짓점 좌표에 평행이동 벡터 적용",
+      "그래프·원 방정식에 변수 치환으로 이동 적용",
+      "합성 이동이나 역이동으로 미지 벡터·좌표 추론"
+    ],
+    "assessment": "여섯 문항은 서로 다른 사고 유형을 가진 연습 초안 목표다. 별도 평가 문항은 생성하지 않고 형성평가 기준만 설계한다.",
+    "distinctReasoningRule": "수치·부호만 바꾼 문항은 별도 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "개발 제안 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "점과 도형의 평행이동을 이동벡터와 좌표 덧셈으로 나타낸다.",
+        "그래프·방정식의 이동 규칙을 적용하고 원래 점과 새 점을 대응시켜 부호를 검산한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 관련 선수 기술 또는 해당 소단원으로 돌아간다. 다른 수치나 표현을 가진 새 항목에서 도움 없는 회상을 확인한다. 간격은 검증 전 설계안이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "이동벡터를 좌표에 더할 때 왼쪽·아래쪽 부호를 바꿔 쓴다.",
+    "도형의 점 이동과 방정식 변수 치환의 부호 방향을 혼동한다.",
+    "이동 후 반지름이나 모양이 바뀐다고 생각한다.",
+    "가로·세로 이동 성분을 서로 바꾼다."
+  ],
+  "workedExample": {
+    "prompt": "원 (x−1)²+(y+2)²=9를 오른쪽 2, 아래 1만큼 이동하시오.",
+    "steps": [
+      "원래 중심은 (1,−2), 반지름은 3이다.",
+      "이동벡터 (2,−1)을 더하면 새 중심은 (3,−3)이다.",
+      "반지름은 유지되므로 새 식은 (x−3)²+(y+3)²=9이다.",
+      "원래 식에서 x 대신 x−2, y 대신 y+1을 넣어 같은 식을 얻는지 확인한다."
+    ],
+    "answer": "(x−3)²+(y+3)²=9"
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum 설계 초안이다. 독립 검토와 Research 대조 전에는 구현 인계나 사람 게시 승인으로 볼 수 없다.",
+    "sourceVerification": "제안 metadata만 저장소에서 확인했다. 공식 성취기준·수능 직접 출제 매핑은 검증하지 않았다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research 자료·권리·오개념·문항 검토",
+      "독립 수학·교수설계 검토 및 답 재계산",
+      "Developer 프리뷰 구현과 QA",
+      "사람의 교육·문항 검수 및 게시 승인"
+    ]
+  }
+}

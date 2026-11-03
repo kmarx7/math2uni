@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-06",
+  "unitTitle": "원과 직선의 위치 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-06-family-1",
+      "status": "draft",
+      "title": "직선을 원에 대입해 교점 수 세기",
+      "reasoningStructure": "직선 조건을 원 식에 넣어 한 변수 이차방정식을 만들고 서로 다른 실근 개수로 교점 수를 판단한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-06-skill-1",
+      "distinctFrom": "중심과 직선 사이 거리 비교 가족과 달리 대입·이차식·근으로 교점 개수를 결정한다.",
+      "items": [
+        {
+          "id": "m406p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "원 x²+y²=25와 직선 y=3의 교점은 몇 개인가?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "y=3을 대입하면 x²+9=25, x²=16이므로 x=±4의 두 교점이다.",
+          "skillLabel": "m4-06-skill-1",
+          "misconceptionHypothesis": "제곱근의 양·음 두 해 중 하나를 빠뜨린다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m406p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "원 x²+y²=9와 직선 y=3은 몇 점에서 만나는가?",
+          "answer": {
+            "type": "integer",
+            "value": "1"
+          },
+          "rationale": "y=3을 대입하면 x²+9=9, x=0 하나이므로 한 점에서 접한다.",
+          "skillLabel": "m4-06-skill-1",
+          "misconceptionHypothesis": "중근을 서로 다른 두 교점으로 센다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-06-family-2",
+      "status": "draft",
+      "title": "중심과 직선 사이 거리로 관계 판정하기",
+      "reasoningStructure": "중심에서 직선까지 거리 d와 반지름 r을 비교해 d<r, d=r, d>r에 해당하는 관계를 정한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-06-skill-2",
+      "distinctFrom": "대수 대입·근 계산과 달리 중심·수선 거리·반지름의 기하적 비교로 판정한다.",
+      "items": [
+        {
+          "id": "m406p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "중심 (0,0), 반지름 5인 원과 직선 y=3의 교점 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "중심에서 y=3까지 거리는 3이며 3<5이므로 두 점에서 만난다.",
+          "skillLabel": "m4-06-skill-2",
+          "misconceptionHypothesis": "반지름보다 거리가 작을 때 만나지 않는다고 반대로 판단한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m406p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "중심 (1,2), 반지름 3인 원과 직선 x=1의 교점 수는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "중심에서 x=1까지 거리는 0이므로 0<3, 두 교점이 있다.",
+          "skillLabel": "m4-06-skill-2",
+          "misconceptionHypothesis": "직선이 중심을 지나면 교점이 한 개라고 생각한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-06-family-3",
+      "status": "draft",
+      "title": "대수·기하 조건을 교차 검산하기",
+      "reasoningStructure": "대입식에서 얻은 근 조건과 거리-반지름 비교 결과를 맞춰 접선 또는 분리 상황의 경계값을 확인한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-06-skill-2",
+      "distinctFrom": "단일 방법으로 분류하는 가족과 달리 같은 상황을 대수와 기하 두 방법으로 검증한다.",
+      "items": [
+        {
+          "id": "m406p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "원 x²+y²=25와 직선 3x+4y=25의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "중심에서 직선까지 거리는 25/√(9+16)=25/5=5로 반지름과 같다. 따라서 한 점에서 접한다.",
+          "skillLabel": "m4-06-skill-2",
+          "misconceptionHypothesis": "법선 계수의 길이를 계산하지 않거나 d=r을 두 교점으로 본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 다른 두 점에서 만남"
+            },
+            {
+              "id": "B",
+              "label": "한 점에서 접함"
+            },
+            {
+              "id": "C",
+              "label": "만나지 않음"
+            }
+          ]
+        },
+        {
+          "id": "m406p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "중심 (0,0), 반지름 3인 원과 직선 y=4는 어떤 관계인가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "중심에서 직선까지 거리는 4이며 4>3이므로 만나지 않는다.",
+          "skillLabel": "m4-06-skill-2",
+          "misconceptionHypothesis": "d>r과 d<r의 교점 수 조건을 바꿔 기억한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 다른 두 점"
+            },
+            {
+              "id": "B",
+              "label": "한 점에서 접함"
+            },
+            {
+              "id": "C",
+              "label": "교점 없음"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 세 사고 구조에 두 문항씩 연습 초안 여섯 개를 둔다. 평가 문항은 추가하지 않고 필수 학습량과 은행 크기를 구분한다."
+  },
+  "sourceStatus": "교육부 고시 페이지의 수학과 별책 존재 및 2028 정책 맥락만 확인; 첨부 원문·단원별 공식 매핑 미검증. 모든 문항은 자체 초안이며 제3자 문항을 재현하지 않음."
+}

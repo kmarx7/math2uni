@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-04",
+  "unitTitle": "점과 직선 사이의 거리",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-04-family-1",
+      "status": "draft",
+      "title": "수평·수직선까지 거리와 수선 길이 해석",
+      "reasoningStructure": "좌표축과 평행한 선분에서는 변하지 않는 좌표를 확인하고 다른 좌표 차의 절댓값으로 최단 수선 길이를 구한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-04-skill-1",
+      "distinctFrom": "일반 직선식에 점을 대입하고 법선 길이로 나누는 공식 적용, 계수 배율·정의 조건 점검과 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m404p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "P(3,2)에서 수직선 x=-1까지의 거리는 얼마인가?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "수직선까지는 x좌표 차의 절댓값이다. |3-(-1)|=4.",
+          "skillLabel": "m4-04-skill-1",
+          "misconceptionHypothesis": "x좌표의 부호를 빼먹거나 y좌표 차를 계산한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m404p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "P(-2,5)에서 수평선 y=1까지의 거리는 얼마인가?",
+          "answer": {
+            "type": "integer",
+            "value": "4"
+          },
+          "rationale": "수평선까지는 y좌표 차의 절댓값이다. |5-1|=4.",
+          "skillLabel": "m4-04-skill-1",
+          "misconceptionHypothesis": "수평선을 x가 고정된 선으로 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-04-family-2",
+      "status": "draft",
+      "title": "점 대입값과 법선 길이를 나누어 거리 계산",
+      "reasoningStructure": "직선 계수로 대입값의 절댓값을 구하고 법선벡터 길이 √(a²+b²)를 계산해 나눈다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-04-skill-2",
+      "distinctFrom": "수평·수직 좌표 차를 읽거나 식의 동치성과 정의 조건을 검토하는 대신 일반 공식의 분자·분모를 각각 계산한다.",
+      "items": [
+        {
+          "id": "m404p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "fraction",
+          "prompt": "P(1,2)와 직선 3x+4y-5=0 사이의 거리는?",
+          "answer": {
+            "type": "fraction",
+            "value": "6/5"
+          },
+          "rationale": "분자는 |3·1+4·2-5|=6, 분모는 √(3²+4²)=5이므로 6/5다.",
+          "skillLabel": "m4-04-skill-2",
+          "misconceptionHypothesis": "대입값 6을 거리로 답하고 법선 길이로 나누지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m404p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "P(-1,2)와 직선 x+2y-3=0 사이의 거리는?",
+          "answer": {
+            "type": "integer",
+            "value": "0"
+          },
+          "rationale": "|(-1)+2·2-3|=0이므로 점은 직선 위에 있고 거리는 0이다.",
+          "skillLabel": "m4-04-skill-2",
+          "misconceptionHypothesis": "직선 위 점의 거리를 양수로 쓰거나 절댓값을 생략한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-04-family-3",
+      "status": "draft",
+      "title": "계수 배율과 직선 방정식 조건 검증",
+      "reasoningStructure": "같은 직선을 나타내는 계수 배율의 영향을 확인하고 법선 계수가 모두 0인 식을 직선으로 오인하지 않는다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-04-skill-2",
+      "distinctFrom": "공식의 수치 대입이나 좌표축 평행선의 좌표 차 대신 표현의 동치성과 거리 공식의 정의 조건을 검사한다.",
+      "items": [
+        {
+          "id": "m404p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "P(1,2)에서 3x+4y-5=0까지 거리가 6/5라면 같은 직선 6x+8y-10=0까지의 거리는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "두 번째 식은 계수를 2배 한 식이다. 분자와 분모가 함께 2배되어 거리는 6/5로 같다.",
+          "skillLabel": "m4-04-skill-2",
+          "misconceptionHypothesis": "계수 배율을 분자에만 적용한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "6/5"
+            },
+            {
+              "id": "B",
+              "label": "12/5"
+            },
+            {
+              "id": "C",
+              "label": "3/5"
+            }
+          ]
+        },
+        {
+          "id": "m404p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "0x+0y+2=0은 직선을 나타내는 방정식인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "0=−2를 만족하는 점이 없다. x,y의 계수가 모두 0이므로 (a,b)≠(0,0) 조건을 만족하지 않아 직선이 아니다.",
+          "skillLabel": "m4-04-skill-2",
+          "misconceptionHypothesis": "x,y 계수가 모두 0인 식을 직선으로 취급한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check-only; Curriculum independent agent review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예, 모든 점이 만족한다"
+            },
+            {
+              "id": "B",
+              "label": "아니요, 만족하는 점이 없어 직선이 아니다"
+            },
+            {
+              "id": "C",
+              "label": "아니요, 점 (0,0)만 만족한다"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 세 추론 가족에 두 문항씩 연습 초안 여섯 개를 둔다. 평가 문항은 추가하지 않았으며 필수 학습량과 은행 크기를 구분한다."
+  },
+  "sourceStatus": "교육부 교육과정 고시 페이지와 정책 맥락만 확인; 수학과 첨부 원문 및 단원별 매핑 미검증. 문항은 자체 초안이며 제3자 문항을 재현하지 않음."
+}

@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-06",
+  "levelId": "LEVEL 4",
+  "title": "원과 직선의 위치 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "교점 개수",
+      "접선의 조건"
+    ],
+    "prerequisiteUnits": [
+      "M4-05",
+      "M4-04",
+      "M3-10"
+    ],
+    "visualization": "직선과 원 교점"
+  },
+  "objectives": [
+    "직선을 원의 식에 대입하고 판별식 또는 근으로 교점 개수를 판단한다.",
+    "중심과 직선 사이의 거리 d, 반지름 r을 비교해 두 점 교차·접함·분리 조건을 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-06-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-05: 원의 표준형에서 중심·반지름을 읽고 점을 방정식에 대입한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "m4-06-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-04: 중심에서 직선까지 수선 거리를 계산한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "m4-06-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-10: 이차방정식 판별식의 부호로 실근 개수를 분류한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-06-skill-1",
+    "m4-06-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "공통점의 뜻 확인 → 직선을 원에 대입해 한 변수 이차식 만들기 → 근·판별식과 교점 수 연결 → 중심에서 직선으로 수선을 내리기 → 거리 d와 반지름 r 비교 → 대수·기하 판정이 같은지 검산",
+    "principleDerivation": "비퇴화 원에서 중심과 직선 사이의 거리를 d, 반지름을 r이라 하면 d<r이면 서로 다른 두 교점, d=r이면 한 접점, d>r이면 교점이 없다. 직선식을 원에 대입하면 이차식이 되고 판별식의 양수·0·음수가 각각 세 경우와 대응한다. 접점의 반지름은 접선과 수직이다.",
+    "naturalNumberConvention": "좌표·정수·실수·제곱근을 쓰는 각 예제에서 기호와 조건을 먼저 밝힌다. 제곱근과 나눗셈은 정의 조건을 확인한다.",
+    "accessibility": "색에만 의존하지 않고 기호·좌표·표와 문장을 함께 제공한다. 입력에는 레이블과 키보드 조작을 지원하며 도형에는 텍스트 대체 설명을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-06-u1",
+      "title": "공통점과 교점",
+      "targetSkills": [
+        "m4-06-skill-1"
+      ],
+      "explanation": "교점은 원과 직선 두 식을 동시에 만족하는 좌표다.",
+      "activity": "원의 위치에 직선을 움직여 공통점이 0·1·2개인 모습을 본다.",
+      "check": "후보 좌표를 두 식 모두에 대입한다."
+    },
+    {
+      "id": "m4-06-u2",
+      "title": "직선 대입으로 식 만들기",
+      "targetSkills": [
+        "m4-06-skill-1"
+      ],
+      "explanation": "직선식을 원의 식에 대입하면 한 변수 이차방정식이 된다.",
+      "activity": "원 x²+y²=9에 수평선 y=k를 대입해 식을 만든다.",
+      "check": "y=0일 때 x 후보를 구한다."
+    },
+    {
+      "id": "m4-06-u3",
+      "title": "판별식과 교점 수",
+      "targetSkills": [
+        "m4-06-skill-1"
+      ],
+      "explanation": "이차식의 판별식이 양수면 서로 다른 실근 2개, 0이면 중근 1개, 음수면 실근이 없다.",
+      "activity": "k를 바꾸며 판별식 부호와 그림의 만남 수를 연결한다.",
+      "check": "y=3 대입 결과가 중근인지 확인한다."
+    },
+    {
+      "id": "m4-06-u4",
+      "title": "중심에서 직선까지 거리",
+      "targetSkills": [
+        "m4-06-skill-2"
+      ],
+      "explanation": "원의 중심에서 직선으로 내린 수선 거리 d와 반지름 r을 비교한다.",
+      "activity": "수선을 그어 중심에서 직선까지 길이를 반지름과 겹쳐 본다.",
+      "check": "중심 (0,0)과 y=3 사이 거리 3을 구한다."
+    },
+    {
+      "id": "m4-06-u5",
+      "title": "접선의 조건",
+      "targetSkills": [
+        "m4-06-skill-2"
+      ],
+      "explanation": "d=r이면 직선은 원에 접한다. 접점에 그은 반지름은 접선에 수직이다.",
+      "activity": "접점·중심을 연결해 직각을 표시한다.",
+      "check": "x²+y²=9, y=3의 접점과 수직 조건을 확인한다."
+    },
+    {
+      "id": "m4-06-u6",
+      "title": "두 방법의 교차 검산",
+      "targetSkills": [
+        "m4-06-skill-2"
+      ],
+      "explanation": "거리 비교와 판별식은 같은 교점 상황을 서로 다른 방법으로 판정한다.",
+      "activity": "한 원의 직선 위치를 바꾸어 세 경우를 표로 정리한다.",
+      "check": "서로 다른 판정이 나오면 대입·부호·거리 계산을 재검토한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-06-lab",
+      "kind": "math-lab",
+      "interaction": "직선과 원 교점",
+      "description": "중심, 반지름, 수평·수직 직선 위치를 정수 조절기로 바꾸고 거리 비교와 예상 교점 수를 텍스트·좌표 표시로 함께 갱신한다.",
+      "features": [
+        "입력과 도형 조건을 제한해 재현 가능한 결과를 제공한다.",
+        "중간 과정과 도형의 대응을 시각·텍스트로 함께 제시한다.",
+        "키보드 조작과 대체 설명을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "직선 대입 후 이차식의 실근 또는 판별식으로 교점 수 계산",
+      "중심-직선 거리와 반지름 비교로 교차·접선·분리 판정",
+      "접점과 반지름의 수직 관계를 대수·기하 조건으로 검증"
+    ],
+    "assessment": "여섯 문항은 서로 다른 사고 유형을 가진 연습 초안 목표다. 별도 평가 문항은 생성하지 않고 형성평가 기준만 설계한다.",
+    "distinctReasoningRule": "수치·부호만 바꾼 문항은 별도 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "개발 제안 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "직선을 원의 식에 대입하고 판별식 또는 근으로 교점 개수를 판단한다.",
+        "중심과 직선 사이의 거리 d, 반지름 r을 비교해 두 점 교차·접함·분리 조건을 설명한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 관련 선수 기술 또는 해당 소단원으로 돌아간다. 다른 수치나 표현을 가진 새 항목에서 도움 없는 회상을 확인한다. 간격은 검증 전 설계안이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "판별식 0을 교점 없음으로 판단한다.",
+    "중심-직선 거리와 반지름 비교의 부등호 방향을 뒤집는다.",
+    "접점을 두 교점으로 센다.",
+    "접점 반지름과 접선이 평행하다고 생각한다."
+  ],
+  "workedExample": {
+    "prompt": "원 x²+y²=9와 직선 y=3의 관계를 거리와 대입으로 판정하시오.",
+    "steps": [
+      "원의 중심은 (0,0), 반지름은 3이며 중심에서 y=3까지 거리는 3이다.",
+      "d=r이므로 직선은 원에 접하고 교점은 한 개다.",
+      "대입하면 x²+9=9, 따라서 x=0이고 교점은 (0,3)이다.",
+      "반지름은 수평 접선 y=3에 수직이므로 접선 조건과 일치한다."
+    ],
+    "answer": "한 점 (0,3)에서 접한다"
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum 설계 초안이다. 독립 검토와 Research 대조 전에는 구현 인계나 사람 게시 승인으로 볼 수 없다.",
+    "sourceVerification": "제안 metadata만 저장소에서 확인했다. 공식 성취기준·수능 직접 출제 매핑은 검증하지 않았다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research 자료·권리·오개념·문항 검토",
+      "독립 수학·교수설계 검토 및 답 재계산",
+      "Developer 프리뷰 구현과 QA",
+      "사람의 교육·문항 검수 및 게시 승인"
+    ]
+  }
+}

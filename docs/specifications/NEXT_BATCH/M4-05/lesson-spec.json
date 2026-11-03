@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-05",
+  "levelId": "LEVEL 4",
+  "title": "원의 방정식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "중심과 반지름",
+      "일반형과 표준형 변환"
+    ],
+    "prerequisiteUnits": [
+      "M4-01",
+      "M2-09"
+    ],
+    "visualization": "원의 중심 이동"
+  },
+  "objectives": [
+    "원의 중심과 반지름을 표준형에서 읽고 점의 위치를 판정한다.",
+    "완전제곱을 이용해 원의 일반형과 표준형을 변환하고 변환 결과를 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-05-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-01: 두 점 사이의 거리를 좌표 차로 계산한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "m4-05-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-09: 다항식 곱셈과 완전제곱 전개를 적용한다. 진단은 준비 안내용이며 숙달도·완료 점수에 자동 반영하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-05-skill-1",
+    "m4-05-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "중심에서 같은 거리에 있는 점의 자취 관찰 → 중심·반지름과 표준형 연결 → 거리 제곱으로 식 유도 → 식 전개 → 완전제곱으로 역변환 → 반지름 제곱 부호와 대입으로 검산",
+    "principleDerivation": "중심 (a,b)에서 거리 r인 점 (x,y)는 (x−a)²+(y−b)²=r²을 만족한다. 일반형 x²+y²+Dx+Ey+F=0은 각 변수 묶음을 완전제곱으로 바꾸어 중심과 반지름을 읽는다. 표준형의 우변이 양수면 원, 0이면 한 점, 음수면 실수 좌표평면의 점이 없다.",
+    "naturalNumberConvention": "좌표·정수·실수·제곱근을 쓰는 각 예제에서 기호와 조건을 먼저 밝힌다. 제곱근과 나눗셈은 정의 조건을 확인한다.",
+    "accessibility": "색에만 의존하지 않고 기호·좌표·표와 문장을 함께 제공한다. 입력에는 레이블과 키보드 조작을 지원하며 도형에는 텍스트 대체 설명을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-05-u1",
+      "title": "중심과 반지름",
+      "targetSkills": [
+        "m4-05-skill-1"
+      ],
+      "explanation": "원은 한 고정점에서 일정한 양의 거리만큼 떨어진 점들의 모임이다.",
+      "activity": "중심을 옮기고 반지름을 바꾸어 원 위 점과 중심 간 거리를 비교한다.",
+      "check": "원 위 세 점의 중심 거리가 같은지 설명한다."
+    },
+    {
+      "id": "m4-05-u2",
+      "title": "표준형에서 정보 읽기",
+      "targetSkills": [
+        "m4-05-skill-1"
+      ],
+      "explanation": "(x−a)²+(y−b)²=r²에서 중심은 (a,b), 반지름은 r이다. 괄호의 부호에 주의한다.",
+      "activity": "중심 좌표 조절에 따라 괄호가 어떻게 바뀌는지 표시한다.",
+      "check": "(x+2)²+(y−3)²=16의 중심과 반지름을 읽는다."
+    },
+    {
+      "id": "m4-05-u3",
+      "title": "중심과 반지름으로 식 만들기",
+      "targetSkills": [
+        "m4-05-skill-1"
+      ],
+      "explanation": "중심과 반지름을 거리 공식에 넣으면 원의 표준형이 된다.",
+      "activity": "고정 중심에서 반지름만큼 떨어진 좌표를 표준형에 대입한다.",
+      "check": "중심 (1,−2), 반지름 3인 식을 쓴다."
+    },
+    {
+      "id": "m4-05-u4",
+      "title": "표준형 전개",
+      "targetSkills": [
+        "m4-05-skill-2"
+      ],
+      "explanation": "표준형을 전개해 x²+y²+Dx+Ey+F=0 꼴로 정리한다.",
+      "activity": "전개 항을 같은 차수끼리 모아 계수표에 기록한다.",
+      "check": "중심 (−2,3), 반지름 4인 식을 전개한다."
+    },
+    {
+      "id": "m4-05-u5",
+      "title": "일반형 완전제곱",
+      "targetSkills": [
+        "m4-05-skill-2"
+      ],
+      "explanation": "x²+Dx=(x+D/2)²−(D/2)²를 x,y에 각각 적용한다.",
+      "activity": "일차항 계수의 절반을 제곱하고 양변 보정값을 표시한다.",
+      "check": "x²+4x+y²−6y−3=0을 표준형으로 바꾼다."
+    },
+    {
+      "id": "m4-05-u6",
+      "title": "변환과 원의 존재 검산",
+      "targetSkills": [
+        "m4-05-skill-2"
+      ],
+      "explanation": "완전제곱 결과를 다시 전개해 원래 식과 일치하는지 확인하고 우변 부호를 살핀다.",
+      "activity": "상수항을 바꾸어 양수·0·음수 경우를 비교한다.",
+      "check": "세 경우가 원·한 점·실수점 없음 중 무엇인지 말한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-05-lab",
+      "kind": "math-lab",
+      "interaction": "원의 중심 이동",
+      "description": "중심과 양의 반지름을 제한된 정수 범위에서 조절하고 원의 표준형과 점의 위치를 함께 표시한다. 완전제곱 전환은 중간 계산을 텍스트로 보여 준다.",
+      "features": [
+        "입력과 도형 조건을 제한해 재현 가능한 결과를 제공한다.",
+        "중간 과정과 도형의 대응을 시각·텍스트로 함께 제시한다.",
+        "키보드 조작과 대체 설명을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "표준형에서 중심·반지름·점 위치 읽기",
+      "중심·반지름 또는 점 조건으로 원의 식 구성",
+      "일반형 완전제곱 변환과 실수 원 존재 조건 판정"
+    ],
+    "assessment": "여섯 문항은 서로 다른 사고 유형을 가진 연습 초안 목표다. 별도 평가 문항은 생성하지 않고 형성평가 기준만 설계한다.",
+    "distinctReasoningRule": "수치·부호만 바꾼 문항은 별도 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "개발 제안 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "원의 중심과 반지름을 표준형에서 읽고 점의 위치를 판정한다.",
+        "완전제곱을 이용해 원의 일반형과 표준형을 변환하고 변환 결과를 검산한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 관련 선수 기술 또는 해당 소단원으로 돌아간다. 다른 수치나 표현을 가진 새 항목에서 도움 없는 회상을 확인한다. 간격은 검증 전 설계안이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "(x−a) 괄호에서 중심 좌표 부호를 잘못 읽는다.",
+    "일차항 계수의 절반을 제곱하는 완전제곱 절차를 생략한다.",
+    "완전제곱 때 양변 보정값을 잊는다.",
+    "우변이 0 이하인 식을 양의 반지름 원으로 취급한다."
+  ],
+  "workedExample": {
+    "prompt": "x²+4x+y²−6y−3=0을 표준형으로 바꾸고 중심과 반지름을 구하시오.",
+    "steps": [
+      "x,y 항을 묶어 (x²+4x)+(y²−6y)=3으로 쓴다.",
+      "각 묶음을 (x+2)²−4, (y−3)²−9로 바꾼다.",
+      "양변에 4와 9를 더하면 (x+2)²+(y−3)²=16이다.",
+      "중심은 (−2,3), 반지름은 4다. 다시 전개해 원래 식과 맞는지 확인한다."
+    ],
+    "answer": "중심 (−2,3), 반지름 4"
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum 설계 초안이다. 독립 검토와 Research 대조 전에는 구현 인계나 사람 게시 승인으로 볼 수 없다.",
+    "sourceVerification": "제안 metadata만 저장소에서 확인했다. 공식 성취기준·수능 직접 출제 매핑은 검증하지 않았다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research 자료·권리·오개념·문항 검토",
+      "독립 수학·교수설계 검토 및 답 재계산",
+      "Developer 프리뷰 구현과 QA",
+      "사람의 교육·문항 검수 및 게시 승인"
+    ]
+  }
+}
