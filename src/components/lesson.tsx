@@ -93,7 +93,7 @@ function BlockRenderer({
     case "InteractiveBlock":
       return (
         <>
-          <MathLab block={block} />
+          <MathLab block={block} unitId={unitId} />
           {block.interaction === "place-value" && allowExtension && (
             <PlaceValueExploration />
           )}

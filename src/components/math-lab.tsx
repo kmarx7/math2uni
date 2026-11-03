@@ -5,6 +5,7 @@ import { PlaceLab } from "./place-lab";
 import { M3MathLab } from "./m3-math-labs";
 import { M3RootsLab } from "./m3-roots-labs";
 import { M3InequalitiesLab } from "./m3-inequalities-labs";
+import { M3M4PreviewLab } from "./m3-m4-preview-labs";
 type Interactive = Extract<Block, { type: "InteractiveBlock" }>;
 function gcd(a: number, b: number): number {
   return b ? gcd(b, a % b) : Math.abs(a);
@@ -87,7 +88,7 @@ function Control({
     </label>
   );
 }
-export function MathLab({ block }: { block: Interactive }) {
+export function MathLab({ block, unitId }: { block: Interactive; unitId?: string }) {
   const [a, setA] = useState(block.settings?.initialA ?? 3),
     [b, setB] = useState(block.settings?.initialB ?? 4),
     [c, setC] = useState(block.settings?.initialC ?? 2),
@@ -99,6 +100,7 @@ export function MathLab({ block }: { block: Interactive }) {
   const [quadraticMethod, setQuadraticMethod] = useState("factor");
   const [opensDown, setOpensDown] = useState(false);
   const [reviewTopic, setReviewTopic] = useState("algebra");
+  if (["M3-21", "M3-22", "M4-01", "M4-02", "M4-03"].includes(unitId ?? "")) return <M3M4PreviewLab unitId={unitId!} />;
   if (block.interaction === "place-value") return <PlaceLab />;
   if (["factor-theorem", "polynomial-factorization", "complex-plane", "complex-operations", "quadratic-discriminant"].includes(block.interaction)) return <M3MathLab block={block} />;
   if (["root-coefficient", "quadratic-intersection", "quadratic-interval-optimization", "polynomial-root-factory", "system-intersections"].includes(block.interaction)) return <M3RootsLab block={block} />;

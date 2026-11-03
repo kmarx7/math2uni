@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-22",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "여러 대수 조건을 각각 식·구간·경우로 나타내고 겹치는 조건을 표로 정리한다. 작은 유한 상태의 전이·분류를 경우의 수 또는 행렬로 표현하고 결과를 직접 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "선수 개념 확인: M3-18: 연립 조건을 만족하는 후보와 부등식 범위의 교집합을 확인한다.; M3-20: 순서가 결과를 구별하는 선택인지 판단한다.; M3-21: 작은 행렬의 성분과 곱의 조건을 읽는다. 진단은 학습 준비 안내용이며 숙달도나 완료 점수에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-22-u1",
+          "title": "조건을 기호와 말로 분리",
+          "body": "문장에서 등식·부등식·선택 조건을 구별하고 각 조건의 의미를 보존한다.",
+          "activity": "조건 카드를 대수·범위·선택 영역으로 분류한다.",
+          "check": "조건 하나를 빠뜨리지 않고 대응 기호를 붙인다."
+        },
+        {
+          "id": "m3-22-u2",
+          "title": "대수 조건 지도",
+          "body": "연립 조건의 후보를 만든 뒤 범위 및 추가 조건과 교차 확인한다.",
+          "activity": "수직선/표에 조건별 허용 후보를 표시한다.",
+          "check": "후보가 모든 조건을 만족하는지 대입한다."
+        },
+        {
+          "id": "m3-22-u3",
+          "title": "경우 분류의 빠짐과 겹침",
+          "body": "서로 겹치지 않는 갈래로 전체 경우를 분리하고 빠진 경우가 없는지 확인한다.",
+          "activity": "작은 집합을 경우표로 분류한다.",
+          "check": "각 결과가 정확히 한 갈래에 포함되는지 확인한다."
+        },
+        {
+          "id": "m3-22-u4",
+          "title": "표와 행렬로 상태 기록",
+          "body": "행은 출발 상태, 열은 도착 상태처럼 의미를 정하고 칸에 연결 여부나 수를 기록한다.",
+          "activity": "세 상태의 전이표를 행렬로 옮긴다.",
+          "check": "행·열 이름을 붙여 특정 성분의 뜻을 말한다."
+        },
+        {
+          "id": "m3-22-u5",
+          "title": "행렬 곱으로 두 단계 연결",
+          "body": "중간 상태별 경로 수를 곱해 더하면 두 단계 경로 수가 된다. 작은 예는 경로를 직접 나열해 확인한다.",
+          "activity": "두 단계 전이의 경로를 색·선과 수로 비교한다.",
+          "check": "곱의 차원과 한 결과 성분의 경로 해석을 확인한다."
+        },
+        {
+          "id": "m3-22-u6",
+          "title": "통합 점검과 근거 설명",
+          "body": "표현을 바꾸어도 원래 조건과 결과가 일치하는지 설명한다.",
+          "activity": "대수 조건 지도와 경우표를 왕복한다.",
+          "check": "계산·분류·행렬 표현 중 하나를 원래 조건으로 검산한다."
+        }
+      ],
+      "body": "조건 확인 → 표상 구성 → 원리 적용 → 계산 → 처음 조건에 대입해 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "영역별 조건 지도 (미리보기 대응: parameter-case-table)",
+      "interaction": "parameter-case-table",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "정수 x가 2<x≤8이고 짝수이며 3의 배수일 때 가능한 x의 개수는?",
+        "2<x≤8의 정수 후보는 3,4,5,6,7,8이다. 짝수는 4,6,8이고 그중 3의 배수는 6 하나다.",
+        "정수 n이 0≤n<10이고 홀수이며 4의 배수일 때 가능한 n은 몇 개인가?",
+        "범위의 홀수는 1,3,5,7,9이고 4의 배수는 없다. 공통 후보가 없으므로 0개다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 문항은 연구용 초안이에요. 답안을 제출하기 전 정답과 해설은 화면에 보내지 않으며, 사람 검수 전에는 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "행·열/조건/비율/기울기처럼 어느 조건을 놓쳤는지 먼저 표시하고 해당 소단원으로 돌아가요. 문항별 오개념은 검증된 빈도 통계가 아니라 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습 간격은 제안이며 학습 효과 검증 전이에요. 핵심 개념을 스스로 설명하고 선수 관계를 확인해 다음 단원으로 연결해요."
+    }
+  ]
+}

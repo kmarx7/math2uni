@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-03",
+  "levelId": "LEVEL 4",
+  "title": "두 직선의 위치 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "평행 조건",
+      "수직 조건"
+    ],
+    "prerequisiteUnits": [
+      "M4-02",
+      "M2-06"
+    ],
+    "visualization": "기울기 쌍 비교"
+  },
+  "objectives": [
+    "두 직선의 기울기 또는 계수를 비교하여 평행·일치·교차를 구분한다.",
+    "정의된 두 기울기의 곱이 −1인 수직 관계를 확인하고 수직선 예외를 별도로 처리한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-03-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-02: 두 직선의 기울기와 방정식을 읽고 수평·수직 사례를 구분한다."
+    },
+    {
+      "id": "m4-03-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-06: 두 직선의 교점을 연립방정식의 공통해로 해석한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-03-skill-1",
+    "m4-03-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "기울기 비교 → 같은 기울기에서 절편 확인 → 다른 기울기 교점 구조 → 수직 조건의 음의 역수 → 수평·수직 예외와 계수 검산",
+    "principleDerivation": "서로 다른 두 비수직 직선의 기울기가 같으면 평행하거나 일치한다. 일치 여부는 한 점/절편 또는 계수를 추가 비교한다. 기울기가 다르면 한 점에서 만난다. 두 유한 기울기 m₁,m₂인 직선은 m₁m₂=−1일 때 수직이다. 단, 수평선과 수직선은 기울기 곱 공식에 포함되지 않으므로 좌표 방향으로 직접 확인한다. 일반형 ax+by+c=0에서는 계수 관계를 사용하기 전에 수직선과 중복 표현을 확인한다.",
+    "naturalNumberConvention": "이 단원은 자연수 계산을 전제하지 않는다. 필요한 수·분수 계산은 각 예제에서 의미를 확인하며, 미정의 연산이나 나눗셈은 조건을 먼저 검사한다.",
+    "accessibility": "색상만으로 조건이나 결과를 구분하지 않고 표 제목·기호·텍스트 설명을 함께 제공한다. 인터랙션은 키보드 조작, 레이블, 텍스트 대체 설명을 지원하고 애니메이션 없이도 핵심 관계를 읽을 수 있게 한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-03-u1",
+      "title": "기울기 쌍 비교",
+      "targetSkills": [
+        "m4-03-skill-1"
+      ],
+      "explanation": "기울기가 같으면 방향이 같고, 다르면 직선이 한 점에서 만난다.",
+      "activity": "기울기 값을 짝으로 놓고 방향을 비교한다.",
+      "check": "두 직선의 기울기로 평행/교차 후보를 말한다."
+    },
+    {
+      "id": "m4-03-u2",
+      "title": "평행과 일치 구별",
+      "targetSkills": [
+        "m4-03-skill-1"
+      ],
+      "explanation": "같은 기울기만으로 서로 다른 평행선이라 단정할 수 없다. 같은 직선인지 절편이나 한 점 대입으로 확인한다.",
+      "activity": "평행 이동으로 직선을 옮기며 일치 순간을 관찰한다.",
+      "check": "기울기와 절편을 비교해 세 관계를 구별한다."
+    },
+    {
+      "id": "m4-03-u3",
+      "title": "교점의 존재와 계산",
+      "targetSkills": [
+        "m4-03-skill-1"
+      ],
+      "explanation": "기울기가 다르면 연립해 교점을 얻고 두 직선식에 대입 검산한다.",
+      "activity": "두 직선의 기울기를 달리해 교점 위치를 추적한다.",
+      "check": "간단한 두 식을 연립해 교점을 확인한다."
+    },
+    {
+      "id": "m4-03-u4",
+      "title": "수직 조건",
+      "targetSkills": [
+        "m4-03-skill-2"
+      ],
+      "explanation": "정의된 기울기 두 개가 음의 역수일 때 곱은 −1이다.",
+      "activity": "기준 직선을 회전해 직각이 되는 방향의 기울기를 비교한다.",
+      "check": "기울기 −2인 직선에 수직인 기울기 1/2를 찾는다."
+    },
+    {
+      "id": "m4-03-u5",
+      "title": "수평선·수직선 예외",
+      "targetSkills": [
+        "m4-03-skill-2"
+      ],
+      "explanation": "수평선 기울기는 0, 수직선 기울기는 정의되지 않는다. 두 직선이 서로 수평·수직이면 수직이다.",
+      "activity": "가로선과 세로선을 겹쳐 직각을 확인한다.",
+      "check": "기울기 곱 공식이 적용되지 않는 쌍을 식과 그림으로 판별한다."
+    },
+    {
+      "id": "m4-03-u6",
+      "title": "방정식 계수로 관계 검산",
+      "targetSkills": [
+        "m4-03-skill-2"
+      ],
+      "explanation": "기울기를 읽을 수 있는 형태로 바꾸거나 두 방향 벡터를 비교하고 계수 예외를 확인한다.",
+      "activity": "기울기 형태와 일반형을 번갈아 표시한다.",
+      "check": "분모 0 또는 동일 직선 가능성을 확인한 뒤 결론을 쓴다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-03-lab",
+      "kind": "math-lab",
+      "interaction": "기울기 쌍 비교",
+      "description": "기울기 쌍 비교",
+      "features": [
+        "핵심 조건을 바꾸면 시각 요소와 수학적 설명을 함께 갱신한다.",
+        "입력 범위와 허용 조작을 제한하고 중간 과정을 텍스트로 제시한다.",
+        "키보드 조작과 텍스트 대체 설명을 제공한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "기울기 쌍과 절편으로 평행·일치·교차 분류",
+      "음의 역수 및 직각 구조로 수직 여부 판정",
+      "일반형·수평/수직 예외를 포함한 관계 검증"
+    ],
+    "assessment": "6문항은 서로 다른 추론 구조를 가진 검수 대기 초안 목표다. 형성평가 기준만 설계하며 별도 평가 문항은 생성하지 않는다.",
+    "distinctReasoningRule": "같은 추론 구조에서 숫자·부호만 바꾼 문항은 새 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "기존 완료 경계를 변경하지 않는다. 이 제안 단원은 별도 확장 진도이며 legacy 완료에 포함하지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "두 직선의 기울기 또는 계수를 비교하여 평행·일치·교차를 구분한다.",
+        "정의된 두 기울기의 곱이 −1인 수직 관계를 확인하고 수직선 예외를 별도로 처리한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 해당 선수 기능 또는 가장 가까운 소단원으로 되돌린 뒤, 수치나 표현이 다른 새 예제로 도움 없는 회상을 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "기울기가 같으면 무조건 서로 다른 평행선이라고 봄",
+    "기울기 곱이 +1이어도 수직이라고 생각함",
+    "수직선 기울기를 0으로 취급함",
+    "기울기 곱 공식을 정의되지 않은 기울기에 적용함"
+  ],
+  "workedExample": {
+    "prompt": "y=2x+1과 y=−(1/2)x+4의 위치 관계를 판정하시오.",
+    "steps": [
+      "첫 번째 직선의 기울기는 2다.",
+      "두 번째 직선의 기울기는 −1/2다.",
+      "곱은 2×(−1/2)=−1이므로 두 직선은 수직이다.",
+      "기울기가 서로 다르므로 교차하며, 수직이라는 판정과도 일치한다."
+    ],
+    "answer": "두 직선은 수직으로 만난다."
+  },
+  "designReview": {
+    "decision": "pending-independent-review",
+    "status": "draft",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum 설계 초안이다. 독립 교육과정·수학 교차 검토와 Research 근거 대조 전에는 구현-ready로 보지 않는다.",
+    "sourceVerification": "제안 단원 메타데이터를 저장소 제안 경로와 대조했다. 공식 성취기준 코드/직접 매핑은 확인하지 않아 officialStandards는 빈 배열이다.",
+    "reviewerRole": "Curriculum Architect; independent reviewer pending"
+  },
+  "implementationReadiness": {
+    "status": "pending-research-and-independent-review",
+    "publicationReady": false,
+    "pending": [
+      "Research의 자료·권리·오개념·문제 원형 및 초안 검토",
+      "독립 수학교육/수학 검토와 계산 재확인",
+      "Developer의 별도 구현 범위 배정 및 QA",
+      "사람의 교육·수학 문항 검수 및 별도 게시 승인"
+    ]
+  }
+}

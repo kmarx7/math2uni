@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-21",
+  "unitTitle": "행렬과 행렬의 연산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m3-21-family-1",
+      "status": "draft",
+      "title": "표의 행·열 위치를 따라 성분을 읽기",
+      "reasoningStructure": "행 번호와 열 번호를 순서대로 고정해, 표에서 지정된 성분을 찾는다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m3-21-skill-1",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m321p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "행렬 A=[[2,-1,4],[0,3,5]]에서 a₂₃의 값은 얼마인가?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "2행과 3열이 만나는 값은 5다.",
+          "skillLabel": "m3-21-skill-1",
+          "misconceptionHypothesis": "성분 표기에서 행과 열의 순서를 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m321p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "행렬 B=[[1,2],[3,4],[5,6]]에서 b₃₁의 값은 얼마인가?",
+          "answer": {
+            "type": "integer",
+            "value": "5"
+          },
+          "rationale": "3행 1열의 값은 5다. 3행 2열의 6과 혼동하지 않는다.",
+          "skillLabel": "m3-21-skill-1",
+          "misconceptionHypothesis": "아래 첨자를 열, 행 순으로 읽는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m3-21-family-2",
+      "status": "draft",
+      "title": "연산 정의 조건과 결과 크기를 먼저 판정하기",
+      "reasoningStructure": "계산 전에 합은 같은 크기, 곱은 앞 열 수와 뒤 행 수가 같은지를 검사하고 결과 크기를 정한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m3-21-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m321p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "A가 2×3 행렬, B가 3×2 행렬일 때 A+B는 정의되는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "합은 두 행렬의 크기가 같아야 한다. 2×3과 3×2는 달라 정의되지 않는다.",
+          "skillLabel": "m3-21-skill-2",
+          "misconceptionHypothesis": "행렬 곱 조건과 합 조건을 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "정의됨, 2×2"
+            },
+            {
+              "id": "B",
+              "label": "정의되지 않음"
+            },
+            {
+              "id": "C",
+              "label": "정의됨, 3×3"
+            }
+          ]
+        },
+        {
+          "id": "m321p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "A가 2×3, B가 3×4 행렬일 때 AB의 크기는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "안쪽 크기 3과 3이 같으므로 곱이 정의되고 결과 크기는 바깥쪽 2×4다.",
+          "skillLabel": "m3-21-skill-2",
+          "misconceptionHypothesis": "결과 크기를 뒤 행렬의 크기와 같다고 본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3×4"
+            },
+            {
+              "id": "B",
+              "label": "2×3"
+            },
+            {
+              "id": "C",
+              "label": "2×4"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m3-21-family-3",
+      "status": "draft",
+      "title": "성분 연산과 행·열 곱을 계산하고 오류 찾기",
+      "reasoningStructure": "연산 종류에 맞는 규칙을 골라 성분별 계산 또는 행과 열의 내적을 수행한 뒤 계산을 검산한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m3-21-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m321p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "A=[[1,-2],[0,3]]일 때 -2A는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "각 성분에 -2를 곱하면 [[-2,4],[0,-6]]이다.",
+          "skillLabel": "m3-21-skill-2",
+          "misconceptionHypothesis": "배수를 첫 행에만 적용하거나 부호를 바꾸지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "[[-2,4],[0,-6]]"
+            },
+            {
+              "id": "B",
+              "label": "[[-2,-4],[0,-6]]"
+            },
+            {
+              "id": "C",
+              "label": "[[2,4],[0,-6]]"
+            }
+          ]
+        },
+        {
+          "id": "m321p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "integer",
+          "prompt": "A=[[1,2],[0,-1]], B=[[3,1],[2,4]]일 때 (AB)₁₂는?",
+          "answer": {
+            "type": "integer",
+            "value": "9"
+          },
+          "rationale": "A의 첫 행 [1,2]와 B의 둘째 열 [1,4]를 곱해 더하면 1×1+2×4=9다.",
+          "skillLabel": "m3-21-skill-2",
+          "misconceptionHypothesis": "둘째 행이나 첫째 열을 잘못 선택한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "이 배치는 명세의 3개 서로 다른 원형과 연습 초안 6개만 포함한다. 시험/형성평가 문항은 생성하지 않았으며 필수 학습량을 은행 크기와 구분한다."
+  },
+  "sourceStatus": "공식 교육과정 고시 페이지의 존재만 확인; 첨부 수학 원문 및 단원별 매핑 미검증. 문제는 프로젝트 자체 초안이며 제3자 문항을 재현하지 않음."
+}

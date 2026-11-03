@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-01",
+  "contentVersion": "0.1.0-draft",
+  "status": "automated-checks-passed-with-known-instructional-gaps",
+  "automatedChecks": {
+    "lessonSchema": "passed",
+    "practiceItems": "6-draft-items-3-families",
+    "answerRules": "all-expected-answers-grade-correct",
+    "publicAnswerSecrecy": "passed",
+    "productionDraftGate": "passed",
+    "unitProgressIsolation": "passed",
+    "humanReview": "pending",
+    "publicationApproval": "pending"
+  },
+  "batchChecks": {
+    "lint": "passed-clean-no-warnings",
+    "typecheck": "passed-npm-run-typecheck",
+    "unitTests": "passed-18-files-140-tests",
+    "e2e": "blocked-before-tests-listen-EPERM-127.0.0.1-54329",
+    "productionBuild": "passed-next-build",
+    "diffCheck": "passed-git-diff-check"
+  },
+  "knownLimitations": [
+    "worked example lacks internal section walkthrough"
+  ],
+  "officialStandards": [],
+  "publicationAllowed": false
+}

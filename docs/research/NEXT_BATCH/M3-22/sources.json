@@ -1,0 +1,32 @@
+[
+  {
+    "id": "moe-2022-curriculum-order-2022-33",
+    "title": "[교육부 고시 제2022-33호] 초중등학교 교육과정 총론 및 각론 고시",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&statusYN=W",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "web search confirmed official page snippet stating mathematics curriculum is Annex 8; attachment not reviewed line-by-line",
+    "rights": "공식 고시 안내를 맥락 참고. 첨부 원문과 문항을 복제하지 않음.",
+    "use": "교육과정 공식 원문이 존재함을 확인하는 맥락 자료일 뿐, 다섯 제안 단원 및 성취기준 코드 직접 매핑의 근거가 아님."
+  },
+  {
+    "id": "moe-2028-integrated-csat-confirmation",
+    "title": "2028 입시부터 선택과목 없는 통합형 수능 확정안",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=0204",
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "official page found in web search; page context confirms integrated CSAT reform; details not used to infer unit scope",
+    "rights": "공식 보도 페이지를 맥락 참고. 첨부자료와 문항 미복제.",
+    "use": "수능 개편의 배경만을 설명. 제안 단원의 출제 범위·필수성 근거로 해석하지 않음."
+  },
+  {
+    "id": "pedagogy-and-misconception-evidence-status",
+    "title": "교수법 및 오개념 근거 상태",
+    "publisher": "Research & Content Agent 조사 기록",
+    "url": null,
+    "checkedDate": "2026-11-03",
+    "verificationStatus": "unit-specific empirical studies and misconception prevalence not verified",
+    "rights": "외부 문항·주장을 인용하지 않음.",
+    "use": "오개념은 학습 설계 가설로 표시하며 빈도·효과를 실증 결과로 주장하지 않음."
+  }
+]

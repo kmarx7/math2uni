@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-02",
+  "unitTitle": "직선의 방정식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-02-family-1",
+      "status": "draft",
+      "title": "두 점의 좌표 변화에서 기울기와 방향 읽기",
+      "reasoningStructure": "오른쪽 이동량 Δx와 세로 변화 Δy의 비를 구하고 부호가 직선의 방향과 맞는지 검산한다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-02-skill-1",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m402p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "integer",
+          "prompt": "점 (1,2), (4,8)을 지나는 직선의 기울기는?",
+          "answer": {
+            "type": "integer",
+            "value": "2"
+          },
+          "rationale": "Δx=3, Δy=6이므로 기울기는 Δy/Δx=6/3=2다.",
+          "skillLabel": "m4-02-skill-1",
+          "misconceptionHypothesis": "좌표를 빼는 순서를 다르게 해 Δx,Δy 부호를 맞추지 못한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        },
+        {
+          "id": "m402p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "integer",
+          "prompt": "점 (-2,5), (2,-3)을 지나는 직선의 기울기는?",
+          "answer": {
+            "type": "integer",
+            "value": "-2"
+          },
+          "rationale": "Δx=4, Δy=-8이므로 기울기는 -8/4=-2다. 오른쪽으로 갈 때 내려가므로 음수와 일치한다.",
+          "skillLabel": "m4-02-skill-1",
+          "misconceptionHypothesis": "기울기의 크기만 보고 양수로 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          }
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-02-family-2",
+      "status": "draft",
+      "title": "점 조건으로 직선의 방정식을 구성하고 대입 검산",
+      "reasoningStructure": "y=mx+b에 주어진 점을 대입해 b를 구하거나, 두 점에서 먼저 기울기를 구해 두 점 모두 만족하는 식을 만든다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-02-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m402p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "기울기 3이고 점 (2,1)을 지나는 직선은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "y=3x+b에 (2,1)을 넣으면 1=6+b, b=-5다. 따라서 y=3x-5이며 점을 대입해 확인된다.",
+          "skillLabel": "m4-02-skill-2",
+          "misconceptionHypothesis": "기울기와 y절편을 혼동한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "y=3x+5"
+            },
+            {
+              "id": "B",
+              "label": "y=3x-5"
+            },
+            {
+              "id": "C",
+              "label": "y=-3x+7"
+            }
+          ]
+        },
+        {
+          "id": "m402p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "점 (1,4), (3,0)을 지나는 직선은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "기울기는 (0−4)/(3−1)=-2다. y=-2x+b에 (1,4)를 넣으면 b=6이므로 y=-2x+6이다. 두 점 모두 만족한다.",
+          "skillLabel": "m4-02-skill-2",
+          "misconceptionHypothesis": "두 번째 점의 좌표를 식에 대입해 절편 부호를 틀린다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "y=2x+2"
+            },
+            {
+              "id": "B",
+              "label": "y=-2x-6"
+            },
+            {
+              "id": "C",
+              "label": "y=-2x+6"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-02-family-3",
+      "status": "draft",
+      "title": "표현을 바꾸고 수평·수직선의 예외를 판별하기",
+      "reasoningStructure": "직선 방정식의 동치 변형과 좌표 조건을 비교하며, 수직선은 x가 일정하다는 식으로 나타내 기울기 나눗셈의 예외를 지킨다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-02-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m402p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=2x-3을 ax+by+c=0 꼴로 바르게 나타낸 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "모든 항을 한쪽으로 옮기면 2x-y-3=0이다. 원래 식에 대응해 양변이 동치인지 확인한다.",
+          "skillLabel": "m4-02-skill-2",
+          "misconceptionHypothesis": "상수항을 옮길 때 부호를 바꾼다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2x-y+3=0"
+            },
+            {
+              "id": "B",
+              "label": "2x-y-3=0"
+            },
+            {
+              "id": "C",
+              "label": "y=2x-3"
+            }
+          ]
+        },
+        {
+          "id": "m402p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x=-2인 직선을 기울기 공식 없이 방정식으로 나타낸 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "모든 점의 x좌표가 -2로 고정되므로 직선의 식은 x=-2다. Δx=0이므로 기울기 나눗셈은 사용하지 않는다.",
+          "skillLabel": "m4-02-skill-2",
+          "misconceptionHypothesis": "수직선의 기울기를 0이라고 쓴다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "y=-2"
+            },
+            {
+              "id": "B",
+              "label": "x=-2"
+            },
+            {
+              "id": "C",
+              "label": "x=2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "이 배치는 명세의 3개 서로 다른 원형과 연습 초안 6개만 포함한다. 시험/형성평가 문항은 생성하지 않았으며 필수 학습량을 은행 크기와 구분한다."
+  },
+  "sourceStatus": "공식 교육과정 고시 페이지의 존재만 확인; 첨부 수학 원문 및 단원별 매핑 미검증. 문제는 프로젝트 자체 초안이며 제3자 문항을 재현하지 않음."
+}

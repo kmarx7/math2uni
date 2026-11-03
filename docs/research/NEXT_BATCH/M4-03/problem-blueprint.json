@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-03",
+  "unitTitle": "두 직선의 위치 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-03-family-1",
+      "status": "draft",
+      "title": "기울기와 절편으로 평행·일치·교차 구분하기",
+      "reasoningStructure": "기울기를 비교해 방향을 판단한 뒤 절편 또는 식 자체를 확인해 서로 다른 평행선과 같은 직선을 구별한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-03-skill-1",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m403p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=2x+1과 y=2x-4의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "기울기는 같고 y절편이 달라 서로 만나지 않는 서로 다른 평행선이다.",
+          "skillLabel": "m4-03-skill-1",
+          "misconceptionHypothesis": "기울기만 같으면 같은 직선이라 단정한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 다른 평행선"
+            },
+            {
+              "id": "B",
+              "label": "같은 직선"
+            },
+            {
+              "id": "C",
+              "label": "한 점에서 만남"
+            }
+          ]
+        },
+        {
+          "id": "m403p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=3x+2와 2y=6x+4의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "두 번째 식을 나누면 y=3x+2로 첫 번째 식과 같다. 두 식은 같은 직선을 나타낸다.",
+          "skillLabel": "m4-03-skill-1",
+          "misconceptionHypothesis": "식을 정리하기 전에 계수 모양이 다르다고 다른 직선이라 판단한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 다른 평행선"
+            },
+            {
+              "id": "B",
+              "label": "같은 직선"
+            },
+            {
+              "id": "C",
+              "label": "한 점에서 만남"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-03-family-2",
+      "status": "draft",
+      "title": "정의된 기울기의 음의 역수로 수직 판정하기",
+      "reasoningStructure": "두 기울기가 모두 정의되어 있을 때 곱이 -1인지 확인한다. 역수와 부호를 모두 검산한다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-03-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m403p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "기울기가 각각 3/2와 -2/3인 두 직선은 서로 수직인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "두 기울기의 곱은 (3/2)×(-2/3)=-1이므로 두 직선은 수직이다. 정답은 예(A)다.",
+          "skillLabel": "m4-03-skill-2",
+          "misconceptionHypothesis": "역수만 취하고 음수를 붙이지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; choice prompt and answer type cross-checked",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예"
+            },
+            {
+              "id": "B",
+              "label": "아니요"
+            },
+            {
+              "id": "C",
+              "label": "정보 부족"
+            }
+          ]
+        },
+        {
+          "id": "m403p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "기울기 4와 -1/4인 두 직선은 서로 수직인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "두 기울기의 곱은 4×(-1/4)=-1이므로 수직이다.",
+          "skillLabel": "m4-03-skill-2",
+          "misconceptionHypothesis": "음의 역수 조건 대신 서로 반대 부호인지로만 판정한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예"
+            },
+            {
+              "id": "B",
+              "label": "아니요"
+            },
+            {
+              "id": "C",
+              "label": "정보 부족"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-03-family-3",
+      "status": "draft",
+      "title": "일반형과 수평·수직 예외로 관계 검증하기",
+      "reasoningStructure": "분모가 0인 수직선에는 기울기 곱 공식을 적용하지 않고, x·y 고정 조건이나 일반형 계수로 직각·일치 여부를 판정한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-03-skill-2",
+      "distinctFrom": "다른 원형과는 각각 표 위치 읽기, 조건 구조 선판정, 또는 계산·표현·오류 분석이라는 핵심 추론 결정이 다르다.",
+      "items": [
+        {
+          "id": "m403p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x=-1인 직선과 y=5인 직선의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x=-1은 수직선, y=5는 수평선이므로 서로 직각으로 만난다. 수직선 기울기 값은 정의되지 않아 곱 공식을 쓰지 않는다.",
+          "skillLabel": "m4-03-skill-2",
+          "misconceptionHypothesis": "수직선 기울기를 0으로 보고 평행하다고 한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "평행"
+            },
+            {
+              "id": "B",
+              "label": "수직"
+            },
+            {
+              "id": "C",
+              "label": "일치"
+            }
+          ]
+        },
+        {
+          "id": "m403p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x=2인 두 직선 x=2와 3x=6의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "3x=6을 정리하면 x=2다. 두 식은 같은 수직선을 나타내므로 일치한다.",
+          "skillLabel": "m4-03-skill-2",
+          "misconceptionHypothesis": "기울기를 계산할 수 없다는 이유만으로 두 직선을 구분하지 못한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent hand recalculation from stated conditions; small-case enumeration where appropriate",
+            "result": "author-self-check-only; independent curriculum review pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "평행"
+            },
+            {
+              "id": "B",
+              "label": "수직"
+            },
+            {
+              "id": "C",
+              "label": "일치"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "이 배치는 명세의 3개 서로 다른 원형과 연습 초안 6개만 포함한다. 시험/형성평가 문항은 생성하지 않았으며 필수 학습량을 은행 크기와 구분한다."
+  },
+  "sourceStatus": "공식 교육과정 고시 페이지의 존재만 확인; 첨부 수학 원문 및 단원별 매핑 미검증. 문제는 프로젝트 자체 초안이며 제3자 문항을 재현하지 않음."
+}

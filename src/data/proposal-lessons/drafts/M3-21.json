@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M3-21",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "행렬의 행·열·성분을 위치로 읽고 같은 크기 행렬의 성분을 비교한다. 행렬의 크기를 확인해 합·실수배·곱을 계산하고 각 연산의 조건을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "선수 개념 확인: M1-08: 자연수·정수의 곱셈과 덧셈을 계산한다.; M1-13: 문자식에서 수와 문자의 곱을 읽고 분배법칙을 적용한다. 진단은 학습 준비 안내용이며 숙달도나 완료 점수에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m3-21-u1",
+          "title": "행·열·성분 위치",
+          "body": "행렬의 (i,j) 성분은 i번째 행과 j번째 열이 만나는 수다. 행과 열의 순서를 바꾸면 다른 위치다.",
+          "activity": "2×3 표의 각 칸에 (행, 열) 꼬리표를 붙인다.",
+          "check": "a₂₃를 표에서 찾아 행 번호와 열 번호를 말한다."
+        },
+        {
+          "id": "m3-21-u2",
+          "title": "행렬의 크기와 같음",
+          "body": "행의 수×열의 수를 크기라 하고 두 행렬이 같으려면 크기와 모든 대응 성분이 같아야 한다.",
+          "activity": "서로 다른 크기 표를 나란히 놓고 대응 칸을 연결한다.",
+          "check": "두 행렬이 같은지 크기와 성분 순서로 판정한다."
+        },
+        {
+          "id": "m3-21-u3",
+          "title": "행렬의 합과 차",
+          "body": "같은 크기일 때 같은 위치의 성분끼리 더하거나 뺀다.",
+          "activity": "두 표의 대응 칸을 겹쳐 합을 표시한다.",
+          "check": "크기가 다른 경우 연산이 정의되지 않음을 설명한다."
+        },
+        {
+          "id": "m3-21-u4",
+          "title": "실수배",
+          "body": "행렬의 모든 성분에 같은 실수를 곱한다.",
+          "activity": "양수·음수 배율에 따라 표의 성분 변화를 관찰한다.",
+          "check": "−2A를 모든 성분에 빠짐없이 적용한다."
+        },
+        {
+          "id": "m3-21-u5",
+          "title": "행렬의 곱과 크기",
+          "body": "앞 행렬의 열 수와 뒤 행렬의 행 수가 같아야 곱이 정의된다. 결과 크기는 앞의 행 수×뒤의 열 수다.",
+          "activity": "행·열 수 맞춤 퍼즐로 곱의 정의 여부를 판별한다.",
+          "check": "2×3과 3×2 곱의 결과 크기를 말한다."
+        },
+        {
+          "id": "m3-21-u6",
+          "title": "행과 열의 곱",
+          "body": "결과의 각 성분은 앞 행렬의 한 행과 뒤 행렬의 한 열을 곱해 더한 값이다. 순서를 바꾸면 일반적으로 결과가 달라진다.",
+          "activity": "선택한 행과 열의 대응 성분 곱을 선으로 연결한다.",
+          "check": "2×2 행렬 곱의 한 성분을 단계별 계산한다."
+        }
+      ],
+      "body": "조건 확인 → 표상 구성 → 원리 적용 → 계산 → 처음 조건에 대입해 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "행과 열 곱 시각화 (미리보기 대응: expression-table)",
+      "interaction": "expression-table",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "행렬 A=[[2,-1,4],[0,3,5]]에서 a₂₃의 값은 얼마인가?",
+        "2행과 3열이 만나는 값은 5다.",
+        "행렬 B=[[1,2],[3,4],[5,6]]에서 b₃₁의 값은 얼마인가?",
+        "3행 1열의 값은 5다. 3행 2열의 6과 혼동하지 않는다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 문항은 연구용 초안이에요. 답안을 제출하기 전 정답과 해설은 화면에 보내지 않으며, 사람 검수 전에는 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "행·열/조건/비율/기울기처럼 어느 조건을 놓쳤는지 먼저 표시하고 해당 소단원으로 돌아가요. 문항별 오개념은 검증된 빈도 통계가 아니라 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습 간격은 제안이며 학습 효과 검증 전이에요. 핵심 개념을 스스로 설명하고 선수 관계를 확인해 다음 단원으로 연결해요."
+    }
+  ]
+}

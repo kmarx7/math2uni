@@ -1,0 +1,204 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-02",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "두 점의 좌표 변화로 기울기를 구하고 부호와 수평·수직 사례를 설명한다. 한 점과 기울기 또는 서로 다른 두 점을 이용해 직선의 방정식을 세우고 대입 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "선수 개념 확인: M2-05: 일차식·일차방정식의 등식 변형을 수행한다.; M4-01: 좌표 차와 두 점 사이 거리를 읽는다. 진단은 학습 준비 안내용이며 숙달도나 완료 점수에 반영하지 않아요."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-02-u1",
+          "title": "좌표 변화와 기울기",
+          "body": "오른쪽으로 움직인 Δx와 위아래 변화 Δy의 비가 기울기다.",
+          "activity": "격자에서 직선 위 두 점을 골라 변화량 화살표를 표시한다.",
+          "check": "Δx와 Δy의 부호를 사용해 기울기 부호를 말한다."
+        },
+        {
+          "id": "m4-02-u2",
+          "title": "기울기와 가파름",
+          "body": "같은 단위에서 기울기 절댓값이 클수록 더 가파르며, 음수는 오른쪽으로 갈 때 내려간다.",
+          "activity": "직선을 회전시키고 두 점 간 변화량을 비교한다.",
+          "check": "수평선·우상향·우하향을 기울기로 구별한다."
+        },
+        {
+          "id": "m4-02-u3",
+          "title": "한 점과 기울기로 식 만들기",
+          "body": "점 (x₁,y₁)에서 x가 바뀐 만큼 y가 기울기 a배 바뀐다는 관계를 등식으로 쓴다.",
+          "activity": "기준점을 움직여 같은 기울기의 직선을 평행 이동한다.",
+          "check": "점과 기울기를 식에 넣고 주어진 점을 검산한다."
+        },
+        {
+          "id": "m4-02-u4",
+          "title": "두 점을 지나는 직선",
+          "body": "두 점의 Δy/Δx를 구해 기울기를 얻고, 한 점을 사용해 직선식을 만든다.",
+          "activity": "두 점을 잇는 직선과 격자 이동을 비교한다.",
+          "check": "두 점 좌표를 모두 방정식에 대입한다."
+        },
+        {
+          "id": "m4-02-u5",
+          "title": "절편형과 일반형 해석",
+          "body": "y절편·기울기 형태와 ax+by+c=0 형태를 등식 변형으로 연결한다.",
+          "activity": "같은 직선을 두 표현으로 표시한다.",
+          "check": "표현을 바꾸어도 두 점이 만족하는지 확인한다."
+        },
+        {
+          "id": "m4-02-u6",
+          "title": "수평선·수직선과 예외",
+          "body": "수평선은 y가 일정하고, 수직선은 x가 일정하다. 수직선에는 나눗셈 기울기를 쓰지 않는다.",
+          "activity": "선을 회전해 수평/수직 경계에서 좌표 변화를 읽는다.",
+          "check": "x=2 같은 수직선 식을 기울기 공식 없이 세운다."
+        }
+      ],
+      "body": "조건 확인 → 표상 구성 → 원리 적용 → 계산 → 처음 조건에 대입해 검산"
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "직선 회전과 이동 (미리보기 대응: linear-function-graph)",
+      "interaction": "linear-function-graph",
+      "settings": {
+        "initialA": 2,
+        "initialB": 3
+      }
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "점 (1,2), (4,8)을 지나는 직선의 기울기는?",
+        "Δx=3, Δy=6이므로 기울기는 Δy/Δx=6/3=2다.",
+        "점 (-2,5), (2,-3)을 지나는 직선의 기울기는?",
+        "Δx=4, Δy=-8이므로 기울기는 -8/4=-2다. 오른쪽으로 갈 때 내려가므로 음수와 일치한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "각 문항은 연구용 초안이에요. 답안을 제출하기 전 정답과 해설은 화면에 보내지 않으며, 사람 검수 전에는 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "행·열/조건/비율/기울기처럼 어느 조건을 놓쳤는지 먼저 표시하고 해당 소단원으로 돌아가요. 문항별 오개념은 검증된 빈도 통계가 아니라 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "1일·3일·7일 복습 간격은 제안이며 학습 효과 검증 전이에요. 핵심 개념을 스스로 설명하고 선수 관계를 확인해 다음 단원으로 연결해요."
+    }
+  ]
+}
