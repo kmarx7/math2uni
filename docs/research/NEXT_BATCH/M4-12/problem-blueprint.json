@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-12",
+  "unitTitle": "역·대우와 조건 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "mm4-12-family-1",
+      "status": "draft",
+      "title": "p⇒q에서 역·이·대우 문장 구성",
+      "reasoningStructure": "명제의 전제와 결론을 분리한 뒤 순서를 바꾸고 필요한 조건을 부정하여 세 문장을 만든다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-12-skill-1",
+      "distinctFrom": "진리집합 계산 없이 논리문장의 구조와 방향을 변환한다.",
+      "items": [
+        {
+          "id": "m12p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "p⇒q의 대우는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "대우는 결론과 전제를 뒤집고 둘 다 부정하므로 ¬q⇒¬p다.",
+          "skillLabel": "m4-12-skill-1",
+          "misconceptionHypothesis": "역 q⇒p를 대우로 혼동할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "q⇒p"
+            },
+            {
+              "id": "B",
+              "label": "¬p⇒¬q"
+            },
+            {
+              "id": "C",
+              "label": "¬q⇒¬p"
+            }
+          ]
+        },
+        {
+          "id": "m12p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“4의 배수이면 짝수다”의 역은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "p를 “4의 배수”, q를 “짝수”로 보면 역은 q⇒p, 즉 “짝수이면 4의 배수다”다.",
+          "skillLabel": "m4-12-skill-1",
+          "misconceptionHypothesis": "문장을 뒤집을 때 조건을 함께 부정할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "짝수이면 4의 배수다."
+            },
+            {
+              "id": "B",
+              "label": "4의 배수가 아니면 짝수가 아니다."
+            },
+            {
+              "id": "C",
+              "label": "짝수가 아니면 4의 배수가 아니다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-12-family-2",
+      "status": "draft",
+      "title": "유한 진리집합 포함으로 명제와 대우의 동치 확인",
+      "reasoningStructure": "P⊆Q와 Qᶜ⊆Pᶜ를 확인해 p⇒q와 대우의 진리값이 일치함을 사례로 검산한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-12-skill-1",
+      "distinctFrom": "문장 기호를 만드는 가족과 달리 포함 관계를 실제 원소로 검증한다.",
+      "items": [
+        {
+          "id": "m12p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4,5,6}, P={2,4}, Q={1,2,4,5}일 때 p⇒q와 대우의 진리값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "P={2,4}의 원소가 모두 Q에 있으므로 P⊆Q다. Qᶜ={3,6}, Pᶜ={1,3,5,6}이므로 Qᶜ⊆Pᶜ다. 두 여집합이 모두 공집합이 아니며, 원래 명제와 대우는 모두 참이다.",
+          "skillLabel": "m4-12-skill-1",
+          "misconceptionHypothesis": "대우가 원래 명제와 반대 진리값을 가진다고 생각할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "원래 명제만 참"
+            },
+            {
+              "id": "B",
+              "label": "둘 다 참"
+            },
+            {
+              "id": "C",
+              "label": "둘 다 거짓"
+            }
+          ]
+        },
+        {
+          "id": "m12p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4}, P={1,3}, Q={2,4}일 때 p⇒q는 어떤가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "1과 3은 P에 있지만 Q에 없으므로 P⊆Q가 아니다. p⇒q는 거짓이다.",
+          "skillLabel": "m4-12-skill-1",
+          "misconceptionHypothesis": "반례가 하나 있어도 전칭 조건문이 참일 수 있다고 볼 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "참, P=Q이므로"
+            },
+            {
+              "id": "B",
+              "label": "참, 공통 원소가 없으므로"
+            },
+            {
+              "id": "C",
+              "label": "거짓, P의 원소가 Q에 모두 포함되지 않으므로"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-12-family-3",
+      "status": "draft",
+      "title": "반례로 역·필요조건·충분조건 오판 찾기",
+      "reasoningStructure": "원래 방향과 역을 분리하고 반례를 제시해 조건의 필요·충분 방향을 판정한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-12-skill-2",
+      "distinctFrom": "앞 가족은 구조 구성과 동치 검사, 이 가족은 역의 실패와 용어 방향에 집중한다.",
+      "items": [
+        {
+          "id": "m12p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“4의 배수이면 짝수다”에서 “짝수이면 4의 배수다”가 거짓임을 보이는 반례는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "2는 짝수지만 4의 배수가 아니므로 역을 반박한다.",
+          "skillLabel": "m4-12-skill-2",
+          "misconceptionHypothesis": "한 사례가 거짓인 역을 반박할 수 없다고 생각할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2"
+            },
+            {
+              "id": "B",
+              "label": "4"
+            },
+            {
+              "id": "C",
+              "label": "8"
+            }
+          ]
+        },
+        {
+          "id": "m12p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "p⇒q가 참일 때 p와 q의 조건 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "p가 성립하면 q가 보장되므로 p는 q의 충분조건이고 q는 p의 필요조건이다.",
+          "skillLabel": "m4-12-skill-2",
+          "misconceptionHypothesis": "필요와 충분의 주체를 화살표 반대로 읽을 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "p는 q의 필요조건, q는 p의 충분조건"
+            },
+            {
+              "id": "B",
+              "label": "둘은 항상 동치 조건"
+            },
+            {
+              "id": "C",
+              "label": "p는 q의 충분조건, q는 p의 필요조건"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 사고 구조마다 연습 초안 두 개씩을 둔다. 형성평가 인스턴스는 만들지 않았고 필수 학습량과 문제은행 수량을 분리한다."
+  },
+  "sourceStatus": "교육부 공식 고시의 수학과 별책 존재와 2028 정책 배경만 확인; 첨부 원문·단원별 공식 매핑 미검증. 자체 제작 연습 초안으로 제3자 문항을 재현하지 않음."
+}

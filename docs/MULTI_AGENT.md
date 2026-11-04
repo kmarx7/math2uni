@@ -2,7 +2,7 @@
 
 ## 2026-11-03 현재 진행 상태
 
-Math 90 제안 경로 v0.3.0의 내부 배분 결정은 완료했다. LEVEL 수량은 `12/14/18/22/24/20/22/18/20`이며 기존 ID와 역사적 `Unit.level/order`를 보존한다. 기존 LEVEL 0 12개 외에 M1-01~20, M2-01~20, M3-01~22, M4-01~08의 제안 단원 70개가 개발 프리뷰에 연결됐다. 다음 묶음은 M4-09~13이다. 경로는 여전히 proposed이며 공식 성취기준 검증·전문가 검수·사람 게시 승인은 완료되지 않았다. 이번 배치 QA는 `docs/reviews/NEXT_STEP/M4-04-M4-08-batch-qa.md`에서 확인한다. 전체 E2E는 테스트 서버가 `127.0.0.1:54329`에 bind하는 단계에서 `EPERM`으로 시작하지 못해 미검증이다.
+Math 90 제안 경로 v0.3.0의 내부 배분 결정은 완료했다. LEVEL 수량은 `12/14/18/22/24/20/22/18/20`이며 기존 ID와 역사적 `Unit.level/order`를 보존한다. 기존 LEVEL 0 12개 외에 M1-01~20, M2-01~20, M3-01~22, M4-01~13의 제안 단원 75개가 개발 프리뷰에 연결됐다. 다음 묶음은 M4-14~18이다. 경로는 여전히 proposed이며 공식 성취기준 검증·전문가 검수·사람 게시 승인은 완료되지 않았다. 최신 배치 QA는 `docs/reviews/NEXT_STEP/M4-09-M4-13-batch-qa.md`에서 확인한다. 전체 E2E는 테스트 서버가 `127.0.0.1:54329`에 bind하는 단계에서 `EPERM`으로 시작하지 못해 미검증이다.
 
 ## 현재 구조와 실행 상태
 
@@ -68,3 +68,8 @@ Curriculum Architect 소유 명세는 `docs/specifications/NEXT_BATCH/M1-xx/less
 ## 순차 실행 대안
 
 `python3 scripts/validate-agent-config.py --prompt curriculum` 등으로 각 역할 지침을 출력할 수 있다. 위 인계 순서를 한 역할씩 실행하고 파일·검증 근거를 다음 역할에 제공하면 같은 계약을 사용한다. 이 명령은 프롬프트 출력만 하며 외부 AI 호출이나 에이전트 실행을 가장하지 않는다.
+
+
+## 2026-11-04 · M4-09~M4-13 개발 프리뷰 인계 완료
+
+Curriculum review가 다섯 단원의 수업/청사진 정합성 및 문항 검토를 거쳐 `implementation-ready`를 판정했다. Research는 30개 문항 초안과 verification 상태를 인계했고, Developer & QA는 전용 labs·서버 전용 문제 변환·preview manifest·lesson registry·단원 진도 격리와 테스트를 구현했다. M4-10과 M4-13의 수정 이력은 독립 검토 기록에 남아 있으며, 현재 모든 문항은 draft / `humanVerified:false`; 평가 0개, 게시 0개다. 전체 unit tests 154개와 content validate 19개, lint/typecheck/build 통과. E2E는 환경의 54329 bind EPERM으로 실행 전 차단이다. 이 검토는 사람 게시 승인이 아니며 `approved-content.json`은 null이다.

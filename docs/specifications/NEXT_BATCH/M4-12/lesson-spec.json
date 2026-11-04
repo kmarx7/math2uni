@@ -1,0 +1,255 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-12",
+  "levelId": "LEVEL 4",
+  "title": "역·대우와 조건 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "역과 대우",
+      "필요조건과 충분조건"
+    ],
+    "prerequisiteUnits": [
+      "M4-11"
+    ],
+    "visualization": "명제 화살표"
+  },
+  "objectives": [
+    "조건 p,q에서 명제·역·이·대우를 구별하고 참·거짓 관계를 설명한다.",
+    "진리집합 포함 관계와 필요조건·충분조건 표현을 연결한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-12-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-11: 조건의 진리집합과 두 집합의 포함 관계를 해석한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-12-skill-1",
+    "m4-12-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "조건문 화살표 읽기 → 역·이·대우 구성 → 대우의 동치 → 진리집합 포함 → 충분·필요 표현 → 반례 검토",
+    "principleDerivation": "p→q와 그 대우 ¬q→¬p는 항상 같은 참·거짓 값을 갖는다. 역 q→p나 이 ¬p→¬q는 원래 명제와 항상 같은 참·거짓을 갖는 것은 아니다. p→q가 참이면 p는 q의 충분조건, q는 p의 필요조건이다. 진리집합을 P,Q라 하면 P⊆Q로 나타난다.",
+    "naturalNumberConvention": "¬p는 조건 p가 거짓인 경우를 뜻하며, 진리집합 비교는 동일한 전체 범위 안에서 한다. “필요”와 “충분”을 일상적 강조 표현과 혼동하지 않고 화살표와 포함으로 검산한다.",
+    "accessibility": "색상만으로 정답을 전달하지 않고 기호·문장·표 또는 패턴을 병행한다. 모든 조작은 키보드와 레이블로도 수행할 수 있도록 설계한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-12-u1",
+      "title": "조건문과 방향",
+      "targetSkills": [
+        "m4-12-skill-1"
+      ],
+      "explanation": "p→q는 p가 성립할 때 q가 성립한다는 방향의 주장이다. 방향을 바꾸면 별개의 명제가 된다.",
+      "activity": "“n이 4의 배수이면 n은 짝수”에서 p는 4의 배수, q는 짝수다.",
+      "check": "조건과 결론을 표시하고 화살표 방향을 읽는다."
+    },
+    {
+      "id": "m4-12-u2",
+      "title": "역·이·대우 만들기",
+      "targetSkills": [
+        "m4-12-skill-1"
+      ],
+      "explanation": "역은 조건과 결론을 맞바꾼다. 이는 둘 다 부정한다. 대우는 순서를 바꾸고 둘 다 부정한다.",
+      "activity": "p→q의 역은 q→p, 이는 ¬p→¬q, 대우는 ¬q→¬p다.",
+      "check": "원래 명제에서 세 문장을 정확히 구성한다."
+    },
+    {
+      "id": "m4-12-u3",
+      "title": "대우와 논리적 동치",
+      "targetSkills": [
+        "m4-12-skill-1"
+      ],
+      "explanation": "명제와 대우는 서로 같은 참·거짓 값을 가진다. 역과 이는 서로 대우 관계지만 원래 명제와는 일반적으로 동치가 아니다.",
+      "activity": "“n이 4의 배수이면 짝수”의 대우는 “n이 짝수가 아니면 4의 배수가 아니다”다.",
+      "check": "원래 명제와 대우를 같은 이유로 판단한다."
+    },
+    {
+      "id": "m4-12-u4",
+      "title": "진리집합 포함과 함의",
+      "targetSkills": [
+        "m4-12-skill-2"
+      ],
+      "explanation": "P가 p의 진리집합, Q가 q의 진리집합일 때 p→q가 참이면 같은 범위에서 P⊆Q다.",
+      "activity": "4의 배수인 정수 집합은 짝수인 정수 집합에 포함된다.",
+      "check": "반례가 있는지 또는 포함이 성립하는지 확인한다."
+    },
+    {
+      "id": "m4-12-u5",
+      "title": "필요조건과 충분조건",
+      "targetSkills": [
+        "m4-12-skill-2"
+      ],
+      "explanation": "p→q가 참이면 p는 q의 충분조건이고 q는 p의 필요조건이다. 화살표를 기준으로 이름을 붙인다.",
+      "activity": "n이 4의 배수인 것은 n이 짝수이기 위한 충분조건이다.",
+      "check": "필요·충분의 방향을 화살표와 함께 말한다."
+    },
+    {
+      "id": "m4-12-u6",
+      "title": "동치 조건",
+      "targetSkills": [
+        "m4-12-skill-2"
+      ],
+      "explanation": "p와 q가 서로를 함의할 때 두 조건은 필요충분조건 관계다. 진리집합은 서로 포함되어 같아야 한다.",
+      "activity": "정수 n에서 n이 짝수 ⇔ n은 2의 배수다.",
+      "check": "양방향 함의를 각각 확인해 동치를 판단한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-12-lab",
+      "kind": "math-lab",
+      "interaction": "명제 화살표",
+      "description": "조건문 화살표 읽기 → 역·이·대우 구성 → 대우의 동치 → 진리집합 포함 → 충분·필요 표현 → 반례 검토",
+      "features": [
+        "조작 결과를 수식·문장·목록으로도 제공한다.",
+        "단계별 실행 취소와 초기화를 제공한다.",
+        "색상 이외의 레이블과 키보드 조작을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "일상 문장 또는 기호에서 p,q를 식별해 역·이·대우 구성",
+      "예시 범위에서 원명제와 역의 참·거짓을 반례로 비교하고 대우 관계 검토",
+      "화살표·진리집합 포함·필요충분조건 표현 사이를 변환"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 여섯 개의 검수 대기 연습 초안 목표다. 이 명세는 문항이나 형성평가 문항을 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도의 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 개발 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "원명제에서 역·이·대우를 논리 기호와 문장으로 정확히 구성한다.",
+        "대우의 동치와 역의 비동치를 예·반례로 확인한다.",
+        "필요·충분 관계를 화살표와 진리집합 포함 방향에 맞게 표현한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 역·대우와 조건 관계의 관련 소단원으로 돌아간다. 일정 간격 이후 다른 수치·표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "역과 대우를 같은 변환으로 생각한다.",
+    "원명제가 참이면 역도 참이라고 생각한다.",
+    "필요조건을 충분조건과 뒤바꾼다.",
+    "양방향 함의 중 한 방향만 확인하고 동치라고 결론 낸다."
+  ],
+  "workedExample": {
+    "prompt": "정수 n에 대해 p: “n은 4의 배수”, q: “n은 짝수”라 하자. p→q의 역과 대우를 쓰고 참·거짓을 판단하시오.",
+    "steps": [
+      "p→q는 “정수 n이 4의 배수이면 짝수”다. 4의 배수인 정수는 어떤 정수 k에 대해 n=4k로 쓸 수 있고, n=2(2k)이므로 짝수다. 따라서 원명제는 참이다.",
+      "역 q→p는 “짝수이면 4의 배수”다. n=2는 짝수지만 4의 배수가 아니므로 반례가 되어 역은 거짓이다.",
+      "대우 ¬q→¬p는 “짝수가 아니면 4의 배수가 아니다”다. 원명제와 대우는 동치이므로 대우도 참이다.",
+      "따라서 p는 q의 충분조건이고 q는 p의 필요조건이다."
+    ],
+    "answer": "역: 거짓; 대우: 참; p는 q의 충분조건, q는 p의 필요조건"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum AI review of proposal metadata, learning sequence, novice-safe explanations, blueprint and draft consistency for developer preview handoff. This status is not a human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked in the repository. Official achievement-standard and CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; M4-12/M4-13 also received separate independent recheck"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical content review with explicit publication approval",
+      "Any official-standard or CSAT mapping requires source-level verification before being added"
+    ]
+  }
+}

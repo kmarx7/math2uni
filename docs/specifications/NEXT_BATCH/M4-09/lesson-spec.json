@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-09",
+  "levelId": "LEVEL 4",
+  "title": "집합의 표현과 포함",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "원소와 부분집합",
+      "집합의 표현법"
+    ],
+    "prerequisiteUnits": [
+      "M1-05"
+    ],
+    "visualization": "벤 다이어그램"
+  },
+  "objectives": [
+    "전체집합을 밝혀 집합과 원소의 범위를 설명한다.",
+    "원소나열법과 조건제시법을 읽고 서로 바꾸어 나타낸다.",
+    "원소 관계와 부분집합 관계를 구분하고 집합의 같음을 원소로 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-09-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-05: 문자에 수를 대입해 식의 값을 구하고, 주어진 조건을 수로 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-09-skill-1",
+    "m4-09-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "범위와 대상 정하기 → 원소 나열 → 조건으로 나타내기 → 원소/부분집합 기호 구분 → 포함과 같음 확인 → 벤 다이어그램으로 표현 비교",
+    "principleDerivation": "집합의 표현은 원소나열법과 조건제시법처럼 달라도 실제로 포함하는 원소가 같으면 같은 집합이다. A⊆B는 A의 각 원소를 확인해 모두 B에도 속하는지 판단한다. ∈는 원소 하나와 집합의 관계, ⊆는 집합과 집합의 관계다.",
+    "naturalNumberConvention": "예시는 모두 유한한 전체집합 U를 먼저 정한다. ∈와 ⊆의 기호를 자연수나 실수 전체로 확대하지 않고, 조건제시법에서도 U를 명시한다.",
+    "accessibility": "벤 다이어그램은 색만으로 구분하지 않고 집합 이름·원소 목록·포함 관계를 텍스트로 함께 표시한다. 조작은 레이블이 있는 키보드 조작을 제공한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-09-u1",
+      "title": "집합·원소·전체집합",
+      "targetSkills": [
+        "m4-09-skill-1"
+      ],
+      "explanation": "집합은 공통된 조건으로 모은 대상을 하나의 대상으로 다루는 모임이다. 문맥에서 대상의 범위를 전체집합 U로 먼저 밝힌다.",
+      "activity": "U={1,2,3,4,5}에서 짝수의 모임을 생각한다.",
+      "check": "U와 원소의 범위를 말로 구분한다."
+    },
+    {
+      "id": "m4-09-u2",
+      "title": "원소나열법",
+      "targetSkills": [
+        "m4-09-skill-2"
+      ],
+      "explanation": "집합의 원소를 중괄호 안에 빠짐없이 나열할 수 있다. 중복해서 적어도 원소가 늘어나지 않는다.",
+      "activity": "A={1,2,2,3}은 {1,2,3}과 같은 집합이다.",
+      "check": "정해진 조건의 원소를 빠짐없이 한 번씩 나열한다."
+    },
+    {
+      "id": "m4-09-u3",
+      "title": "조건제시법",
+      "targetSkills": [
+        "m4-09-skill-2"
+      ],
+      "explanation": "집합의 원소가 만족하는 조건을 기호와 말로 나타낸다. 전체집합과 조건을 함께 적어 범위를 분명히 한다.",
+      "activity": "U={1,2,3,4,5,6}에서 짝수 집합을 조건으로 표현한다.",
+      "check": "표현한 조건을 하나씩 대입해 원소를 확인한다."
+    },
+    {
+      "id": "m4-09-u4",
+      "title": "원소 관계 기호",
+      "targetSkills": [
+        "m4-09-skill-1"
+      ],
+      "explanation": "x∈A는 x가 A의 원소임을, x∉A는 원소가 아님을 뜻한다. 원소 하나와 집합 전체의 관계를 구별한다.",
+      "activity": "A={1,3,5}에서 3∈A이고 2∉A다.",
+      "check": "주어진 수가 집합의 원소인지 판정한다."
+    },
+    {
+      "id": "m4-09-u5",
+      "title": "부분집합 관계",
+      "targetSkills": [
+        "m4-09-skill-1"
+      ],
+      "explanation": "A⊆B는 A의 모든 원소가 B에도 들어 있음을 뜻한다. 원소 하나가 들어 있다는 사실만으로 부분집합이라고 할 수는 없다.",
+      "activity": "A={2,4}, B={1,2,3,4}이면 A⊆B다.",
+      "check": "원소별 포함을 확인해 부분집합을 판정한다."
+    },
+    {
+      "id": "m4-09-u6",
+      "title": "집합의 같음과 벤 다이어그램",
+      "targetSkills": [
+        "m4-09-skill-2"
+      ],
+      "explanation": "두 집합은 원소가 같을 때 같다. 원소나열과 조건제시 표현을 벤 다이어그램의 같은 영역으로 연결한다.",
+      "activity": "{1,3,5}와 U 안의 홀수 조건으로 나타낸 집합은 같다.",
+      "check": "두 표현의 원소 목록과 영역이 일치하는지 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-09-lab",
+      "kind": "math-lab",
+      "interaction": "벤 다이어그램",
+      "description": "유한한 U의 원소를 집합 영역에 놓고 원소나열·조건제시·포함 관계를 연결한다.",
+      "features": [
+        "전체집합을 선택하면 영역 밖 후보를 별도 표시한다.",
+        "원소와 부분집합 기호를 다른 조작으로 제시한다.",
+        "색 외에 집합명과 원소 텍스트를 제공하고 키보드 조작을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "고정된 전체집합에서 원소 포함을 개별 판정",
+      "원소나열 집합 사이의 부분집합/같음 판별",
+      "문장 조건을 집합 표현으로 바꾸고 원소 목록 검산"
+    ],
+    "assessment": "여섯 개는 서로 다른 추론을 위한 검수 대기 연습 초안 목표다. 평가 문항은 생성하지 않고 형성평가 기준만 둔다.",
+    "distinctReasoningRule": "숫자만 바꾼 같은 조건 문제는 새 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "개발 제안 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "전체집합과 조건을 밝혀 원소의 범위를 확인한다.",
+        "원소 기호와 부분집합 기호를 구분해 포함 관계를 설명한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 전체집합·원소/부분집합 구분·집합 표현 중 해당 소단원으로 돌아간다. 다른 유한 집합에서 도움 없이 표현과 포함을 다시 확인한다. 간격 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "집합에 같은 원소를 여러 번 쓰면 원소 개수가 늘어난다고 생각한다.",
+    "x∈A와 {x}⊆A를 같은 종류의 관계로 읽는다.",
+    "A의 원소 하나가 B에 속한다는 사실만으로 A⊆B라고 판단한다.",
+    "조건제시법에서 전체집합을 생략해 범위를 바꾼다."
+  ],
+  "workedExample": {
+    "prompt": "U={1,2,3,4,5,6}에서 A={x∈U | x는 3의 배수}를 원소나열법으로 쓰고 A⊆B인지 판단하시오. 단 B={1,2,3,4,5,6}.",
+    "steps": [
+      "전체집합 U 안에서 3의 배수를 찾는다.",
+      "3과 6이므로 A={3,6}이다.",
+      "A의 모든 원소 3,6이 B에도 들어 있다.",
+      "따라서 A⊆B이며, 3∈A는 원소 하나와 집합의 관계를 나타낸다."
+    ],
+    "answer": "A={3,6}, A⊆B"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum AI review of proposal metadata, learning sequence, novice-safe explanations, blueprint and draft consistency for developer preview handoff. This status is not a human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked in the repository. Official achievement-standard and CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; M4-12/M4-13 also received separate independent recheck"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical content review with explicit publication approval",
+      "Any official-standard or CSAT mapping requires source-level verification before being added"
+    ]
+  }
+}

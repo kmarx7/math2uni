@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-11",
+  "contentVersion": "0.1.0-draft",
+  "status": "automated-checks-passed-e2e-blocked",
+  "automatedChecks": {
+    "lessonSchema": "passed",
+    "lessonPhases": "15",
+    "subunits": "6",
+    "practiceItems": "6-draft-items-3-families",
+    "answerRules": "passed",
+    "publicAnswerSecrecy": "passed",
+    "productionDraftGate": "passed",
+    "unitProgressIsolation": "passed",
+    "humanReview": "pending",
+    "publicationApproval": "pending"
+  },
+  "batchChecks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "test": "passed-20-files-154-tests",
+    "contentValidate": "passed-3-files-19-tests",
+    "testE2E": "blocked-before-tests-listen-EPERM-127.0.0.1-54329",
+    "build": "passed-next-16.3.6",
+    "diffCheck": "passed"
+  },
+  "officialStandards": [],
+  "publicationAllowed": false,
+  "limitations": [
+    "Playwright 브라우저 흐름은 인증 테스트 서버의 127.0.0.1:54329 bind EPERM으로 시작하지 못해 미검증이다.",
+    "사람의 교육·수학 검토, 공식 성취기준 매핑, 실제 모바일 브라우저 검수는 미완료다."
+  ]
+}

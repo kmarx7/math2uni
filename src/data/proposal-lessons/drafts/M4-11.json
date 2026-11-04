@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-11",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "문장이 참·거짓을 판정할 수 있는 명제인지 구분한다. 변수가 포함된 조건의 진리집합을 정해진 범위에서 구한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-10-readiness-1: M4-10: 집합의 원소를 조건에 따라 분류하고 교집합·부분집합을 읽는다.; m4-11-readiness-2: M1-12: 문자의 값이 정해질 때 식 또는 문장의 참·거짓을 확인한다. 이 진단은 준비 안내용이며 숙달도나 완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-11-u1",
+          "title": "명제와 문장",
+          "body": "명제는 참 또는 거짓이 분명한 문장이다. 질문이나 명령, 값에 따라 달라지는 열린 문장은 명제가 아닐 수 있다.",
+          "activity": "“7은 홀수이다”는 거짓인 명제이고 “문을 닫아라”는 명제가 아니다.",
+          "check": "문장이 참·거짓 판정 대상인지 근거를 말한다."
+        },
+        {
+          "id": "m4-11-u2",
+          "title": "명제의 참·거짓",
+          "body": "명제의 참·거짓은 느낌이 아니라 정의나 반례로 판정한다. 거짓인 보편 주장에는 반례 하나가 충분할 수 있다.",
+          "activity": "“모든 짝수는 4의 배수”는 2가 반례이므로 거짓이다.",
+          "check": "예시 또는 반례로 판정을 정당화한다."
+        },
+        {
+          "id": "m4-11-u3",
+          "title": "조건과 열린 문장",
+          "body": "변수가 있는 문장은 값이 정해지기 전 참·거짓이 결정되지 않을 수 있다. 이를 조건으로 다룬다.",
+          "activity": "정수 x에 대해 “x²=4”는 x의 값에 따라 달라지는 조건이다.",
+          "check": "변수의 값이 결정에 미치는 영향을 설명한다."
+        },
+        {
+          "id": "m4-11-u4",
+          "title": "변수 범위",
+          "body": "조건의 진리집합은 후보 범위 안에서만 구한다. 후보 범위가 다르면 진리집합도 달라질 수 있다.",
+          "activity": "x²=4의 정수 범위 진리집합은 {-2,2}다.",
+          "check": "범위를 적고 그 안의 후보를 빠짐없이 점검한다."
+        },
+        {
+          "id": "m4-11-u5",
+          "title": "진리집합",
+          "body": "조건의 진리집합은 조건을 참으로 만드는 범위 내 값들의 집합이다. 원소를 조건에 대입해 검산한다.",
+          "activity": "범위 {1,2,3,4}에서 “x는 짝수”의 진리집합은 {2,4}다.",
+          "check": "조건을 만족하는 값과 만족하지 않는 값을 구별한다."
+        },
+        {
+          "id": "m4-11-u6",
+          "title": "진리집합과 포함도",
+          "body": "두 조건의 진리집합을 비교하면 한 조건이 다른 조건을 만족시키는지 시각화할 수 있다. 포함 관계만으로 조건 자체가 같은 것은 아니다.",
+          "activity": "범위 {1,2,3,4}에서 x=4의 집합은 x가 짝수인 집합의 부분집합이다.",
+          "check": "원소 목록과 포함도를 함께 해석한다."
+        }
+      ],
+      "body": "유한한 사례를 살펴보고 조건과 범위를 말로 확인한 뒤 표현·기호로 옮기고 원소를 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "진리집합 포함도 (미리보기 대응: condition-map)",
+      "interaction": "condition-map",
+      "description": "명세의 m4-11-lab를 현재 contentSchema의 condition-map으로 임시 표현한다. 문장과 주장 구별 → 명제의 참·거짓 → 열린 문장 → 변수 범위 설정 → 진리집합 → 집합 표현으로 검산 전용 조작은 구현과 QA 전이며 이 초안은 완성된 인터랙션을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "U={1,2,3,4,5,6}에서 p:x>2, q:x는 짝수일 때 P,Q,p 그리고 q,p 또는 q의 진리집합을 구한다.",
+        "U의 원소 중 2보다 큰 수는 3,4,5,6이므로 P={3,4,5,6}이다.",
+        "짝수인 원소는 2,4,6이므로 Q={2,4,6}이다.",
+        "두 조건을 모두 만족하는 원소는 4,6이므로 P∩Q={4,6}이다.",
+        "적어도 하나를 만족하는 원소는 2,3,4,5,6이므로 P∪Q={2,3,4,5,6}이다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안이에요. 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "어느 조건, 범위 또는 추론 단계를 놓쳤는지 확인하고 해당 소단원으로 돌아가요. 오개념은 실증 빈도 자료가 아니라 검토할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안된 1일·3일·7일 간격은 효과 검증 전입니다. 다른 유한 사례로 도움 없이 핵심 관계를 다시 확인한 뒤 다음 단원으로 이어가요."
+    }
+  ]
+}

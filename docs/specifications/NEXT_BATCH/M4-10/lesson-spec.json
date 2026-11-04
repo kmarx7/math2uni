@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-10",
+  "levelId": "LEVEL 4",
+  "title": "집합의 연산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "합집합과 교집합",
+      "여집합과 차집합"
+    ],
+    "prerequisiteUnits": [
+      "M4-09"
+    ],
+    "visualization": "집합 영역 색칠"
+  },
+  "objectives": [
+    "합집합과 교집합을 원소의 조건으로 설명하고 벤 다이어그램에서 구별한다.",
+    "전체집합을 명시한 뒤 여집합과 차집합을 구하고 원소로 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-09-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-09: 유한한 전체집합 안에서 집합의 원소와 포함 관계를 판정한다."
+    },
+    {
+      "id": "m4-10-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M0-03: 원소 목록을 빠짐없이 비교하고 공통 원소를 찾는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-10-skill-1",
+    "m4-10-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "두 집합 원소 확인 → 합집합·교집합 → 전체집합 고정 → 여집합·차집합 → 벤 다이어그램과 원소 목록 검산",
+    "principleDerivation": "A∪B는 A 또는 B에 속하는 원소의 모임이고 A∩B는 A와 B 모두에 속하는 원소의 모임이다. 여집합 Aᶜ는 정해진 전체집합 U 안에서 A에 속하지 않는 원소이며, U가 달라지면 결과도 달라진다. A\\B는 A에 속하면서 B에는 속하지 않는 원소다.",
+    "naturalNumberConvention": "모든 여집합 예시는 유한한 U를 먼저 선언한다. U 밖의 수는 Aᶜ의 후보로 취급하지 않는다. 차집합은 순서에 따라 달라질 수 있음을 원소로 확인한다.",
+    "accessibility": "색상만으로 정답을 전달하지 않고 기호·문장·표 또는 패턴을 병행한다. 모든 조작은 키보드와 레이블로도 수행할 수 있도록 설계한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-10-u1",
+      "title": "합집합",
+      "targetSkills": [
+        "m4-10-skill-1"
+      ],
+      "explanation": "A 또는 B 중 적어도 하나에 속하는 원소를 모은다. 두 집합에 공통인 원소는 한 번만 적는다.",
+      "activity": "A={1,2,4}, B={2,3}이면 A∪B={1,2,3,4}다.",
+      "check": "각 원소가 A 또는 B에 속하는지 확인해 합집합을 쓴다."
+    },
+    {
+      "id": "m4-10-u2",
+      "title": "교집합",
+      "targetSkills": [
+        "m4-10-skill-1"
+      ],
+      "explanation": "두 집합 모두에 속하는 원소만 남긴다. 겹치는 영역은 두 조건을 동시에 만족한다.",
+      "activity": "A={1,2,4}, B={2,3}이면 A∩B={2}다.",
+      "check": "공통 원소와 두 조건의 동시 만족을 설명한다."
+    },
+    {
+      "id": "m4-10-u3",
+      "title": "합집합·교집합의 조건",
+      "targetSkills": [
+        "m4-10-skill-1"
+      ],
+      "explanation": "합집합은 “또는”, 교집합은 “그리고”에 대응한다. 문장의 조건을 원소별로 검사한다.",
+      "activity": "x∈A∩B는 x∈A이고 x∈B라는 뜻이다.",
+      "check": "조건 문장을 기호와 원소 집합으로 바꾼다."
+    },
+    {
+      "id": "m4-10-u4",
+      "title": "여집합과 전체집합",
+      "targetSkills": [
+        "m4-10-skill-2"
+      ],
+      "explanation": "Aᶜ는 U의 원소 중 A에 없는 원소다. 여집합은 기준 U를 생략하면 뜻이 정해지지 않는다.",
+      "activity": "U={1,2,3,4,5}, A={1,4}이면 Aᶜ={2,3,5}다.",
+      "check": "U를 먼저 표시하고 U에서 A의 원소를 뺀다."
+    },
+    {
+      "id": "m4-10-u5",
+      "title": "차집합",
+      "targetSkills": [
+        "m4-10-skill-2"
+      ],
+      "explanation": "A\\B는 A에서 B에도 있는 원소를 제외한다. B\\A와 일반적으로 같지 않다.",
+      "activity": "A={1,2,4}, B={2,3}이면 A\\B={1,4}, B\\A={3}다.",
+      "check": "왼쪽 집합의 원소만 후보로 두고 오른쪽 원소를 제거한다."
+    },
+    {
+      "id": "m4-10-u6",
+      "title": "영역·원소 검산",
+      "targetSkills": [
+        "m4-10-skill-2"
+      ],
+      "explanation": "영역 그림과 원소 목록은 같은 조건을 보여 준다. 색만 보지 않고 영역 이름과 원소를 함께 확인한다.",
+      "activity": "U={1,2,3,4}, A={1,2}, B={2,3}에서 A∩B={2}의 영역만 표시한다.",
+      "check": "색칠 결과를 원소 목록과 서로 검산한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-10-lab",
+      "kind": "math-lab",
+      "interaction": "집합 영역 색칠",
+      "description": "두 집합 원소 확인 → 합집합·교집합 → 전체집합 고정 → 여집합·차집합 → 벤 다이어그램과 원소 목록 검산",
+      "features": [
+        "조작 결과를 수식·문장·목록으로도 제공한다.",
+        "단계별 실행 취소와 초기화를 제공한다.",
+        "색상 이외의 레이블과 키보드 조작을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "유한 집합의 원소를 조건별로 분류해 합집합·교집합을 결정",
+      "명시된 U에서 여집합 및 차집합을 구하고 순서 효과를 비교",
+      "문장 또는 벤 다이어그램을 집합 연산식과 원소 목록으로 변환"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 여섯 개의 검수 대기 연습 초안 목표다. 이 명세는 문항이나 형성평가 문항을 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도의 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 개발 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "합집합·교집합을 “또는/그리고” 조건으로 설명하고 원소를 빠짐없이 산출한다.",
+        "여집합 문제에서 전체집합을 표시하고 U 밖의 원소를 포함하지 않는다.",
+        "차집합의 방향을 유지하고 그림·기호·원소 목록이 일치하는지 확인한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 집합의 연산의 관련 소단원으로 돌아간다. 일정 간격 이후 다른 수치·표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "합집합에서 겹치는 원소를 중복 집계한다.",
+    "합집합의 “또는”을 둘 다 만족해야 하는 “그리고”로 읽는다.",
+    "전체집합 없이 여집합을 정할 수 있다고 생각한다.",
+    "A\\B와 B\\A가 항상 같다고 생각한다."
+  ],
+  "workedExample": {
+    "prompt": "U={1,2,3,4,5,6}, A={1,2,4}, B={2,3,4,6}일 때 A∪B, A∩B, Aᶜ, A\\B를 구하시오.",
+    "steps": [
+      "합집합은 A 또는 B에 있는 원소를 중복 없이 모은다: {1,2,3,4,6}.",
+      "교집합은 두 집합에 공통인 원소다: {2,4}.",
+      "여집합은 반드시 U 안에서 찾으므로 U에서 A를 제외해 {3,5,6}이다.",
+      "차집합은 A에서 B에도 있는 2,4를 제외해 {1}이다."
+    ],
+    "answer": "A∪B={1,2,3,4,6}, A∩B={2,4}, Aᶜ={3,5,6}, A\\B={1}"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum AI review of proposal metadata, learning sequence, novice-safe explanations, blueprint and draft consistency for developer preview handoff. This status is not a human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked in the repository. Official achievement-standard and CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; M4-12/M4-13 also received separate independent recheck"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical content review with explicit publication approval",
+      "Any official-standard or CSAT mapping requires source-level verification before being added"
+    ]
+  }
+}

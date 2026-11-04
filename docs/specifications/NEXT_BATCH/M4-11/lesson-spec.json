@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-11",
+  "levelId": "LEVEL 4",
+  "title": "명제와 조건",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "명제의 참·거짓",
+      "조건의 진리집합"
+    ],
+    "prerequisiteUnits": [
+      "M4-10",
+      "M1-12"
+    ],
+    "visualization": "진리집합 포함도"
+  },
+  "objectives": [
+    "문장이 참·거짓을 판정할 수 있는 명제인지 구분한다.",
+    "변수가 포함된 조건의 진리집합을 정해진 범위에서 구한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-10-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-10: 집합의 원소를 조건에 따라 분류하고 교집합·부분집합을 읽는다."
+    },
+    {
+      "id": "m4-11-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-12: 문자의 값이 정해질 때 식 또는 문장의 참·거짓을 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-11-skill-1",
+    "m4-11-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "문장과 주장 구별 → 명제의 참·거짓 → 열린 문장 → 변수 범위 설정 → 진리집합 → 집합 표현으로 검산",
+    "principleDerivation": "명제는 참인지 거짓인지 판정할 수 있는 문장이다. “x는 3보다 크다”처럼 변수의 값이 정해지지 않아 참·거짓이 결정되지 않은 문장은 조건이다. 조건의 진리집합은 먼저 정한 변수의 범위에서 조건을 참으로 만드는 값의 집합이다.",
+    "naturalNumberConvention": "진리집합을 구할 때 변수의 범위를 항상 표시한다. 범위가 자연수인지 정수인지 실수인지에 따라 원소가 달라질 수 있다. 문맥에 없는 범위는 임의로 고정하지 않고 질문에 명시한다.",
+    "accessibility": "색상만으로 정답을 전달하지 않고 기호·문장·표 또는 패턴을 병행한다. 모든 조작은 키보드와 레이블로도 수행할 수 있도록 설계한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-11-u1",
+      "title": "명제와 문장",
+      "targetSkills": [
+        "m4-11-skill-1"
+      ],
+      "explanation": "명제는 참 또는 거짓이 분명한 문장이다. 질문이나 명령, 값에 따라 달라지는 열린 문장은 명제가 아닐 수 있다.",
+      "activity": "“7은 홀수이다”는 거짓인 명제이고 “문을 닫아라”는 명제가 아니다.",
+      "check": "문장이 참·거짓 판정 대상인지 근거를 말한다."
+    },
+    {
+      "id": "m4-11-u2",
+      "title": "명제의 참·거짓",
+      "targetSkills": [
+        "m4-11-skill-1"
+      ],
+      "explanation": "명제의 참·거짓은 느낌이 아니라 정의나 반례로 판정한다. 거짓인 보편 주장에는 반례 하나가 충분할 수 있다.",
+      "activity": "“모든 짝수는 4의 배수”는 2가 반례이므로 거짓이다.",
+      "check": "예시 또는 반례로 판정을 정당화한다."
+    },
+    {
+      "id": "m4-11-u3",
+      "title": "조건과 열린 문장",
+      "targetSkills": [
+        "m4-11-skill-1"
+      ],
+      "explanation": "변수가 있는 문장은 값이 정해지기 전 참·거짓이 결정되지 않을 수 있다. 이를 조건으로 다룬다.",
+      "activity": "정수 x에 대해 “x²=4”는 x의 값에 따라 달라지는 조건이다.",
+      "check": "변수의 값이 결정에 미치는 영향을 설명한다."
+    },
+    {
+      "id": "m4-11-u4",
+      "title": "변수 범위",
+      "targetSkills": [
+        "m4-11-skill-2"
+      ],
+      "explanation": "조건의 진리집합은 후보 범위 안에서만 구한다. 후보 범위가 다르면 진리집합도 달라질 수 있다.",
+      "activity": "x²=4의 정수 범위 진리집합은 {-2,2}다.",
+      "check": "범위를 적고 그 안의 후보를 빠짐없이 점검한다."
+    },
+    {
+      "id": "m4-11-u5",
+      "title": "진리집합",
+      "targetSkills": [
+        "m4-11-skill-2"
+      ],
+      "explanation": "조건의 진리집합은 조건을 참으로 만드는 범위 내 값들의 집합이다. 원소를 조건에 대입해 검산한다.",
+      "activity": "범위 {1,2,3,4}에서 “x는 짝수”의 진리집합은 {2,4}다.",
+      "check": "조건을 만족하는 값과 만족하지 않는 값을 구별한다."
+    },
+    {
+      "id": "m4-11-u6",
+      "title": "진리집합과 포함도",
+      "targetSkills": [
+        "m4-11-skill-2"
+      ],
+      "explanation": "두 조건의 진리집합을 비교하면 한 조건이 다른 조건을 만족시키는지 시각화할 수 있다. 포함 관계만으로 조건 자체가 같은 것은 아니다.",
+      "activity": "범위 {1,2,3,4}에서 x=4의 집합은 x가 짝수인 집합의 부분집합이다.",
+      "check": "원소 목록과 포함도를 함께 해석한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-11-lab",
+      "kind": "math-lab",
+      "interaction": "진리집합 포함도",
+      "description": "문장과 주장 구별 → 명제의 참·거짓 → 열린 문장 → 변수 범위 설정 → 진리집합 → 집합 표현으로 검산",
+      "features": [
+        "조작 결과를 수식·문장·목록으로도 제공한다.",
+        "단계별 실행 취소와 초기화를 제공한다.",
+        "색상 이외의 레이블과 키보드 조작을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "문장 유형을 분류하고 참·거짓 판정의 근거를 찾기",
+      "범위가 명시된 조건의 진리집합을 원소 대입으로 산출",
+      "두 조건의 진리집합 및 포함 관계를 문장으로 해석"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 여섯 개의 검수 대기 연습 초안 목표다. 이 명세는 문항이나 형성평가 문항을 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도의 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 개발 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "명제와 조건을 구분하고 명제의 참·거짓에 예 또는 반례를 제시한다.",
+        "조건의 진리집합을 구하기 전에 변수 범위를 명시한다.",
+        "진리집합의 원소와 포함 관계가 조건의 뜻과 일치하는지 확인한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 명제와 조건의 관련 소단원으로 돌아간다. 일정 간격 이후 다른 수치·표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "거짓인 문장은 명제가 아니라고 생각한다.",
+    "변수의 범위를 생략해 진리집합을 유일하게 정할 수 있다고 생각한다.",
+    "조건을 만족하는 예 하나만으로 진리집합 전체를 썼다고 생각한다.",
+    "진리집합이 포함되면 두 조건이 동치라고 생각한다."
+  ],
+  "workedExample": {
+    "prompt": "x의 범위를 정수로 할 때, “x²=4”의 진리집합을 구하고 이 문장이 명제인지 조건인지 설명하시오.",
+    "steps": [
+      "x 값이 정해지지 않은 “x²=4”는 참·거짓이 아직 결정되지 않아 조건이다.",
+      "진리집합을 구할 범위를 정수로 확인한다.",
+      "정수 중 제곱이 4인 값은 -2와 2다.",
+      "따라서 진리집합은 {-2,2}다. x에 특정 값을 대입한 문장은 명제가 된다."
+    ],
+    "answer": "조건의 정수 범위 진리집합은 {-2,2}"
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum AI review of proposal metadata, learning sequence, novice-safe explanations, blueprint and draft consistency for developer preview handoff. This status is not a human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked in the repository. Official achievement-standard and CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; M4-12/M4-13 also received separate independent recheck"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical content review with explicit publication approval",
+      "Any official-standard or CSAT mapping requires source-level verification before being added"
+    ]
+  }
+}

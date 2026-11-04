@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-13",
+  "levelId": "LEVEL 4",
+  "title": "명제의 증명",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "대우 증명",
+      "귀류법"
+    ],
+    "prerequisiteUnits": [
+      "M4-12"
+    ],
+    "visualization": "증명 논리 흐름"
+  },
+  "objectives": [
+    "명제의 조건과 결론을 구분하고 대우를 증명해 원명제를 정당화한다.",
+    "가정과 결론이 모순되는 상황을 구성해 명제를 증명하는 귀류법의 흐름을 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-13-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-12: 대우가 원명제와 동치임을 알고 명제의 조건·결론을 구분한다."
+    },
+    {
+      "id": "m4-13-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "선택 진단(미등록·진입 차단 없음): M0-05에서 다룬 홀수·짝수 정의를 이용해 정수 표현을 확인한다. 미숙하더라도 이 단원 안의 정의 안내를 먼저 제공하며 선수 단원으로 자동 연결하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m4-13-skill-1",
+    "m4-13-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "증명의 주장과 가정 구분 → 대우 구성 → 정의로 단계 연결 → 결론 확인 → 결론 부정 가정 → 모순 도출 → 증명 범위 점검",
+    "principleDerivation": "대우 증명은 p→q 대신 동치인 ¬q→¬p를 증명한다. 귀류법은 주장과 그 부정이 동시에 참일 수 없다는 논리 아래 결론의 부정을 가정하고, 주어진 조건과 추론으로 모순을 얻어 그 가정을 버린다. 모순은 단순히 이상해 보이는 결과가 아니라 명시된 정의·사실과 양립할 수 없는 결과여야 한다.",
+    "naturalNumberConvention": "초급 예제는 정수의 홀짝성 등 정의를 명확히 적용할 수 있는 범위에 한정한다. √2의 무리수성 같은 더 긴 증명은 선수 개념 부담을 검토한 뒤 다루며 현재 초안의 필수 평가 범위로 단정하지 않는다.",
+    "accessibility": "색상만으로 정답을 전달하지 않고 기호·문장·표 또는 패턴을 병행한다. 모든 조작은 키보드와 레이블로도 수행할 수 있도록 설계한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-13-u1",
+      "title": "증명의 구조",
+      "targetSkills": [
+        "m4-13-skill-1"
+      ],
+      "explanation": "증명은 가정과 정의를 사용해 결론까지 이유를 연결한다. 예를 나열하는 것과 모든 경우를 보이는 증명은 다르다.",
+      "activity": "정수 n이 짝수라고 가정하면 n=2k인 정수 k가 존재한다.",
+      "check": "가정, 사용할 정의, 보일 결론을 구분한다."
+    },
+    {
+      "id": "m4-13-u2",
+      "title": "명제와 대우의 선택",
+      "targetSkills": [
+        "m4-13-skill-1"
+      ],
+      "explanation": "직접 증명이 복잡할 때 대우의 조건이 정의로 다루기 쉬운지 살펴본다. 대우 증명은 원명제와 동치다.",
+      "activity": "“n²이 홀수이면 n이 홀수” 대신 “n이 짝수이면 n²이 짝수”를 보인다.",
+      "check": "원명제의 대우를 오류 없이 구성한다."
+    },
+    {
+      "id": "m4-13-u3",
+      "title": "홀짝 정의로 대우 증명",
+      "targetSkills": [
+        "m4-13-skill-1"
+      ],
+      "explanation": "짝수는 2의 배수, 홀수 정수는 2k+1 꼴이다. 정의에 대입해 식을 정리한다.",
+      "activity": "n이 짝수이면 n=2k이고 n²=4k²=2(2k²)이므로 짝수다.",
+      "check": "각 등식과 정수성 근거를 밝혀 결론에 도달한다."
+    },
+    {
+      "id": "m4-13-u4",
+      "title": "귀류법의 구조",
+      "targetSkills": [
+        "m4-13-skill-2"
+      ],
+      "explanation": "결론이 아니라고 가정하고 기존 조건과 함께 추론해 모순을 만든다. 모순이 나오면 처음의 부정 가정을 받아들일 수 없다.",
+      "activity": "“정수 n의 제곱은 2가 될 수 없다”를 보이려면, 그 결론이 아니라고 가정해 n²=2에서 시작한다.",
+      "check": "결론의 부정 가정과 모순 지점을 구별한다."
+    },
+    {
+      "id": "m4-13-u5",
+      "title": "간단한 귀류법 사례",
+      "targetSkills": [
+        "m4-13-skill-2"
+      ],
+      "explanation": "정수 n은 짝수 또는 홀수다. n²=2라면 n²은 짝수이므로 n은 홀수일 수 없다. n=2k라 두면 2=4k², 즉 1=2k²가 되어 홀수 1이 짝수 2k²와 같아지는 모순이다. 따라서 정수 n²=2인 경우는 없다.",
+      "activity": "정수 n²=2라고 가정한다. n이 홀수라면 n=2k+1이고 n²=2(2k²+2k)+1은 홀수여서 n²=2와 모순이다. 그러므로 n=2k이고, 2=4k²에서 1=2k²가 되어 짝수와 홀수가 같아지는 모순을 얻는다.",
+      "check": "홀수인 정수의 제곱이 홀수임을 보인 뒤, n²=2에서 n이 홀수일 수 없음을 연결하고 마지막 모순을 확인한다."
+    },
+    {
+      "id": "m4-13-u6",
+      "title": "증명 검토와 범위",
+      "targetSkills": [
+        "m4-13-skill-2"
+      ],
+      "explanation": "증명은 대상의 범위, 정의의 적용, 모순의 실제 성립을 점검해야 한다. 계산 오류나 근거 없는 일반화를 모순으로 부르지 않는다.",
+      "activity": "“정수 n에 대해 n²≠2”에서 정수라는 범위를 명시한다.",
+      "check": "결론이 가정된 대상 전체에 적용되는지 확인한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-13-lab",
+      "kind": "math-lab",
+      "interaction": "증명 논리 흐름",
+      "description": "증명의 주장과 가정 구분 → 대우 구성 → 정의로 단계 연결 → 결론 확인 → 결론 부정 가정 → 모순 도출 → 증명 범위 점검",
+      "features": [
+        "조작 결과를 수식·문장·목록으로도 제공한다.",
+        "단계별 실행 취소와 초기화를 제공한다.",
+        "색상 이외의 레이블과 키보드 조작을 지원한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "대우로 바꿔 증명할 때 조건·결론의 부정을 정확히 구성하고 정의로 추론",
+      "증명 풀이 단계에서 가정·정의·추론·결론의 역할과 누락 근거 찾기",
+      "귀류법에서 결론 부정 가정으로부터 명시적 모순을 찾고 유효성 평가"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 여섯 개의 검수 대기 연습 초안 목표다. 이 명세는 문항이나 형성평가 문항을 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도의 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 개발 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "대우의 조건과 결론을 각각 부정하고 순서를 바꾸었는지 확인한다.",
+        "증명 단계마다 정의·계산·추론의 근거를 제시한다.",
+        "귀류법은 결론 부정 가정에서 시작해 명시적인 모순으로 마무리한다."
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 명제의 증명의 관련 소단원으로 돌아간다. 일정 간격 이후 다른 수치·표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "몇 개의 예를 확인하면 일반 명제가 증명된다고 생각한다.",
+    "대우에서 조건과 결론만 맞바꾸고 부정을 빠뜨린다.",
+    "결론을 부정하는 가정 대신 원래 가정을 부정한다.",
+    "논리적으로 양립할 수 없는 사실을 제시하지 않고 “모순”이라고 선언한다."
+  ],
+  "workedExample": {
+    "prompt": "정수 n에 대해 n²이 홀수이면 n이 홀수임을 대우를 이용해 증명하시오.",
+    "steps": [
+      "원명제의 대우는 “n이 짝수이면 n²이 짝수”다.",
+      "n이 짝수라고 두면 어떤 정수 k에 대해 n=2k다.",
+      "그러면 n²=4k²=2(2k²)이고 2k²은 정수이므로 n²은 짝수다.",
+      "대우가 참이므로 원명제도 참이다."
+    ],
+    "answer": "정수 n에 대해 n²이 홀수이면 n은 홀수다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum AI review of proposal metadata, learning sequence, novice-safe explanations, blueprint and draft consistency for developer preview handoff. This status is not a human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked in the repository. Official achievement-standard and CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; M4-12/M4-13 also received separate independent recheck"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical content review with explicit publication approval",
+      "Any official-standard or CSAT mapping requires source-level verification before being added"
+    ]
+  }
+}

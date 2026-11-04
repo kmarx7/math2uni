@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-12",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "조건 p,q에서 명제·역·이·대우를 구별하고 참·거짓 관계를 설명한다. 진리집합 포함 관계와 필요조건·충분조건 표현을 연결한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-12-readiness-1: M4-11: 조건의 진리집합과 두 집합의 포함 관계를 해석한다. 이 진단은 준비 안내용이며 숙달도나 완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-12-u1",
+          "title": "조건문과 방향",
+          "body": "p→q는 p가 성립할 때 q가 성립한다는 방향의 주장이다. 방향을 바꾸면 별개의 명제가 된다.",
+          "activity": "“n이 4의 배수이면 n은 짝수”에서 p는 4의 배수, q는 짝수다.",
+          "check": "조건과 결론을 표시하고 화살표 방향을 읽는다."
+        },
+        {
+          "id": "m4-12-u2",
+          "title": "역·이·대우 만들기",
+          "body": "역은 조건과 결론을 맞바꾼다. 이는 둘 다 부정한다. 대우는 순서를 바꾸고 둘 다 부정한다.",
+          "activity": "p→q의 역은 q→p, 이는 ¬p→¬q, 대우는 ¬q→¬p다.",
+          "check": "원래 명제에서 세 문장을 정확히 구성한다."
+        },
+        {
+          "id": "m4-12-u3",
+          "title": "대우와 논리적 동치",
+          "body": "명제와 대우는 서로 같은 참·거짓 값을 가진다. 역과 이는 서로 대우 관계지만 원래 명제와는 일반적으로 동치가 아니다.",
+          "activity": "“n이 4의 배수이면 짝수”의 대우는 “n이 짝수가 아니면 4의 배수가 아니다”다.",
+          "check": "원래 명제와 대우를 같은 이유로 판단한다."
+        },
+        {
+          "id": "m4-12-u4",
+          "title": "진리집합 포함과 함의",
+          "body": "P가 p의 진리집합, Q가 q의 진리집합일 때 p→q가 참이면 같은 범위에서 P⊆Q다.",
+          "activity": "4의 배수인 정수 집합은 짝수인 정수 집합에 포함된다.",
+          "check": "반례가 있는지 또는 포함이 성립하는지 확인한다."
+        },
+        {
+          "id": "m4-12-u5",
+          "title": "필요조건과 충분조건",
+          "body": "p→q가 참이면 p는 q의 충분조건이고 q는 p의 필요조건이다. 화살표를 기준으로 이름을 붙인다.",
+          "activity": "n이 4의 배수인 것은 n이 짝수이기 위한 충분조건이다.",
+          "check": "필요·충분의 방향을 화살표와 함께 말한다."
+        },
+        {
+          "id": "m4-12-u6",
+          "title": "동치 조건",
+          "body": "p와 q가 서로를 함의할 때 두 조건은 필요충분조건 관계다. 진리집합은 서로 포함되어 같아야 한다.",
+          "activity": "정수 n에서 n이 짝수 ⇔ n은 2의 배수다.",
+          "check": "양방향 함의를 각각 확인해 동치를 판단한다."
+        }
+      ],
+      "body": "유한한 사례를 살펴보고 조건과 범위를 말로 확인한 뒤 표현·기호로 옮기고 원소를 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "명제 화살표 (미리보기 대응: condition-map)",
+      "interaction": "condition-map",
+      "description": "명세의 m4-12-lab를 현재 contentSchema의 condition-map으로 임시 표현한다. 조건문 화살표 읽기 → 역·이·대우 구성 → 대우의 동치 → 진리집합 포함 → 충분·필요 표현 → 반례 검토 전용 조작은 구현과 QA 전이며 이 초안은 완성된 인터랙션을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "정수 n에 대해 p: “n은 4의 배수”, q: “n은 짝수”라 하자. p→q의 역과 대우를 쓰고 참·거짓을 판단한다.",
+        "p→q는 “정수 n이 4의 배수이면 짝수”다. 4의 배수인 정수는 어떤 정수 k에 대해 n=4k로 쓸 수 있고, n=2(2k)이므로 짝수다. 따라서 원명제는 참이다.",
+        "역 q→p는 “짝수이면 4의 배수”다. n=2는 짝수지만 4의 배수가 아니므로 반례가 되어 역은 거짓이다.",
+        "대우 ¬q→¬p는 “짝수가 아니면 4의 배수가 아니다”다. 원명제와 대우는 동치이므로 대우도 참이다.",
+        "따라서 p는 q의 충분조건이고 q는 p의 필요조건이다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안이에요. 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "어느 조건, 범위 또는 추론 단계를 놓쳤는지 확인하고 해당 소단원으로 돌아가요. 오개념은 실증 빈도 자료가 아니라 검토할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안된 1일·3일·7일 간격은 효과 검증 전입니다. 다른 유한 사례로 도움 없이 핵심 관계를 다시 확인한 뒤 다음 단원으로 이어가요."
+    }
+  ]
+}

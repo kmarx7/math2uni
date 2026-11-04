@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-11",
+  "unitTitle": "명제와 조건",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "mm4-11-family-1",
+      "status": "draft",
+      "title": "문장이 명제인지 열린 조건인지 분류",
+      "reasoningStructure": "문장 성격과 변수가 정해졌는지 확인하여 참·거짓이 확정되는 명제와 열린 조건을 구분한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-11-skill-1",
+      "distinctFrom": "진리집합 산출 전 문장의 논리적 상태 자체를 분류한다.",
+      "items": [
+        {
+          "id": "m11p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“모든 정수는 짝수다”는 어떤 문장인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "문장의 참·거짓이 정해져 있고 실제로 거짓이므로 명제다.",
+          "skillLabel": "m4-11-skill-1",
+          "misconceptionHypothesis": "거짓인 문장은 명제가 아니라고 볼 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "열린 조건"
+            },
+            {
+              "id": "B",
+              "label": "명제"
+            },
+            {
+              "id": "C",
+              "label": "질문 문장"
+            }
+          ]
+        },
+        {
+          "id": "m11p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“x+2=5”에서 x가 정해지지 않았을 때 가장 알맞은 설명은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x의 값에 따라 참·거짓이 달라지므로 아직 참·거짓이 정해지지 않은 열린 조건이다.",
+          "skillLabel": "m4-11-skill-1",
+          "misconceptionHypothesis": "수식 문장은 항상 명제라고 생각할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "열린 조건"
+            },
+            {
+              "id": "B",
+              "label": "참인 명제"
+            },
+            {
+              "id": "C",
+              "label": "거짓인 명제"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-11-family-2",
+      "status": "draft",
+      "title": "유한 U에서 조건의 진리집합 직접 산출",
+      "reasoningStructure": "전체집합 원소를 하나씩 조건에 대입해 참이 되는 원소만 모은다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-11-skill-2",
+      "distinctFrom": "문장 분류와 달리 범위를 순회해 결과 집합을 계산한다.",
+      "items": [
+        {
+          "id": "m11p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4,5,6}에서 조건 p: x<4의 진리집합 P는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "U 중 4보다 작은 수는 1,2,3이므로 P={1,2,3}이다.",
+          "skillLabel": "m4-11-skill-2",
+          "misconceptionHypothesis": "U의 범위를 벗어난 수를 추가하거나 경계 4를 포함할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "{4,5,6}"
+            },
+            {
+              "id": "B",
+              "label": "{1,2,3,4}"
+            },
+            {
+              "id": "C",
+              "label": "{1,2,3}"
+            }
+          ]
+        },
+        {
+          "id": "m11p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4,5,6}, p: x는 짝수, q: x>3이다. p 그리고 q의 진리집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "P={2,4,6}, Q={4,5,6}이므로 둘 다 만족하는 원소는 {4,6}이다.",
+          "skillLabel": "m4-11-skill-2",
+          "misconceptionHypothesis": "“그리고”를 합집합처럼 읽을 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "{2,4,5,6}"
+            },
+            {
+              "id": "B",
+              "label": "{4,6}"
+            },
+            {
+              "id": "C",
+              "label": "{2,4,6}"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-11-family-3",
+      "status": "draft",
+      "title": "부정·그리고·또는 조건을 집합 연산으로 바꾸어 검산",
+      "reasoningStructure": "같은 U에서 부정은 여집합, 그리고는 교집합, 또는는 합집합으로 바꾼 뒤 원소로 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-11-skill-2",
+      "distinctFrom": "단일 조건 진리집합을 구하는 것에서 복합 조건 연산으로 확장한다.",
+      "items": [
+        {
+          "id": "m11p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4,5}, P={1,2,4}일 때 p의 부정의 진리집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "U에서 P를 제외하므로 Pᶜ={3,5}다.",
+          "skillLabel": "m4-11-skill-2",
+          "misconceptionHypothesis": "부정을 P의 원소가 그대로 참인 조건으로 오해할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "{3,5}"
+            },
+            {
+              "id": "B",
+              "label": "{1,2,4}"
+            },
+            {
+              "id": "C",
+              "label": "{1,2,3,4,5}"
+            }
+          ]
+        },
+        {
+          "id": "m11p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "U={1,2,3,4,5}, P={1,3,5}, Q={2,3,4}일 때 p 또는 q의 진리집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "“또는”은 한 조건 이상 만족하면 되므로 P∪Q={1,2,3,4,5}다.",
+          "skillLabel": "m4-11-skill-2",
+          "misconceptionHypothesis": "“또는”을 두 조건 모두 만족하는 교집합으로 바꿀 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author-self-check plus independent Curriculum answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "{3}"
+            },
+            {
+              "id": "B",
+              "label": "{1,3,5}"
+            },
+            {
+              "id": "C",
+              "label": "{1,2,3,4,5}"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 사고 구조마다 연습 초안 두 개씩을 둔다. 형성평가 인스턴스는 만들지 않았고 필수 학습량과 문제은행 수량을 분리한다."
+  },
+  "sourceStatus": "교육부 공식 고시의 수학과 별책 존재와 2028 정책 배경만 확인; 첨부 원문·단원별 공식 매핑 미검증. 자체 제작 연습 초안으로 제3자 문항을 재현하지 않음."
+}

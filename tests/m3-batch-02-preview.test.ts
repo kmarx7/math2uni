@@ -51,9 +51,9 @@ describe("M3-06~M3-10 개발 미리보기", () => {
       }
       expect(proposalAssessmentProblems.some((problem) => problem.unitId === unitId)).toBe(false);
     }
-    expect(proposalProblems).toHaveLength(420);
-    expect(new Set(proposalProblems.map((problem) => problem.id)).size).toBe(420);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(420);
+    expect(proposalProblems).toHaveLength(450);
+    expect(new Set(proposalProblems.map((problem) => problem.id)).size).toBe(450);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(450);
   });
 
   it("keeps answer data private, allows practice only in development preview, and blocks production", () => {

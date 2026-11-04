@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-13",
+  "unitTitle": "명제의 증명",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "mm4-13-family-1",
+      "status": "draft",
+      "title": "명제를 전제·결론과 범위로 나누기",
+      "reasoningStructure": "적용 대상 범위를 밝히고 주어진 사실과 증명해야 할 결론을 정확히 분리한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-13-skill-1",
+      "distinctFrom": "실제 추론을 진행하기 전에 증명 목표의 논리 구조와 적용 범위를 확정한다.",
+      "items": [
+        {
+          "id": "m13p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“모든 정수 n에 대해 n이 짝수이면 n²이 짝수다”의 전제와 결론은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "전제는 n이 짝수라는 조건이고 결론은 n²이 짝수라는 주장이다. 적용 범위는 정수 n이다.",
+          "skillLabel": "m4-13-skill-1",
+          "misconceptionHypothesis": "전제와 결론을 뒤바꾸거나 “모든 정수” 범위를 누락할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "전제 n²이 짝수, 결론 n이 짝수"
+            },
+            {
+              "id": "B",
+              "label": "전제 n이 짝수, 결론 n²이 짝수"
+            },
+            {
+              "id": "C",
+              "label": "전제 n은 자연수, 결론 n이 홀수"
+            }
+          ]
+        },
+        {
+          "id": "m13p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "증명의 한 줄이 정당하려면 무엇이 필요한가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "각 단계는 전제, 정의 또는 앞에서 얻은 결과로부터 따라와야 한다.",
+          "skillLabel": "m4-13-skill-1",
+          "misconceptionHypothesis": "맞는 결론이면 중간 근거를 생략해도 증명이 된다고 생각할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "전제·정의·앞 단계 중 근거가 있어야 한다."
+            },
+            {
+              "id": "B",
+              "label": "결론과 비슷해 보이면 된다."
+            },
+            {
+              "id": "C",
+              "label": "예를 하나 확인하면 모든 정수에 대해 증명된다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-13-family-2",
+      "status": "draft",
+      "title": "대우의 가정과 정의로 결론까지 증명",
+      "reasoningStructure": "원래 명제의 대우를 정확히 세운 뒤 전제를 정의로 바꾸어 계산 사슬을 완성한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-13-skill-2",
+      "distinctFrom": "논리 구조 파악보다 실제 대우 증명에서 각 식의 연결 근거를 구성한다.",
+      "items": [
+        {
+          "id": "m13p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“n²이 홀수이면 정수 n은 홀수다”를 대우로 증명할 때 첫 가정과 보일 내용은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "대우는 “n이 짝수이면 n²이 짝수다”이므로 n=2k로 두고 제곱이 짝수임을 보여야 한다.",
+          "skillLabel": "m4-13-skill-2",
+          "misconceptionHypothesis": "대우를 만들 때 전제와 결론만 뒤집고 부정하지 않을 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "n이 홀수라 가정하고 n²이 홀수임을 보인다."
+            },
+            {
+              "id": "B",
+              "label": "n²이 짝수라 가정하고 n이 짝수임을 보인다."
+            },
+            {
+              "id": "C",
+              "label": "n이 짝수라 가정하고 n²이 짝수임을 보인다."
+            }
+          ]
+        },
+        {
+          "id": "m13p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "대우 증명에서 n=2k (k는 정수)를 얻었다. n²이 짝수임을 보이는 다음 식은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "n²=(2k)²=4k²=2(2k²)이고 2k²는 정수이므로 n²은 짝수다.",
+          "skillLabel": "m4-13-skill-2",
+          "misconceptionHypothesis": "2k²도 짝수라는 사실을 보이지 않고 k² 자체를 짝수라 할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "n²=2(2k²), 따라서 짝수"
+            },
+            {
+              "id": "B",
+              "label": "n²=2k², 따라서 짝수"
+            },
+            {
+              "id": "C",
+              "label": "n²=4k, 따라서 짝수"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-13-family-3",
+      "status": "draft",
+      "title": "결론 부정 가정에서 모순 지점 찾기",
+      "reasoningStructure": "결론의 부정을 전제와 함께 놓고 두 조건이 동시에 성립할 수 없는 지점을 찾아 모순을 설명한다.",
+      "thinkingType": "오류 발견",
+      "skillId": "m4-13-skill-2",
+      "distinctFrom": "대우 증명처럼 부정문을 목표로 직접 유도하는 대신 결론 부정 가정에서 모순을 찾아낸다.",
+      "items": [
+        {
+          "id": "m13p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "“정수 n이 짝수이면서 홀수일 수 없다”를 귀류법으로 보일 때 모순은 어디서 생기는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "짝수이면 n=2a, 홀수이면 n=2b+1이다. 두 식이 같으면 2(a-b)=1이 되어 정수의 짝수인 좌변이 홀수 1과 같아지는 모순이다.",
+          "skillLabel": "m4-13-skill-2",
+          "misconceptionHypothesis": "서로 다른 정수 표현을 같은 n의 조건으로 비교하지 않고 모순이라고 선언할 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a=b라 두면 언제나 참이 된다."
+            },
+            {
+              "id": "B",
+              "label": "2(a-b)=1이 되어 정수의 짝수와 홀수가 같아진다."
+            },
+            {
+              "id": "C",
+              "label": "n=2a와 n=2b+1은 동시에 가능하므로 모순이 없다."
+            }
+          ]
+        },
+        {
+          "id": "m13p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "임의의 정수 n이 짝수이면서 홀수일 수 없음을 귀류법으로 보이려 한다. 모순을 찾기 위한 시작 가정은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "임의로 고정한 정수 n이 짝수라고 가정하면 n=2a, 홀수라고 가정하면 n=2b+1 (a,b는 정수)로 쓸 수 있다. 두 식을 같게 놓으면 2(a-b)=1이 되어 짝수가 홀수와 같아지는 모순이므로 A가 시작 가정이다.",
+          "skillLabel": "m4-13-skill-2",
+          "misconceptionHypothesis": "임의로 고정한 정수에 대해 짝수·홀수 정의를 동시에 놓는 가정을 놓치거나, 한 사례만으로 전칭 주장을 증명할 수 있다고 볼 수 있다는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed; human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "정수 a,b에 대해 n=2a와 n=2b+1을 동시에 가정한다."
+            },
+            {
+              "id": "B",
+              "label": "n=2a라 놓고 n²이 짝수임을 보인다."
+            },
+            {
+              "id": "C",
+              "label": "정수 n=2a라고만 가정하고 a도 짝수라고 결론 낸다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 사고 구조마다 연습 초안 두 개씩을 둔다. 형성평가 인스턴스는 만들지 않았고 필수 학습량과 문제은행 수량을 분리한다."
+  },
+  "sourceStatus": "교육부 공식 고시의 수학과 별책 존재와 2028 정책 배경만 확인; 첨부 원문·단원별 공식 매핑 미검증. 자체 제작 연습 초안으로 제3자 문항을 재현하지 않음."
+}

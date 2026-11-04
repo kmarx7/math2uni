@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-13",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "명제의 조건과 결론을 구분하고 대우를 증명해 원명제를 정당화한다. 가정과 결론이 모순되는 상황을 구성해 명제를 증명하는 귀류법의 흐름을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-13-readiness-1: M4-12에서 대우가 원명제와 동치임을 알고 명제의 조건·결론을 구분하는지 확인한다. m4-13-readiness-2: 선택 진단(미등록·진입 차단 없음)으로 M0-05의 홀수·짝수 정의를 활용한다. 미숙하더라도 이 단원 안에서 정의를 안내하며 선수 단원으로 자동 연결하지 않는다. 진단은 준비 안내용이며 숙달도나 완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-13-u1",
+          "title": "증명의 구조",
+          "body": "증명은 가정과 정의를 사용해 결론까지 이유를 연결한다. 예를 나열하는 것과 모든 경우를 보이는 증명은 다르다.",
+          "activity": "정수 n이 짝수라고 가정하면 n=2k인 정수 k가 존재한다.",
+          "check": "가정, 사용할 정의, 보일 결론을 구분한다."
+        },
+        {
+          "id": "m4-13-u2",
+          "title": "명제와 대우의 선택",
+          "body": "직접 증명이 복잡할 때 대우의 조건이 정의로 다루기 쉬운지 살펴본다. 대우 증명은 원명제와 동치다.",
+          "activity": "“n²이 홀수이면 n이 홀수” 대신 “n이 짝수이면 n²이 짝수”를 보인다.",
+          "check": "원명제의 대우를 오류 없이 구성한다."
+        },
+        {
+          "id": "m4-13-u3",
+          "title": "홀짝 정의로 대우 증명",
+          "body": "짝수는 2의 배수, 홀수 정수는 2k+1 꼴이다. 정의에 대입해 식을 정리한다.",
+          "activity": "n이 짝수이면 n=2k이고 n²=4k²=2(2k²)이므로 짝수다.",
+          "check": "각 등식과 정수성 근거를 밝혀 결론에 도달한다."
+        },
+        {
+          "id": "m4-13-u4",
+          "title": "귀류법의 구조",
+          "body": "결론이 아니라고 가정하고 기존 조건과 함께 추론해 모순을 만든다. 모순이 나오면 처음의 부정 가정을 받아들일 수 없다.",
+          "activity": "“어떤 정수의 제곱은 2일 수 없다”를 결론 부정 가정에서 검토한다.",
+          "check": "결론의 부정 가정과 모순 지점을 구별한다."
+        },
+        {
+          "id": "m4-13-u5",
+          "title": "간단한 귀류법 사례",
+          "body": "정수 n은 짝수 또는 홀수다. n²=2라고 가정하면 n²은 짝수다. n이 홀수라면 n=2k+1이고 n²=2(2k²+2k)+1은 홀수이므로 모순이다. 따라서 n=2k이고 2=4k², 즉 1=2k²가 된다. 1은 홀수이고 2k²은 짝수이므로 모순이다. 따라서 정수 n²=2인 경우는 없다.",
+          "activity": "n²=2라 가정한다. 홀수 n=2k+1이면 n²=2(2k²+2k)+1이 홀수라 n²=2와 모순이다. 그러므로 n=2k이고, 2=4k²에서 1=2k²가 되어 홀수와 짝수가 같아지는 모순을 얻는다.",
+          "check": "홀수인 정수의 제곱이 홀수임을 보인 뒤, n²=2에서 n이 홀수일 수 없음을 연결하고 마지막 모순 1=2k²을 확인한다."
+        },
+        {
+          "id": "m4-13-u6",
+          "title": "증명 검토와 범위",
+          "body": "증명은 대상의 범위, 정의의 적용, 모순의 실제 성립을 점검해야 한다. 계산 오류나 근거 없는 일반화를 모순으로 부르지 않는다.",
+          "activity": "“정수 n에 대해 n²≠2”에서 정수라는 범위를 명시한다.",
+          "check": "결론이 가정된 대상 전체에 적용되는지 확인한다."
+        }
+      ],
+      "body": "유한한 사례를 살펴보고 조건과 범위를 말로 확인한 뒤 표현·기호로 옮기고 원소를 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "증명 논리 흐름 (미리보기 대응: condition-map)",
+      "interaction": "condition-map",
+      "description": "명세의 m4-13-lab를 현재 contentSchema의 condition-map으로 임시 표현한다. 증명의 주장과 가정 구분 → 대우 구성 → 정의로 단계 연결 → 결론 확인 → 결론 부정 가정 → 모순 도출 → 증명 범위 점검 전용 조작은 구현과 QA 전이며 이 초안은 완성된 인터랙션을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "정수 n에 대해 “n²이 홀수이면 n은 홀수”임을 대우를 이용해 설명한다.",
+        "대우는 “n이 짝수이면 n²은 짝수”다. 정수의 짝수 정의를 n=2k로 둔다.",
+        "그러면 n²=(2k)²=4k²=2(2k²)다.",
+        "2k²는 정수이므로 n²는 짝수다.",
+        "대우가 참이므로 원래 명제도 참이다. 적용 범위는 정수다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안이에요. 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "어느 조건, 범위 또는 추론 단계를 놓쳤는지 확인하고 해당 소단원으로 돌아가요. 오개념은 실증 빈도 자료가 아니라 검토할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안된 1일·3일·7일 간격은 효과 검증 전입니다. 다른 유한 사례로 도움 없이 핵심 관계를 다시 확인한 뒤 다음 단원으로 이어가요."
+    }
+  ]
+}
