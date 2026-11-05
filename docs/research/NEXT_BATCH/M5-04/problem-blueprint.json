@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-04",
+  "unitTitle": "로그의 성질",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-04-family-1",
+      "status": "draft",
+      "title": "log 곱·몫의 구조와 정의 조건을 함께 판별",
+      "reasoningStructure": "같은 밑의 로그 곱·몫을 합·차로 바꾸고 모든 진수의 양수 조건을 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-04-skill-1",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m504-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "log₂(8·4)를 로그의 합으로 전개하고 값을 구하면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "5",
+          "rationale": "곱의 로그 성질로 log₂(8·4)=log₂8+log₂4=3+2=5이다. 밑 2는 양수이고 1이 아니며 두 진수는 양수다.",
+          "skillLabel": "m5-04-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5"
+            },
+            {
+              "id": "B",
+              "label": "3"
+            },
+            {
+              "id": "C",
+              "label": "6"
+            }
+          ]
+        },
+        {
+          "id": "m504-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₃(81/3)를 로그의 차로 전개하고 값을 구하면?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "3",
+          "rationale": "몫의 로그 성질로 log₃(81/3)=log₃81−log₃3=4−1=3이다. 밑 3은 허용되고 분자·분모는 양수다.",
+          "skillLabel": "m5-04-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2"
+            },
+            {
+              "id": "B",
+              "label": "4"
+            },
+            {
+              "id": "C",
+              "label": "3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-04-family-2",
+      "status": "draft",
+      "title": "로그의 곱·몫 성질을 이용해 두 로그의 합·차를 하나의 로그로 결합",
+      "reasoningStructure": "같은 허용 밑의 로그 합을 곱의 로그로, 로그 차를 몫의 로그로 바꾸고 양수 조건을 확인한다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-04-skill-2",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m504-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₂8 + log₂4를 하나의 로그로 결합하면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "log₂32",
+          "rationale": "밑과 진수가 허용 조건을 만족하므로 log₂8+log₂4=log₂(8·4)=log₂32이다. log₂32=5로 직접 계산해 확인할 수 있다.",
+          "skillLabel": "m5-04-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "log₂12"
+            },
+            {
+              "id": "B",
+              "label": "log₂32"
+            },
+            {
+              "id": "C",
+              "label": "log₂4"
+            }
+          ]
+        },
+        {
+          "id": "m504-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₃27 − log₃9를 하나의 로그로 결합하면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "log₃3",
+          "rationale": "밑 3은 양수이고 1이 아니며 진수 27,9는 양수다. 몫 성질로 log₃27−log₃9=log₃(27/9)=log₃3=1이다.",
+          "skillLabel": "m5-04-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "log₃18"
+            },
+            {
+              "id": "B",
+              "label": "log₃3"
+            },
+            {
+              "id": "C",
+              "label": "log₃36"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-04-family-3",
+      "status": "draft",
+      "title": "허용된 새 밑을 사용해 밑 변환 비를 구성하고 계산",
+      "reasoningStructure": "밑 변환 공식의 분자·분모 순서를 정하고 새 밑의 조건을 확인한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-04-skill-2",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m504-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "밑 변환으로 log₂8을 log₅의 비로 나타낸 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "3",
+          "rationale": "밑 변환 공식 log₂8=log₅8/log₅2를 적용한다. 8=2³이므로 log₅8=3log₅2이고, 비는 3이다. 모든 로그의 진수 8,2와 밑 5는 허용 조건을 만족한다.",
+          "skillLabel": "m5-04-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3"
+            },
+            {
+              "id": "B",
+              "label": "2"
+            },
+            {
+              "id": "C",
+              "label": "1/2"
+            }
+          ]
+        },
+        {
+          "id": "m504-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "log₂8을 밑 4의 로그의 비로 바르게 나타낸 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "log₄8/log₄2",
+          "rationale": "밑 변환 공식 log_a x=log_c x/log_c a를 적용한다. c=4는 양수이고 1이 아니며 8,2도 양수이므로 log₂8=log₄8/log₄2=3이다.",
+          "skillLabel": "m5-04-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "log₄2/log₄8"
+            },
+            {
+              "id": "B",
+              "label": "log₄8 + log₄2"
+            },
+            {
+              "id": "C",
+              "label": "log₄8/log₄2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "세 가지 서로 다른 사고 원형에 각 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 성취기준 개별 매핑 및 단원별 수능 출제 연결 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

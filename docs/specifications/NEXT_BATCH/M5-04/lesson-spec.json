@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-04",
+  "levelId": "LEVEL 5",
+  "title": "로그의 성질",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "곱·몫·거듭제곱 로그",
+      "밑의 변환"
+    ],
+    "prerequisiteUnits": [
+      "M5-03"
+    ],
+    "visualization": "로그식 변환 연결"
+  },
+  "objectives": [
+    "양수인 진수에서 로그의 곱·몫·거듭제곱 성질을 지수 정의와 연결해 설명한다.",
+    "로그의 밑과 변환 기준이 허용 조건을 만족할 때 밑 변환 공식을 적용한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-04-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-03 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-04-skill-1",
+    "m5-04-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "진수와 밑 조건 확인 → 곱·몫·거듭제곱 성질을 지수 관계에서 유도 → 식을 전개·결합 → 밑 변환과 조건 점검",
+    "principleDerivation": "a>0, a≠1, x>0, y>0에서 log_a(xy)=log_a x+log_a y, log_a(x/y)=log_a x−log_a y, log_a(x^n)=n log_a x (정수 n)를 지수 정의와 지수법칙으로 확인한다. 밑 변환 log_a x=log_c x/log_c a는 a,c>0, a≠1,c≠1,x>0일 때 적용한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 시각화에는 축·조건·대체 텍스트를 둔다. 키보드만으로 모든 조작을 수행할 수 있고 색만으로 정답 여부를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-04-u1",
+      "title": "로그 성질을 쓰기 전 조건",
+      "targetSkills": [
+        "m5-04-skill-1"
+      ],
+      "explanation": "로그가 정의되도록 밑은 양수이고 1이 아니며 진수는 양수여야 한다.",
+      "activity": "밑·진수 조건 카드를 먼저 확인하고 식의 각 진수에 표시한다.",
+      "check": "log₂(x−1)을 실수 로그로 다루려면 x>1이다."
+    },
+    {
+      "id": "m5-04-u2",
+      "title": "곱의 로그",
+      "targetSkills": [
+        "m5-04-skill-1"
+      ],
+      "explanation": "양수 x,y의 곱을 로그로 바꾸면 각 로그의 합이 된다.",
+      "activity": "같은 밑의 로그와 곱 표현을 양방향으로 연결한다.",
+      "check": "log₃(9·3)=log₃9+log₃3=3이다."
+    },
+    {
+      "id": "m5-04-u3",
+      "title": "몫의 로그",
+      "targetSkills": [
+        "m5-04-skill-1"
+      ],
+      "explanation": "양수 x,y에서 몫의 로그는 분자 로그에서 분모 로그를 뺀다.",
+      "activity": "몫을 곱과 역수의 관점으로 비교한다.",
+      "check": "log₂(8/2)=log₂8−log₂2=2이다."
+    },
+    {
+      "id": "m5-04-u4",
+      "title": "거듭제곱의 로그",
+      "targetSkills": [
+        "m5-04-skill-2"
+      ],
+      "explanation": "양수 진수의 정수 거듭제곱은 지수를 로그 앞의 계수로 옮길 수 있다.",
+      "activity": "작은 정수 지수의 예를 지수법칙과 나란히 놓는다.",
+      "check": "log₅(25³)=3log₅25=6이다."
+    },
+    {
+      "id": "m5-04-u5",
+      "title": "전개와 결합",
+      "targetSkills": [
+        "m5-04-skill-2"
+      ],
+      "explanation": "곱·몫·정수 거듭제곱만 포함한 식을 조건을 유지하며 전개하거나 결합한다.",
+      "activity": "두 표현을 바꾸고 원식으로 되돌려 동치인지 확인한다.",
+      "check": "log_a(x²y/z)=2log_a x+log_a y−log_a z이며 x,y,z>0이다."
+    },
+    {
+      "id": "m5-04-u6",
+      "title": "밑 변환",
+      "targetSkills": [
+        "m5-04-skill-2"
+      ],
+      "explanation": "허용되는 새 밑 c를 선택해 로그의 비로 바꾼다.",
+      "activity": "같은 지수 관계를 밑 a와 밑 c로 각각 읽는다.",
+      "check": "log₂8=log₄8/log₄2=3이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-04-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 조건·값 조절 및 텍스트로 현재 상태 확인",
+      "description": "곱·몫·정수 거듭제곱 기호를 전개/결합 카드로 옮기고 조건 카드가 맞지 않으면 변환을 막는다. 밑 변환에서는 허용되는 c를 선택해 두 로그의 비를 보여준다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "곱·몫·거듭제곱 구조를 찾아 로그식을 전개한다.",
+      "전개된 로그 합·차를 조건을 유지하며 하나의 로그로 결합한다.",
+      "밑·진수 조건을 확인한 뒤 밑 변환식으로 로그값 또는 비율을 구한다."
+    ],
+    "draftPracticeGoals": [
+      "곱 형태의 진수를 두 로그의 합으로 전개한다.",
+      "몫과 정수 거듭제곱이 함께 있는 식에서 각 계수와 부호를 적용해 전개한다.",
+      "로그의 합과 차를 하나의 곱·몫 형태로 결합한다.",
+      "결합 결과의 모든 진수 양수 조건을 확인한다.",
+      "밑 변환에서 새 밑과 원래 밑 조건을 확인하고 로그 비를 계산한다.",
+      "제공된 로그값을 밑 변환 비율에 대입해 목표값을 구한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가 기준은 기술할 수 있으나 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형이다. 조건 판별·표현 전환·전략 선택의 주된 추론이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "각 진수의 양수 조건을 먼저 확인했는가?",
+    "곱·몫·정수 거듭제곱의 계수와 부호가 맞는가?",
+    "밑 변환 공식의 세 밑 조건을 확인했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 다시 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "로그의 곱을 로그의 곱셈으로 바꿈",
+    "몫의 로그에서 뺄셈 순서를 거꾸로 함",
+    "곱의 법칙을 음수 진수에 그대로 적용함",
+    "밑 변환에서 분자와 분모를 바꿈"
+  ],
+  "workedExample": {
+    "prompt": "log₂(8x/4)를 전개하고 조건을 말하라.",
+    "solution": "x>0일 때 log₂8+log₂x−log₂4=1+log₂x이다.",
+    "verification": "곱·몫 성질은 양수인 각 진수에서 적용했으며 로그의 밑 2는 허용된다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Curriculum Architect self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/right review and item drafts",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

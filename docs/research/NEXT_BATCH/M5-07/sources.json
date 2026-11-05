@@ -1,0 +1,68 @@
+[
+  {
+    "id": "moe-2022-curriculum-annex8",
+    "title": "[교육부 고시 제2022-33호] 초중등학교 교육과정 총론 및 각론 고시",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302&s=moe",
+    "publishedDate": "2022-12-22",
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "교육부 공식 고시 페이지 본문에서 수학과 교육과정은 별책 8이라는 문구, 게시 날짜 및 별책 5~14 압축 첨부 존재를 확인했다. 별책 8 PDF/HWP 본문은 내려받거나 열어 단원·성취기준별로 대조하지 않았다.",
+    "rights": "페이지의 출처표시 공공누리 표시는 확인했으나 첨부 원문별 이용조건은 확인하지 않았다. 원문/문항을 복제하지 않는다.",
+    "use": "공식 원문 위치 및 고시 배경 확인에만 사용. M5-04~08에 공식 성취기준 코드나 직접 매핑을 부여하지 않는다."
+  },
+  {
+    "id": "ncic-2022-math-curriculum-catalog",
+    "title": "NCIC 통합검색: 2022 개정 수학 교육과정 및 [별책8] PDF/HWP 첨부 목록",
+    "publisher": "국가교육과정정보센터(NCIC; 한국교육과정평가원)",
+    "url": "https://ncic.re.kr/srch/total_search.do?search=%EC%88%98%ED%95%99",
+    "publishedDate": null,
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "NCIC 검색 페이지에 2022 개정 고등학교 수학과정 자료와 [별책8] 수학과 교육과정 PDF/HWP 첨부 항목이 표시됨을 확인했다. 첨부 PDF/HWP는 내려받거나 원문 조항을 대조하지 않았다.",
+    "rights": "검색 목록과 첨부의 재사용 권한을 확인하지 않았다. 파일/문항을 복제하지 않는다.",
+    "use": "공식 원문 확인 경로가 있음을 기록할 뿐, 단원별 매핑을 뒷받침하지 않는다."
+  },
+  {
+    "id": "moe-2028-csat-framework",
+    "title": "2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 내신 5등급 체제 확정",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+    "publishedDate": "2023-12-27",
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "교육부 공식 보도자료 본문에서 통합형 수능 및 수학 선택과목 구조 변경, 심화수학(미적분Ⅱ·기하) 제외를 확인했다. 첨부 확정안 원문은 열지 않았다.",
+    "rights": "페이지는 출처표시 공공누리 표시를 한다. 정책 사실만 요약하며 첨부/문항을 재배포하지 않는다.",
+    "use": "제도 배경 정보. 특정 로그/지수 세부 유형이 수능에 직접 출제된다는 주장을 뒷받침하지 않는다."
+  },
+  {
+    "id": "moe-2028-sample-item-guidance",
+    "title": "2028학년도 대입, 이렇게 준비하세요",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402",
+    "publishedDate": "2025-04-15",
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "교육부 공식 안내 페이지에서 2028 출제 과목 변동 영역 예시문항 안내와 별첨 30.1MB PDF 링크를 확인했다. PDF 자체는 크롤러/이번 조사에서 열어 문제 내용·범위를 분석하지 않았다.",
+    "rights": "페이지의 출처표시 공공누리 표시는 확인했으나 예시문항 첨부의 이용조건과 재사용 권리는 확인하지 않았다. 문항을 복사·변형하지 않는다.",
+    "use": "예시문항 안내자료가 존재함만 기록. 본 단원과 개별 문제 유형의 연계는 주장하지 않는다."
+  },
+  {
+    "id": "chua-wood-2005-logarithm-study",
+    "title": "Working with Logarithms: Students’ Misconceptions and Errors",
+    "publisher": "The Mathematics Educator; Association of Mathematics Educators, National Institute of Education, Nanyang Technological University",
+    "url": "https://math.nie.edu.sg/ame/matheduc/journal/v8_2/v82_53.aspx",
+    "publishedDate": "2005",
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "학술지 페이지 제목·저자·2005 Vol.8 No.2·초록을 확인했다. 초록은 싱가포르 두 학교 중등학생 81명의 로그 검사에서 routine 계산과 더 높은 사고 요구 문항의 수행 차이 및 대수 규칙의 과잉 일반화를 보고한다. 본 연구는 한국 학생 표본이나 한국 교육과정 연구가 아니며 수능 범위 근거가 아니다.",
+    "rights": "사이트에 저작권 표시가 있다. 연구 결과만 요약하고 문항/도표/본문을 복제하지 않는다.",
+    "use": "로그 관련 오개념 후보를 조심스럽게 설계할 참고. 이 표본의 빈도/결과를 한국 학생에게 일반화하지 않는다."
+  },
+  {
+    "id": "diaz-berrios-martinez-planell-2022-functions",
+    "title": "High school student understanding of exponential and logarithmic functions",
+    "publisher": "The Journal of Mathematical Behavior (Elsevier)",
+    "url": "https://doi.org/10.1016/j.jmathb.2022.100953",
+    "publishedDate": "2022-06",
+    "checkedDate": "2026-11-06",
+    "verificationStatus": "출판사 검색 결과의 제목·저자·저널·2022년 6월·권 66 article 100953·DOI 및 초록 요약을 확인했다. ScienceDirect 전체 페이지는 403으로 전문을 열지 못해 연구 설계/세부 결과를 검증하지 않았다.",
+    "rights": "출판사 전문 이용조건은 확인하지 않았다. 제목/서지와 초록 수준을 기록하고 문항·도표·본문을 재사용하지 않는다.",
+    "use": "지수/로그 함수 개념 구성의 관련 연구가 있음을 기록. 세부 효과나 단원별 수능 범위의 근거로 사용하지 않는다."
+  }
+]

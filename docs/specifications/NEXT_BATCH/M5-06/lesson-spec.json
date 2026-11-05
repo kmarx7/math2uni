@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-06",
+  "levelId": "LEVEL 5",
+  "title": "지수함수의 그래프",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "지수함수의 증감",
+      "그래프의 이동"
+    ],
+    "prerequisiteUnits": [
+      "M5-02",
+      "M4-07",
+      "M4-15"
+    ],
+    "visualization": "밑에 따른 지수 그래프"
+  },
+  "objectives": [
+    "지수함수 y=aˣ의 정의역·치역·기준점을 밑의 조건과 연결한다.",
+    "a>1과 0<a<1에 따른 증가·감소 및 평행이동 그래프의 변화를 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-06-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-02 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    },
+    {
+      "id": "m5-06-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-07 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    },
+    {
+      "id": "m5-06-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-15 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-06-skill-1",
+    "m5-06-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "실수 지수와 양의 밑 조건 회상 → y=aˣ의 기준점·정의역·치역 → 밑 구간별 증가·감소 → 수평·수직 이동 → 그래프 특징 종합",
+    "principleDerivation": "실수 지수함수 y=aˣ에서 a>0, a≠1이다. 정의역은 실수 전체, 치역은 y>0이며 (0,1)을 지난다. a>1이면 증가하고 0<a<1이면 감소하며 수평점근선은 y=0이다. y=a^(x−h)+k는 정의역은 실수 전체, 치역 y>k, 수평점근선 y=k이다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 시각화에는 축·조건·대체 텍스트를 둔다. 키보드만으로 모든 조작을 수행할 수 있고 색만으로 정답 여부를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-06-u1",
+      "title": "지수함수의 밑 조건",
+      "targetSkills": [
+        "m5-06-skill-1"
+      ],
+      "explanation": "실수 지수함수의 밑은 양수이고 1이 아니어야 한다.",
+      "activity": "밑을 허용 구간과 제외값 1에 놓는다.",
+      "check": "a=2는 허용되지만 a=1은 지수함수가 아닌 상수함수이다."
+    },
+    {
+      "id": "m5-06-u2",
+      "title": "기준점과 정의역",
+      "targetSkills": [
+        "m5-06-skill-1"
+      ],
+      "explanation": "y=aˣ는 x=0에서 1을 지나며 모든 실수 x에서 정의된다.",
+      "activity": "x 입력을 음수·0·양수로 바꾸어 표를 만든다.",
+      "check": "a=3일 때 점 (0,1)을 지난다."
+    },
+    {
+      "id": "m5-06-u3",
+      "title": "치역과 점근선",
+      "targetSkills": [
+        "m5-06-skill-1"
+      ],
+      "explanation": "aˣ는 항상 양수이고 x가 한쪽으로 커질 때 0에 가까워지지만 0이 되지 않는다.",
+      "activity": "표와 그래프에서 y=0과의 거리를 살핀다.",
+      "check": "기본 그래프의 치역은 y>0, 수평점근선은 y=0이다."
+    },
+    {
+      "id": "m5-06-u4",
+      "title": "밑에 따른 증가·감소",
+      "targetSkills": [
+        "m5-06-skill-2"
+      ],
+      "explanation": "a>1이면 증가하고 0<a<1이면 감소한다.",
+      "activity": "두 밑 범위에서 같은 입력 순서의 출력 표를 비교한다.",
+      "check": "2ˣ은 증가하고 (1/2)ˣ은 감소한다."
+    },
+    {
+      "id": "m5-06-u5",
+      "title": "수평이동",
+      "targetSkills": [
+        "m5-06-skill-2"
+      ],
+      "explanation": "y=a^(x−h)는 y=aˣ를 오른쪽 h만큼 옮긴다.",
+      "activity": "h를 바꾸고 기준점의 x좌표가 어떻게 변하는지 추적한다.",
+      "check": "y=2^(x−3)은 (3,1)을 지난다."
+    },
+    {
+      "id": "m5-06-u6",
+      "title": "수직이동과 그래프 읽기",
+      "targetSkills": [
+        "m5-06-skill-2"
+      ],
+      "explanation": "y=a^(x−h)+k는 그래프와 점근선을 위아래 k만큼 이동시킨다.",
+      "activity": "h,k 조작 후 기준점·치역·점근선을 함께 표시한다.",
+      "check": "y=2^(x−1)−2의 수평점근선은 y=−2이고 치역은 y>−2이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-06-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 조건·값 조절 및 텍스트로 현재 상태 확인",
+      "description": "밑 a를 0.5~3 범위에서 조절하되 a=1은 제외하고, h,k를 바꾸어 지수 그래프·기준점·수평점근선과 치역 텍스트를 같이 갱신한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "밑 조건과 표·그래프 특징에서 지수함수의 정의역·치역·점근선을 판정한다.",
+      "밑 구간과 입력 순서를 이용해 증가·감소 방향을 비교한다.",
+      "평행이동 식과 그래프의 기준점·점근선·치역을 연결한다."
+    ],
+    "draftPracticeGoals": [
+      "y=aˣ의 정의역과 a>0,a≠1 밑 조건을 확인한다.",
+      "기준점 (0,1)과 양수 치역을 그래프 정보에서 판정한다.",
+      "a>1일 때 표의 입력 증가에 따른 출력 변화를 설명한다.",
+      "0<a<1일 때 표의 입력 증가에 따른 출력 변화를 설명한다.",
+      "수평이동 식에서 새 기준점의 x좌표를 찾는다.",
+      "수직이동 뒤 점근선과 치역 하한을 함께 적는다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가 기준은 기술할 수 있으나 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형이다. 조건 판별·표현 전환·전략 선택의 주된 추론이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "밑 조건과 밑 구간을 구별했는가?",
+    "기본 그래프의 정의역·치역·점근선을 맞게 찾았는가?",
+    "이동 후 기준점과 수평점근선을 일관되게 옮겼는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 다시 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "a>1과 0<a<1의 증가·감소를 반대로 판단함",
+    "치역에 y=0 또는 이동된 점근선 값을 포함함",
+    "x−h 이동 방향을 왼쪽으로 착각함",
+    "a=1을 지수함수 그래프의 일반 경우로 포함함"
+  ],
+  "workedExample": {
+    "prompt": "y=(1/2)^(x−2)+3의 증가·감소, 점근선, 치역을 말하라.",
+    "solution": "밑 1/2는 0과 1 사이여서 감소한다. x−2는 오른쪽 2만큼 이동, +3은 위로 3만큼 이동이므로 점근선 y=3, 치역 y>3이다.",
+    "verification": "밑 조건, 이동 방향, 점근선과 엄격한 치역 부등호를 확인했다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Curriculum Architect self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/right review and item drafts",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-08",
+  "contentVersion": "0.1.0-draft",
+  "contentStatus": "draft",
+  "status": "automated-checks-passed-e2e-blocked",
+  "automatedChecks": {
+    "lessonSchema": "passed",
+    "lessonPhases": 15,
+    "subunits": 6,
+    "practiceItems": "6-draft-items-3-families",
+    "assessmentItems": 0,
+    "answerChoiceUniqueness": "passed",
+    "answerRules": "passed",
+    "publicAnswerSecrecy": "passed",
+    "productionDraftGate": "passed",
+    "unitProgressIsolation": "passed",
+    "mathValidation": "passed",
+    "humanReview": "pending",
+    "humanPublicationApprovalCount": 0
+  },
+  "batchChecks": {
+    "targetVitest": "passed-9-tests",
+    "lint": "passed",
+    "typecheck": "passed",
+    "test": "passed-23-files-175-tests",
+    "contentValidate": "passed-19-tests",
+    "testE2E": "blocked-before-tests-listen-EPERM-127.0.0.1-54329",
+    "build": "passed-next-16.3.6",
+    "diffCheck": "passed"
+  },
+  "officialStandards": [],
+  "publicationAllowed": false,
+  "limitations": [
+    "E2E did not start because the environment returned listen EPERM on 127.0.0.1:54329.",
+    "Human mathematical/pedagogical review, official mapping verification, and publication approval remain pending."
+  ]
+}

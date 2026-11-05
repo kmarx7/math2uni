@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-07",
+  "levelId": "LEVEL 5",
+  "title": "로그함수의 그래프",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "로그함수의 증감",
+      "지수함수와 역함수 관계"
+    ],
+    "prerequisiteUnits": [
+      "M5-04",
+      "M5-06",
+      "M4-17"
+    ],
+    "visualization": "두 그래프의 대칭"
+  },
+  "objectives": [
+    "로그함수 y=log_a x의 정의역·치역·기준점·점근선을 밑 조건과 연결한다.",
+    "같은 밑의 지수함수와 로그함수의 역함수 관계 및 y=x 대칭을 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-07-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-04 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    },
+    {
+      "id": "m5-07-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-06 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    },
+    {
+      "id": "m5-07-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-17 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-07-skill-1",
+    "m5-07-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "로그 조건 회상 → 지수함수의 역관계 → 정의역·치역 교환과 기준점 → 밑별 단조 방향 → 평행이동과 그래프 대응",
+    "principleDerivation": "a>0, a≠1에서 y=log_a x는 y=aˣ의 역함수이다. 정의역 x>0, 치역 실수 전체, 점근선 x=0, 기준점 (1,0)이다. a>1이면 증가하고 0<a<1이면 감소한다. y=log_a(x−h)+k는 정의역 x>h, 치역 실수 전체, 수직점근선 x=h이다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 시각화에는 축·조건·대체 텍스트를 둔다. 키보드만으로 모든 조작을 수행할 수 있고 색만으로 정답 여부를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-07-u1",
+      "title": "로그함수의 조건",
+      "targetSkills": [
+        "m5-07-skill-1"
+      ],
+      "explanation": "로그의 밑은 양수이면서 1이 아니고 진수는 양수여야 한다.",
+      "activity": "밑·입력 허용 영역을 좌표평면 옆에 표시한다.",
+      "check": "log₂x는 x>0에서 정의된다."
+    },
+    {
+      "id": "m5-07-u2",
+      "title": "기준점과 정의역·치역",
+      "targetSkills": [
+        "m5-07-skill-1"
+      ],
+      "explanation": "y=log_a x는 (1,0)을 지나고 입력은 양수이며 출력은 모든 실수이다.",
+      "activity": "지수함수의 점을 뒤집어 로그 점으로 옮긴다.",
+      "check": "y=log₃x에서 log₃1=0이다."
+    },
+    {
+      "id": "m5-07-u3",
+      "title": "역함수와 y=x 대칭",
+      "targetSkills": [
+        "m5-07-skill-1"
+      ],
+      "explanation": "같은 밑의 지수함수와 로그함수는 입력과 출력을 바꾼 역관계다.",
+      "activity": "대칭선 y=x를 그리고 대응 점 (0,1)↔(1,0)을 옮긴다.",
+      "check": "y=2ˣ과 y=log₂x는 y=x 대칭이다."
+    },
+    {
+      "id": "m5-07-u4",
+      "title": "밑 구간별 증가·감소",
+      "targetSkills": [
+        "m5-07-skill-2"
+      ],
+      "explanation": "a>1이면 증가하고 0<a<1이면 감소한다.",
+      "activity": "입력 순서와 출력 순서를 표에서 대조한다.",
+      "check": "log₂x는 증가하고 log_(1/2)x는 감소한다."
+    },
+    {
+      "id": "m5-07-u5",
+      "title": "수평이동과 정의역",
+      "targetSkills": [
+        "m5-07-skill-2"
+      ],
+      "explanation": "y=log_a(x−h)는 기본 그래프를 오른쪽 h만큼 옮기고 x>h에서 정의된다.",
+      "activity": "h를 바꾸어 시작 경계와 수직점근선을 함께 옮긴다.",
+      "check": "y=log₂(x−3)의 정의역은 x>3이다."
+    },
+    {
+      "id": "m5-07-u6",
+      "title": "수직이동과 그래프 통합",
+      "targetSkills": [
+        "m5-07-skill-2"
+      ],
+      "explanation": "y=log_a(x−h)+k는 기준점과 값의 위치를 위아래 k만큼 이동시킨다.",
+      "activity": "기준점·점근선·단조 방향·정의역을 한 그래프에서 표시한다.",
+      "check": "y=log₂(x−3)+2의 기준점은 (4,2)이고 점근선 x=3이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-07-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 조건·값 조절 및 텍스트로 현재 상태 확인",
+      "description": "지수함수 y=aˣ의 점들을 y=x 대칭으로 로그 그래프에 옮기고 밑 구간과 이동량을 조절한다. 화면에 x>h, 점근선 x=h, 단조 방향을 텍스트로 함께 표시한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "로그 그래프의 조건과 표에서 정의역·치역·기준 특징을 찾는다.",
+      "같은 밑의 지수·로그 대응점을 이용해 역함수와 대칭을 판단한다.",
+      "밑 범위와 이동식으로 증가·감소·기준점·수직점근선을 판정한다."
+    ],
+    "draftPracticeGoals": [
+      "로그 밑과 진수 조건으로 함수 정의역을 구한다.",
+      "기준점 (1,0), 치역, 수직점근선을 그래프 특징과 연결한다.",
+      "지수함수 점을 (x,y)에서 (y,x)로 옮겨 로그 대응점을 찾는다.",
+      "y=x 대칭 그림에서 역함수 쌍을 고른다.",
+      "밑 구간을 보고 로그 그래프의 증가·감소를 판정한다.",
+      "수평·수직 이동 후 점근선과 기준점을 함께 기록한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가 기준은 기술할 수 있으나 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형이다. 조건 판별·표현 전환·전략 선택의 주된 추론이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "밑·진수 조건과 정의역을 함께 썼는가?",
+    "같은 밑의 지수와 로그를 y=x 대칭으로 대응시켰는가?",
+    "이동한 점근선·기준점·단조 방향이 서로 맞는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 다시 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "로그함수 정의역을 모든 실수로 둠",
+    "치역을 양수로 제한함",
+    "지수·로그 대응점에서 좌표를 바꾸지 않음",
+    "수평이동 후 점근선과 정의역 경계를 잘못 옮김"
+  ],
+  "workedExample": {
+    "prompt": "y=log₂(x−1)+3의 정의역, 기준점, 수직점근선을 구하라.",
+    "solution": "x−1>0이므로 x>1이다. 기본점 (1,0)은 오른쪽 1·위쪽 3 이동해 (2,3)이 되고 수직점근선 x=1이다.",
+    "verification": "진수 조건을 엄격한 부등식으로 적용하고 점근선 x=1은 정의역에 포함하지 않는다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Curriculum Architect self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/right review and item drafts",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

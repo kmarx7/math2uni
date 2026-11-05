@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-06",
+  "unitTitle": "지수함수의 그래프",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-06-family-1",
+      "status": "draft",
+      "title": "기본 지수함수의 밑 조건·정의역·치역·기준점 판별",
+      "reasoningStructure": "a>0,a≠1을 확인하고 y=aˣ의 입력 범위와 출력 범위 및 (0,1)을 연결한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-06-skill-1",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m506-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "y=3ˣ의 정의역과 치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "정의역 ℝ, 치역 (0,∞)",
+          "rationale": "모든 실수 x에서 3ˣ가 정의되고 항상 양수이므로 정의역은 ℝ, 치역은 (0,∞)이다. 3⁰=1이므로 (0,1)을 지나며 3ˣ=0은 불가능.",
+          "skillLabel": "m5-06-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "정의역 x>0, 치역 ℝ"
+            },
+            {
+              "id": "B",
+              "label": "정의역 ℝ, 치역 [0,∞)"
+            },
+            {
+              "id": "C",
+              "label": "정의역 ℝ, 치역 (0,∞)"
+            }
+          ]
+        },
+        {
+          "id": "m506-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=5ˣ의 기준점은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "(0,1)",
+          "rationale": "5⁰=1이므로 x=0에서 y=1이다. 기본 지수함수는 밑 조건을 만족할 때 (0,1)을 지난다.",
+          "skillLabel": "m5-06-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(1,0)"
+            },
+            {
+              "id": "B",
+              "label": "(0,5)"
+            },
+            {
+              "id": "C",
+              "label": "(0,1)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-06-family-2",
+      "status": "draft",
+      "title": "밑 구간에 따라 증가·감소를 비교하고 그래프 성질 판단",
+      "reasoningStructure": "a>1과 0<a<1의 출력 변화를 비교해 단조 방향을 정한다.",
+      "thinkingType": "시각적 탐구",
+      "skillId": "m5-06-skill-2",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m506-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=(1/2)ˣ의 그래프는 x가 증가할 때 어떻게 되는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "감소한다",
+          "rationale": "밑이 0과 1 사이이므로 지수함수는 감소한다. 예를 들어 x=0,1일 때 값은 1,1/2로 줄어든다.",
+          "skillLabel": "m5-06-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "증가한다"
+            },
+            {
+              "id": "B",
+              "label": "감소한다"
+            },
+            {
+              "id": "C",
+              "label": "일정하다"
+            }
+          ]
+        },
+        {
+          "id": "m506-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "y=(1/3)^(x−2)+1은 증가인가 감소인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "감소",
+          "rationale": "0<1/3<1이므로 수평 이동과 수직 이동 후에도 감소한다. 이동은 단조 방향을 바꾸지 않는다.",
+          "skillLabel": "m5-06-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "감소"
+            },
+            {
+              "id": "B",
+              "label": "증가"
+            },
+            {
+              "id": "C",
+              "label": "상수"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-06-family-3",
+      "status": "draft",
+      "title": "이동된 지수 그래프의 기준점·치역·점근선 추론",
+      "reasoningStructure": "y=a^(x−h)+k의 기준점과 수평점근선, 치역을 h,k와 함께 읽는다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-06-skill-2",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m506-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=2^(x−3)−2의 수평점근선과 치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "점근선 y=−2, 치역 y>−2",
+          "rationale": "2^(x−3)>0이므로 y>−2이며 수평점근선은 y=−2이다. x=3일 때 y=−1로 기준점은 (3,−1); 이동 후에도 값은 점근선보다 크다.",
+          "skillLabel": "m5-06-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "점근선 y=−2, 치역 y>−2"
+            },
+            {
+              "id": "B",
+              "label": "점근선 y=0, 치역 y>0"
+            },
+            {
+              "id": "C",
+              "label": "점근선 x=3, 치역 y>−2"
+            }
+          ]
+        },
+        {
+          "id": "m506-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "y=4^(x+1)+3의 기준점과 치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "(−1,4), y>3",
+          "rationale": "x=−1이면 지수는 0, y=1+3=4. 또한 4^(x+1)>0이므로 치역 y>3이다. 수평점근선은 y=3이며 기준점은 (−1,4).",
+          "skillLabel": "m5-06-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(1,4), y>3"
+            },
+            {
+              "id": "B",
+              "label": "(−1,4), y>3"
+            },
+            {
+              "id": "C",
+              "label": "(−1,1), y>0"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "세 가지 서로 다른 사고 원형에 각 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 성취기준 개별 매핑 및 단원별 수능 출제 연결 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-05",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 양수 N을 10의 거듭제곱과 1 이상 10 미만의 수의 곱으로 나타내어 상용로그의 정수 부분을 결정한다.\n• 표시된 상용로그 표 또는 제공된 값을 이용해 양의 수의 크기와 십진 자릿수를 근사적으로 해석한다.\n검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m5-05-u1",
+          "title": "상용로그의 밑",
+          "body": "log N은 log₁₀N을 뜻하며 진수 N은 양수여야 한다.",
+          "activity": "밑 10과 진수 N을 식에서 구분해 표시한다.",
+          "check": "log 100=2이다."
+        },
+        {
+          "id": "m5-05-u2",
+          "title": "10의 거듭제곱 구간",
+          "body": "10^k≤N<10^(k+1)인 정수 k를 찾으면 로그의 크기 구간을 알 수 있다.",
+          "activity": "수직선에서 10의 거듭제곱 경계 사이에 N을 놓는다.",
+          "check": "10≤37<100이므로 log 37은 1과 2 사이이다."
+        },
+        {
+          "id": "m5-05-u3",
+          "title": "정수 부분과 소수 부분",
+          "body": "N=10^k·m, 1≤m<10으로 두면 log N=k+log m이다.",
+          "activity": "소수점 이동으로 N을 1 이상 10 미만으로 정규화한다.",
+          "check": "N=370=10²·3.7이므로 log 370=2+log 3.7이다."
+        },
+        {
+          "id": "m5-05-u4",
+          "title": "0과 1 사이의 양수",
+          "body": "0<N<1에서도 로그는 정의되며 로그값은 음수가 될 수 있다.",
+          "activity": "0.1, 0.01의 기준 사이에 작은 양수를 놓는다.",
+          "check": "0.04=10^(−2)·4이므로 log 0.04=−2+log 4이다."
+        },
+        {
+          "id": "m5-05-u5",
+          "title": "표 값으로 근사",
+          "body": "표에 주어진 log m을 사용해 log N의 근삿값을 계산한다.",
+          "activity": "제공된 표의 행·열에서 값을 읽고 근사 기호를 붙인다.",
+          "check": "표에서 log 2≈0.3010이면 log 200≈2.3010이다."
+        },
+        {
+          "id": "m5-05-u6",
+          "title": "십진 자릿수와 크기",
+          "body": "양의 정수 N이 10^k≤N<10^(k+1)이면 십진 표기는 k+1자리이다.",
+          "activity": "10의 거듭제곱 구간과 자릿수 카드를 대응시킨다.",
+          "check": "10²≤N<10³인 양의 정수는 세 자리이다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "개념 조작 미리보기 초안",
+      "interaction": "expression-table",
+      "description": "학습자가 표·표현·그래프의 대응을 조작하는 데이터 초안이다. 키보드 조작과 텍스트 대안은 구현 및 QA가 필요하다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "log 100=2이다.",
+        "10≤37<100이므로 log 37은 1과 2 사이이다.",
+        "각 단계에서 정의역·조건을 기록하고 계산 뒤 원래 식에 대입해 확인한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "검수 전 문제 원형 연결: m5-05-family-1 (m5-05-skill-1) → m505-draft-01, m505-draft-03; m5-05-family-2 (m5-05-skill-2) → m505-draft-02, m505-draft-05; m5-05-family-3 (m5-05-skill-2) → m505-draft-04, m505-draft-06. 실제 문항·정답은 별도 문제은행에서 제출 전 비공개로 제공한다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. 오개념은 검증 전 설계 가설이다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건에서 핵심 절차를 다시 설명하고 선수 개념과 다음 단원 연결을 확인한다."
+    }
+  ],
+  "practicePlan": {
+    "groups": [
+      {
+        "familyId": "m5-05-family-1",
+        "skillId": "m5-05-skill-1",
+        "itemIds": [
+          "m505-draft-01",
+          "m505-draft-03"
+        ],
+        "learningPhaseIds": [
+          "phase-08",
+          "phase-09"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-05-family-2",
+        "skillId": "m5-05-skill-2",
+        "itemIds": [
+          "m505-draft-02",
+          "m505-draft-05"
+        ],
+        "learningPhaseIds": [
+          "phase-10"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-05-family-3",
+        "skillId": "m5-05-skill-2",
+        "itemIds": [
+          "m505-draft-04",
+          "m505-draft-06"
+        ],
+        "learningPhaseIds": [
+          "phase-11"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

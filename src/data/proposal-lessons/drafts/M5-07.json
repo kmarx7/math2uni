@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-07",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 로그함수 y=log_a x의 정의역·치역·기준점·점근선을 밑 조건과 연결한다.\n• 같은 밑의 지수함수와 로그함수의 역함수 관계 및 y=x 대칭을 설명한다.\n검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m5-07-u1",
+          "title": "로그함수의 조건",
+          "body": "로그의 밑은 양수이면서 1이 아니고 진수는 양수여야 한다.",
+          "activity": "밑·입력 허용 영역을 좌표평면 옆에 표시한다.",
+          "check": "log₂x는 x>0에서 정의된다."
+        },
+        {
+          "id": "m5-07-u2",
+          "title": "기준점과 정의역·치역",
+          "body": "y=log_a x는 (1,0)을 지나고 입력은 양수이며 출력은 모든 실수이다.",
+          "activity": "지수함수의 점을 뒤집어 로그 점으로 옮긴다.",
+          "check": "y=log₃x에서 log₃1=0이다."
+        },
+        {
+          "id": "m5-07-u3",
+          "title": "역함수와 y=x 대칭",
+          "body": "같은 밑의 지수함수와 로그함수는 입력과 출력을 바꾼 역관계다.",
+          "activity": "대칭선 y=x를 그리고 대응 점 (0,1)↔(1,0)을 옮긴다.",
+          "check": "y=2ˣ과 y=log₂x는 y=x 대칭이다."
+        },
+        {
+          "id": "m5-07-u4",
+          "title": "밑 구간별 증가·감소",
+          "body": "a>1이면 증가하고 0<a<1이면 감소한다.",
+          "activity": "입력 순서와 출력 순서를 표에서 대조한다.",
+          "check": "log₂x는 증가하고 log_(1/2)x는 감소한다."
+        },
+        {
+          "id": "m5-07-u5",
+          "title": "수평이동과 정의역",
+          "body": "y=log_a(x−h)는 기본 그래프를 오른쪽 h만큼 옮기고 x>h에서 정의된다.",
+          "activity": "h를 바꾸어 시작 경계와 수직점근선을 함께 옮긴다.",
+          "check": "y=log₂(x−3)의 정의역은 x>3이다."
+        },
+        {
+          "id": "m5-07-u6",
+          "title": "수직이동과 그래프 통합",
+          "body": "y=log_a(x−h)+k는 기준점과 값의 위치를 위아래 k만큼 이동시킨다.",
+          "activity": "기준점·점근선·단조 방향·정의역을 한 그래프에서 표시한다.",
+          "check": "y=log₂(x−3)+2의 기준점은 (4,2)이고 점근선 x=3이다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "개념 조작 미리보기 초안",
+      "interaction": "expression-table",
+      "description": "학습자가 표·표현·그래프의 대응을 조작하는 데이터 초안이다. 키보드 조작과 텍스트 대안은 구현 및 QA가 필요하다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "log₂x는 x>0에서 정의된다.",
+        "y=log₃x에서 log₃1=0이다.",
+        "각 단계에서 정의역·조건을 기록하고 계산 뒤 원래 식에 대입해 확인한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "검수 전 문제 원형 연결: m5-07-family-1 (m5-07-skill-1) → m507-draft-01, m507-draft-05; m5-07-family-2 (m5-07-skill-1) → m507-draft-02, m507-draft-04; m5-07-family-3 (m5-07-skill-2) → m507-draft-03, m507-draft-06. 실제 문항·정답은 별도 문제은행에서 제출 전 비공개로 제공한다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. 오개념은 검증 전 설계 가설이다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건에서 핵심 절차를 다시 설명하고 선수 개념과 다음 단원 연결을 확인한다."
+    }
+  ],
+  "practicePlan": {
+    "groups": [
+      {
+        "familyId": "m5-07-family-1",
+        "skillId": "m5-07-skill-1",
+        "itemIds": [
+          "m507-draft-01",
+          "m507-draft-05"
+        ],
+        "learningPhaseIds": [
+          "phase-08",
+          "phase-09"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-07-family-2",
+        "skillId": "m5-07-skill-1",
+        "itemIds": [
+          "m507-draft-02",
+          "m507-draft-04"
+        ],
+        "learningPhaseIds": [
+          "phase-10"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-07-family-3",
+        "skillId": "m5-07-skill-2",
+        "itemIds": [
+          "m507-draft-03",
+          "m507-draft-06"
+        ],
+        "learningPhaseIds": [
+          "phase-11"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

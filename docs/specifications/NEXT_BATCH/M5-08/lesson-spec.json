@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-08",
+  "levelId": "LEVEL 5",
+  "title": "지수방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "밑의 통일",
+      "증감에 따른 부등호"
+    ],
+    "prerequisiteUnits": [
+      "M5-06",
+      "M3-17"
+    ],
+    "visualization": "지수 그래프 교점"
+  },
+  "objectives": [
+    "같은 양의 밑으로 나타낼 수 있는 지수방정식에서 지수의 같음을 이용해 해를 구한다.",
+    "지수함수의 단조 방향에 따라 지수부등식의 부등호 방향을 보존하거나 뒤집는다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-08-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-06 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    },
+    {
+      "id": "m5-08-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-17 선수 기능 진단: 해당 제안 단원의 관련 기본 기능을 확인한다. 미숙하면 준비 안내를 제공하되 prerequisite 그래프나 숙달도를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-08-skill-1",
+    "m5-08-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "밑 조건 점검 → 같은 밑으로 표현 → 지수 비교를 이용한 방정식 풀이 → a>1/0<a<1 구분 → 해집합과 정의역 확인",
+    "principleDerivation": "a>0, a≠1일 때 aˣ는 일대일이므로 a^u=a^v에서 u=v이다. a>1이면 지수함수가 증가해 a^u<a^v와 u<v의 방향이 같고, 0<a<1이면 감소해 방향이 반대다. 양변을 같은 밑으로 바꾸거나 지수함수의 단조성을 쓸 수 있을 때에만 적용하며 양수 아닌 밑은 허용하지 않는다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 시각화에는 축·조건·대체 텍스트를 둔다. 키보드만으로 모든 조작을 수행할 수 있고 색만으로 정답 여부를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-08-u1",
+      "title": "지수방정식 전 밑 확인",
+      "targetSkills": [
+        "m5-08-skill-1"
+      ],
+      "explanation": "실수 지수에서 밑은 양수이고 1이 아니어야 지수함수가 일대일이다.",
+      "activity": "밑 조건을 통과한 식과 통과하지 못한 식을 분류한다.",
+      "check": "2ˣ과 (1/2)ˣ은 허용되지만 1ˣ은 일대일이 아니다."
+    },
+    {
+      "id": "m5-08-u2",
+      "title": "같은 밑으로 나타내기",
+      "targetSkills": [
+        "m5-08-skill-1"
+      ],
+      "explanation": "한쪽 또는 양쪽을 같은 양의 밑 거듭제곱으로 바꾼다.",
+      "activity": "작은 정수 거듭제곱 표에서 같은 밑 표현을 찾는다.",
+      "check": "8=2³이므로 2^(x+1)=8은 2^(x+1)=2³이다."
+    },
+    {
+      "id": "m5-08-u3",
+      "title": "지수 비교 방정식",
+      "targetSkills": [
+        "m5-08-skill-1"
+      ],
+      "explanation": "동일한 허용 밑에서 지수값이 같으면 지수들이 같다.",
+      "activity": "밑을 맞춘 뒤 지수만 비교해 일차식을 푼다.",
+      "check": "2^(x+1)=2³에서 x=2이다."
+    },
+    {
+      "id": "m5-08-u4",
+      "title": "a>1인 지수부등식",
+      "targetSkills": [
+        "m5-08-skill-2"
+      ],
+      "explanation": "증가하는 지수함수는 입력 순서를 보존한다.",
+      "activity": "2^x 표의 입력·출력 순서를 대조한다.",
+      "check": "2^x<2³이면 x<3이다."
+    },
+    {
+      "id": "m5-08-u5",
+      "title": "0<a<1인 지수부등식",
+      "targetSkills": [
+        "m5-08-skill-2"
+      ],
+      "explanation": "감소하는 지수함수는 입력 순서를 뒤집는다.",
+      "activity": "(1/2)^x 표에서 입력 증가 때 출력 감소를 확인한다.",
+      "check": "(1/2)^x>(1/2)^2이면 x<2이다."
+    },
+    {
+      "id": "m5-08-u6",
+      "title": "해 검산과 범위 구분",
+      "targetSkills": [
+        "m5-08-skill-2"
+      ],
+      "explanation": "풀이 결과를 원래 식과 밑 조건에 확인하고 방정식과 부등식을 구분한다.",
+      "activity": "후보 해를 대입하고 수직선에 해집합을 표시한다.",
+      "check": "(1/3)^(2x−1)>(1/3)^3이면 2x−1<3이므로 x<2이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-08-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 조건·값 조절 및 텍스트로 현재 상태 확인",
+      "description": "밑을 a>1 또는 0<a<1에서 고르고 지수 u,v를 움직여 함수값과 입력 순서를 비교한다. 방정식/부등식 모드를 구분하며 해집합과 뒤집힘 이유를 텍스트로 제공한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "같은 밑의 거듭제곱으로 바꾸어 지수방정식을 푼다.",
+      "밑이 1보다 큰 증가 지수함수에서 부등식 해를 구한다.",
+      "0<a<1인 감소 지수함수에서 부등호를 뒤집어 해를 구한다."
+    ],
+    "draftPracticeGoals": [
+      "양수·1 제외 조건을 확인하고 지수식의 공통 밑을 찾는다.",
+      "거듭제곱의 동치 변환을 사용해 미지 지수를 구한다.",
+      "방정식 해를 원래 식에 대입해 검산한다.",
+      "a>1인 부등식에서 지수 비교 후 같은 방향 부등호를 유지한다.",
+      "0<a<1인 부등식에서 지수 비교 후 부등호를 반대로 쓴다.",
+      "해집합을 수직선에 나타내고 경계의 포함 여부를 확인한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가 기준은 기술할 수 있으나 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형이다. 조건 판별·표현 전환·전략 선택의 주된 추론이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "지수함수의 밑 조건을 확인했는가?",
+    "같은 밑으로 표현한 과정이 동치인가?",
+    "부등식에서 밑 구간에 맞는 방향을 썼는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 다시 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "같은 밑인데도 지수를 비교하지 못함",
+    "0<a<1에서도 부등호를 보존함",
+    "a=1 또는 음수 밑에 단조성 논리를 적용함",
+    "부등식의 열린 경계와 해집합을 혼동함"
+  ],
+  "workedExample": {
+    "prompt": "2^(x+1)<2³을 풀어라. 이어 (1/2)^(x+1)<(1/2)³과 방향 차이를 비교하라.",
+    "solution": "첫 식은 밑 2>1이므로 x+1<3, x<2이다. 둘째는 밑 1/2가 0과 1 사이여서 감소하므로 x+1>3, x>2이다.",
+    "verification": "밑의 구간을 먼저 구분했다. 지수부등식 해는 지수함수의 단조 방향에 따라 결정된다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Curriculum Architect self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/right review and item drafts",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

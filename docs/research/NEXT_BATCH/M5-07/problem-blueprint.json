@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-07",
+  "unitTitle": "로그함수의 그래프",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-07-family-1",
+      "status": "draft",
+      "title": "기본 로그함수의 정의역·치역·점근선·기준점 판별",
+      "reasoningStructure": "로그의 입력 조건과 기본 그래프의 기준점·수직점근선을 읽는다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-07-skill-1",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m507-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "y=log₂x의 정의역, 치역, 수직점근선은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "x>0, ℝ, x=0",
+          "rationale": "진수 x>0, 로그값은 모든 실수이며 x=0이 수직점근선이다. log₂1=0이므로 기준점은 (1,0). x=0은 정의역에 포함되지 않는다.",
+          "skillLabel": "m5-07-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>0, ℝ, x=0"
+            },
+            {
+              "id": "B",
+              "label": "x≥0, ℝ, y=0"
+            },
+            {
+              "id": "C",
+              "label": "ℝ, x>0, x=1"
+            }
+          ]
+        },
+        {
+          "id": "m507-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "기본 로그함수 y=log₅x가 지나는 기준점은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "(1,0)",
+          "rationale": "x=1이면 log₅1=0이므로 그래프는 (1,0)을 지난다. 이는 지수함수 y=5ˣ의 기준점 (0,1)에서 좌표를 바꾼 점이다.",
+          "skillLabel": "m5-07-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(0,1)"
+            },
+            {
+              "id": "B",
+              "label": "(1,0)"
+            },
+            {
+              "id": "C",
+              "label": "(5,1)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-07-family-2",
+      "status": "draft",
+      "title": "지수·로그 역함수의 대응점 교환과 y=x 대칭",
+      "reasoningStructure": "같은 밑의 지수함수와 로그함수에서 입력·출력 좌표를 교환하고 역함수 그래프의 y=x 대칭을 확인한다.",
+      "thinkingType": "시각적 탐구",
+      "skillId": "m5-07-skill-1",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m507-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "같은 밑에서 y=3ˣ와 y=log₃x는 어떤 관계인가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "서로 역함수이며 y=x 대칭",
+          "rationale": "로그와 지수 정의에서 입력과 출력이 교환되므로 역함수이고 그래프는 y=x 대칭이다. 3⁰=1은 로그 그래프 점 (1,0)에 대응한다.",
+          "skillLabel": "m5-07-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "서로 y축 대칭"
+            },
+            {
+              "id": "B",
+              "label": "서로 역함수이며 y=x 대칭"
+            },
+            {
+              "id": "C",
+              "label": "두 함수가 같은 그래프"
+            }
+          ]
+        },
+        {
+          "id": "m507-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "3²=9이다. 이에 대응하는 로그함수 y=log₃x의 점은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "(9,2)",
+          "rationale": "지수함수의 점 (2,9)에서 입력과 출력을 바꾸면 역함수 로그 그래프의 점 (9,2)가 된다. 실제로 log₃9=2이다.",
+          "skillLabel": "m5-07-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(2,9)"
+            },
+            {
+              "id": "B",
+              "label": "(9,1)"
+            },
+            {
+              "id": "C",
+              "label": "(9,2)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-07-family-3",
+      "status": "draft",
+      "title": "이동된 로그 그래프에서 정의역·점근선·기준점 계산",
+      "reasoningStructure": "진수의 양수 조건을 먼저 적용하고 평행이동된 경계와 기준점을 구한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-07-skill-2",
+      "distinctFrom": "핵심 추론이 다른 두 원형과 구분한다. 숫자나 매개변수만 바꾼 문항은 같은 가족의 변형이며 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m507-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=log₂(x−4)의 정의역과 수직점근선은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "x>4, x=4",
+          "rationale": "진수 x−4>0이므로 x>4이고 경계 x=4가 수직점근선이다. 진수가 0이 되는 경계는 포함되지 않는다.",
+          "skillLabel": "m5-07-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>0, x=0"
+            },
+            {
+              "id": "B",
+              "label": "x≥4, x=4"
+            },
+            {
+              "id": "C",
+              "label": "x>4, x=4"
+            }
+          ]
+        },
+        {
+          "id": "m507-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "y=log₂(x+1)−3의 정의역과 수직점근선은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "x>−1, x=−1",
+          "rationale": "진수 x+1>0에서 x>−1이며 경계 x=−1은 수직점근선이다. 점근선은 진수가 0인 경계이고 정의역에 포함되지 않는다.",
+          "skillLabel": "m5-07-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct calculation/substitution/definition check",
+            "result": "작성자 독립 계산·조건 대입 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>−1, x=−1"
+            },
+            {
+              "id": "B",
+              "label": "x>1, x=1"
+            },
+            {
+              "id": "C",
+              "label": "x≥−1, x=−1"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "세 가지 서로 다른 사고 원형에 각 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 성취기준 개별 매핑 및 단원별 수능 출제 연결 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}
