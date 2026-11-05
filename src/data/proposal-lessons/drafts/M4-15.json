@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-15",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "관계를 입력과 출력의 대응으로 나타내고 함수인지 아닌지 판별한다. 함수의 정의역·공역·치역을 구분하고 유한 대응표와 간단한 그래프에서 값을 읽는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-15-readiness-1: M2-04: 입력에 따라 출력이 대응하는 관계와 일차함수의 식을 읽는다. m4-15-readiness-2: M4-09: 집합의 원소와 부분집합 표기를 구분한다. 이 진단은 준비 안내용이며 단원 진입이나 완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-15-u1",
+          "title": "입력과 출력",
+          "body": "함수는 입력과 출력 사이의 대응 규칙으로 볼 수 있다. 규칙·정의역·공역을 구별한다.",
+          "activity": "자연수 입력에 두 배를 더하는 규칙을 화살표로 그린다.",
+          "check": "하나의 입력과 그 출력값을 대응표에서 찾는다."
+        },
+        {
+          "id": "m4-15-u2",
+          "title": "관계와 함수",
+          "body": "관계는 두 집합의 원소 쌍을 모은 것이다. 함수가 되려면 정의역의 한 입력에 출력이 정확히 하나 대응해야 한다.",
+          "activity": "같은 입력에서 화살표가 두 개 나가는 관계와 하나만 나가는 관계를 비교한다.",
+          "check": "각 입력의 출력 개수를 세어 함수 여부를 결정한다."
+        },
+        {
+          "id": "m4-15-u3",
+          "title": "정의역과 공역",
+          "body": "정의역은 허용한 입력의 집합이고 공역은 출력이 속하기로 정한 집합이다.",
+          "activity": "정의역·공역 상자를 따로 표시하고 화살표를 연결한다.",
+          "check": "문제에 주어진 정의역·공역을 응답에 그대로 표시한다."
+        },
+        {
+          "id": "m4-15-u4",
+          "title": "치역과 함수값",
+          "body": "치역은 정의역의 실제 입력을 함수에 넣어 얻는 출력의 집합이다. 공역의 일부만 치역일 수 있다.",
+          "activity": "표의 x값을 모두 대입해 중복 없이 출력 원소를 모은다.",
+          "check": "f(2)와 치역 {f(x)}의 의미를 구분한다."
+        },
+        {
+          "id": "m4-15-u5",
+          "title": "순서쌍과 좌표 그래프",
+          "body": "입력 x와 출력 f(x)를 순서쌍 (x,f(x))로 나타낸다. 그래프에서 입력에 해당하는 높이를 읽는다.",
+          "activity": "유한 대응표의 점을 좌표평면에 놓고 세로선으로 출력 개수를 확인한다.",
+          "check": "한 x좌표에 점이 둘 이상 있는지 검사해 함수 그래프를 판별한다."
+        },
+        {
+          "id": "m4-15-u6",
+          "title": "표현 사이의 변환",
+          "body": "한 대응을 화살표·순서쌍·표·간단한 그래프로 옮길 수 있다. 표현이 달라도 입력별 출력은 같아야 한다.",
+          "activity": "같은 대응 규칙을 네 표현으로 바꾸어 비교한다.",
+          "check": "표현을 바꾼 뒤 정의역·치역·함수 여부가 보존되는지 검산한다."
+        }
+      ],
+      "body": "조건과 범위를 먼저 확인하고, 말·기호·표·그림 사이를 옮겨 계산과 해석을 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "대응 화살표 (미리보기 대응: function-mapping)",
+      "interaction": "function-mapping",
+      "description": "명세 m4-15-lab의 임시 공통 interaction enum 대응이다. 유한한 정의역과 공역의 원소를 연결하고 각 입력이 출력 하나를 갖는지, 치역이 무엇인지 화살표·표로 확인한다. 전용 조작은 별도 구현·QA 전이며 초안의 표현은 완성 인터랙션을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "정의역 A={−1,0,1}, 공역 B={0,1,2}에서 f(x)=x²로 정한 대응이 함수인지, 치역은 무엇인지 구하시오.",
+        "정의역 A의 각 원소를 하나씩 규칙에 넣는다.",
+        "f(−1)=1, f(0)=0, f(1)=1이다.",
+        "각 입력은 출력 하나를 가지므로 이 대응은 함수다.",
+        "실제로 얻은 출력은 0과 1이므로 치역은 {0,1}이다.",
+        "공역 {0,1,2} 전체가 치역일 필요는 없다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안이에요. 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "조건·정의역·출력 개수 또는 등호 조건 중 놓친 근거를 찾아 해당 소단원으로 돌아가요. 오개념 후보는 실증된 빈도 결과가 아니라 확인할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안된 1일·3일·7일 복습 간격의 효과는 검증 전입니다. 다른 표현의 문항으로 도움 없이 다시 확인한 뒤 다음 단원으로 이어가요."
+    }
+  ]
+}

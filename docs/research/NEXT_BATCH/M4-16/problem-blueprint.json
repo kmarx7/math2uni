@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-16",
+  "unitTitle": "합성함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "mm4-16-family-1",
+      "status": "draft",
+      "title": "합성 기호를 오른쪽에서 읽고 중간 출력 구하기",
+      "reasoningStructure": "(g∘f)(x)=g(f(x))에서 안쪽 함수를 먼저 적용하고 그 출력값을 바깥 함수에 넣는다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-16-skill-1",
+      "distinctFrom": "기호의 적용 순서와 중간 출력에 집중하고, 순서 비교나 정의역 계산은 요구하지 않는다.",
+      "items": [
+        {
+          "id": "m16p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“f(x)=2x+1, g(x)=x²일 때 (g∘f)(2)는?”",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "오른쪽의 f를 먼저 계산한다. f(2)=2·2+1=5이고 g(5)=5²=25이므로 (g∘f)(2)=25다.",
+          "skillLabel": "m4-16-skill-1",
+          "misconceptionHypothesis": "함수 기계의 오른쪽에서 왼쪽 적용을 놓칠 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "25"
+            },
+            {
+              "id": "B",
+              "label": "13"
+            },
+            {
+              "id": "C",
+              "label": "9"
+            }
+          ]
+        },
+        {
+          "id": "m16p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“f(x)=x−3, g(x)=2x+5일 때 (g∘f)(x)는?”",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "g(f(x))=2(x−3)+5=2x−6+5=2x−1이다.",
+          "skillLabel": "m4-16-skill-1",
+          "misconceptionHypothesis": "바깥 함수의 입력 자리에 안쪽 함수 전체를 대입할 때 괄호를 생략할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2x−1"
+            },
+            {
+              "id": "B",
+              "label": "2x+2"
+            },
+            {
+              "id": "C",
+              "label": "2x−8"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-16-family-2",
+      "status": "draft",
+      "title": "합성 순서 비교",
+      "reasoningStructure": "같은 두 함수라도 순서를 바꾸어 각각 계산하며 일반적으로 g∘f와 f∘g가 같지 않음을 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-16-skill-2",
+      "distinctFrom": "첫번째 원형과 달리 두 합성의 순서를 비교해 비가환성을 판단한다.",
+      "items": [
+        {
+          "id": "m16p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=x+2, g(x)=3x일 때 x=1에서 (g∘f)(1)은 두 순서의 값과 어떻게 비교되는가?”",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "f(1)=3이고 g(3)=9이므로 (g∘f)(1)=9다. 반대 순서는 g(1)=3, f(3)=5로 5이므로 두 값은 다르다.",
+          "skillLabel": "m4-16-skill-2",
+          "misconceptionHypothesis": "f와 g의 적용 순서를 바꾸어도 결과가 같다고 생각할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(g∘f)(1)=9이고 (f∘g)(1)=5로 서로 다르다."
+            },
+            {
+              "id": "B",
+              "label": "두 값 모두 9다."
+            },
+            {
+              "id": "C",
+              "label": "두 값 모두 5다."
+            }
+          ]
+        },
+        {
+          "id": "m16p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=x², g(x)=x+1일 때 (f∘g)(2)는?”",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "(f∘g)(2)=f(g(2))=f(3)=3²=9다. 반대 순서는 g(f(2))=g(4)=5이므로 9와 다르다.",
+          "skillLabel": "m4-16-skill-2",
+          "misconceptionHypothesis": "합성 기호의 순서를 읽을 때 바깥 함수부터 적용할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5"
+            },
+            {
+              "id": "B",
+              "label": "4"
+            },
+            {
+              "id": "C",
+              "label": "9"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-16-family-3",
+      "status": "draft",
+      "title": "각 단계의 조건으로 합성 정의역 구하기",
+      "reasoningStructure": "안쪽 함수의 정의역과 안쪽 출력이 바깥 함수에 허용되는 조건을 함께 만족하는 x를 찾는다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-16-skill-2",
+      "distinctFrom": "순서 비교 대신 함수의 원래 정의역 제한과 제곱근 조건의 교집합을 구한다.",
+      "items": [
+        {
+          "id": "m16p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=x−1 (정의역 R), g(u)=√u (u≥0)일 때 (g∘f)의 정의역은?”",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "g의 정의역 조건은 f(x)≥0이다. x−1≥0이므로 x≥1이다.",
+          "skillLabel": "m4-16-skill-2",
+          "misconceptionHypothesis": "바깥 제곱근의 입력이 0 이상이어야 한다는 조건을 확인하지 않을 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "[1,∞)"
+            },
+            {
+              "id": "B",
+              "label": "R"
+            },
+            {
+              "id": "C",
+              "label": "(−∞,1]"
+            }
+          ]
+        },
+        {
+          "id": "m16p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "“f(x)=x²−4 (정의역 R), g(u)=√u (u≥0)일 때 (g∘f)의 정의역은?”",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "f 자체는 모든 실수에서 정의된다. g에 넣으려면 x²−4≥0이어야 하므로 (x−2)(x+2)≥0, 즉 x≤−2 또는 x≥2다.",
+          "skillLabel": "m4-16-skill-2",
+          "misconceptionHypothesis": "정의역에서 합성식의 바깥 함수 조건을 빠뜨리거나 부등식 해를 가운데 구간으로 잘못 고를 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "[−2,2]"
+            },
+            {
+              "id": "B",
+              "label": "(−∞,−2]∪[2,∞)"
+            },
+            {
+              "id": "C",
+              "label": "R"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "세 가지 사고 구조별 연습 초안을 두 개씩 둔다. 필수 연습량과 전체 문제은행 크기는 별도이며 형성평가 인스턴스는 만들지 않았다."
+  },
+  "sourceStatus": "공식 교육과정 문서 위치 및 정책 배경 확인만 완료; 원문·개별 성취기준/수능 매핑 미검증. 교수법·오개념은 직접 연구 근거가 아닌 설계 가설. 자체 제작 연습 초안이며 제3자 문항을 복제하지 않음."
+}

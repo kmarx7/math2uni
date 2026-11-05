@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-14",
+  "levelId": "LEVEL 4",
+  "title": "절대부등식 기초",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "실수 제곱의 비음성",
+      "산술·기하평균 관계"
+    ],
+    "prerequisiteUnits": [
+      "M4-13",
+      "M2-08"
+    ],
+    "visualization": "두 양의 합과 곱"
+  },
+  "objectives": [
+    "실수 a의 제곱이 음수가 될 수 없음을 수직선·넓이·제곱 정의로 설명한다.",
+    "a,b≥0에서 산술·기하평균 부등식 (a+b)/2≥√(ab)를 조건과 등호 성립 조건을 포함해 적용한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-14-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-13: 증명에서 가정·정의·결론을 구별한다."
+    },
+    {
+      "id": "m4-14-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-08: 제곱근을 음이 아닌 수로 해석하고 제곱과 근호의 관계를 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-14-skill-1",
+    "m4-14-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "제곱의 부호 관찰 → 실수 제곱의 비음성 → 제곱근과 조건 → AM-GM 도형·수치 탐구 → 차의 제곱으로 유도 → 등호 조건 → 제한된 최적화",
+    "principleDerivation": "모든 실수 x에 대해 x²≥0이다. a,b≥0이면 (√a−√b)²≥0이고 이를 정리하면 a+b≥2√ab, 즉 (a+b)/2≥√ab이다. 등호는 √a=√b, 따라서 a=b일 때 성립한다. 이 조건은 비음수 범위에서만 쓴다. a 또는 b가 음수면 √(ab) 표현이 실수로 정의되지 않을 수 있으므로 자동 적용하지 않는다.",
+    "naturalNumberConvention": "실수의 제곱은 음이 아닌 실수다. 제곱근 기호 √x는 x≥0에서 음이 아닌 제곱근을 뜻한다. AM-GM은 a,b≥0에 적용하며 등호 조건 a=b를 함께 확인한다.",
+    "accessibility": "색상에만 의존하지 않고 레이블·기호·표 또는 텍스트를 병행한다. 키보드로 조작 가능하도록 설계하고, 정의역과 조건을 시각화와 함께 표시한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-14-u1",
+      "title": "실수 제곱의 부호",
+      "targetSkills": [
+        "m4-14-skill-1"
+      ],
+      "explanation": "실수의 제곱은 0 이상이다. 양수·음수 어느 쪽을 제곱해도 부호가 음수가 되지 않는다.",
+      "activity": "수직선에서 x와 −x의 위치를 바꾸어도 제곱값이 같은지 비교한다.",
+      "check": "음수의 제곱과 음수 자체를 구분해 x²≥0을 말한다."
+    },
+    {
+      "id": "m4-14-u2",
+      "title": "제곱의 크기와 0",
+      "targetSkills": [
+        "m4-14-skill-1"
+      ],
+      "explanation": "x²=0이면 x=0이고, x≠0이면 x²>0이다.",
+      "activity": "x를 −3부터 3까지 움직이며 x²의 표와 점을 비교한다.",
+      "check": "제곱값이 0인 경우와 양수인 경우를 분류한다."
+    },
+    {
+      "id": "m4-14-u3",
+      "title": "두 수의 제곱과 부등식",
+      "targetSkills": [
+        "m4-14-skill-1"
+      ],
+      "explanation": "(x−y)²≥0을 전개하면 x²+y²≥2xy를 얻는다. 이 관계는 모든 실수 x,y에 성립한다.",
+      "activity": "(x−y)²의 값과 x²+y²−2xy의 값을 같은 입력으로 확인한다.",
+      "check": "전개 과정에서 부등호 방향이 바뀌지 않는 이유를 제곱의 비음성과 연결한다."
+    },
+    {
+      "id": "m4-14-u4",
+      "title": "비음수 두 수의 산술·기하평균 관계",
+      "targetSkills": [
+        "m4-14-skill-2"
+      ],
+      "explanation": "a,b≥0일 때 두 수의 산술평균은 기하평균보다 작지 않다.",
+      "activity": "a,b를 바꾸고 (√a−√b)²의 넓이·값을 비교한다.",
+      "check": "a,b≥0 조건을 먼저 적고 평균 부등식을 표현한다."
+    },
+    {
+      "id": "m4-14-u5",
+      "title": "등호가 성립하는 조건",
+      "targetSkills": [
+        "m4-14-skill-2"
+      ],
+      "explanation": "(a+b)/2=√ab가 되는 것은 a=b일 때다. 등호 조건은 최솟값·최댓값 결론에 필요하다.",
+      "activity": "a+b를 고정하고 a,b가 같아질 때 곱 ab가 어떻게 변하는지 표로 본다.",
+      "check": "계산 결과와 별도로 등호가 가능한 값을 확인한다."
+    },
+    {
+      "id": "m4-14-u6",
+      "title": "합과 곱의 간단한 최적화",
+      "targetSkills": [
+        "m4-14-skill-2"
+      ],
+      "explanation": "비음수 두 수의 합이 고정되면 곱은 두 수가 같을 때 가장 크다. 조건과 등호를 함께 검토한다.",
+      "activity": "고정된 합 10을 여러 쌍으로 나누어 곱을 비교한다.",
+      "check": "변수의 허용 범위, AM-GM 적용, 등호가 가능한 사례를 순서대로 제시한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-14-lab",
+      "kind": "math-lab",
+      "interaction": "두 양의 합과 곱",
+      "description": "a,b의 값을 제한 범위에서 움직이고 평균·곱·등호가 되는 조건을 수치표와 제곱 차이로 비교한다.",
+      "features": [
+        "조작 결과를 수식·문장·표로도 제공한다.",
+        "입력 범위와 제외 조건을 레이블로 명시한다.",
+        "키보드와 보조기술로 조작할 수 있는 컨트롤을 사용한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "x²≥0을 부호와 무관하게 설명하고 x²=0 조건을 구분",
+      "(x−y)²≥0을 전개해 제곱 관련 부등식을 도출",
+      "a,b≥0을 확인하고 AM-GM 및 등호 a=b를 적용"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 연습 문항 초안 목표 6개다. 이 명세는 문항 또는 형성평가 인스턴스를 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "x²≥0을 부호와 무관하게 설명하고 x²=0 조건을 구분",
+        "(x−y)²≥0을 전개해 제곱 관련 부등식을 도출",
+        "a,b≥0을 확인하고 AM-GM 및 등호 a=b를 적용"
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 절대부등식 기초의 해당 소단원으로 돌아간다. 간격을 두고 다른 표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "음수를 제곱하면 음수라고 생각한다.",
+    "제곱근 기호가 음의 제곱근도 함께 뜻한다고 생각한다.",
+    "a,b의 부호 조건 없이 AM-GM을 적용한다.",
+    "부등식의 등호 조건을 확인하지 않고 최적값이라고 결론 낸다."
+  ],
+  "workedExample": {
+    "prompt": "a,b≥0일 때 a+b≥2√(ab)를 보이고 등호 조건을 말하시오.",
+    "steps": [
+      "a,b≥0이므로 √a와 √b는 실수다.",
+      "제곱은 음수가 아니므로 (√a−√b)²≥0이다.",
+      "전개하면 a+b−2√(ab)≥0이므로 a+b≥2√(ab)이다.",
+      "좌변과 우변이 같으려면 (√a−√b)²=0이어야 한다.",
+      "따라서 √a=√b, 즉 a=b일 때 등호가 성립한다."
+    ],
+    "answer": "a,b≥0에서 성립하며 등호는 a=b일 때 성립한다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum Architect author review plus a separate independent Curriculum AI review of learning goals, conditions/domains, worked examples, draft question answer keys and rationale, family distinction, metadata, and renderer consistency for development-preview handoff. This does not constitute human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked against repository data. Research checked official curriculum/CSAT context sources, but annex text and item-level official achievement-standard or CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; separately reviewed by independent Curriculum reviewer"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

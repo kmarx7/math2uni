@@ -15,6 +15,7 @@ import { m3InequalityProblemFamilies, m3InequalityProblems } from "@/data/propos
 import { m3m4PreviewProblemFamilies, m3m4PreviewProblems } from "@/data/proposal-m3-21-m4-03-problems";
 import { m4PreviewProblemFamilies, m4PreviewProblems } from "@/data/proposal-m4-04-08-problems";
 import { m4FoundationsProblemFamilies, m4FoundationsProblems } from "@/data/proposal-m4-09-13-problems";
+import { m4FunctionsProblemFamilies, m4FunctionsProblems } from "@/data/proposal-m4-14-18-problems";
 import firstAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-assessment-blueprint.json";
 import nextAssessmentBlueprint from "../../docs/research/NEXT_BATCH/M1-06-10-assessment-blueprint.json";
 import { curriculumProposal } from "@/data/curriculum-proposal";
@@ -182,6 +183,6 @@ const assessmentProblems: ProblemInstance[] = assessmentBlueprint.flatMap((unit)
   });
 });
 
-export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies, ...m3LatestProblemFamilies, ...m3InequalityProblemFamilies, ...m3m4PreviewProblemFamilies, ...m4PreviewProblemFamilies, ...m4FoundationsProblemFamilies];
-export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems, ...m3LatestProblems, ...m3InequalityProblems, ...m3m4PreviewProblems, ...m4PreviewProblems, ...m4FoundationsProblems];
+export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies, ...m3LatestProblemFamilies, ...m3InequalityProblemFamilies, ...m3m4PreviewProblemFamilies, ...m4PreviewProblemFamilies, ...m4FoundationsProblemFamilies, ...m4FunctionsProblemFamilies];
+export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems, ...m3LatestProblems, ...m3InequalityProblems, ...m3m4PreviewProblems, ...m4PreviewProblems, ...m4FoundationsProblems, ...m4FunctionsProblems];
 export const proposalAssessmentProblems: ProblemInstance[] = assessmentProblems;

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-17",
+  "levelId": "LEVEL 4",
+  "title": "역함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "일대일 대응",
+      "역함수의 그래프"
+    ],
+    "prerequisiteUnits": [
+      "M4-16",
+      "M4-08"
+    ],
+    "visualization": "대각선 대칭 그래프"
+  },
+  "objectives": [
+    "일대일 대응 여부와 정의역을 확인해 역함수가 함수로 존재하는 범위를 판단한다.",
+    "역함수의 식과 정의역·치역을 서로 바꾸고 그래프가 y=x에 대해 대칭임을 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-17-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-16: 합성함수와 함수의 정의역·치역을 해석한다."
+    },
+    {
+      "id": "m4-17-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-08: 그래프의 대칭이동과 직선 y=x의 반사를 시각적으로 해석한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-17-skill-1",
+    "m4-17-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "입력·출력 뒤집기 → 일대일 대응 확인 → 역관계와 역함수 구별 → 식에서 역함수 풀기 → 정의역·치역 맞바꾸기 → y=x 대칭 → 합성으로 검산",
+    "principleDerivation": "함수 f가 정의역에서 일대일이면 각 출력값에 대응하는 입력이 하나이므로 f의 치역을 정의역으로 하는 역함수 f⁻¹를 정할 수 있다. f의 정의역과 치역은 f⁻¹에서 서로 바뀐다. 그래프의 점 (a,b)는 역함수 그래프의 (b,a)에 대응하여 y=x에 대해 대칭이다. 정의역을 제한하면 일대일이 되지 않던 함수도 역함수가 존재할 수 있다.",
+    "naturalNumberConvention": "일대일 여부는 선언한 정의역에서 판단한다. 역함수 기호 f⁻¹은 1/f를 뜻하지 않는다. 역함수의 정의역은 원래 함수의 치역이고 치역은 원래 정의역이다.",
+    "accessibility": "색상에만 의존하지 않고 레이블·기호·표 또는 텍스트를 병행한다. 키보드로 조작 가능하도록 설계하고, 정의역과 조건을 시각화와 함께 표시한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-17-u1",
+      "title": "입출력 뒤집기와 역관계",
+      "targetSkills": [
+        "m4-17-skill-1"
+      ],
+      "explanation": "역관계는 각 순서쌍 (x,y)를 (y,x)로 바꾼 관계다. 역관계가 함수인지 별도로 확인한다.",
+      "activity": "화살표의 방향을 거꾸로 뒤집고 입력별 출력 개수를 센다.",
+      "check": "뒤집은 관계에서 한 입력에 출력이 하나인지 점검한다."
+    },
+    {
+      "id": "m4-17-u2",
+      "title": "일대일 함수",
+      "targetSkills": [
+        "m4-17-skill-1"
+      ],
+      "explanation": "서로 다른 두 입력이 같은 출력으로 가지 않으면 일대일이다. 일대일이면 역관계는 함수가 된다.",
+      "activity": "입력 두 개의 출력이 겹치는지 화살표와 표로 비교한다.",
+      "check": "수평선 검사를 사용할 때 그래프의 모든 높이에서 교점 수를 확인한다."
+    },
+    {
+      "id": "m4-17-u3",
+      "title": "정의역 제한으로 일대일 만들기",
+      "targetSkills": [
+        "m4-17-skill-1"
+      ],
+      "explanation": "원래 함수가 전체 정의역에서 일대일이 아니면 적절한 정의역 제한이 역함수의 존재를 가능하게 할 수 있다.",
+      "activity": "y=x²의 정의역 전체와 x≥0 제한에서 출력 중복을 비교한다.",
+      "check": "역함수 존재 판단이 정의역에 따라 달라짐을 말한다."
+    },
+    {
+      "id": "m4-17-u4",
+      "title": "역함수의 식 구하기",
+      "targetSkills": [
+        "m4-17-skill-2"
+      ],
+      "explanation": "y=f(x)에서 x와 y의 역할을 바꾸고 y에 대해 풀어 역함수 식을 얻는다.",
+      "activity": "f(x)=2x+1을 좌표쌍과 대수식으로 뒤집는다.",
+      "check": "구한 식을 원래 함수에 다시 넣어 합성이 x가 되는지 확인한다."
+    },
+    {
+      "id": "m4-17-u5",
+      "title": "정의역과 치역 바꾸기",
+      "targetSkills": [
+        "m4-17-skill-2"
+      ],
+      "explanation": "역함수의 정의역은 원래 함수의 치역이고 역함수의 치역은 원래 정의역이다.",
+      "activity": "정의역 [0,∞)인 x²의 값 범위와 역함수 √x의 범위를 나란히 쓴다.",
+      "check": "정의역·치역 표기를 서로 바꾸되 실제 값 범위가 맞는지 확인한다."
+    },
+    {
+      "id": "m4-17-u6",
+      "title": "그래프와 y=x 대칭",
+      "targetSkills": [
+        "m4-17-skill-2"
+      ],
+      "explanation": "원함수 그래프의 점 (a,b)는 역함수 그래프의 점 (b,a)가 된다.",
+      "activity": "두 그래프를 y=x 선에 대해 접어 대응점을 비교한다.",
+      "check": "서로 대응하는 점의 좌표가 뒤바뀌는지 검산한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-17-lab",
+      "kind": "math-lab",
+      "interaction": "대각선 대칭 그래프",
+      "description": "유한 대응과 일대일 여부를 뒤집고, 일대일 정의역 제한·역함수 그래프의 y=x 대칭을 확인한다.",
+      "features": [
+        "조작 결과를 수식·문장·표로도 제공한다.",
+        "입력 범위와 제외 조건을 레이블로 명시한다.",
+        "키보드와 보조기술로 조작할 수 있는 컨트롤을 사용한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "역관계가 역함수인지 일대일 조건으로 판별",
+      "역함수 식과 원래 정의역·치역의 교환을 정확히 구함",
+      "합성 검산과 y=x 대칭을 좌표 관계로 설명"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 연습 문항 초안 목표 6개다. 이 명세는 문항 또는 형성평가 인스턴스를 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "역관계가 역함수인지 일대일 조건으로 판별",
+        "역함수 식과 원래 정의역·치역의 교환을 정확히 구함",
+        "합성 검산과 y=x 대칭을 좌표 관계로 설명"
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 역함수의 해당 소단원으로 돌아간다. 간격을 두고 다른 표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "f⁻¹(x)를 1/f(x)로 해석한다.",
+    "일대일 여부와 정의역 조건을 확인하지 않고 역함수라 부른다.",
+    "역함수의 정의역·치역을 맞바꾸지 않는다.",
+    "원래 그래프를 y축에 대칭시킨다고 생각한다."
+  ],
+  "workedExample": {
+    "prompt": "f(x)=2x+1을 실수 전체에서 정의할 때 역함수와 두 함수의 정의역·치역을 구하시오.",
+    "steps": [
+      "f는 기울기가 2인 일차함수여서 서로 다른 입력은 서로 다른 출력으로 간다.",
+      "y=2x+1에서 x와 y를 바꾸면 x=2y+1이다.",
+      "y에 대해 풀어 y=(x−1)/2를 얻는다.",
+      "원래 함수의 정의역과 치역은 모두 실수 전체이므로 역함수도 실수 전체에서 정의된다.",
+      "f(f⁻¹(x))=2((x−1)/2)+1=x이므로 식을 검산한다."
+    ],
+    "answer": "f⁻¹(x)=(x−1)/2이며 정의역과 치역은 각각 실수 전체다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum Architect author review plus a separate independent Curriculum AI review of learning goals, conditions/domains, worked examples, draft question answer keys and rationale, family distinction, metadata, and renderer consistency for development-preview handoff. This does not constitute human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked against repository data. Research checked official curriculum/CSAT context sources, but annex text and item-level official achievement-standard or CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; separately reviewed by independent Curriculum reviewer"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "1.0.0",
+  "unitId": "M4-16",
+  "levelId": "LEVEL 4",
+  "title": "합성함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "함수의 연속 적용",
+      "합성의 정의역"
+    ],
+    "prerequisiteUnits": [
+      "M4-15"
+    ],
+    "visualization": "함수 기계 연결"
+  },
+  "objectives": [
+    "(g∘f)(x)=g(f(x))의 적용 순서를 말과 식으로 설명한다.",
+    "합성함수의 정의역을 안쪽 함수의 출력이 바깥 함수의 정의역에 속하는 조건으로 구한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m4-16-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-15: 함수의 정의역, 치역, 입력·출력 대응을 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m4-16-skill-1",
+    "m4-16-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "함수 기계 연결 → 안쪽 함수 먼저 적용 → 바깥 함수 적용 → 합성 기호 읽기 → 순서 바꾸어 비교 → 정의역 조건 결합 → 합성 표현 검산",
+    "principleDerivation": "함수 f:A→B와 g:C→D가 있을 때 g∘f를 적용하려면 f(x)가 g의 정의역 C에 속해야 한다. 따라서 합성함수의 정의역은 f의 정의역 중 f(x)∈C를 만족하는 입력이다. (g∘f)(x)=g(f(x))이며 일반적으로 g∘f와 f∘g는 같지 않다.",
+    "naturalNumberConvention": "합성 기호 g∘f는 오른쪽의 f를 먼저 적용하고 그 결과에 g를 적용한다. 정의역은 분모 0, 근호의 음수 등 각 함수의 원래 제한을 모두 만족시킨다.",
+    "accessibility": "색상에만 의존하지 않고 레이블·기호·표 또는 텍스트를 병행한다. 키보드로 조작 가능하도록 설계하고, 정의역과 조건을 시각화와 함께 표시한다."
+  },
+  "subunits": [
+    {
+      "id": "m4-16-u1",
+      "title": "함수 기계의 연속 적용",
+      "targetSkills": [
+        "m4-16-skill-1"
+      ],
+      "explanation": "첫 함수의 출력이 다음 함수의 입력이 되어 두 규칙을 차례로 적용한다.",
+      "activity": "f 상자 뒤에 g 상자를 연결하고 값 카드를 통과시킨다.",
+      "check": "두 함수 각각의 중간 출력과 최종 출력을 적는다."
+    },
+    {
+      "id": "m4-16-u2",
+      "title": "합성 기호 읽기",
+      "targetSkills": [
+        "m4-16-skill-1"
+      ],
+      "explanation": "(g∘f)(x)는 g(f(x))이며 f를 먼저 계산한다.",
+      "activity": "같은 x를 두 상자 순서에 넣어 진행 방향을 관찰한다.",
+      "check": "기호의 오른쪽 함수부터 적용했는지 표시한다."
+    },
+    {
+      "id": "m4-16-u3",
+      "title": "합성함수 식 구하기",
+      "targetSkills": [
+        "m4-16-skill-1"
+      ],
+      "explanation": "안쪽 함수식 전체를 바깥 함수의 입력 자리에 대입한다.",
+      "activity": "f(x)=x+1, g(x)=x²에서 g(f(x))를 단계별 치환한다.",
+      "check": "괄호를 보존해 g(f(x))의 식을 정리한다."
+    },
+    {
+      "id": "m4-16-u4",
+      "title": "합성 순서 비교",
+      "targetSkills": [
+        "m4-16-skill-2"
+      ],
+      "explanation": "함수 합성은 일반적으로 교환되지 않는다. g∘f와 f∘g를 각각 계산해 비교한다.",
+      "activity": "두 함수 상자 순서를 바꾸고 결과 카드를 비교한다.",
+      "check": "한 반례 입력으로 두 합성식이 다름을 설명한다."
+    },
+    {
+      "id": "m4-16-u5",
+      "title": "정의역 조건 결합",
+      "targetSkills": [
+        "m4-16-skill-2"
+      ],
+      "explanation": "안쪽 함수가 정의되고 출력이 바깥 함수의 정의역에 들어가야 한다.",
+      "activity": "분모 또는 제곱근 조건을 두 단계 함수에 차례로 적용한다.",
+      "check": "각 제한을 식으로 세워 교집합을 구한다."
+    },
+    {
+      "id": "m4-16-u6",
+      "title": "합성함수의 정의역과 검산",
+      "targetSkills": [
+        "m4-16-skill-2"
+      ],
+      "explanation": "계산된 합성식만 보고 안쪽 함수의 제한을 잃지 않도록 원래 단계로 확인한다.",
+      "activity": "후보 입력을 각 함수에 차례로 대입해 가능한지 확인한다.",
+      "check": "최종 정의역이 각 단계의 정의 조건을 모두 만족하는지 검산한다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m4-16-lab",
+      "kind": "math-lab",
+      "interaction": "함수 기계 연결",
+      "description": "f와 g의 규칙·정의역을 바꾸고 순서를 연결해 중간 출력, 합성식, 허용 입력을 표로 확인한다.",
+      "features": [
+        "조작 결과를 수식·문장·표로도 제공한다.",
+        "입력 범위와 제외 조건을 레이블로 명시한다.",
+        "키보드와 보조기술로 조작할 수 있는 컨트롤을 사용한다."
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "합성 기호를 오른쪽 함수부터 읽고 중간값을 기록",
+      "g∘f와 f∘g를 각각 구해 순서 차이를 확인",
+      "함수별 제한과 f(x)∈Dom(g)를 함께 사용해 합성 정의역을 구함"
+    ],
+    "assessment": "서로 다른 추론을 요구하는 연습 문항 초안 목표 6개다. 이 명세는 문항 또는 형성평가 인스턴스를 생성하지 않는다.",
+    "distinctReasoningRule": "숫자·이름만 바꾼 동일 추론은 별도 문제 원형으로 세지 않는다."
+  },
+  "assessmentCriteria": {
+    "legacy": {
+      "scoreThreshold": 80,
+      "skillThreshold": 70,
+      "evidence": "제안 단원 프리뷰는 기존 완료·숙달 기록에 영향을 주지 않는다.",
+      "blockIds": []
+    },
+    "extension": {
+      "scoreThreshold": 80,
+      "questionCount": 6,
+      "allAnswersBeforeFeedback": true,
+      "legacyCompletionUnaffected": true,
+      "criteria": [
+        "합성 기호를 오른쪽 함수부터 읽고 중간값을 기록",
+        "g∘f와 f∘g를 각각 구해 순서 차이를 확인",
+        "함수별 제한과 f(x)∈Dom(g)를 함께 사용해 합성 정의역을 구함"
+      ]
+    }
+  },
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "incorrectResetDays": 1,
+    "immediateRetryIndependent": false,
+    "delayedIndependentAfterHours": 24,
+    "existingSchedulePreserved": true,
+    "status": "draft-not-validated",
+    "retrieval": "오답은 합성함수의 해당 소단원으로 돌아간다. 간격을 두고 다른 표현의 문항으로 도움 없이 다시 확인한다. 간격 정책의 효과는 검증 전이다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "g∘f에서 g를 먼저 적용한다.",
+    "합성은 순서를 바꾸어도 항상 같다고 생각한다.",
+    "합성식만 정리하고 원래 두 함수의 정의역 제한을 잊는다.",
+    "f의 출력이 g의 입력 범위에 드는지 확인하지 않는다."
+  ],
+  "workedExample": {
+    "prompt": "f(x)=x+1 (x는 실수), g(u)=√u (u≥0)일 때 (g∘f)(x)와 정의역을 구하시오.",
+    "steps": [
+      "오른쪽의 f를 먼저 적용해 f(x)=x+1을 얻는다.",
+      "그 결과를 g에 넣으면 (g∘f)(x)=√(x+1)이다.",
+      "제곱근 안은 0 이상이어야 하므로 x+1≥0이다.",
+      "따라서 합성함수의 정의역은 x≥−1이다.",
+      "경계 x=−1을 넣으면 √0으로 정의되어 조건과 맞는다."
+    ],
+    "answer": "(g∘f)(x)=√(x+1), 정의역은 [−1,∞)이다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "humanPublicationApproval": false,
+    "scope": "Curriculum Architect author review plus a separate independent Curriculum AI review of learning goals, conditions/domains, worked examples, draft question answer keys and rationale, family distinction, metadata, and renderer consistency for development-preview handoff. This does not constitute human content review or publication approval.",
+    "sourceVerification": "Proposal metadata was checked against repository data. Research checked official curriculum/CSAT context sources, but annex text and item-level official achievement-standard or CSAT mapping remain unverified; officialStandards is intentionally empty.",
+    "reviewerRole": "Curriculum Architect; separately reviewed by independent Curriculum reviewer"
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

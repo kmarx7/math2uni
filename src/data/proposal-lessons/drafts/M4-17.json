@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-17",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "일대일 대응 여부와 정의역을 확인해 역함수가 함수로 존재하는 범위를 판단한다. 역함수의 식과 정의역·치역을 서로 바꾸고 그래프가 y=x에 대해 대칭임을 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-17-readiness-1: M4-16: 합성함수와 함수의 정의역·치역을 해석한다. m4-17-readiness-2: M4-08: 그래프의 대칭이동과 직선 y=x의 반사를 시각적으로 해석한다. 이 진단은 준비 안내용이며 숙달도나 완료 점수에 자동 반영하지 않는다. 필요한 기초는 이 단원에서 다시 안내한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-17-u1",
+          "title": "입출력 뒤집기와 역관계",
+          "body": "역관계는 각 순서쌍 (x,y)를 (y,x)로 바꾼 관계다. 역관계가 함수인지 별도로 확인한다.",
+          "activity": "화살표의 방향을 거꾸로 뒤집고 입력별 출력 개수를 센다.",
+          "check": "뒤집은 관계에서 한 입력에 출력이 하나인지 점검한다."
+        },
+        {
+          "id": "m4-17-u2",
+          "title": "일대일 함수",
+          "body": "서로 다른 두 입력이 같은 출력으로 가지 않으면 일대일이다. 일대일이면 역관계는 함수가 된다.",
+          "activity": "입력 두 개의 출력이 겹치는지 화살표와 표로 비교한다.",
+          "check": "수평선 검사를 사용할 때 그래프의 모든 높이에서 교점 수를 확인한다."
+        },
+        {
+          "id": "m4-17-u3",
+          "title": "정의역 제한으로 일대일 만들기",
+          "body": "원래 함수가 전체 정의역에서 일대일이 아니면 적절한 정의역 제한이 역함수의 존재를 가능하게 할 수 있다.",
+          "activity": "y=x²의 정의역 전체와 x≥0 제한에서 출력 중복을 비교한다.",
+          "check": "역함수 존재 판단이 정의역에 따라 달라짐을 말한다."
+        },
+        {
+          "id": "m4-17-u4",
+          "title": "역함수의 식 구하기",
+          "body": "y=f(x)에서 x와 y의 역할을 바꾸고 y에 대해 풀어 역함수 식을 얻는다.",
+          "activity": "f(x)=2x+1을 좌표쌍과 대수식으로 뒤집는다.",
+          "check": "구한 식을 원래 함수에 다시 넣어 합성이 x가 되는지 확인한다."
+        },
+        {
+          "id": "m4-17-u5",
+          "title": "정의역과 치역 바꾸기",
+          "body": "역함수의 정의역은 원래 함수의 치역이고 역함수의 치역은 원래 정의역이다.",
+          "activity": "정의역 [0,∞)인 x²의 값 범위와 역함수 √x의 범위를 나란히 쓴다.",
+          "check": "정의역·치역 표기를 서로 바꾸되 실제 값 범위가 맞는지 확인한다."
+        },
+        {
+          "id": "m4-17-u6",
+          "title": "그래프와 y=x 대칭",
+          "body": "원함수 그래프의 점 (a,b)는 역함수 그래프의 점 (b,a)가 된다.",
+          "activity": "두 그래프를 y=x 선에 대해 접어 대응점을 비교한다.",
+          "check": "서로 대응하는 점의 좌표가 뒤바뀌는지 검산한다."
+        }
+      ],
+      "body": "작은 수와 표로 규칙을 살펴본 뒤 말과 기호로 설명하고, 정의역과 조건을 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "대각선 대칭 그래프 (미리보기 대응: condition-map)",
+      "interaction": "condition-map",
+      "description": "명세의 m4-17-lab 상호작용을 현재 콘텐츠 계약의 condition-map으로 임시 연결한다. 유한 대응과 일대일 여부를 뒤집고, 일대일 정의역 제한·역함수 그래프의 y=x 대칭을 확인한다. 이 JSON은 연구 초안이며 완성된 실험실 구현이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "y=2x+3에서 x와 y를 바꾸면 x=2y+3이다.",
+        "y에 대해 풀면 y=(x−3)/2이므로 f⁻¹(x)=(x−3)/2다.",
+        "f(f⁻¹(x))=2((x−3)/2)+3=x로 검산한다.",
+        "원래 함수와 역함수의 정의역·치역은 서로 맞바뀐다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안입니다. 사람 검수 전에는 운영 서비스에 공개되지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "조건, 정의역 또는 적용 순서를 어디에서 놓쳤는지 확인하고 해당 소단원으로 돌아간다. 오개념 설명은 실증된 빈도가 아닌 검토할 설계 가설이다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "다른 함수식과 입력으로 핵심 절차를 도움 없이 다시 확인한다. 제안된 간격 반복 정책의 효과는 검증 전이다."
+    }
+  ]
+}

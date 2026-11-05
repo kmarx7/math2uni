@@ -2,7 +2,7 @@
 
 ## 2026-11-03 현재 진행 상태
 
-Math 90 제안 경로 v0.3.0의 내부 배분 결정은 완료했다. LEVEL 수량은 `12/14/18/22/24/20/22/18/20`이며 기존 ID와 역사적 `Unit.level/order`를 보존한다. 기존 LEVEL 0 12개 외에 M1-01~20, M2-01~20, M3-01~22, M4-01~13의 제안 단원 75개가 개발 프리뷰에 연결됐다. 다음 묶음은 M4-14~18이다. 경로는 여전히 proposed이며 공식 성취기준 검증·전문가 검수·사람 게시 승인은 완료되지 않았다. 최신 배치 QA는 `docs/reviews/NEXT_STEP/M4-09-M4-13-batch-qa.md`에서 확인한다. 전체 E2E는 테스트 서버가 `127.0.0.1:54329`에 bind하는 단계에서 `EPERM`으로 시작하지 못해 미검증이다.
+Math 90 제안 경로 v0.3.0의 내부 배분 결정은 완료했다. LEVEL 수량은 `12/14/18/22/24/20/22/18/20`이며 기존 ID와 역사적 `Unit.level/order`를 보존한다. 기존 LEVEL 0 12개 외에 M1-01~20, M2-01~20, M3-01~22, M4-01~18의 제안 단원 80개가 개발 프리뷰에 연결됐다. 다음 묶음 후보는 M4-19~20과 M5-01~03이다. 경로는 여전히 proposed이며 공식 성취기준 검증·전문가 검수·사람 게시 승인은 완료되지 않았다. 최신 배치 QA는 `docs/reviews/NEXT_STEP/M4-14-M4-18-batch-qa.md`에서 확인한다. 전체 E2E는 테스트 서버가 `127.0.0.1:54329`에 bind하는 단계에서 `EPERM`으로 시작하지 못해 미검증이다.
 
 ## 현재 구조와 실행 상태
 
@@ -73,3 +73,10 @@ Curriculum Architect 소유 명세는 `docs/specifications/NEXT_BATCH/M1-xx/less
 ## 2026-11-04 · M4-09~M4-13 개발 프리뷰 인계 완료
 
 Curriculum review가 다섯 단원의 수업/청사진 정합성 및 문항 검토를 거쳐 `implementation-ready`를 판정했다. Research는 30개 문항 초안과 verification 상태를 인계했고, Developer & QA는 전용 labs·서버 전용 문제 변환·preview manifest·lesson registry·단원 진도 격리와 테스트를 구현했다. M4-10과 M4-13의 수정 이력은 독립 검토 기록에 남아 있으며, 현재 모든 문항은 draft / `humanVerified:false`; 평가 0개, 게시 0개다. 전체 unit tests 154개와 content validate 19개, lint/typecheck/build 통과. E2E는 환경의 54329 bind EPERM으로 실행 전 차단이다. 이 검토는 사람 게시 승인이 아니며 `approved-content.json`은 null이다.
+
+
+## 2026-11-05 · M4-14~M4-18 개발 프리뷰 인계 완료
+
+Curriculum Architect가 명세 독립 검토를 거쳐 다섯 단원을 implementation-ready로 인계하고, Research & Content가 공식자료 확인 상태와 30개 practice draft 및 verification 기록을 제공했다. 별도 Curriculum 검토는 M4-14~15 12문항, M4-16~18 18문항을 재계산했다. Developer & QA는 다섯 실험실, server-only 문제 변환, lesson/preview registry, 단원별 진도 격리와 단위/E2E 테스트 스펙을 추가했다. M4-18 M1-03은 제안 선수 메타데이터에 남아 있으나 실제 학습에서 강제 게이트로 쓰지 않는다.
+
+모든 새 문항은 draft 및 humanVerified=false, 평가 0개, 사람 게시 승인 0개다. lint/typecheck, Vitest 160개, content:validate 19개, build와 diff-check 통과. E2E는 테스트 서버의 127.0.0.1:54329 bind가 EPERM으로 시작 전 차단됐다. 상세 QA는 `docs/reviews/NEXT_STEP/M4-14-M4-18-batch-qa.md`; unit별 승인 대기 파일은 `docs/reviews/NEXT_BATCH/M4-14..18/`이다.

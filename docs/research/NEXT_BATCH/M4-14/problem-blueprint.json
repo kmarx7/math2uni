@@ -1,0 +1,319 @@
+{
+  "unitId": "M4-14",
+  "unitTitle": "절대부등식 기초",
+  "families": [
+    {
+      "id": "mm4-14-family-1",
+      "status": "draft",
+      "title": "실수 제곱의 부호와 영점",
+      "reasoningStructure": "실수의 부호와 무관하게 제곱이 비음수임을 판단하고 영점 조건을 구별한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-14-skill-1",
+      "distinctFrom": "제곱의 부호·영점 정의를 직접 확인하며 AM-GM은 사용하지 않는다.",
+      "items": [
+        {
+          "id": "m14p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "모든 실수 x에 대해 항상 참인 설명은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "실수 x의 제곱은 x의 부호와 관계없이 0 이상이다. x²=0은 x=0일 때만 성립한다.",
+          "skillLabel": "m4-14-skill-1",
+          "misconceptionHypothesis": "음수의 제곱도 음수라고 생각할 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x가 음수이면 x²도 음수다."
+            },
+            {
+              "id": "B",
+              "label": "x²≥0이고, x²=0이면 x=0이다."
+            },
+            {
+              "id": "C",
+              "label": "x²은 항상 양수이므로 0이 될 수 없다."
+            }
+          ]
+        },
+        {
+          "id": "m14p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x²=0을 만족하는 실수 x는 무엇인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "실수의 제곱은 0 이상이며 제곱값이 0이 되는 수는 0뿐이다.",
+          "skillLabel": "m4-14-skill-1",
+          "misconceptionHypothesis": "비음수와 양수를 같은 뜻으로 읽어 0을 빠뜨릴 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x=0"
+            },
+            {
+              "id": "B",
+              "label": "x=1 또는 x=−1"
+            },
+            {
+              "id": "C",
+              "label": "모든 실수 x"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-14-family-2",
+      "status": "draft",
+      "title": "차의 제곱으로 부등식 정당화",
+      "reasoningStructure": "(x−y)²≥0을 전개해 두 제곱의 합과 곱 사이의 관계를 얻고 수치 사례로 확인한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-14-skill-1",
+      "distinctFrom": "제곱의 비음성을 다루되 AM-GM의 제곱근 조건을 적용하지 않는다.",
+      "items": [
+        {
+          "id": "m14p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(x−y)²≥0을 전개해 얻는 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "(x−y)²=x²−2xy+y²≥0이므로 x²+y²≥2xy이다.",
+          "skillLabel": "m4-14-skill-1",
+          "misconceptionHypothesis": "전개 뒤 항을 옮길 때 부등호 방향을 임의로 바꿀 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x²+y²≤2xy"
+            },
+            {
+              "id": "B",
+              "label": "x²+y²≥−2xy"
+            },
+            {
+              "id": "C",
+              "label": "x²+y²≥2xy"
+            }
+          ]
+        },
+        {
+          "id": "m14p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x=3, y=−2일 때 x²+y²−2xy의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x²+y²−2xy=(x−y)²이므로 (3−(−2))²=5²=25이다.",
+          "skillLabel": "m4-14-skill-1",
+          "misconceptionHypothesis": "음수 y를 대입할 때 −2xy의 부호를 잘못 처리할 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1"
+            },
+            {
+              "id": "B",
+              "label": "25"
+            },
+            {
+              "id": "C",
+              "label": "13"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-14-family-3",
+      "status": "draft",
+      "title": "AM-GM 적용 조건과 등호·최적화",
+      "reasoningStructure": "a,b≥0 조건에서 산술·기하평균 관계를 적용하고 등호 조건을 최적값 판단에 연결한다.",
+      "thinkingType": "실생활 응용",
+      "skillId": "m4-14-skill-2",
+      "distinctFrom": "다항식 제곱 관계를 전개하는 대신 두 비음수 수의 평균·곱과 등호 가능성을 판단한다.",
+      "items": [
+        {
+          "id": "m14p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "a=4, b=16일 때 (a+b)/2와 √(ab)의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "a,b≥0이므로 AM-GM을 적용할 수 있다. (4+16)/2=10, √64=8이므로 부등식은 엄격하며 등호는 아니다.",
+          "skillLabel": "m4-14-skill-2",
+          "misconceptionHypothesis": "AM-GM에서 비음수 조건과 등호 조건을 확인하지 않을 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "10>8이며 등호가 아니다."
+            },
+            {
+              "id": "B",
+              "label": "10=8이므로 등호다."
+            },
+            {
+              "id": "C",
+              "label": "a 또는 b가 양수라서 이 부등식을 적용할 수 없다."
+            }
+          ]
+        },
+        {
+          "id": "m14p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "두 비음수 수 a,b의 합이 12로 고정될 때 ab의 최댓값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "AM-GM으로 ab≤((a+b)/2)²=6²=36이다. a=b=6에서 등호가 실제로 성립하므로 최댓값은 36이다.",
+          "skillLabel": "m4-14-skill-2",
+          "misconceptionHypothesis": "상한만 구하고 그 값이 조건을 만족하는 경우에 달성되는지 확인하지 않을 수 있다는 설계 가설입니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "24"
+            },
+            {
+              "id": "B",
+              "label": "30"
+            },
+            {
+              "id": "C",
+              "label": "36"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "schemaVersion": "1",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "서로 다른 사고 구조 세 가지마다 연습 초안 두 개씩을 둔다. 형성평가 문항은 만들지 않았으며 필수 학습량과 전체 은행 수량은 별도 관리한다."
+  },
+  "sourceStatus": "공식 자료는 교육과정/수능 배경과 문서 위치만 확인; 개별 성취기준 매핑과 단원별 실증 교수법 근거 미검증. 모든 문항은 자체 제작 초안이며 제3자 문항을 복제하지 않음."
+}

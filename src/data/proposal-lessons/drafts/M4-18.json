@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-18",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "유리함수 y=a/(x−p)+q에서 분모가 0이 되는 x를 제외해 정의역을 정한다. 기본 그래프 1/x의 점근선과 평행이동·늘임이 그래프 및 점근선에 미치는 변화를 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-18-readiness-1: M4-15: 함수의 입력·출력과 정의역 개념을 사용한다. m4-18-readiness-2: M4-07: 좌표평면에서 평행이동과 좌표 변화를 확인한다. m4-18-readiness-3: M1-03은 제안 경로 메타데이터상 선수 단원으로 유지한다. 유리수 계산은 함수값 대입에 유용하지만 모든 유리함수 정의의 필수 조건이라고 단정하지 않는다. 선택 진단으로 분수 계산을 확인하고 필요하면 이 단원 안에서 보충하며, 숙달을 진입 조건으로 강제하지 않는다. 이 진단은 준비 안내용이며 숙달도나 완료 점수에 자동 반영하지 않는다. 필요한 기초는 이 단원에서 다시 안내한다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-18-u1",
+          "title": "기본 역비례 함수",
+          "body": "y=1/x는 x가 0이 아닌 실수에서 정의되며 x의 부호에 따라 그래프가 두 영역에 놓인다.",
+          "activity": "x에 작은 음수·양수와 큰 절댓값 값을 넣어 표와 점을 비교한다.",
+          "check": "x=0은 입력할 수 없고 함수값의 부호가 x와 같음을 확인한다."
+        },
+        {
+          "id": "m4-18-u2",
+          "title": "분모와 정의역",
+          "body": "분모가 0이면 함수값이 정의되지 않는다. 유리함수의 정의역은 분모가 0이 아닌 입력으로 제한한다.",
+          "activity": "x=−2부터 2까지 값을 대입하되 x=0 칸은 정의되지 않음으로 표시한다.",
+          "check": "정의역을 식의 분모 조건에서 직접 구한다."
+        },
+        {
+          "id": "m4-18-u3",
+          "title": "함수값 표와 그래프 가지",
+          "body": "표의 점은 x=0을 가로질러 연결되지 않는다. 음수·양수 입력에서 별도의 가지가 생긴다.",
+          "activity": "정의된 입력값만 좌표평면에 놓고 연결 모양을 추적한다.",
+          "check": "정의되지 않은 점을 그래프에 채워 넣지 않고 두 가지를 구분한다."
+        },
+        {
+          "id": "m4-18-u4",
+          "title": "점근선의 의미",
+          "body": "기본형의 그래프는 x=0과 y=0에 가까워지지만 그 기준선에 닿지 않는다.",
+          "activity": "입력의 크기를 0에 가깝게 또는 크게 움직여 그래프와 축의 거리를 살핀다.",
+          "check": "수직·수평 점근선을 각각 식과 그래프에서 찾는다."
+        },
+        {
+          "id": "m4-18-u5",
+          "title": "계수에 따른 그래프 변화",
+          "body": "a의 부호는 가지의 위치를 바꾸고 |a|는 기준점근선에서 떨어지는 정도를 바꾼다.",
+          "activity": "a를 양수·음수로 바꾸고 같은 x에서 함수값을 비교한다.",
+          "check": "a≠0 조건과 그래프 위치 변화를 구분한다."
+        },
+        {
+          "id": "m4-18-u6",
+          "title": "평행이동과 점근선 이동",
+          "body": "y=a/(x−p)+q는 기본 그래프의 점근선을 x=p, y=q로 옮긴다.",
+          "activity": "p,q를 각각 바꾸어 중심처럼 보이는 교차 기준과 점근선을 함께 이동한다.",
+          "check": "정의역 x≠p, 치역 y≠q와 두 점근선을 한 번에 정리한다."
+        }
+      ],
+      "body": "작은 수와 표로 규칙을 살펴본 뒤 말과 기호로 설명하고, 정의역과 조건을 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "쌍곡선과 점근선 (미리보기 대응: condition-map)",
+      "interaction": "condition-map",
+      "description": "명세의 m4-18-lab 상호작용을 현재 콘텐츠 계약의 condition-map으로 임시 연결한다. a,p,q를 안전한 제한 범위에서 조정하고 분모 제외점, 함수값 표, 두 점근선, 그래프의 이동을 함께 확인한다. 이 JSON은 연구 초안이며 완성된 실험실 구현이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "분모 x−1이 0인 x=1은 정의역에서 제외한다.",
+        "2/(x−1)은 0이 될 수 없으므로 함수값은 3이 될 수 없다.",
+        "따라서 정의역은 x≠1, 치역은 y≠3이다.",
+        "수직 점근선은 x=1이고 수평 점근선은 y=3이다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안입니다. 사람 검수 전에는 운영 서비스에 공개되지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "조건, 정의역 또는 적용 순서를 어디에서 놓쳤는지 확인하고 해당 소단원으로 돌아간다. 오개념 설명은 실증된 빈도가 아닌 검토할 설계 가설이다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "다른 함수식과 입력으로 핵심 절차를 도움 없이 다시 확인한다. 제안된 간격 반복 정책의 효과는 검증 전이다."
+    }
+  ]
+}

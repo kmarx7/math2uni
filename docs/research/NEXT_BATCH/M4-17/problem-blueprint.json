@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-17",
+  "unitTitle": "역함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "mm4-17-family-1",
+      "status": "draft",
+      "title": "역관계가 함수인지 일대일 조건으로 판별",
+      "reasoningStructure": "순서쌍을 뒤집은 역관계에서 한 입력에 출력이 하나씩만 연결되는지 확인한다.",
+      "thinkingType": "개념 이해",
+      "skillId": "m4-17-skill-1",
+      "distinctFrom": "원래 함수 여부가 아니라 뒤집은 관계가 함수가 되는지 판별한다.",
+      "items": [
+        {
+          "id": "m17p01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“정의역 {1,2,3}에서 f(1)=a, f(2)=a, f(3)=b이다. 역관계가 함수가 아닌 이유는?”",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "역관계에서는 입력 a가 1과 2 두 값으로 연결되므로 역관계는 함수가 아니다.",
+          "skillLabel": "m4-17-skill-1",
+          "misconceptionHypothesis": "원래 관계가 함수이면 그 역도 항상 함수라고 생각할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "원래 f가 함수이므로 역도 반드시 함수다."
+            },
+            {
+              "id": "B",
+              "label": "역관계에서 입력 1이 두 출력에 연결된다."
+            },
+            {
+              "id": "C",
+              "label": "역관계에서 입력 a가 출력 1과 2 두 개에 연결된다."
+            }
+          ]
+        },
+        {
+          "id": "m17p02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=x²의 정의역이 R일 때 역함수는 함수인가? x≥0으로 제한하면?”",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "정의역 R에서 1과 −1이 모두 1로 가므로 역관계의 입력 1은 출력 두 개를 갖는다. 정의역을 [0,∞)로 제한하면 각 제곱값마다 원래 입력이 하나여서 역함수가 함수가 된다.",
+          "skillLabel": "m4-17-skill-1",
+          "misconceptionHypothesis": "일대일 여부는 함수의 정의역과 관계없이 고정된다고 생각할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "R에서 함수이고 제한하면 아니다."
+            },
+            {
+              "id": "B",
+              "label": "R에서는 함수가 아니며 [0,∞)로 제한하면 함수다."
+            },
+            {
+              "id": "C",
+              "label": "두 경우 모두 함수다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-17-family-2",
+      "status": "draft",
+      "title": "역함수 식과 정의역·치역 교환",
+      "reasoningStructure": "역함수의 식을 구하고 원함수의 치역이 역함수의 정의역이 되는지 확인한다.",
+      "thinkingType": "단계별 풀이",
+      "skillId": "m4-17-skill-2",
+      "distinctFrom": "함수 여부를 판별하는 앞 원형과 달리 식과 정의역·치역을 계산한다.",
+      "items": [
+        {
+          "id": "m17p03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=3x−6 (정의역 R)의 역함수는?”",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "y=3x−6에서 x와 y를 바꿔 x=3y−6으로 놓는다. y에 대해 풀면 3y=x+6, y=(x+6)/3이므로 f⁻¹(x)=(x+6)/3이다.",
+          "skillLabel": "m4-17-skill-2",
+          "misconceptionHypothesis": "역함수 식을 구할 때 x와 y를 바꾸는 절차나 일차식의 역산을 놓칠 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3x+6"
+            },
+            {
+              "id": "B",
+              "label": "(x+6)/3"
+            },
+            {
+              "id": "C",
+              "label": "1/(3x−6)"
+            }
+          ]
+        },
+        {
+          "id": "m17p04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "“f(x)=x²+1, 정의역 [0,∞)”의 역함수 f⁻¹(x)=√(x−1)의 정의역과 치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "원함수의 정의역은 [0,∞), 치역은 [1,∞)다. 역함수는 이 두 집합을 맞바꾸므로 정의역은 [1,∞), 치역은 [0,∞)다. 식도 y=x²+1에서 x≥0인 가지를 풀어 f⁻¹(x)=√(x−1)이다.",
+          "skillLabel": "m4-17-skill-2",
+          "misconceptionHypothesis": "역함수의 정의역과 치역을 원함수와 같은 순서로 두거나, 역함수 식의 제곱근 정의역을 확인하지 않을 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "정의역 [0,∞), 치역 [1,∞)"
+            },
+            {
+              "id": "B",
+              "label": "정의역 [1,∞), 치역 [0,∞)"
+            },
+            {
+              "id": "C",
+              "label": "정의역 R, 치역 [0,∞)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "mm4-17-family-3",
+      "status": "draft",
+      "title": "합성 검산과 그래프 좌표 뒤집기",
+      "reasoningStructure": "합성으로 역관계를 확인하고 원함수의 좌표 (a,b)가 역함수에서 (b,a)로 바뀌는 것을 판별한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-17-skill-2",
+      "distinctFrom": "식의 역산이 아닌 대응쌍과 그래프의 대칭 관계를 활용한다.",
+      "items": [
+        {
+          "id": "m17p05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“f(x)=2x+1, f⁻¹(x)=(x−1)/2일 때 f⁻¹(f(3))은?”",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "f(3)=7이고 f⁻¹(7)=3이므로 f⁻¹(f(3))=3이다.",
+          "skillLabel": "m4-17-skill-2",
+          "misconceptionHypothesis": "역함수 합성은 항상 0이나 1이 된다고 생각할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3"
+            },
+            {
+              "id": "B",
+              "label": "7"
+            },
+            {
+              "id": "C",
+              "label": "1"
+            }
+          ]
+        },
+        {
+          "id": "m17p06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "“점 (2,5)가 y=f(x)의 그래프 위에 있을 때 역함수 그래프의 대응점은?”",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "원함수 그래프의 (2,5)는 좌표를 뒤집어 역함수 그래프의 (5,2)에 대응한다. 이는 y=x 대칭이다.",
+          "skillLabel": "m4-17-skill-2",
+          "misconceptionHypothesis": "역함수 그래프에서 좌표를 뒤집지 않고 부호나 값만 바꿀 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author hand calculation and self-check",
+            "result": "author self-check plus independent Curriculum AI answer-key review completed (6/6); human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(−2,−5)"
+            },
+            {
+              "id": "B",
+              "label": "(5,2)"
+            },
+            {
+              "id": "C",
+              "label": "(2,5)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "세 가지 사고 구조별 연습 초안을 두 개씩 둔다. 필수 연습량과 전체 문제은행 크기는 별도이며 형성평가 인스턴스는 만들지 않았다."
+  },
+  "sourceStatus": "공식 교육과정 문서 위치 및 정책 배경 확인만 완료; 원문·개별 성취기준/수능 매핑 미검증. 교수법·오개념은 직접 연구 근거가 아닌 설계 가설. 자체 제작 연습 초안이며 제3자 문항을 복제하지 않음."
+}

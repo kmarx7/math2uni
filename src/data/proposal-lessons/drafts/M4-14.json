@@ -1,0 +1,203 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-14",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "실수 a의 제곱이 음수가 될 수 없음을 수직선·넓이·제곱 정의로 설명한다. a,b≥0에서 산술·기하평균 부등식 (a+b)/2≥√(ab)를 조건과 등호 성립 조건을 포함해 적용한다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "m4-14-readiness-1: M4-13: 증명에서 가정·정의·결론을 구별한다. m4-14-readiness-2: M2-08: 제곱근을 음이 아닌 수로 해석하고 제곱과 근호의 관계를 확인한다. 이 진단은 준비 안내용이며 단원 진입이나 완료 점수에 자동 반영하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-14-u1",
+          "title": "실수 제곱의 부호",
+          "body": "실수의 제곱은 0 이상이다. 양수·음수 어느 쪽을 제곱해도 부호가 음수가 되지 않는다.",
+          "activity": "수직선에서 x와 −x의 위치를 바꾸어도 제곱값이 같은지 비교한다.",
+          "check": "음수의 제곱과 음수 자체를 구분해 x²≥0을 말한다."
+        },
+        {
+          "id": "m4-14-u2",
+          "title": "제곱의 크기와 0",
+          "body": "x²=0이면 x=0이고, x≠0이면 x²>0이다.",
+          "activity": "x를 −3부터 3까지 움직이며 x²의 표와 점을 비교한다.",
+          "check": "제곱값이 0인 경우와 양수인 경우를 분류한다."
+        },
+        {
+          "id": "m4-14-u3",
+          "title": "두 수의 제곱과 부등식",
+          "body": "(x−y)²≥0을 전개하면 x²+y²≥2xy를 얻는다. 이 관계는 모든 실수 x,y에 성립한다.",
+          "activity": "(x−y)²의 값과 x²+y²−2xy의 값을 같은 입력으로 확인한다.",
+          "check": "전개 과정에서 부등호 방향이 바뀌지 않는 이유를 제곱의 비음성과 연결한다."
+        },
+        {
+          "id": "m4-14-u4",
+          "title": "비음수 두 수의 산술·기하평균 관계",
+          "body": "a,b≥0일 때 두 수의 산술평균은 기하평균보다 작지 않다.",
+          "activity": "a,b를 바꾸고 (√a−√b)²의 넓이·값을 비교한다.",
+          "check": "a,b≥0 조건을 먼저 적고 평균 부등식을 표현한다."
+        },
+        {
+          "id": "m4-14-u5",
+          "title": "등호가 성립하는 조건",
+          "body": "(a+b)/2=√ab가 되는 것은 a=b일 때다. 등호 조건은 최솟값·최댓값 결론에 필요하다.",
+          "activity": "a+b를 고정하고 a,b가 같아질 때 곱 ab가 어떻게 변하는지 표로 본다.",
+          "check": "계산 결과와 별도로 등호가 가능한 값을 확인한다."
+        },
+        {
+          "id": "m4-14-u6",
+          "title": "합과 곱의 간단한 최적화",
+          "body": "비음수 두 수의 합이 고정되면 곱은 두 수가 같을 때 가장 크다. 조건과 등호를 함께 검토한다.",
+          "activity": "고정된 합 10을 여러 쌍으로 나누어 곱을 비교한다.",
+          "check": "변수의 허용 범위, AM-GM 적용, 등호가 가능한 사례를 순서대로 제시한다."
+        }
+      ],
+      "body": "조건과 범위를 먼저 확인하고, 말·기호·표·그림 사이를 옮겨 계산과 해석을 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "두 양의 합과 곱 (미리보기 대응: inequality)",
+      "interaction": "inequality",
+      "description": "명세 m4-14-lab의 임시 공통 interaction enum 대응이다. a,b의 값을 제한 범위에서 움직이고 평균·곱·등호가 되는 조건을 수치표와 제곱 차이로 비교한다. 전용 조작은 별도 구현·QA 전이며 초안의 표현은 완성 인터랙션을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "a,b≥0일 때 a+b≥2√(ab)를 보이고 등호 조건을 말하시오.",
+        "a,b≥0이므로 √a와 √b는 실수다.",
+        "제곱은 음수가 아니므로 (√a−√b)²≥0이다.",
+        "전개하면 a+b−2√(ab)≥0이므로 a+b≥2√(ab)이다.",
+        "좌변과 우변이 같으려면 (√a−√b)²=0이어야 한다.",
+        "따라서 √a=√b, 즉 a=b일 때 등호가 성립한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "문항은 자체 제작한 연구용 초안이에요. 사람 검수 전에는 운영 서비스에 공개되지 않아요."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "조건·정의역·출력 개수 또는 등호 조건 중 놓친 근거를 찾아 해당 소단원으로 돌아가요. 오개념 후보는 실증된 빈도 결과가 아니라 확인할 설계 가설입니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "제안된 1일·3일·7일 복습 간격의 효과는 검증 전입니다. 다른 표현의 문항으로 도움 없이 다시 확인한 뒤 다음 단원으로 이어가요."
+    }
+  ]
+}
