@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-19",
+  "unitTitle": "무리함수",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-19-family-1",
+      "status": "draft",
+      "title": "근호 안 부등식을 풀어 정의역을 구간 또는 구간 합집합으로 표현",
+      "reasoningStructure": "근호 안 부등식을 풀어 정의역을 구간 또는 구간 합집합으로 표현",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-19-skill-1",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m419-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "√(7−2x)가 실수로 정의되는 x의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "7−2x≥0이므로 x≤7/2이다.",
+          "skillLabel": "m4-19-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≥7/2"
+            },
+            {
+              "id": "B",
+              "label": "x≤7/2"
+            },
+            {
+              "id": "C",
+              "label": "x≠7/2"
+            }
+          ]
+        },
+        {
+          "id": "m419-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "√((x−2)(x+1))의 정의역은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "곱이 0 이상인 구간은 두 근 바깥이며 경계도 포함한다.",
+          "skillLabel": "m4-19-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1≤x≤2"
+            },
+            {
+              "id": "B",
+              "label": "x<−1 또는 x>2"
+            },
+            {
+              "id": "C",
+              "label": "x≤−1 또는 x≥2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-19-family-2",
+      "status": "draft",
+      "title": "그래프 이동으로 정의역·치역을 구하고 특정 입력의 함수값을 판단",
+      "reasoningStructure": "이동된 근호함수에서 정의역·치역과 특정 입력의 출력값을 구하고, 역함수의 일대일 조건과 정의역·치역 교환을 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-19-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m419-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "f(x)=√(x+3)−2의 정의역과 치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "x+3≥0이며 제곱근 값은 0 이상이므로 y≥−2이다.",
+          "skillLabel": "m4-19-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≥−3, y≥−2"
+            },
+            {
+              "id": "B",
+              "label": "x≥3, y≥2"
+            },
+            {
+              "id": "C",
+              "label": "x≤−3, y≤−2"
+            }
+          ]
+        },
+        {
+          "id": "m419-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "f(x)=√(2x−1)+1일 때 정의역·치역과 f(5)를 모두 고르면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "2x−1≥0이므로 정의역은 x≥1/2이다. 제곱근은 0 이상이므로 치역은 y≥1이고, f(5)=√9+1=4이다.",
+          "skillLabel": "m4-19-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3"
+            },
+            {
+              "id": "B",
+              "label": "정의역 x≥1/2, 치역 y≥1, f(5)=4"
+            },
+            {
+              "id": "C",
+              "label": "정의역 x≥1/2, 치역 y≥1, f(5)=3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-19-family-3",
+      "status": "draft",
+      "title": "정의역 제한을 선택하고 역함수의 식·정의역·치역을 함께 구함",
+      "reasoningStructure": "정의역 제한을 선택하고 역함수의 식·정의역·치역을 함께 구함",
+      "thinkingType": "조건 분석",
+      "skillId": "m4-19-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m419-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "g(x)=x²의 정의역을 [0,∞)로 제한한다. 역함수의 식·정의역·치역은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "제한된 g는 일대일이고 역함수는 √x이다. 원함수 치역과 정의역을 바꾸면 역함수의 정의역과 치역은 모두 [0,∞)이다.",
+          "skillLabel": "m4-19-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "g⁻¹(x)=√x, 정의역 ℝ, 치역 [0,∞)"
+            },
+            {
+              "id": "B",
+              "label": "x² (x≤0)"
+            },
+            {
+              "id": "C",
+              "label": "g⁻¹(x)=√x, 정의역 [0,∞), 치역 [0,∞)"
+            }
+          ]
+        },
+        {
+          "id": "m419-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "f(x)=√(x−1)+2의 역함수 식·정의역·치역을 모두 고르면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "y−2=√(x−1)이므로 y≥2 조건을 보존하고 x와 y를 바꾸어 푼다. 역함수는 (x−2)²+1이며 정의역은 x≥2, 치역은 y≥1이다.",
+          "skillLabel": "m4-19-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "f⁻¹(x)=(x−2)²+1, 정의역 x≥2, 치역 y≥1"
+            },
+            {
+              "id": "B",
+              "label": "(x+2)²+1, x≥0"
+            },
+            {
+              "id": "C",
+              "label": "(x−2)²−1, x≥2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "Curriculum 명세의 세 가지 사고 원형 각각에 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 원문 개별 매핑 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-03",
+  "levelId": "LEVEL 5",
+  "title": "로그의 정의",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "로그와 지수의 관계",
+      "진수와 밑의 조건"
+    ],
+    "prerequisiteUnits": [
+      "M5-02",
+      "M4-17"
+    ],
+    "visualization": "지수와 로그 왕복"
+  },
+  "objectives": [
+    "로그를 지수방정식의 역관계로 정의하고 두 표현을 서로 변환한다.",
+    "로그의 밑·진수 조건과 밑에 따른 증가·감소 방향을 판별한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-03-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-02 선수 기능 진단: 양수 밑 실수 지수의 의미와 지수함수의 기본 대응을 진단한다."
+    },
+    {
+      "id": "m5-03-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M4-17 선수 기능 진단: 양수·1·0의 대소 관계와 역함수 그래프 대칭을 확인한다."
+    }
+  ],
+  "targetSkills": [
+    "m5-03-skill-1",
+    "m5-03-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "지수 질문을 역으로 읽기 → 로그 정의와 조건 확인 → 지수·로그 왕복 변환 → 밑의 두 범위 비교 → 역함수 그래프와 정의역·치역 확인",
+    "principleDerivation": "log_a x=y는 a^y=x와 같은 관계를 다른 방향에서 읽은 것이다. 실수 로그에서는 a>0, a≠1, x>0이 필요하다. a>1일 때 지수함수와 로그함수는 증가하고, 0<a<1일 때 둘 다 감소한다.",
+    "accessibility": "설명은 쉬운 한국어와 기호 읽기를 병기한다. 시각화에는 축·범위·대체 텍스트를 제공하고 모든 조작은 키보드로 가능하게 한다. 색만으로 정답 상태를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-03-u1",
+      "title": "지수 질문을 거꾸로 읽기",
+      "targetSkills": [
+        "m5-03-skill-1"
+      ],
+      "explanation": "밑 a를 몇 제곱해야 x가 되는지를 지수로 묻는다.",
+      "activity": "밑·지수·결과 색을 연결해 미지수 위치를 바꾼다.",
+      "check": "2³=8에서 log₂8=3이다."
+    },
+    {
+      "id": "m5-03-u2",
+      "title": "로그의 정의와 조건",
+      "targetSkills": [
+        "m5-03-skill-1"
+      ],
+      "explanation": "log_a x=y는 a>0, a≠1, x>0일 때 aʸ=x와 동치다.",
+      "activity": "허용 밑과 진수 카드를 조건 게이트에 넣는다.",
+      "check": "log₃9=2이고 log₁x는 허용 밑이 아니다."
+    },
+    {
+      "id": "m5-03-u3",
+      "title": "지수식과 로그식 변환",
+      "targetSkills": [
+        "m5-03-skill-1"
+      ],
+      "explanation": "세 요소 중 미지수인 위치를 보고 로그식과 지수식으로 전환한다.",
+      "activity": "동치 화살표 양방향 변환 연습을 한다.",
+      "check": "log₅(1/25)=−2는 5^(−2)=1/25와 같다."
+    },
+    {
+      "id": "m5-03-u4",
+      "title": "특별한 로그값",
+      "targetSkills": [
+        "m5-03-skill-2"
+      ],
+      "explanation": "양수 a≠1에서 log_a1=0, log_a a=1이다.",
+      "activity": "지수 0·1의 출력을 로그식으로 뒤집는다.",
+      "check": "log₇1=0, log₇7=1이다."
+    },
+    {
+      "id": "m5-03-u5",
+      "title": "밑 범위와 증가·감소",
+      "targetSkills": [
+        "m5-03-skill-2"
+      ],
+      "explanation": "a>1이면 증가하고 0<a<1이면 감소한다.",
+      "activity": "a>1과 0<a<1의 그래프·표에서 입력 순서와 출력 순서가 어떻게 대응하는지 비교한다. 로그 부등식을 풀거나 해집합을 구하지 않는다.",
+      "check": "각 밑 범위에서 입력 증가에 따른 로그값의 증가·감소를 비교하고, 로그 부등식 풀이로 확장하지 않는다."
+    },
+    {
+      "id": "m5-03-u6",
+      "title": "역함수 그래프와 범위",
+      "targetSkills": [
+        "m5-03-skill-2"
+      ],
+      "explanation": "로그와 같은 밑의 지수함수는 y=x 대칭이며 정의역·치역을 교환한다.",
+      "activity": "대칭선을 기준으로 대응점과 점근 경계를 표시한다.",
+      "check": "y=2ˣ의 역함수 y=log₂x는 x>0에서 정의된다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-03-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 입력 또는 조건 조절, 변경 결과의 텍스트 확인",
+      "description": "지수함수 점을 y=x에 반사해 로그 그래프를 만들고, 밑을 2에서 1/2로 바꾸어 증가가 감소로 바뀌는 것을 확인한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "주어진 지수 등식에서 로그 표현을 만들고 밑·진수 조건 검토",
+      "로그식과 지수식을 왕복 변환해 미지 지수 또는 진수를 구함",
+      "밑 a>1과 0<a<1에서 표·그래프의 단조성 및 대응값의 대소를 비교한다(로그 부등식 풀이·방향 전환은 범위 밖)."
+    ],
+    "draftPracticeGoals": [
+      "가족 1 초안 A: 주어진 지수 등식에서 로그 표현을 만들고 밑·진수 조건 검토 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 1 초안 B: 주어진 지수 등식에서 로그 표현을 만들고 밑·진수 조건 검토 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 2 초안 A: 로그식과 지수식을 왕복 변환해 미지 지수 또는 진수를 구함 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 2 초안 B: 로그식과 지수식을 왕복 변환해 미지 지수 또는 진수를 구함 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 3 초안 A: a>1과 0<a<1의 그래프에서 x가 증가할 때 로그값이 변하는 방향을 관찰한다.",
+      "가족 3 초안 B: 주어진 두 양수 입력의 순서를 각 밑 범위 그래프에서 로그 출력 순서로 비교한다. 부등식 풀이·해집합 결정은 요구하지 않는다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가용 기준만 기술하며 문항 제작·공개는 별도 검수 후 진행한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형으로 센다. 조건 해석, 표현 전환, 전략 선택 중 핵심 추론이 실질적으로 다를 때만 독립 원형이다."
+  },
+  "assessmentCriteria": [
+    "로그의 밑 조건 a>0 및 a≠1, 진수 x>0을 모두 검사했는가?",
+    "0<a<1일 때 감소와 순서 역전을 정확히 설명하는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형에 연결된 바로 앞 정의·조건을 짧게 재진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습으로 재호출한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "log_a x를 a·x로 해석함",
+    "진수 x=0 또는 음수를 허용함",
+    "0<a<1에서도 로그가 증가한다고 판단함",
+    "단조성 관찰만으로 다루는 범위를 넘어 로그 부등식을 풀기 시작함"
+  ],
+  "workedExample": {
+    "prompt": "log_(1/3)9=−2이다. 실제로 (1/3)^(−2)=9이며 밑은 0보다 크고 1과 다르고 진수 9는 양수다.",
+    "solution": "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+    "verification": "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Independent Curriculum Architect reviewer (M4-19-M5-03-independent-review.md)",
+    "reviewerIdentity": "independent-review role; named individual not recorded in the available handoff",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source, rights, and problem blueprint review is not yet present in this worktree",
+      "Developer independent mathematical QA",
+      "Human content approval before any publication"
+    ]
+  }
+}

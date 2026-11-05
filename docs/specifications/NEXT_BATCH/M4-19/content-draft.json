@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-19",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "sourceStatus": "self-authored draft; official unit mapping unverified",
+  "learningBlocks": [
+    {
+      "id": "m4-19-u1",
+      "type": "concept-draft",
+      "title": "근호식의 입력 조건",
+      "skillIds": [
+        "m4-19-skill-1"
+      ],
+      "explanation": "실수 제곱근의 근호 안은 0 이상이어야 한다.",
+      "activity": "근호 안을 수직선에 표시하고 허용 구간을 선택한다.",
+      "check": "√(x−3)의 정의역은 x≥3이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-19-u2",
+      "type": "concept-draft",
+      "title": "일차식 근호의 정의역",
+      "skillIds": [
+        "m4-19-skill-1"
+      ],
+      "explanation": "근호 안의 일차식을 0 이상으로 두어 경계를 찾는다.",
+      "activity": "계수를 바꾸며 경계와 허용 방향을 확인한다.",
+      "check": "√(5−2x)는 x≤5/2에서 정의된다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-19-u3",
+      "type": "concept-draft",
+      "title": "이차식 근호의 정의역",
+      "skillIds": [
+        "m4-19-skill-1"
+      ],
+      "explanation": "근호 안 이차식의 부호표로 허용 구간을 결정한다.",
+      "activity": "근의 위치와 포물선 부호를 연결한다.",
+      "check": "√((x−1)(x+2))의 정의역은 x≤−2 또는 x≥1이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-19-u4",
+      "type": "concept-draft",
+      "title": "기본 무리함수의 그래프",
+      "skillIds": [
+        "m4-19-skill-2"
+      ],
+      "explanation": "y=√x는 x≥0에서 시작해 증가하고 출력은 0 이상이다.",
+      "activity": "점표와 그래프 이동으로 기준점을 추적한다.",
+      "check": "y=√(x−2)+1은 x≥2, y≥1이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-19-u5",
+      "type": "concept-draft",
+      "title": "정의역 제한과 일대일 대응",
+      "skillIds": [
+        "m4-19-skill-2"
+      ],
+      "explanation": "역함수는 원래 대응이 일대일일 때 함수가 된다.",
+      "activity": "수평선 검사로 제한 구간별 일대일 여부를 확인한다.",
+      "check": "y=x²는 전체 실수에서 일대일이 아니지만 x≥0으로 제한하면 가능하다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-19-u6",
+      "type": "concept-draft",
+      "title": "무리함수의 역관계",
+      "skillIds": [
+        "m4-19-skill-2"
+      ],
+      "explanation": "x와 y를 바꾸어 풀고 기존 출력 범위를 새 정의역으로 유지한다.",
+      "activity": "그래프와 y=x 대칭 및 식 풀이 결과를 나란히 확인한다.",
+      "check": "y=√(x−2)+1의 역함수는 x≥1에서 y=(x−1)²+2이다.",
+      "status": "draft",
+      "humanVerified": false
+    }
+  ],
+  "practiceGoals": [
+    {
+      "id": "m4-19-goal-1",
+      "goal": "근호 안의 일차식 부등식을 풀고 경계값이 포함되는지 확인한다.",
+      "familyId": "m4-19-family-1",
+      "problemIds": [
+        "m419-draft-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-19-goal-2",
+      "goal": "이차식의 영점을 찾아 부호가 0 이상인 구간을 선택한다.",
+      "familyId": "m4-19-family-1",
+      "problemIds": [
+        "m419-draft-02"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-19-goal-3",
+      "goal": "이동된 근호함수에서 입력·출력 범위를 각각 구한다.",
+      "familyId": "m4-19-family-2",
+      "problemIds": [
+        "m419-draft-03"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-19-goal-4",
+      "goal": "정의역·치역을 구한 뒤 지정된 입력의 근호함수 값을 계산한다.",
+      "familyId": "m4-19-family-2",
+      "problemIds": [
+        "m419-draft-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-19-goal-5",
+      "goal": "정의역 제한으로 제곱함수의 일대일 대응을 회복하고 역함수의 식·정의역·치역을 확인한다.",
+      "familyId": "m4-19-family-3",
+      "problemIds": [
+        "m419-draft-05"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-19-goal-6",
+      "goal": "무리함수의 역함수를 구하고 원함수 치역이 역함수 정의역이 되는지 확인한다.",
+      "familyId": "m4-19-family-3",
+      "problemIds": [
+        "m419-draft-06"
+      ],
+      "status": "draft"
+    }
+  ],
+  "misconceptionHypotheses": [
+    "근호 안은 양수여야 한다고 생각해 0을 제외함",
+    "이차식 부호를 근 사이·밖에서 뒤집어 판단함",
+    "역함수에서 ±를 무조건 붙이거나 원래 정의역 제한을 잊음"
+  ],
+  "reviewNotes": [
+    "공식 성취기준 매핑은 원문 검토 전까지 비워 둔다.",
+    "AI/작성자 초안은 사람 검수 전 공개하지 않는다.",
+    "학습 경험적 오개념 빈도나 교수 효과를 주장하지 않는다."
+  ],
+  "sourceReferences": [
+    "moe-2022-curriculum-notice",
+    "ncic-math-curriculum-catalog",
+    "moe-2028-csat-framework",
+    "moe-2028-sample-question-guide",
+    "pedagogy-and-misconception-evidence-status",
+    "unit-scope-and-prerequisite-design-note"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M4-20",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "sourceStatus": "self-authored draft; official unit mapping unverified",
+  "learningBlocks": [
+    {
+      "id": "m4-20-u1",
+      "type": "concept-draft",
+      "title": "점과 좌표 조건",
+      "skillIds": [
+        "m4-20-skill-1"
+      ],
+      "explanation": "좌표쌍은 두 수가 동시에 만족하는 위치 조건을 나타낸다.",
+      "activity": "좌표 평면의 영역을 조건 문장과 대응한다.",
+      "check": "x=2,y=−1은 점 (2,−1)을 뜻한다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-20-u2",
+      "type": "concept-draft",
+      "title": "집합 조건과 영역",
+      "skillIds": [
+        "m4-20-skill-1"
+      ],
+      "explanation": "등식·부등식 조건을 만족하는 점들의 모임으로 읽는다.",
+      "activity": "조건을 하나씩 켜며 영역의 교집합을 표시한다.",
+      "check": "x≥0,y≥0은 제1사분면 경계 포함 영역이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-20-u3",
+      "type": "concept-draft",
+      "title": "함수의 입력과 대응",
+      "skillIds": [
+        "m4-20-skill-1"
+      ],
+      "explanation": "함수는 허용된 각 입력에 출력 하나를 대응시키는 규칙이다.",
+      "activity": "표·화살표·그래프에서 입력별 출력 개수를 점검한다.",
+      "check": "한 입력에 출력이 두 개면 함수가 아니다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-20-u4",
+      "type": "concept-draft",
+      "title": "정의역의 종합 점검",
+      "skillIds": [
+        "m4-20-skill-2"
+      ],
+      "explanation": "분모·짝수근 등 기존 정의 조건을 각각 적용해 정의역을 찾는다.",
+      "activity": "조건별 허용 집합을 색으로 겹쳐 교집합을 구한다.",
+      "check": "√(x−1)/(x−2)는 x≥1이고 x≠2인 입력에서 정의된다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-20-u5",
+      "type": "concept-draft",
+      "title": "표현 간 변환과 검산",
+      "skillIds": [
+        "m4-20-skill-2"
+      ],
+      "explanation": "식에서 찾은 조건을 좌표·그래프·집합으로 바꾸고 역으로 확인한다.",
+      "activity": "같은 점을 세 형식으로 표현해 일치 여부를 체크한다.",
+      "check": "x+y=3 위 점은 (1,2)와 같이 합 조건을 만족한다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m4-20-u6",
+      "type": "concept-draft",
+      "title": "종합 오류 진단",
+      "skillIds": [
+        "m4-20-skill-2"
+      ],
+      "explanation": "오류가 처음 생긴 표현 변환 단계로 돌아가 기존 개념을 재적용한다.",
+      "activity": "오답 이유 태그에 따라 관련 선수학습 미니 복습을 선택한다.",
+      "check": "정의역에서 x=2를 누락하면 분모 조건 검사로 복귀한다.",
+      "status": "draft",
+      "humanVerified": false
+    }
+  ],
+  "practiceGoals": [
+    {
+      "id": "m4-20-goal-1",
+      "goal": "x축 위 점의 좌표 조건을 식으로 표현한다.",
+      "familyId": "m4-20-family-1",
+      "problemIds": [
+        "m420-draft-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-20-goal-2",
+      "goal": "원 위 조건과 원 내부 조건을 구분해 거리식을 세운다.",
+      "familyId": "m4-20-family-1",
+      "problemIds": [
+        "m420-draft-02"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-20-goal-3",
+      "goal": "근호의 입력 조건과 분모의 영점 제외를 교집합으로 결합한다.",
+      "familyId": "m4-20-family-2",
+      "problemIds": [
+        "m420-draft-03"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-20-goal-4",
+      "goal": "분자 전체의 근호 조건과 분모 영점 제외를 각각 구해 교집합을 찾는다.",
+      "familyId": "m4-20-family-2",
+      "problemIds": [
+        "m420-draft-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-20-goal-5",
+      "goal": "근호 정의에서 0을 포함해야 하는 경계 누락을 찾아 고친다.",
+      "familyId": "m4-20-family-3",
+      "problemIds": [
+        "m420-draft-05"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m4-20-goal-6",
+      "goal": "제시된 좌표가 함수의 정의역 조건을 만족하는지 검산한다.",
+      "familyId": "m4-20-family-3",
+      "problemIds": [
+        "m420-draft-06"
+      ],
+      "status": "draft"
+    }
+  ],
+  "misconceptionHypotheses": [
+    "좌표 한 조건만 만족하면 결합 조건도 만족한다고 판단함",
+    "분모가 0이 되는 입력을 정의역에 포함함",
+    "종합 단원을 새로운 공식이나 선수 개념으로 오해함"
+  ],
+  "reviewNotes": [
+    "공식 성취기준 매핑은 원문 검토 전까지 비워 둔다.",
+    "AI/작성자 초안은 사람 검수 전 공개하지 않는다.",
+    "학습 경험적 오개념 빈도나 교수 효과를 주장하지 않는다."
+  ],
+  "sourceReferences": [
+    "moe-2022-curriculum-notice",
+    "ncic-math-curriculum-catalog",
+    "moe-2028-csat-framework",
+    "moe-2028-sample-question-guide",
+    "pedagogy-and-misconception-evidence-status",
+    "unit-scope-and-prerequisite-design-note"
+  ]
+}

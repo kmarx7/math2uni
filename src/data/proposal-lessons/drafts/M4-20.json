@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-20",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 기존 좌표·함수·집합 조건을 같은 대상에 대한 동치 표현으로 연결한다.\n• 선수 단원에서 학습한 정의역·대응·그래프 정보를 근거로 종합 판단을 설명한다. 이 내용은 검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 이 단원 안에서 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다. 선수 단원 연결은 제안 메타데이터이고 공식 매핑을 뜻하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-20-u1",
+          "title": "점과 좌표 조건",
+          "body": "좌표쌍은 두 수가 동시에 만족하는 위치 조건을 나타낸다.",
+          "activity": "좌표 평면의 영역을 조건 문장과 대응한다.",
+          "check": "x=2,y=−1은 점 (2,−1)을 뜻한다."
+        },
+        {
+          "id": "m4-20-u2",
+          "title": "집합 조건과 영역",
+          "body": "등식·부등식 조건을 만족하는 점들의 모임으로 읽는다.",
+          "activity": "조건을 하나씩 켜며 영역의 교집합을 표시한다.",
+          "check": "x≥0,y≥0은 제1사분면 경계 포함 영역이다."
+        },
+        {
+          "id": "m4-20-u3",
+          "title": "함수의 입력과 대응",
+          "body": "함수는 허용된 각 입력에 출력 하나를 대응시키는 규칙이다.",
+          "activity": "표·화살표·그래프에서 입력별 출력 개수를 점검한다.",
+          "check": "한 입력에 출력이 두 개면 함수가 아니다."
+        },
+        {
+          "id": "m4-20-u4",
+          "title": "정의역의 종합 점검",
+          "body": "분모·짝수근 등 기존 정의 조건을 각각 적용해 정의역을 찾는다.",
+          "activity": "조건별 허용 집합을 색으로 겹쳐 교집합을 구한다.",
+          "check": "√(x−1)/(x−2)는 x≥1이고 x≠2인 입력에서 정의된다."
+        },
+        {
+          "id": "m4-20-u5",
+          "title": "표현 간 변환과 검산",
+          "body": "식에서 찾은 조건을 좌표·그래프·집합으로 바꾸고 역으로 확인한다.",
+          "activity": "같은 점을 세 형식으로 표현해 일치 여부를 체크한다.",
+          "check": "x+y=3 위 점은 (1,2)와 같이 합 조건을 만족한다."
+        },
+        {
+          "id": "m4-20-u6",
+          "title": "종합 오류 진단",
+          "body": "오류가 처음 생긴 표현 변환 단계로 돌아가 기존 개념을 재적용한다.",
+          "activity": "오답 이유 태그에 따라 관련 선수학습 미니 복습을 선택한다.",
+          "check": "정의역에서 x=2를 누락하면 분모 조건 검사로 복귀한다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고, 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "좌표·집합·함수 조건 연결 (미리보기 초안)",
+      "interaction": "middle-review",
+      "description": "명세의 상호작용 아이디어를 현재 계약이 지원하는 `middle-review` 조작으로 연결한 데이터 초안이다. 키보드 조작·텍스트 대안과 조건 표시가 필요하다. 전용 실험실은 구현·QA 전이며 이 파일은 완성된 인터랙션이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "(√(x−1))/(x−2)는 x−1≥0과 x−2≠0을 모두 만족해야 하므로 정의역은 [1,2)∪(2,∞)이다.",
+        "분자 √(x−1)의 조건으로 x≥1을 얻고, 분모 x−2≠0에서 x≠2를 얻는다. 두 조건의 교집합을 구간으로 쓴다.",
+        "x=1은 허용되고 x=2는 분모가 0이므로 제외되며 x>2는 허용된다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "자체 제작 초안이며 선택지는 학습자가 제출하기 전 정답 데이터를 드러내지 않아야 한다. 사람 검수 전 운영 서비스에 공개하지 않는다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. misconception 가설은 경험적 빈도 주장이 아니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건으로 핵심 절차를 다시 설명하고 연결된 선수 개념을 확인한다. 간격 복습의 정책 효과는 별도 검증 전이다."
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-01",
+  "unitTitle": "지수의 확장",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-01-family-1",
+      "status": "draft",
+      "title": "정수 지수의 곱·몫 패턴으로 지수값을 계산하고 0 밑 조건 판별",
+      "reasoningStructure": "정수 지수의 곱·몫 패턴으로 지수값을 계산하고 0 밑 조건 판별",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-01-skill-1",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m501-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "2⁻³의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "a⁻ⁿ=1/aⁿ (a≠0)이므로 1/8이다.",
+          "skillLabel": "m5-01-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1/8"
+            },
+            {
+              "id": "B",
+              "label": "−8"
+            },
+            {
+              "id": "C",
+              "label": "−1/8"
+            }
+          ]
+        },
+        {
+          "id": "m501-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "이 단원에서 사용하는 정수 지수 규칙은 0⁰을 정의하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "이 단원의 규칙 a⁰=1은 a≠0일 때 적용한다. 따라서 이 규칙은 0⁰의 값을 정의하지 않는다. 다른 맥락에서의 표기는 별도 약속을 확인해야 한다.",
+          "skillLabel": "m5-01-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "항상 1이다."
+            },
+            {
+              "id": "B",
+              "label": "아니요. 이 단원의 규칙은 0⁰을 정의하지 않는다."
+            },
+            {
+              "id": "C",
+              "label": "아니요. 이 단원에서는 0⁰=0으로 정한다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-01-family-2",
+      "status": "draft",
+      "title": "짝수·홀수 차수 근호의 실수 정의역을 판단",
+      "reasoningStructure": "짝수·홀수 차수 근호의 실수 정의역을 판단",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-01-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m501-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "√(x−4)가 실수로 정의되는 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "짝수 차수 실수 근호는 근호 안이 0 이상이어야 한다.",
+          "skillLabel": "m5-01-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>4"
+            },
+            {
+              "id": "B",
+              "label": "x≥4"
+            },
+            {
+              "id": "C",
+              "label": "모든 실수 x"
+            }
+          ]
+        },
+        {
+          "id": "m501-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "∛(x+2)는 실수 범위에서 어떤 x에 정의되는가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "홀수 차수 실근은 양수·0·음수 모두에 대해 존재한다.",
+          "skillLabel": "m5-01-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≥−2"
+            },
+            {
+              "id": "B",
+              "label": "x≠−2"
+            },
+            {
+              "id": "C",
+              "label": "모든 실수 x"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-01-family-3",
+      "status": "draft",
+      "title": "양수 밑의 유리수 지수를 근호 표현으로 변환해 계산",
+      "reasoningStructure": "양수 밑의 유리수 지수를 근호 표현으로 변환해 계산",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-01-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m501-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "81^(1/2)을 근호와 값으로 나타내면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "양의 밑에서 a^(1/2)는 √a이고 주제곱근은 9이다.",
+          "skillLabel": "m5-01-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "√81=9"
+            },
+            {
+              "id": "B",
+              "label": "±9"
+            },
+            {
+              "id": "C",
+              "label": "−9"
+            }
+          ]
+        },
+        {
+          "id": "m501-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "16^(3/4)의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "16^(1/4)=2이므로 16^(3/4)=2³=8이다.",
+          "skillLabel": "m5-01-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4"
+            },
+            {
+              "id": "B",
+              "label": "12"
+            },
+            {
+              "id": "C",
+              "label": "8"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "Curriculum 명세의 세 가지 사고 원형 각각에 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 원문 개별 매핑 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

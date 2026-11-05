@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-03",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 로그를 지수방정식의 역관계로 정의하고 두 표현을 서로 변환한다.\n• 로그의 밑·진수 조건과 밑에 따른 증가·감소 방향을 판별한다. 이 내용은 검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 이 단원 안에서 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다. 선수 단원 연결은 제안 메타데이터이고 공식 매핑을 뜻하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m5-03-u1",
+          "title": "지수 질문을 거꾸로 읽기",
+          "body": "밑 a를 몇 제곱해야 x가 되는지를 지수로 묻는다.",
+          "activity": "밑·지수·결과 색을 연결해 미지수 위치를 바꾼다.",
+          "check": "2³=8에서 log₂8=3이다."
+        },
+        {
+          "id": "m5-03-u2",
+          "title": "로그의 정의와 조건",
+          "body": "log_a x=y는 a>0, a≠1, x>0일 때 aʸ=x와 동치다.",
+          "activity": "허용 밑과 진수 카드를 조건 게이트에 넣는다.",
+          "check": "log₃9=2이고 log₁x는 허용 밑이 아니다."
+        },
+        {
+          "id": "m5-03-u3",
+          "title": "지수식과 로그식 변환",
+          "body": "세 요소 중 미지수인 위치를 보고 로그식과 지수식으로 전환한다.",
+          "activity": "동치 화살표 양방향 변환 연습을 한다.",
+          "check": "log₅(1/25)=−2는 5^(−2)=1/25와 같다."
+        },
+        {
+          "id": "m5-03-u4",
+          "title": "특별한 로그값",
+          "body": "양수 a≠1에서 log_a1=0, log_a a=1이다.",
+          "activity": "지수 0·1의 출력을 로그식으로 뒤집는다.",
+          "check": "log₇1=0, log₇7=1이다."
+        },
+        {
+          "id": "m5-03-u5",
+          "title": "밑 범위와 증가·감소",
+          "body": "a>1이면 증가하고 0<a<1이면 감소한다.",
+          "activity": "a>1과 0<a<1의 그래프·표에서 입력 순서와 출력 순서가 어떻게 대응하는지 비교한다. 로그 부등식을 풀거나 해집합을 구하지 않는다.",
+          "check": "각 밑 범위에서 입력 증가에 따른 로그값의 증가·감소를 비교하고, 로그 부등식 풀이로 확장하지 않는다."
+        },
+        {
+          "id": "m5-03-u6",
+          "title": "역함수 그래프와 범위",
+          "body": "로그와 같은 밑의 지수함수는 y=x 대칭이며 정의역·치역을 교환한다.",
+          "activity": "대칭선을 기준으로 대응점과 점근 경계를 표시한다.",
+          "check": "y=2ˣ의 역함수 y=log₂x는 x>0에서 정의된다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고, 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "지수식과 로그식의 대응 (미리보기 초안)",
+      "interaction": "expression-table",
+      "description": "명세의 상호작용 아이디어를 현재 계약이 지원하는 `expression-table` 조작으로 연결한 데이터 초안이다. 키보드 조작·텍스트 대안과 조건 표시가 필요하다. 전용 실험실은 구현·QA 전이며 이 파일은 완성된 인터랙션이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "log_(1/3)9=−2이다. 실제로 (1/3)^(−2)=9이며 밑은 0보다 크고 1과 다르고 진수 9는 양수다.",
+        "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+        "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "자체 제작 초안이며 선택지는 학습자가 제출하기 전 정답 데이터를 드러내지 않아야 한다. 사람 검수 전 운영 서비스에 공개하지 않는다. 연습 범위: a>1이면 logₐx는 증가하고, 0<a<1이면 감소한다. 이 가족은 방향 비교만 다루며 부등식 풀이를 요구하지 않는다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. misconception 가설은 경험적 빈도 주장이 아니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건으로 핵심 절차를 다시 설명하고 연결된 선수 개념을 확인한다. 간격 복습의 정책 효과는 별도 검증 전이다."
+    }
+  ]
+}

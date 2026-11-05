@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-02",
+  "levelId": "LEVEL 5",
+  "title": "실수 지수와 지수법칙",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "실수 지수의 의미",
+      "지수법칙의 조건"
+    ],
+    "prerequisiteUnits": [
+      "M5-01"
+    ],
+    "visualization": "지수값의 연속 변화"
+  },
+  "objectives": [
+    "양수 밑의 실수 지수를 유리수 지수의 연속적 확장이라는 직관으로 설명한다.",
+    "양수 밑에 한정된 지수법칙을 조건과 함께 적용한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-02-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-01 선수 기능 진단: 양수 밑 정수·유리수 지수 및 거듭제곱근 계산을 진단한다."
+    }
+  ],
+  "targetSkills": [
+    "m5-02-skill-1",
+    "m5-02-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "양수 밑 유리수 지수 값 탐색 → 촘촘한 유리수 근사 직관 → 실수 지수의 연속 변화 의미 → 법칙을 양수 밑에서 확인 → 조건 포함 결과 검산",
+    "principleDerivation": "양수 a의 실수 지수 a^x는 유리수 지수에서 관찰한 값의 연속적 확장으로 이해한다. 기초 단계에서는 근삿값·그래프를 통해 의미를 익히며, 모든 실수 x에서의 지수법칙은 밑이 양수일 때 적용한다. 음수 밑은 임의의 실수 지수에 대해 실수 값이 정의되지 않을 수 있다.",
+    "accessibility": "설명은 쉬운 한국어와 기호 읽기를 병기한다. 시각화에는 축·범위·대체 텍스트를 제공하고 모든 조작은 키보드로 가능하게 한다. 색만으로 정답 상태를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-02-u1",
+      "title": "유리수 지수 값의 변화",
+      "targetSkills": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "양수 밑에서 유리수 지수에 따른 값을 표와 그래프로 본다.",
+      "activity": "분수 지수를 점점 촘촘히 바꾸어 값 변화를 비교한다.",
+      "check": "2^(1/2)≈1.414이고 2^(3/2)≈2.828이다."
+    },
+    {
+      "id": "m5-02-u2",
+      "title": "실수 지수의 의미",
+      "targetSkills": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "실수 지수는 양수 밑에서 유리수 지수의 연속 확장으로 직관화한다.",
+      "activity": "지수 슬라이더와 수치표를 함께 사용해 변화 방향을 읽는다.",
+      "check": "2^1.5는 2와 2² 사이에 있고 약 2.828이다."
+    },
+    {
+      "id": "m5-02-u3",
+      "title": "곱셈 법칙",
+      "targetSkills": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "a>0이면 aˣaʸ=a^(x+y)이다.",
+      "activity": "두 지수 슬라이더 합과 곱 결과를 비교한다.",
+      "check": "3^0.4·3^0.6=3¹=3이다."
+    },
+    {
+      "id": "m5-02-u4",
+      "title": "거듭제곱 법칙",
+      "targetSkills": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "a>0이면 (aˣ)ʸ=a^(xy)이다.",
+      "activity": "괄호 안팎 지수를 조절해 두 표현의 값을 비교한다.",
+      "check": "(2^0.5)²=2이다."
+    },
+    {
+      "id": "m5-02-u5",
+      "title": "몫과 음 지수",
+      "targetSkills": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "a>0이면 aˣ/aʸ=a^(x−y)이고 a^(−x)=1/aˣ이다.",
+      "activity": "분자·분모 지수 차와 역수 관계를 시각화한다.",
+      "check": "5^0.2/5^0.7=5^(−0.5)=1/√5이다."
+    },
+    {
+      "id": "m5-02-u6",
+      "title": "법칙의 조건과 적용",
+      "targetSkills": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "임의의 실수 지수 법칙은 양수 밑에서 사용하고 조건 밖 표현은 별도 판단한다.",
+      "activity": "양수·0·음수 밑 사례를 분류해 적용 가능 여부를 표시한다.",
+      "check": "(−2)^√2는 실수 범위에서 일반적으로 정의되지 않는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-02-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 입력 또는 조건 조절, 변경 결과의 텍스트 확인",
+      "description": "양수 밑과 실수 지수를 조절하는 그래프에서 유리수 지점의 값과 연속적인 곡선 해석을 함께 확인한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "양수 밑의 실수 지수 근삿값과 증가·감소를 표·그래프에서 해석",
+      "지수법칙 여러 개 중 적용할 법칙과 양수 밑 조건을 선택",
+      "잘못된 지수법칙 풀이에서 조건 누락 또는 지수 계산 오류를 찾음"
+    ],
+    "draftPracticeGoals": [
+      "가족 1 초안 A: 양수 밑의 실수 지수 근삿값과 증가·감소를 표·그래프에서 해석 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 1 초안 B: 양수 밑의 실수 지수 근삿값과 증가·감소를 표·그래프에서 해석 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 2 초안 A: 지수법칙 여러 개 중 적용할 법칙과 양수 밑 조건을 선택 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 2 초안 B: 지수법칙 여러 개 중 적용할 법칙과 양수 밑 조건을 선택 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 3 초안 A: 잘못된 지수법칙 풀이에서 조건 누락 또는 지수 계산 오류를 찾음 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 3 초안 B: 잘못된 지수법칙 풀이에서 조건 누락 또는 지수 계산 오류를 찾음 — 표현을 변환하고 원조건으로 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가용 기준만 기술하며 문항 제작·공개는 별도 검수 후 진행한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형으로 센다. 조건 해석, 표현 전환, 전략 선택 중 핵심 추론이 실질적으로 다를 때만 독립 원형이다."
+  },
+  "assessmentCriteria": [
+    "근삿값은 근삿값으로 표시해 정확값과 혼동하지 않는가?",
+    "지수법칙마다 밑이 양수라는 가정을 명시하는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형에 연결된 바로 앞 정의·조건을 짧게 재진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습으로 재호출한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "실수 지수의 정의를 음수 밑까지 무조건 확장함",
+    "(aˣ)ʸ와 a^(x+y)를 혼동함",
+    "밑이 양수라는 조건을 답에 기록하지 않음"
+  ],
+  "workedExample": {
+    "prompt": "2^0.5·2^1.5=2^(0.5+1.5)=2²=4이다. 이 실수 지수 법칙의 적용에서 밑 2는 양수이다.",
+    "solution": "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+    "verification": "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Independent Curriculum Architect reviewer (M4-19-M5-03-independent-review.md)",
+    "reviewerIdentity": "independent-review role; named individual not recorded in the available handoff",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source, rights, and problem blueprint review is not yet present in this worktree",
+      "Developer independent mathematical QA",
+      "Human content approval before any publication"
+    ]
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-03",
+  "unitTitle": "로그의 정의",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-03-family-1",
+      "status": "draft",
+      "title": "주어진 지수 등식에서 로그 표현을 만들고 밑·진수 조건 검토",
+      "reasoningStructure": "주어진 지수 등식에서 로그 표현을 만들고 밑·진수 조건 검토",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-03-skill-1",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m503-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "2³=8을 로그식으로 바꾸면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "aᵇ=c와 logₐc=b는 같은 관계를 나타낸다.",
+          "skillLabel": "m5-03-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "log₃8=2"
+            },
+            {
+              "id": "B",
+              "label": "log₂8=3"
+            },
+            {
+              "id": "C",
+              "label": "log₈2=3"
+            }
+          ]
+        },
+        {
+          "id": "m503-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "실수 로그 log_a(x)를 정의하기 위한 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "밑은 양수이면서 1이 아니고 진수는 양수여야 한다.",
+          "skillLabel": "m5-03-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a>0, a≠1, x>0"
+            },
+            {
+              "id": "B",
+              "label": "a>0, x≥0"
+            },
+            {
+              "id": "C",
+              "label": "a≠0, x>0"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-03-family-2",
+      "status": "draft",
+      "title": "로그식과 지수식을 왕복 변환해 미지 지수 또는 진수를 구함",
+      "reasoningStructure": "로그식과 지수식을 왕복 변환해 미지 지수 또는 진수를 구함",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-03-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m503-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "log₃81=4를 지수식으로 바꾸면?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "로그의 정의에 따라 밑의 4제곱이 진수 81이다.",
+          "skillLabel": "m5-03-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4³=81"
+            },
+            {
+              "id": "B",
+              "label": "81⁴=3"
+            },
+            {
+              "id": "C",
+              "label": "3⁴=81"
+            }
+          ]
+        },
+        {
+          "id": "m503-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₅x=2이고 x>0일 때 x는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "로그 정의에 의해 x=5²=25이다.",
+          "skillLabel": "m5-03-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "10"
+            },
+            {
+              "id": "B",
+              "label": "25"
+            },
+            {
+              "id": "C",
+              "label": "7"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-03-family-3",
+      "status": "draft",
+      "title": "밑 구간에 따른 로그함수의 증가·감소 방향 비교",
+      "reasoningStructure": "밑이 1보다 큰 경우와 0과 1 사이인 경우에 로그함수의 증가·감소 방향을 그래프나 표로 비교한다. 부등식 해법은 포함하지 않는다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-03-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m503-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₂x와 log_(1/2)x의 단조 방향은 각각?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "밑이 1보다 크면 로그함수는 증가하고 0<a<1이면 감소한다.",
+          "skillLabel": "m5-03-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "둘 다 증가"
+            },
+            {
+              "id": "B",
+              "label": "첫째 감소, 둘째 증가"
+            },
+            {
+              "id": "C",
+              "label": "첫째 증가, 둘째 감소"
+            }
+          ]
+        },
+        {
+          "id": "m503-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "로그함수 logₐx는 a>1일 때 증가하고 0<a<1일 때 감소한다. 이 규칙을 log₂x와 log_(1/2)x에 적용하면 각 그래프는 어떻게 변하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "밑 2는 1보다 크므로 log₂x는 증가한다. 밑 1/2은 0과 1 사이이므로 log_(1/2)x는 감소한다. 각 그래프의 변화 방향만 비교하며 로그 부등식을 풀거나 해집합을 정하지 않는다.",
+          "skillLabel": "m5-03-skill-2",
+          "misconceptionHypothesis": "밑이 1보다 큰 경우와 0과 1 사이인 경우의 단조 방향을 서로 바꾸어 적용할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 점검: 밑 2>1인 로그함수는 증가, 0<1/2<1인 로그함수는 감소. 부등식 풀이는 요구하지 않는다. 독립 교육 검토 및 사람 검수 대기.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "log₂x는 증가하고 log_(1/2)x는 감소한다."
+            },
+            {
+              "id": "B",
+              "label": "log₂x는 감소하고 log_(1/2)x는 증가한다."
+            },
+            {
+              "id": "C",
+              "label": "두 로그함수 모두 증가한다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "Curriculum 명세의 세 가지 사고 원형 각각에 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 원문 개별 매핑 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

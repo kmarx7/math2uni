@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-01",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 0·음의 정수 지수와 유리수 지수를 기존 거듭제곱·역수·근호와 연결한다.\n• 거듭제곱근의 실수 존재 조건과 분수 지수 표기 범위를 구분한다. 이 내용은 검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 이 단원 안에서 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다. 선수 단원 연결은 제안 메타데이터이고 공식 매핑을 뜻하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m5-01-u1",
+          "title": "정수 지수의 패턴",
+          "body": "양의 정수 지수는 같은 수의 반복 곱이다.",
+          "activity": "곱셈표에서 지수가 하나씩 바뀌는 규칙을 읽는다.",
+          "check": "2³=2·2·2=8이다."
+        },
+        {
+          "id": "m5-01-u2",
+          "title": "0 지수와 밑 조건",
+          "body": "a≠0일 때 a⁰=1이며 0⁰은 이 정의에 포함하지 않는다.",
+          "activity": "a^m/a^m=1과 지수 차를 연결한다.",
+          "check": "5⁰=1, 단 0⁰을 1로 정하지 않는다."
+        },
+        {
+          "id": "m5-01-u3",
+          "title": "음의 정수 지수",
+          "body": "a≠0일 때 a^(−n)=1/aⁿ이다.",
+          "activity": "지수를 낮출 때 값이 밑으로 나누어지는 표를 만든다.",
+          "check": "2^(−3)=1/8이다."
+        },
+        {
+          "id": "m5-01-u4",
+          "title": "n제곱근과 실수 범위",
+          "body": "짝수 n은 radicand≥0, 홀수 n은 모든 실수에서 실수근을 가진다.",
+          "activity": "짝수·홀수 차수의 수직선 허용 범위를 비교한다.",
+          "check": "⁴√16=2이고 ³√(−8)=−2이다."
+        },
+        {
+          "id": "m5-01-u5",
+          "title": "양수 밑의 유리수 지수",
+          "body": "도입 정의는 a>0, n>0에서 a^(m/n)=(ⁿ√a)^m으로 둔다. 음수 밑 b<0은 지수를 기약분수 m/n으로 쓸 때 분모 n의 홀짝을 별도로 따져야 한다: n이 홀수이면 실수값이 가능하고 n이 짝수이면 실수값이 없다. 이 경계 사례는 양수 밑 정의와 별도로 표시한다.",
+          "activity": "근호 표현과 분수 지수 카드를 짝짓는다.",
+          "check": "8^(2/3)=4이다. 음수 밑은 지수를 기약분수 m/n으로 쓴 뒤 n 홀짝에 따라 별도 판별한다."
+        },
+        {
+          "id": "m5-01-u6",
+          "title": "유리수 지수의 조건 확인",
+          "body": "분모는 양의 정수로 약분해 해석하고 밑·근호의 실수 조건을 먼저 확인한다.",
+          "activity": "표현을 약분 전후로 비교하고 허용 여부를 표시한다.",
+          "check": "16^(−1/2)=1/4이다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고, 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "정수·유리수 지수와 근호 표현 (미리보기 초안)",
+      "interaction": "powers",
+      "description": "명세의 상호작용 아이디어를 현재 계약이 지원하는 `powers` 조작으로 연결한 데이터 초안이다. 키보드 조작·텍스트 대안과 조건 표시가 필요하다. 전용 실험실은 구현·QA 전이며 이 파일은 완성된 인터랙션이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "16^(−1/2)=1/(16^(1/2))=1/√16=1/4이다. 밑 16은 양수이므로 제곱근이 실수이며 음의 지수는 역수를 뜻한다.",
+        "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+        "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다. 음수 밑 유리수 지수의 경계 사례에서는 지수를 기약분수로 쓴 뒤 분모 홀짝을 확인한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "자체 제작 초안이며 선택지는 학습자가 제출하기 전 정답 데이터를 드러내지 않아야 한다. 사람 검수 전 운영 서비스에 공개하지 않는다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. misconception 가설은 경험적 빈도 주장이 아니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건으로 핵심 절차를 다시 설명하고 연결된 선수 개념을 확인한다. 간격 복습의 정책 효과는 별도 검증 전이다."
+    }
+  ]
+}

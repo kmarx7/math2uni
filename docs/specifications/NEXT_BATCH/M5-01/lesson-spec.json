@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-01",
+  "levelId": "LEVEL 5",
+  "title": "지수의 확장",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "정수·유리수 지수",
+      "거듭제곱근"
+    ],
+    "prerequisiteUnits": [
+      "M1-04",
+      "M2-08"
+    ],
+    "visualization": "지수와 근호 대응"
+  },
+  "objectives": [
+    "0·음의 정수 지수와 유리수 지수를 기존 거듭제곱·역수·근호와 연결한다.",
+    "거듭제곱근의 실수 존재 조건과 분수 지수 표기 범위를 구분한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-01-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-04 선수 기능 진단: 거듭제곱의 곱셈·나눗셈 법칙과 0이 아닌 수의 역수를 확인한다."
+    },
+    {
+      "id": "m5-01-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-08 선수 기능 진단: 짝수·홀수 제곱근의 실수 범위와 분모·분자의 역할을 진단한다."
+    }
+  ],
+  "targetSkills": [
+    "m5-01-skill-1",
+    "m5-01-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "정수 지수 패턴 관찰 → 0·음 지수 정의와 0 밑 제외 → n제곱근의 실수 존재 조건 → 양수 밑 유리수 지수 정의 → 정의역·표기 조건 검산",
+    "principleDerivation": "밑을 같게 둔 거듭제곱의 나눗셈 패턴을 유지하면 0이 아닌 밑의 0 지수는 1, 음의 지수는 역수가 된다. 양수 a와 자연수 n에 대해 a^(m/n)은 (n제곱근 a)^m으로 정의한다. 음수 밑의 유리수 지수는 분모의 홀짝에 따라 별도 조건이 생기므로 이 도입 정의에서는 양수 밑으로 제한한다. 이 단원에서 유리수 지수의 기본 정의 범위는 양수 밑이다. 별도 범위 구분: 음수 밑 b<0의 유리수 지수 b^(m/n)은 m/n을 기약분수, n>0으로 썼을 때 n이 홀수이면 실수 n제곱근이 가능하고 n이 짝수이면 실수값이 없다. 이 홀짝 논의는 확장된 경계 사례로 분리하며 양수 밑 정의의 조건을 완화하지 않는다. 이 단원에서 유리수 지수의 기본 정의 범위는 양수 밑이다. 별도 범위 구분: 음수 밑 b<0의 유리수 지수 b^(m/n)은 m/n을 기약분수, n>0으로 썼을 때 n이 홀수이면 실수 n제곱근이 가능하고 n이 짝수이면 실수값이 없다. 이 홀짝 논의는 확장된 경계 사례로 분리하며 양수 밑 정의의 조건을 완화하지 않는다.",
+    "accessibility": "설명은 쉬운 한국어와 기호 읽기를 병기한다. 시각화에는 축·범위·대체 텍스트를 제공하고 모든 조작은 키보드로 가능하게 한다. 색만으로 정답 상태를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-01-u1",
+      "title": "정수 지수의 패턴",
+      "targetSkills": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "양의 정수 지수는 같은 수의 반복 곱이다.",
+      "activity": "곱셈표에서 지수가 하나씩 바뀌는 규칙을 읽는다.",
+      "check": "2³=2·2·2=8이다."
+    },
+    {
+      "id": "m5-01-u2",
+      "title": "0 지수와 밑 조건",
+      "targetSkills": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "a≠0일 때 a⁰=1이며 0⁰은 이 정의에 포함하지 않는다.",
+      "activity": "a^m/a^m=1과 지수 차를 연결한다.",
+      "check": "5⁰=1, 단 0⁰을 1로 정하지 않는다."
+    },
+    {
+      "id": "m5-01-u3",
+      "title": "음의 정수 지수",
+      "targetSkills": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "a≠0일 때 a^(−n)=1/aⁿ이다.",
+      "activity": "지수를 낮출 때 값이 밑으로 나누어지는 표를 만든다.",
+      "check": "2^(−3)=1/8이다."
+    },
+    {
+      "id": "m5-01-u4",
+      "title": "n제곱근과 실수 범위",
+      "targetSkills": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "짝수 n은 radicand≥0, 홀수 n은 모든 실수에서 실수근을 가진다.",
+      "activity": "짝수·홀수 차수의 수직선 허용 범위를 비교한다.",
+      "check": "⁴√16=2이고 ³√(−8)=−2이다."
+    },
+    {
+      "id": "m5-01-u5",
+      "title": "양수 밑의 유리수 지수",
+      "targetSkills": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "도입 정의는 a>0, n>0에서 a^(m/n)=(ⁿ√a)^m으로 둔다. 음수 밑 b<0은 지수를 기약분수 m/n으로 쓸 때 분모 n의 홀짝을 별도로 따져야 한다: n이 홀수이면 실수값이 가능하고 n이 짝수이면 실수값이 없다. 이 경계 사례는 양수 밑 정의와 별도로 표시한다.",
+      "activity": "근호 표현과 분수 지수 카드를 짝짓는다.",
+      "check": "8^(2/3)=4이다. 음수 밑은 지수를 기약분수 m/n으로 쓴 뒤 n 홀짝에 따라 별도 판별한다."
+    },
+    {
+      "id": "m5-01-u6",
+      "title": "유리수 지수의 조건 확인",
+      "targetSkills": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "분모는 양의 정수로 약분해 해석하고 밑·근호의 실수 조건을 먼저 확인한다.",
+      "activity": "표현을 약분 전후로 비교하고 허용 여부를 표시한다.",
+      "check": "16^(−1/2)=1/4이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-01-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드로 조작 가능한 입력 또는 조건 조절, 변경 결과의 텍스트 확인",
+      "description": "지수 눈금에서 정수 지수를 좌우로 확장하고, 양수 밑에서 분수 지수와 근호 카드를 연결한다.",
+      "features": [
+        "축·조건 레이블",
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태 텍스트"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "정수 지수의 곱·몫 패턴으로 지수값을 계산하고 0 밑 조건 판별",
+      "짝수·홀수 차수 근호의 실수 정의역을 판단",
+      "양수 밑의 유리수 지수를 근호 표현으로 변환해 계산"
+    ],
+    "draftPracticeGoals": [
+      "가족 1 초안 A: 정수 지수의 곱·몫 패턴으로 지수값을 계산하고 0 밑 조건 판별 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 1 초안 B: 정수 지수의 곱·몫 패턴으로 지수값을 계산하고 0 밑 조건 판별 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 2 초안 A: 짝수·홀수 차수 근호의 실수 정의역을 판단 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 2 초안 B: 짝수·홀수 차수 근호의 실수 정의역을 판단 — 표현을 변환하고 원조건으로 검산한다.",
+      "가족 3 초안 A: 양수 밑의 유리수 지수를 근호 표현으로 변환해 계산 — 정의·경계 사례를 이용해 판단한다.",
+      "가족 3 초안 B: 양수 밑의 유리수 지수를 근호 표현으로 변환해 계산 — 표현을 변환하고 원조건으로 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "실제 평가 문항 인스턴스는 0개. 형성평가용 기준만 기술하며 문항 제작·공개는 별도 검수 후 진행한다.",
+    "distinctReasoningRule": "숫자만 바꾼 변형은 같은 원형으로 센다. 조건 해석, 표현 전환, 전략 선택 중 핵심 추론이 실질적으로 다를 때만 독립 원형이다."
+  },
+  "assessmentCriteria": [
+    "0 지수와 음 지수에서 밑이 0이 아님을 확인했는가?",
+    "유리수 지수 정의의 양수 밑 조건을 보존했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답 유형에 연결된 바로 앞 정의·조건을 짧게 재진단하고 해당 소단원으로 돌아온다. 통과한 기술은 간격 복습으로 재호출한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "a⁰을 모든 밑에서 정의해 0⁰도 1이라고 함",
+    "음의 지수를 음수 값으로 읽음",
+    "짝수차 근호에서 음의 radicand도 실수라고 하거나 분수 지수 밑 조건을 누락",
+    "음수 밑 유리수 지수의 정의를 양수 밑의 기본 정의와 혼동하거나, 기약분수의 분모 홀짝을 확인하지 않음",
+    "음수 밑 유리수 지수의 정의를 양수 밑의 기본 정의와 혼동하거나, 기약분수의 분모 홀짝을 확인하지 않음"
+  ],
+  "workedExample": {
+    "prompt": "16^(−1/2)=1/(16^(1/2))=1/√16=1/4이다. 밑 16은 양수이므로 제곱근이 실수이며 음의 지수는 역수를 뜻한다.",
+    "solution": "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+    "verification": "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다. 음수 밑 유리수 지수의 경계 사례에서는 지수를 기약분수로 쓴 뒤 분모 홀짝을 확인한다."
+  },
+  "designReview": {
+    "status": "reviewed",
+    "reviewerRole": "Independent Curriculum Architect reviewer (M4-19-M5-03-independent-review.md)",
+    "reviewerIdentity": "independent-review role; named individual not recorded in the available handoff",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source, rights, and problem blueprint review is not yet present in this worktree",
+      "Developer independent mathematical QA",
+      "Human content approval before any publication"
+    ]
+  }
+}

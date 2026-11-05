@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-19",
+  "version": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "goals",
+      "type": "ConceptBlock",
+      "title": "오늘의 학습 목표",
+      "body": "• 근호식의 정의역을 근호 안의 식이 0 이상인 조건으로 구한다.\n• 기본 무리함수의 정의역·치역과 역함수 관계를 조건을 보존해 설명한다. 이 내용은 검수 전 학습 초안이며 점수 결과를 보장하지 않는다."
+    },
+    {
+      "id": "diagnostic",
+      "type": "ExplanationBlock",
+      "title": "시작 전 선수학습 확인",
+      "readinessCheck": true,
+      "body": "필요한 선수 개념을 짧게 점검하고 막히면 해당 정의를 이 단원 안에서 다시 확인한다. 이 진단은 준비 안내이며 숙달도나 완료 점수에 자동 반영되지 않는다. 선수 단원 연결은 제안 메타데이터이고 공식 매핑을 뜻하지 않는다."
+    },
+    {
+      "id": "concept",
+      "type": "ExplanationBlock",
+      "title": "핵심 개념 여섯 걸음",
+      "sections": [
+        {
+          "id": "m4-19-u1",
+          "title": "근호식의 입력 조건",
+          "body": "실수 제곱근의 근호 안은 0 이상이어야 한다.",
+          "activity": "근호 안을 수직선에 표시하고 허용 구간을 선택한다.",
+          "check": "√(x−3)의 정의역은 x≥3이다."
+        },
+        {
+          "id": "m4-19-u2",
+          "title": "일차식 근호의 정의역",
+          "body": "근호 안의 일차식을 0 이상으로 두어 경계를 찾는다.",
+          "activity": "계수를 바꾸며 경계와 허용 방향을 확인한다.",
+          "check": "√(5−2x)는 x≤5/2에서 정의된다."
+        },
+        {
+          "id": "m4-19-u3",
+          "title": "이차식 근호의 정의역",
+          "body": "근호 안 이차식의 부호표로 허용 구간을 결정한다.",
+          "activity": "근의 위치와 포물선 부호를 연결한다.",
+          "check": "√((x−1)(x+2))의 정의역은 x≤−2 또는 x≥1이다."
+        },
+        {
+          "id": "m4-19-u4",
+          "title": "기본 무리함수의 그래프",
+          "body": "y=√x는 x≥0에서 시작해 증가하고 출력은 0 이상이다.",
+          "activity": "점표와 그래프 이동으로 기준점을 추적한다.",
+          "check": "y=√(x−2)+1은 x≥2, y≥1이다."
+        },
+        {
+          "id": "m4-19-u5",
+          "title": "정의역 제한과 일대일 대응",
+          "body": "역함수는 원래 대응이 일대일일 때 함수가 된다.",
+          "activity": "수평선 검사로 제한 구간별 일대일 여부를 확인한다.",
+          "check": "y=x²는 전체 실수에서 일대일이 아니지만 x≥0으로 제한하면 가능하다."
+        },
+        {
+          "id": "m4-19-u6",
+          "title": "무리함수의 역관계",
+          "body": "x와 y를 바꾸어 풀고 기존 출력 범위를 새 정의역으로 유지한다.",
+          "activity": "그래프와 y=x 대칭 및 식 풀이 결과를 나란히 확인한다.",
+          "check": "y=√(x−2)+1의 역함수는 x≥1에서 y=(x−1)²+2이다."
+        }
+      ],
+      "body": "정의와 조건을 먼저 확인하고, 사례와 표를 살펴본 뒤 기호로 설명한다. 각 변형 뒤 원래 조건에 대입해 검산한다."
+    },
+    {
+      "id": "lab",
+      "type": "InteractiveBlock",
+      "title": "근호의 입력 조건과 이동된 그래프 (미리보기 초안)",
+      "interaction": "radical-simplify",
+      "description": "명세의 상호작용 아이디어를 현재 계약이 지원하는 `radical-simplify` 조작으로 연결한 데이터 초안이다. 키보드 조작·텍스트 대안과 조건 표시가 필요하다. 전용 실험실은 구현·QA 전이며 이 파일은 완성된 인터랙션이나 승인을 뜻하지 않는다."
+    },
+    {
+      "id": "example",
+      "type": "WorkedExampleBlock",
+      "title": "풀이 과정을 따라가요",
+      "steps": [
+        "√((x−1)(x+2))의 실수 정의역은 (x−1)(x+2)≥0이므로 x≤−2 또는 x≥1이다. 경계값도 포함한다.",
+        "각 단계에서 정의역·조건을 먼저 기록하고, 변환 또는 계산 뒤 원래 조건에 대입해 확인한다.",
+        "수치 예시는 정의·조건에 직접 대입하여 확인하며, 일반 규칙은 정당한 밑·입력 조건과 함께 적용한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "type": "PracticeBlock",
+      "title": "검수 전 연습 문항 초안",
+      "purpose": "practice",
+      "hint": "자체 제작 초안이며 선택지는 학습자가 제출하기 전 정답 데이터를 드러내지 않아야 한다. 사람 검수 전 운영 서비스에 공개하지 않는다."
+    },
+    {
+      "id": "feedback",
+      "type": "FeedbackBlock",
+      "title": "오답을 개념으로 되돌리기",
+      "body": "오답에서 놓친 정의, 조건 또는 표현을 확인하고 연결된 소단원으로 돌아간다. misconception 가설은 경험적 빈도 주장이 아니다."
+    },
+    {
+      "id": "review",
+      "type": "ReviewBlock",
+      "title": "복습과 다음 단원",
+      "body": "도움 없이 다른 조건으로 핵심 절차를 다시 설명하고 연결된 선수 개념을 확인한다. 간격 복습의 정책 효과는 별도 검증 전이다."
+    }
+  ]
+}

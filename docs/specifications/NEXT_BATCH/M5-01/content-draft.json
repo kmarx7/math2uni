@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-01",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "sourceStatus": "self-authored draft; official unit mapping unverified",
+  "learningBlocks": [
+    {
+      "id": "m5-01-u1",
+      "type": "concept-draft",
+      "title": "정수 지수의 패턴",
+      "skillIds": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "양의 정수 지수는 같은 수의 반복 곱이다.",
+      "activity": "곱셈표에서 지수가 하나씩 바뀌는 규칙을 읽는다.",
+      "check": "2³=2·2·2=8이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-01-u2",
+      "type": "concept-draft",
+      "title": "0 지수와 밑 조건",
+      "skillIds": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "a≠0일 때 a⁰=1이며 0⁰은 이 정의에 포함하지 않는다.",
+      "activity": "a^m/a^m=1과 지수 차를 연결한다.",
+      "check": "5⁰=1, 단 0⁰을 1로 정하지 않는다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-01-u3",
+      "type": "concept-draft",
+      "title": "음의 정수 지수",
+      "skillIds": [
+        "m5-01-skill-1"
+      ],
+      "explanation": "a≠0일 때 a^(−n)=1/aⁿ이다.",
+      "activity": "지수를 낮출 때 값이 밑으로 나누어지는 표를 만든다.",
+      "check": "2^(−3)=1/8이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-01-u4",
+      "type": "concept-draft",
+      "title": "n제곱근과 실수 범위",
+      "skillIds": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "짝수 n은 radicand≥0, 홀수 n은 모든 실수에서 실수근을 가진다.",
+      "activity": "짝수·홀수 차수의 수직선 허용 범위를 비교한다.",
+      "check": "⁴√16=2이고 ³√(−8)=−2이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-01-u5",
+      "type": "concept-draft",
+      "title": "양수 밑의 유리수 지수",
+      "skillIds": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "a>0, n>0에서 a^(m/n)=(ⁿ√a)^m으로 정의한다.",
+      "activity": "근호 표현과 분수 지수 카드를 짝짓는다.",
+      "check": "8^(2/3)=(³√8)²=4이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-01-u6",
+      "type": "concept-draft",
+      "title": "유리수 지수의 조건 확인",
+      "skillIds": [
+        "m5-01-skill-2"
+      ],
+      "explanation": "분모는 양의 정수로 약분해 해석하고 밑·근호의 실수 조건을 먼저 확인한다.",
+      "activity": "표현을 약분 전후로 비교하고 허용 여부를 표시한다.",
+      "check": "16^(−1/2)=1/4이다.",
+      "status": "draft",
+      "humanVerified": false
+    }
+  ],
+  "practiceGoals": [
+    {
+      "id": "m5-01-goal-1",
+      "goal": "음의 정수 지수를 역수로 바꾸어 계산한다.",
+      "familyId": "m5-01-family-1",
+      "problemIds": [
+        "m501-draft-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-01-goal-2",
+      "goal": "이 단원의 정수 지수 규칙이 0⁰을 정의하는지 밑 조건으로 판단한다.",
+      "familyId": "m5-01-family-1",
+      "problemIds": [
+        "m501-draft-02"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-01-goal-3",
+      "goal": "짝수 차수 근호의 실수 정의역 경계를 찾는다.",
+      "familyId": "m5-01-family-2",
+      "problemIds": [
+        "m501-draft-03"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-01-goal-4",
+      "goal": "홀수 차수 근호가 음수 입력에서도 실수로 정의되는지 판별한다.",
+      "familyId": "m5-01-family-2",
+      "problemIds": [
+        "m501-draft-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-01-goal-5",
+      "goal": "제곱근 지수를 근호로 바꾸고 주근 값을 계산한다.",
+      "familyId": "m5-01-family-3",
+      "problemIds": [
+        "m501-draft-05"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-01-goal-6",
+      "goal": "유리수 지수의 분모·분자를 근호와 정수 거듭제곱으로 해석한다.",
+      "familyId": "m5-01-family-3",
+      "problemIds": [
+        "m501-draft-06"
+      ],
+      "status": "draft"
+    }
+  ],
+  "misconceptionHypotheses": [
+    "a⁰을 모든 밑에서 정의해 0⁰도 1이라고 함",
+    "음의 지수를 음수 값으로 읽음",
+    "짝수차 근호에서 음의 radicand도 실수라고 하거나 분수 지수 밑 조건을 누락"
+  ],
+  "reviewNotes": [
+    "공식 성취기준 매핑은 원문 검토 전까지 비워 둔다.",
+    "AI/작성자 초안은 사람 검수 전 공개하지 않는다.",
+    "학습 경험적 오개념 빈도나 교수 효과를 주장하지 않는다."
+  ],
+  "sourceReferences": [
+    "moe-2022-curriculum-notice",
+    "ncic-math-curriculum-catalog",
+    "moe-2028-csat-framework",
+    "moe-2028-sample-question-guide",
+    "pedagogy-and-misconception-evidence-status",
+    "unit-scope-and-prerequisite-design-note"
+  ]
+}

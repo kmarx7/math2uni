@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-02",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "sourceStatus": "self-authored draft; official unit mapping unverified",
+  "learningBlocks": [
+    {
+      "id": "m5-02-u1",
+      "type": "concept-draft",
+      "title": "유리수 지수 값의 변화",
+      "skillIds": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "양수 밑에서 유리수 지수에 따른 값을 표와 그래프로 본다.",
+      "activity": "분수 지수를 점점 촘촘히 바꾸어 값 변화를 비교한다.",
+      "check": "2^(1/2)≈1.414이고 2^(3/2)≈2.828이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-02-u2",
+      "type": "concept-draft",
+      "title": "실수 지수의 의미",
+      "skillIds": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "실수 지수는 양수 밑에서 유리수 지수의 연속 확장으로 직관화한다.",
+      "activity": "지수 슬라이더와 수치표를 함께 사용해 변화 방향을 읽는다.",
+      "check": "2^1.5는 2와 2² 사이에 있고 약 2.828이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-02-u3",
+      "type": "concept-draft",
+      "title": "곱셈 법칙",
+      "skillIds": [
+        "m5-02-skill-1"
+      ],
+      "explanation": "a>0이면 aˣaʸ=a^(x+y)이다.",
+      "activity": "두 지수 슬라이더 합과 곱 결과를 비교한다.",
+      "check": "3^0.4·3^0.6=3¹=3이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-02-u4",
+      "type": "concept-draft",
+      "title": "거듭제곱 법칙",
+      "skillIds": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "a>0이면 (aˣ)ʸ=a^(xy)이다.",
+      "activity": "괄호 안팎 지수를 조절해 두 표현의 값을 비교한다.",
+      "check": "(2^0.5)²=2이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-02-u5",
+      "type": "concept-draft",
+      "title": "몫과 음 지수",
+      "skillIds": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "a>0이면 aˣ/aʸ=a^(x−y)이고 a^(−x)=1/aˣ이다.",
+      "activity": "분자·분모 지수 차와 역수 관계를 시각화한다.",
+      "check": "5^0.2/5^0.7=5^(−0.5)=1/√5이다.",
+      "status": "draft",
+      "humanVerified": false
+    },
+    {
+      "id": "m5-02-u6",
+      "type": "concept-draft",
+      "title": "법칙의 조건과 적용",
+      "skillIds": [
+        "m5-02-skill-2"
+      ],
+      "explanation": "임의의 실수 지수 법칙은 양수 밑에서 사용하고 조건 밖 표현은 별도 판단한다.",
+      "activity": "양수·0·음수 밑 사례를 분류해 적용 가능 여부를 표시한다.",
+      "check": "(−2)^√2는 실수 범위에서 일반적으로 정의되지 않는다.",
+      "status": "draft",
+      "humanVerified": false
+    }
+  ],
+  "practiceGoals": [
+    {
+      "id": "m5-02-goal-1",
+      "goal": "밑이 1보다 큰 지수함수의 증가 방향을 표·그래프에서 해석한다.",
+      "familyId": "m5-02-family-1",
+      "problemIds": [
+        "m502-draft-01"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-02-goal-2",
+      "goal": "밑이 0과 1 사이인 지수함수의 감소 방향을 표·그래프에서 해석한다.",
+      "familyId": "m5-02-family-1",
+      "problemIds": [
+        "m502-draft-02"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-02-goal-3",
+      "goal": "같은 밑의 곱에서 지수를 더하는 법칙을 적용한다.",
+      "familyId": "m5-02-family-2",
+      "problemIds": [
+        "m502-draft-03"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-02-goal-4",
+      "goal": "같은 양수 밑의 몫에서 지수를 빼는 법칙을 적용한다.",
+      "familyId": "m5-02-family-2",
+      "problemIds": [
+        "m502-draft-04"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-02-goal-5",
+      "goal": "학생 풀이에서 곱셈 지수 계산 오류를 찾아 바로잡는다.",
+      "familyId": "m5-02-family-3",
+      "problemIds": [
+        "m502-draft-05"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "m5-02-goal-6",
+      "goal": "모든 실수 지수에서 실수값을 갖는 표준 a^x의 밑 조건 a>0을 고른다.",
+      "familyId": "m5-02-family-3",
+      "problemIds": [
+        "m502-draft-06"
+      ],
+      "status": "draft"
+    }
+  ],
+  "misconceptionHypotheses": [
+    "실수 지수의 정의를 음수 밑까지 무조건 확장함",
+    "(aˣ)ʸ와 a^(x+y)를 혼동함",
+    "밑이 양수라는 조건을 답에 기록하지 않음"
+  ],
+  "reviewNotes": [
+    "공식 성취기준 매핑은 원문 검토 전까지 비워 둔다.",
+    "AI/작성자 초안은 사람 검수 전 공개하지 않는다.",
+    "학습 경험적 오개념 빈도나 교수 효과를 주장하지 않는다."
+  ],
+  "sourceReferences": [
+    "moe-2022-curriculum-notice",
+    "ncic-math-curriculum-catalog",
+    "moe-2028-csat-framework",
+    "moe-2028-sample-question-guide",
+    "pedagogy-and-misconception-evidence-status",
+    "unit-scope-and-prerequisite-design-note"
+  ]
+}

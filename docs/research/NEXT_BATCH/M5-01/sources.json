@@ -1,0 +1,68 @@
+[
+  {
+    "id": "moe-2022-curriculum-notice",
+    "title": "[교육부 고시 제2022-33호] 초중등학교 교육과정 총론 및 각론 고시",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302&s=moe",
+    "publishedDate": "2022-12-22",
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "교육부 공식 페이지의 고시 본문에서 수학과 교육과정이 별책 8임, 등록일 및 별책 5~14 첨부 ZIP 게시를 확인했다. 대용량 ZIP 안의 별책 8 PDF/HWP 원문 조항 및 성취기준 코드는 열어 대조하지 않았다.",
+    "rights": "교육부 페이지의 게시·첨부 존재만 기록한다. 첨부 원문의 개별 재사용 조건은 확인하지 않았으므로 원문이나 문항을 복제·재배포하지 않는다.",
+    "use": "수학과 공식 교육과정 문서 위치와 고시 배경만 제공한다. M5-01의 개별 성취기준·공식 매핑을 입증하지 않는다."
+  },
+  {
+    "id": "ncic-math-curriculum-catalog",
+    "title": "NCIC 통합검색: [별책8] 수학과 교육과정 PDF/HWP 항목",
+    "publisher": "국가교육과정정보센터(NCIC)",
+    "url": "https://ncic.re.kr/srch/total_search.do?search=%EC%88%98%ED%95%99",
+    "publishedDate": null,
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "NCIC 공식 검색 페이지에 '[별책8] 수학과 교육과정.pdf/.hwp' 첨부파일 항목이 표시되는 것을 확인했다. 검색 결과의 원문 첨부를 내려받아 버전과 조항을 대조하지 않았다.",
+    "rights": "카탈로그 항목만 기록한다. 원문 파일의 재사용 조건을 확인하지 않았으며 원문·문항을 사용하지 않는다.",
+    "use": "공식 원문을 확인할 경로의 존재만 기록한다. M5-01의 세부 내용이나 성취기준을 뒷받침하지 않는다."
+  },
+  {
+    "id": "moe-2028-csat-framework",
+    "title": "2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 내신 5등급 체제 확정",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+    "publishedDate": "2023-12-27",
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "교육부 공식 보도자료에서 2028 입시부터 국어·수학·사회·과학 선택과목 없는 통합형 수능, 심화수학(미적분Ⅱ·기하) 제외라는 정책 발표를 확인했다. 첨부 확정안은 열어 조항별 대조하지 않았다.",
+    "rights": "공식 페이지에 공공누리 출처표시 안내가 있으나 정책 사실만 요약한다. 첨부나 시험 문항은 복제하지 않는다.",
+    "use": "2028 대입 제도 배경이다. M5-01의 수능 직접 출제 여부, 학습 필수성 또는 성취기준을 입증하지 않는다."
+  },
+  {
+    "id": "moe-2028-sample-question-guide",
+    "title": "2028학년도 대입, 이렇게 준비하세요",
+    "publisher": "대한민국 교육부",
+    "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402",
+    "publishedDate": "2025-04-15",
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "교육부 공식 안내에서 2028학년도 수능 출제과목 변동 영역 예시문항 안내와 별첨 PDF 링크의 존재를 확인했다. 30.1MB PDF를 열어 문항 내용·범위를 분석하지 않았다.",
+    "rights": "페이지에서 공공누리 출처표시 안내를 확인했다. 이 조사에서는 예시문항의 내용·도형·표현을 복제하거나 변형하지 않는다.",
+    "use": "예시문항 안내 자료의 존재만 확인한다. M5-01와 특정 문항 유형의 출제 연계를 주장하지 않는다."
+  },
+  {
+    "id": "pedagogy-and-misconception-evidence-status",
+    "title": "M5-01 개념별 교수법·오개념 연구 확인 상태",
+    "publisher": "Research & Content 조사 기록",
+    "url": null,
+    "publishedDate": null,
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "이번 조사에서 M5-01의 특정 교수법 효과 또는 학생 오개념 빈도를 직접 입증하는 단원별 실증 연구를 확인하지 않았다. 보고서의 정확성 주의점은 수학 정의와 선수 관계에 기반한 설계 가설이다.",
+    "rights": "외부 연구 결과나 빈도 통계로 가장하지 않으며, 제3자 문항을 복제하지 않는다.",
+    "use": "후속 콘텐츠의 주의점 및 misconception 후보를 가설로 표기한다. M5-01에 대한 경험적 일반화 근거로 사용하지 않는다."
+  },
+  {
+    "id": "unit-scope-and-prerequisite-design-note",
+    "title": "M5-01 제안 범위·선수 연결 조사 메모",
+    "publisher": "Research & Content 조사 기록",
+    "url": null,
+    "publishedDate": null,
+    "checkedDate": "2026-11-05",
+    "verificationStatus": "프로젝트의 제안 메타데이터상 단원명은 '지수의 확장', 선수 연결은 M1-04, M2-08, 핵심 주제는 정수·유리수 지수, 거듭제곱근로 확인했다. 이는 제공된 프로젝트 명세의 기록이며 공식 교육과정 원문과 일치함을 뜻하지 않는다.",
+    "rights": "내부 명세 메타데이터를 요약하며 외부 자료를 재사용하지 않는다.",
+    "use": "조사 범위를 고정하고 단원별 공백을 표시한다. 공식 코드/성취기준 매핑으로 승격하지 않는다."
+  }
+]

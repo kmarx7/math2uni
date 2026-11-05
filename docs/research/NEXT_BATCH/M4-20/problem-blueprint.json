@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M4-20",
+  "unitTitle": "공통수학2 연결 점검",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m4-20-family-1",
+      "status": "draft",
+      "title": "좌표·그래프·집합으로 표현된 동일한 조건을 상호 변환",
+      "reasoningStructure": "좌표·그래프·집합으로 표현된 동일한 조건을 상호 변환",
+      "thinkingType": "기초 계산",
+      "skillId": "m4-20-skill-1",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m420-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x축 위의 모든 점 P(x,y)를 좌표 조건으로 쓰면?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "x축 위 점의 세로좌표는 0이다.",
+          "skillLabel": "m4-20-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x=0"
+            },
+            {
+              "id": "B",
+              "label": "x=y"
+            },
+            {
+              "id": "C",
+              "label": "y=0"
+            }
+          ]
+        },
+        {
+          "id": "m420-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "중심이 원점이고 반지름이 3인 원 위 점의 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "원점으로부터 거리 3이므로 x²+y²=3²이다.",
+          "skillLabel": "m4-20-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x²+y²=9"
+            },
+            {
+              "id": "B",
+              "label": "x+y=3"
+            },
+            {
+              "id": "C",
+              "label": "x²+y²≤9"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-20-family-2",
+      "status": "draft",
+      "title": "기존 정의역 제한들의 교집합을 단계적으로 구함",
+      "reasoningStructure": "기존 정의역 제한들의 교집합을 단계적으로 구함",
+      "thinkingType": "표현 변환",
+      "skillId": "m4-20-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m420-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "√(x−1)과 1/(x−3)이 모두 정의되도록 하는 x의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "첫 조건은 x≥1, 두 번째는 x≠3이므로 교집합은 [1,∞)에서 3을 뺀 집합이다.",
+          "skillLabel": "m4-20-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>1, x≠3"
+            },
+            {
+              "id": "B",
+              "label": "x≥1, x≠3"
+            },
+            {
+              "id": "C",
+              "label": "x≥1"
+            }
+          ]
+        },
+        {
+          "id": "m420-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "\\(\\frac{\\sqrt{4-x}}{x+2}\\)가 실수로 정의되는 x의 범위는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "4−x≥0이고 분모 x+2는 0이 아니어야 한다.",
+          "skillLabel": "m4-20-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x≤4, x≠−2"
+            },
+            {
+              "id": "B",
+              "label": "x<4, x≠−2"
+            },
+            {
+              "id": "C",
+              "label": "x≤4"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m4-20-family-3",
+      "status": "draft",
+      "title": "풀이 중 잘못 적용된 조건을 찾아 최초 오류와 복구 근거를 설명",
+      "reasoningStructure": "풀이 중 잘못 적용된 조건을 찾아 최초 오류와 복구 근거를 설명",
+      "thinkingType": "조건 분석",
+      "skillId": "m4-20-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m420-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "학생: “√(x+5)는 x+5>0이므로 x>−5.” 최초 오류는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "실수 제곱근은 근호 안이 0 이상이면 정의되므로 x=−5도 포함된다.",
+          "skillLabel": "m4-20-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "근호 안이 양수여도 정의되지 않는다."
+            },
+            {
+              "id": "B",
+              "label": "x는 모든 실수다."
+            },
+            {
+              "id": "C",
+              "label": "근호 안이 0인 경우를 제외했다."
+            }
+          ]
+        },
+        {
+          "id": "m420-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "학생이 y=√(x−2)를 그래프로 나타내며 (1,1)을 포함했다. 무엇이 잘못됐나?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "x=1이면 근호 안이 −1이므로 실수 함수값이 없다.",
+          "skillLabel": "m4-20-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "점의 y좌표는 1이면 안 된다."
+            },
+            {
+              "id": "B",
+              "label": "x=1은 정의역 x≥2에 속하지 않는다."
+            },
+            {
+              "id": "C",
+              "label": "이 함수의 정의역은 x≤2다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "Curriculum 명세의 세 가지 사고 원형 각각에 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 원문 개별 매핑 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}

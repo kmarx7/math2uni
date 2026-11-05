@@ -37,14 +37,15 @@ describe("M1 proposal preview boundary", () => {
     }
   });
 
-  it("validates 480 practice and 30 separate assessment draft instances", () => {
-    expect(proposalProblems).toHaveLength(480);
+  it("validates 510 practice and 30 separate assessment draft instances", () => {
+    expect(proposalProblems).toHaveLength(510);
     expect(proposalAssessmentProblems).toHaveLength(30);
-    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(510);
-    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(480);
+    expect(new Set([...proposalProblems, ...proposalAssessmentProblems].map((problem) => problem.id )).size).toBe(540);
+    expect(new Set(proposalProblems.map((problem) => problem.prompt.replace(/[\s,]/g, ""))).size).toBe(510);
     expect(proposalProblems.every((problem) => problem.status === "draft" && problem.reviewHistory.length === 0)).toBe(true);
     for (const problem of proposalProblems) {
-      expect(curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId)).toBe(true);
+      const isRegisteredSkill = curriculumProposal.curriculum.units.find((unit) => unit.id === problem.unitId)?.concepts.some((skill) => skill.id === problem.skillId) ?? false;
+      expect(problem.unitId === "M4-20" ? problem.skillId.startsWith("m4-20-local-review-") && !isRegisteredSkill : isRegisteredSkill).toBe(true);
       expect(proposalProblemFamilies.some((family) => family.id === problem.familyId)).toBe(true);
       expect(gradeAnswer(problem.answerRule, problem.answerRule.expected).status).toBe("correct");
       expect(problem.explanation).toContain(problem.answerDisplay);

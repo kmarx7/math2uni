@@ -1,0 +1,319 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-02",
+  "unitTitle": "실수 지수와 지수법칙",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-02-family-1",
+      "status": "draft",
+      "title": "양수 밑의 실수 지수 근삿값과 증가·감소를 표·그래프에서 해석",
+      "reasoningStructure": "양수 밑의 실수 지수 근삿값과 증가·감소를 표·그래프에서 해석",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-02-skill-1",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m502-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "밑이 3인 지수함수에서 x가 증가할 때 3ˣ은 어떻게 변하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "밑이 1보다 큰 지수함수는 실수 지수 범위에서 증가한다.",
+          "skillLabel": "m5-02-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "감소한다."
+            },
+            {
+              "id": "B",
+              "label": "항상 일정하다."
+            },
+            {
+              "id": "C",
+              "label": "증가한다."
+            }
+          ]
+        },
+        {
+          "id": "m502-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "(1/2)ˣ은 x가 증가할 때 어떻게 변하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "0<a<1인 지수함수 aˣ은 감소한다.",
+          "skillLabel": "m5-02-skill-1",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "증가한다."
+            },
+            {
+              "id": "B",
+              "label": "감소한다."
+            },
+            {
+              "id": "C",
+              "label": "x>0에서만 정의된다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-02-family-2",
+      "status": "draft",
+      "title": "지수법칙 여러 개 중 적용할 법칙과 양수 밑 조건을 선택",
+      "reasoningStructure": "지수법칙 여러 개 중 적용할 법칙과 양수 밑 조건을 선택",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-02-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m502-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "2ˣ·2³을 한 거듭제곱으로 나타내면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "같은 밑의 곱은 지수를 더한다.",
+          "skillLabel": "m5-02-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2^(x+3)"
+            },
+            {
+              "id": "B",
+              "label": "2^(3x)"
+            },
+            {
+              "id": "C",
+              "label": "2^(x−3)"
+            }
+          ]
+        },
+        {
+          "id": "m502-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "a⁵/a² (a>0)을 간단히 하면?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "rationale": "같은 밑의 몫은 지수를 빼므로 a^(5−2)=a³이다.",
+          "skillLabel": "m5-02-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a^(5/2)"
+            },
+            {
+              "id": "B",
+              "label": "a⁷"
+            },
+            {
+              "id": "C",
+              "label": "a³"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-02-family-3",
+      "status": "draft",
+      "title": "잘못된 지수법칙 풀이에서 조건 누락 또는 지수 계산 오류를 찾음",
+      "reasoningStructure": "잘못된 지수법칙 풀이에서 조건 누락 또는 지수 계산 오류를 찾음",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-02-skill-2",
+      "distinctFrom": "핵심 추론이 다른 나머지 원형과 구분한다. 숫자만 바꾼 문항은 이 가족 안의 변형 인스턴스일 뿐 새 가족이 아니다.",
+      "items": [
+        {
+          "id": "m502-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "학생이 a²·a³=a⁶이라고 썼다. 오류를 고치면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "rationale": "곱에서는 지수를 더하므로 2+3=5이다.",
+          "skillLabel": "m5-02-skill-2",
+          "misconceptionHypothesis": "오답 선택지는 조건·표현·계산에서 가능한 혼동을 진단하기 위한 설계 가설이며, 실제 발생 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 계산 점검 완료; 독립 교육 검토 및 사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a⁵"
+            },
+            {
+              "id": "B",
+              "label": "a⁶이 맞다."
+            },
+            {
+              "id": "C",
+              "label": "a⁵가 아니라 a¹이다."
+            }
+          ]
+        },
+        {
+          "id": "m502-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "표준 실수 지수함수 a^x를 모든 실수 x에 대해 실수값으로 정의하려면 밑 a에 어떤 조건을 두어야 하는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "rationale": "표준 실수 지수함수 a^x를 모든 실수 x에 대해 실수값으로 정의할 때는 a>0을 둔다. a=0은 음의 지수에서 정의되지 않고, 음의 밑은 모든 실수 지수에 대해 실수값을 주지 않는다. 이 조건은 √a의 a≥0 정의 조건과 구별한다.",
+          "skillLabel": "m5-02-skill-2",
+          "misconceptionHypothesis": "제곱근의 정의 조건 a≥0을 모든 실수 지수의 밑 조건과 혼동할 수 있다는 설계 가설.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and direct substitution/definition check",
+            "result": "작성자 자체 정의 점검: 모든 실수 지수에서 표준 실수값을 갖는 조건은 a>0. √a의 조건과 구분. 독립 교육 검토 및 사람 검수 대기.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "a≥0이면 충분하다."
+            },
+            {
+              "id": "B",
+              "label": "a>0이어야 한다."
+            },
+            {
+              "id": "C",
+              "label": "a≠0이면 충분하다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "counts": {
+    "distinctFamilies": 3,
+    "draftItems": 6,
+    "humanApprovedItems": 0,
+    "assessmentItems": 0
+  },
+  "requiredPractice": {
+    "legacyBaseline": 6,
+    "extensionRecommended": 6,
+    "extensionBankCount": 6,
+    "advancedOptional": true,
+    "explanation": "Curriculum 명세의 세 가지 사고 원형 각각에 두 개의 검수 대기 연습 초안을 연결했다. 필수 연습량과 문제은행 규모를 구분하며 평가 문항은 0개다."
+  },
+  "sourceStatus": "공식 원문 개별 매핑 미검증. 자체 제작 draft only; 제3자 문항 미사용. 오답 가설은 경험적 통계가 아님."
+}
