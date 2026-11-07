@@ -1,4 +1,5 @@
 import { lessonForDelivery } from "@/modules/content/server";
+import { contentSchema } from "@/contracts";
 import { getLessonOutline } from "@/data/content-index";
 import { lessons } from "@/data/content";
 import masterDesign from "@/data/master-design.json";
@@ -19,12 +20,32 @@ import m510Spec from "../docs/specifications/NEXT_BATCH/M5-10/lesson-spec.json";
 import m511Spec from "../docs/specifications/NEXT_BATCH/M5-11/lesson-spec.json";
 import m512Spec from "../docs/specifications/NEXT_BATCH/M5-12/lesson-spec.json";
 import m513Spec from "../docs/specifications/NEXT_BATCH/M5-13/lesson-spec.json";
+import m514Spec from "../docs/specifications/NEXT_BATCH/M5-14/lesson-spec.json";
+import m515Spec from "../docs/specifications/NEXT_BATCH/M5-15/lesson-spec.json";
+import m516Spec from "../docs/specifications/NEXT_BATCH/M5-16/lesson-spec.json";
+import m517Spec from "../docs/specifications/NEXT_BATCH/M5-17/lesson-spec.json";
+import m518Spec from "../docs/specifications/NEXT_BATCH/M5-18/lesson-spec.json";
 import blueprint from "../docs/specifications/M0-01/problem-blueprint.json";
 import m509Blueprint from "../docs/research/NEXT_BATCH/M5-09/problem-blueprint.json";
 import m510Blueprint from "../docs/research/NEXT_BATCH/M5-10/problem-blueprint.json";
 import m511Blueprint from "../docs/research/NEXT_BATCH/M5-11/problem-blueprint.json";
 import m512Blueprint from "../docs/research/NEXT_BATCH/M5-12/problem-blueprint.json";
 import m513Blueprint from "../docs/research/NEXT_BATCH/M5-13/problem-blueprint.json";
+import m514Blueprint from "../docs/research/NEXT_BATCH/M5-14/problem-blueprint.json";
+import m515Blueprint from "../docs/research/NEXT_BATCH/M5-15/problem-blueprint.json";
+import m516Blueprint from "../docs/research/NEXT_BATCH/M5-16/problem-blueprint.json";
+import m517Blueprint from "../docs/research/NEXT_BATCH/M5-17/problem-blueprint.json";
+import m518Blueprint from "../docs/research/NEXT_BATCH/M5-18/problem-blueprint.json";
+import m514Content from "../docs/specifications/NEXT_BATCH/M5-14/content-draft.json";
+import m515Content from "../docs/specifications/NEXT_BATCH/M5-15/content-draft.json";
+import m516Content from "../docs/specifications/NEXT_BATCH/M5-16/content-draft.json";
+import m517Content from "../docs/specifications/NEXT_BATCH/M5-17/content-draft.json";
+import m518Content from "../docs/specifications/NEXT_BATCH/M5-18/content-draft.json";
+import m514Runtime from "@/data/proposal-lessons/drafts/M5-14.json";
+import m515Runtime from "@/data/proposal-lessons/drafts/M5-15.json";
+import m516Runtime from "@/data/proposal-lessons/drafts/M5-16.json";
+import m517Runtime from "@/data/proposal-lessons/drafts/M5-17.json";
+import m518Runtime from "@/data/proposal-lessons/drafts/M5-18.json";
 import draft from "../docs/specifications/M0-01/content-draft.json";
 import approval from "../docs/reviews/M0-01/approved-content.json";
 import instruction from "@/data/m001-instruction.json";
@@ -55,6 +76,11 @@ const proposalLessonSpecs = [
   m511Spec,
   m512Spec,
   m513Spec,
+  m514Spec,
+  m515Spec,
+  m516Spec,
+  m517Spec,
+  m518Spec,
 ];
 
 const proposalProblemBlueprints = [
@@ -63,7 +89,15 @@ const proposalProblemBlueprints = [
   m511Blueprint,
   m512Blueprint,
   m513Blueprint,
+  m514Blueprint,
+  m515Blueprint,
+  m516Blueprint,
+  m517Blueprint,
+  m518Blueprint,
 ];
+
+const proposalContents = [m514Content, m515Content, m516Content, m517Content, m518Content];
+const proposalRuntimeContents = [m514Runtime, m515Runtime, m516Runtime, m517Runtime, m518Runtime];
 
 afterEach(() => vi.unstubAllEnvs());
 describe("cross-agent handoff contracts", () => {
@@ -187,7 +221,23 @@ describe("cross-agent handoff contracts", () => {
       expect(proposalSpec.reviewStatus).toBe("draft");
       expect(proposalSpec.publicationApproved).toBe(false);
       expect(proposalSpec.designReview.humanPublicationApproval).toBe(false);
+      if (proposalSpec.designReview.decision !== undefined) {
+        expect(proposalSpec.designReview.decision).toBe("implementation-ready");
+        expect(proposalSpec.designReview.status).toBe("ai-reviewed");
+      }
       expect(proposalSpec.implementationReadiness.publicationReady).toBe(false);
+    }
+  });
+
+  it("keeps M5-14~18 renderer data schema-valid and identical to curriculum drafts", () => {
+    for (const [index, input] of proposalContents.entries()) {
+      expect(() => contentSchema.parse(proposalRuntimeContents[index])).not.toThrow();
+      expect(proposalRuntimeContents[index]).toEqual(input);
+      expect(proposalRuntimeContents[index].unitId).toBe(`M5-${String(index + 14).padStart(2, "0")}`);
+      expect(proposalRuntimeContents[index].blocks).toHaveLength(8);
+      expect(proposalRuntimeContents[index].blocks.some((block) => block.type === "AssessmentBlock")).toBe(false);
+      const lab = proposalRuntimeContents[index].blocks.find((block) => block.type === "InteractiveBlock");
+      expect(lab?.type === "InteractiveBlock" ? lab.interaction : undefined).toBe(`m5-${index + 14}-visual`);
     }
   });
 

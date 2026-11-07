@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-17",
+  "unitTitle": "코사인법칙",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-17-family-1",
+      "status": "draft",
+      "title": "높이 전개에서 코사인법칙 구조 찾기",
+      "reasoningStructure": "높이 투영과 피타고라스 전개에서 교차항의 부호·크기를 복원한다.",
+      "thinkingType": "원리 유도",
+      "skillId": "m5-17-skill-1",
+      "distinctFrom": "이 가족은 높이 투영과 피타고라스 전개에서 교차항의 부호·크기를 복원한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m517-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "높이를 그어 c²=(a−b cos C)²+(b sin C)²로 표현했다. 이를 간단히 정리한 코사인법칙은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "c²=a²+b²−2ab cos C",
+          "rationale": "전개하면 a²−2ab cos C+b²cos²C+b²sin²C다. cos²C+sin²C=1이므로 마지막 두 항은 b²가 되고, c²=a²+b²−2ab cos C다.",
+          "skillLabel": "m5-17-skill-1",
+          "misconceptionHypothesis": "투영 제곱식의 전개와 삼각항등식 결합으로 교차항 계수·부호를 도출하는지 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "c²=a²+b²−2ab cos C"
+            },
+            {
+              "id": "B",
+              "label": "c²=a²+b²+2ab cos C"
+            },
+            {
+              "id": "C",
+              "label": "c²=a²+b²−ab cos C"
+            }
+          ]
+        },
+        {
+          "id": "m517-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "높이를 그어 c²=(a−b cos C)²+(b sin C)²로 나타냈다. 전개하고 sin²C+cos²C=1을 적용할 때 코사인법칙의 교차항은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "−2ab cos C",
+          "rationale": "(a−b cos C)²=a²−2ab cos C+b²cos²C다. 더해지는 b²sin²C와 항등식을 적용하면 b²(cos²C+sin²C)=b²가 되어 c²=a²+b²−2ab cos C다. 따라서 교차항은 −2ab cos C다.",
+          "skillLabel": "m5-17-skill-1",
+          "misconceptionHypothesis": "높이 투영식에서 제곱 전개의 교차항 부호·계수와 sin²C+cos²C=1의 결합을 혼동하는지 확인하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "+2ab cos C"
+            },
+            {
+              "id": "B",
+              "label": "−2ab cos C"
+            },
+            {
+              "id": "C",
+              "label": "−ab cos C"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-17-family-2",
+      "status": "draft",
+      "title": "두 변과 끼인각에서 대변 구하기",
+      "reasoningStructure": "코사인법칙에 두 변과 그 사이각을 대입하고 양의 제곱근을 취한다.",
+      "thinkingType": "계산·검산",
+      "skillId": "m5-17-skill-2",
+      "distinctFrom": "이 가족은 코사인법칙에 두 변과 그 사이각을 대입하고 양의 제곱근을 취한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m517-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "a=5, b=7, 끼인각 C=60°일 때 대변 c는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "√39",
+          "rationale": "c²=25+49−2·5·7·(1/2)=39다. 길이는 양수이므로 c=√39다.",
+          "skillLabel": "m5-17-skill-2",
+          "misconceptionHypothesis": "끼인각이 아닌 각을 대입하거나 c²을 c로 착각할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "39"
+            },
+            {
+              "id": "B",
+              "label": "√74"
+            },
+            {
+              "id": "C",
+              "label": "√39"
+            }
+          ]
+        },
+        {
+          "id": "m517-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "a=7, b=8, 끼인각 C=120°일 때 대변 c는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "13",
+          "rationale": "c²=49+64−2·7·8·(−1/2)=169이므로 c=13이다. 양의 제곱근을 선택한다.",
+          "skillLabel": "m5-17-skill-2",
+          "misconceptionHypothesis": "끼인각이 아닌 각을 대입하거나 c²을 c로 착각할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "13"
+            },
+            {
+              "id": "B",
+              "label": "√57"
+            },
+            {
+              "id": "C",
+              "label": "1"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-17-family-3",
+      "status": "draft",
+      "title": "세 변에서 각의 종류 판정",
+      "reasoningStructure": "삼각형 부등식과 코사인 값으로 각의 종류 또는 크기를 추론한다.",
+      "thinkingType": "역추론",
+      "skillId": "m5-17-skill-2",
+      "distinctFrom": "이 가족은 삼각형 부등식과 코사인 값으로 각의 종류 또는 크기를 추론한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m517-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "변 a=3, b=4, c=5에서 c의 맞은편 각 C는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "90°",
+          "rationale": "cos C=(a²+b²−c²)/(2ab)=(9+16−25)/24=0이므로 C=90°다.",
+          "skillLabel": "m5-17-skill-2",
+          "misconceptionHypothesis": "분모 2ab를 빠뜨리거나 삼각형이 아닌 세 변을 계산에 사용하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "60°"
+            },
+            {
+              "id": "B",
+              "label": "90°"
+            },
+            {
+              "id": "C",
+              "label": "둔각"
+            }
+          ]
+        },
+        {
+          "id": "m517-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "세 길이 a=3, b=4, c=6에서 c의 맞은편 각 C의 종류는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "둔각",
+          "rationale": "삼각형 부등식 3+4>6을 만족한다. c²=36>a²+b²=25이므로 C는 둔각이며 cos C=(25−36)/24=−11/24다.",
+          "skillLabel": "m5-17-skill-2",
+          "misconceptionHypothesis": "분모 2ab를 빠뜨리거나 삼각형이 아닌 세 변을 계산에 사용하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예각"
+            },
+            {
+              "id": "B",
+              "label": "삼각형을 만들 수 없음"
+            },
+            {
+              "id": "C",
+              "label": "둔각"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

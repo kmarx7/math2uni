@@ -1,0 +1,100 @@
+{
+  "researchVersion": "0.1.0-draft",
+  "unitId": "M5-18",
+  "title": "삼각형의 넓이와 활용",
+  "checkedAt": "2026-11-07",
+  "sources": [
+    {
+      "id": "src-moe-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "교육부",
+      "publishedAt": "2022-12-22",
+      "verification": "direct-page-opened",
+      "verifiedClaims": [
+        "페이지 본문에서 수학과 교육과정은 별책 8이라고 확인",
+        "수학 별책을 포함하는 15.1MB ZIP 첨부 링크가 게시된 것을 확인"
+      ],
+      "notVerified": [
+        "ZIP 첨부 및 별책 8 본문은 열거나 검토하지 못함",
+        "개별 단원 성취기준 및 공식 코드 연결은 확인하지 않음"
+      ],
+      "rights": "공식 고시 자료. 페이지와 첨부는 출처만 참고하고 본문을 복제하지 않음. 별책별 재이용 조건은 확인하지 않음.",
+      "use": "교육과정 존재·출처 확인에만 사용; 단원 매핑 근거로 사용하지 않음."
+    },
+    {
+      "id": "src-soldic-2025",
+      "title": "Students’ Misconceptions in Right Triangle Trigonometry",
+      "url": "https://hrcak.srce.hr/index.php/clanak/507696",
+      "doi": "10.32728/mo.20.1.2025.04",
+      "publisher": "Hrčak / Metodički obzori",
+      "publishedAt": "2025",
+      "verification": "direct-abstract-opened",
+      "verifiedClaims": [
+        "크로아티아 문법학교 1학년 학생 58명 대상",
+        "삼각비 정의, 예각의 여각 관계, 사인·코사인 관계에서 오개념 분석"
+      ],
+      "notVerified": [
+        "고등학교 교육과정과 수능 표본으로 일반화 불가",
+        "삼각형의 사인·코사인 법칙을 직접 검증한 연구가 아님"
+      ],
+      "rights": "논문 초록과 서지정보만 요약. 원문 문항·텍스트 재사용 없음; 원문 권리 조건은 별도 확인되지 않음.",
+      "use": "선수 삼각비 개념 점검 가설의 참고자료."
+    },
+    {
+      "id": "src-bilik-durmaz-2022",
+      "title": "Pre-Service Teachers’ Knowledge Regarding the Area of Triangle",
+      "url": "https://www.scimath.net/article/pre-service-teachers-knowledge-regarding-the-area-of-triangle-11716",
+      "doi": "10.30935/scimath/11716",
+      "publisher": "European Journal of Science and Mathematics Education",
+      "publishedAt": "2022-02-09",
+      "verification": "direct-abstract-opened",
+      "verifiedClaims": [
+        "예비 중학교 수학교사 2명의 사례연구",
+        "학생의 삼각형 넓이 오개념·어려움을 예비교사가 인식하는 방식에서 높이 개념 문제가 두드러짐"
+      ],
+      "notVerified": [
+        "학생 직접 표본 연구가 아니며 단 두 명의 예비교사 사례라 빈도·일반화에 한계",
+        "삼각함수 넓이 공식에 특화된 결과가 아님"
+      ],
+      "rights": "페이지에서 Open Access 확인, 해당 저널 페이지는 CC BY라고 표시. 초록만 요약하고 원문 문제를 복제하지 않음.",
+      "use": "M5-18에서 높이·포함각·넓이 표현을 분리해 지도할 가설."
+    },
+    {
+      "id": "src-moe-2028-framework",
+      "title": "2028 입시부터 선택과목 없는 통합형 수능 확정 교육부 보도자료",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2023-12-27",
+      "verification": "direct-page-opened",
+      "verifiedClaims": [
+        "2028 입시부터 선택과목 없는 통합형 수능 계획",
+        "심화수학(미적분Ⅱ·기하) 제외 내용"
+      ],
+      "notVerified": [
+        "세부 문항 출제 범위, 개별 단원·문항 형태 연결은 검증하지 않음",
+        "첨부 HWP/HWPX 미열람"
+      ],
+      "rights": "보도자료 페이지의 교육부 안내는 공공누리 출처표시 조건으로 표시됨. 직접 인용·복제 대신 사실관계와 링크만 기록.",
+      "use": "큰 틀의 시험 제도 맥락; 이 다섯 단원이 실제 출제된다는 근거가 아님."
+    },
+    {
+      "id": "src-moe-2028-sample",
+      "title": "2028학년도 대입, 이렇게 준비하세요 (2028 수능 예시문항 안내)",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2025-04-15",
+      "verification": "direct-page-opened; attachment-link-confirmed; attachment-content-not-opened",
+      "verifiedClaims": [
+        "2028 수능부터 출제과목 등이 변동되는 영역의 예시문항 문제지를 안내한다고 페이지에 게시",
+        "30.1MB 2028학년도 수능 예시문항 안내 PDF 첨부가 게시된 것을 확인"
+      ],
+      "notVerified": [
+        "PDF 본문을 열지 않아 수학 문항 내용·범위·단원 연결은 검증하지 않음"
+      ],
+      "rights": "교육부 페이지는 공공누리 출처표시 조건으로 표시. 첨부 PDF 권리·재배포 허용 범위는 별도로 확인하지 않으며 문항을 복제하지 않음.",
+      "use": "예시문항 자료가 존재한다는 점만 확인. 단원별 출제 연계 근거로 사용하지 않음."
+    }
+  ],
+  "rightsAndUsePolicy": "외부 기출·교재 문항을 복제하지 않는다. 아래 초안은 자체 제작이며 연구문헌은 맥락·오개념 진단을 위한 근거로만 요약한다. 공식 문서 첨부 본문을 미열람이면 미검증으로 둔다."
+}

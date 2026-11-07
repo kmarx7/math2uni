@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-15",
+  "unitTitle": "삼각방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-15-family-1",
+      "status": "draft",
+      "title": "단위원 교점으로 구간 해 찾기",
+      "reasoningStructure": "단위원 좌표값을 사용해 한 구간의 해를 모두 찾는다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-15-skill-1",
+      "distinctFrom": "이 가족은 단위원 좌표값을 사용해 한 구간의 해를 모두 찾는다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m515-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "0≤x<2π에서 sin x=√2/2의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "x=π/4, 3π/4",
+          "rationale": "단위원의 y좌표가 √2/2인 두 점은 제1·2사분면이며 기준각은 π/4다. 두 해 모두 구간 안에 있다.",
+          "skillLabel": "m5-15-skill-1",
+          "misconceptionHypothesis": "두 교점 중 한 해를 빠뜨리거나 각과 사분면을 혼동할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x=π/4, 3π/4"
+            },
+            {
+              "id": "B",
+              "label": "x=π/4"
+            },
+            {
+              "id": "C",
+              "label": "x=5π/4, 7π/4"
+            }
+          ]
+        },
+        {
+          "id": "m515-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "0≤x<2π에서 cos x=−√3/2의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "x=5π/6, 7π/6",
+          "rationale": "x좌표 −√3/2인 점은 제2·3사분면에 있고 기준각은 π/6다. 따라서 해는 5π/6과 7π/6이다.",
+          "skillLabel": "m5-15-skill-1",
+          "misconceptionHypothesis": "두 교점 중 한 해를 빠뜨리거나 각과 사분면을 혼동할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x=π/6, 11π/6"
+            },
+            {
+              "id": "B",
+              "label": "x=5π/6, 7π/6"
+            },
+            {
+              "id": "C",
+              "label": "x=5π/6"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-15-family-2",
+      "status": "draft",
+      "title": "일반해를 지정 구간과 교차",
+      "reasoningStructure": "한 주기 해의 주기 반복을 정수 k로 나타낸 뒤 지정 구간만 선택한다.",
+      "thinkingType": "구간 추론",
+      "skillId": "m5-15-skill-2",
+      "distinctFrom": "이 가족은 한 주기 해의 주기 반복을 정수 k로 나타낸 뒤 지정 구간만 선택한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m515-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "sin x=1/2의 해 중 2π≤x<4π를 만족하는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "13π/6, 17π/6",
+          "rationale": "기본 해는 π/6+2kπ, 5π/6+2kπ다. k=1이면 13π/6,17π/6이 구간에 들고 다른 정수 k의 해는 벗어난다.",
+          "skillLabel": "m5-15-skill-2",
+          "misconceptionHypothesis": "주기 반복을 빠뜨리거나 구간의 끝점 조건을 무시할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "π/6, 5π/6"
+            },
+            {
+              "id": "B",
+              "label": "25π/6, 29π/6"
+            },
+            {
+              "id": "C",
+              "label": "13π/6, 17π/6"
+            }
+          ]
+        },
+        {
+          "id": "m515-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "cos x=0의 해 중 −π≤x<π에 있는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "−π/2, π/2",
+          "rationale": "일반해는 x=π/2+kπ다. 지정 구간 안에서는 k=−1,0으로 −π/2와 π/2를 얻는다. −π는 해가 아니다.",
+          "skillLabel": "m5-15-skill-2",
+          "misconceptionHypothesis": "주기 반복을 빠뜨리거나 구간의 끝점 조건을 무시할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−π/2, π/2"
+            },
+            {
+              "id": "B",
+              "label": "−π, 0"
+            },
+            {
+              "id": "C",
+              "label": "−π/2, 0"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-15-family-3",
+      "status": "draft",
+      "title": "그래프 부호와 부등식 구간",
+      "reasoningStructure": "파형의 기준선 위·아래 및 정의 불가점을 구간으로 나타낸다.",
+      "thinkingType": "구간 추론",
+      "skillId": "m5-15-skill-2",
+      "distinctFrom": "이 가족은 파형의 기준선 위·아래 및 정의 불가점을 구간으로 나타낸다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m515-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "0≤x≤2π에서 sin x≥1/2의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "[π/6, 5π/6]",
+          "rationale": "한 주기 그래프가 1/2 이상인 구간은 π/6에서 5π/6까지다. 등호를 포함하므로 양 끝이 닫힌다.",
+          "skillLabel": "m5-15-skill-2",
+          "misconceptionHypothesis": "등호 경계를 빠뜨리거나 tan 정의 불가점을 해에 포함할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(π/6, 5π/6)"
+            },
+            {
+              "id": "B",
+              "label": "[π/6, 5π/6]"
+            },
+            {
+              "id": "C",
+              "label": "[5π/6, 11π/6]"
+            }
+          ]
+        },
+        {
+          "id": "m515-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "−π≤x<π에서 tan x<0인 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "(−π/2,0) ∪ (π/2,π)",
+          "rationale": "탄젠트가 음수인 제2·4사분면에 해당한다. tan은 ±π/2에서 정의되지 않고 부등호가 엄격하므로 0, π도 포함하지 않는다.",
+          "skillLabel": "m5-15-skill-2",
+          "misconceptionHypothesis": "등호 경계를 빠뜨리거나 tan 정의 불가점을 해에 포함할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(−π,−π/2) ∪ (0,π/2)"
+            },
+            {
+              "id": "B",
+              "label": "[−π/2,0] ∪ [π/2,π)"
+            },
+            {
+              "id": "C",
+              "label": "(−π/2,0) ∪ (π/2,π)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

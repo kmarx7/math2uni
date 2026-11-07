@@ -96,10 +96,15 @@ import draftM510 from "@/data/proposal-lessons/drafts/M5-10.json";
 import draftM511 from "@/data/proposal-lessons/drafts/M5-11.json";
 import draftM512 from "@/data/proposal-lessons/drafts/M5-12.json";
 import draftM513 from "@/data/proposal-lessons/drafts/M5-13.json";
+import draftM514 from "@/data/proposal-lessons/drafts/M5-14.json";
+import draftM515 from "@/data/proposal-lessons/drafts/M5-15.json";
+import draftM516 from "@/data/proposal-lessons/drafts/M5-16.json";
+import draftM517 from "@/data/proposal-lessons/drafts/M5-17.json";
+import draftM518 from "@/data/proposal-lessons/drafts/M5-18.json";
 import { draftPreviewUnitIds } from "@/data/proposal-preview-manifest";
 
 const draftLessons = new Map<string, ContentDocument>(
-  [draftM101, draftM102, draftM103, draftM104, draftM105, draftM106, draftM107, draftM108, draftM109, draftM110, draftM111, draftM112, draftM113, draftM114, draftM115, draftM116, draftM117, draftM118, draftM119, draftM120, draftM201, draftM202, draftM203, draftM204, draftM205, draftM206, draftM207, draftM208, draftM209, draftM210, draftM211, draftM212, draftM213, draftM214, draftM215, draftM216, draftM217, draftM218, draftM219, draftM220, draftM301, draftM302, draftM303, draftM304, draftM305, draftM306, draftM307, draftM308, draftM309, draftM310, draftM311, draftM312, draftM313, draftM314, draftM315, draftM316, draftM317, draftM318, draftM319, draftM320, draftM321, draftM322, draftM401, draftM402, draftM403, draftM404, draftM405, draftM406, draftM407, draftM408, draftM409, draftM410, draftM411, draftM412, draftM413, draftM414, draftM415, draftM416, draftM417, draftM418, draftM419, draftM420, draftM501, draftM502, draftM503, draftM504, draftM505, draftM506, draftM507, draftM508, draftM509, draftM510, draftM511, draftM512, draftM513].map((draft) => [
+  [draftM101, draftM102, draftM103, draftM104, draftM105, draftM106, draftM107, draftM108, draftM109, draftM110, draftM111, draftM112, draftM113, draftM114, draftM115, draftM116, draftM117, draftM118, draftM119, draftM120, draftM201, draftM202, draftM203, draftM204, draftM205, draftM206, draftM207, draftM208, draftM209, draftM210, draftM211, draftM212, draftM213, draftM214, draftM215, draftM216, draftM217, draftM218, draftM219, draftM220, draftM301, draftM302, draftM303, draftM304, draftM305, draftM306, draftM307, draftM308, draftM309, draftM310, draftM311, draftM312, draftM313, draftM314, draftM315, draftM316, draftM317, draftM318, draftM319, draftM320, draftM321, draftM322, draftM401, draftM402, draftM403, draftM404, draftM405, draftM406, draftM407, draftM408, draftM409, draftM410, draftM411, draftM412, draftM413, draftM414, draftM415, draftM416, draftM417, draftM418, draftM419, draftM420, draftM501, draftM502, draftM503, draftM504, draftM505, draftM506, draftM507, draftM508, draftM509, draftM510, draftM511, draftM512, draftM513, draftM514, draftM515, draftM516, draftM517, draftM518].map((draft) => [
     draft.unitId,
     contentSchema.parse(draft),
   ]),

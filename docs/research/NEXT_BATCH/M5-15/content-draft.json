@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-15",
+  "unitTitle": "삼각방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "humanVerified": false,
+  "assessmentCount": 0,
+  "content": {
+    "unitId": "M5-15",
+    "version": "0.1.0-draft",
+    "blocks": [
+      {
+        "id": "goals",
+        "title": "학습 목표",
+        "type": "ConceptBlock",
+        "body": "• 주어진 구간과 기준각 조건에서 sin, cos, tan 방정식의 해를 단위원 또는 그래프로 찾는다.\n• 삼각함수 부등식의 해를 주기성과 부등호 방향을 유지해 구간 또는 일반해로 나타낸다."
+      },
+      {
+        "id": "diagnostic",
+        "title": "선수학습 확인",
+        "type": "ExplanationBlock",
+        "body": "이 진단은 준비 상태 안내에만 사용하며 선수 단원의 숙달도나 완료 점수를 변경하지 않습니다.",
+        "readinessCheck": true
+      },
+      {
+        "id": "concept",
+        "title": "개념 설명",
+        "type": "ExplanationBlock",
+        "body": "sin x=c, cos x=c는 단위원에서 각각 수평선 y=c, 수직선 x=c와 원의 교점 각을 찾는다. 한 주기에서 해를 찾은 뒤 주기 2π를 이용해 일반해를 나타낸다. tan x의 주기는 π이며 x=π/2+kπ에서는 정의되지 않는다. 부등식은 그래프의 위·아래 영역과 정의역을 함께 적용한다.",
+        "sections": [
+          {
+            "id": "m5-15-u1",
+            "title": "방정식과 교점",
+            "body": "함수값이 c라는 것은 그래프가 y=c와 만나는 점이라는 뜻이다.",
+            "activity": "수평선을 움직여 교점 개수와 경계값을 관찰한다.",
+            "check": "sin x=1은 한 주기 [0,2π)에서 x=π/2다."
+          },
+          {
+            "id": "m5-15-u2",
+            "title": "단위원에서 sin 해",
+            "body": "sin x=c를 단위원의 y좌표 조건으로 읽고 교점의 각을 찾는다.",
+            "activity": "y=c 선을 단위원에 겹쳐 교점을 표시한다.",
+            "check": "sin x=1/2의 [0,2π) 해는 π/6, 5π/6이다."
+          },
+          {
+            "id": "m5-15-u3",
+            "title": "단위원에서 cos·tan 해",
+            "body": "cos는 x좌표, tan은 sin/cos 비로 읽으며 tan 정의 불가 각을 제외한다.",
+            "activity": "수직선 x=c와 원을 비교하고 tan 수직 점근선에 제외 표식을 둔다.",
+            "check": "cos x=0은 π/2+kπ에서 성립한다."
+          },
+          {
+            "id": "m5-15-u4",
+            "title": "구간 해와 일반해",
+            "body": "한 주기에서 해를 찾고 구간의 양 끝 포함 여부를 적용한다.",
+            "activity": "수직선에 해를 반복 복사하고 지정 구간만 색상 이외 기호로 선택한다.",
+            "check": "sin x=0의 일반해는 x=kπ (k는 정수)다."
+          },
+          {
+            "id": "m5-15-u5",
+            "title": "삼각부등식의 해",
+            "body": "그래프가 기준값보다 위/아래인 x의 구간을 읽고 등호 포함을 판단한다.",
+            "activity": "파형과 수평 기준선 사이의 부호 영역을 구간 카드로 옮긴다.",
+            "check": "sin x≥0의 [0,2π] 해는 [0,π]다."
+          },
+          {
+            "id": "m5-15-u6",
+            "title": "정의역·주기·끝점 검산",
+            "body": "일반해를 요구 구간과 교차시키고 tan 제외점·끝점 포함을 검산한다.",
+            "activity": "후보 해를 원식에 대입하고 정의되지 않는 점을 제거한다.",
+            "check": "tan x=0은 x=kπ이며 x=π/2+kπ는 해가 아니라 정의 불가점이다."
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "title": "시각적 탐구",
+        "type": "InteractiveBlock",
+        "interaction": "m5-15-visual"
+      },
+      {
+        "id": "example",
+        "title": "단계별 예제",
+        "type": "WorkedExampleBlock",
+        "steps": [
+          "0≤x<2π에서 cos x=−1/2를 풀어라.",
+          "단위원에서 x좌표가 −1/2인 점은 제2·제3사분면에 있다. 기준각은 π/3이므로 구간의 해는 x=2π/3, 4π/3이다.",
+          "두 각을 cos에 대입하면 −1/2이고 구간 끝점 조건도 만족한다."
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "연습 계획",
+        "type": "PracticeBlock",
+        "purpose": "practice",
+        "hint": "조건과 사용한 원리를 먼저 말로 설명한 뒤 연습 초안을 풉니다. 문항의 정답과 해설은 제출 전에 전달하지 않습니다."
+      },
+      {
+        "id": "feedback",
+        "title": "오답 교정",
+        "type": "FeedbackBlock",
+        "body": "오답은 조건·표현·계산 단계를 나눠 확인하고 관련 소단원으로 돌아갑니다. 오개념은 발생률 주장이 아닌 점검 가설입니다.\n• sin/cos 방정식의 두 교점 중 하나를 빠뜨린다.\n• 도 단위와 라디안 단위를 섞는다.\n• tan의 주기를 2π로 둔다.\n• 부등식에서 등호 포함 경계를 놓친다.\n• 지정 구간 밖 해나 tan 정의 불가점을 포함한다."
+      },
+      {
+        "id": "review",
+        "title": "복습과 다음 단원",
+        "type": "ReviewBlock",
+        "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+      }
+    ],
+    "learningPhases": [
+      {
+        "id": "phase-01",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "phase-02",
+        "title": "선수학습 진단",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "phase-03",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-04",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-05",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "phase-06",
+        "title": "원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-07",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "phase-08",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "phase-09",
+        "title": "유형별 연습 A",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-10",
+        "title": "유형별 연습 B",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-11",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-12",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "phase-13",
+        "title": "형성평가 설계",
+        "blockId": "feedback",
+        "state": "planned"
+      },
+      {
+        "id": "phase-14",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "phase-15",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ],
+    "contentStatus": "draft",
+    "publicationApproved": false,
+    "approvedContent": null,
+    "note": "Curriculum-authored renderer structure draft; research question source/rights, independent review and implementation validation pending. No human publication approval."
+  },
+  "practicePlan": {
+    "families": [
+      {
+        "familyId": "m5-15-family-1",
+        "skillId": "m5-15-skill-1",
+        "itemIds": [
+          "m515-draft-01",
+          "m515-draft-02"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-15-family-2",
+        "skillId": "m5-15-skill-2",
+        "itemIds": [
+          "m515-draft-03",
+          "m515-draft-04"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-15-family-3",
+        "skillId": "m5-15-skill-2",
+        "itemIds": [
+          "m515-draft-05",
+          "m515-draft-06"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

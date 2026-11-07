@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-18",
+  "unitTitle": "삼각형의 넓이와 활용",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "humanVerified": false,
+  "assessmentCount": 0,
+  "content": {
+    "unitId": "M5-18",
+    "version": "0.1.0-draft",
+    "blocks": [
+      {
+        "id": "goals",
+        "title": "학습 목표",
+        "type": "ConceptBlock",
+        "body": "• 두 변과 끼인각으로 넓이 K=1/2 ab sin C를 높이 공식에서 유도한다.\n• 사인법칙·코사인법칙·넓이 공식을 자료 구조에 맞게 선택하고 결과의 단위와 가능성을 검산한다."
+      },
+      {
+        "id": "diagnostic",
+        "title": "선수학습 확인",
+        "type": "ExplanationBlock",
+        "body": "이 진단은 준비 상태 안내에만 사용하며 선수 단원의 숙달도나 완료 점수를 변경하지 않습니다.",
+        "readinessCheck": true
+      },
+      {
+        "id": "concept",
+        "title": "개념 설명",
+        "type": "ExplanationBlock",
+        "body": "삼각형에서 밑변을 a, 인접 변을 b, 끼인각을 C라 하면 높이 h=b sin C다. K=1/2 ah이므로 K=1/2 ab sin C가 된다. 사인법칙은 변-맞은편 각의 쌍, 코사인법칙은 두 변과 끼인각 또는 세 변 자료에 알맞다. 넓이는 양수이고 각은 삼각형 조건을 만족해야 한다.",
+        "sections": [
+          {
+            "id": "m5-18-u1",
+            "title": "밑변과 높이",
+            "body": "삼각형 넓이 K=1/2×밑변×높이를 그림에서 읽는다.",
+            "activity": "꼭짓점을 이동시켜도 밑변과 수직 높이의 역할이 변하지 않음을 본다.",
+            "check": "밑변 8, 높이 3이면 넓이는 12다."
+          },
+          {
+            "id": "m5-18-u2",
+            "title": "높이를 사인으로 나타내기",
+            "body": "끼인각과 인접 변으로 h=b sin C를 만든다.",
+            "activity": "각을 바꾸며 높이와 사인값의 비를 비교한다.",
+            "check": "b=10, C=30°이면 h=5다."
+          },
+          {
+            "id": "m5-18-u3",
+            "title": "두 변과 끼인각의 넓이",
+            "body": "높이를 넓이식에 대입해 K=1/2 ab sin C를 얻는다.",
+            "activity": "a,b,C를 바꾸며 넓이와 직사각형 절반 모델을 대조한다.",
+            "check": "a=6,b=4,C=30°이면 K=6이다."
+          },
+          {
+            "id": "m5-18-u4",
+            "title": "사인법칙으로 연결하기",
+            "body": "맞은편 변-각 쌍이 있으면 사인법칙을 사용해 빠진 요소를 연결한다.",
+            "activity": "문제의 알려진 변·각을 대응표에 배치한다.",
+            "check": "a/sin A=b/sin B 구조에서 같은 비를 사용한다."
+          },
+          {
+            "id": "m5-18-u5",
+            "title": "코사인법칙으로 연결하기",
+            "body": "두 변과 끼인각 또는 세 변 자료가 있으면 코사인법칙을 검토한다.",
+            "activity": "사인/코사인법칙 선택 카드를 주어진 자료와 맞춘다.",
+            "check": "두 변과 끼인각 자료는 해당 대변 계산에 코사인법칙을 쓸 수 있다."
+          },
+          {
+            "id": "m5-18-u6",
+            "title": "복합 활용과 검산",
+            "body": "넓이·법칙을 단계별로 연결하고 각도 단위, 양수, 길이·넓이 단위를 확인한다.",
+            "activity": "풀이 경로를 선택하고 각 단계의 입력 자료·단위를 기록한다.",
+            "check": "넓이 단위는 cm²이며, 0<C<π이면 1/2 ab sin C>0이다."
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "title": "시각적 탐구",
+        "type": "InteractiveBlock",
+        "interaction": "m5-18-visual"
+      },
+      {
+        "id": "example",
+        "title": "단계별 예제",
+        "type": "WorkedExampleBlock",
+        "steps": [
+          "두 변이 8 cm, 5 cm이고 끼인각이 30°일 때 넓이를 구하라.",
+          "K=1/2·8·5·sin30°=20·1/2=10이다. 따라서 넓이는 10 cm²다.",
+          "각은 두 주어진 변 사이의 끼인각이고 넓이 단위는 길이 단위의 제곱이다."
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "연습 계획",
+        "type": "PracticeBlock",
+        "purpose": "practice",
+        "hint": "조건과 사용한 원리를 먼저 말로 설명한 뒤 연습 초안을 풉니다. 문항의 정답과 해설은 제출 전에 전달하지 않습니다."
+      },
+      {
+        "id": "feedback",
+        "title": "오답 교정",
+        "type": "FeedbackBlock",
+        "body": "오답은 조건·표현·계산 단계를 나눠 확인하고 관련 소단원으로 돌아갑니다. 오개념은 발생률 주장이 아닌 점검 가설입니다.\n• 밑변에 대응하지 않는 각을 넓이 공식에 넣는다.\n• sin C 대신 cos C를 사용한다.\n• 넓이의 단위를 cm로 적는다.\n• 사인법칙과 코사인법칙의 적용 자료를 혼동한다.\n• 중간 근삿값을 과도하게 반올림한다."
+      },
+      {
+        "id": "review",
+        "title": "복습과 다음 단원",
+        "type": "ReviewBlock",
+        "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+      }
+    ],
+    "learningPhases": [
+      {
+        "id": "phase-01",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "phase-02",
+        "title": "선수학습 진단",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "phase-03",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-04",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-05",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "phase-06",
+        "title": "원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-07",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "phase-08",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "phase-09",
+        "title": "유형별 연습 A",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-10",
+        "title": "유형별 연습 B",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-11",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-12",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "phase-13",
+        "title": "형성평가 설계",
+        "blockId": "feedback",
+        "state": "planned"
+      },
+      {
+        "id": "phase-14",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "phase-15",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ],
+    "contentStatus": "draft",
+    "publicationApproved": false,
+    "approvedContent": null,
+    "note": "Curriculum-authored renderer structure draft; research question source/rights, independent review and implementation validation pending. No human publication approval."
+  },
+  "practicePlan": {
+    "families": [
+      {
+        "familyId": "m5-18-family-1",
+        "skillId": "m5-18-skill-1",
+        "itemIds": [
+          "m518-draft-01",
+          "m518-draft-02"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-18-family-2",
+        "skillId": "m5-18-skill-2",
+        "itemIds": [
+          "m518-draft-03",
+          "m518-draft-04"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-18-family-3",
+        "skillId": "m5-18-skill-2",
+        "itemIds": [
+          "m518-draft-05",
+          "m518-draft-06"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

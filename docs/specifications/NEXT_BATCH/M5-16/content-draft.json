@@ -1,0 +1,200 @@
+{
+  "unitId": "M5-16",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• 삼각형의 외접원 반지름과 각·대변의 대응을 그림으로 설명한다.\n• 사인법칙 a/sin A=b/sin B=c/sin C=2R을 적용하고 주어진 조건에 맞는 해를 검토한다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 진단은 준비 상태 안내에만 사용하며 선수 단원의 숙달도나 완료 점수를 변경하지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "외접원 반지름이 R이고 변 a가 중심각 2A에 대응하는 현이면 a=2R sin A이다. 이를 각 변에 적용해 a/sin A=b/sin B=c/sin C=2R을 얻는다. 사인값이 같을 수 있는 보각 때문에 SSA 조건에서는 가능한 삼각형의 수를 그림·각의 합·변 길이로 확인한다.",
+      "sections": [
+        {
+          "id": "m5-16-u1",
+          "title": "변과 마주 보는 각",
+          "body": "삼각형에서 a는 A의 맞은편 변으로 고정 표기한다.",
+          "activity": "삼각형을 회전·뒤집어도 맞은편 쌍 표식은 유지한다.",
+          "check": "변 a는 꼭짓점 A에 붙은 변이 아니라 A의 맞은편 변이다."
+        },
+        {
+          "id": "m5-16-u2",
+          "title": "외접원과 현",
+          "body": "세 꼭짓점을 지나는 원의 중심과 반지름 R을 확인한다.",
+          "activity": "삼각형에 외접원을 그리고 중심에서 현의 끝점으로 반지름을 긋는다.",
+          "check": "같은 원에서 현 길이는 중심각이 커질수록 0≤각≤π 범위에서 커진다."
+        },
+        {
+          "id": "m5-16-u3",
+          "title": "현과 사인 관계",
+          "body": "현 길이는 a=2R sin A로 연결되며 A는 마주 보는 원주각이다.",
+          "activity": "현을 지름으로 나누고 직각삼각형에서 sin A 비를 표시한다.",
+          "check": "R=5, A=30°이면 a=2·5·1/2=5다."
+        },
+        {
+          "id": "m5-16-u4",
+          "title": "사인법칙 식 세우기",
+          "body": "대응하는 변과 각을 같은 비율 위치에 놓는다.",
+          "activity": "세 쌍을 선 색상 외에도 a↔A 문자 태그로 연결한다.",
+          "check": "a/sin A=b/sin B=c/sin C다."
+        },
+        {
+          "id": "m5-16-u5",
+          "title": "두 요소에서 미지수 구하기",
+          "body": "알려진 대응쌍 하나로 비례식을 만들고 단위를 유지한다.",
+          "activity": "알려진 변·각 카드로 비례식을 조립한다.",
+          "check": "a=6, A=30°, B=90°이면 b=12다."
+        },
+        {
+          "id": "m5-16-u6",
+          "title": "SSA와 해의 수 검산",
+          "body": "sin B 값만으로 각을 정할 때 보각 후보와 삼각형 조건을 모두 확인한다.",
+          "activity": "가능 각 후보를 만든 뒤 A+B<180° 및 변-각 대소 관계로 거른다.",
+          "check": "A=30°, a=5, b=6이면 sin B=3/5이므로 B≈36.9° 또는 143.1°이고 두 경우 모두 A+B<180°여서 삼각형이 두 개 가능하다."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "m5-16-visual"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "삼각형에서 A=30°, B=90°, a=6일 때 b를 구하라.",
+        "사인법칙에서 b/sin90°=a/sin30°이므로 b=6·1/(1/2)=12다.",
+        "b는 A의 맞은편 a보다 커야 하고 90°의 맞은편이므로 결과 12는 대응 관계와 맞는다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "조건과 사용한 원리를 먼저 말로 설명한 뒤 연습 초안을 풉니다. 문항의 정답과 해설은 제출 전에 전달하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답은 조건·표현·계산 단계를 나눠 확인하고 관련 소단원으로 돌아갑니다. 오개념은 발생률 주장이 아닌 점검 가설입니다.\n• 변 a를 각 A에 붙은 변으로 오해한다.\n• 2R과 R을 혼동한다.\n• sin A의 역함수 값 하나만 답으로 확정한다.\n• 모든 SSA 자료가 삼각형 하나를 정한다고 가정한다.\n• 계산기 각도 설정을 표시하지 않고 사용한다."
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "available"
+    }
+  ],
+  "contentStatus": "draft",
+  "publicationApproved": false,
+  "approvedContent": null,
+  "note": "Curriculum-authored renderer structure draft; research question source/rights, independent review and implementation validation pending. No human publication approval."
+}

@@ -86,3 +86,9 @@ Curriculum Architect가 명세 독립 검토를 거쳐 다섯 단원을 implemen
 M0-01의 `lessonSpecSchema`/`problemBlueprintSchema`는 레거시 completion·assessment handoff 전용이다. 제안 LEVEL 단원은 `schemaVersion: 1`, 문자열 `levelId`, 제안 경로 메타데이터, 3가족·연습 6개·평가 0개의 별도 형식을 사용하므로 이 레거시 계약이나 `validateLessonHandoff`에 합치지 않는다. 대신 `proposalLessonSpecSchema`와 `proposalProblemBlueprintSchema`를 별도 정의하고 M5-04~13 샘플을 전용 parser로 검사한다. 자동 검사는 제안 메타데이터, 15개 phase, 기술/가족/문항 연결, A/B/C 선택지 ID·정답 라벨 정합성과 초안/미승인 상태를 확인한다. M0 handoff 경로, schemaVersion 1 저장 진도, M0 점수, production publication gate는 변경하지 않는다.
 
 M5-09~13의 Research `content-draft.json`에는 wrapper 메타데이터와 renderer `content`를 구분해 기록한다. 승인 대기 항목은 `approved-content.json`에서 `approvedContent: null`로 남기고, 독립 답 재계산은 reviewed evidence로만 기록한다. 자동/에이전트 검토는 사람 게시 승인이나 공개 허가로 전환하지 않는다.
+
+## 2026-11-07 · M5-14~M5-18 개발 프리뷰 인계
+
+Curriculum Architect가 5개 lesson spec과 renderer 초안을 만들고 Research & Content가 15개 문제 원형과 30개 연습 draft를 작성했다. 독립 Curriculum review는 30/30 수학·answer key·semanticAnswer 일치, 원형 분리, skill 연결을 확인한 뒤 implementation-ready로 인계했다. 구현은 접근 가능한 interactive labs 5개, bounded 삼각함수/삼각형 helper, server-only 문제 adapter, preview/lesson/problem registry, progress/security tests를 추가했다.
+
+문항은 모두 draft, 평가 인스턴스 0, publication approval 0이다. official standards와 개별 CSAT mapping은 검증하지 않았다. lint/typecheck, full unit tests 192/192, content:validate 30/30, production build 및 agent config 검증은 통과했다. E2E는 환경에서 127.0.0.1:54329 bind가 EPERM으로 거부되어 미검증이다. 단원별 QA와 승인 대기는 `docs/reviews/NEXT_BATCH/M5-14`~`M5-18/`를 참조한다.

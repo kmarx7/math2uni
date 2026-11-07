@@ -197,9 +197,11 @@ export const proposalLessonSpecSchema = z
     }).strict()).length(15),
     misconceptionsToCheck: z.array(text),
     designReview: z.object({
+      decision: z.enum(["pending", "implementation-ready"]).optional(),
       status: text,
       reviewerRole: text,
       reviewerIdentity: text,
+      scope: text.optional(),
       humanPublicationApproval: z.literal(false),
     }).strict(),
     implementationReadiness: z.object({

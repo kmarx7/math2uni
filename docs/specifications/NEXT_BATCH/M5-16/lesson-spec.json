@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-16",
+  "levelId": "LEVEL 5",
+  "title": "사인법칙",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "외접원과 변의 비",
+      "삼각형의 변·각"
+    ],
+    "prerequisiteUnits": [
+      "M5-12",
+      "M2-18"
+    ],
+    "visualization": "삼각형과 외접원"
+  },
+  "objectives": [
+    "삼각형의 외접원 반지름과 각·대변의 대응을 그림으로 설명한다.",
+    "사인법칙 a/sin A=b/sin B=c/sin C=2R을 적용하고 주어진 조건에 맞는 해를 검토한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-12-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-12 선수 기능 진단: 현재 단원의 외접원과 변의 비을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    },
+    {
+      "id": "m2-18-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-18 선수 기능 진단: 현재 단원의 외접원과 변의 비을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-16-skill-1",
+    "m5-16-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "삼각형의 변·대각 대응 → 외접원과 중심각 → 직각삼각형의 현·반지름 → 사인법칙 → 주어진 세 요소에 적용 → SSA의 가능한 경우 점검",
+    "principleDerivation": "외접원 반지름이 R이고 변 a가 중심각 2A에 대응하는 현이면 a=2R sin A이다. 이를 각 변에 적용해 a/sin A=b/sin B=c/sin C=2R을 얻는다. 사인값이 같을 수 있는 보각 때문에 SSA 조건에서는 가능한 삼각형의 수를 그림·각의 합·변 길이로 확인한다.",
+    "accessibility": "쉬운 한국어와 수학 기호 읽기를 함께 제공한다. 그림에는 축·방향·단위·조건과 텍스트 대체 설명을 둔다. 키보드로 조작 가능하게 하고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-16-u1",
+      "title": "변과 마주 보는 각",
+      "targetSkills": [
+        "m5-16-skill-1"
+      ],
+      "explanation": "삼각형에서 a는 A의 맞은편 변으로 고정 표기한다.",
+      "activity": "삼각형을 회전·뒤집어도 맞은편 쌍 표식은 유지한다.",
+      "check": "변 a는 꼭짓점 A에 붙은 변이 아니라 A의 맞은편 변이다."
+    },
+    {
+      "id": "m5-16-u2",
+      "title": "외접원과 현",
+      "targetSkills": [
+        "m5-16-skill-1"
+      ],
+      "explanation": "세 꼭짓점을 지나는 원의 중심과 반지름 R을 확인한다.",
+      "activity": "삼각형에 외접원을 그리고 중심에서 현의 끝점으로 반지름을 긋는다.",
+      "check": "같은 원에서 현 길이는 중심각이 커질수록 0≤각≤π 범위에서 커진다."
+    },
+    {
+      "id": "m5-16-u3",
+      "title": "현과 사인 관계",
+      "targetSkills": [
+        "m5-16-skill-1"
+      ],
+      "explanation": "현 길이는 a=2R sin A로 연결되며 A는 마주 보는 원주각이다.",
+      "activity": "현을 지름으로 나누고 직각삼각형에서 sin A 비를 표시한다.",
+      "check": "R=5, A=30°이면 a=2·5·1/2=5다."
+    },
+    {
+      "id": "m5-16-u4",
+      "title": "사인법칙 식 세우기",
+      "targetSkills": [
+        "m5-16-skill-2"
+      ],
+      "explanation": "대응하는 변과 각을 같은 비율 위치에 놓는다.",
+      "activity": "세 쌍을 선 색상 외에도 a↔A 문자 태그로 연결한다.",
+      "check": "a/sin A=b/sin B=c/sin C다."
+    },
+    {
+      "id": "m5-16-u5",
+      "title": "두 요소에서 미지수 구하기",
+      "targetSkills": [
+        "m5-16-skill-2"
+      ],
+      "explanation": "알려진 대응쌍 하나로 비례식을 만들고 단위를 유지한다.",
+      "activity": "알려진 변·각 카드로 비례식을 조립한다.",
+      "check": "a=6, A=30°, B=90°이면 b=12다."
+    },
+    {
+      "id": "m5-16-u6",
+      "title": "SSA와 해의 수 검산",
+      "targetSkills": [
+        "m5-16-skill-2"
+      ],
+      "explanation": "sin B 값만으로 각을 정할 때 보각 후보와 삼각형 조건을 모두 확인한다.",
+      "activity": "가능 각 후보를 만든 뒤 A+B<180° 및 변-각 대소 관계로 거른다.",
+      "check": "A=30°, a=5, b=6이면 sin B=3/5이므로 B≈36.9° 또는 143.1°이고 두 경우 모두 A+B<180°여서 삼각형이 두 개 가능하다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-16-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "삼각형 꼭짓점과 외접원 반지름을 조절해 대응 변·각을 강조하고 2R sin A 관계를 수치로 비교한다. 각도는 도/라디안을 명시하고 입력 검증 범위를 보여준다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "도형 표기와 외접원 그림에서 변-맞은편 각 대응 및 반지름을 식으로 나타낸다.",
+      "사인법칙의 비례식으로 한 변 또는 각을 계산하고 단위를 확인한다.",
+      "SSA 조건에서 역삼각함수 후보와 삼각형 가능성을 분기해 판정한다."
+    ],
+    "draftPracticeGoals": [
+      "변 a,b,c와 맞은편 각 A,B,C를 정확히 대응한다.",
+      "외접원 반지름과 현 관계 a=2R sin A를 설명한다.",
+      "사인법칙 비례식을 올바르게 구성한다.",
+      "주어진 변·각으로 미지 변을 계산한다.",
+      "사인값으로 각을 역추론할 때 보각 가능성을 확인한다.",
+      "각의 합과 변-각 관계로 삼각형 해의 가능성을 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하며 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "변과 맞은편 각의 대응을 유지했는가?",
+    "비례식에서 알려진 값과 미지수를 올바르게 놓았는가?",
+    "SSA에서 가능한 각 후보와 삼각형 조건을 확인했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답에서 연결된 기술을 진단해 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습으로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "변 a를 각 A에 붙은 변으로 오해한다.",
+    "2R과 R을 혼동한다.",
+    "sin A의 역함수 값 하나만 답으로 확정한다.",
+    "모든 SSA 자료가 삼각형 하나를 정한다고 가정한다.",
+    "계산기 각도 설정을 표시하지 않고 사용한다."
+  ],
+  "workedExample": {
+    "prompt": "삼각형에서 A=30°, B=90°, a=6일 때 b를 구하라.",
+    "solution": "사인법칙에서 b/sin90°=a/sin30°이므로 b=6·1/(1/2)=12다.",
+    "verification": "b는 A의 맞은편 a보다 커야 하고 90°의 맞은편이므로 결과 12는 대응 관계와 맞는다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus independent Curriculum AI review",
+    "reviewerIdentity": "curriculum_independent_m5_09_13 (AI reviewer; not a human approver)",
+    "scope": "Independent review of proposal metadata, objectives, beginner sequencing, prerequisite diagnostics, six subunits, fifteen phases, worked example, Research question answer/key/rationale, family distinction, skill mapping, assessment count and renderer draft consistency for development-preview implementation. This is not human content approval or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-14",
+  "unitTitle": "삼각함수의 그래프",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-14-family-1",
+      "status": "draft",
+      "title": "기본 그래프에서 단위원 좌표 읽기",
+      "reasoningStructure": "단위원의 y/x 좌표와 그래프의 함수값을 연결한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-14-skill-1",
+      "distinctFrom": "이 가족은 단위원의 y/x 좌표와 그래프의 함수값을 연결한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m514-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "각 x=3π/2에서 sin x의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "−1",
+          "rationale": "단위원에서 3π/2의 y좌표는 −1이므로 sin(3π/2)=−1.",
+          "skillLabel": "m5-14-skill-1",
+          "misconceptionHypothesis": "단위원의 좌표와 sin/cos 그래프의 기본값을 혼동하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1"
+            },
+            {
+              "id": "B",
+              "label": "0"
+            },
+            {
+              "id": "C",
+              "label": "1"
+            }
+          ]
+        },
+        {
+          "id": "m514-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "각 x=2π/3에서 cos x의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "−1/2",
+          "rationale": "단위원에서 2π/3의 x좌표는 −1/2이므로 cos(2π/3)=−1/2.",
+          "skillLabel": "m5-14-skill-1",
+          "misconceptionHypothesis": "단위원의 좌표와 sin/cos 그래프의 기본값을 혼동하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1/2"
+            },
+            {
+              "id": "B",
+              "label": "−1/2"
+            },
+            {
+              "id": "C",
+              "label": "−√3/2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-14-family-2",
+      "status": "draft",
+      "title": "진폭·반사·주기 판별",
+      "reasoningStructure": "식의 a,b 계수로 진폭, 반사, 주기를 각각 해석한다.",
+      "thinkingType": "식 해석",
+      "skillId": "m5-14-skill-2",
+      "distinctFrom": "이 가족은 식의 a,b 계수로 진폭, 반사, 주기를 각각 해석한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m514-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=−3sin(2x)의 진폭과 주기는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "진폭 3, 주기 π",
+          "rationale": "진폭은 |−3|=3이고 b=2이므로 주기 2π/2=π다. 음수는 중심선 기준 반사를 뜻한다.",
+          "skillLabel": "m5-14-skill-2",
+          "misconceptionHypothesis": "진폭에 부호를 붙이거나 주기 공식을 2π|b|로 잘못 읽는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "진폭 −3, 주기 4π"
+            },
+            {
+              "id": "B",
+              "label": "진폭 3, 주기 4π"
+            },
+            {
+              "id": "C",
+              "label": "진폭 3, 주기 π"
+            }
+          ]
+        },
+        {
+          "id": "m514-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "y=2cos(x/3)의 진폭과 주기는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "진폭 2, 주기 6π",
+          "rationale": "a=2라서 진폭은 2다. b=1/3이므로 주기는 2π/(1/3)=6π다.",
+          "skillLabel": "m5-14-skill-2",
+          "misconceptionHypothesis": "진폭에 부호를 붙이거나 주기 공식을 2π|b|로 잘못 읽는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "진폭 2, 주기 6π"
+            },
+            {
+              "id": "B",
+              "label": "진폭 2, 주기 2π/3"
+            },
+            {
+              "id": "C",
+              "label": "진폭 1/3, 주기 6π"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-14-family-3",
+      "status": "draft",
+      "title": "이동 그래프의 중심선과 극값",
+      "reasoningStructure": "h,k 이동과 중심선을 복원해 최댓값·최솟값을 구한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-14-skill-2",
+      "distinctFrom": "이 가족은 h,k 이동과 중심선을 복원해 최댓값·최솟값을 구한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m514-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "y=cos(x−π/4)+1의 중심선, 최댓값, 최솟값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "중심선 y=1, 최댓값 2, 최솟값 0",
+          "rationale": "cos의 범위는 [−1,1]이다. +1 이동으로 범위가 [0,2]가 되며 중심선은 y=1이다. x−π/4는 오른쪽 이동이지만 극값에는 영향을 주지 않는다.",
+          "skillLabel": "m5-14-skill-2",
+          "misconceptionHypothesis": "괄호 안 수평 이동 방향이나 세로 이동을 바꾸어 읽을 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "중심선 y=−1, 최댓값 0, 최솟값 −2"
+            },
+            {
+              "id": "B",
+              "label": "중심선 y=1, 최댓값 2, 최솟값 0"
+            },
+            {
+              "id": "C",
+              "label": "중심선 y=1, 최댓값 1, 최솟값 −1"
+            }
+          ]
+        },
+        {
+          "id": "m514-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "y=−2sin(x+π/3)−1의 중심선, 최댓값, 최솟값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "중심선 y=−1, 최댓값 1, 최솟값 −3",
+          "rationale": "−2sin x의 진폭은 2이므로 중심선 y=−1에서 위아래로 2만큼 움직인다. 범위는 [−3,1]이고 x+π/3은 왼쪽 이동이다.",
+          "skillLabel": "m5-14-skill-2",
+          "misconceptionHypothesis": "괄호 안 수평 이동 방향이나 세로 이동을 바꾸어 읽을 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "중심선 y=1, 최댓값 3, 최솟값 −1"
+            },
+            {
+              "id": "B",
+              "label": "중심선 y=−1, 최댓값 −1, 최솟값 −3"
+            },
+            {
+              "id": "C",
+              "label": "중심선 y=−1, 최댓값 1, 최솟값 −3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

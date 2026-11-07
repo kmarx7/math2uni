@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-18",
+  "unitTitle": "삼각형의 넓이와 활용",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-18-family-1",
+      "status": "draft",
+      "title": "높이와 끼인각으로 넓이 계산",
+      "reasoningStructure": "수직 높이 또는 h=b sin C를 사용해 넓이와 단위를 구한다.",
+      "thinkingType": "기하 모델링",
+      "skillId": "m5-18-skill-1",
+      "distinctFrom": "이 가족은 수직 높이 또는 h=b sin C를 사용해 넓이와 단위를 구한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m518-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "삼각형에서 밑변 a=8 cm, 다른 변 b=5 cm이고 두 변 사이의 끼인각 C=30°일 때 넓이는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "10 cm²",
+          "rationale": "높이 h=b sin C=5·(1/2)=2.5 cm다. 넓이는 (1/2)·8 cm·2.5 cm=10 cm²다. 넓이의 단위는 cm²다.",
+          "skillLabel": "m5-18-skill-1",
+          "misconceptionHypothesis": "밑변·높이와 끼인각 위치를 혼동하거나 넓이 단위를 길이 단위로 쓸 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "10 cm²"
+            },
+            {
+              "id": "B",
+              "label": "20 cm²"
+            },
+            {
+              "id": "C",
+              "label": "10 cm"
+            }
+          ]
+        },
+        {
+          "id": "m518-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "밑변이 7 cm이고 그 밑변과 10 cm 변 사이의 각이 30°일 때 삼각형 넓이는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "17.5 cm²",
+          "rationale": "10 cm 변의 수직 성분은 h=10 sin30°=5cm다. 넓이는 (1/2)·7·5=17.5cm²다.",
+          "skillLabel": "m5-18-skill-1",
+          "misconceptionHypothesis": "밑변·높이와 끼인각 위치를 혼동하거나 넓이 단위를 길이 단위로 쓸 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "35 cm²"
+            },
+            {
+              "id": "B",
+              "label": "17.5 cm²"
+            },
+            {
+              "id": "C",
+              "label": "8.75 cm²"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-18-family-2",
+      "status": "draft",
+      "title": "자료에 맞는 법칙 선택",
+      "reasoningStructure": "변·각 정보의 대응을 보고 사인법칙 또는 코사인법칙을 선택한다.",
+      "thinkingType": "전략 선택",
+      "skillId": "m5-18-skill-2",
+      "distinctFrom": "이 가족은 변·각 정보의 대응을 보고 사인법칙 또는 코사인법칙을 선택한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m518-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "삼각형에서 a=4, A=30°, B=90°일 때 b를 구하는 적절한 법칙과 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "사인법칙, b=8",
+          "rationale": "a와 맞은편 각 A가 주어졌으므로 b/sin B=a/sin A다. b=4·1/(1/2)=8이다.",
+          "skillLabel": "m5-18-skill-2",
+          "misconceptionHypothesis": "사인법칙과 코사인법칙이 필요한 정보 형태를 바꾸어 적용할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "코사인법칙, b=4"
+            },
+            {
+              "id": "B",
+              "label": "사인법칙, b=2"
+            },
+            {
+              "id": "C",
+              "label": "사인법칙, b=8"
+            }
+          ]
+        },
+        {
+          "id": "m518-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "두 변 3, 4와 그 사이각 90°가 주어졌을 때 맞은편 변 c를 구하는 법칙과 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "코사인법칙, c=5",
+          "rationale": "두 변과 그 사이각으로 대변을 구하므로 코사인법칙 c²=9+16−24cos90°=25, c=5를 쓴다.",
+          "skillLabel": "m5-18-skill-2",
+          "misconceptionHypothesis": "사인법칙과 코사인법칙이 필요한 정보 형태를 바꾸어 적용할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "코사인법칙, c=5"
+            },
+            {
+              "id": "B",
+              "label": "사인법칙, c=7"
+            },
+            {
+              "id": "C",
+              "label": "코사인법칙, c=25"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-18-family-3",
+      "status": "draft",
+      "title": "법칙을 연결한 넓이 계산",
+      "reasoningStructure": "삼각형 법칙으로 미지 요소를 찾은 뒤 넓이 공식으로 연결하고 조건을 검산한다.",
+      "thinkingType": "복합 추론",
+      "skillId": "m5-18-skill-2",
+      "distinctFrom": "이 가족은 삼각형 법칙으로 미지 요소를 찾은 뒤 넓이 공식으로 연결하고 조건을 검산한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m518-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "a=5, b=5, 끼인각 C=60°인 삼각형에서 c를 먼저 구한 뒤 넓이 K를 구하면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "c=5, K=25√3/4",
+          "rationale": "코사인법칙으로 c²=25+25−50·(1/2)=25이므로 c=5다. 넓이 K=(1/2)ab sin60°=(25/2)(√3/2)=25√3/4다.",
+          "skillLabel": "m5-18-skill-2",
+          "misconceptionHypothesis": "중간 계산 결과를 잘못된 변·각에 연결하거나 넓이 단위를 누락할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "c=5, K=25/2"
+            },
+            {
+              "id": "B",
+              "label": "c=5, K=25√3/4"
+            },
+            {
+              "id": "C",
+              "label": "c=5√3, K=25√3/2"
+            }
+          ]
+        },
+        {
+          "id": "m518-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "A=30°, B=60°, a=4인 삼각형에서 c와 넓이 K는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "c=8, K=8√3",
+          "rationale": "C=90°다. 사인법칙으로 c/sin90°=4/sin30°이므로 c=8이다. K=(1/2)ac sin B=(1/2)·4·8·(√3/2)=8√3이다.",
+          "skillLabel": "m5-18-skill-2",
+          "misconceptionHypothesis": "중간 계산 결과를 잘못된 변·각에 연결하거나 넓이 단위를 누락할 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "c=4√3, K=8"
+            },
+            {
+              "id": "B",
+              "label": "c=8, K=16"
+            },
+            {
+              "id": "C",
+              "label": "c=8, K=8√3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

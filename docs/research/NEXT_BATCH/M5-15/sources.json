@@ -1,0 +1,98 @@
+{
+  "researchVersion": "0.1.0-draft",
+  "unitId": "M5-15",
+  "title": "삼각방정식과 부등식",
+  "checkedAt": "2026-11-07",
+  "sources": [
+    {
+      "id": "src-moe-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "교육부",
+      "publishedAt": "2022-12-22",
+      "verification": "direct-page-opened",
+      "verifiedClaims": [
+        "페이지 본문에서 수학과 교육과정은 별책 8이라고 확인",
+        "수학 별책을 포함하는 15.1MB ZIP 첨부 링크가 게시된 것을 확인"
+      ],
+      "notVerified": [
+        "ZIP 첨부 및 별책 8 본문은 열거나 검토하지 못함",
+        "개별 단원 성취기준 및 공식 코드 연결은 확인하지 않음"
+      ],
+      "rights": "공식 고시 자료. 페이지와 첨부는 출처만 참고하고 본문을 복제하지 않음. 별책별 재이용 조건은 확인하지 않음.",
+      "use": "교육과정 존재·출처 확인에만 사용; 단원 매핑 근거로 사용하지 않음."
+    },
+    {
+      "id": "src-mukuka-tatira-2025",
+      "title": "Analysis of preservice teachers’ understanding of solving trigonometric equations",
+      "url": "https://pythagoras.org.za/index.php/pythagoras/article/view/830/0",
+      "doi": "10.4102/pythagoras.v46i1.830",
+      "publisher": "Pythagoras",
+      "publishedAt": "2025-05-23",
+      "verification": "direct-abstract-opened",
+      "verifiedClaims": [
+        "남아프리카 대학 예비교사 223명의 답안과 참여자 8명 면담을 분석한 질적 사례연구",
+        "대수 조작, 기준각, 사분면, 도-라디안 변환, 주기성, 일반해 도출의 어려움 보고",
+        "페이지에서 CC BY 4.0 라이선스 확인"
+      ],
+      "notVerified": [
+        "예비교사 대학생 표본이며 한국 고등학생이나 수능 수험생 표본이 아님",
+        "구체 문항을 재사용하지 않음"
+      ],
+      "rights": "CC BY 4.0; 이 보고서는 초록만 요약하고 자체 문항은 독립 제작.",
+      "use": "M5-15 구간 해·주기·대수 처리 점검 가설."
+    },
+    {
+      "id": "src-mukuka-et-al-errors",
+      "title": "Learners’ Errors When Solving Trigonometric Equations",
+      "url": "https://uir.unisa.ac.za/server/api/core/bitstreams/bd99666f-2dd2-4e92-b4df-a178770e5d12/content",
+      "publisher": "University of South Africa repository",
+      "verification": "direct-PDF-opened-and-searched",
+      "verifiedClaims": [
+        "교사 설문/면담 자료에서 구간 해, 잘못된 사분면, 변수식으로 나누어 해를 제거하는 오류, 해 검산 및 주기성 문제가 언급됨"
+      ],
+      "notVerified": [
+        "교사 보고를 학생 오답의 전국적 빈도로 해석하지 않음",
+        "PDF 서지의 정확한 학위/발행 메타데이터를 이번 열람만으로 확정하지 않음"
+      ],
+      "rights": "저장소 PDF는 열람했으나 이용 라이선스를 확인하지 못함. 요약만 활용하고 도표·문항은 복제하지 않음.",
+      "use": "수업 진단 설계의 보조 근거; 표본과 맥락 caveat 포함."
+    },
+    {
+      "id": "src-moe-2028-framework",
+      "title": "2028 입시부터 선택과목 없는 통합형 수능 확정 교육부 보도자료",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2023-12-27",
+      "verification": "direct-page-opened",
+      "verifiedClaims": [
+        "2028 입시부터 선택과목 없는 통합형 수능 계획",
+        "심화수학(미적분Ⅱ·기하) 제외 내용"
+      ],
+      "notVerified": [
+        "세부 문항 출제 범위, 개별 단원·문항 형태 연결은 검증하지 않음",
+        "첨부 HWP/HWPX 미열람"
+      ],
+      "rights": "보도자료 페이지의 교육부 안내는 공공누리 출처표시 조건으로 표시됨. 직접 인용·복제 대신 사실관계와 링크만 기록.",
+      "use": "큰 틀의 시험 제도 맥락; 이 다섯 단원이 실제 출제된다는 근거가 아님."
+    },
+    {
+      "id": "src-moe-2028-sample",
+      "title": "2028학년도 대입, 이렇게 준비하세요 (2028 수능 예시문항 안내)",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2025-04-15",
+      "verification": "direct-page-opened; attachment-link-confirmed; attachment-content-not-opened",
+      "verifiedClaims": [
+        "2028 수능부터 출제과목 등이 변동되는 영역의 예시문항 문제지를 안내한다고 페이지에 게시",
+        "30.1MB 2028학년도 수능 예시문항 안내 PDF 첨부가 게시된 것을 확인"
+      ],
+      "notVerified": [
+        "PDF 본문을 열지 않아 수학 문항 내용·범위·단원 연결은 검증하지 않음"
+      ],
+      "rights": "교육부 페이지는 공공누리 출처표시 조건으로 표시. 첨부 PDF 권리·재배포 허용 범위는 별도로 확인하지 않으며 문항을 복제하지 않음.",
+      "use": "예시문항 자료가 존재한다는 점만 확인. 단원별 출제 연계 근거로 사용하지 않음."
+    }
+  ],
+  "rightsAndUsePolicy": "외부 기출·교재 문항을 복제하지 않는다. 아래 초안은 자체 제작이며 연구문헌은 맥락·오개념 진단을 위한 근거로만 요약한다. 공식 문서 첨부 본문을 미열람이면 미검증으로 둔다."
+}

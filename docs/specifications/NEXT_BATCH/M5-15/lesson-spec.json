@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-15",
+  "levelId": "LEVEL 5",
+  "title": "삼각방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "구간 안의 해",
+      "그래프와 단위원 해석"
+    ],
+    "prerequisiteUnits": [
+      "M5-13",
+      "M5-14"
+    ],
+    "visualization": "단위원의 해 구간"
+  },
+  "objectives": [
+    "주어진 구간과 기준각 조건에서 sin, cos, tan 방정식의 해를 단위원 또는 그래프로 찾는다.",
+    "삼각함수 부등식의 해를 주기성과 부등호 방향을 유지해 구간 또는 일반해로 나타낸다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-13-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-13 선수 기능 진단: 현재 단원의 구간 안의 해을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    },
+    {
+      "id": "m5-14-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-14 선수 기능 진단: 현재 단원의 구간 안의 해을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-15-skill-1",
+    "m5-15-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "방정식의 뜻 → 단위원에서 같은 높이/가로좌표 → 구간 내 해 선별 → 주기 일반해 → 그래프 부등식 → 경계·정의역 검산",
+    "principleDerivation": "sin x=c, cos x=c는 단위원에서 각각 수평선 y=c, 수직선 x=c와 원의 교점 각을 찾는다. 한 주기에서 해를 찾은 뒤 주기 2π를 이용해 일반해를 나타낸다. tan x의 주기는 π이며 x=π/2+kπ에서는 정의되지 않는다. 부등식은 그래프의 위·아래 영역과 정의역을 함께 적용한다.",
+    "accessibility": "쉬운 한국어와 수학 기호 읽기를 함께 제공한다. 그림에는 축·방향·단위·조건과 텍스트 대체 설명을 둔다. 키보드로 조작 가능하게 하고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-15-u1",
+      "title": "방정식과 교점",
+      "targetSkills": [
+        "m5-15-skill-1"
+      ],
+      "explanation": "함수값이 c라는 것은 그래프가 y=c와 만나는 점이라는 뜻이다.",
+      "activity": "수평선을 움직여 교점 개수와 경계값을 관찰한다.",
+      "check": "sin x=1은 한 주기 [0,2π)에서 x=π/2다."
+    },
+    {
+      "id": "m5-15-u2",
+      "title": "단위원에서 sin 해",
+      "targetSkills": [
+        "m5-15-skill-1"
+      ],
+      "explanation": "sin x=c를 단위원의 y좌표 조건으로 읽고 교점의 각을 찾는다.",
+      "activity": "y=c 선을 단위원에 겹쳐 교점을 표시한다.",
+      "check": "sin x=1/2의 [0,2π) 해는 π/6, 5π/6이다."
+    },
+    {
+      "id": "m5-15-u3",
+      "title": "단위원에서 cos·tan 해",
+      "targetSkills": [
+        "m5-15-skill-1"
+      ],
+      "explanation": "cos는 x좌표, tan은 sin/cos 비로 읽으며 tan 정의 불가 각을 제외한다.",
+      "activity": "수직선 x=c와 원을 비교하고 tan 수직 점근선에 제외 표식을 둔다.",
+      "check": "cos x=0은 π/2+kπ에서 성립한다."
+    },
+    {
+      "id": "m5-15-u4",
+      "title": "구간 해와 일반해",
+      "targetSkills": [
+        "m5-15-skill-2"
+      ],
+      "explanation": "한 주기에서 해를 찾고 구간의 양 끝 포함 여부를 적용한다.",
+      "activity": "수직선에 해를 반복 복사하고 지정 구간만 색상 이외 기호로 선택한다.",
+      "check": "sin x=0의 일반해는 x=kπ (k는 정수)다."
+    },
+    {
+      "id": "m5-15-u5",
+      "title": "삼각부등식의 해",
+      "targetSkills": [
+        "m5-15-skill-2"
+      ],
+      "explanation": "그래프가 기준값보다 위/아래인 x의 구간을 읽고 등호 포함을 판단한다.",
+      "activity": "파형과 수평 기준선 사이의 부호 영역을 구간 카드로 옮긴다.",
+      "check": "sin x≥0의 [0,2π] 해는 [0,π]다."
+    },
+    {
+      "id": "m5-15-u6",
+      "title": "정의역·주기·끝점 검산",
+      "targetSkills": [
+        "m5-15-skill-2"
+      ],
+      "explanation": "일반해를 요구 구간과 교차시키고 tan 제외점·끝점 포함을 검산한다.",
+      "activity": "후보 해를 원식에 대입하고 정의되지 않는 점을 제거한다.",
+      "check": "tan x=0은 x=kπ이며 x=π/2+kπ는 해가 아니라 정의 불가점이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-15-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "단위원과 파형의 두 표현을 나란히 두고 기준값·구간을 조절한다. 해 후보, 주기 반복, 열린/닫힌 끝점과 tan 정의 불가점을 문자로 표시한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "단위원의 좌표 조건으로 특정 구간의 방정식 해를 찾는다.",
+      "한 주기 해를 일반해로 확장한 뒤 주어진 구간과 교차한다.",
+      "그래프 부등식의 부호 구간을 읽고 경계 포함·정의 불가점을 판정한다."
+    ],
+    "draftPracticeGoals": [
+      "sin 방정식을 단위원의 y좌표 교점으로 풀이한다.",
+      "cos 방정식을 단위원의 x좌표 교점으로 풀이한다.",
+      "tan의 주기 π와 정의되지 않는 점을 구별한다.",
+      "한 주기 해에서 정수 k를 사용한 일반해를 쓴다.",
+      "그래프 부등식에서 부호 영역을 구간으로 표현한다.",
+      "구간 끝점 포함과 원식 대입으로 해를 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하며 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "구간의 모든 교점 각을 빠짐없이 찾았는가?",
+    "일반해의 주기와 정수 범위를 정확히 썼는가?",
+    "부등호의 등호와 함수 정의역을 함께 처리했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답에서 연결된 기술을 진단해 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습으로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "sin/cos 방정식의 두 교점 중 하나를 빠뜨린다.",
+    "도 단위와 라디안 단위를 섞는다.",
+    "tan의 주기를 2π로 둔다.",
+    "부등식에서 등호 포함 경계를 놓친다.",
+    "지정 구간 밖 해나 tan 정의 불가점을 포함한다."
+  ],
+  "workedExample": {
+    "prompt": "0≤x<2π에서 cos x=−1/2를 풀어라.",
+    "solution": "단위원에서 x좌표가 −1/2인 점은 제2·제3사분면에 있다. 기준각은 π/3이므로 구간의 해는 x=2π/3, 4π/3이다.",
+    "verification": "두 각을 cos에 대입하면 −1/2이고 구간 끝점 조건도 만족한다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus independent Curriculum AI review",
+    "reviewerIdentity": "curriculum_independent_m5_09_13 (AI reviewer; not a human approver)",
+    "scope": "Independent review of proposal metadata, objectives, beginner sequencing, prerequisite diagnostics, six subunits, fifteen phases, worked example, Research question answer/key/rationale, family distinction, skill mapping, assessment count and renderer draft consistency for development-preview implementation. This is not human content approval or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

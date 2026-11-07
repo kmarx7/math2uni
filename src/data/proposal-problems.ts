@@ -22,6 +22,7 @@ import { curriculumProposal } from "@/data/curriculum-proposal";
 import { m4m5PreviewProblemFamilies, m4m5PreviewProblems } from "@/data/proposal-m4-19-m5-03-problems";
 import { m5PreviewProblemFamilies, m5PreviewProblems } from "@/data/proposal-m5-04-m5-08-problems";
 import { m509To513ProblemFamilies, m509To513Problems } from "@/data/proposal-m5-09-m5-13-problems";
+import { m514To518ProblemFamilies, m514To518Problems } from "@/data/proposal-m5-14-m5-18-problems";
 
 const completeAlgebraBlueprint = [...algebraBlueprint, ...nextAlgebraBlueprint, ...latestAlgebraBlueprint, ...firstM2Blueprint, ...nextM2Blueprint, ...latestM2Blueprint, ...latestM216Blueprint, ...m3Blueprint] as const;
 const assessmentBlueprint = [...firstAssessmentBlueprint, ...nextAssessmentBlueprint] as const;
@@ -186,6 +187,6 @@ const assessmentProblems: ProblemInstance[] = assessmentBlueprint.flatMap((unit)
   });
 });
 
-export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies, ...m3LatestProblemFamilies, ...m3InequalityProblemFamilies, ...m3m4PreviewProblemFamilies, ...m4PreviewProblemFamilies, ...m4FoundationsProblemFamilies, ...m4FunctionsProblemFamilies, ...m4m5PreviewProblemFamilies, ...m5PreviewProblemFamilies, ...m509To513ProblemFamilies];
-export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems, ...m3LatestProblems, ...m3InequalityProblems, ...m3m4PreviewProblems, ...m4PreviewProblems, ...m4FoundationsProblems, ...m4FunctionsProblems, ...m4m5PreviewProblems, ...m5PreviewProblems, ...m509To513Problems];
+export const proposalProblemFamilies = [...firstBatchFamilies, ...algebraFamilies, ...m3NextProblemFamilies, ...m3LatestProblemFamilies, ...m3InequalityProblemFamilies, ...m3m4PreviewProblemFamilies, ...m4PreviewProblemFamilies, ...m4FoundationsProblemFamilies, ...m4FunctionsProblemFamilies, ...m4m5PreviewProblemFamilies, ...m5PreviewProblemFamilies, ...m509To513ProblemFamilies, ...m514To518ProblemFamilies];
+export const proposalProblems: ProblemInstance[] = [...firstBatchProblems, ...algebraProblems, ...m3NextProblems, ...m3LatestProblems, ...m3InequalityProblems, ...m3m4PreviewProblems, ...m4PreviewProblems, ...m4FoundationsProblems, ...m4FunctionsProblems, ...m4m5PreviewProblems, ...m5PreviewProblems, ...m509To513Problems, ...m514To518Problems];
 export const proposalAssessmentProblems: ProblemInstance[] = assessmentProblems;

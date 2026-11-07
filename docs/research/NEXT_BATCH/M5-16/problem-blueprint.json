@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-16",
+  "unitTitle": "사인법칙",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-16-family-1",
+      "status": "draft",
+      "title": "변·맞은편 각 대응과 외접원 관계 표현",
+      "reasoningStructure": "삼각형 표기와 외접원 그림에서 대응 변·각을 식으로 옮기고 적용할 관계식을 식별한다.",
+      "thinkingType": "대응 관계",
+      "skillId": "m5-16-skill-1",
+      "distinctFrom": "가족 2는 이미 대응된 수치 비례식으로 값을 계산하고, 가족 3은 SSA에서 가능한 삼각형 수를 분기한다. 이 가족은 수치 계산보다 표기·관계식 선택에 초점을 둔다.",
+      "items": [
+        {
+          "id": "m516-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "삼각형 PQR에서 p=QR, q=PR, r=PQ로 둔다. ∠Q의 맞은편 변과 그 각에 대응하는 사인법칙 항은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "변 q=PR, q/sin Q",
+          "rationale": "변 q는 꼭짓점 Q를 포함하지 않는 맞은편 변 PR이다. 따라서 맞은편 각은 Q이고 사인법칙에서 대응 항은 q/sin Q다.",
+          "skillLabel": "m5-16-skill-1",
+          "misconceptionHypothesis": "변 이름과 맞은편 각을 꼭짓점 포함 여부로 판별하지 않고 인접 변과 혼동하는지 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "변 q=PR, q/sin Q"
+            },
+            {
+              "id": "B",
+              "label": "변 p=QR, p/sin P"
+            },
+            {
+              "id": "C",
+              "label": "변 r=PQ, r/sin Q"
+            }
+          ]
+        },
+        {
+          "id": "m516-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "원의 반지름이 R이고 원주각 C가 보는 현의 길이를 c라 하자. 현 길이와 외접반지름을 연결하는 올바른 관계식은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "c=2R sin C",
+          "rationale": "현 c를 밑변으로 하는 이등변삼각형을 중심에서 나누면 반현은 R sin C다. 따라서 전체 현은 c=2R sin C이며, 삼각형 표준 표기에서는 c가 각 C의 맞은편 변이다.",
+          "skillLabel": "m5-16-skill-1",
+          "misconceptionHypothesis": "원주각·중심각의 절반 관계와 현 길이의 두 배를 빠뜨리지 않는지 확인하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "c=2R cos C"
+            },
+            {
+              "id": "B",
+              "label": "c=2R sin C"
+            },
+            {
+              "id": "C",
+              "label": "c=R sin C"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-16-family-2",
+      "status": "draft",
+      "title": "사인법칙 비례식 계산",
+      "reasoningStructure": "맞은편 변과 각의 비를 세워 변의 길이를 계산하고 단위를 확인한다.",
+      "thinkingType": "비례식 계산",
+      "skillId": "m5-16-skill-2",
+      "distinctFrom": "이 가족은 맞은편 변과 각의 비를 세워 변의 길이를 계산하고 단위를 확인한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m516-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "삼각형에서 a=8, A=30°, B=45°일 때 b는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "8√2",
+          "rationale": "b/sin45°=a/sin30°이므로 b=8·(√2/2)/(1/2)=8√2다.",
+          "skillLabel": "m5-16-skill-2",
+          "misconceptionHypothesis": "같은 위치의 변과 각이 아닌 항끼리 비를 만드는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4√2"
+            },
+            {
+              "id": "B",
+              "label": "16"
+            },
+            {
+              "id": "C",
+              "label": "8√2"
+            }
+          ]
+        },
+        {
+          "id": "m516-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "삼각형에서 a=10, A=30°, C=90°일 때 c는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "20",
+          "rationale": "c/sin90°=a/sin30°이므로 c=10/(1/2)=20이다. c는 직각 C의 맞은편이다.",
+          "skillLabel": "m5-16-skill-2",
+          "misconceptionHypothesis": "같은 위치의 변과 각이 아닌 항끼리 비를 만드는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "20"
+            },
+            {
+              "id": "B",
+              "label": "10"
+            },
+            {
+              "id": "C",
+              "label": "5√3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-16-family-3",
+      "status": "draft",
+      "title": "SSA 조건에서 삼각형 가능성 분기",
+      "reasoningStructure": "사인값에서 가능한 각 후보를 만들고 삼각형 각의 합으로 후보 수를 판정한다.",
+      "thinkingType": "경우 분류",
+      "skillId": "m5-16-skill-2",
+      "distinctFrom": "이 가족은 사인값에서 가능한 각 후보를 만들고 삼각형 각의 합으로 후보 수를 판정한다.에 핵심 추론을 둔다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m516-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "A=30°, a=5, b=6인 SSA 조건에서 가능한 삼각형 수는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "2개",
+          "rationale": "sin B=b sin A/a=6·(1/2)/5=3/5다. B는 약 36.87° 또는 약 143.13° 후보이며, 각각 A와 더해 180°보다 작으므로 두 삼각형이 가능하다.",
+          "skillLabel": "m5-16-skill-2",
+          "misconceptionHypothesis": "역사인에서 둔각 보각 후보를 빠뜨리거나 삼각형 합 조건을 확인하지 않을 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1개"
+            },
+            {
+              "id": "B",
+              "label": "2개"
+            },
+            {
+              "id": "C",
+              "label": "0개"
+            }
+          ]
+        },
+        {
+          "id": "m516-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "A=30°, a=4, b=10인 SSA 조건을 만족하는 삼각형은 몇 개인가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "0개",
+          "rationale": "sin B=b sin A/a=10·(1/2)/4=5/4로 1보다 크다. 실수각 B가 없으므로 삼각형은 0개다.",
+          "skillLabel": "m5-16-skill-2",
+          "misconceptionHypothesis": "역사인에서 둔각 보각 후보를 빠뜨리거나 삼각형 합 조건을 확인하지 않을 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation plus independent Curriculum AI recalculation",
+            "result": "Independent Curriculum AI review: answer and key recalculated correct; human verification/publication approval remains pending.",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1개"
+            },
+            {
+              "id": "B",
+              "label": "2개"
+            },
+            {
+              "id": "C",
+              "label": "0개"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

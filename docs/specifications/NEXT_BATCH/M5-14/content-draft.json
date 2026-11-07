@@ -1,0 +1,200 @@
+{
+  "unitId": "M5-14",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• y=sin x, y=cos x의 한 주기와 기본값을 단위원의 좌표 변화와 연결한다.\n• y=a sin(b(x−h))+k 및 cos형의 진폭 |a|, 주기 2π/|b|, 이동을 각각 해석하고 그래프를 그린다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 진단은 준비 상태 안내에만 사용하며 선수 단원의 숙달도나 완료 점수를 변경하지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "sin과 cos는 단위원 위 점의 y좌표와 x좌표이므로 한 바퀴(2π) 뒤 반복한다. a는 세로 크기와 반사, a≠0, b≠0인 비상수 그래프의 기본주기는 2π/|b|다. b=0이면 sin(0) 또는 cos(0)의 상수값이므로 그래프는 상수이고 기본주기는 정의하지 않는다. a=0이면 b가 어떻든 y=k인 상수함수라 기본주기가 유일하게 정해지지 않는다. h와 k는 각각 수평·수직 이동을 나타낸다.",
+      "sections": [
+        {
+          "id": "m5-14-u1",
+          "title": "단위원에서 파동으로",
+          "body": "각이 증가할 때 y좌표 sin x와 x좌표 cos x가 변하는 모습을 대응한다.",
+          "activity": "회전 각을 일정 간격으로 움직여 좌표-그래프 점을 함께 찍는다.",
+          "check": "x=0에서 sin x=0, cos x=1이다."
+        },
+        {
+          "id": "m5-14-u2",
+          "title": "기본 그래프와 한 주기",
+          "body": "사인·코사인 그래프의 대표 각과 좌표를 표로 만들고 한 주기 반복을 본다.",
+          "activity": "0, π/2, π, 3π/2, 2π에 대응하는 점을 순서대로 연결한다.",
+          "check": "sin x는 0,1,0,−1,0을 지난다."
+        },
+        {
+          "id": "m5-14-u3",
+          "title": "진폭과 세로 반사",
+          "body": "a의 절댓값은 중심선으로부터 최대 거리이고 a<0이면 중심선 기준 반사한다.",
+          "activity": "a 슬라이더를 바꾸면서 중심선과 극값을 별도 표기한다.",
+          "check": "y=−2sin x의 진폭은 2, 치역은 [−2,2]다."
+        },
+        {
+          "id": "m5-14-u4",
+          "title": "주기와 가로 압축·늘임",
+          "body": "a≠0, b≠0인 비상수 그래프의 기본주기는 2π/|b|이며 |b|가 커지면 반복 간격이 짧아진다. a=0 또는 b=0이면 그래프가 상수라 기본주기를 이 공식으로 정하지 않는다.",
+          "activity": "한 화면에 주기 눈금을 표시하며 b를 바꾼다.",
+          "check": "a=2, b=1/3이면 주기는 6π다. 반면 y=sin(0x)=0은 상수함수라 기본주기를 정의하지 않는다."
+        },
+        {
+          "id": "m5-14-u5",
+          "title": "그래프의 평행이동",
+          "body": "x−h는 오른쪽 h, +k는 위쪽 k 이동을 뜻한다.",
+          "activity": "중심선 y=k와 기준점을 원래 그래프와 비교한다.",
+          "check": "y=cos(x−π/3)+2의 중심선은 y=2다."
+        },
+        {
+          "id": "m5-14-u6",
+          "title": "식·그래프 종합 읽기",
+          "body": "진폭·주기·중심선·위상 이동을 분리해서 읽고 기준점 몇 개로 스케치한다.",
+          "activity": "조건 카드를 순서대로 놓고 예상 그래프와 표본 좌표를 대조한다.",
+          "check": "y=2sin(x−π/2)는 진폭 2, 주기 2π, 중심선 y=0이다."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "m5-14-visual"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "y=2sin(2(x−π/4))+1의 진폭, 주기, 중심선, 오른쪽 이동을 말하라.",
+        "|a|=2이므로 진폭은 2이고 b=2이므로 주기는 2π/2=π다. k=1이므로 중심선은 y=1, h=π/4이므로 오른쪽으로 π/4 이동한다.",
+        "최댓값은 3, 최솟값은 −1이며 주기와 이동을 식의 괄호에서 다시 확인한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "조건과 사용한 원리를 먼저 말로 설명한 뒤 연습 초안을 풉니다. 문항의 정답과 해설은 제출 전에 전달하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답은 조건·표현·계산 단계를 나눠 확인하고 관련 소단원으로 돌아갑니다. 오개념은 발생률 주장이 아닌 점검 가설입니다.\n• sin과 cos의 그래프 시작값을 서로 바꾼다.\n• 진폭을 a의 부호 있는 값으로 말하거나 수직 이동 k와 혼동한다.\n• 주기를 2π|b|로 계산한다.\n• sin(x−h)를 왼쪽 이동으로 읽는다.\n• 주기 공식에서 b=0을 허용한다.\n• a=0 또는 b=0인 상수함수에도 주기 공식을 적용함"
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "available"
+    }
+  ],
+  "contentStatus": "draft",
+  "publicationApproved": false,
+  "approvedContent": null,
+  "note": "Curriculum-authored renderer structure draft; research question source/rights, independent review and implementation validation pending. No human publication approval."
+}

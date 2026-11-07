@@ -127,6 +127,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "circle-theorems",
       "spread-data",
       "middle-review",
+      "m5-14-visual",
+      "m5-15-visual",
+      "m5-16-visual",
+      "m5-17-visual",
+      "m5-18-visual",
     ]),
     settings: z
       .object({

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-14",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "uniqueItemIds": true,
+    "allSkillsMatchCurriculumTargets": true,
+    "choiceIdsCompleteUniqueAndAnswerSemanticAligned": true,
+    "allItemsDraftPractice": true,
+    "allHumanVerifiedFalse": true,
+    "assessmentInstancesZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseBlockReferencesResolve": true,
+    "rendererCopyMatchesCurriculumSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true,
+    "allItemsSkillMatchesFamilyAndTarget": true,
+    "answerKeysSemanticLabelsAndChoiceIds": true,
+    "curriculumEdgeCasesSynced": true,
+    "requiredFamilyCountsMatchSchema": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "limitations": [
+    "교육부 수학과 별책 8 첨부 본문 미열람; 공식 성취기준/코드와 단원 연결 미검증",
+    "2028 수능 예시문항 PDF 링크는 확인했으나 PDF 본문 미열람; 단원별 수능 연결 미검증",
+    "사람 검수·게시 승인 없음",
+    "독립 Curriculum AI 계산 검토 완료; 사람 수학·교육 검수와 게시 승인은 미완료"
+  ],
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; independent AI recalculation complete",
+    "method": "Recomputed exact-value arithmetic, trigonometric values, interval membership, triangle inequalities and geometric conditions from each item prompt.",
+    "itemResults": {
+      "m514-draft-01": {
+        "answer": "−1",
+        "check": "단위원에서 3π/2의 y좌표는 −1이므로 sin(3π/2)=−1."
+      },
+      "m514-draft-02": {
+        "answer": "−1/2",
+        "check": "단위원에서 2π/3의 x좌표는 −1/2이므로 cos(2π/3)=−1/2."
+      },
+      "m514-draft-03": {
+        "answer": "진폭 3, 주기 π",
+        "check": "진폭은 |−3|=3이고 b=2이므로 주기 2π/2=π다. 음수는 중심선 기준 반사를 뜻한다."
+      },
+      "m514-draft-04": {
+        "answer": "진폭 2, 주기 6π",
+        "check": "a=2라서 진폭은 2다. b=1/3이므로 주기는 2π/(1/3)=6π다."
+      },
+      "m514-draft-05": {
+        "answer": "중심선 y=1, 최댓값 2, 최솟값 0",
+        "check": "cos의 범위는 [−1,1]이다. +1 이동으로 범위가 [0,2]가 되며 중심선은 y=1이다. x−π/4는 오른쪽 이동이지만 극값에는 영향을 주지 않는다."
+      },
+      "m514-draft-06": {
+        "answer": "중심선 y=−1, 최댓값 1, 최솟값 −3",
+        "check": "−2sin x의 진폭은 2이므로 중심선 y=−1에서 위아래로 2만큼 움직인다. 범위는 [−3,1]이고 x+π/3은 왼쪽 이동이다."
+      }
+    }
+  },
+  "independentRecalculationReview": {
+    "reviewer": "Curriculum independent reviewer (AI role, separate from Research author)",
+    "reviewerAgent": "curriculum_independent_m5_09_13",
+    "reviewedAt": "2026-11-07",
+    "result": "30/30 answers and keys independently recalculated; choice IDs/labels unique and semanticAnswer matches; three requested edits were reread and confirmed.",
+    "reference": "docs/reviews/NEXT_STEP/M5-14-M5-18-curriculum-review.md; this agent review is not human publication approval."
+  }
+}

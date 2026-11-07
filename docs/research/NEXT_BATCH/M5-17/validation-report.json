@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-17",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "uniqueItemIds": true,
+    "allSkillsMatchCurriculumTargets": true,
+    "choiceIdsCompleteUniqueAndAnswerSemanticAligned": true,
+    "allItemsDraftPractice": true,
+    "allHumanVerifiedFalse": true,
+    "assessmentInstancesZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseBlockReferencesResolve": true,
+    "rendererCopyMatchesCurriculumSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true,
+    "allItemsSkillMatchesFamilyAndTarget": true,
+    "answerKeysSemanticLabelsAndChoiceIds": true,
+    "requiredFamilyCountsMatchSchema": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "limitations": [
+    "교육부 수학과 별책 8 첨부 본문 미열람; 공식 성취기준/코드와 단원 연결 미검증",
+    "2028 수능 예시문항 PDF 링크는 확인했으나 PDF 본문 미열람; 단원별 수능 연결 미검증",
+    "사람 검수·게시 승인 없음",
+    "독립 Curriculum AI 계산 검토 완료; 사람 수학·교육 검수와 게시 승인은 미완료"
+  ],
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; independent AI recalculation complete",
+    "method": "Recomputed exact-value arithmetic, trigonometric values, interval membership, triangle inequalities and geometric conditions from each item prompt.",
+    "itemResults": {
+      "m517-draft-01": {
+        "answer": "c²=a²+b²−2ab cos C",
+        "check": "전개하면 a²−2ab cos C+b²cos²C+b²sin²C다. cos²C+sin²C=1이므로 마지막 두 항은 b²가 되고, c²=a²+b²−2ab cos C다."
+      },
+      "m517-draft-02": {
+        "answer": "−2ab cos C",
+        "check": "(a−b cos C)²=a²−2ab cos C+b²cos²C다. 더해지는 b²sin²C와 항등식을 적용하면 b²(cos²C+sin²C)=b²가 되어 c²=a²+b²−2ab cos C다. 따라서 교차항은 −2ab cos C다."
+      },
+      "m517-draft-03": {
+        "answer": "√39",
+        "check": "c²=25+49−2·5·7·(1/2)=39다. 길이는 양수이므로 c=√39다."
+      },
+      "m517-draft-04": {
+        "answer": "13",
+        "check": "c²=49+64−2·7·8·(−1/2)=169이므로 c=13이다. 양의 제곱근을 선택한다."
+      },
+      "m517-draft-05": {
+        "answer": "90°",
+        "check": "cos C=(a²+b²−c²)/(2ab)=(9+16−25)/24=0이므로 C=90°다."
+      },
+      "m517-draft-06": {
+        "answer": "둔각",
+        "check": "삼각형 부등식 3+4>6을 만족한다. c²=36>a²+b²=25이므로 C는 둔각이며 cos C=(25−36)/24=−11/24다."
+      }
+    }
+  },
+  "independentRecalculationReview": {
+    "reviewer": "Curriculum independent reviewer (AI role, separate from Research author)",
+    "reviewerAgent": "curriculum_independent_m5_09_13",
+    "reviewedAt": "2026-11-07",
+    "result": "30/30 answers and keys independently recalculated; choice IDs/labels unique and semanticAnswer matches; three requested edits were reread and confirmed.",
+    "reference": "docs/reviews/NEXT_STEP/M5-14-M5-18-curriculum-review.md; this agent review is not human publication approval."
+  }
+}

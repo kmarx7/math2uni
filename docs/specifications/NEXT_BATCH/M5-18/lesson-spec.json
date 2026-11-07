@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-18",
+  "levelId": "LEVEL 5",
+  "title": "삼각형의 넓이와 활용",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "사인으로 구한 넓이",
+      "사인·코사인법칙 선택"
+    ],
+    "prerequisiteUnits": [
+      "M5-16",
+      "M5-17",
+      "M1-17"
+    ],
+    "visualization": "삼각형의 높이 변화"
+  },
+  "objectives": [
+    "두 변과 끼인각으로 넓이 K=1/2 ab sin C를 높이 공식에서 유도한다.",
+    "사인법칙·코사인법칙·넓이 공식을 자료 구조에 맞게 선택하고 결과의 단위와 가능성을 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-16-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-16 선수 기능 진단: 현재 단원의 사인으로 구한 넓이을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    },
+    {
+      "id": "m5-17-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-17 선수 기능 진단: 현재 단원의 사인으로 구한 넓이을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    },
+    {
+      "id": "m1-17-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-17 선수 기능 진단: 현재 단원의 사인으로 구한 넓이을 시작하기 위한 기초를 확인한다. 미숙하면 준비 안내만 제공하며 선수 그래프·숙달도·완료 점수를 바꾸지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-18-skill-1",
+    "m5-18-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "밑변·높이와 넓이 → 높이의 사인 표현 → 넓이 공식 → 자료 모양별 법칙 선택 → 연속 추론 → 단위·기하 검산",
+    "principleDerivation": "삼각형에서 밑변을 a, 인접 변을 b, 끼인각을 C라 하면 높이 h=b sin C다. K=1/2 ah이므로 K=1/2 ab sin C가 된다. 사인법칙은 변-맞은편 각의 쌍, 코사인법칙은 두 변과 끼인각 또는 세 변 자료에 알맞다. 넓이는 양수이고 각은 삼각형 조건을 만족해야 한다.",
+    "accessibility": "쉬운 한국어와 수학 기호 읽기를 함께 제공한다. 그림에는 축·방향·단위·조건과 텍스트 대체 설명을 둔다. 키보드로 조작 가능하게 하고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-18-u1",
+      "title": "밑변과 높이",
+      "targetSkills": [
+        "m5-18-skill-1"
+      ],
+      "explanation": "삼각형 넓이 K=1/2×밑변×높이를 그림에서 읽는다.",
+      "activity": "꼭짓점을 이동시켜도 밑변과 수직 높이의 역할이 변하지 않음을 본다.",
+      "check": "밑변 8, 높이 3이면 넓이는 12다."
+    },
+    {
+      "id": "m5-18-u2",
+      "title": "높이를 사인으로 나타내기",
+      "targetSkills": [
+        "m5-18-skill-1"
+      ],
+      "explanation": "끼인각과 인접 변으로 h=b sin C를 만든다.",
+      "activity": "각을 바꾸며 높이와 사인값의 비를 비교한다.",
+      "check": "b=10, C=30°이면 h=5다."
+    },
+    {
+      "id": "m5-18-u3",
+      "title": "두 변과 끼인각의 넓이",
+      "targetSkills": [
+        "m5-18-skill-1"
+      ],
+      "explanation": "높이를 넓이식에 대입해 K=1/2 ab sin C를 얻는다.",
+      "activity": "a,b,C를 바꾸며 넓이와 직사각형 절반 모델을 대조한다.",
+      "check": "a=6,b=4,C=30°이면 K=6이다."
+    },
+    {
+      "id": "m5-18-u4",
+      "title": "사인법칙으로 연결하기",
+      "targetSkills": [
+        "m5-18-skill-2"
+      ],
+      "explanation": "맞은편 변-각 쌍이 있으면 사인법칙을 사용해 빠진 요소를 연결한다.",
+      "activity": "문제의 알려진 변·각을 대응표에 배치한다.",
+      "check": "a/sin A=b/sin B 구조에서 같은 비를 사용한다."
+    },
+    {
+      "id": "m5-18-u5",
+      "title": "코사인법칙으로 연결하기",
+      "targetSkills": [
+        "m5-18-skill-2"
+      ],
+      "explanation": "두 변과 끼인각 또는 세 변 자료가 있으면 코사인법칙을 검토한다.",
+      "activity": "사인/코사인법칙 선택 카드를 주어진 자료와 맞춘다.",
+      "check": "두 변과 끼인각 자료는 해당 대변 계산에 코사인법칙을 쓸 수 있다."
+    },
+    {
+      "id": "m5-18-u6",
+      "title": "복합 활용과 검산",
+      "targetSkills": [
+        "m5-18-skill-2"
+      ],
+      "explanation": "넓이·법칙을 단계별로 연결하고 각도 단위, 양수, 길이·넓이 단위를 확인한다.",
+      "activity": "풀이 경로를 선택하고 각 단계의 입력 자료·단위를 기록한다.",
+      "check": "넓이 단위는 cm²이며, 0<C<π이면 1/2 ab sin C>0이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-18-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "삼각형의 밑변과 꼭짓점 높이를 조절하며 h=b sin C와 넓이를 표시한다. 자료 카드에서 적용 가능한 사인/코사인법칙을 선택하게 하고 선택 이유와 단위를 텍스트로 제공한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "높이 또는 끼인각을 이용해 삼각형 넓이를 계산하고 단위를 붙인다.",
+      "주어진 변·각 자료에 맞춰 사인법칙 또는 코사인법칙을 선택한다.",
+      "두 가지 이상의 법칙을 연결해 미지 요소나 넓이를 구하고 기하 조건으로 검산한다."
+    ],
+    "draftPracticeGoals": [
+      "밑변과 수직 높이에서 넓이를 계산한다.",
+      "h=b sin C를 이용해 높이를 구한다.",
+      "K=1/2 ab sin C를 적용하고 각의 위치를 확인한다.",
+      "맞은편 변·각 쌍에 사인법칙을 선택한다.",
+      "두 변과 끼인각/세 변에 코사인법칙을 선택한다.",
+      "복합 계산 결과의 양수·길이·넓이 단위를 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하며 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "사용한 각이 주어진 두 변의 끼인각인지 확인했는가?",
+    "자료 구조에 맞는 법칙을 선택하고 이유를 말했는가?",
+    "결과가 삼각형의 가능 조건과 단위에 맞는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답에서 연결된 기술을 진단해 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습으로 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "밑변에 대응하지 않는 각을 넓이 공식에 넣는다.",
+    "sin C 대신 cos C를 사용한다.",
+    "넓이의 단위를 cm로 적는다.",
+    "사인법칙과 코사인법칙의 적용 자료를 혼동한다.",
+    "중간 근삿값을 과도하게 반올림한다."
+  ],
+  "workedExample": {
+    "prompt": "두 변이 8 cm, 5 cm이고 끼인각이 30°일 때 넓이를 구하라.",
+    "solution": "K=1/2·8·5·sin30°=20·1/2=10이다. 따라서 넓이는 10 cm²다.",
+    "verification": "각은 두 주어진 변 사이의 끼인각이고 넓이 단위는 길이 단위의 제곱이다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus independent Curriculum AI review",
+    "reviewerIdentity": "curriculum_independent_m5_09_13 (AI reviewer; not a human approver)",
+    "scope": "Independent review of proposal metadata, objectives, beginner sequencing, prerequisite diagnostics, six subunits, fifteen phases, worked example, Research question answer/key/rationale, family distinction, skill mapping, assessment count and renderer draft consistency for development-preview implementation. This is not human content approval or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Any official achievement-standard or CSAT mapping requires direct source-level verification before addition"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-18",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "uniqueItemIds": true,
+    "allSkillsMatchCurriculumTargets": true,
+    "choiceIdsCompleteUniqueAndAnswerSemanticAligned": true,
+    "allItemsDraftPractice": true,
+    "allHumanVerifiedFalse": true,
+    "assessmentInstancesZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseBlockReferencesResolve": true,
+    "rendererCopyMatchesCurriculumSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true,
+    "allItemsSkillMatchesFamilyAndTarget": true,
+    "answerKeysSemanticLabelsAndChoiceIds": true,
+    "requiredFamilyCountsMatchSchema": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "limitations": [
+    "교육부 수학과 별책 8 첨부 본문 미열람; 공식 성취기준/코드와 단원 연결 미검증",
+    "2028 수능 예시문항 PDF 링크는 확인했으나 PDF 본문 미열람; 단원별 수능 연결 미검증",
+    "사람 검수·게시 승인 없음",
+    "독립 Curriculum AI 계산 검토 완료; 사람 수학·교육 검수와 게시 승인은 미완료"
+  ],
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; independent AI recalculation complete",
+    "method": "Recomputed exact-value arithmetic, trigonometric values, interval membership, triangle inequalities and geometric conditions from each item prompt.",
+    "itemResults": {
+      "m518-draft-01": {
+        "answer": "10 cm²",
+        "check": "높이 h=b sin C=5·(1/2)=2.5 cm다. 넓이는 (1/2)·8 cm·2.5 cm=10 cm²다. 넓이의 단위는 cm²다."
+      },
+      "m518-draft-02": {
+        "answer": "17.5 cm²",
+        "check": "10 cm 변의 수직 성분은 h=10 sin30°=5cm다. 넓이는 (1/2)·7·5=17.5cm²다."
+      },
+      "m518-draft-03": {
+        "answer": "사인법칙, b=8",
+        "check": "a와 맞은편 각 A가 주어졌으므로 b/sin B=a/sin A다. b=4·1/(1/2)=8이다."
+      },
+      "m518-draft-04": {
+        "answer": "코사인법칙, c=5",
+        "check": "두 변과 그 사이각으로 대변을 구하므로 코사인법칙 c²=9+16−24cos90°=25, c=5를 쓴다."
+      },
+      "m518-draft-05": {
+        "answer": "c=5, K=25√3/4",
+        "check": "코사인법칙으로 c²=25+25−50·(1/2)=25이므로 c=5다. 넓이 K=(1/2)ab sin60°=(25/2)(√3/2)=25√3/4다."
+      },
+      "m518-draft-06": {
+        "answer": "c=8, K=8√3",
+        "check": "C=90°다. 사인법칙으로 c/sin90°=4/sin30°이므로 c=8이다. K=(1/2)ac sin B=(1/2)·4·8·(√3/2)=8√3이다."
+      }
+    }
+  },
+  "independentRecalculationReview": {
+    "reviewer": "Curriculum independent reviewer (AI role, separate from Research author)",
+    "reviewerAgent": "curriculum_independent_m5_09_13",
+    "reviewedAt": "2026-11-07",
+    "result": "30/30 answers and keys independently recalculated; choice IDs/labels unique and semanticAnswer matches; three requested edits were reread and confirmed.",
+    "reference": "docs/reviews/NEXT_STEP/M5-14-M5-18-curriculum-review.md; this agent review is not human publication approval."
+  }
+}
