@@ -1,0 +1,103 @@
+{
+  "researchVersion": "0.1.0-draft",
+  "unitId": "M5-22",
+  "title": "합의 기호와 여러 수열의 합",
+  "checkedAt": "2026-11-07",
+  "sources": [
+    {
+      "id": "moe-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "교육부",
+      "publishedAt": "2022-12-22",
+      "verification": "direct-page-opened",
+      "verified": [
+        "고시문 본문이 수학과 교육과정을 별책 8로 규정함",
+        "15.1MB의 별책 5~14 ZIP 첨부가 표시됨"
+      ],
+      "notVerified": [
+        "첨부 ZIP과 별책 8 원문 본문은 열지 않음",
+        "수열·합·귀납법 단원의 세부 성취기준 및 코드 확인 안 함"
+      ],
+      "rights": "공식 고시 페이지·첨부의 재이용 조건은 페이지의 표시 범위를 넘어 추정하지 않는다. 별책 첨부는 재배포하지 않고 출처 참조만 기록한다.",
+      "use": "고시/원문 존재 확인에만 사용; 단원 코드·매핑 근거로 사용하지 않음."
+    },
+    {
+      "id": "moe-2028-framework",
+      "title": "2028 입시부터 선택과목 없는 통합형 수능 확정 교육부 보도자료",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2023-12-27",
+      "verification": "direct-page-opened",
+      "verified": [
+        "2028학년도부터 국어·수학·사회·과학 선택과목 없는 통합형 수능 체제라고 공지",
+        "심화수학(미적분Ⅱ·기하) 제외 내용 확인"
+      ],
+      "notVerified": [
+        "M5-19~23의 세부 출제 여부나 문항 유형은 확인하지 않음",
+        "별첨 HWP/HWPX는 열지 않음"
+      ],
+      "rights": "보도자료 페이지는 공공누리 출처표시 조건을 표시. 본문·첨부 재사용 없이 출처와 제도 요약만 기록.",
+      "use": "시험제도 맥락만 제공; 개별 단원 출제 매핑을 뒷받침하지 않음."
+    },
+    {
+      "id": "moe-2028-sample-notice",
+      "title": "2028학년도 대학입시, 이렇게 준비하세요 — 수능 예시문항 안내",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402",
+      "publisher": "교육부",
+      "publishedAt": "2025-04-15",
+      "verification": "official-search-result-only; direct-open-failed-in-this-session",
+      "verified": [
+        "검색 결과에 2028 수능 예시문항 안내 페이지와 30.1MB PDF 첨부가 표시됨"
+      ],
+      "notVerified": [
+        "해당 보도자료 본문을 이번 세션에서 직접 열지 못함",
+        "예시문항 PDF 본문 미열람; 수열 단원 문항, 범위, 코드 연결 미확인"
+      ],
+      "rights": "검색 결과는 출처 발견에만 사용. 첨부 PDF의 권리·재배포 범위 미확인, 문항 복제 금지.",
+      "use": "예시문항 자료가 존재한다는 검색 스니펫만 기록, 교육 주장·문항 모방에 사용하지 않음."
+    },
+    {
+      "id": "sa-2015-diagnostic",
+      "title": "National Senior Certificate Examination Diagnostic Report 2015 — Mathematics, Patterns section",
+      "url": "https://www.education.gov.za/Portals/0/Documents/Reports/2015%20NSC%20Diagnostic%20Report.pdf?ver=2016-01-05-001418-000",
+      "publisher": "South African Department of Basic Education",
+      "publishedAt": "2016",
+      "verification": "direct-PDF-opened-and-section-searched",
+      "verified": [
+        "2015 South African NSC Mathematics Patterns 문항의 채점 분석에서 지수식 단순화 오류, 공비 조건과 앞서 계산한 공비를 연결하지 않는 설명, 산술·등비수열 구분과 n·시그마 표기 어려움 보고"
+      ],
+      "notVerified": [
+        "남아프리카 2015년 시험 응시자의 채점 분석이며 한국 고교생이나 현재 수능 학습자의 빈도·양상으로 일반화 불가",
+        "보고서에 나타난 특정 문항은 복제하지 않음"
+      ],
+      "rights": "정부 진단보고서 PDF를 직접 열어 관련 단락만 요약. 문항·표·문장 재사용 없음; 보고서 재이용 라이선스는 확인하지 않음.",
+      "use": "수열/급수 기호 해석 관련 설계 참고자료이며 시대·국가 범위 caveat를 유지."
+    },
+    {
+      "id": "larsen-strand-vroom-2022",
+      "title": "How Undergraduate Students Think About Summation (Sigma) Notation",
+      "url": "https://pdxscholar.library.pdx.edu/mth_fac/362/",
+      "doi": "10.1007/s40753-022-00193-w",
+      "authors": [
+        "Sean P. Larsen",
+        "Steve Strand",
+        "Kristen Vroom"
+      ],
+      "publisher": "Portland State University repository; International Journal of Research in Undergraduate Mathematics Education",
+      "publishedAt": "2022-10-12",
+      "verification": "direct-repository-abstract-opened",
+      "verified": [
+        "두 학생의 설계실험 뒤 여러 학부 수학 과목의 대학생 285명에게 자유응답 3문항을 실시",
+        "시그마 표기 인코딩/디코딩에서 오답이 적지 않고, 비전형적이지만 타당한 사고도 관찰됐다고 초록에 보고"
+      ],
+      "notVerified": [
+        "대학생 표본; 한국 고등학생/수능으로 일반화 불가",
+        "본문 문항 및 상세 결과 미열람"
+      ],
+      "rights": "저자 저작권, Springer Nature와 독점 라이선스 표기. 초록만 요약하고 문항·문장·표를 복제하지 않음.",
+      "use": "M5-22 합의 시그마 표현 변환·아래끝/위끝 해석 진단 설계 참고."
+    }
+  ],
+  "rightsAndUsePolicy": "외부 기출·교재 문항을 복제하지 않는다. 출처는 주제 연구와 범위의 한계를 설명하는 데만 사용하며, 첨부를 열지 못했으면 미검증으로 둔다."
+}

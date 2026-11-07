@@ -25,6 +25,11 @@ import m515Spec from "../docs/specifications/NEXT_BATCH/M5-15/lesson-spec.json";
 import m516Spec from "../docs/specifications/NEXT_BATCH/M5-16/lesson-spec.json";
 import m517Spec from "../docs/specifications/NEXT_BATCH/M5-17/lesson-spec.json";
 import m518Spec from "../docs/specifications/NEXT_BATCH/M5-18/lesson-spec.json";
+import m519Spec from "../docs/specifications/NEXT_BATCH/M5-19/lesson-spec.json";
+import m520Spec from "../docs/specifications/NEXT_BATCH/M5-20/lesson-spec.json";
+import m521Spec from "../docs/specifications/NEXT_BATCH/M5-21/lesson-spec.json";
+import m522Spec from "../docs/specifications/NEXT_BATCH/M5-22/lesson-spec.json";
+import m523Spec from "../docs/specifications/NEXT_BATCH/M5-23/lesson-spec.json";
 import blueprint from "../docs/specifications/M0-01/problem-blueprint.json";
 import m509Blueprint from "../docs/research/NEXT_BATCH/M5-09/problem-blueprint.json";
 import m510Blueprint from "../docs/research/NEXT_BATCH/M5-10/problem-blueprint.json";
@@ -36,16 +41,31 @@ import m515Blueprint from "../docs/research/NEXT_BATCH/M5-15/problem-blueprint.j
 import m516Blueprint from "../docs/research/NEXT_BATCH/M5-16/problem-blueprint.json";
 import m517Blueprint from "../docs/research/NEXT_BATCH/M5-17/problem-blueprint.json";
 import m518Blueprint from "../docs/research/NEXT_BATCH/M5-18/problem-blueprint.json";
+import m519Blueprint from "../docs/research/NEXT_BATCH/M5-19/problem-blueprint.json";
+import m520Blueprint from "../docs/research/NEXT_BATCH/M5-20/problem-blueprint.json";
+import m521Blueprint from "../docs/research/NEXT_BATCH/M5-21/problem-blueprint.json";
+import m522Blueprint from "../docs/research/NEXT_BATCH/M5-22/problem-blueprint.json";
+import m523Blueprint from "../docs/research/NEXT_BATCH/M5-23/problem-blueprint.json";
 import m514Content from "../docs/specifications/NEXT_BATCH/M5-14/content-draft.json";
 import m515Content from "../docs/specifications/NEXT_BATCH/M5-15/content-draft.json";
 import m516Content from "../docs/specifications/NEXT_BATCH/M5-16/content-draft.json";
 import m517Content from "../docs/specifications/NEXT_BATCH/M5-17/content-draft.json";
 import m518Content from "../docs/specifications/NEXT_BATCH/M5-18/content-draft.json";
+import m519Content from "../docs/specifications/NEXT_BATCH/M5-19/content-draft.json";
+import m520Content from "../docs/specifications/NEXT_BATCH/M5-20/content-draft.json";
+import m521Content from "../docs/specifications/NEXT_BATCH/M5-21/content-draft.json";
+import m522Content from "../docs/specifications/NEXT_BATCH/M5-22/content-draft.json";
+import m523Content from "../docs/specifications/NEXT_BATCH/M5-23/content-draft.json";
 import m514Runtime from "@/data/proposal-lessons/drafts/M5-14.json";
 import m515Runtime from "@/data/proposal-lessons/drafts/M5-15.json";
 import m516Runtime from "@/data/proposal-lessons/drafts/M5-16.json";
 import m517Runtime from "@/data/proposal-lessons/drafts/M5-17.json";
 import m518Runtime from "@/data/proposal-lessons/drafts/M5-18.json";
+import m519Runtime from "@/data/proposal-lessons/drafts/M5-19.json";
+import m520Runtime from "@/data/proposal-lessons/drafts/M5-20.json";
+import m521Runtime from "@/data/proposal-lessons/drafts/M5-21.json";
+import m522Runtime from "@/data/proposal-lessons/drafts/M5-22.json";
+import m523Runtime from "@/data/proposal-lessons/drafts/M5-23.json";
 import draft from "../docs/specifications/M0-01/content-draft.json";
 import approval from "../docs/reviews/M0-01/approved-content.json";
 import instruction from "@/data/m001-instruction.json";
@@ -81,6 +101,11 @@ const proposalLessonSpecs = [
   m516Spec,
   m517Spec,
   m518Spec,
+  m519Spec,
+  m520Spec,
+  m521Spec,
+  m522Spec,
+  m523Spec,
 ];
 
 const proposalProblemBlueprints = [
@@ -94,10 +119,15 @@ const proposalProblemBlueprints = [
   m516Blueprint,
   m517Blueprint,
   m518Blueprint,
+  m519Blueprint,
+  m520Blueprint,
+  m521Blueprint,
+  m522Blueprint,
+  m523Blueprint,
 ];
 
-const proposalContents = [m514Content, m515Content, m516Content, m517Content, m518Content];
-const proposalRuntimeContents = [m514Runtime, m515Runtime, m516Runtime, m517Runtime, m518Runtime];
+const proposalContents = [m514Content, m515Content, m516Content, m517Content, m518Content, m519Content, m520Content, m521Content, m522Content, m523Content];
+const proposalRuntimeContents = [m514Runtime, m515Runtime, m516Runtime, m517Runtime, m518Runtime, m519Runtime, m520Runtime, m521Runtime, m522Runtime, m523Runtime];
 
 afterEach(() => vi.unstubAllEnvs());
 describe("cross-agent handoff contracts", () => {
@@ -229,7 +259,7 @@ describe("cross-agent handoff contracts", () => {
     }
   });
 
-  it("keeps M5-14~18 renderer data schema-valid and identical to curriculum drafts", () => {
+  it("keeps M5-14~23 renderer data schema-valid and identical to curriculum drafts", () => {
     for (const [index, input] of proposalContents.entries()) {
       expect(() => contentSchema.parse(proposalRuntimeContents[index])).not.toThrow();
       expect(proposalRuntimeContents[index]).toEqual(input);

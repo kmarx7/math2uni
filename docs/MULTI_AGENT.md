@@ -92,3 +92,11 @@ M5-09~13의 Research `content-draft.json`에는 wrapper 메타데이터와 rende
 Curriculum Architect가 5개 lesson spec과 renderer 초안을 만들고 Research & Content가 15개 문제 원형과 30개 연습 draft를 작성했다. 독립 Curriculum review는 30/30 수학·answer key·semanticAnswer 일치, 원형 분리, skill 연결을 확인한 뒤 implementation-ready로 인계했다. 구현은 접근 가능한 interactive labs 5개, bounded 삼각함수/삼각형 helper, server-only 문제 adapter, preview/lesson/problem registry, progress/security tests를 추가했다.
 
 문항은 모두 draft, 평가 인스턴스 0, publication approval 0이다. official standards와 개별 CSAT mapping은 검증하지 않았다. lint/typecheck, full unit tests 192/192, content:validate 30/30, production build 및 agent config 검증은 통과했다. E2E는 환경에서 127.0.0.1:54329 bind가 EPERM으로 거부되어 미검증이다. 단원별 QA와 승인 대기는 `docs/reviews/NEXT_BATCH/M5-14`~`M5-18/`를 참조한다.
+
+## 2026-11-07 · M5-19~M5-23 개발 프리뷰 인계 완료
+
+Curriculum Architect가 다섯 단원의 6개 소단원·15단계 명세와 renderer skeleton을 작성하고, Research & Content는 공식자료 확인/미확인 상태, 권리 기록, 15개 원형과 30개 연습 draft를 제공했다. 독립 AI Curriculum 검토는 다섯 단원 30/30 문항의 키·semantic answer·풀이를 다시 계산하고, 원형 및 기술 연결을 교차 확인했다. 검토 과정에서 M5-19 반례식, M5-22 합산 결과, 소단원 skill tag 경계를 수정했다. 이는 사람 검수나 게시 승인이 아니다.
+
+Developer & QA는 5개 bounded 인터랙티브 실험실, 수학 검증 helper, server-only 문제 adapter, lesson/preview/problem registry와 테스트를 추가했다. 콘텐츠/문항은 draft, `humanVerified:false`; 평가 0, `approvedContent:null`, 게시 승인 0이다. 공식 교육과정 성취기준 코드와 단원별 수능 매핑은 미검증으로 남겼다.
+
+lint/typecheck, Vitest 200/200, `content:validate` 38/38, Next.js 16.3.6 production build, agent config validation, diff-check가 통과했다. Playwright는 테스트 auth service가 `127.0.0.1:54329`에 bind할 때 `EPERM`으로 실행 전 차단됐다. 각 단원별 구현/QA/승인 대기 파일은 `docs/reviews/NEXT_BATCH/M5-19`~`M5-23/`에 있다.

@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-22",
+  "unitTitle": "합의 기호와 여러 수열의 합",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "humanVerified": false,
+  "assessmentCount": 0,
+  "content": {
+    "unitId": "M5-22",
+    "version": "0.1.0-draft",
+    "blocks": [
+      {
+        "id": "goals",
+        "title": "학습 목표",
+        "type": "ConceptBlock",
+        "body": "• 시그마의 아래·위 첨자가 포함하는 정수 범위를 양 끝 포함으로 읽고, 첨자 치환 시 범위를 함께 바꾼다.\n• 합의 선형성을 적용하고 자연수·제곱·세제곱의 합을 범위에 맞게 사용한다."
+      },
+      {
+        "id": "diagnostic",
+        "title": "선수학습 확인",
+        "type": "ExplanationBlock",
+        "body": "이 진단은 준비 안내에만 사용하며 선수 단원의 prerequisite, 숙달도, 완료 점수를 변경하지 않습니다.",
+        "readinessCheck": true
+      },
+      {
+        "id": "concept",
+        "title": "개념 설명",
+        "type": "ExplanationBlock",
+        "body": "Σ_{k=m}^{n} a_k는 k=m,m+1,…,n의 항을 모두 더하며 양 끝을 포함한다. 항 수는 n−m+1이다. 합은 덧셈에 대해 선형이므로 Σ(ca_k+db_k)=cΣa_k+dΣb_k다. 첨자를 j=k−m 등으로 바꾸면 항뿐 아니라 새 아래·위 범위와 식도 함께 바뀐다. Σk=n(n+1)/2, Σk²=n(n+1)(2n+1)/6, Σk³=[n(n+1)/2]²는 1부터 n까지의 합이다.",
+        "sections": [
+          {
+            "id": "m5-22-u1",
+            "title": "시그마 기호 읽기",
+            "body": "아래 첨자는 시작값, 위 첨자는 끝값이며 양 끝 정수를 모두 포함한다.",
+            "activity": "각 번호를 하나씩 표시해 합에 들어가는 항을 센다.",
+            "check": "Σ_{k=2}^{4} k=2+3+4=9다."
+          },
+          {
+            "id": "m5-22-u2",
+            "title": "범위와 항 수",
+            "body": "m부터 n까지는 n−m+1개 항이다.",
+            "activity": "포함/제외 끝점 표식을 바꾸고 항 개수를 비교한다.",
+            "check": "k=3부터 6까지는 4개 항이다."
+          },
+          {
+            "id": "m5-22-u3",
+            "title": "합의 선형성",
+            "body": "같은 범위에서 합을 항별로 나누고 상수배를 밖으로 뺄 수 있다.",
+            "activity": "두 열의 항별 합이 각각의 총합과 같음을 비교한다.",
+            "check": "Σ_{k=1}^{3}(2k+1)=2Σk+Σ1=2·6+3=15다."
+          },
+          {
+            "id": "m5-22-u4",
+            "title": "첨자 이동",
+            "body": "첨자 치환은 합의 값과 항 범위를 함께 보존해야 한다.",
+            "activity": "k=j+1 치환 후 새 시작·끝을 번호표에 표시한다.",
+            "check": "Σ_{k=2}^{4} k=Σ_{j=1}^{3}(j+1)이다."
+          },
+          {
+            "id": "m5-22-u5",
+            "title": "기본 거듭제곱 합",
+            "body": "자연수·제곱·세제곱 합 공식의 시작 범위를 확인해 쓴다.",
+            "activity": "작은 n 값을 직접 더해 공식 결과와 대조한다.",
+            "check": "Σ_{k=1}^{3}k²=14다."
+          },
+          {
+            "id": "m5-22-u6",
+            "title": "다항식 합 분해",
+            "body": "다항식 항을 선형성으로 분리하고 각 기본 합을 적용한다.",
+            "activity": "다항식 합을 항별 바구니로 나누어 각각 계산한다.",
+            "check": "Σ_{k=1}^{3}(k²+2k)=14+12=26이다."
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "title": "시각적 탐구",
+        "type": "InteractiveBlock",
+        "interaction": "m5-22-visual"
+      },
+      {
+        "id": "example",
+        "title": "단계별 예제",
+        "type": "WorkedExampleBlock",
+        "steps": [
+          "Σ_{k=1}^{4}(2k²−k)를 구하라.",
+          "선형성으로 2Σk²−Σk=2·30−10=50이다. 직접 항을 더하면 1+6+15+28=50이다.",
+          "두 합 모두 k=1,2,3,4를 포함하며 항 수는 4개다."
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "연습 계획",
+        "type": "PracticeBlock",
+        "purpose": "practice",
+        "hint": "먼저 적용할 규칙과 범위를 말로 확인한 뒤 연습 초안을 풉니다. 정답과 해설은 제출 전에 공개하지 않습니다."
+      },
+      {
+        "id": "feedback",
+        "title": "오답 교정",
+        "type": "FeedbackBlock",
+        "body": "오답은 규칙·범위·계산 단계를 나누어 확인하고 관련 소단원으로 돌아갑니다. 오개념 문구는 빈도 주장이 아닌 점검 가설입니다.\n• 위 첨자를 제외 경계로 읽는다.\n• 항 수를 n−m으로 계산한다.\n• 첨자만 바꾸고 범위는 그대로 둔다.\n• 상수 c를 합 밖으로 빼면서 항 수 c를 더한다.\n• Σk² 공식의 범위가 1부터 n임을 잊는다."
+      },
+      {
+        "id": "review",
+        "title": "복습과 다음 단원",
+        "type": "ReviewBlock",
+        "body": "핵심 규칙과 조건을 떠올리고 간격을 두어 복습합니다."
+      }
+    ],
+    "learningPhases": [
+      {
+        "id": "phase-01",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "phase-02",
+        "title": "선수학습 진단",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "phase-03",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-04",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-05",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "phase-06",
+        "title": "원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-07",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "phase-08",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "phase-09",
+        "title": "유형별 연습 A",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-10",
+        "title": "유형별 연습 B",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-11",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-12",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "phase-13",
+        "title": "형성평가 설계",
+        "blockId": "feedback",
+        "state": "planned"
+      },
+      {
+        "id": "phase-14",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "phase-15",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ],
+    "contentStatus": "draft",
+    "publicationApproved": false,
+    "approvedContent": null,
+    "note": "Curriculum-authored renderer structure draft; Research source/rights, independent curriculum review and Developer QA pending. This draft has no human publication approval."
+  },
+  "practicePlan": {
+    "families": [
+      {
+        "familyId": "m5-22-family-1",
+        "skillId": "m5-22-skill-1",
+        "itemIds": [
+          "m522-draft-01",
+          "m522-draft-02"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-22-family-2",
+        "skillId": "m5-22-skill-2",
+        "itemIds": [
+          "m522-draft-03",
+          "m522-draft-04"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-22-family-3",
+        "skillId": "m5-22-skill-2",
+        "itemIds": [
+          "m522-draft-05",
+          "m522-draft-06"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

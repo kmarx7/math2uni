@@ -12,6 +12,7 @@ import { M4FunctionsPreviewLab } from "./m4-14-18-preview-labs";
 import { M5PreviewLab } from "./m5-04-m5-08-preview-labs";
 import { M5AlgebraPreviewLab, M5TrigonometryPreviewLab } from "./m5-09-m5-13-preview-labs";
 import { M5TrigonometryApplicationsPreviewLab } from "./m5-14-m5-18-preview-labs";
+import { M5SequencesPreviewLab } from "./m5-19-m5-23-preview-labs";
 import { M4M5PreviewLab } from "./m4-19-m5-03-preview-labs";
 type Interactive = Extract<Block, { type: "InteractiveBlock" }>;
 function gcd(a: number, b: number): number {
@@ -114,6 +115,7 @@ export function MathLab({ block, unitId }: { block: Interactive; unitId?: string
   if (["M5-09", "M5-10"].includes(unitId ?? "")) return <M5AlgebraPreviewLab unitId={unitId!} />;
   if (["M5-11", "M5-12", "M5-13"].includes(unitId ?? "")) return <M5TrigonometryPreviewLab unitId={unitId!} />;
   if (["M5-14", "M5-15", "M5-16", "M5-17", "M5-18"].includes(unitId ?? "")) return <M5TrigonometryApplicationsPreviewLab unitId={unitId!} />;
+  if (["M5-19", "M5-20", "M5-21", "M5-22", "M5-23"].includes(unitId ?? "")) return <M5SequencesPreviewLab unitId={unitId!} />;
   if (["M4-04", "M4-05", "M4-06", "M4-07", "M4-08"].includes(unitId ?? "")) return <M4PreviewLab unitId={unitId!} />;
   if (["M3-21", "M3-22", "M4-01", "M4-02", "M4-03"].includes(unitId ?? "")) return <M3M4PreviewLab unitId={unitId!} />;
   if (block.interaction === "place-value") return <PlaceLab />;

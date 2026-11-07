@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-19",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; independent AI curriculum recalculation complete",
+    "method": "Recomputed formulas, recurrence steps, finite endpoint counts, range transforms, branch cases and proof implication logic from each item.",
+    "itemResults": {
+      "m519-draft-01": {
+        "answer": "14",
+        "check": "표의 n=4인 칸에서 a₄=14를 읽는다. 첨자 4는 네 번째 항의 번호다."
+      },
+      "m519-draft-02": {
+        "answer": "21",
+        "check": "n=6을 대입하면 a₆=4·6−3=21이다."
+      },
+      "m519-draft-03": {
+        "answer": "14",
+        "check": "연속한 항의 차가 매번 3이다. 같은 규칙을 한 번 더 적용해 11+3=14로 예측한다."
+      },
+      "m519-draft-04": {
+        "answer": "15",
+        "check": "a₂=3, a₃=7, a₄=15다. 점화식을 적용할 때 시작값 a₁=1부터 차례대로 계산한다."
+      },
+      "m519-draft-05": {
+        "answer": "아니오; b₄=10도 가능",
+        "check": "두 식 모두 n=1,2,3에서 1,2,3을 준다. n=4이면 a₄=4지만 b₄=4+3·2·1=10이다. 따라서 추가 규칙 없이 a₄는 유일하게 정해지지 않는다."
+      },
+      "m519-draft-06": {
+        "answer": "14",
+        "check": "n=1,2,3에서는 곱 (n−1)(n−2)(n−3)이 0이므로 두 규칙이 2,4,6으로 일치한다. n=4이면 b₄=8+1·2·3=14다."
+      }
+    }
+  },
+  "limitations": [
+    "MOE 2022 math annex body unopened; official standards/codes remain unverified",
+    "2028 sample-item notice was search-result-only and PDF body unopened; item/topic mapping unverified",
+    "Independent Curriculum AI recalculation completed for all 30 practice drafts; this is not human verification or publication approval.",
+    "Human educational/math review and publication approval pending"
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Curriculum independent reviewer (AI role, separate from Research author)",
+    "reviewerAgent": "curriculum_independent_m5_09_13",
+    "date": "2026-11-07",
+    "scope": "Independent recalculation of all 30 practice drafts across M5-19..M5-23, including semantic answer, choice key, and rationale alignment.",
+    "result": "30/30 recalculated; Curriculum review records no remaining answer/math blocker. This is an AI cross-review, not human verification or publication approval."
+  }
+}

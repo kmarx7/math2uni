@@ -132,6 +132,11 @@ export const blockSchema = z.discriminatedUnion("type", [
       "m5-16-visual",
       "m5-17-visual",
       "m5-18-visual",
+      "m5-19-visual",
+      "m5-20-visual",
+      "m5-21-visual",
+      "m5-22-visual",
+      "m5-23-visual",
     ]),
     settings: z
       .object({

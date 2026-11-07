@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-23",
+  "unitTitle": "수학적 귀납법",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "humanVerified": false,
+  "assessmentCount": 0,
+  "content": {
+    "unitId": "M5-23",
+    "version": "0.1.0-draft",
+    "blocks": [
+      {
+        "id": "goals",
+        "title": "학습 목표",
+        "type": "ConceptBlock",
+        "body": "• 명제 P(n)의 시작 범위와 기초 단계 P(n₀)를 확인한다.\n• 귀납 가정 P(k)를 임의의 k≥n₀에 대해 가정해 P(k+1)을 증명하고, 기초 단계와 연결해 모든 정수 n≥n₀에 대한 결론을 설명한다."
+      },
+      {
+        "id": "diagnostic",
+        "title": "선수학습 확인",
+        "type": "ExplanationBlock",
+        "body": "이 진단은 준비 안내에만 사용하며 선수 단원의 prerequisite, 숙달도, 완료 점수를 변경하지 않습니다.",
+        "readinessCheck": true
+      },
+      {
+        "id": "concept",
+        "title": "개념 설명",
+        "type": "ExplanationBlock",
+        "body": "귀납법은 P(n₀)를 참으로 확인하고, 모든 k≥n₀에 대해 P(k)라면 P(k+1)임을 증명하는 두 조건으로 구성된다. 기초 단계에서 시작한 참이 한 단계씩 이어져 모든 n≥n₀에 도달한다. 귀납 가정은 증명하려는 P(k+1) 자체가 아니며, 반드시 가정을 명시적으로 사용해 다음 단계의 식을 얻어야 한다. 기초 단계가 빠지거나 단계가 n₀부터 연결되지 않으면 전체 결론은 나오지 않는다.",
+        "sections": [
+          {
+            "id": "m5-23-u1",
+            "title": "명제와 시작 범위",
+            "body": "P(n)이 어떤 정수 n 범위에서 참인지 먼저 정한다.",
+            "activity": "명제 카드에 n의 허용 시작값을 표시한다.",
+            "check": "“n≥1에서 1+…+n=n(n+1)/2”의 시작값은 1이다."
+          },
+          {
+            "id": "m5-23-u2",
+            "title": "기초 단계",
+            "body": "시작값 n₀를 원래 명제에 대입해 P(n₀)를 확인한다.",
+            "activity": "도미노 첫 조각을 확인하고 계산을 명제에 대입한다.",
+            "check": "n=1에서 1=1·2/2이므로 참이다."
+          },
+          {
+            "id": "m5-23-u3",
+            "title": "귀납 가정",
+            "body": "임의의 k≥n₀를 택하고 P(k)를 가정한다고 정확히 적는다.",
+            "activity": "“임의의 k” 카드와 “가정” 카드를 분리해 놓는다.",
+            "check": "귀납 가정은 1+…+k=k(k+1)/2다."
+          },
+          {
+            "id": "m5-23-u4",
+            "title": "다음 단계 목표",
+            "body": "P(k+1)의 양변과 목표식을 먼저 쓴다.",
+            "activity": "k에서 k+1로 바뀌는 새 항을 추가 카드로 표시한다.",
+            "check": "다음 목표는 1+…+k+(k+1)=(k+1)(k+2)/2다."
+          },
+          {
+            "id": "m5-23-u5",
+            "title": "귀납 단계 전개",
+            "body": "귀납 가정에 새 항을 더하고 목표식으로 변형한다.",
+            "activity": "가정한 등식에 k+1을 더하는 한 줄을 만들고 인수분해한다.",
+            "check": "k(k+1)/2+(k+1)=(k+1)(k+2)/2다."
+          },
+          {
+            "id": "m5-23-u6",
+            "title": "두 단계 연결과 결론",
+            "body": "기초와 모든 k→k+1 연결을 함께 써서 범위 전체 결론을 낸다.",
+            "activity": "도미노를 n₀에서 시작해 연속 번호로 연결하고 빈 단계가 있는지 찾는다.",
+            "check": "기초 단계와 임의의 k에 대한 단계 증명이 모두 있어야 모든 n≥1을 결론 낼 수 있다."
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "title": "시각적 탐구",
+        "type": "InteractiveBlock",
+        "interaction": "m5-23-visual"
+      },
+      {
+        "id": "example",
+        "title": "단계별 예제",
+        "type": "WorkedExampleBlock",
+        "steps": [
+          "귀납법으로 1+2+…+n=n(n+1)/2를 증명하라.",
+          "기초: n=1이면 1=1·2/2다. 귀납 가정: 임의의 k≥1에 대해 1+…+k=k(k+1)/2라고 하자. 다음 단계: 1+…+k+(k+1)=k(k+1)/2+(k+1)=(k+1)(k+2)/2이므로 P(k+1)이 참이다. 따라서 모든 n≥1에서 성립한다.",
+          "첫 단계와 모든 k→k+1 연결을 각각 확인했으며 귀납 가정을 다음 단계 유도에 사용했다."
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "연습 계획",
+        "type": "PracticeBlock",
+        "purpose": "practice",
+        "hint": "먼저 적용할 규칙과 범위를 말로 확인한 뒤 연습 초안을 풉니다. 정답과 해설은 제출 전에 공개하지 않습니다."
+      },
+      {
+        "id": "feedback",
+        "title": "오답 교정",
+        "type": "FeedbackBlock",
+        "body": "오답은 규칙·범위·계산 단계를 나누어 확인하고 관련 소단원으로 돌아갑니다. 오개념 문구는 빈도 주장이 아닌 점검 가설입니다.\n• 귀납 가정 P(k)를 증명 없이 전체 결론이라고 여긴다.\n• P(k+1)을 귀납 가정으로 둔다.\n• 기초 단계 없이 도미노 비유만 든다.\n• 특정 숫자 몇 개 확인으로 모든 n을 증명했다고 말한다.\n• 귀납 가정을 사용하지 않은 채 다음 식을 주장한다."
+      },
+      {
+        "id": "review",
+        "title": "복습과 다음 단원",
+        "type": "ReviewBlock",
+        "body": "핵심 규칙과 조건을 떠올리고 간격을 두어 복습합니다."
+      }
+    ],
+    "learningPhases": [
+      {
+        "id": "phase-01",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "phase-02",
+        "title": "선수학습 진단",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "phase-03",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-04",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-05",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "phase-06",
+        "title": "원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-07",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "phase-08",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "phase-09",
+        "title": "유형별 연습 A",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-10",
+        "title": "유형별 연습 B",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-11",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-12",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "phase-13",
+        "title": "형성평가 설계",
+        "blockId": "feedback",
+        "state": "planned"
+      },
+      {
+        "id": "phase-14",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "phase-15",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ],
+    "contentStatus": "draft",
+    "publicationApproved": false,
+    "approvedContent": null,
+    "note": "Curriculum-authored renderer structure draft; Research source/rights, independent curriculum review and Developer QA pending. This draft has no human publication approval."
+  },
+  "practicePlan": {
+    "families": [
+      {
+        "familyId": "m5-23-family-1",
+        "skillId": "m5-23-skill-1",
+        "itemIds": [
+          "m523-draft-01",
+          "m523-draft-02"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-23-family-2",
+        "skillId": "m5-23-skill-2",
+        "itemIds": [
+          "m523-draft-03",
+          "m523-draft-04"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-23-family-3",
+        "skillId": "m5-23-skill-2",
+        "itemIds": [
+          "m523-draft-05",
+          "m523-draft-06"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}

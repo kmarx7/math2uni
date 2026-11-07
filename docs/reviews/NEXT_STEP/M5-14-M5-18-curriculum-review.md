@@ -33,8 +33,8 @@ Research의 5개 조사 보고서와 출처 기록을 확인했다. 교육부 �
 - Research 출처/권리 보고서 검토: 확인 완료 (공식 세부 매핑·문항 근거 미검증임을 유지)
 - Research 원형·문항 초안 독립 수학/교육 검토: 완료 (30/30 재계산·key mapping, 수정 요청 3건 재검토 완료)
 - 교육 명세/문항 구조 구현 인계: `implementation-ready` (preview 구현 근거)
-- Developer 자동·단위·스키마·lint·typecheck·build QA: 완료 (각 단원 보고서 기준: 전체 25 files / 192 tests, content validation 4 files / 30 tests, lint/typecheck/build 통과)
-- E2E 브라우저 QA: 차단 — 테스트 서버가 `127.0.0.1:54329` bind에서 `EPERM: operation not permitted`를 반환해 테스트 시작 전 중단됨; 브라우저 흐름은 미검증
+- Developer 자동·단위·스키마·lint·typecheck·build 검증: 완료 (QA 보고서 기준: 전체 25 files / 192 tests, content validation 4 files / 30 tests, lint/typecheck/build 통과)
+- E2E 브라우저 검증: 차단 — 테스트 서버가 `127.0.0.1:54329` bind에서 `EPERM: operation not permitted`를 반환해 테스트 시작 전 중단됨; 브라우저 학습 흐름은 미검증
 - 사람 게시 승인: 없음 (`publicationApproved:false`, `approvedContent:null`)
 - 공개 상태: production publication gate 유지, 미승인 초안 공개 불가
 

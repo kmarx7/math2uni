@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-19",
+  "unitTitle": "수열과 일반항",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-19-family-1",
+      "status": "draft",
+      "title": "항 번호·표·일반항 읽기",
+      "reasoningStructure": "표의 항 번호를 일반항에 대응시키고 지정된 항의 값을 읽거나 계산한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-19-skill-1",
+      "distinctFrom": "표의 항 번호를 일반항에 대응시키고 지정된 항의 값을 읽거나 계산한다.가 이 가족의 주된 추론이다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m519-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "표에서 n=1,2,3,4일 때 a_n=5,8,11,14이다. 표에 기록된 네 번째 항 a₄는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "14",
+          "rationale": "표의 n=4인 칸에서 a₄=14를 읽는다. 첨자 4는 네 번째 항의 번호다.",
+          "skillLabel": "m5-19-skill-1",
+          "misconceptionHypothesis": "아래첨자를 지수로 읽거나 항 번호와 항 값을 혼동하는지 진단하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "14"
+            },
+            {
+              "id": "B",
+              "label": "11"
+            },
+            {
+              "id": "C",
+              "label": "15"
+            }
+          ]
+        },
+        {
+          "id": "m519-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "일반항 a_n=4n−3인 수열에서 a₆는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "21",
+          "rationale": "n=6을 대입하면 a₆=4·6−3=21이다.",
+          "skillLabel": "m5-19-skill-1",
+          "misconceptionHypothesis": "아래첨자를 지수로 읽거나 항 번호와 항 값을 혼동하는지 진단하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "18"
+            },
+            {
+              "id": "B",
+              "label": "21"
+            },
+            {
+              "id": "C",
+              "label": "24"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-19-family-2",
+      "status": "draft",
+      "title": "관찰 규칙 또는 점화식으로 예측",
+      "reasoningStructure": "변화 패턴을 규칙 후보로 표현하고 다음 항을 예측한다.",
+      "thinkingType": "규칙 추론",
+      "skillId": "m5-19-skill-2",
+      "distinctFrom": "변화 패턴을 규칙 후보로 표현하고 다음 항을 예측한다.가 이 가족의 주된 추론이다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m519-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "수열 2, 5, 8, 11, …에서 항 사이의 변화가 계속된다고 가정할 때 다음 항은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "14",
+          "rationale": "연속한 항의 차가 매번 3이다. 같은 규칙을 한 번 더 적용해 11+3=14로 예측한다.",
+          "skillLabel": "m5-19-skill-2",
+          "misconceptionHypothesis": "차이 규칙을 찾지 못하거나 점화식의 시작값을 빠뜨리는지 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "13"
+            },
+            {
+              "id": "B",
+              "label": "16"
+            },
+            {
+              "id": "C",
+              "label": "14"
+            }
+          ]
+        },
+        {
+          "id": "m519-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "a₁=1이고 a_{n+1}=2a_n+1인 수열에서 a₄는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "15",
+          "rationale": "a₂=3, a₃=7, a₄=15다. 점화식을 적용할 때 시작값 a₁=1부터 차례대로 계산한다.",
+          "skillLabel": "m5-19-skill-2",
+          "misconceptionHypothesis": "차이 규칙을 찾지 못하거나 점화식의 시작값을 빠뜨리는지 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "15"
+            },
+            {
+              "id": "B",
+              "label": "11"
+            },
+            {
+              "id": "C",
+              "label": "16"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-19-family-3",
+      "status": "draft",
+      "title": "유한 관찰로 일반항 유일성 검토",
+      "reasoningStructure": "같은 처음 항을 만드는 서로 다른 규칙을 제시해 관찰값만으로 일반항이 유일한지 판단한다.",
+      "thinkingType": "반례 구성",
+      "skillId": "m5-19-skill-2",
+      "distinctFrom": "같은 처음 항을 만드는 서로 다른 규칙을 제시해 관찰값만으로 일반항이 유일한지 판단한다.가 이 가족의 주된 추론이다. 숫자만 바꾼 문항은 새 가족으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m519-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "처음 세 항이 1, 2, 3인 수열에 대해 a_n=n과 b_n=n+(n−1)(n−2)(n−3)을 비교한다. 반드시 a₄=4라고 결론낼 수 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "아니오; b₄=10도 가능",
+          "rationale": "두 식 모두 n=1,2,3에서 1,2,3을 준다. n=4이면 a₄=4지만 b₄=4+3·2·1=10이다. 따라서 추가 규칙 없이 a₄는 유일하게 정해지지 않는다.",
+          "skillLabel": "m5-19-skill-2",
+          "misconceptionHypothesis": "유한한 항이 미래 규칙을 유일하게 결정한다고 가정하는지 확인하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "예; 처음 세 항이 1,2,3이므로 a₄=4만 가능"
+            },
+            {
+              "id": "B",
+              "label": "아니오; b₄=10도 가능"
+            },
+            {
+              "id": "C",
+              "label": "아니오; b₄=7만 가능"
+            }
+          ]
+        },
+        {
+          "id": "m519-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "처음 세 항이 2, 4, 6인 수열에서 a_n=2n으로 정할 때 b_n=2n+(n−1)(n−2)(n−3)도 같은 세 항을 갖는다. b₄는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "14",
+          "rationale": "n=1,2,3에서는 곱 (n−1)(n−2)(n−3)이 0이므로 두 규칙이 2,4,6으로 일치한다. n=4이면 b₄=8+1·2·3=14다.",
+          "skillLabel": "m5-19-skill-2",
+          "misconceptionHypothesis": "유한한 항이 미래 규칙을 유일하게 결정한다고 가정하는지 확인하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation requested",
+            "result": "author manual calculation recorded; independent review and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "8"
+            },
+            {
+              "id": "B",
+              "label": "12"
+            },
+            {
+              "id": "C",
+              "label": "14"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

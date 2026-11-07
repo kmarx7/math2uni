@@ -1,0 +1,86 @@
+{
+  "researchVersion": "0.1.0-draft",
+  "unitId": "M5-23",
+  "title": "수학적 귀납법",
+  "checkedAt": "2026-11-07",
+  "sources": [
+    {
+      "id": "moe-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "교육부",
+      "publishedAt": "2022-12-22",
+      "verification": "direct-page-opened",
+      "verified": [
+        "고시문 본문이 수학과 교육과정을 별책 8로 규정함",
+        "15.1MB의 별책 5~14 ZIP 첨부가 표시됨"
+      ],
+      "notVerified": [
+        "첨부 ZIP과 별책 8 원문 본문은 열지 않음",
+        "수열·합·귀납법 단원의 세부 성취기준 및 코드 확인 안 함"
+      ],
+      "rights": "공식 고시 페이지·첨부의 재이용 조건은 페이지의 표시 범위를 넘어 추정하지 않는다. 별책 첨부는 재배포하지 않고 출처 참조만 기록한다.",
+      "use": "고시/원문 존재 확인에만 사용; 단원 코드·매핑 근거로 사용하지 않음."
+    },
+    {
+      "id": "moe-2028-framework",
+      "title": "2028 입시부터 선택과목 없는 통합형 수능 확정 교육부 보도자료",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=020402&opType=N&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2023-12-27",
+      "verification": "direct-page-opened",
+      "verified": [
+        "2028학년도부터 국어·수학·사회·과학 선택과목 없는 통합형 수능 체제라고 공지",
+        "심화수학(미적분Ⅱ·기하) 제외 내용 확인"
+      ],
+      "notVerified": [
+        "M5-19~23의 세부 출제 여부나 문항 유형은 확인하지 않음",
+        "별첨 HWP/HWPX는 열지 않음"
+      ],
+      "rights": "보도자료 페이지는 공공누리 출처표시 조건을 표시. 본문·첨부 재사용 없이 출처와 제도 요약만 기록.",
+      "use": "시험제도 맥락만 제공; 개별 단원 출제 매핑을 뒷받침하지 않음."
+    },
+    {
+      "id": "moe-2028-sample-notice",
+      "title": "2028학년도 대학입시, 이렇게 준비하세요 — 수능 예시문항 안내",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402",
+      "publisher": "교육부",
+      "publishedAt": "2025-04-15",
+      "verification": "official-search-result-only; direct-open-failed-in-this-session",
+      "verified": [
+        "검색 결과에 2028 수능 예시문항 안내 페이지와 30.1MB PDF 첨부가 표시됨"
+      ],
+      "notVerified": [
+        "해당 보도자료 본문을 이번 세션에서 직접 열지 못함",
+        "예시문항 PDF 본문 미열람; 수열 단원 문항, 범위, 코드 연결 미확인"
+      ],
+      "rights": "검색 결과는 출처 발견에만 사용. 첨부 PDF의 권리·재배포 범위 미확인, 문항 복제 금지.",
+      "use": "예시문항 자료가 존재한다는 검색 스니펫만 기록, 교육 주장·문항 모방에 사용하지 않음."
+    },
+    {
+      "id": "arnesen-skartsaeterhagen-2025",
+      "title": "Mathematical induction in education research: a systematic review",
+      "url": "https://link.springer.com/article/10.1007/s10649-024-10373-x",
+      "doi": "10.1007/s10649-024-10373-x",
+      "authors": [
+        "Kristin Krogh Arnesen",
+        "Øystein Ingmar Skartsæterhagen"
+      ],
+      "publisher": "Educational Studies in Mathematics, 119, 79–100",
+      "publishedAt": "2025-01-06",
+      "verification": "direct-open-access-full-page-opened",
+      "verified": [
+        "52개 수학적 귀납법 중심 연구와 33개 귀납법을 중심으로 하지 않는 연구를 검토",
+        "대부분의 자료가 고등교육 수준이며 영어 출판물로 제한되어 있음",
+        "귀납법을 절차로만 보는 경향, 기초 단계와 귀납 단계, 가정한 명제에서 다음 명제를 도출하는 논리 연결이 혼란 지점으로 논의됨"
+      ],
+      "notVerified": [
+        "문헌 검토가 직접 한국 고교생 실험을 수행한 것은 아님",
+        "연구의 질을 체계적으로 평가하지 않았고 영어 문헌 제한을 저자가 한계로 명시"
+      ],
+      "rights": "CC BY 4.0을 논문 페이지에서 확인. 문헌 결과만 요약하며 논문 내 예제·표를 복제하지 않음.",
+      "use": "M5-23에서 명제 정의역, 기초 단계, P(k) 가정과 P(k+1) 증명을 분리하도록 하는 참고자료."
+    }
+  ],
+  "rightsAndUsePolicy": "외부 기출·교재 문항을 복제하지 않는다. 출처는 주제 연구와 범위의 한계를 설명하는 데만 사용하며, 첨부를 열지 못했으면 미검증으로 둔다."
+}

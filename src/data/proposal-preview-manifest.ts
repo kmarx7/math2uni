@@ -20,6 +20,7 @@ export const draftPreviewUnitIds = [
   "M5-04", "M5-05", "M5-06", "M5-07", "M5-08",
   "M5-09", "M5-10", "M5-11", "M5-12", "M5-13",
   "M5-14", "M5-15", "M5-16", "M5-17", "M5-18",
+  "M5-19", "M5-20", "M5-21", "M5-22", "M5-23",
 ] as const;
 
 export function isDraftPreviewUnitId(unitId: string) {

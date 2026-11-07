@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-21",
+  "levelId": "LEVEL 5",
+  "title": "등비수열",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "공비와 일반항",
+      "유한 등비수열의 합"
+    ],
+    "prerequisiteUnits": [
+      "M5-19",
+      "M5-01"
+    ],
+    "visualization": "비가 일정한 묶음"
+  },
+  "objectives": [
+    "등비수열의 공비 q를 연속 항의 곱셈 관계로 읽고 양수·음수·0·1을 구별한다.",
+    "a_n=a_1q^{n−1}과 유한합 공식을 유도하며 q=1 분기와 q=0/음수 항의 의미를 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-19-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-19 선수 기능 진단: 등비수열을 시작하기 위한 공비와 일반항 기초를 확인한다. 미숙하면 준비 안내만 제공하며 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-01-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-01 선수 기능 진단: 등비수열을 시작하기 위한 공비와 일반항 기초를 확인한다. 미숙하면 준비 안내만 제공하며 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-21-skill-1",
+    "m5-21-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "연속 항의 곱셈 관계 → 공비의 부호·특수값 → 일반항 반복 곱 → 유한합과 곱셈 후 빼기 → q≠1 공식 → q=1 별도 처리",
+    "principleDerivation": "등비수열은 a_{n+1}=q a_n이고 시작값에서 n−1번 q를 곱해 a_n=a_1q^{n−1}이다. S_n=a_1+a_1q+…+a_1q^{n−1}라 놓고 qS_n을 정렬해 빼면 (1−q)S_n=a_1(1−q^n)이다. 이 나눗셈은 q≠1일 때만 가능하다. q=1이면 모든 항이 a_1이므로 S_n=na_1이다. q=0이면 첫 항 뒤가 0이고 q<0이면 부호가 번갈 수 있다.",
+    "accessibility": "쉬운 한국어와 기호를 함께 제공한다. 항 번호·단위·조건은 텍스트로 표시하고 도식에 텍스트 대체 설명을 둔다. 키보드만으로 조작 가능하게 하며 색에만 의존하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-21-u1",
+      "title": "공비와 연속 항",
+      "targetSkills": [
+        "m5-21-skill-1"
+      ],
+      "explanation": "q는 다음 항을 바로 앞 항으로 곱해 얻는 일정한 비율이다.",
+      "activity": "항 사이 곱셈 화살표에 같은 q를 기록한다.",
+      "check": "3,−6,12의 공비는 −2다."
+    },
+    {
+      "id": "m5-21-u2",
+      "title": "공비의 부호와 특수값",
+      "targetSkills": [
+        "m5-21-skill-1"
+      ],
+      "explanation": "q>0은 부호를 유지하고 q<0은 0이 아닌 항에서 부호를 번갈며 q=0,1은 별도 형태를 만든다.",
+      "activity": "q 부호 카드를 적용해 몇 항을 생성하고 패턴을 본다.",
+      "check": "4,0,0,…은 a_1=4,q=0으로 나타낼 수 있다."
+    },
+    {
+      "id": "m5-21-u3",
+      "title": "일반항",
+      "targetSkills": [
+        "m5-21-skill-1"
+      ],
+      "explanation": "a_n=a_1q^{n−1}에서 곱셈 횟수는 n−1이다.",
+      "activity": "n을 바꾸고 q 곱셈 횟수를 세어 표를 갱신한다.",
+      "check": "a_1=2,q=3이면 a_4=54다."
+    },
+    {
+      "id": "m5-21-u4",
+      "title": "유한합의 정렬",
+      "targetSkills": [
+        "m5-21-skill-2"
+      ],
+      "explanation": "S_n과 qS_n을 같은 지수 항끼리 정렬해 공통 부분을 소거한다.",
+      "activity": "두 줄의 합을 정렬하고 남는 첫 항·마지막 항을 표시한다.",
+      "check": "1+2+4에서 2S−S=7이다."
+    },
+    {
+      "id": "m5-21-u5",
+      "title": "q≠1 합 공식",
+      "targetSkills": [
+        "m5-21-skill-2"
+      ],
+      "explanation": "q≠1일 때만 1−q로 나누어 S_n=a_1(1−q^n)/(1−q)를 쓴다.",
+      "activity": "q가 1에 가까운 값/1인 값을 분기표로 구별한다.",
+      "check": "a_1=2,q=3,n=3이면 S_3=26이다."
+    },
+    {
+      "id": "m5-21-u6",
+      "title": "q=1과 특수값 검산",
+      "targetSkills": [
+        "m5-21-skill-2"
+      ],
+      "explanation": "q=1이면 S_n=na_1이며, q=0·음수도 일반항·유한합에 대입해 점검한다.",
+      "activity": "q=1,0,−1 카드를 각 항 표와 합 계산에 적용한다.",
+      "check": "a_1=5,q=1,n=4이면 S_4=20이며 (1−q)로 나누지 않는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-21-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "q 값(음수, 0, 1, 양수)을 바꾸며 항 목록과 유한합을 동시에 보여준다. q=1에서는 일반 합 공식 대신 별도 분기가 활성화되고, q=0·음수의 결과를 설명한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "항의 곱셈 관계와 공비 부호를 판정해 일반항이나 특정 항을 구한다.",
+      "q≠1에서 유한합을 정렬·소거 또는 공식으로 계산한다.",
+      "q=1, q=0, q<0의 분기를 구별해 일반항·합 공식을 올바르게 선택한다."
+    ],
+    "draftPracticeGoals": [
+      "연속 항의 곱셈 관계로 공비를 구한다.",
+      "음수 공비가 만드는 부호 변화를 읽는다.",
+      "a_n=a_1q^{n−1}로 항을 계산한다.",
+      "S_n과 qS_n을 정렬해 유한합 식을 유도한다.",
+      "q≠1일 때 등비합 공식을 적용한다.",
+      "q=1일 때 S_n=na_1로 분기하고 q=0 사례를 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 계획하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "같은 식의 숫자만 바꾼 문항은 한 원형으로 센다. 주된 판단·표현·전략이 달라야 별도 원형으로 구분한다."
+  },
+  "assessmentCriteria": [
+    "공비를 같은 방향으로 나눈 비율로 확인했는가?",
+    "지수 n−1을 사용했는가?",
+    "q=1에서 나누기 0을 피하고 별도 합을 계산했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답을 연결된 기술에 매핑해 소단원으로 돌아온다. 통과한 기술도 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "공비를 다음 항−앞 항으로 구한다.",
+    "a_n의 지수를 n으로 쓴다.",
+    "음수 q의 거듭제곱 부호를 무시한다.",
+    "q=1에서도 (1−q)로 나눈다.",
+    "q=0일 때 항이 계속 a_1이라고 생각한다."
+  ],
+  "workedExample": {
+    "prompt": "첫째항 3, 공비 −2인 등비수열의 처음 4항의 합을 구하라.",
+    "solution": "항은 3,−6,12,−24이고 합은 −15다. q≠1 공식으로 S_4=3(1−(−2)^4)/(1−(−2))=3(−15)/3=−15다.",
+    "verification": "공비가 음수이면 항 부호가 번갈며 q^4=16임을 확인한다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus independent Curriculum AI cross-review of Research materials",
+    "reviewerIdentity": "curriculum_independent_m5_09_13 (AI reviewer; not a human approver)",
+    "scope": "Independent review of proposal metadata, beginner sequencing, prerequisite diagnostics, six subunits/fifteen phases, worked examples, Research source/rights limits, all thirty draft answer/key/rationale mappings, family distinctness, skill alignment and renderer draft consistency for development-preview implementation. This is not human content or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Official achievement-standard/CSAT mapping remains unverified; direct source verification is required before adding any mapping"
+    ]
+  }
+}

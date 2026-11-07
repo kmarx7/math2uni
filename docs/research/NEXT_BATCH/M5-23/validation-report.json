@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-23",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; independent AI curriculum recalculation complete",
+    "method": "Recomputed formulas, recurrence steps, finite endpoint counts, range transforms, branch cases and proof implication logic from each item.",
+    "itemResults": {
+      "m523-draft-01": {
+        "answer": "P(1): 1=1·2/2",
+        "check": "시작 범위가 n≥1이므로 기초 단계는 n=1에서 P(1)을 확인하는 것이다."
+      },
+      "m523-draft-02": {
+        "answer": "1+…+k+(k+1)=(k+1)(k+2)/2",
+        "check": "P(k)는 이미 가정한 명제이고, 다음 목표는 P(k+1)인 1+…+k+(k+1)=(k+1)(k+2)/2를 유도하는 것이다."
+      },
+      "m523-draft-03": {
+        "answer": "(k+1)(k+2)/2",
+        "check": "P(k+1)의 좌변은 1+…+k+(k+1)이다. P(k)를 쓰면 k(k+1)/2+(k+1)=(k+1)(k+2)/2다."
+      },
+      "m523-draft-04": {
+        "answer": "6(7m+1)",
+        "check": "7^{k+1}−1=7·7ᵏ−1=7(7ᵏ−1)+6이다. 가정 7ᵏ−1=6m을 대입하면 42m+6=6(7m+1)이다."
+      },
+      "m523-draft-05": {
+        "answer": "임의의 k에서 P(k)⇒P(k+1)인 귀납 단계를 보이지 않았다",
+        "check": "유한한 세 사례 확인은 모든 자연수에 대한 결론을 보장하지 않는다. 시작 사례와 임의의 k에서 다음 사례로 이어지는 귀납 단계를 보여야 한다."
+      },
+      "m523-draft-06": {
+        "answer": "증명할 다음 명제를 가정하는 순환 논리",
+        "check": "귀납 단계에서는 P(k)를 가정할 수 있지만, 목표인 P(k+1)을 먼저 가정하면 그 결론을 전제로 써서 순환 논리가 된다."
+      }
+    }
+  },
+  "limitations": [
+    "MOE 2022 math annex body unopened; official standards/codes remain unverified",
+    "2028 sample-item notice was search-result-only and PDF body unopened; item/topic mapping unverified",
+    "Independent Curriculum AI recalculation completed for all 30 practice drafts; this is not human verification or publication approval.",
+    "Human educational/math review and publication approval pending"
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Curriculum independent reviewer (AI role, separate from Research author)",
+    "reviewerAgent": "curriculum_independent_m5_09_13",
+    "date": "2026-11-07",
+    "scope": "Independent recalculation of all 30 practice drafts across M5-19..M5-23, including semantic answer, choice key, and rationale alignment.",
+    "result": "30/30 recalculated; Curriculum review records no remaining answer/math blocker. This is an AI cross-review, not human verification or publication approval."
+  }
+}

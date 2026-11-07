@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-20",
+  "levelId": "LEVEL 5",
+  "title": "등차수열",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "공차와 일반항",
+      "등차수열의 합"
+    ],
+    "prerequisiteUnits": [
+      "M5-19",
+      "M1-10"
+    ],
+    "visualization": "차이가 일정한 점 배열"
+  },
+  "objectives": [
+    "등차수열의 공차 d를 연속 항의 차로 정의하고 양수·0·음수 공차를 구별한다.",
+    "a_n=a_1+(n−1)d를 유도하고 첫째항과 끝항을 짝지어 S_n=n(a_1+a_n)/2를 설명한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-19-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-19 선수 기능 진단: 등차수열을 시작하기 위한 공차와 일반항 기초를 확인한다. 미숙하면 준비 안내만 제공하며 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m1-10-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-10 선수 기능 진단: 등차수열을 시작하기 위한 공차와 일반항 기초를 확인한다. 미숙하면 준비 안내만 제공하며 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-20-skill-1",
+    "m5-20-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "연속 항의 차 → 공차 부호 → 일정한 차의 표·점 배열 → 일반항 유도 → 끝항과 항 수 → 앞뒤 짝짓기로 합 공식 유도",
+    "principleDerivation": "등차수열은 a_{n+1}−a_n=d가 일정하다. a_1에서 n−1번 d를 더하므로 a_n=a_1+(n−1)d다. 유한합을 앞에서부터 쓴 식과 뒤에서부터 쓴 식을 더하면 각 항 쌍이 a_1+a_n이고 쌍은 n개가 되어 2S_n=n(a_1+a_n), 즉 S_n=n(a_1+a_n)/2다. 이는 d가 양수·0·음수인 경우 모두 성립한다.",
+    "accessibility": "쉬운 한국어와 기호를 함께 제공한다. 항 번호·단위·조건은 텍스트로 표시하고 도식에 텍스트 대체 설명을 둔다. 키보드만으로 조작 가능하게 하며 색에만 의존하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-20-u1",
+      "title": "연속 항의 차",
+      "targetSkills": [
+        "m5-20-skill-1"
+      ],
+      "explanation": "공차 d는 다음 항에서 바로 앞 항을 뺀 값이다.",
+      "activity": "수직 점 배열 간 차이를 표시하고 일정한지 확인한다.",
+      "check": "7,4,1의 공차는 −3이다."
+    },
+    {
+      "id": "m5-20-u2",
+      "title": "공차의 부호와 변화",
+      "targetSkills": [
+        "m5-20-skill-1"
+      ],
+      "explanation": "d>0이면 증가, d<0이면 감소, d=0이면 같은 항이 반복된다.",
+      "activity": "양·음·영 공차 카드를 움직이며 항 표의 방향을 본다.",
+      "check": "5,5,5의 공차는 0이다."
+    },
+    {
+      "id": "m5-20-u3",
+      "title": "일반항의 누적",
+      "targetSkills": [
+        "m5-20-skill-2"
+      ],
+      "explanation": "첫 항에서 n−1번 공차를 더해 a_n=a_1+(n−1)d를 얻는다.",
+      "activity": "반복 덧셈을 묶음 곱셈으로 바꿔 일반항을 만든다.",
+      "check": "a_1=2,d=3이면 a_4=11이다."
+    },
+    {
+      "id": "m5-20-u4",
+      "title": "항 번호와 끝항",
+      "targetSkills": [
+        "m5-20-skill-2"
+      ],
+      "explanation": "마지막 항 번호 n과 더할 공차 횟수 n−1을 구분한다.",
+      "activity": "번호 레일 위에서 1항에서 n항까지 간격 수를 센다.",
+      "check": "a_1=8,d=−2이면 a_5=0이다."
+    },
+    {
+      "id": "m5-20-u5",
+      "title": "앞뒤 항 짝짓기",
+      "targetSkills": [
+        "m5-20-skill-2"
+      ],
+      "explanation": "첫째항+끝항, 둘째항+끝에서 둘째항은 모두 같은 합을 만든다.",
+      "activity": "수열 카드를 앞에서와 뒤에서 동시에 짝짓는다.",
+      "check": "2,5,8,11에서 양 끝 쌍의 합은 13이다."
+    },
+    {
+      "id": "m5-20-u6",
+      "title": "유한합 공식과 검산",
+      "targetSkills": [
+        "m5-20-skill-2"
+      ],
+      "explanation": "S_n=n(a_1+a_n)/2를 사용하고 n, 끝항, 부호를 확인한다.",
+      "activity": "항 수를 바꾸어 직접 합과 짝짓기 결과를 비교한다.",
+      "check": "2+5+8+11=26이고 4(2+11)/2=26이다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-20-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "등차 점 배열과 수열 카드를 키보드로 이동해 공차 부호와 앞·뒤 항의 짝을 표시한다. n이 홀수일 때 가운데 항이 남는 과정을 텍스트로 설명한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "연속 항의 차와 부호로 등차 여부 및 공차를 판정한다.",
+      "일반항을 구성해 항 번호에 따른 값을 찾거나 미지의 첫째항·공차를 복원한다.",
+      "끝항과 항 수를 이용해 앞뒤 짝짓기 합을 계산하고 직접 합으로 검산한다."
+    ],
+    "draftPracticeGoals": [
+      "연속 항의 차로 공차를 구한다.",
+      "양·음·0 공차가 항에 미치는 변화를 설명한다.",
+      "a_n=a_1+(n−1)d를 적용한다.",
+      "항 번호 n까지 공차가 n−1번 더해짐을 설명한다.",
+      "첫째항과 끝항의 짝이 같은 합임을 보인다.",
+      "음수 공차를 포함한 유한합을 공식과 직접 덧셈으로 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 계획하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "같은 식의 숫자만 바꾼 문항은 한 원형으로 센다. 주된 판단·표현·전략이 달라야 별도 원형으로 구분한다."
+  },
+  "assessmentCriteria": [
+    "공차를 항 순서대로 빼서 구했는가?",
+    "일반항에서 간격 수 n−1을 적용했는가?",
+    "합 공식에 항 수와 끝항을 넣고 부호를 검산했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답을 연결된 기술에 매핑해 소단원으로 돌아온다. 통과한 기술도 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "공차를 앞 항−뒤 항으로 계산한다.",
+    "감소하는 등차수열의 공차를 양수로 쓴다.",
+    "일반항에 n 대신 n−1을 처음 항 수처럼 잘못 넣는다.",
+    "공차를 n번 더한다.",
+    "짝짓기 공식에서 2로 나누는 것을 빠뜨린다."
+  ],
+  "workedExample": {
+    "prompt": "첫째항이 8, 공차가 −2인 등차수열의 처음 5항의 합을 구하라.",
+    "solution": "a_5=8+4(−2)=0이다. 따라서 S_5=5(8+0)/2=20이다. 직접 더해도 8+6+4+2+0=20이다.",
+    "verification": "공차가 음수여도 앞뒤 짝의 합 공식은 성립하고, 마지막 항 번호까지 공차를 4번 더했다."
+  },
+  "designReview": {
+    "decision": "implementation-ready",
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus independent Curriculum AI cross-review of Research materials",
+    "reviewerIdentity": "curriculum_independent_m5_09_13 (AI reviewer; not a human approver)",
+    "scope": "Independent review of proposal metadata, beginner sequencing, prerequisite diagnostics, six subunits/fifteen phases, worked examples, Research source/rights limits, all thirty draft answer/key/rationale mappings, family distinctness, skill alignment and renderer draft consistency for development-preview implementation. This is not human content or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer implementation and functional, accessibility, mobile, and learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Official achievement-standard/CSAT mapping remains unverified; direct source verification is required before adding any mapping"
+    ]
+  }
+}

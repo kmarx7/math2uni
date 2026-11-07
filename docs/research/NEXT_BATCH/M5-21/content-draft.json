@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-21",
+  "unitTitle": "등비수열",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "publicationApproved": false,
+  "humanVerified": false,
+  "assessmentCount": 0,
+  "content": {
+    "unitId": "M5-21",
+    "version": "0.1.0-draft",
+    "blocks": [
+      {
+        "id": "goals",
+        "title": "학습 목표",
+        "type": "ConceptBlock",
+        "body": "• 등비수열의 공비 q를 연속 항의 곱셈 관계로 읽고 양수·음수·0·1을 구별한다.\n• a_n=a_1q^{n−1}과 유한합 공식을 유도하며 q=1 분기와 q=0/음수 항의 의미를 설명한다."
+      },
+      {
+        "id": "diagnostic",
+        "title": "선수학습 확인",
+        "type": "ExplanationBlock",
+        "body": "이 진단은 준비 안내에만 사용하며 선수 단원의 prerequisite, 숙달도, 완료 점수를 변경하지 않습니다.",
+        "readinessCheck": true
+      },
+      {
+        "id": "concept",
+        "title": "개념 설명",
+        "type": "ExplanationBlock",
+        "body": "등비수열은 a_{n+1}=q a_n이고 시작값에서 n−1번 q를 곱해 a_n=a_1q^{n−1}이다. S_n=a_1+a_1q+…+a_1q^{n−1}라 놓고 qS_n을 정렬해 빼면 (1−q)S_n=a_1(1−q^n)이다. 이 나눗셈은 q≠1일 때만 가능하다. q=1이면 모든 항이 a_1이므로 S_n=na_1이다. q=0이면 첫 항 뒤가 0이고 q<0이면 부호가 번갈 수 있다.",
+        "sections": [
+          {
+            "id": "m5-21-u1",
+            "title": "공비와 연속 항",
+            "body": "q는 다음 항을 바로 앞 항으로 곱해 얻는 일정한 비율이다.",
+            "activity": "항 사이 곱셈 화살표에 같은 q를 기록한다.",
+            "check": "3,−6,12의 공비는 −2다."
+          },
+          {
+            "id": "m5-21-u2",
+            "title": "공비의 부호와 특수값",
+            "body": "q>0은 부호를 유지하고 q<0은 0이 아닌 항에서 부호를 번갈며 q=0,1은 별도 형태를 만든다.",
+            "activity": "q 부호 카드를 적용해 몇 항을 생성하고 패턴을 본다.",
+            "check": "4,0,0,…은 a_1=4,q=0으로 나타낼 수 있다."
+          },
+          {
+            "id": "m5-21-u3",
+            "title": "일반항",
+            "body": "a_n=a_1q^{n−1}에서 곱셈 횟수는 n−1이다.",
+            "activity": "n을 바꾸고 q 곱셈 횟수를 세어 표를 갱신한다.",
+            "check": "a_1=2,q=3이면 a_4=54다."
+          },
+          {
+            "id": "m5-21-u4",
+            "title": "유한합의 정렬",
+            "body": "S_n과 qS_n을 같은 지수 항끼리 정렬해 공통 부분을 소거한다.",
+            "activity": "두 줄의 합을 정렬하고 남는 첫 항·마지막 항을 표시한다.",
+            "check": "1+2+4에서 2S−S=7이다."
+          },
+          {
+            "id": "m5-21-u5",
+            "title": "q≠1 합 공식",
+            "body": "q≠1일 때만 1−q로 나누어 S_n=a_1(1−q^n)/(1−q)를 쓴다.",
+            "activity": "q가 1에 가까운 값/1인 값을 분기표로 구별한다.",
+            "check": "a_1=2,q=3,n=3이면 S_3=26이다."
+          },
+          {
+            "id": "m5-21-u6",
+            "title": "q=1과 특수값 검산",
+            "body": "q=1이면 S_n=na_1이며, q=0·음수도 일반항·유한합에 대입해 점검한다.",
+            "activity": "q=1,0,−1 카드를 각 항 표와 합 계산에 적용한다.",
+            "check": "a_1=5,q=1,n=4이면 S_4=20이며 (1−q)로 나누지 않는다."
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "title": "시각적 탐구",
+        "type": "InteractiveBlock",
+        "interaction": "m5-21-visual"
+      },
+      {
+        "id": "example",
+        "title": "단계별 예제",
+        "type": "WorkedExampleBlock",
+        "steps": [
+          "첫째항 3, 공비 −2인 등비수열의 처음 4항의 합을 구하라.",
+          "항은 3,−6,12,−24이고 합은 −15다. q≠1 공식으로 S_4=3(1−(−2)^4)/(1−(−2))=3(−15)/3=−15다.",
+          "공비가 음수이면 항 부호가 번갈며 q^4=16임을 확인한다."
+        ]
+      },
+      {
+        "id": "practice",
+        "title": "연습 계획",
+        "type": "PracticeBlock",
+        "purpose": "practice",
+        "hint": "먼저 적용할 규칙과 범위를 말로 확인한 뒤 연습 초안을 풉니다. 정답과 해설은 제출 전에 공개하지 않습니다."
+      },
+      {
+        "id": "feedback",
+        "title": "오답 교정",
+        "type": "FeedbackBlock",
+        "body": "오답은 규칙·범위·계산 단계를 나누어 확인하고 관련 소단원으로 돌아갑니다. 오개념 문구는 빈도 주장이 아닌 점검 가설입니다.\n• 공비를 다음 항−앞 항으로 구한다.\n• a_n의 지수를 n으로 쓴다.\n• 음수 q의 거듭제곱 부호를 무시한다.\n• q=1에서도 (1−q)로 나눈다.\n• q=0일 때 항이 계속 a_1이라고 생각한다."
+      },
+      {
+        "id": "review",
+        "title": "복습과 다음 단원",
+        "type": "ReviewBlock",
+        "body": "핵심 규칙과 조건을 떠올리고 간격을 두어 복습합니다."
+      }
+    ],
+    "learningPhases": [
+      {
+        "id": "phase-01",
+        "title": "학습 목표",
+        "blockId": "goals",
+        "state": "available"
+      },
+      {
+        "id": "phase-02",
+        "title": "선수학습 진단",
+        "blockId": "diagnostic",
+        "state": "available"
+      },
+      {
+        "id": "phase-03",
+        "title": "개념 도입",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-04",
+        "title": "개념 설명",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-05",
+        "title": "시각적 탐구",
+        "blockId": "lab",
+        "state": "available"
+      },
+      {
+        "id": "phase-06",
+        "title": "원리 유도",
+        "blockId": "concept",
+        "state": "available"
+      },
+      {
+        "id": "phase-07",
+        "title": "단계별 예제 풀이",
+        "blockId": "example",
+        "state": "available"
+      },
+      {
+        "id": "phase-08",
+        "title": "기초 연습",
+        "blockId": "practice",
+        "state": "available"
+      },
+      {
+        "id": "phase-09",
+        "title": "유형별 연습 A",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-10",
+        "title": "유형별 연습 B",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-11",
+        "title": "응용 문제",
+        "blockId": "practice",
+        "state": "planned"
+      },
+      {
+        "id": "phase-12",
+        "title": "오답 분석",
+        "blockId": "feedback",
+        "state": "available"
+      },
+      {
+        "id": "phase-13",
+        "title": "형성평가 설계",
+        "blockId": "feedback",
+        "state": "planned"
+      },
+      {
+        "id": "phase-14",
+        "title": "간격 반복 복습",
+        "blockId": "review",
+        "state": "available"
+      },
+      {
+        "id": "phase-15",
+        "title": "다음 단원 연결",
+        "blockId": "review",
+        "state": "available"
+      }
+    ],
+    "contentStatus": "draft",
+    "publicationApproved": false,
+    "approvedContent": null,
+    "note": "Curriculum-authored renderer structure draft; Research source/rights, independent curriculum review and Developer QA pending. This draft has no human publication approval."
+  },
+  "practicePlan": {
+    "families": [
+      {
+        "familyId": "m5-21-family-1",
+        "skillId": "m5-21-skill-1",
+        "itemIds": [
+          "m521-draft-01",
+          "m521-draft-02"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-21-family-2",
+        "skillId": "m5-21-skill-2",
+        "itemIds": [
+          "m521-draft-03",
+          "m521-draft-04"
+        ],
+        "purpose": "practice-draft"
+      },
+      {
+        "familyId": "m5-21-family-3",
+        "skillId": "m5-21-skill-2",
+        "itemIds": [
+          "m521-draft-05",
+          "m521-draft-06"
+        ],
+        "purpose": "practice-draft"
+      }
+    ],
+    "assessmentItemIds": []
+  }
+}
