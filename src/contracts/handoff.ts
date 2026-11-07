@@ -224,6 +224,7 @@ export const proposalProblemBlueprintSchema = z
     reviewStatus: z.enum(["draft", "researched", "reviewed"]),
     officialMappingStatus: z.literal("unverified"),
     publicationApproved: z.literal(false),
+    assessmentInstanceCount: z.literal(0).optional(),
     families: z.array(z.object({
       id,
       status: z.literal("draft"),

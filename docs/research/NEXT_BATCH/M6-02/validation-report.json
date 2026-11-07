@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-02",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; separate independent AI Curriculum review complete",
+    "method": "Recomputed arithmetic laws, factorizations, cancellation conditions and original domains.",
+    "itemResults": {
+      "m602-draft-01": {
+        "answer": "8",
+        "check": "합·상수배 법칙으로 2+2·3=8이다."
+      },
+      "m602-draft-02": {
+        "answer": "아니다.",
+        "check": "몫 법칙은 분모의 극한이 0이 아닐 때 적용한다."
+      },
+      "m602-draft-03": {
+        "answer": "4",
+        "check": "x²−4=(x−2)(x+2), 약분 후 극한은 4다."
+      },
+      "m602-draft-04": {
+        "answer": "5",
+        "check": "분자는 (x+3)(x−2), 약분하면 x+3이고 극한은 5다."
+      },
+      "m602-draft-05": {
+        "answer": "h(1)은 미정의지만 극한은 2",
+        "check": "약분은 x≠1일 때 동치이므로 점값은 미정의, 극한은 2다."
+      },
+      "m602-draft-06": {
+        "answer": "극한 5, 점값 미정의",
+        "check": "x≠3에서 p=x+2이므로 극한 5, 원래 p(3)은 정의되지 않는다."
+      }
+    }
+  },
+  "limitations": [
+    "2022 mathematics annex body unopened; exact standard/code mapping unverified",
+    "2028 sample PDF body unopened; unit-specific exam mapping unverified",
+    "Human math/education review and publication approval pending",
+    "Separate Curriculum AI reviewer recalculated all 30 practice drafts; this is not human verification or publication approval."
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Separate Curriculum reviewer (AI role; independent of Research author)",
+    "reviewerAgent": "m6_batch_01_independent_review",
+    "date": "2026-11-07",
+    "scope": "Independent AI recalculation of all 30 practice drafts across M5-24 and M6-01..M6-04, including answer key, semantic answer, rationale, skill and family alignment.",
+    "result": "30/30 items recalculated; keys, semantic answers, rationales, skills and family mapping confirmed by the reviewer.",
+    "note": "This is an independent AI review only. It is not human mathematical or educational verification and does not grant publication approval."
+  }
+}

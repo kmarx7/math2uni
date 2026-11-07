@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-02",
+  "unitTitle": "극한의 성질과 계산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m6-02-family-1",
+      "status": "draft",
+      "title": "연산 법칙과 전제",
+      "reasoningStructure": "극한의 사칙연산 법칙을 전제 조건과 함께 선택·적용한다.",
+      "thinkingType": "극한의 사칙연산 법칙을 전제 조건과 함께 선택·적용한다.",
+      "skillId": "m6-02-skill-1",
+      "distinctFrom": "극한의 사칙연산 법칙을 전제 조건과 함께 선택·적용한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m602-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "lim f=2, lim g=3일 때 lim(f+2g)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "8",
+          "rationale": "합·상수배 법칙으로 2+2·3=8이다.",
+          "skillLabel": "m6-02-skill-1",
+          "misconceptionHypothesis": "극한의 연산 법칙에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5"
+            },
+            {
+              "id": "B",
+              "label": "8"
+            },
+            {
+              "id": "C",
+              "label": "6"
+            }
+          ]
+        },
+        {
+          "id": "m602-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "lim f=4, lim g=0이다. 몫의 극한 법칙을 바로 적용할 수 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "아니다.",
+          "rationale": "몫 법칙은 분모의 극한이 0이 아닐 때 적용한다.",
+          "skillLabel": "m6-02-skill-1",
+          "misconceptionHypothesis": "몫 법칙의 전제에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "가능하고 0"
+            },
+            {
+              "id": "B",
+              "label": "가능하고 4"
+            },
+            {
+              "id": "C",
+              "label": "아니다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-02-family-2",
+      "status": "draft",
+      "title": "0/0 인수분해와 약분",
+      "reasoningStructure": "0/0형 인수분해·약분으로 극한값을 계산하고 제외점을 유지한다.",
+      "thinkingType": "0/0형 인수분해·약분으로 극한값을 계산하고 제외점을 유지한다.",
+      "skillId": "m6-02-skill-2",
+      "distinctFrom": "0/0형 인수분해·약분으로 극한값을 계산하고 제외점을 유지한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m602-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "lim_{x→2}(x²−4)/(x−2)는? 원래 식은 x≠2에서 정의된다.",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "4",
+          "rationale": "x²−4=(x−2)(x+2), 약분 후 극한은 4다.",
+          "skillLabel": "m6-02-skill-2",
+          "misconceptionHypothesis": "0/0 인수분해 약분에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "0"
+            },
+            {
+              "id": "B",
+              "label": "존재하지 않음"
+            },
+            {
+              "id": "C",
+              "label": "4"
+            }
+          ]
+        },
+        {
+          "id": "m602-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "lim_{x→2}(x²+x−6)/(x−2)는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "5",
+          "rationale": "분자는 (x+3)(x−2), 약분하면 x+3이고 극한은 5다.",
+          "skillLabel": "m6-02-skill-2",
+          "misconceptionHypothesis": "0/0 인수분해 약분에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5"
+            },
+            {
+              "id": "B",
+              "label": "2"
+            },
+            {
+              "id": "C",
+              "label": "0"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-02-family-3",
+      "status": "draft",
+      "title": "정의역과 점 정의 여부",
+      "reasoningStructure": "변형 전후의 정의역과 특정 점의 함수 정의 여부를 구분한다.",
+      "thinkingType": "변형 전후의 정의역과 특정 점의 함수 정의 여부를 구분한다.",
+      "skillId": "m6-02-skill-2",
+      "distinctFrom": "변형 전후의 정의역과 특정 점의 함수 정의 여부를 구분한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m602-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "h(x)=(x²−1)/(x−1), x≠1이다. x=1에 대한 정확한 설명은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "h(1)은 미정의지만 극한은 2",
+          "rationale": "약분은 x≠1일 때 동치이므로 점값은 미정의, 극한은 2다.",
+          "skillLabel": "m6-02-skill-2",
+          "misconceptionHypothesis": "정의역과 점값에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "h(1)=2"
+            },
+            {
+              "id": "B",
+              "label": "h(1)은 미정의지만 극한은 2"
+            },
+            {
+              "id": "C",
+              "label": "극한도 미정의"
+            }
+          ]
+        },
+        {
+          "id": "m602-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "p(x)=(x−3)(x+2)/(x−3), x≠3이다. lim_{x→3}p(x)와 p(3)은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "극한 5, 점값 미정의",
+          "rationale": "x≠3에서 p=x+2이므로 극한 5, 원래 p(3)은 정의되지 않는다.",
+          "skillLabel": "m6-02-skill-2",
+          "misconceptionHypothesis": "정의역과 점값에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "극한 5, 점값 미정의"
+            },
+            {
+              "id": "B",
+              "label": "p(3)=5"
+            },
+            {
+              "id": "C",
+              "label": "극한 미정의"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "assessmentInstanceCount": 0
+}

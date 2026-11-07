@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-04",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; separate independent AI Curriculum review complete",
+    "method": "Checked pointwise continuity criteria, closed-interval hypotheses and IVT existence conclusions against stated values.",
+    "itemResults": {
+      "m604-draft-01": {
+        "answer": "아니다.",
+        "check": "lim은 1이지만 g(1)=5이므로 연속이 아니다."
+      },
+      "m604-draft-02": {
+        "answer": "lim f=f(0)=1",
+        "check": "다항함수이고 lim f=f(0)=1이다."
+      },
+      "m604-draft-03": {
+        "answer": "f가 [0,2]에서 연속",
+        "check": "f가 닫힌구간 [0,2]에서 연속이다."
+      },
+      "m604-draft-04": {
+        "answer": "정의역이 닫힌구간이 아니기 때문",
+        "check": "정의역이 닫힌구간 [a,b]가 아니다."
+      },
+      "m604-draft-05": {
+        "answer": "해가 적어도 하나 존재한다.",
+        "check": "해가 적어도 하나 존재한다."
+      },
+      "m604-draft-06": {
+        "answer": "f(c)=0인 c가 적어도 하나 있다.",
+        "check": "f(c)=0인 c가 적어도 하나 있다."
+      }
+    }
+  },
+  "limitations": [
+    "2022 mathematics annex body unopened; exact standard/code mapping unverified",
+    "2028 sample PDF body unopened; unit-specific exam mapping unverified",
+    "Human math/education review and publication approval pending",
+    "Separate Curriculum AI reviewer recalculated all 30 practice drafts; this is not human verification or publication approval."
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Separate Curriculum reviewer (AI role; independent of Research author)",
+    "reviewerAgent": "m6_batch_01_independent_review",
+    "date": "2026-11-07",
+    "scope": "Independent AI recalculation of all 30 practice drafts across M5-24 and M6-01..M6-04, including answer key, semantic answer, rationale, skill and family alignment.",
+    "result": "30/30 items recalculated; keys, semantic answers, rationales, skills and family mapping confirmed by the reviewer.",
+    "note": "This is an independent AI review only. It is not human mathematical or educational verification and does not grant publication approval."
+  }
+}

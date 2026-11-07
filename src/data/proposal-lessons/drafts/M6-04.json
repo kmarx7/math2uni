@@ -1,0 +1,200 @@
+{
+  "unitId": "M6-04",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• 점 a에서 연속의 세 조건(함수값 정의, 양쪽 극한 존재, 극한과 함수값 일치)을 함께 확인한다.\n• 닫힌구간에서의 연속 조건을 적용해 최댓값·최솟값 및 중간값 정리의 결론 범위와 한계를 설명한다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 진단은 준비 안내 전용이며 선수 단원의 등록 숙달도·완료 점수에 영향을 주지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "f가 a에서 연속이려면 f(a)가 정의되어 있고 lim_{x→a}f(x)가 존재하며 두 값이 같아야 한다. 닫힌구간 [a,b]에서 연속이면 최댓값·최솟값을 실제로 갖는다. 또한 f(a)와 f(b) 사이의 값 N은 어떤 c∈[a,b]에서 f(c)=N을 만족한다. 중간값 정리는 적어도 한 해의 존재를 보장할 뿐 유일성을 보장하지 않는다. 구간 끝점에서의 연속은 구간 안쪽에서 접근하는 한쪽 극한과 끝점 값을 비교한다.",
+      "sections": [
+        {
+          "id": "m6-04-u1",
+          "title": "점에서 연속의 정의",
+          "body": "연속은 함수값 정의, 양쪽 극한 존재, 두 값의 일치를 모두 요구한다.",
+          "activity": "세 조건 체크박스를 각각 독립 조작한다.",
+          "check": "f(2)=3이고 lim_{x→2}f(x)=3이면 세 조건이 충족될 수 있다."
+        },
+        {
+          "id": "m6-04-u2",
+          "title": "구멍과 점값 불일치",
+          "body": "주변 극한이 있어도 함수값이 없거나 다르면 연속이 아니다.",
+          "activity": "열린 점·별도 점값 표식을 바꾸며 어느 조건이 깨지는지 표시한다.",
+          "check": "f(x)=x (x≠1), f(1)=2이면 x=1에서 불연속이다."
+        },
+        {
+          "id": "m6-04-u3",
+          "title": "점프 불연속",
+          "body": "좌극한과 우극한이 다르면 양쪽 극한이 없어 연속이 아니다.",
+          "activity": "좌우 그래프 조각을 연결해 좌우 접근값을 비교한다.",
+          "check": "x<0에서 1, x≥0에서 2인 함수는 0에서 불연속이다."
+        },
+        {
+          "id": "m6-04-u4",
+          "title": "구간 끝점의 연속",
+          "body": "[a,b] 끝점에서는 구간 안쪽 한쪽 접근 극한을 함수값과 비교한다.",
+          "activity": "닫힌구간 경계에서 바깥 접근을 비활성화하고 안쪽 화살표를 둔다.",
+          "check": "[0,1]에서 f(x)=x이면 0에서 오른쪽 극한이 f(0)=0이다."
+        },
+        {
+          "id": "m6-04-u5",
+          "title": "닫힌구간 정리",
+          "body": "닫힌구간 전체에서 연속이면 최댓값·최솟값을 실제로 얻는다.",
+          "activity": "열린구간과 닫힌구간 끝점을 토글해 값이 실제로 취해지는지 비교한다.",
+          "check": "f(x)=x는 [0,1]에서 최솟값 0, 최댓값 1을 갖는다."
+        },
+        {
+          "id": "m6-04-u6",
+          "title": "중간값 정리와 유일성",
+          "body": "연속 함수가 닫힌구간에서 N을 양 끝 함수값 사이에 두면 적어도 한 내부/끝점 해가 있다. 유일성은 별도 단조 조건이 필요하다.",
+          "activity": "그래프와 수평선의 교점 개수를 바꾸어 존재와 유일성을 구분한다.",
+          "check": "f(x)=x³−x on [−2,2] has f(−2)=−6 and f(2)=6, so IVT ensures at least one zero; factoring gives −1,0,1, hence three zeros."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "m6-04-visual"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "f(x)=x³−x를 [−2,2]에서 본다. 중간값 정리로 f(x)=0의 해가 있음을 설명하고 해가 유일한지 판단하라.",
+        "다항함수는 [−2,2]에서 연속이다. f(−2)=−6, f(2)=6이고 0은 두 끝값 사이이므로 중간값 정리에 따라 f(c)=0인 c가 적어도 하나 존재한다. 실제로 x³−x=x(x−1)(x+1)이므로 해는 −1,0,1 세 개다.",
+        "닫힌구간 연속, 끝값 사이의 목표값 조건을 확인했다. 정리는 적어도 하나의 해를 보장하며 세 해 중 하나만 존재한다고 보장하지 않는다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "조건과 결론을 먼저 구분하고 풀이 이유를 말한 뒤 연습 초안을 풉니다. 정답·해설은 제출 전에 공개하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답에서 빠진 조건과 연결 단계를 찾아 해당 소단원으로 돌아갑니다. 오개념은 빈도 사실이 아닌 점검 가설입니다.\n• 극한만 존재하면 함수가 연속이라고 한다.\n• 점값과 극한값 불일치를 무시한다.\n• 끝점에서 양쪽 극한을 요구한다.\n• 중간값 정리가 해의 유일성을 보장한다고 착각한다.\n• 끝값 사이 조건 없이 정리를 적용한다."
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "available"
+    }
+  ],
+  "contentStatus": "draft",
+  "publicationApproved": false,
+  "approvedContent": null,
+  "note": "Curriculum-authored renderer structure draft; Research source/rights and item cross-review plus Developer QA pending. No human publication approval."
+}

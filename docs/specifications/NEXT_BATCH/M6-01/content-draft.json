@@ -1,0 +1,200 @@
+{
+  "unitId": "M6-01",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• x가 a에 왼쪽·오른쪽에서 가까워질 때 함수값이 다가가는 값을 그래프와 표로 읽는다.\n• 좌극한과 우극한이 같은 값으로 수렴할 때, 그리고 그때에만 양쪽 극한이 존재함을 설명하며 f(a)와 구별한다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 진단은 준비 안내 전용이며 선수 단원의 등록 숙달도·완료 점수에 영향을 주지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "lim_{x→a−}f(x)는 x<a인 입력이 a에 가까워질 때의 함수값 경향이고 lim_{x→a+}f(x)는 x>a에서의 경향이다. 유한한 양쪽 극한 lim_{x→a}f(x)=L이 존재하려면 좌극한과 우극한이 모두 존재하며 서로 같은 L이어야 한다. f(a)의 값은 이 접근 경향을 정하지 않으므로 다를 수도 있고 정의되지 않을 수도 있다.",
+      "sections": [
+        {
+          "id": "m6-01-u1",
+          "title": "가까워지는 입력과 점값",
+          "body": "극한은 x=a의 함수값이 아니라 a에 가까운 입력에서의 함수값 경향을 묻는다.",
+          "activity": "a 위치의 점값 표식과 주변 곡선을 별도로 표시한다.",
+          "check": "f(x)=3 (x≠1), f(1)=8이면 x→1의 극한은 3이고 점값은 8이다."
+        },
+        {
+          "id": "m6-01-u2",
+          "title": "왼쪽 극한",
+          "body": "x<a인 값만 따라 a에 접근해 왼쪽 극한을 읽는다.",
+          "activity": "왼쪽 화살표와 수치 표본을 움직이며 가까워지는 높이를 기록한다.",
+          "check": "f(x)=x+2일 때 x→1−의 극한은 3이다."
+        },
+        {
+          "id": "m6-01-u3",
+          "title": "오른쪽 극한",
+          "body": "x>a인 값만 따라 a에 접근해 오른쪽 극한을 읽는다.",
+          "activity": "오른쪽 화살표와 표본을 독립 조절한다.",
+          "check": "f(x)=x+2일 때 x→1+의 극한도 3이다."
+        },
+        {
+          "id": "m6-01-u4",
+          "title": "좌우가 다른 경우",
+          "body": "좌극한과 우극한이 다르면 양쪽 극한은 존재하지 않는다.",
+          "activity": "좌우 높이가 다른 조각 그래프를 겹쳐 양방향 상태를 비교한다.",
+          "check": "x<0에서 f=1, x≥0에서 f=2이면 x→0−는 1, x→0+는 2다."
+        },
+        {
+          "id": "m6-01-u5",
+          "title": "양쪽 극한의 존재 조건",
+          "body": "좌우 한쪽 극한이 모두 존재하고 같은 값일 때 양쪽 극한이 존재한다.",
+          "activity": "좌·우 결과 카드를 같은 값일 때만 공통 극한 칸에 놓는다.",
+          "check": "좌극한과 우극한이 모두 4이면 양쪽 극한은 4다."
+        },
+        {
+          "id": "m6-01-u6",
+          "title": "극한과 함수값 대조",
+          "body": "f(a)는 극한과 같을 필요가 없으며 아예 정의되지 않을 수도 있다.",
+          "activity": "같은 주변 그래프에서 점의 높이만 옮기고 접근 높이는 고정한다.",
+          "check": "좌우가 모두 3으로 접근하고 f(a)=8이어도 극한은 3이다."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "m6-01-visual"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "f(x)=1 (x<0), f(x)=2 (x≥0)일 때 x→0의 좌극한, 우극한, 양쪽 극한 존재 여부를 구하라.",
+        "x가 0보다 작은 쪽에서 f(x)=1이므로 좌극한은 1이다. 오른쪽에서는 f(x)=2이므로 우극한은 2다. 두 값이 다르므로 양쪽 극한은 존재하지 않는다. f(0)=2라는 사실은 이 결론을 바꾸지 않는다.",
+        "좌·우 접근을 분리했고 점값을 극한 계산에 사용하지 않았다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "조건과 결론을 먼저 구분하고 풀이 이유를 말한 뒤 연습 초안을 풉니다. 정답·해설은 제출 전에 공개하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답에서 빠진 조건과 연결 단계를 찾아 해당 소단원으로 돌아갑니다. 오개념은 빈도 사실이 아닌 점검 가설입니다.\n• 좌극한과 우극한의 접근 방향을 뒤집는다.\n• f(a)를 극한값으로 바로 대입한다.\n• 좌우 극한이 다르지만 평균값을 극한으로 쓴다.\n• 한쪽 극한만으로 양쪽 극한 존재를 결정한다."
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "핵심 조건을 다시 떠올리고 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "available"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "available"
+    }
+  ],
+  "contentStatus": "draft",
+  "publicationApproved": false,
+  "approvedContent": null,
+  "note": "Curriculum-authored renderer structure draft; Research source/rights and item cross-review plus Developer QA pending. No human publication approval."
+}

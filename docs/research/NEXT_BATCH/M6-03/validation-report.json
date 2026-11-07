@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-03",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; separate independent AI Curriculum review complete",
+    "method": "Checked inequalities over stated punctured neighborhoods, boundary limits, and theorem hypotheses for each prompt.",
+    "itemResults": {
+      "m603-draft-01": {
+        "answer": "2≤5",
+        "check": "극한 대소 관계에 따라 2≤5다."
+      },
+      "m603-draft-02": {
+        "answer": "lim f=0≤lim g=0",
+        "check": "두 함수 모두 0으로 수렴하므로 근방 대소와 같은 순서로 극한값도 비교된다."
+      },
+      "m603-draft-03": {
+        "answer": "0",
+        "check": "양쪽 경계의 극한이 모두 0이므로 샌드위치 정리로 f의 극한은 0이다."
+      },
+      "m603-draft-04": {
+        "answer": "0",
+        "check": "두 경계 함수가 모두 0으로 수렴하므로 g도 0으로 수렴한다."
+      },
+      "m603-draft-05": {
+        "answer": "아니다.",
+        "check": "극한 비교에는 한 점의 대소가 아니라 근방 관계와 두 극한의 존재가 필요하다."
+      },
+      "m603-draft-06": {
+        "answer": "정할 수 없다.",
+        "check": "경계가 같은 극한을 갖는 조건이 없어 샌드위치 정리로 결론낼 수 없다."
+      }
+    }
+  },
+  "limitations": [
+    "2022 mathematics annex body unopened; exact standard/code mapping unverified",
+    "2028 sample PDF body unopened; unit-specific exam mapping unverified",
+    "Human math/education review and publication approval pending",
+    "Separate Curriculum AI reviewer recalculated all 30 practice drafts; this is not human verification or publication approval."
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Separate Curriculum reviewer (AI role; independent of Research author)",
+    "reviewerAgent": "m6_batch_01_independent_review",
+    "date": "2026-11-07",
+    "scope": "Independent AI recalculation of all 30 practice drafts across M5-24 and M6-01..M6-04, including answer key, semantic answer, rationale, skill and family alignment.",
+    "result": "30/30 items recalculated; keys, semantic answers, rationales, skills and family mapping confirmed by the reviewer.",
+    "note": "This is an independent AI review only. It is not human mathematical or educational verification and does not grant publication approval."
+  }
+}

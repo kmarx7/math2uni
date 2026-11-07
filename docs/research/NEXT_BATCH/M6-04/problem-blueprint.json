@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-04",
+  "unitTitle": "함수의 연속",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m6-04-family-1",
+      "status": "draft",
+      "title": "점에서 연속 조건 확인",
+      "reasoningStructure": "특정 점에서 연속의 세 조건과 불연속 유형을 판별한다.",
+      "thinkingType": "특정 점에서 연속의 세 조건과 불연속 유형을 판별한다.",
+      "skillId": "m6-04-skill-1",
+      "distinctFrom": "특정 점에서 연속의 세 조건과 불연속 유형을 판별한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m604-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "g(x)=x² (x≠1), g(1)=5. x=1에서 연속인가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "아니다.",
+          "rationale": "lim은 1이지만 g(1)=5이므로 연속이 아니다.",
+          "skillLabel": "m6-04-skill-1",
+          "misconceptionHypothesis": "연속의 세 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "아니다."
+            },
+            {
+              "id": "B",
+              "label": "연속이다."
+            },
+            {
+              "id": "C",
+              "label": "극한이 없어 판정 불가"
+            }
+          ]
+        },
+        {
+          "id": "m604-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "f(x)=x+1로 모든 실수에서 정의된다. x=0에서 연속이라는 설명은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "lim f=f(0)=1",
+          "rationale": "다항함수이고 lim f=f(0)=1이다.",
+          "skillLabel": "m6-04-skill-1",
+          "misconceptionHypothesis": "연속의 세 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "f(0)은 미정의"
+            },
+            {
+              "id": "B",
+              "label": "lim f=0, f(0)=1"
+            },
+            {
+              "id": "C",
+              "label": "lim f=f(0)=1"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-04-family-2",
+      "status": "draft",
+      "title": "최대최소 정리 전제",
+      "reasoningStructure": "구간 끝점·닫힌구간 조건으로 최대최소 정리의 적용 여부를 판단한다.",
+      "thinkingType": "구간 끝점·닫힌구간 조건으로 최대최소 정리의 적용 여부를 판단한다.",
+      "skillId": "m6-04-skill-2",
+      "distinctFrom": "구간 끝점·닫힌구간 조건으로 최대최소 정리의 적용 여부를 판단한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m604-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "최대·최소 정리를 적용할 수 있는 조건은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "f가 [0,2]에서 연속",
+          "rationale": "f가 닫힌구간 [0,2]에서 연속이다.",
+          "skillLabel": "m6-04-skill-2",
+          "misconceptionHypothesis": "닫힌구간 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "f가 (0,2)에서 연속"
+            },
+            {
+              "id": "B",
+              "label": "f가 [0,2]에서 미분 가능"
+            },
+            {
+              "id": "C",
+              "label": "f가 [0,2]에서 연속"
+            }
+          ]
+        },
+        {
+          "id": "m604-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "f(x)=1/x는 (0,1]에서 연속이지만 최댓값이 없다. 최대·최소 정리를 적용할 수 없는 핵심 이유는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "정의역이 닫힌구간이 아니기 때문",
+          "rationale": "정의역이 닫힌구간 [a,b]가 아니다.",
+          "skillLabel": "m6-04-skill-2",
+          "misconceptionHypothesis": "극값 정리의 닫힌구간 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "정의역이 닫힌구간이 아니기 때문"
+            },
+            {
+              "id": "B",
+              "label": "함수가 연속이기 때문"
+            },
+            {
+              "id": "C",
+              "label": "1/x가 양수이기 때문"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-04-family-3",
+      "status": "draft",
+      "title": "중간값 정리의 존재와 유일성",
+      "reasoningStructure": "중간값 정리의 전제와 존재 결론을 확인하고 유일성 오해를 바로잡는다.",
+      "thinkingType": "중간값 정리의 전제와 존재 결론을 확인하고 유일성 오해를 바로잡는다.",
+      "skillId": "m6-04-skill-2",
+      "distinctFrom": "중간값 정리의 전제와 존재 결론을 확인하고 유일성 오해를 바로잡는다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m604-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "f(x)=x³−x는 [-2,2]에서 연속이고 끝값은 -6,6이다. f(x)=0에 대해 정리가 보장하는 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "해가 적어도 하나 존재한다.",
+          "rationale": "해가 적어도 하나 존재한다.",
+          "skillLabel": "m6-04-skill-2",
+          "misconceptionHypothesis": "사잇값 정리 존재와 유일성에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "해가 정확히 하나다."
+            },
+            {
+              "id": "B",
+              "label": "해가 적어도 하나 존재한다."
+            },
+            {
+              "id": "C",
+              "label": "해가 없다."
+            }
+          ]
+        },
+        {
+          "id": "m604-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "f가 [-1,1]에서 연속이고 f(-1)=-1, f(1)=1이다. 중간값 정리의 결론은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "f(c)=0인 c가 적어도 하나 있다.",
+          "rationale": "f(c)=0인 c가 적어도 하나 있다.",
+          "skillLabel": "m6-04-skill-2",
+          "misconceptionHypothesis": "사잇값 정리 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "근이 정확히 하나다."
+            },
+            {
+              "id": "B",
+              "label": "f(c)=0인 c가 적어도 하나 있다."
+            },
+            {
+              "id": "C",
+              "label": "미분 가능해야 하므로 결론 불가"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "assessmentInstanceCount": 0
+}

@@ -1,0 +1,139 @@
+{
+  "researchVersion": "0.1.0-draft",
+  "unitId": "M6-03",
+  "title": "극한의 대소 관계",
+  "checkedAt": "2026-11-07",
+  "sources": [
+    {
+      "id": "moe-2022-33",
+      "title": "교육부 고시 제2022-33호 초중등학교 교육과정 총론 및 각론 고시",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&boardSeq=93458&lev=0&m=0302",
+      "publisher": "교육부",
+      "publishedAt": "2022-12-22",
+      "verification": "direct-page-opened",
+      "verified": [
+        "고시 본문에서 수학과 교육과정은 별책 8이라고 명시",
+        "수학 포함 별책 5~14 ZIP 첨부가 15.1MB로 표시",
+        "고교 교육과정 시행 일정에 2027-03-01 고3 적용 표기 확인"
+      ],
+      "notVerified": [
+        "ZIP 첨부 및 별책 8 원문 본문은 열지 않음",
+        "본 배치의 세부 성취기준 문구·공식 코드는 미검증"
+      ],
+      "rights": "공식 페이지의 재이용 조건을 표시 범위 이상으로 추정하지 않는다. 첨부 파일은 재배포하지 않고 출처만 기록한다.",
+      "use": "고시 및 별책 존재 확인에만 사용; 개별 단원 매핑 근거로 사용하지 않음."
+    },
+    {
+      "id": "moe-2028-framework",
+      "title": "2028 입시부터 선택과목 없는 통합형 수능 확정",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=97551&lev=0&m=0204",
+      "publisher": "교육부",
+      "publishedAt": "2023-12-27",
+      "verification": "direct-page-opened",
+      "verified": [
+        "수학 선택과목 없는 통합형 수능 확정 공지",
+        "심화수학(미적분Ⅱ·기하) 제외 공지"
+      ],
+      "notVerified": [
+        "특정 제안 단원의 출제 여부 및 비중은 확인하지 않음",
+        "별첨 HWP/HWPX 원문은 미열람"
+      ],
+      "rights": "보도자료에 공공누리 출처표시 조건이 표시됨. 원문 재사용 없이 요약·출처만 기록한다.",
+      "use": "시험 체제 배경만 제공하며 개별 출제 매핑을 뜻하지 않음."
+    },
+    {
+      "id": "moe-2028-subjects",
+      "title": "2028 수능 수학 출제 과목 설명 Q&A",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=340&boardSeq=97621&lev=0&m=0202&opType=N&page=65&s=moe",
+      "publisher": "교육부",
+      "publishedAt": "2024 (페이지 Q&A; 정확한 게시일 별도 확인 안 함)",
+      "verification": "direct-page-opened",
+      "verified": [
+        "Q&A에서 2028 이후 수학 과목을 대수, 미적분Ⅰ, 확률과 통계로 안내"
+      ],
+      "notVerified": [
+        "단원별 성취기준 또는 M6-01~04 직접 출제 보장은 없음"
+      ],
+      "rights": "공식 설명을 요약해 출처만 기록하며 콘텐츠 복사 없음.",
+      "use": "과목 수준 맥락만 제공; 특정 소단원의 시험 매핑으로 해석하지 않음."
+    },
+    {
+      "id": "moe-2028-sample-notice",
+      "title": "2028학년도 대입, 이렇게 준비하세요 — 수능 예시문항 안내",
+      "url": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=103113&lev=0&m=020402",
+      "publisher": "교육부",
+      "publishedAt": "2025-04-15",
+      "verification": "direct-page-opened; attachment-not-opened",
+      "verified": [
+        "본문에서 예시문항 안내 공지 확인",
+        "안내 PDF가 30.1MB 첨부로 표시됨",
+        "페이지에 출처표시 조건 안내 확인"
+      ],
+      "notVerified": [
+        "PDF 본문 미열람",
+        "문항 내용, 범위표 및 본 배치와의 주제 연결 미확인"
+      ],
+      "rights": "페이지는 공공누리 출처표시를 표시하나 PDF 문항의 개별 재이용 범위는 검토하지 않았다. 문항·도표 복제 없음.",
+      "use": "안내자료 존재 확인만; 세부 매핑이나 문제 내용에 사용하지 않음."
+    },
+    {
+      "id": "jameson-machaba-matabane-2023",
+      "title": "An Exploration of Grade 12 Learners’ Misconceptions on Solving Calculus Problem: A Case of Limits",
+      "url": "https://doi.org/10.46303/ressat.2023.34",
+      "publisher": "Research in Social Sciences and Technology, 8(4), 94–124",
+      "publishedAt": "2023-11-01",
+      "verification": "direct-article-page-opened; abstract-opened",
+      "verified": [
+        "남아프리카 Grade 12 학습자 35명 대상 탐색적 사례연구, 5명 면담",
+        "극한 개념/표기 오류와 약한 대수 기초가 극한 적용에 영향을 줄 수 있다고 보고",
+        "저널 페이지에서 CC BY 4.0 표시 확인"
+      ],
+      "notVerified": [
+        "한국 학생이나 한국 수능 응시자 표본이 아님",
+        "소규모 목적 표집이므로 일반 발생률 추정에 사용하지 않음",
+        "연구 문항·표·도식을 복제하지 않음"
+      ],
+      "rights": "CC BY 4.0. 연구 결과만 요약하고 연구 문항은 재사용하지 않는다.",
+      "use": "대수 선수지식과 극한 개념을 함께 진단할 필요에 대한 제한적 참고."
+    },
+    {
+      "id": "denbel-2014",
+      "title": "Students’ Misconceptions of the Limit Concept in a First Calculus Course",
+      "url": "https://iiste.org/Journals/index.php/JEP/article/view/17236",
+      "publisher": "Journal of Education and Practice, 5(34)",
+      "publishedAt": "2014",
+      "verification": "direct-article-page-opened; abstract-opened",
+      "verified": [
+        "예비공학 학생 130명 설문 및 14명 면담 보고",
+        "극한과 함수값 혼동, 점에서 미정의이면 극한도 없다는 오해, 0/0을 0으로 취급하는 오류를 보고",
+        "저널 페이지의 CC BY 3.0 표기 확인"
+      ],
+      "notVerified": [
+        "대학 예비공학 집단으로 한국 고교생과 다름",
+        "한국 학생의 발생률·보편적 오류로 일반화하지 않음"
+      ],
+      "rights": "CC BY 3.0. 결과만 요약하고 원문 문항을 복제하지 않는다.",
+      "use": "진단 문항의 오개념 가설 참고."
+    },
+    {
+      "id": "arsyad-et-al-2026",
+      "title": "Tracing students understanding and misconceptions of continuity and differentiability through multi representations of mathematical problem",
+      "url": "https://doi.org/10.24042/ajpm.v17i1.29062",
+      "publisher": "Al-Jabar: Jurnal Pendidikan Matematika, 17(1), 19–40",
+      "publishedAt": "2026",
+      "verification": "direct-article-page-opened; abstract-opened",
+      "verified": [
+        "인도네시아 대학 수학교육 전공 학부생 83명을 다중 표현 관점에서 조사",
+        "극한과 함수값 혼동 및 그래프 직관에 의존하는 오류 보고"
+      ],
+      "notVerified": [
+        "국내 고교 집단 표본이 아님",
+        "본문·문항 재사용 허가 검토 안 함; 콘텐츠에 복제하지 않음",
+        "샌드위치/사잇값 정리 오류율 근거가 아님"
+      ],
+      "rights": "연구 결과만 요약하고 문항·도식을 복제하지 않음; 별도 라이선스 확인 안 됨.",
+      "use": "연속성과 극한 개념을 표현 간 연결하는 수업 설계 참고."
+    }
+  ],
+  "rightsAndUsePolicy": "외부 기출·교재·연구 문항을 복제하지 않는다. 공식 첨부 본문 미열람 시 성취기준 코드나 단원 매핑을 추측하지 않는다."
+}

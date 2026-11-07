@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-24",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; separate independent AI Curriculum review complete",
+    "method": "Recomputed each original prompt and checked the selected answer against its rationale.",
+    "itemResults": {
+      "m524-draft-01": {
+        "answer": "lim=2, f(1)은 정의되지 않음",
+        "check": "인수분해하면 x+1이지만 원래 정의역에서 x=1은 제외된다."
+      },
+      "m524-draft-02": {
+        "answer": "6",
+        "check": "x²−9=(x−3)(x+3)이므로 x≠3에서 g=x+3, 극한은 6이다."
+      },
+      "m524-draft-03": {
+        "answer": "f(a₁)<f(a₂)<f(a₃)",
+        "check": "a_n은 양수에서 증가하며 f도 양수 구간에서 증가한다."
+      },
+      "m524-draft-04": {
+        "answer": "감소한다",
+        "check": "a_n은 양수에서 증가하고 1/x는 감소하므로 합성한 b_n은 감소한다."
+      },
+      "m524-draft-05": {
+        "answer": "(k+1)²+(k+1)=k²+k+2(k+1)",
+        "check": "k²+k는 귀납 가정상 짝수이고 2(k+1)도 짝수이므로 합이 짝수다."
+      },
+      "m524-draft-06": {
+        "answer": "아니오. P(2)의 기초 단계도 확인해야 한다.",
+        "check": "귀납 단계는 참인 시작 사례에서 출발해야 한다. P(2)를 확인하지 않았다면 P(2)부터 모든 n≥2까지 이어진다고 결론 낼 수 없다."
+      }
+    }
+  },
+  "limitations": [
+    "2022 mathematics annex body unopened; exact standard/code mapping remains unverified",
+    "2028 sample PDF body unopened; unit-specific exam mapping remains unverified",
+    "Human math/education review and publication approval pending",
+    "Separate Curriculum AI reviewer recalculated all 30 practice drafts; this is not human verification or publication approval."
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Separate Curriculum reviewer (AI role; independent of Research author)",
+    "reviewerAgent": "m6_batch_01_independent_review",
+    "date": "2026-11-07",
+    "scope": "Independent AI recalculation of all 30 practice drafts across M5-24 and M6-01..M6-04, including answer key, semantic answer, rationale, skill and family alignment.",
+    "result": "30/30 items recalculated; keys, semantic answers, rationales, skills and family mapping confirmed by the reviewer.",
+    "note": "This is an independent AI review only. It is not human mathematical or educational verification and does not grant publication approval."
+  }
+}

@@ -30,6 +30,11 @@ import m520Spec from "../docs/specifications/NEXT_BATCH/M5-20/lesson-spec.json";
 import m521Spec from "../docs/specifications/NEXT_BATCH/M5-21/lesson-spec.json";
 import m522Spec from "../docs/specifications/NEXT_BATCH/M5-22/lesson-spec.json";
 import m523Spec from "../docs/specifications/NEXT_BATCH/M5-23/lesson-spec.json";
+import m524Spec from "../docs/specifications/NEXT_BATCH/M5-24/lesson-spec.json";
+import m601Spec from "../docs/specifications/NEXT_BATCH/M6-01/lesson-spec.json";
+import m602Spec from "../docs/specifications/NEXT_BATCH/M6-02/lesson-spec.json";
+import m603Spec from "../docs/specifications/NEXT_BATCH/M6-03/lesson-spec.json";
+import m604Spec from "../docs/specifications/NEXT_BATCH/M6-04/lesson-spec.json";
 import blueprint from "../docs/specifications/M0-01/problem-blueprint.json";
 import m509Blueprint from "../docs/research/NEXT_BATCH/M5-09/problem-blueprint.json";
 import m510Blueprint from "../docs/research/NEXT_BATCH/M5-10/problem-blueprint.json";
@@ -46,6 +51,11 @@ import m520Blueprint from "../docs/research/NEXT_BATCH/M5-20/problem-blueprint.j
 import m521Blueprint from "../docs/research/NEXT_BATCH/M5-21/problem-blueprint.json";
 import m522Blueprint from "../docs/research/NEXT_BATCH/M5-22/problem-blueprint.json";
 import m523Blueprint from "../docs/research/NEXT_BATCH/M5-23/problem-blueprint.json";
+import m524Blueprint from "../docs/research/NEXT_BATCH/M5-24/problem-blueprint.json";
+import m601Blueprint from "../docs/research/NEXT_BATCH/M6-01/problem-blueprint.json";
+import m602Blueprint from "../docs/research/NEXT_BATCH/M6-02/problem-blueprint.json";
+import m603Blueprint from "../docs/research/NEXT_BATCH/M6-03/problem-blueprint.json";
+import m604Blueprint from "../docs/research/NEXT_BATCH/M6-04/problem-blueprint.json";
 import m514Content from "../docs/specifications/NEXT_BATCH/M5-14/content-draft.json";
 import m515Content from "../docs/specifications/NEXT_BATCH/M5-15/content-draft.json";
 import m516Content from "../docs/specifications/NEXT_BATCH/M5-16/content-draft.json";
@@ -56,6 +66,11 @@ import m520Content from "../docs/specifications/NEXT_BATCH/M5-20/content-draft.j
 import m521Content from "../docs/specifications/NEXT_BATCH/M5-21/content-draft.json";
 import m522Content from "../docs/specifications/NEXT_BATCH/M5-22/content-draft.json";
 import m523Content from "../docs/specifications/NEXT_BATCH/M5-23/content-draft.json";
+import m524Content from "../docs/specifications/NEXT_BATCH/M5-24/content-draft.json";
+import m601Content from "../docs/specifications/NEXT_BATCH/M6-01/content-draft.json";
+import m602Content from "../docs/specifications/NEXT_BATCH/M6-02/content-draft.json";
+import m603Content from "../docs/specifications/NEXT_BATCH/M6-03/content-draft.json";
+import m604Content from "../docs/specifications/NEXT_BATCH/M6-04/content-draft.json";
 import m514Runtime from "@/data/proposal-lessons/drafts/M5-14.json";
 import m515Runtime from "@/data/proposal-lessons/drafts/M5-15.json";
 import m516Runtime from "@/data/proposal-lessons/drafts/M5-16.json";
@@ -66,6 +81,11 @@ import m520Runtime from "@/data/proposal-lessons/drafts/M5-20.json";
 import m521Runtime from "@/data/proposal-lessons/drafts/M5-21.json";
 import m522Runtime from "@/data/proposal-lessons/drafts/M5-22.json";
 import m523Runtime from "@/data/proposal-lessons/drafts/M5-23.json";
+import m524Runtime from "@/data/proposal-lessons/drafts/M5-24.json";
+import m601Runtime from "@/data/proposal-lessons/drafts/M6-01.json";
+import m602Runtime from "@/data/proposal-lessons/drafts/M6-02.json";
+import m603Runtime from "@/data/proposal-lessons/drafts/M6-03.json";
+import m604Runtime from "@/data/proposal-lessons/drafts/M6-04.json";
 import draft from "../docs/specifications/M0-01/content-draft.json";
 import approval from "../docs/reviews/M0-01/approved-content.json";
 import instruction from "@/data/m001-instruction.json";
@@ -106,6 +126,11 @@ const proposalLessonSpecs = [
   m521Spec,
   m522Spec,
   m523Spec,
+  m524Spec,
+  m601Spec,
+  m602Spec,
+  m603Spec,
+  m604Spec,
 ];
 
 const proposalProblemBlueprints = [
@@ -124,10 +149,16 @@ const proposalProblemBlueprints = [
   m521Blueprint,
   m522Blueprint,
   m523Blueprint,
+  m524Blueprint,
+  m601Blueprint,
+  m602Blueprint,
+  m603Blueprint,
+  m604Blueprint,
 ];
 
-const proposalContents = [m514Content, m515Content, m516Content, m517Content, m518Content, m519Content, m520Content, m521Content, m522Content, m523Content];
-const proposalRuntimeContents = [m514Runtime, m515Runtime, m516Runtime, m517Runtime, m518Runtime, m519Runtime, m520Runtime, m521Runtime, m522Runtime, m523Runtime];
+const proposalContents = [m514Content, m515Content, m516Content, m517Content, m518Content, m519Content, m520Content, m521Content, m522Content, m523Content, m524Content, m601Content, m602Content, m603Content, m604Content];
+const proposalRuntimeContents = [m514Runtime, m515Runtime, m516Runtime, m517Runtime, m518Runtime, m519Runtime, m520Runtime, m521Runtime, m522Runtime, m523Runtime, m524Runtime, m601Runtime, m602Runtime, m603Runtime, m604Runtime];
+const proposalContentUnitIds = ["M5-14", "M5-15", "M5-16", "M5-17", "M5-18", "M5-19", "M5-20", "M5-21", "M5-22", "M5-23", "M5-24", "M6-01", "M6-02", "M6-03", "M6-04"];
 
 afterEach(() => vi.unstubAllEnvs());
 describe("cross-agent handoff contracts", () => {
@@ -259,15 +290,15 @@ describe("cross-agent handoff contracts", () => {
     }
   });
 
-  it("keeps M5-14~23 renderer data schema-valid and identical to curriculum drafts", () => {
+  it("keeps M5-14~M6-04 renderer data schema-valid and identical to curriculum drafts", () => {
     for (const [index, input] of proposalContents.entries()) {
       expect(() => contentSchema.parse(proposalRuntimeContents[index])).not.toThrow();
       expect(proposalRuntimeContents[index]).toEqual(input);
-      expect(proposalRuntimeContents[index].unitId).toBe(`M5-${String(index + 14).padStart(2, "0")}`);
+      expect(proposalRuntimeContents[index].unitId).toBe(proposalContentUnitIds[index]);
       expect(proposalRuntimeContents[index].blocks).toHaveLength(8);
       expect(proposalRuntimeContents[index].blocks.some((block) => block.type === "AssessmentBlock")).toBe(false);
       const lab = proposalRuntimeContents[index].blocks.find((block) => block.type === "InteractiveBlock");
-      expect(lab?.type === "InteractiveBlock" ? lab.interaction : undefined).toBe(`m5-${index + 14}-visual`);
+      expect(lab?.type === "InteractiveBlock" ? lab.interaction : undefined).toBe(`${proposalContentUnitIds[index]?.toLowerCase()}-visual`);
     }
   });
 
@@ -285,6 +316,9 @@ describe("cross-agent handoff contracts", () => {
       expect(proposalBlueprint.reviewStatus).toBe("draft");
       expect(proposalBlueprint.officialMappingStatus).toBe("unverified");
       expect(proposalBlueprint.publicationApproved).toBe(false);
+      if (proposalBlueprint.unitId === "M5-24" || proposalBlueprint.unitId.startsWith("M6-")) {
+        expect(proposalBlueprint.assessmentInstanceCount).toBe(0);
+      }
       expect(proposalBlueprint.families).toHaveLength(3);
       expect(
         new Set(proposalBlueprint.families.map((family) => family.id)).size,
@@ -334,6 +368,12 @@ describe("cross-agent handoff contracts", () => {
     expect(
       proposalProblemBlueprintSchema.safeParse(duplicateChoices).success,
     ).toBe(false);
+
+    const assessmentBlueprint: unknown = {
+      ...proposalProblemBlueprints.find((candidate) => candidate.unitId === "M6-01")!,
+      assessmentInstanceCount: 1,
+    };
+    expect(proposalProblemBlueprintSchema.safeParse(assessmentBlueprint).success).toBe(false);
   });
 
   it("rejects missing phases, duplicate subunits, stale versions and incompatible question counts", () => {

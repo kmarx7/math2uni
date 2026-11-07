@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M6-02",
+  "levelId": "LEVEL 6",
+  "title": "극한의 성질과 계산",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "극한의 사칙연산",
+      "인수분해와 약분"
+    ],
+    "prerequisiteUnits": [
+      "M6-01",
+      "M3-07"
+    ],
+    "visualization": "구멍이 있는 그래프"
+  },
+  "objectives": [
+    "극한의 합·차·상수배·곱·몫 법칙을 적용하기 전 필요한 각 극한의 존재와 분모가 0이 아닌 조건을 확인한다.",
+    "인수분해 후 x−a를 약분해 극한을 계산하되, 원래 함수의 정의역과 제외점을 유지한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m6-01-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M6-01 선수 기능 진단: 극한의 성질과 계산을 시작하기 위한 극한의 사칙연산 기초를 확인한다. 미숙하면 안내만 제공하며 선수 그래프·숙달도·완료 점수는 변경하지 않는다."
+    },
+    {
+      "id": "m3-07-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M3-07 선수 기능 진단: 극한의 성질과 계산을 시작하기 위한 극한의 사칙연산 기초를 확인한다. 미숙하면 안내만 제공하며 선수 그래프·숙달도·완료 점수는 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m6-02-skill-1",
+    "m6-02-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "대입 가능한 식 확인 → 극한 법칙 조건 → 0/0 모양 식별 → 인수분해 → x≠a 조건에서 약분 → 원래 정의역과 결과 검산",
+    "principleDerivation": "극한 법칙은 각 항의 극한이 존재할 때 적용한다. 몫 법칙은 분모 함수의 극한이 0이 아닐 때 가능하다. 직접 대입이 0/0 형태면 이것은 값이 아니라 추가 변형이 필요하다는 신호다. 인수 x−a를 약분할 때는 x≠a인 근방에서만 원래 함수와 같은 값이므로, 원래 식에서 제외된 x=a를 정의역에 다시 넣지 않는다. 극한은 제외된 점 주변의 값으로 계산할 수 있다.",
+    "accessibility": "쉬운 한국어와 수학 기호를 함께 쓴다. 그래프에는 축·접근 방향·열린 점/닫힌 점과 텍스트 대체 설명을 둔다. 키보드 조작 가능하게 하고 색만으로 정보를 구분하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m6-02-u1",
+      "title": "극한 법칙과 전제",
+      "targetSkills": [
+        "m6-02-skill-1"
+      ],
+      "explanation": "합·차·곱 법칙은 각 극한 존재를, 몫 법칙은 분모 극한 비영 조건을 요구한다.",
+      "activity": "법칙 카드 앞에 분모·존재 조건 확인 칸을 둔다.",
+      "check": "lim f=2, lim g=3이면 lim(f+g)=5다."
+    },
+    {
+      "id": "m6-02-u2",
+      "title": "직접 대입",
+      "targetSkills": [
+        "m6-02-skill-1"
+      ],
+      "explanation": "함수식이 a에서 연속·정의되는 형태면 대입으로 극한을 구할 수 있다.",
+      "activity": "대입 가능한 표현과 분모 0 표현을 구분한다.",
+      "check": "lim_{x→2}(x²+1)=5다."
+    },
+    {
+      "id": "m6-02-u3",
+      "title": "0/0 형태 인식",
+      "targetSkills": [
+        "m6-02-skill-1"
+      ],
+      "explanation": "분자·분모가 모두 0이면 몫 법칙으로 바로 나누지 않고 식을 변형한다.",
+      "activity": "대입값 두 칸이 모두 0일 때 인수분해 안내를 표시한다.",
+      "check": "(x²−1)/(x−1)에서 x→1 대입은 0/0이다."
+    },
+    {
+      "id": "m6-02-u4",
+      "title": "인수분해와 제외값",
+      "targetSkills": [
+        "m6-02-skill-2"
+      ],
+      "explanation": "공통 인수 x−a는 x≠a인 곳에서만 약분한다.",
+      "activity": "원래 정의역의 구멍 표식을 약분 뒤에도 남긴다.",
+      "check": "(x²−1)/(x−1)=x+1이지만 원래 함수는 x=1에서 미정의다."
+    },
+    {
+      "id": "m6-02-u5",
+      "title": "약분 뒤 극한 계산",
+      "targetSkills": [
+        "m6-02-skill-2"
+      ],
+      "explanation": "약분한 식의 주변 값을 사용해 극한을 구하고 원래 식의 정의역을 구별한다.",
+      "activity": "x가 제외점에 가까워지는 표본을 단순화된 식에서 확인한다.",
+      "check": "lim_{x→1}(x²−1)/(x−1)=lim(x+1)=2다."
+    },
+    {
+      "id": "m6-02-u6",
+      "title": "조건·결론 검산",
+      "targetSkills": [
+        "m6-02-skill-2"
+      ],
+      "explanation": "최종값을 원래 식의 근방과 비교하고 약분 조건을 다시 확인한다.",
+      "activity": "변형 전후의 함수값 일치가 x≠a에 한정됨을 체크한다.",
+      "check": "x≠1에서 두 식은 같지만 f(1)=2라고 정의되지는 않는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m6-02-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 상태 텍스트 확인",
+      "description": "구멍이 있는 그래프에서 원래 식과 약분한 식을 같은 주변에 겹친다. 제외점에서만 정의가 다른 점을 표시하고, 분모 극한 조건을 확인한 뒤 극한 법칙 카드를 활성화한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "극한의 사칙연산 법칙을 전제 조건과 함께 선택·적용한다.",
+      "0/0형 인수분해·약분으로 극한값을 계산하고 제외점을 유지한다.",
+      "변형 전후의 정의역과 특정 점의 함수 정의 여부를 구분한다."
+    ],
+    "draftPracticeGoals": [
+      "합·차·곱의 극한 법칙을 적용한다.",
+      "몫 법칙에서 분모 극한이 0이 아닌지 확인한다.",
+      "0/0을 정답값으로 취급하지 않는다.",
+      "공통 인수를 약분해 극한을 구한다.",
+      "약분 뒤에도 원래 제외점을 기록한다.",
+      "극한값과 원래 함수의 해당 점 정의 여부를 분리해 설명한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 인스턴스는 0개다. 형성평가 기준만 정의하고 별도 문항 제작/검수 전에는 평가로 제공하지 않는다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 주된 조건 판단·표현 변환·전략이 달라야 별도 가족으로 센다."
+  },
+  "assessmentCriteria": [
+    "법칙을 쓰기 위한 존재·분모 조건을 확인했는가?",
+    "공통 인수를 x≠a에서만 약분했는가?",
+    "원래 함수의 제외점을 복구하지 않았는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답에서 확인되지 않은 조건이나 기술을 찾아 해당 소단원으로 돌아간다. 통과한 기술도 1·3·7일 간격으로 회상한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제 풀이"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형별 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형별 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가 설계"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "0/0을 극한값 0으로 답한다.",
+    "분모 극한이 0인데 몫 법칙을 바로 쓴다.",
+    "약분 후 원래 함수가 제외점에서 정의된다고 주장한다.",
+    "lim f/g=(lim f)/(lim g)의 분모 조건을 잊는다."
+  ],
+  "workedExample": {
+    "prompt": "lim_{x→1}(x²−1)/(x−1)을 구하고 원래 함수의 정의역을 말하라.",
+    "solution": "분자 인수분해로 (x−1)(x+1)/(x−1)을 얻는다. x≠1인 근방에서 약분해 x+1이므로 극한은 2다. 원래 분수식은 x=1에서 분모가 0이어서 정의되지 않는다.",
+    "verification": "약분한 등식은 x≠1에서만 성립하고 점의 정의를 바꾸지 않았다."
+  },
+  "designReview": {
+    "status": "ai-reviewed",
+    "reviewerRole": "Curriculum Architect author review plus separate independent Curriculum AI review",
+    "reviewerIdentity": "m6_batch_01_independent_review (separate AI reviewer; not a human approver)",
+    "scope": "Independent review of curriculum metadata, scope/sequencing, subunits/phases/skills/families, all six Research practice answers/keys/semantic answers/rationales for this unit, content/runtime alignment and draft publication state. Development-preview readiness only; no human content or publication approval.",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "implementation-ready",
+    "publicationReady": false,
+    "pending": [
+      "Developer schema parsing, implementation and functional/accessibility/mobile/learning-flow QA",
+      "Human educational and mathematical review and explicit publication approval",
+      "Official achievement-standard/CSAT mapping remains unverified; direct source verification is required before adding any mapping"
+    ]
+  }
+}

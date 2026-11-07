@@ -100,3 +100,11 @@ Curriculum Architect가 다섯 단원의 6개 소단원·15단계 명세와 rend
 Developer & QA는 5개 bounded 인터랙티브 실험실, 수학 검증 helper, server-only 문제 adapter, lesson/preview/problem registry와 테스트를 추가했다. 콘텐츠/문항은 draft, `humanVerified:false`; 평가 0, `approvedContent:null`, 게시 승인 0이다. 공식 교육과정 성취기준 코드와 단원별 수능 매핑은 미검증으로 남겼다.
 
 lint/typecheck, Vitest 200/200, `content:validate` 38/38, Next.js 16.3.6 production build, agent config validation, diff-check가 통과했다. Playwright는 테스트 auth service가 `127.0.0.1:54329`에 bind할 때 `EPERM`으로 실행 전 차단됐다. 각 단원별 구현/QA/승인 대기 파일은 `docs/reviews/NEXT_BATCH/M5-19`~`M5-23/`에 있다.
+
+## 2026-11-07 · M5-24, M6-01~M6-04 개발 프리뷰 인계 완료
+
+Curriculum 작성자와 별도 AI Curriculum reviewer를 분리해 명세·renderer와 30개 문항을 독립 검토했다. 검토자는 30/30 답·풀이·키·semantic answer 및 family/skill 연결을 다시 계산했고 구현 프리뷰 인계 가능을 확인했다. M6-04의 IVT 예시와 확인 문구는 `x³−x` on `[-2,2]`로 일치시켰다. Research는 교육부/2028 자료의 확인 범위 및 미열람 첨부·공식 매핑 미검증 상태, 외부 연구 표본과 권리 한계를 기록했다.
+
+Developer & QA는 M5-24 대수 연결과 M6-01~04 극한·연속 실험실, 고정형 bounded math helper, server-only problem adapter, registry와 progress/security 테스트를 추가했다. 문제와 renderer는 draft, `humanVerified:false`; assessment 0, `approvedContent:null`, 사람 게시 승인 0이다.
+
+lint/typecheck, Vitest 208/208, `content:validate` 46/46, production build, agent config validation, diff-check 통과. E2E는 테스트 auth service가 `127.0.0.1:54329`에 bind할 때 `EPERM`으로 브라우저 실행 전 막혔다. 공식 성취기준·개별 수능 매핑과 사람 콘텐츠 승인도 미완료다. QA·pending approval records는 `docs/reviews/NEXT_BATCH/M5-24`, `M6-01`~`M6-04/`에 있다.

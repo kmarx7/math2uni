@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-01",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "threeDistinctFamilies": true,
+    "sixPracticeDrafts": true,
+    "familyCountsSchemaPresent": true,
+    "skillsMatchCurriculumTargets": true,
+    "uniqueItemIds": true,
+    "choiceIdsAndAnswerLabelsValid": true,
+    "allDraftPracticeAndUnverified": true,
+    "assessmentItemsZero": true,
+    "contentEightBlocksFifteenPhases": true,
+    "phaseReferencesResolve": true,
+    "runtimeCopyMatchesSkeleton": true,
+    "officialMappingVerified": false,
+    "independentRecalculationComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "B": 2,
+    "C": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "authorManualRecalculation": {
+    "status": "completed-by-content-author; separate independent AI Curriculum review complete",
+    "method": "Recomputed each table/one-sided value and checked the equality condition for a two-sided limit.",
+    "itemResults": {
+      "m601-draft-01": {
+        "answer": "3",
+        "check": "왼쪽 접근에서 출력값이 3에 가까워진다."
+      },
+      "m601-draft-02": {
+        "answer": "5",
+        "check": "오른쪽 접근값이 5로 주어졌다."
+      },
+      "m601-draft-03": {
+        "answer": "존재하지 않는다.",
+        "check": "좌극한 1과 우극한 2가 다르므로 양쪽 극한은 존재하지 않는다."
+      },
+      "m601-draft-04": {
+        "answer": "4",
+        "check": "두 한쪽 극한이 같은 4이므로 양쪽 극한은 4다."
+      },
+      "m601-draft-05": {
+        "answer": "2",
+        "check": "주변에서 함수값이 2이므로 점값 7과 관계없이 극한은 2다."
+      },
+      "m601-draft-06": {
+        "answer": "3",
+        "check": "x+3은 x가 0에 가까워질 때 3에 가까워진다."
+      }
+    }
+  },
+  "limitations": [
+    "2022 mathematics annex body unopened; exact standard/code mapping unverified",
+    "2028 sample PDF body unopened; unit-specific exam mapping unverified",
+    "Human math/education review and publication approval pending",
+    "Separate Curriculum AI reviewer recalculated all 30 practice drafts; this is not human verification or publication approval."
+  ],
+  "independentReview": {
+    "status": "completed",
+    "reviewer": "Separate Curriculum reviewer (AI role; independent of Research author)",
+    "reviewerAgent": "m6_batch_01_independent_review",
+    "date": "2026-11-07",
+    "scope": "Independent AI recalculation of all 30 practice drafts across M5-24 and M6-01..M6-04, including answer key, semantic answer, rationale, skill and family alignment.",
+    "result": "30/30 items recalculated; keys, semantic answers, rationales, skills and family mapping confirmed by the reviewer.",
+    "note": "This is an independent AI review only. It is not human mathematical or educational verification and does not grant publication approval."
+  }
+}

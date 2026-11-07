@@ -13,7 +13,7 @@
     "curriculum:canonical": "vitest run --config vitest.canonical.config.ts",
     "test:smoke": "playwright test",
     "agents:validate": "python3 scripts/validate-agent-config.py",
-    "content:validate": "vitest run tests/handoff.test.ts tests/m001-expansion.test.ts tests/m1-proposal-preview.test.ts tests/m5-batch-04-preview.test.ts tests/m5-batch-05-preview.test.ts",
+    "content:validate": "vitest run tests/handoff.test.ts tests/m001-expansion.test.ts tests/m1-proposal-preview.test.ts tests/m5-batch-04-preview.test.ts tests/m5-batch-05-preview.test.ts tests/m6-batch-01-preview.test.ts",
     "content:m1-drafts": "python3 scripts/generate-m1-content-drafts.py"
   },
   "dependencies": {

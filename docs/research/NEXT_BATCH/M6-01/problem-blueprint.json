@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-01",
+  "unitTitle": "함수의 극한의 뜻",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m6-01-family-1",
+      "status": "draft",
+      "title": "한쪽 접근값 읽기",
+      "reasoningStructure": "표·식·그래프에서 왼쪽 또는 오른쪽 접근 값을 읽는다.",
+      "thinkingType": "표·식·그래프에서 왼쪽 또는 오른쪽 접근 값을 읽는다.",
+      "skillId": "m6-01-skill-1",
+      "distinctFrom": "표·식·그래프에서 왼쪽 또는 오른쪽 접근 값을 읽는다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m601-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "표의 입력 x는 1.9, 1.99, 1.999이고 대응하는 f(x)는 2.9, 2.99, 2.999이다. lim_{x→2−}f(x)를 추측하면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "3",
+          "rationale": "왼쪽 접근에서 출력값이 3에 가까워진다.",
+          "skillLabel": "m6-01-skill-1",
+          "misconceptionHypothesis": "한쪽 접근값를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "3"
+            },
+            {
+              "id": "B",
+              "label": "2"
+            },
+            {
+              "id": "C",
+              "label": "미정"
+            }
+          ]
+        },
+        {
+          "id": "m601-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "표의 입력 x는 1.1, 1.01, 1.001이고 대응하는 f(x)는 5.1, 5.01, 5.001이다. lim_{x→1+}f(x)를 추측하면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "5",
+          "rationale": "오른쪽 접근값이 5로 주어졌다.",
+          "skillLabel": "m6-01-skill-1",
+          "misconceptionHypothesis": "한쪽 접근값를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5"
+            },
+            {
+              "id": "B",
+              "label": "1"
+            },
+            {
+              "id": "C",
+              "label": "f(1)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-01-family-2",
+      "status": "draft",
+      "title": "양쪽 극한 비교",
+      "reasoningStructure": "좌우 접근을 비교해 양쪽 극한의 존재와 값을 판정한다.",
+      "thinkingType": "좌우 접근을 비교해 양쪽 극한의 존재와 값을 판정한다.",
+      "skillId": "m6-01-skill-2",
+      "distinctFrom": "좌우 접근을 비교해 양쪽 극한의 존재와 값을 판정한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m601-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x<0에서 f(x)=1, x>0에서 f(x)=2이다. lim_{x→0}f(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "존재하지 않는다.",
+          "rationale": "좌극한 1과 우극한 2가 다르므로 양쪽 극한은 존재하지 않는다.",
+          "skillLabel": "m6-01-skill-2",
+          "misconceptionHypothesis": "좌우 극한를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1"
+            },
+            {
+              "id": "B",
+              "label": "존재하지 않는다."
+            },
+            {
+              "id": "C",
+              "label": "2"
+            }
+          ]
+        },
+        {
+          "id": "m601-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x<3과 x>3 양쪽에서 f(x)가 모두 4에 가까워진다. lim_{x→3}f(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "4",
+          "rationale": "두 한쪽 극한이 같은 4이므로 양쪽 극한은 4다.",
+          "skillLabel": "m6-01-skill-2",
+          "misconceptionHypothesis": "좌우 극한를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "존재하지 않는다."
+            },
+            {
+              "id": "B",
+              "label": "f(3)과 같아야 존재한다."
+            },
+            {
+              "id": "C",
+              "label": "4"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-01-family-3",
+      "status": "draft",
+      "title": "점값과 접근값 분리",
+      "reasoningStructure": "함수값 f(a)와 극한값의 관계를 구분한다.",
+      "thinkingType": "함수값 f(a)와 극한값의 관계를 구분한다.",
+      "skillId": "m6-01-skill-2",
+      "distinctFrom": "함수값 f(a)와 극한값의 관계를 구분한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m601-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "x≠1에서 f(x)=2이고 f(1)=7이다. lim_{x→1}f(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "2",
+          "rationale": "주변에서 함수값이 2이므로 점값 7과 관계없이 극한은 2다.",
+          "skillLabel": "m6-01-skill-2",
+          "misconceptionHypothesis": "점값과 극한값를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "7"
+            },
+            {
+              "id": "B",
+              "label": "2"
+            },
+            {
+              "id": "C",
+              "label": "존재하지 않는다."
+            }
+          ]
+        },
+        {
+          "id": "m601-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x≠0에서 g(x)=x+3이고 g(0)은 미정의이다. lim_{x→0}g(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "3",
+          "rationale": "x+3은 x가 0에 가까워질 때 3에 가까워진다.",
+          "skillLabel": "m6-01-skill-2",
+          "misconceptionHypothesis": "점값과 극한값를 혼동하는지 살피는 진단 가설이며 빈도 주장이 아니다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "미정의"
+            },
+            {
+              "id": "B",
+              "label": "0"
+            },
+            {
+              "id": "C",
+              "label": "3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "assessmentInstanceCount": 0
+}

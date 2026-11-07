@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M6-03",
+  "unitTitle": "극한의 대소 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m6-03-family-1",
+      "status": "draft",
+      "title": "대소 관계에서 극한 순서",
+      "reasoningStructure": "근방에서의 함수 대소를 확인하고 극한값의 순서를 판정한다.",
+      "thinkingType": "근방에서의 함수 대소를 확인하고 극한값의 순서를 판정한다.",
+      "skillId": "m6-03-skill-1",
+      "distinctFrom": "근방에서의 함수 대소를 확인하고 극한값의 순서를 판정한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m603-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "x가 a의 뚫린 근방에서 f(x)≤g(x)이고 lim f=2, lim g=5이다. 어떤 결론이 맞는가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "2≤5",
+          "rationale": "극한 대소 관계에 따라 2≤5다.",
+          "skillLabel": "m6-03-skill-1",
+          "misconceptionHypothesis": "근방 대소와 극한 순서에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2≤5"
+            },
+            {
+              "id": "B",
+              "label": "2≥5"
+            },
+            {
+              "id": "C",
+              "label": "관계 없음"
+            }
+          ]
+        },
+        {
+          "id": "m603-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "0<|x|<1에서 x²≤|x|이다. f(x)=x², g(x)=|x|일 때 극한값의 관계는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "lim f=0≤lim g=0",
+          "rationale": "두 함수 모두 0으로 수렴하므로 근방 대소와 같은 순서로 극한값도 비교된다.",
+          "skillLabel": "m6-03-skill-1",
+          "misconceptionHypothesis": "근방 대소와 극한 순서에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "lim f>lim g"
+            },
+            {
+              "id": "B",
+              "label": "극한은 없다"
+            },
+            {
+              "id": "C",
+              "label": "lim f=0≤lim g=0"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-03-family-2",
+      "status": "draft",
+      "title": "샌드위치로 극한 계산",
+      "reasoningStructure": "대상 함수를 양쪽 함수로 끼우고 일치하는 경계 극한으로 값을 구한다.",
+      "thinkingType": "대상 함수를 양쪽 함수로 끼우고 일치하는 경계 극한으로 값을 구한다.",
+      "skillId": "m6-03-skill-2",
+      "distinctFrom": "대상 함수를 양쪽 함수로 끼우고 일치하는 경계 극한으로 값을 구한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m603-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "−x²≤f(x)≤x²가 0의 뚫린 근방에서 성립한다. lim_{x→0}f(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "0",
+          "rationale": "양쪽 경계의 극한이 모두 0이므로 샌드위치 정리로 f의 극한은 0이다.",
+          "skillLabel": "m6-03-skill-2",
+          "misconceptionHypothesis": "샌드위치 정리에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1"
+            },
+            {
+              "id": "B",
+              "label": "0"
+            },
+            {
+              "id": "C",
+              "label": "존재하지 않음"
+            }
+          ]
+        },
+        {
+          "id": "m603-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "−|x|≤g(x)≤|x|가 0의 뚫린 근방에서 성립한다. lim_{x→0}g(x)는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "0",
+          "rationale": "두 경계 함수가 모두 0으로 수렴하므로 g도 0으로 수렴한다.",
+          "skillLabel": "m6-03-skill-2",
+          "misconceptionHypothesis": "샌드위치 정리에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "1"
+            },
+            {
+              "id": "B",
+              "label": "0"
+            },
+            {
+              "id": "C",
+              "label": "판정 불가"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m6-03-family-3",
+      "status": "draft",
+      "title": "정리 전제의 점검",
+      "reasoningStructure": "샌드위치/대소 정리의 근방·존재 조건 누락 사례를 구별한다.",
+      "thinkingType": "샌드위치/대소 정리의 근방·존재 조건 누락 사례를 구별한다.",
+      "skillId": "m6-03-skill-2",
+      "distinctFrom": "샌드위치/대소 정리의 근방·존재 조건 누락 사례를 구별한다. 숫자만 바꾼 인스턴스는 새 원형으로 세지 않는다.",
+      "items": [
+        {
+          "id": "m603-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "f(x)≤g(x)가 x=a 한 점에서만 알려졌고 두 함수의 근방 극한 정보는 없다. 극한의 대소를 결론 낼 수 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "아니다.",
+          "rationale": "극한 비교에는 한 점의 대소가 아니라 근방 관계와 두 극한의 존재가 필요하다.",
+          "skillLabel": "m6-03-skill-2",
+          "misconceptionHypothesis": "정리 가정의 근방 조건에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "아니다."
+            },
+            {
+              "id": "B",
+              "label": "그렇다."
+            },
+            {
+              "id": "C",
+              "label": "두 극한은 반드시 같다."
+            }
+          ]
+        },
+        {
+          "id": "m603-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "−1≤h(x)≤1만 알고 있다. 두 경계가 같은 값으로 수렴한다는 정보가 없을 때 lim h(x)를 정할 수 있는가?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "정할 수 없다.",
+          "rationale": "경계가 같은 극한을 갖는 조건이 없어 샌드위치 정리로 결론낼 수 없다.",
+          "skillLabel": "m6-03-skill-2",
+          "misconceptionHypothesis": "정리 가정의 경계 극한에 대한 진단 가설이며 오류 빈도를 주장하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation; independent recalculation pending",
+            "result": "author calculation recorded; independent AI and human verification pending",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "lim h=0"
+            },
+            {
+              "id": "B",
+              "label": "lim h=1"
+            },
+            {
+              "id": "C",
+              "label": "정할 수 없다."
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ],
+  "assessmentInstanceCount": 0
+}
