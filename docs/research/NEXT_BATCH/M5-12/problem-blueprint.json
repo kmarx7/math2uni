@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-12",
+  "unitTitle": "삼각함수의 정의",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-12-family-1",
+      "status": "draft",
+      "title": "단위원 끝점의 좌표에서 사인·코사인 읽기",
+      "reasoningStructure": "회전각에 대응하는 단위원 끝점에서 x좌표를 cos, y좌표를 sin으로 대응시킨다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-12-skill-1",
+      "distinctFrom": "사분면 부호 추론과 탄젠트의 정의역 검사는 끝점 좌표를 직접 읽는 전략과 다르다.",
+      "items": [
+        {
+          "id": "m512-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "단위원에서 θ=π/6일 때 cosθ의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "√3/2",
+          "rationale": "π/6은 30°이다. 단위원 끝점은 (cosθ,sinθ)=(√3/2,1/2)이므로 cosθ=√3/2이다.",
+          "skillLabel": "m5-12-skill-1",
+          "misconceptionHypothesis": "끝점 좌표의 x,y 순서와 cos,sin 대응을 바꾸는 가능성을 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "unit-circle 30-degree coordinate derivation",
+            "result": "x좌표 √3/2 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "√3/2"
+            },
+            {
+              "id": "B",
+              "label": "1/2"
+            },
+            {
+              "id": "C",
+              "label": "−√3/2"
+            }
+          ]
+        },
+        {
+          "id": "m512-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "단위원의 끝점이 (−1/2, √3/2)일 때 (cosθ,sinθ)는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "(−1/2, √3/2)",
+          "rationale": "단위원의 끝점은 정의에 따라 (cosθ,sinθ)이다. 따라서 cosθ=−1/2이고 sinθ=√3/2이다.",
+          "skillLabel": "m5-12-skill-1",
+          "misconceptionHypothesis": "x좌표와 y좌표 순서를 사인·코사인에 반대로 연결하는 오류 가능성을 확인한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "coordinate-definition correspondence",
+            "result": "좌표 순서와 함수값 대응 직접 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(√3/2, −1/2)"
+            },
+            {
+              "id": "B",
+              "label": "(1/2, −√3/2)"
+            },
+            {
+              "id": "C",
+              "label": "(−1/2, √3/2)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-12-family-2",
+      "status": "draft",
+      "title": "사분면과 축에서 함수값 부호 확인",
+      "reasoningStructure": "단위원 좌표의 x,y 부호를 사분면/축 위치와 연결해 cos,sin의 부호나 값을 판단한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-12-skill-2",
+      "distinctFrom": "좌표를 직접 읽는 원형 및 sin/cos의 비로 tan 정의역을 판별하는 원형과 구별한다.",
+      "items": [
+        {
+          "id": "m512-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "θ=5π/4일 때 sinθ와 cosθ의 부호는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "sinθ<0, cosθ<0",
+          "rationale": "5π/4=225°이므로 끝점은 제3사분면에 있다. 이 사분면에서 x좌표와 y좌표가 모두 음수이므로 cosθ<0, sinθ<0이다.",
+          "skillLabel": "m5-12-skill-2",
+          "misconceptionHypothesis": "기준각의 양수값만 기억하고 실제 사분면의 부호를 적용하지 않는 가능성을 살펴본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "angle-to-quadrant and coordinate-sign check",
+            "result": "제3사분면에서 x,y<0으로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "sinθ>0, cosθ<0"
+            },
+            {
+              "id": "B",
+              "label": "sinθ<0, cosθ<0"
+            },
+            {
+              "id": "C",
+              "label": "sinθ<0, cosθ>0"
+            }
+          ]
+        },
+        {
+          "id": "m512-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "θ=3π/2일 때 (cosθ,sinθ)는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "(0,−1)",
+          "rationale": "3π/2는 아래쪽 음의 y축을 가리킨다. 끝점은 (0,−1)이므로 cosθ=0이고 sinθ=−1이다.",
+          "skillLabel": "m5-12-skill-2",
+          "misconceptionHypothesis": "축 위 각을 사분면 각처럼 취급해 0 좌표를 놓치는 오류 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "unit-circle axis-coordinate check",
+            "result": "아래쪽 단위원 점 (0,−1)로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "(0,−1)"
+            },
+            {
+              "id": "B",
+              "label": "(−1,0)"
+            },
+            {
+              "id": "C",
+              "label": "(0,1)"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-12-family-3",
+      "status": "draft",
+      "title": "탄젠트의 비율 및 정의되지 않는 각",
+      "reasoningStructure": "tanθ=sinθ/cosθ를 계산하되 cosθ=0이면 나눗셈이 정의되지 않음을 판정한다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-12-skill-2",
+      "distinctFrom": "좌표 순서와 사분면 부호 판단 원형과 달리 분모 조건과 비율 정의가 핵심이다.",
+      "items": [
+        {
+          "id": "m512-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "θ=π/4일 때 tanθ의 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "1",
+          "rationale": "sin(π/4)=√2/2이고 cos(π/4)=√2/2이므로 tanθ=sinθ/cosθ=1이다. 분모는 0이 아니다.",
+          "skillLabel": "m5-12-skill-2",
+          "misconceptionHypothesis": "탄젠트를 사인과 코사인의 비가 아닌 별개 좌표로 취급하는 혼동을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "direct sine/cosine ratio calculation",
+            "result": "(√2/2)/(√2/2)=1; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "√2/2"
+            },
+            {
+              "id": "B",
+              "label": "√2"
+            },
+            {
+              "id": "C",
+              "label": "1"
+            }
+          ]
+        },
+        {
+          "id": "m512-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "θ=π/2일 때 tanθ에 대한 설명으로 옳은 것은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "정의되지 않는다",
+          "rationale": "π/2에서 sinθ=1, cosθ=0이다. tanθ=sinθ/cosθ에서 0으로 나눌 수 없으므로 tanθ는 정의되지 않는다.",
+          "skillLabel": "m5-12-skill-2",
+          "misconceptionHypothesis": "탄젠트가 모든 각에서 값이 있다고 가정하거나 0으로 나누는 오류를 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "definition denominator check",
+            "result": "cos(π/2)=0이므로 미정의 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "0이다"
+            },
+            {
+              "id": "B",
+              "label": "정의되지 않는다"
+            },
+            {
+              "id": "C",
+              "label": "1이다"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

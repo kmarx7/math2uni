@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-09",
+  "levelId": "LEVEL 5",
+  "title": "로그방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "진수 조건",
+      "로그의 증감 활용"
+    ],
+    "prerequisiteUnits": [
+      "M5-07",
+      "M5-08"
+    ],
+    "visualization": "정의역과 해집합"
+  },
+  "objectives": [
+    "로그방정식과 부등식을 풀기 전에 각 로그의 진수 양수 조건을 찾아 정의역을 정한다.",
+    "밑의 증가·감소에 따라 로그 부등식의 방향을 결정하고 원래 식에서 해를 검산한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-09-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-07 선수 기능 진단: 로그함수의 밑에 따른 단조성 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-09-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-08 선수 기능 진단: 같은 밑 지수방정식·부등식의 비교 원리 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-09-skill-1",
+    "m5-09-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "정의역 조건 → 같은 밑·같은 로그의 동치 → 로그방정식 풀이 → 밑에 따른 로그 부등식 → 원래 정의역에서 해 검산",
+    "principleDerivation": "a>0, a≠1이고 x,y>0일 때 log_a x=log_a y는 로그함수의 일대일성으로 x=y와 동치다. log_a는 a>1이면 증가, 0<a<1이면 감소한다. 따라서 log_a f(x)와 log_a g(x)의 부등식에서 두 진수 f(x),g(x)가 모두 양수임을 먼저 확인하고, 밑 구간에 따라 비교 방향을 정한다. 변형 뒤에도 해는 처음 정한 정의역과 교차한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 도식에는 축·방향·조건·텍스트 대체 설명을 둔다. 키보드만으로 조작할 수 있고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-09-u1",
+      "title": "로그식의 정의역",
+      "targetSkills": [
+        "m5-09-skill-1"
+      ],
+      "explanation": "각 로그의 진수는 양수여야 하며 밑은 양수·1 제외다.",
+      "activity": "식마다 진수 조건을 카드로 분리해 수직선에 표시한다.",
+      "check": "log₂(x−3)은 x>3에서만 정의된다."
+    },
+    {
+      "id": "m5-09-u2",
+      "title": "같은 밑 로그의 방정식",
+      "targetSkills": [
+        "m5-09-skill-1"
+      ],
+      "explanation": "허용된 같은 밑에서 두 로그값이 같으면 양의 진수들이 같다.",
+      "activity": "로그 등식과 진수 등식 사이를 양방향으로 연결한다.",
+      "check": "log₃(x+1)=log₃4이면 x+1=4이며 x=3은 x>−1을 만족한다."
+    },
+    {
+      "id": "m5-09-u3",
+      "title": "로그방정식의 해 검산",
+      "targetSkills": [
+        "m5-09-skill-1"
+      ],
+      "explanation": "로그를 없애기 전 정의역을 기록하고, 후보 해를 원래 식에 확인한다.",
+      "activity": "방정식 풀이 뒤 후보를 조건 목록과 대조한다.",
+      "check": "log₂(x−1)=2이면 x=5이고 x>1이므로 유효하다."
+    },
+    {
+      "id": "m5-09-u4",
+      "title": "밑이 1보다 큰 로그 부등식",
+      "targetSkills": [
+        "m5-09-skill-2"
+      ],
+      "explanation": "a>1일 때 로그함수는 증가하므로 진수 비교 방향을 보존한다.",
+      "activity": "그래프와 표에서 x 증가에 따른 y 증가를 비교한다.",
+      "check": "log₂(x+1)<log₂5이면 x+1<5와 x>−1을 함께 적용해 −1<x<4다."
+    },
+    {
+      "id": "m5-09-u5",
+      "title": "밑이 0과 1 사이인 로그 부등식",
+      "targetSkills": [
+        "m5-09-skill-2"
+      ],
+      "explanation": "0<a<1이면 로그함수는 감소하므로 진수 비교 방향이 뒤집힌다.",
+      "activity": "감소 그래프에서 같은 높이의 입력 순서가 바뀌는 것을 확인한다.",
+      "check": "log_(1/2)(x+1)<log_(1/2)4이면 x+1>4, 따라서 x>3이다."
+    },
+    {
+      "id": "m5-09-u6",
+      "title": "해집합과 정의역의 교집합",
+      "targetSkills": [
+        "m5-09-skill-2"
+      ],
+      "explanation": "변형으로 얻은 부등식의 해를 원래 로그식의 정의역과 교차한다.",
+      "activity": "두 조건을 각각 표시하고 공통 구간만 남긴다.",
+      "check": "log₂(x−1)≤log₂3이면 x−1≤3과 x>1이므로 1<x≤4다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-09-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "진수식의 계수와 상수를 제한된 정수 범위에서 조절한다. 각 로그의 정의역 구간을 표시하고, 밑을 a>1 또는 0<a<1로 선택해 그래프 단조성과 해집합 교집합을 텍스트로 보여준다. 입력이 정의역 밖이면 풀이 대신 조건 위반을 안내한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "진수 조건을 세운 뒤 한 로그 방정식을 풀고 후보 해를 검산한다.",
+      "a>1인 같은 밑 로그 부등식에서 정의역과 증가성을 함께 사용한다.",
+      "0<a<1인 로그 부등식에서 감소성에 따른 방향 반전과 정의역을 적용한다."
+    ],
+    "draftPracticeGoals": [
+      "각 로그의 진수 양수 조건을 구해 정의역을 적는다.",
+      "같은 밑 로그 방정식을 진수의 방정식으로 바꾼다.",
+      "변형으로 얻은 후보 해를 원래 로그식에 대입해 검산한다.",
+      "a>1 로그 부등식의 진수 비교와 정의역을 결합한다.",
+      "0<a<1 로그 부등식에서 비교 방향을 뒤집는다.",
+      "진수 조건과 부등식 해의 교집합을 구간으로 나타낸다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 문제의 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "모든 진수 양수 조건을 풀이 시작 전에 기록했는가?",
+    "밑 구간에 맞는 증가·감소 방향을 적용했는가?",
+    "후보 해를 원래 정의역에서 검산했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "로그방정식에서 정의역을 확인하지 않고 얻은 모든 대수적 해를 답으로 둠",
+    "로그 부등식에서 밑이 0과 1 사이일 때도 방향을 보존함",
+    "로그의 정의역을 전체 실수로 착각함",
+    "변형한 부등식 해와 원래 진수 조건의 교집합을 빠뜨림"
+  ],
+  "workedExample": {
+    "prompt": "log₂(x−1)<log₂3을 풀어라.",
+    "solution": "로그가 정의되려면 x−1>0, 즉 x>1이다. 밑 2는 1보다 커서 로그함수가 증가하므로 x−1<3이다. 따라서 x<4이고 정의역과 교차한 해는 1<x<4이다.",
+    "verification": "후보 구간의 모든 x에서 x−1>0이며, 증가성에 따라 원래 부등식이 성립한다."
+  },
+  "designReview": {
+    "status": "draft-self-check",
+    "reviewerRole": "Curriculum Architect author self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/rights review and item draft",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

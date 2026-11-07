@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-09",
+  "unitTitle": "로그방정식과 부등식",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-09-family-1",
+      "status": "draft",
+      "title": "진수 조건과 후보 해의 원식 검산",
+      "reasoningStructure": "각 진수의 양수 조건으로 정의역을 세우고 같은 밑 로그방정식을 진수의 방정식으로 바꾼 뒤 후보를 검산한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-09-skill-1",
+      "distinctFrom": "두 로그의 부등호 방향 비교 및 단조성 선택과는 주된 추론이 다르다. 숫자만 바꾼 문항은 같은 가족이다.",
+      "items": [
+        {
+          "id": "m509-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "실수 범위에서 log₂(x−1)=3을 만족하는 x는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "9",
+          "rationale": "먼저 x−1>0이므로 x>1이다. 같은 밑의 로그값이 같으므로 x−1=2³=8, 따라서 x=9이다. 원래 식에서 log₂8=3이고 x>1을 만족한다.",
+          "skillLabel": "m5-09-skill-1",
+          "misconceptionHypothesis": "정의역 조건을 빠뜨리거나 로그의 진수를 지수로 잘못 옮기는 혼동을 진단하기 위한 설계 가설이며 실제 발생 빈도를 뜻하지 않는다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct substitution/domain check",
+            "result": "9를 원식에 대입해 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "9"
+            },
+            {
+              "id": "B",
+              "label": "7"
+            },
+            {
+              "id": "C",
+              "label": "8"
+            }
+          ]
+        },
+        {
+          "id": "m509-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "실수 범위에서 log₃(x+1)=2를 만족하는 x는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "8",
+          "rationale": "진수 조건은 x+1>0, 즉 x>−1이다. 방정식은 x+1=3²=9이므로 x=8이다. 8은 정의역을 만족하고 log₃9=2이다.",
+          "skillLabel": "m5-09-skill-1",
+          "misconceptionHypothesis": "진수 조건과 후보 해 검산을 분리해서 잊는 가능성을 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent direct substitution/domain check",
+            "result": "8을 원식에 대입해 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "10"
+            },
+            {
+              "id": "B",
+              "label": "8"
+            },
+            {
+              "id": "C",
+              "label": "2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-09-family-2",
+      "status": "draft",
+      "title": "증가하는 로그 부등식과 정의역의 교집합",
+      "reasoningStructure": "밑 a>1인 로그의 증가성을 사용해 진수 비교 방향을 보존하고 정의역과 교차한다.",
+      "thinkingType": "해집합 분석",
+      "skillId": "m5-09-skill-2",
+      "distinctFrom": "밑이 0과 1 사이일 때의 감소성 및 방향 반전과 구별한다.",
+      "items": [
+        {
+          "id": "m509-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log₂(x−1)>log₂4의 해는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "x>5",
+          "rationale": "정의역은 x−1>0, 즉 x>1이다. 밑 2>1이므로 함수가 증가해 x−1>4, 즉 x>5이다. 이 해는 정의역도 만족한다.",
+          "skillLabel": "m5-09-skill-2",
+          "misconceptionHypothesis": "부등식 방향을 무조건 뒤집거나 정의역을 해집합과 교차하지 않는 오류를 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent interval/domain check",
+            "result": "단조성과 x>1을 함께 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>1"
+            },
+            {
+              "id": "B",
+              "label": "1<x<5"
+            },
+            {
+              "id": "C",
+              "label": "x>5"
+            }
+          ]
+        },
+        {
+          "id": "m509-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "log₃(2x+1)≤log₃7의 해집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "−1/2<x≤3",
+          "rationale": "정의역에서 2x+1>0이므로 x>−1/2이다. 밑 3>1이므로 2x+1≤7, 즉 x≤3이다. 두 조건의 교집합은 −1/2<x≤3이다.",
+          "skillLabel": "m5-09-skill-2",
+          "misconceptionHypothesis": "대수적으로 얻은 경계만 쓰고 진수 정의역의 열린 경계를 놓치는 가능성을 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent interval/domain check",
+            "result": "x>−1/2 및 x≤3의 교집합으로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "−1/2<x≤3"
+            },
+            {
+              "id": "B",
+              "label": "−1/2≤x≤3"
+            },
+            {
+              "id": "C",
+              "label": "x≤3"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-09-family-3",
+      "status": "draft",
+      "title": "감소하는 로그 부등식의 방향 반전",
+      "reasoningStructure": "0<a<1인 로그의 감소성을 적용해 진수 비교 방향을 반대로 바꾸고 정의역과 교차한다.",
+      "thinkingType": "해집합 분석",
+      "skillId": "m5-09-skill-2",
+      "distinctFrom": "증가 밑의 방향 보존 원형과 단조성 선택이 다르다.",
+      "items": [
+        {
+          "id": "m509-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "log_(1/2)(x)>log_(1/2)4의 해집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "0<x<4",
+          "rationale": "정의역은 x>0이다. 밑 1/2은 0과 1 사이여서 로그함수가 감소한다. 따라서 x>4가 아니라 x<4이고, 해집합은 0<x<4이다.",
+          "skillLabel": "m5-09-skill-2",
+          "misconceptionHypothesis": "감소함수의 비교 방향을 그대로 유지하는 오류를 진단하기 위한 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent interval/domain check",
+            "result": "0<x<4에서 직접 대입 및 단조성으로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>4"
+            },
+            {
+              "id": "B",
+              "label": "0<x<4"
+            },
+            {
+              "id": "C",
+              "label": "0<x≤4"
+            }
+          ]
+        },
+        {
+          "id": "m509-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "log_(1/3)(2x−1)≤log_(1/3)2의 해집합은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "x≥3/2",
+          "rationale": "정의역은 2x−1>0, 즉 x>1/2이다. 밑 1/3인 로그는 감소하므로 2x−1≥2, 따라서 x≥3/2이다. 이 구간은 정의역에 포함된다.",
+          "skillLabel": "m5-09-skill-2",
+          "misconceptionHypothesis": "감소성 반전과 열린 정의역 경계를 혼동할 가능성을 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "author derivation and independent interval/domain check",
+            "result": "x>1/2 및 x≥3/2를 교차해 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "x>1/2"
+            },
+            {
+              "id": "B",
+              "label": "1/2<x≤3/2"
+            },
+            {
+              "id": "C",
+              "label": "x≥3/2"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

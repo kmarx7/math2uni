@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-13",
+  "unitTitle": "삼각함수의 기본 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-13-family-1",
+      "status": "draft",
+      "title": "단위원 제곱 관계로 값의 제곱/절댓값 구하기",
+      "reasoningStructure": "sin²θ+cos²θ=1을 사용하고 제곱 관계만으로는 부호가 정해지지 않는 점을 유지한다.",
+      "thinkingType": "관계 적용",
+      "skillId": "m5-13-skill-1",
+      "distinctFrom": "부호 복원이나 탄젠트 비율 변형은 주된 추론이 다르다.",
+      "items": [
+        {
+          "id": "m513-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "θ가 제1사분면이고 sinθ=3/5일 때 cos²θ는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "16/25",
+          "rationale": "sin²θ+cos²θ=1이므로 cos²θ=1−(3/5)²=1−9/25=16/25이다. 제곱값만 구하므로 사분면에 따른 cosθ의 부호를 결정하지 않는다.",
+          "skillLabel": "m5-13-skill-1",
+          "misconceptionHypothesis": "제곱 관계에서 제곱근을 구하거나 부호를 임의로 정하는지 살피기 위한 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "identity derivation and quadrant sign check",
+            "result": "cos²=16/25, 제1사분면 양수이므로 4/5; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "16/25"
+            },
+            {
+              "id": "B",
+              "label": "9/25"
+            },
+            {
+              "id": "C",
+              "label": "−16/25"
+            }
+          ]
+        },
+        {
+          "id": "m513-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "θ가 제2사분면이고 cosθ=−5/13일 때 |sinθ|는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "12/13",
+          "rationale": "sin²θ=1−cos²θ=1−25/169=144/169이므로 |sinθ|=12/13이다. 절댓값을 물었으므로 사분면 부호를 적용해 부호를 붙이지 않는다.",
+          "skillLabel": "m5-13-skill-1",
+          "misconceptionHypothesis": "제곱 관계로 얻은 제곱과 절댓값을 구분하지 않거나 불필요하게 부호를 붙이는 오류 가능성을 본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "identity derivation and exact square-root simplification",
+            "result": "√(144/169)=12/13; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5/13"
+            },
+            {
+              "id": "B",
+              "label": "−12/13"
+            },
+            {
+              "id": "C",
+              "label": "12/13"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-13-family-2",
+      "status": "draft",
+      "title": "사분면 조건으로 제곱근 부호 복원",
+      "reasoningStructure": "제곱 관계로 크기를 구한 다음 사분면에 따라 sin 또는 cos의 부호를 선택한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-13-skill-1",
+      "distinctFrom": "절댓값만 구하는 원형이나 tan=sin/cos를 변형하는 원형과 출력 및 조건 적용이 다르다.",
+      "items": [
+        {
+          "id": "m513-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "θ가 제3사분면이고 sinθ=−3/5일 때 cosθ는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "−4/5",
+          "rationale": "cos²θ=1−sin²θ=16/25이므로 |cosθ|=4/5이다. 제3사분면에서 cosθ<0이므로 cosθ=−4/5이다.",
+          "skillLabel": "m5-13-skill-1",
+          "misconceptionHypothesis": "제곱근에서 음의 부호를 선택해야 하는 사분면 조건을 놓치는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "identity derivation and quadrant sign check",
+            "result": "cos²=16/25, 제3사분면 음수이므로 −4/5; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4/5"
+            },
+            {
+              "id": "B",
+              "label": "−4/5"
+            },
+            {
+              "id": "C",
+              "label": "−16/25"
+            }
+          ]
+        },
+        {
+          "id": "m513-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "θ가 제4사분면이고 cos²θ=1/9일 때 sinθ는?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "−2√2/3",
+          "rationale": "sin²θ=1−cos²θ=8/9이므로 |sinθ|=2√2/3이다. 제4사분면에서 sinθ<0이므로 sinθ=−2√2/3이다.",
+          "skillLabel": "m5-13-skill-1",
+          "misconceptionHypothesis": "제곱 관계와 사분면 부호를 분리해 적용하지 못하는 오류를 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "identity derivation and exact radical simplification",
+            "result": "sin²=8/9, 제4사분면 음수 근 −2√2/3; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "B",
+              "label": "−2√2/3"
+            },
+            {
+              "id": "A",
+              "label": "2√2/3"
+            },
+            {
+              "id": "C",
+              "label": "−8/9"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-13-family-3",
+      "status": "draft",
+      "title": "탄젠트의 사인·코사인 비와 조건",
+      "reasoningStructure": "cosθ≠0에서 tanθ=sinθ/cosθ를 적용하고 필요하면 제곱 관계 및 사분면 부호를 함께 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-13-skill-2",
+      "distinctFrom": "단위원 제곱 관계에서 함수값을 복원하는 원형과 다르게 비율 정의 및 분모 조건이 핵심이다.",
+      "items": [
+        {
+          "id": "m513-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "sinθ=3/5, cosθ=4/5일 때 tanθ는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "3/4",
+          "rationale": "cosθ≠0이므로 tanθ=sinθ/cosθ=(3/5)/(4/5)=3/4이다.",
+          "skillLabel": "m5-13-skill-2",
+          "misconceptionHypothesis": "sin과 cos를 나누는 순서를 뒤바꾸는 가능성을 확인하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "direct ratio calculation with denominator check",
+            "result": "(3/5)/(4/5)=3/4 and cos≠0; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4/3"
+            },
+            {
+              "id": "B",
+              "label": "1/4"
+            },
+            {
+              "id": "C",
+              "label": "3/4"
+            }
+          ]
+        },
+        {
+          "id": "m513-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "θ가 제4사분면이고 tanθ=−3/4일 때 cosθ는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "4/5",
+          "rationale": "tanθ는 sin/cos의 비다. 3-4-5 관계로 |cosθ|=4/5이고 제4사분면에서 cosθ>0이므로 cosθ=4/5이다. 이 값은 cosθ≠0 조건도 만족한다.",
+          "skillLabel": "m5-13-skill-2",
+          "misconceptionHypothesis": "탄젠트 비의 부호만으로 사인·코사인의 부호를 각각 정하거나 분모 조건을 빠뜨릴 수 있는지 살펴본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "tan ratio, Pythagorean identity, and quadrant sign check",
+            "result": "sin:cos 비가 −3:4, 제4사분면에서 cos 양수, 단위원으로 cos=4/5; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4/5"
+            },
+            {
+              "id": "B",
+              "label": "−4/5"
+            },
+            {
+              "id": "C",
+              "label": "3/5"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

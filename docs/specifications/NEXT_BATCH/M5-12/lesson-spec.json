@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-12",
+  "levelId": "LEVEL 5",
+  "title": "삼각함수의 정의",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "단위원의 좌표",
+      "삼각함수의 부호"
+    ],
+    "prerequisiteUnits": [
+      "M5-11",
+      "M2-17",
+      "M1-13"
+    ],
+    "visualization": "단위원과 좌표"
+  },
+  "objectives": [
+    "각 θ의 단위원 끝점 좌표를 (cosθ,sinθ)로 읽고 사인과 코사인의 부호를 사분면에 따라 설명한다.",
+    "탄젠트를 sinθ/cosθ로 정의하고 cosθ=0인 각에서 정의되지 않음을 확인한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-12-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-11 선수 기능 진단: 일반각과 라디안 단위 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-12-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-17 선수 기능 진단: 좌표평면에서 x·y 부호와 사분면 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-12-readiness-3",
+      "status": "diagnostic-only-not-registered",
+      "description": "M1-13 선수 기능 진단: 직각삼각형의 변 이름과 비의 의미 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-12-skill-1",
+    "m5-12-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "반지름 1의 원 → 회전각과 끝점 → 좌표와 cos/sin → 사분면별 부호 → tan=sin/cos → 정의 불가 각 확인",
+    "principleDerivation": "반지름 1인 단위원에서 양의 x축을 시작변으로 θ만큼 회전한 끝점 P의 좌표를 (x,y)라 하면 cosθ=x, sinθ=y다. 단위원은 x²+y²=1을 만족한다. 탄젠트는 tanθ=y/x=sinθ/cosθ로 정의되므로 cosθ=0인 끝점에서는 정의되지 않는다. 좌표의 x,y 부호는 사분면에 따라 달라지고, 경계축에서는 해당 좌표가 0일 수 있으므로 사분면 규칙과 축 위 각을 구별한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 도식에는 축·방향·조건·텍스트 대체 설명을 둔다. 키보드만으로 조작할 수 있고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-12-u1",
+      "title": "단위원과 끝점",
+      "targetSkills": [
+        "m5-12-skill-1"
+      ],
+      "explanation": "단위원은 원점 중심·반지름 1인 원이며 각이 끝점 하나를 정한다.",
+      "activity": "회전 각을 바꾸며 끝점 P를 단위원 위에서 움직인다.",
+      "check": "θ=0일 때 끝점은 (1,0)이다."
+    },
+    {
+      "id": "m5-12-u2",
+      "title": "코사인과 x좌표",
+      "targetSkills": [
+        "m5-12-skill-1"
+      ],
+      "explanation": "단위원 끝점의 x좌표가 cosθ다.",
+      "activity": "각을 고정하고 x좌표 값을 읽어 기록한다.",
+      "check": "끝점이 (0,1)이면 cosθ=0이다."
+    },
+    {
+      "id": "m5-12-u3",
+      "title": "사인과 y좌표",
+      "targetSkills": [
+        "m5-12-skill-1"
+      ],
+      "explanation": "단위원 끝점의 y좌표가 sinθ다.",
+      "activity": "각을 고정하고 y좌표 값을 읽어 기록한다.",
+      "check": "끝점이 (−1,0)이면 sinθ=0이다."
+    },
+    {
+      "id": "m5-12-u4",
+      "title": "사분면과 부호",
+      "targetSkills": [
+        "m5-12-skill-2"
+      ],
+      "explanation": "끝점의 x,y 부호가 각각 cosθ,sinθ 부호를 결정한다.",
+      "activity": "네 사분면과 축 위를 선택해 두 값의 부호 표를 채운다.",
+      "check": "제2사분면에서는 cosθ<0, sinθ>0이다."
+    },
+    {
+      "id": "m5-12-u5",
+      "title": "탄젠트의 정의",
+      "targetSkills": [
+        "m5-12-skill-2"
+      ],
+      "explanation": "cosθ≠0일 때 tanθ=sinθ/cosθ다.",
+      "activity": "좌표 비 y/x를 계산해 탄젠트가 어떻게 나오는지 본다.",
+      "check": "끝점이 (√2/2,√2/2)이면 tanθ=1이다."
+    },
+    {
+      "id": "m5-12-u6",
+      "title": "정의되지 않는 각과 부호 확인",
+      "targetSkills": [
+        "m5-12-skill-2"
+      ],
+      "explanation": "cosθ=0이면 탄젠트는 정의되지 않으며, 축 위의 0 좌표를 따로 살핀다.",
+      "activity": "수직축 끝점에서 분모 0 경고를 확인하고 좌우 부호 변화를 비교한다.",
+      "check": "θ=π/2에서 sinθ=1, cosθ=0이므로 tanθ는 정의되지 않는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-12-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "회전 각을 조절해 단위원의 끝점을 표시하고 x,y 좌표를 각각 cosθ,sinθ로 읽는다. 사분면과 축 경계를 문자로 함께 표시한다. 탄젠트 모드에서는 분자·분모를 표기하고 cosθ=0일 때 나눗셈을 수행하지 않고 정의되지 않는다는 안내를 제공한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "단위원의 지정된 각 또는 끝점에서 sinθ, cosθ를 좌표로 읽는다.",
+      "사분면 또는 축 조건을 이용해 사인·코사인의 부호나 값을 추론한다.",
+      "sin/cos 비를 계산하고 cosθ=0 여부에 따라 tan 값을 판단한다."
+    ],
+    "draftPracticeGoals": [
+      "단위원과 양의 x축 기준의 회전각을 연결한다.",
+      "끝점 좌표에서 cosθ와 sinθ를 순서대로 읽는다.",
+      "사분면마다 x,y 좌표와 삼각함수 부호를 정한다.",
+      "축 위 각에서 좌표가 0인 경우를 확인한다.",
+      "cosθ≠0 조건에서 tanθ=sinθ/cosθ를 적용한다.",
+      "cosθ=0인 각의 탄젠트가 정의되지 않음을 설명한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 문제의 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "끝점 좌표의 순서 (cosθ,sinθ)를 정확히 읽었는가?",
+    "사분면과 축 경계에서 부호·영을 구분했는가?",
+    "탄젠트 사용 전 cosθ≠0을 확인했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "단위원 좌표를 (sinθ,cosθ)로 뒤바꿈",
+    "각이 사분면에 있을 때 좌표 부호가 반지름 길이와 같다고 생각함",
+    "축 위에서 0인 좌표를 놓침",
+    "tanθ를 모든 θ에서 정의되는 함수로 생각함",
+    "tanθ=sinθ/cosθ에서 분모 0을 무시함"
+  ],
+  "workedExample": {
+    "prompt": "각 θ의 단위원 끝점이 제2사분면에 있고 cosθ=−3/5일 때 sinθ의 부호와 가능한 값을 구하라.",
+    "solution": "x²+y²=1이므로 y²=1−9/25=16/25다. 제2사분면에서는 y>0이므로 y=4/5다. 따라서 sinθ=4/5이며 tanθ=(4/5)/(−3/5)=−4/3이다. 분모 cosθ는 0이 아니다.",
+    "verification": "제2사분면의 부호 표와 단위원 관계를 모두 사용했고, 탄젠트 계산에서 cosθ≠0을 확인했다."
+  },
+  "designReview": {
+    "status": "draft-self-check",
+    "reviewerRole": "Curriculum Architect author self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/rights review and item draft",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

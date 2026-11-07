@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-11",
+  "levelId": "LEVEL 5",
+  "title": "일반각과 호도법",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "회전과 일반각",
+      "라디안과 부채꼴"
+    ],
+    "prerequisiteUnits": [
+      "M2-18",
+      "M0-10"
+    ],
+    "visualization": "단위원 회전"
+  },
+  "objectives": [
+    "회전을 방향이 있는 일반각으로 나타내고 같은 끝변을 갖는 동경의 각을 360도 주기와 연결한다.",
+    "라디안을 반지름에 대한 호의 길이 비로 정의하고 호의 길이·부채꼴 넓이 관계를 적용한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-11-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-18 선수 기능 진단: 원의 둘레·반지름·원주 관계 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-11-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M0-10 선수 기능 진단: 각의 기본 단위와 도 단위 읽기 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-11-skill-1",
+    "m5-11-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "회전과 기준변 → 방향 있는 각·동경 → 360° 주기 → 라디안 정의 → 호의 길이 → 부채꼴 넓이와 단위 점검",
+    "principleDerivation": "도 단위에서 한 바퀴는 360°이고, 반지름 r인 원의 둘레는 2πr이다. 중심각의 크기를 라디안 θ=s/r로 정의하면 한 바퀴의 라디안 측정은 2π다. 따라서 π rad=180°이고, θ가 라디안이며 0≤θ≤2π인 부채꼴에서 호의 길이 s=rθ, 넓이 A=(1/2)r²θ다. 회전 방향을 나타내는 부호 있는 각과 기하적 호의 길이·넓이는 서로 다르며 후자는 비음수 크기로 해석한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 도식에는 축·방향·조건·텍스트 대체 설명을 둔다. 키보드만으로 조작할 수 있고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-11-u1",
+      "title": "기준변과 회전",
+      "targetSkills": [
+        "m5-11-skill-1"
+      ],
+      "explanation": "각은 시작변을 고정하고 끝변이 회전한 양으로 볼 수 있다.",
+      "activity": "회전판에서 기준선을 고정하고 방향키로 끝변을 돌린다.",
+      "check": "반시계 방향 90°는 시계 방향 −270°와 같은 끝변을 갖는다."
+    },
+    {
+      "id": "m5-11-u2",
+      "title": "양·음 일반각",
+      "targetSkills": [
+        "m5-11-skill-1"
+      ],
+      "explanation": "반시계 방향 회전은 양수, 시계 방향 회전은 음수로 나타낸다.",
+      "activity": "방향을 바꾸어도 끝변이 같은 회전량을 비교한다.",
+      "check": "−45°는 기준선에서 시계 방향으로 45° 돈 각이다."
+    },
+    {
+      "id": "m5-11-u3",
+      "title": "동경각과 주기",
+      "targetSkills": [
+        "m5-11-skill-1"
+      ],
+      "explanation": "한 바퀴를 더하거나 빼면 끝변은 같고 각의 값은 달라진다.",
+      "activity": "회전 횟수와 남은 각을 분리해 표시한다.",
+      "check": "θ와 θ+360°k(k는 정수)는 같은 끝변을 가리킨다."
+    },
+    {
+      "id": "m5-11-u4",
+      "title": "도와 라디안",
+      "targetSkills": [
+        "m5-11-skill-2"
+      ],
+      "explanation": "라디안은 호의 길이를 반지름으로 나눈 비 s/r이다.",
+      "activity": "같은 반지름에서 호 길이와 각의 비를 비교한다.",
+      "check": "반원의 호는 πr이므로 중심각은 π rad=180°다."
+    },
+    {
+      "id": "m5-11-u5",
+      "title": "호의 길이",
+      "targetSkills": [
+        "m5-11-skill-2"
+      ],
+      "explanation": "θ가 라디안일 때 호 길이는 s=rθ이며 길이 단위는 r을 따른다.",
+      "activity": "r과 θ를 바꾸어 호 길이의 비례를 살핀다.",
+      "check": "r=3, θ=π/2 rad이면 s=3π/2다."
+    },
+    {
+      "id": "m5-11-u6",
+      "title": "부채꼴 넓이와 표현 점검",
+      "targetSkills": [
+        "m5-11-skill-2"
+      ],
+      "explanation": "θ가 라디안일 때 부채꼴 넓이는 A=(1/2)r²θ다.",
+      "activity": "도 단위 각과 라디안 각을 변환한 뒤 계산을 비교한다.",
+      "check": "r=2, θ=π/3 rad이면 A=2π/3이며 넓이 단위는 제곱 단위다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-11-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "키보드 회전 버튼으로 시작변을 기준으로 시계·반시계 방향을 움직이고 회전 횟수, 끝변, 동경각을 따로 표시한다. 단위를 도 또는 라디안으로 바꾸면 선택된 각과 반지름에서 호 길이·부채꼴 넓이의 정확한 π 표현을 보여주며, 부호 있는 각과 비음수 길이를 구별한다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "방향·회전 횟수를 분석해 일반각 또는 같은 끝변의 동경각을 찾는다.",
+      "도와 라디안을 변환하고 각의 주기·단위를 확인한다.",
+      "반지름과 라디안 각으로 호의 길이나 부채꼴 넓이를 계산한다."
+    ],
+    "draftPracticeGoals": [
+      "시작변과 회전 방향을 정해 각을 양수·음수로 나타낸다.",
+      "360°의 정수배를 이용해 같은 끝변의 각을 찾는다.",
+      "π rad=180°를 이용해 도와 라디안을 변환한다.",
+      "라디안 정의 θ=s/r를 말과 식으로 설명한다.",
+      "s=rθ를 사용해 호 길이를 구하고 단위를 붙인다.",
+      "A=(1/2)r²θ를 적용하되 각이 라디안인지 확인한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 문제의 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "회전 방향과 같은 끝변의 주기를 구분했는가?",
+    "각 변환에서 180°=π rad 관계를 사용했는가?",
+    "호·넓이 공식의 라디안 조건과 단위를 확인했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "각은 0°부터 360° 사이 값만 가질 수 있다고 생각함",
+    "시계 방향 각의 부호를 양수로 둠",
+    "동경각을 같다고 해서 수치도 같다고 생각함",
+    "라디안을 도의 다른 표기라고만 보고 s/r 정의를 놓침",
+    "s=rθ 또는 A=(1/2)r²θ에 도 단위 각을 그대로 대입함"
+  ],
+  "workedExample": {
+    "prompt": "반지름 4인 원에서 중심각 60°인 작은 부채꼴의 호의 길이와 넓이를 구하라.",
+    "solution": "60°=(60/180)π=π/3 rad다. 따라서 s=4·π/3=4π/3이고 A=(1/2)·4²·π/3=8π/3이다. 각은 양의 방향으로 잰 부채꼴의 중심각 크기다.",
+    "verification": "호 길이는 길이 단위, 넓이는 제곱 단위이며, 도 대신 라디안으로 바꾼 뒤 공식을 적용했다."
+  },
+  "designReview": {
+    "status": "draft-self-check",
+    "reviewerRole": "Curriculum Architect author self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/rights review and item draft",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

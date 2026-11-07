@@ -1,0 +1,196 @@
+{
+  "unitId": "M5-09",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• 로그방정식과 부등식을 풀기 전에 각 로그의 진수 양수 조건을 찾아 정의역을 정한다.\n• 밑의 증가·감소에 따라 로그 부등식의 방향을 결정하고 원래 식에서 해를 검산한다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 확인은 현재 준비 상태를 살펴보는 활동입니다. 결과는 진단 안내에만 사용하며 선수 단원의 숙달도나 완료 점수는 변경하지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "a>0, a≠1이고 x,y>0일 때 log_a x=log_a y는 로그함수의 일대일성으로 x=y와 동치다. log_a는 a>1이면 증가, 0<a<1이면 감소한다. 따라서 log_a f(x)와 log_a g(x)의 부등식에서 두 진수 f(x),g(x)가 모두 양수임을 먼저 확인하고, 밑 구간에 따라 비교 방향을 정한다. 변형 뒤에도 해는 처음 정한 정의역과 교차한다.",
+      "sections": [
+        {
+          "id": "m5-09-u1",
+          "title": "로그식의 정의역",
+          "body": "각 로그의 진수는 양수여야 하며 밑은 양수·1 제외다.",
+          "activity": "식마다 진수 조건을 카드로 분리해 수직선에 표시한다.",
+          "check": "log₂(x−3)은 x>3에서만 정의된다."
+        },
+        {
+          "id": "m5-09-u2",
+          "title": "같은 밑 로그의 방정식",
+          "body": "허용된 같은 밑에서 두 로그값이 같으면 양의 진수들이 같다.",
+          "activity": "로그 등식과 진수 등식 사이를 양방향으로 연결한다.",
+          "check": "log₃(x+1)=log₃4이면 x+1=4이며 x=3은 x>−1을 만족한다."
+        },
+        {
+          "id": "m5-09-u3",
+          "title": "로그방정식의 해 검산",
+          "body": "로그를 없애기 전 정의역을 기록하고, 후보 해를 원래 식에 확인한다.",
+          "activity": "방정식 풀이 뒤 후보를 조건 목록과 대조한다.",
+          "check": "log₂(x−1)=2이면 x=5이고 x>1이므로 유효하다."
+        },
+        {
+          "id": "m5-09-u4",
+          "title": "밑이 1보다 큰 로그 부등식",
+          "body": "a>1일 때 로그함수는 증가하므로 진수 비교 방향을 보존한다.",
+          "activity": "그래프와 표에서 x 증가에 따른 y 증가를 비교한다.",
+          "check": "log₂(x+1)<log₂5이면 x+1<5와 x>−1을 함께 적용해 −1<x<4다."
+        },
+        {
+          "id": "m5-09-u5",
+          "title": "밑이 0과 1 사이인 로그 부등식",
+          "body": "0<a<1이면 로그함수는 감소하므로 진수 비교 방향이 뒤집힌다.",
+          "activity": "감소 그래프에서 같은 높이의 입력 순서가 바뀌는 것을 확인한다.",
+          "check": "log_(1/2)(x+1)<log_(1/2)4이면 x+1>4, 따라서 x>3이다."
+        },
+        {
+          "id": "m5-09-u6",
+          "title": "해집합과 정의역의 교집합",
+          "body": "변형으로 얻은 부등식의 해를 원래 로그식의 정의역과 교차한다.",
+          "activity": "두 조건을 각각 표시하고 공통 구간만 남긴다.",
+          "check": "log₂(x−1)≤log₂3이면 x−1≤3과 x>1이므로 1<x≤4다."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "number-line"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "log₂(x−1)<log₂3을 풀어라.",
+        "로그가 정의되려면 x−1>0, 즉 x>1이다. 밑 2는 1보다 커서 로그함수가 증가하므로 x−1<3이다. 따라서 x<4이고 정의역과 교차한 해는 1<x<4이다.",
+        "후보 구간의 모든 x에서 x−1>0이며, 증가성에 따라 원래 부등식이 성립한다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "먼저 풀이 이유를 말로 정리한 뒤 초안 연습 문항을 풉니다. 문항의 정답과 해설은 제출 전 전달하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답이면 조건·표현·계산 단계를 나누어 다시 확인하고, 관련 소단원으로 돌아가도록 안내합니다. 아래 오개념은 검증된 빈도 주장이 아닌 점검 가설입니다.\n• 로그방정식에서 정의역을 확인하지 않고 얻은 모든 대수적 해를 답으로 둠\n• 로그 부등식에서 밑이 0과 1 사이일 때도 방향을 보존함\n• 로그의 정의역을 전체 실수로 착각함\n• 변형한 부등식 해와 원래 진수 조건의 교집합을 빠뜨림"
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "정답 여부와 관계없이 핵심 조건을 다시 떠올리고, 다음 학습 전 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ]
+}

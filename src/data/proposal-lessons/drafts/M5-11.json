@@ -1,0 +1,196 @@
+{
+  "unitId": "M5-11",
+  "version": "0.1.0-draft",
+  "blocks": [
+    {
+      "id": "goals",
+      "title": "학습 목표",
+      "type": "ConceptBlock",
+      "body": "• 회전을 방향이 있는 일반각으로 나타내고 같은 끝변을 갖는 동경의 각을 360도 주기와 연결한다.\n• 라디안을 반지름에 대한 호의 길이 비로 정의하고 호의 길이·부채꼴 넓이 관계를 적용한다."
+    },
+    {
+      "id": "diagnostic",
+      "title": "선수학습 확인",
+      "type": "ExplanationBlock",
+      "body": "이 확인은 현재 준비 상태를 살펴보는 활동입니다. 결과는 진단 안내에만 사용하며 선수 단원의 숙달도나 완료 점수는 변경하지 않습니다.",
+      "readinessCheck": true
+    },
+    {
+      "id": "concept",
+      "title": "개념 설명",
+      "type": "ExplanationBlock",
+      "body": "도 단위에서 한 바퀴는 360°이고, 반지름 r인 원의 둘레는 2πr이다. 중심각의 크기를 라디안 θ=s/r로 정의하면 한 바퀴의 라디안 측정은 2π다. 따라서 π rad=180°이고, θ가 라디안이며 0≤θ≤2π인 부채꼴에서 호의 길이 s=rθ, 넓이 A=(1/2)r²θ다. 회전 방향을 나타내는 부호 있는 각과 기하적 호의 길이·넓이는 서로 다르며 후자는 비음수 크기로 해석한다.",
+      "sections": [
+        {
+          "id": "m5-11-u1",
+          "title": "기준변과 회전",
+          "body": "각은 시작변을 고정하고 끝변이 회전한 양으로 볼 수 있다.",
+          "activity": "회전판에서 기준선을 고정하고 방향키로 끝변을 돌린다.",
+          "check": "반시계 방향 90°는 시계 방향 −270°와 같은 끝변을 갖는다."
+        },
+        {
+          "id": "m5-11-u2",
+          "title": "양·음 일반각",
+          "body": "반시계 방향 회전은 양수, 시계 방향 회전은 음수로 나타낸다.",
+          "activity": "방향을 바꾸어도 끝변이 같은 회전량을 비교한다.",
+          "check": "−45°는 기준선에서 시계 방향으로 45° 돈 각이다."
+        },
+        {
+          "id": "m5-11-u3",
+          "title": "동경각과 주기",
+          "body": "한 바퀴를 더하거나 빼면 끝변은 같고 각의 값은 달라진다.",
+          "activity": "회전 횟수와 남은 각을 분리해 표시한다.",
+          "check": "θ와 θ+360°k(k는 정수)는 같은 끝변을 가리킨다."
+        },
+        {
+          "id": "m5-11-u4",
+          "title": "도와 라디안",
+          "body": "라디안은 호의 길이를 반지름으로 나눈 비 s/r이다.",
+          "activity": "같은 반지름에서 호 길이와 각의 비를 비교한다.",
+          "check": "반원의 호는 πr이므로 중심각은 π rad=180°다."
+        },
+        {
+          "id": "m5-11-u5",
+          "title": "호의 길이",
+          "body": "θ가 라디안일 때 호 길이는 s=rθ이며 길이 단위는 r을 따른다.",
+          "activity": "r과 θ를 바꾸어 호 길이의 비례를 살핀다.",
+          "check": "r=3, θ=π/2 rad이면 s=3π/2다."
+        },
+        {
+          "id": "m5-11-u6",
+          "title": "부채꼴 넓이와 표현 점검",
+          "body": "θ가 라디안일 때 부채꼴 넓이는 A=(1/2)r²θ다.",
+          "activity": "도 단위 각과 라디안 각을 변환한 뒤 계산을 비교한다.",
+          "check": "r=2, θ=π/3 rad이면 A=2π/3이며 넓이 단위는 제곱 단위다."
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "title": "시각적 탐구",
+      "type": "InteractiveBlock",
+      "interaction": "trig-ratios"
+    },
+    {
+      "id": "example",
+      "title": "단계별 예제",
+      "type": "WorkedExampleBlock",
+      "steps": [
+        "반지름 4인 원에서 중심각 60°인 작은 부채꼴의 호의 길이와 넓이를 구하라.",
+        "60°=(60/180)π=π/3 rad다. 따라서 s=4·π/3=4π/3이고 A=(1/2)·4²·π/3=8π/3이다. 각은 양의 방향으로 잰 부채꼴의 중심각 크기다.",
+        "호 길이는 길이 단위, 넓이는 제곱 단위이며, 도 대신 라디안으로 바꾼 뒤 공식을 적용했다."
+      ]
+    },
+    {
+      "id": "practice",
+      "title": "연습 계획",
+      "type": "PracticeBlock",
+      "purpose": "practice",
+      "hint": "먼저 풀이 이유를 말로 정리한 뒤 초안 연습 문항을 풉니다. 문항의 정답과 해설은 제출 전 전달하지 않습니다."
+    },
+    {
+      "id": "feedback",
+      "title": "오답 교정",
+      "type": "FeedbackBlock",
+      "body": "오답이면 조건·표현·계산 단계를 나누어 다시 확인하고, 관련 소단원으로 돌아가도록 안내합니다. 아래 오개념은 검증된 빈도 주장이 아닌 점검 가설입니다.\n• 각은 0°부터 360° 사이 값만 가질 수 있다고 생각함\n• 시계 방향 각의 부호를 양수로 둠\n• 동경각을 같다고 해서 수치도 같다고 생각함\n• 라디안을 도의 다른 표기라고만 보고 s/r 정의를 놓침\n• s=rθ 또는 A=(1/2)r²θ에 도 단위 각을 그대로 대입함"
+    },
+    {
+      "id": "review",
+      "title": "복습과 다음 단원",
+      "type": "ReviewBlock",
+      "body": "정답 여부와 관계없이 핵심 조건을 다시 떠올리고, 다음 학습 전 간격을 두어 복습합니다."
+    }
+  ],
+  "learningPhases": [
+    {
+      "id": "phase-01",
+      "title": "학습 목표",
+      "blockId": "goals",
+      "state": "available"
+    },
+    {
+      "id": "phase-02",
+      "title": "선수학습 진단",
+      "blockId": "diagnostic",
+      "state": "available"
+    },
+    {
+      "id": "phase-03",
+      "title": "개념 도입",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-04",
+      "title": "개념 설명",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-05",
+      "title": "시각적 탐구",
+      "blockId": "lab",
+      "state": "available"
+    },
+    {
+      "id": "phase-06",
+      "title": "원리 유도",
+      "blockId": "concept",
+      "state": "available"
+    },
+    {
+      "id": "phase-07",
+      "title": "단계별 예제 풀이",
+      "blockId": "example",
+      "state": "available"
+    },
+    {
+      "id": "phase-08",
+      "title": "기초 연습",
+      "blockId": "practice",
+      "state": "available"
+    },
+    {
+      "id": "phase-09",
+      "title": "유형별 연습 A",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-10",
+      "title": "유형별 연습 B",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-11",
+      "title": "응용 문제",
+      "blockId": "practice",
+      "state": "planned"
+    },
+    {
+      "id": "phase-12",
+      "title": "오답 분석",
+      "blockId": "feedback",
+      "state": "available"
+    },
+    {
+      "id": "phase-13",
+      "title": "형성평가 설계",
+      "blockId": "feedback",
+      "state": "planned"
+    },
+    {
+      "id": "phase-14",
+      "title": "간격 반복 복습",
+      "blockId": "review",
+      "state": "planned"
+    },
+    {
+      "id": "phase-15",
+      "title": "다음 단원 연결",
+      "blockId": "review",
+      "state": "planned"
+    }
+  ]
+}

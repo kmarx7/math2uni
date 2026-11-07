@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-10",
+  "levelId": "LEVEL 5",
+  "title": "지수·로그의 활용",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "증가·감소 모델",
+      "로그 척도 해석"
+    ],
+    "prerequisiteUnits": [
+      "M5-05",
+      "M5-09"
+    ],
+    "visualization": "성장 곡선과 로그 축"
+  },
+  "objectives": [
+    "일정한 곱셈 변화가 이어지는 양을 지수식으로 모델링하고 초기값·변화율·시간 단위를 설명한다.",
+    "주어진 로그 척도에서 눈금 차이와 원래 양의 비를 연결하고 근삿값·단위를 구분한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-10-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-05 선수 기능 진단: 상용로그의 정수 부분·근삿값 표기 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-10-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-09 선수 기능 진단: 로그방정식의 정의역과 단조성 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-10-skill-1",
+    "m5-10-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "상황의 양과 단위 정하기 → 일정 비율 변화 찾기 → 양의 지수모델 구성 → 로그 척도 읽기 → 비·근삿값·모델 가정 점검",
+    "principleDerivation": "초기량 N₀>0에 매 시간 같은 양의 곱셈계수 q가 적용되면 n단계 뒤 N(n)=N₀qⁿ이다. q>1이면 증가하고 0<q<1이면 감소한다. 로그 척도 L=log_b(X/X₀)에서는 b>1, X>0, X₀>0이며 눈금 차 ΔL은 원래 양의 비 X₂/X₁=b^ΔL와 연결된다. 척도 정의에 추가 계수나 부호가 있으면 그 규약을 먼저 확인하고, 자료 표에서 읽은 로그값은 근삿값으로 표시한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 도식에는 축·방향·조건·텍스트 대체 설명을 둔다. 키보드만으로 조작할 수 있고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-10-u1",
+      "title": "초기량·단위·가정",
+      "targetSkills": [
+        "m5-10-skill-1"
+      ],
+      "explanation": "상황에서 처음 양과 측정 단위, 반복되는 시간 간격을 구분한다.",
+      "activity": "초기량·시간 단위·변화 규칙을 세 칸 표에 넣는다.",
+      "check": "처음 120개체, 하루마다 1.5배라면 N(0)=120, 하루가 한 단계다."
+    },
+    {
+      "id": "m5-10-u2",
+      "title": "일정 비율 증가",
+      "targetSkills": [
+        "m5-10-skill-1"
+      ],
+      "explanation": "매 단계 같은 곱셈계수 q>1을 적용하면 qⁿ으로 증가한다.",
+      "activity": "수열 표에서 연속한 항의 비가 일정한지 확인한다.",
+      "check": "처음 10, 매 시간 2배면 N(t)=10·2ᵗ이다."
+    },
+    {
+      "id": "m5-10-u3",
+      "title": "일정 비율 감소",
+      "targetSkills": [
+        "m5-10-skill-1"
+      ],
+      "explanation": "매 단계의 잔존 비율 q가 0<q<1이면 양은 줄어든다.",
+      "activity": "감소율과 잔존율을 나누어 표에 기록한다.",
+      "check": "20% 감소는 0.8이 남으므로 3단계 뒤 양은 N₀·0.8³이다."
+    },
+    {
+      "id": "m5-10-u4",
+      "title": "모델값과 시간 단위",
+      "targetSkills": [
+        "m5-10-skill-2"
+      ],
+      "explanation": "지수의 입력은 반복 횟수 또는 기준 간격의 배수로 해석한다.",
+      "activity": "같은 모델에서 시간 단위를 바꿨을 때의 입력을 비교한다.",
+      "check": "하루 3회 복제되는 모델에서 2일은 6번 반복에 해당한다."
+    },
+    {
+      "id": "m5-10-u5",
+      "title": "로그 척도 눈금",
+      "targetSkills": [
+        "m5-10-skill-2"
+      ],
+      "explanation": "기준량과 로그의 밑, 정의된 변환식으로 눈금 의미를 해석한다.",
+      "activity": "척도 눈금 두 개의 차를 입력해 원래 양의 비를 표에서 찾는다.",
+      "check": "b>1인 L=log_b(X/X₀)에서 1 눈금 차는 X가 b배임을 뜻한다."
+    },
+    {
+      "id": "m5-10-u6",
+      "title": "비교·근삿값·한계",
+      "targetSkills": [
+        "m5-10-skill-2"
+      ],
+      "explanation": "로그표나 주어진 근삿값으로 비를 해석하되 모델 가정과 단위를 함께 쓴다.",
+      "activity": "정확한 식과 표에서 얻은 반올림 수치를 서로 다른 칸에 쓴다.",
+      "check": "log₁₀2≈0.301은 근삿값이며 정확한 값 0.301이라고 쓰지 않는다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-10-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "초기량, 단계별 곱셈계수, 반복 수를 제한된 양수 범위에서 조절해 표와 곡선 요약을 갱신한다. 별도 로그 척도 패널에서는 밑 b>1, 기준량 X₀>0과 눈금 차를 보여주고 양의 비를 출력한다. 실제 측정 정확도나 예측 보장은 하지 않는다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "초기량과 일정 곱셈계수에서 지수 성장모델을 세워 특정 단계 값을 구한다.",
+      "잔존율이 주어진 감소 상황에서 단위·횟수를 확인해 양을 계산한다.",
+      "정의된 로그 척도의 눈금 차와 양의 비를 변환하고 근사·단위를 표시한다."
+    ],
+    "draftPracticeGoals": [
+      "초기량·단위·반복 간격을 기호로 구분한다.",
+      "고정 증가율을 곱셈계수로 바꾸어 모델을 작성한다.",
+      "고정 감소율에서 잔존율을 정하고 단계 뒤 양을 계산한다.",
+      "시간 단위를 모델의 반복 횟수로 환산한다.",
+      "로그 척도의 정의식과 밑을 확인한다.",
+      "척도 차이를 원래 양의 비로 바꾸고 근삿값과 단위를 표시한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 문제의 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "초기량과 반복 간격이 모델에 맞게 들어갔는가?",
+    "증가계수 또는 잔존율이 상황과 일치하는가?",
+    "로그 척도 정의·비·근삿값·단위를 구분했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "감소율을 잔존율로 잘못 넣음",
+    "반복 횟수와 실제 시간 단위를 혼동함",
+    "일정한 차이의 변화와 일정한 비율의 변화를 혼동함",
+    "로그 척도 눈금의 차이를 원래 양의 차로 해석함",
+    "근삿값 또는 척도 규약을 정확한 실측값으로 취급함"
+  ],
+  "workedExample": {
+    "prompt": "초기량 80이 매 단계 25%씩 감소한다. 3단계 뒤 모델값을 구하고 계산의 의미를 설명하라.",
+    "solution": "25% 감소 후 남는 비율은 0.75다. 매 단계 같은 비율이 적용된다는 가정에서 N(3)=80·0.75³=33.75이다. 이 값은 모델의 계산 결과이며 실제 관측값을 보장하지 않는다.",
+    "verification": "단계별 표에서 80, 60, 45, 33.75가 되어 매 단계의 비가 0.75임을 확인한다. 단위는 문제에서 정한 반복 간격을 따른다."
+  },
+  "designReview": {
+    "status": "draft-self-check",
+    "reviewerRole": "Curriculum Architect author self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/rights review and item draft",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "unitId": "M5-13",
+  "levelId": "LEVEL 5",
+  "title": "삼각함수의 기본 관계",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "authorRole": "curriculum",
+  "publicationApproved": false,
+  "officialStandards": [],
+  "proposalMetadata": {
+    "concepts": [
+      "제곱 관계",
+      "탄젠트와 사인·코사인"
+    ],
+    "prerequisiteUnits": [
+      "M5-12",
+      "M2-16"
+    ],
+    "visualization": "단위원 직각삼각형"
+  },
+  "objectives": [
+    "단위원의 좌표 관계 x²+y²=1에서 sin²θ+cos²θ=1을 유도하고 값을 확인한다.",
+    "cosθ≠0 조건에서 tanθ=sinθ/cosθ와 이를 제곱한 관계를 적용한다."
+  ],
+  "prerequisiteSkills": [
+    {
+      "id": "m5-13-readiness-1",
+      "status": "diagnostic-only-not-registered",
+      "description": "M5-12 선수 기능 진단: 단위원에서 sin·cos 좌표 정의 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    },
+    {
+      "id": "m5-13-readiness-2",
+      "status": "diagnostic-only-not-registered",
+      "description": "M2-16 선수 기능 진단: 이차식 제곱·분수의 분모 조건 확인. 미숙하면 준비 안내를 제공하되 prerequisite 그래프·숙달도·완료 점수를 변경하지 않는다."
+    }
+  ],
+  "targetSkills": [
+    "m5-13-skill-1",
+    "m5-13-skill-2"
+  ],
+  "instructionalStrategy": {
+    "sequence": "단위원 방정식 → sin²+cos² 관계 → 한 값에서 다른 값 구하기 → tan 비 관계 → 제곱 관계 → 정의 조건·사분면 검산",
+    "principleDerivation": "단위원 위 점 P=(cosθ,sinθ)는 x²+y²=1을 만족하므로 sin²θ+cos²θ=1이다. cosθ≠0일 때 tanθ=sinθ/cosθ이고 이를 제곱하면 tan²θ=sin²θ/cos²θ=(1−cos²θ)/cos²θ가 된다. 모든 식은 해당 분모가 0이 아닌 범위에서만 동치이며, 제곱한 식은 부호 정보를 잃을 수 있어 원래 사분면·부호 조건을 따로 확인해야 한다.",
+    "accessibility": "쉬운 한국어와 기호 읽기를 함께 제공한다. 도식에는 축·방향·조건·텍스트 대체 설명을 둔다. 키보드만으로 조작할 수 있고 색만으로 정보를 전달하지 않는다."
+  },
+  "subunits": [
+    {
+      "id": "m5-13-u1",
+      "title": "단위원의 거리 관계",
+      "targetSkills": [
+        "m5-13-skill-1"
+      ],
+      "explanation": "끝점은 단위원 위에 있어 x²+y²=1을 만족한다.",
+      "activity": "끝점 좌표를 격자에 놓고 x²+y²를 계산한다.",
+      "check": "(3/5,4/5)는 (3/5)²+(4/5)²=1을 만족한다."
+    },
+    {
+      "id": "m5-13-u2",
+      "title": "사인·코사인 제곱 관계",
+      "targetSkills": [
+        "m5-13-skill-1"
+      ],
+      "explanation": "x=cosθ,y=sinθ를 대입하면 sin²θ+cos²θ=1이다.",
+      "activity": "단위원 좌표식과 삼각함수 기호를 색 대신 이름표로 대응한다.",
+      "check": "cosθ=3/5이면 sin²θ=16/25다."
+    },
+    {
+      "id": "m5-13-u3",
+      "title": "값 복원과 부호",
+      "targetSkills": [
+        "m5-13-skill-1"
+      ],
+      "explanation": "제곱 관계로 절댓값을 구한 다음 사분면 부호를 적용한다.",
+      "activity": "두 후보 부호를 생성하고 사분면 조건으로 하나를 남긴다.",
+      "check": "제2사분면에서 cosθ=3/5는 불가능하므로 조건을 다시 점검한다."
+    },
+    {
+      "id": "m5-13-u4",
+      "title": "탄젠트와 비율",
+      "targetSkills": [
+        "m5-13-skill-2"
+      ],
+      "explanation": "cosθ≠0이면 tanθ=sinθ/cosθ다.",
+      "activity": "단위원 좌표의 세로/가로 비를 표시한다.",
+      "check": "sinθ=4/5, cosθ=3/5이면 tanθ=4/3이다."
+    },
+    {
+      "id": "m5-13-u5",
+      "title": "탄젠트 제곱 관계",
+      "targetSkills": [
+        "m5-13-skill-2"
+      ],
+      "explanation": "cosθ≠0에서 tan²θ=sin²θ/cos²θ로 쓸 수 있다.",
+      "activity": "분모가 0이 아닌지 먼저 확인하고 제곱 관계를 변환한다.",
+      "check": "cosθ=3/5이면 tan²θ=(1−9/25)/(9/25)=16/9다."
+    },
+    {
+      "id": "m5-13-u6",
+      "title": "조건을 유지한 항등식 활용",
+      "targetSkills": [
+        "m5-13-skill-2"
+      ],
+      "explanation": "항등식 변형 후 분모 조건과 사분면 부호를 원래 문제에 적용한다.",
+      "activity": "각 식에 필요한 조건 카드를 붙이고 허용되는 변형만 연결한다.",
+      "check": "cosθ=0이면 tanθ는 정의되지 않으므로 탄젠트 식의 해가 아니다."
+    }
+  ],
+  "interactiveComponents": [
+    {
+      "id": "m5-13-visual",
+      "kind": "interactive-visualization",
+      "interaction": "키보드 조작과 현재 상태의 텍스트 확인",
+      "description": "단위원 위 점을 이동해 좌표와 x²+y²=1을 보여준다. 사인/코사인 값을 고정하면 제곱 관계로 생기는 ± 후보를 표시한 뒤 사분면 선택으로 부호를 결정한다. 탄젠트 패널은 cosθ가 0일 때 비를 계산하지 않고 조건 경고를 보여준다.",
+      "features": [
+        "텍스트 대체 설명",
+        "키보드 조작",
+        "현재 상태와 조건 레이블",
+        "색에 의존하지 않는 정보 표현"
+      ]
+    }
+  ],
+  "questionBlueprint": {
+    "familyCount": 3,
+    "draftItemCount": 6,
+    "familyCriteria": [
+      "sin²+cos²=1로 한 삼각함수의 제곱 또는 절댓값을 구한다.",
+      "주어진 사분면과 함수값을 이용해 부호를 복원한다.",
+      "cosθ≠0을 확인하고 tan 관계를 변형·계산한다."
+    ],
+    "draftPracticeGoals": [
+      "단위원 방정식에서 sin²θ+cos²θ=1을 유도한다.",
+      "한 함수값을 이용해 다른 값의 제곱 또는 절댓값을 계산한다.",
+      "제곱 관계가 부호를 정하지 않음을 말한다.",
+      "사분면 조건을 이용해 sin·cos의 부호를 복원한다.",
+      "cosθ≠0에서 tanθ=sinθ/cosθ를 적용한다.",
+      "탄젠트 관계를 제곱식으로 바꾸고 분모 조건을 검산한다."
+    ],
+    "assessmentInstanceCount": 0,
+    "assessment": "평가 문항 인스턴스는 0개다. 형성평가 기준만 정하고 문항 제작·공개는 별도 검수 후 결정한다.",
+    "distinctReasoningRule": "숫자만 바꾼 문항은 같은 원형이다. 문제의 주된 조건 해석·표현 변환·전략 선택이 달라야 별도 원형으로 센다."
+  },
+  "assessmentCriteria": [
+    "제곱 항등식을 단위원 좌표에서 설명했는가?",
+    "제곱 후 가능한 부호를 사분면으로 되살렸는가?",
+    "탄젠트 관계에서 cosθ≠0 조건을 유지했는가?"
+  ],
+  "reviewPolicy": {
+    "intervalDays": [
+      1,
+      3,
+      7
+    ],
+    "status": "draft-not-validated",
+    "retrieval": "오답이 연결된 조건을 짧게 진단하고 해당 소단원으로 돌아온다. 통과한 기술은 1·3·7일 간격 복습에서 다시 확인한다."
+  },
+  "learningPhases": [
+    {
+      "phaseId": "phase-01",
+      "title": "학습 목표"
+    },
+    {
+      "phaseId": "phase-02",
+      "title": "선수학습 진단"
+    },
+    {
+      "phaseId": "phase-03",
+      "title": "개념 도입"
+    },
+    {
+      "phaseId": "phase-04",
+      "title": "개념 설명"
+    },
+    {
+      "phaseId": "phase-05",
+      "title": "시각적 탐구"
+    },
+    {
+      "phaseId": "phase-06",
+      "title": "원리 유도"
+    },
+    {
+      "phaseId": "phase-07",
+      "title": "단계별 예제"
+    },
+    {
+      "phaseId": "phase-08",
+      "title": "기초 연습"
+    },
+    {
+      "phaseId": "phase-09",
+      "title": "유형 연습 A"
+    },
+    {
+      "phaseId": "phase-10",
+      "title": "유형 연습 B"
+    },
+    {
+      "phaseId": "phase-11",
+      "title": "응용 문제"
+    },
+    {
+      "phaseId": "phase-12",
+      "title": "오답 분석"
+    },
+    {
+      "phaseId": "phase-13",
+      "title": "형성평가"
+    },
+    {
+      "phaseId": "phase-14",
+      "title": "간격 반복 복습"
+    },
+    {
+      "phaseId": "phase-15",
+      "title": "다음 단원 연결"
+    }
+  ],
+  "misconceptionsToCheck": [
+    "sin²θ를 sin(θ²)로 읽음",
+    "제곱 항등식만으로 sin 또는 cos의 부호까지 결정할 수 있다고 생각함",
+    "제곱근을 취하며 ± 후보 중 하나를 근거 없이 고름",
+    "tan 식을 cosθ=0인 경우에도 사용함",
+    "분모 조건을 잊고 식을 약분하거나 나눔"
+  ],
+  "workedExample": {
+    "prompt": "sinθ=−5/13이고 θ가 제3사분면일 때 cosθ와 tanθ를 구하라.",
+    "solution": "sin²θ+cos²θ=1이므로 cos²θ=1−25/169=144/169다. cosθ=±12/13이고 제3사분면에서는 cosθ<0이므로 cosθ=−12/13이다. cosθ≠0이므로 tanθ=(−5/13)/(−12/13)=5/12다.",
+    "verification": "값을 제곱 관계에 대입해 확인하고 제3사분면 부호를 적용했다. 탄젠트의 분모도 0이 아니다."
+  },
+  "designReview": {
+    "status": "draft-self-check",
+    "reviewerRole": "Curriculum Architect author self-check; independent review pending",
+    "reviewerIdentity": "curriculum role; author is not an independent reviewer",
+    "humanPublicationApproval": false
+  },
+  "implementationReadiness": {
+    "status": "pending-research-review",
+    "publicationReady": false,
+    "pending": [
+      "Research & Content source/rights review and item draft",
+      "Independent curriculum/content review",
+      "Developer answer/key and application QA",
+      "Human content approval before publication"
+    ]
+  }
+}

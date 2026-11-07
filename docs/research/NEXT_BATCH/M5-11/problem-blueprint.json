@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-11",
+  "unitTitle": "일반각과 호도법",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-11-family-1",
+      "status": "draft",
+      "title": "회전 방향과 같은 끝변을 갖는 일반각",
+      "reasoningStructure": "회전 방향과 횟수를 부호 있는 각으로 나타내고 360° 주기를 적용한다.",
+      "thinkingType": "조건 분석",
+      "skillId": "m5-11-skill-1",
+      "distinctFrom": "단위 변환이나 호·부채꼴의 길이/넓이 계산과 주된 표현 변환이 다르다.",
+      "items": [
+        {
+          "id": "m511-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "양의 x축에서 반시계 방향으로 2바퀴 돈 뒤 45° 더 회전했다. 이 회전을 나타내는 일반각은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "765°",
+          "rationale": "한 바퀴는 360°이므로 두 바퀴와 45°는 2·360°+45°=765°이다. 반시계 방향이므로 양수로 쓴다.",
+          "skillLabel": "m5-11-skill-1",
+          "misconceptionHypothesis": "회전 횟수나 방향 부호를 생략하는 오류를 살펴보는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent turn-count multiplication and addition",
+            "result": "720°+45°=765°; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "405°"
+            },
+            {
+              "id": "B",
+              "label": "765°"
+            },
+            {
+              "id": "C",
+              "label": "−765°"
+            }
+          ]
+        },
+        {
+          "id": "m511-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "양의 x축에서 시계 방향으로 450° 회전했다. 0°≤θ<360° 범위에서 같은 끝변을 갖는 각 θ는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "270°",
+          "rationale": "시계 회전은 −450°이다. −450°+2·360°=270°이므로 0° 이상 360° 미만에서 같은 끝변을 갖는 각은 270°이다.",
+          "skillLabel": "m5-11-skill-1",
+          "misconceptionHypothesis": "시계 방향 회전을 양수로 쓰거나 주기 조정 뒤 범위를 확인하지 않는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent coterminal-angle subtraction/addition",
+            "result": "−450°와 270° 차이는 720°; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "90°"
+            },
+            {
+              "id": "B",
+              "label": "180°"
+            },
+            {
+              "id": "C",
+              "label": "270°"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-11-family-2",
+      "status": "draft",
+      "title": "도와 라디안의 주기·단위 변환",
+      "reasoningStructure": "π rad=180°의 비례 관계로 각을 바꾸고 라디안 표기 및 동치 주기를 확인한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-11-skill-2",
+      "distinctFrom": "회전 횟수 해석 및 반지름이 들어가는 호/넓이 계산과 구별한다.",
+      "items": [
+        {
+          "id": "m511-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "150°를 라디안으로 바꾸면?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "5π/6 rad",
+          "rationale": "150°·π/180°=150π/180=5π/6 rad이다.",
+          "skillLabel": "m5-11-skill-2",
+          "misconceptionHypothesis": "도를 라디안으로 바꿀 때 π/180 비례 인자를 거꾸로 쓰는 가능성을 살펴본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent unit-factor calculation",
+            "result": "150π/180=5π/6; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "5π/6 rad"
+            },
+            {
+              "id": "B",
+              "label": "6π/5 rad"
+            },
+            {
+              "id": "C",
+              "label": "5π/3 rad"
+            }
+          ]
+        },
+        {
+          "id": "m511-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "7π/4 rad를 도 단위로 바꾸면?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "315°",
+          "rationale": "7π/4·180°/π=7·45°=315°이다. π는 약분된다.",
+          "skillLabel": "m5-11-skill-2",
+          "misconceptionHypothesis": "π 약분 뒤 180°/4 계산 또는 도·라디안 단위를 혼동하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent unit-factor calculation",
+            "result": "7·45°=315°; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "270°"
+            },
+            {
+              "id": "B",
+              "label": "315°"
+            },
+            {
+              "id": "C",
+              "label": "330°"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-11-family-3",
+      "status": "draft",
+      "title": "라디안으로 호의 길이와 부채꼴 넓이 계산",
+      "reasoningStructure": "반지름과 라디안 각을 사용해 s=rθ 또는 A=½r²θ를 적용하고 단위를 보존한다.",
+      "thinkingType": "기초 계산",
+      "skillId": "m5-11-skill-2",
+      "distinctFrom": "도·라디안 변환이나 방향 있는 일반각 찾기와 계산 대상 및 공식 선택이 다르다.",
+      "items": [
+        {
+          "id": "m511-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "반지름이 6cm이고 중심각이 π/3 rad인 부채꼴의 호의 길이는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "2π cm",
+          "rationale": "호의 길이는 s=rθ이다. 따라서 6·π/3=2πcm이다. 각이 라디안이므로 별도 도 변환이 필요 없다.",
+          "skillLabel": "m5-11-skill-2",
+          "misconceptionHypothesis": "라디안 조건을 놓치거나 반지름과 각의 곱을 잘못 계산하는 가능성을 점검한다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "formula substitution and unit check",
+            "result": "6cm×π/3=2πcm; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "π cm"
+            },
+            {
+              "id": "B",
+              "label": "3π cm"
+            },
+            {
+              "id": "C",
+              "label": "2π cm"
+            }
+          ]
+        },
+        {
+          "id": "m511-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "반지름이 4cm이고 중심각이 π/2 rad인 부채꼴의 넓이는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "4π cm²",
+          "rationale": "A=½r²θ=½·4²·π/2=8·π/2=4πcm²이다.",
+          "skillLabel": "m5-11-skill-2",
+          "misconceptionHypothesis": "호 길이 공식과 넓이 공식을 섞거나 r² 또는 1/2를 빠뜨릴 수 있는지 살펴본다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "formula substitution and unit check",
+            "result": "½·16·π/2=4πcm²; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "4π cm²"
+            },
+            {
+              "id": "B",
+              "label": "2π cm²"
+            },
+            {
+              "id": "C",
+              "label": "8π cm²"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-10",
+  "unitTitle": "지수·로그의 활용",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "officialMappingStatus": "unverified",
+  "publicationApproved": false,
+  "families": [
+    {
+      "id": "m5-10-family-1",
+      "status": "draft",
+      "title": "고정 증가율의 지수 모델",
+      "reasoningStructure": "초기량과 일정한 증가율을 곱셈계수로 바꿔 반복 횟수만큼 거듭제곱한다.",
+      "thinkingType": "모델링",
+      "skillId": "m5-10-skill-1",
+      "distinctFrom": "감소 잔존율 모델 및 로그 눈금 차에서 양의 비를 찾는 전략과 구별한다.",
+      "items": [
+        {
+          "id": "m510-draft-01",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D1",
+          "inputType": "choice",
+          "prompt": "어떤 표본이 처음 500개이고 매월 10%씩 늘어난다. 2개월 뒤 표본 수를 N=500qⁿ으로 나타낼 때 맞는 식과 값은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "500·1.1²=605개",
+          "rationale": "10% 증가는 매월 1+0.10=1.1배이다. 2개월 뒤는 500·1.1²=500·1.21=605개다. 단위는 개이다.",
+          "skillLabel": "m5-10-skill-1",
+          "misconceptionHypothesis": "10%를 곱셈계수 0.1로 쓰거나 기간 수만큼 더하는 오류를 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent direct multiplication 500×1.1×1.1",
+            "result": "605개로 재계산; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "500·0.1²=5개"
+            },
+            {
+              "id": "B",
+              "label": "500·1.1²=605개"
+            },
+            {
+              "id": "C",
+              "label": "500+10·2=520개"
+            }
+          ]
+        },
+        {
+          "id": "m510-draft-02",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "처음 세균이 800개이고 3시간마다 두 배가 된다. 9시간 뒤 세균 수는?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "6400개",
+          "rationale": "9시간에는 3시간 간격이 9/3=3번 지난다. 따라서 N=800·2³=6400개다.",
+          "skillLabel": "m5-10-skill-1",
+          "misconceptionHypothesis": "반복 간격과 전체 경과 시간을 같은 횟수로 보는 오류를 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent interval count and direct multiplication",
+            "result": "세 번 배가되어 6400개; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "6400개"
+            },
+            {
+              "id": "B",
+              "label": "7200개"
+            },
+            {
+              "id": "C",
+              "label": "3200개"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-10-family-2",
+      "status": "draft",
+      "title": "고정 감소율을 잔존율로 모델링",
+      "reasoningStructure": "감소율을 잔존율로 전환하고 반복 기간 및 결과 단위를 보존해 지수 감소량을 계산한다.",
+      "thinkingType": "모델링",
+      "skillId": "m5-10-skill-1",
+      "distinctFrom": "성장 배율 모델과 로그 척도 해석은 변환 전략과 결과 의미가 다르다.",
+      "items": [
+        {
+          "id": "m510-draft-03",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "가격 2000원인 물건이 해마다 20%씩 가치가 줄어든다고 모델링한다. 2년 뒤 가치는?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "1280원",
+          "rationale": "해마다 남는 비율은 1−0.20=0.8이다. 2년 뒤 2000·0.8²=1280원이며 감소율 20%를 두 번 반영한다.",
+          "skillLabel": "m5-10-skill-1",
+          "misconceptionHypothesis": "감소율을 잔존율 대신 곱하거나 시간 단위를 잘못 세는 오류를 점검하는 설계 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent direct multiplication 2000×0.8×0.8",
+            "result": "1280원으로 재계산; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "800원"
+            },
+            {
+              "id": "B",
+              "label": "1600원"
+            },
+            {
+              "id": "C",
+              "label": "1280원"
+            }
+          ]
+        },
+        {
+          "id": "m510-draft-04",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "처음 1000mg인 양이 매시간 25%씩 줄어드는 모델이다. 2시간 뒤 남은 양은?",
+          "answer": {
+            "type": "choice",
+            "value": "C"
+          },
+          "semanticAnswer": "562.5mg",
+          "rationale": "매시간 잔존율은 0.75이다. 두 시간 뒤 양은 1000·0.75²=562.5mg이다. 계산값의 단위를 원래 양과 같이 mg로 둔다.",
+          "skillLabel": "m5-10-skill-1",
+          "misconceptionHypothesis": "퍼센트 감소를 두 번 적용할 때 잔존율의 거듭제곱이나 단위를 누락하는 가능성을 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "independent direct multiplication 1000×0.75×0.75",
+            "result": "562.5mg로 재계산; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "C",
+              "label": "562.5mg"
+            },
+            {
+              "id": "B",
+              "label": "625mg"
+            },
+            {
+              "id": "A",
+              "label": "750mg"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    },
+    {
+      "id": "m5-10-family-3",
+      "status": "draft",
+      "title": "로그 척도의 눈금 차와 원래 양의 비",
+      "reasoningStructure": "L=log_b(X/X₀)에서 두 눈금의 차를 로그 비로 바꾸고 정의된 밑으로 원래 양의 비를 계산한다.",
+      "thinkingType": "표현 변환",
+      "skillId": "m5-10-skill-2",
+      "distinctFrom": "원래 양을 반복 배율로 계산하는 지수 성장·감소 모델과 구별한다.",
+      "items": [
+        {
+          "id": "m510-draft-05",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D2",
+          "inputType": "choice",
+          "prompt": "한 척도를 L=log₁₀(X/X₀)로 정의한다. 두 측정값의 눈금 차 L₂−L₁이 2일 때 X₂/X₁은?",
+          "answer": {
+            "type": "choice",
+            "value": "B"
+          },
+          "semanticAnswer": "100배",
+          "rationale": "L₂−L₁=log₁₀(X₂/X₁)=2이므로 X₂/X₁=10²=100이다. 눈금 차 2는 비율 100을 뜻하며 절대 차 2를 뜻하지 않는다.",
+          "skillLabel": "m5-10-skill-2",
+          "misconceptionHypothesis": "로그 눈금 차를 원래 양의 뺄셈 차와 혼동하는 가능성을 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "definition substitution: log₁₀(100)=2",
+            "result": "비율 100으로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2배"
+            },
+            {
+              "id": "B",
+              "label": "100배"
+            },
+            {
+              "id": "C",
+              "label": "10배"
+            }
+          ]
+        },
+        {
+          "id": "m510-draft-06",
+          "status": "draft",
+          "purpose": "practice-draft",
+          "difficulty": "D3",
+          "inputType": "choice",
+          "prompt": "척도 S=3log₂(X/X₀)를 사용한다. 두 눈금 차 S₂−S₁=3일 때 X₂/X₁은?",
+          "answer": {
+            "type": "choice",
+            "value": "A"
+          },
+          "semanticAnswer": "2배",
+          "rationale": "눈금 차 3=3log₂(X₂/X₁)이므로 log₂(X₂/X₁)=1, 따라서 X₂/X₁=2이다. 계수 3을 먼저 나누고 척도의 밑 2를 사용한다.",
+          "skillLabel": "m5-10-skill-2",
+          "misconceptionHypothesis": "척도 앞의 계수를 무시하거나 눈금 차를 그대로 원래 양의 비로 쓰는 오류를 점검하는 가설이다.",
+          "contentVersion": "0.1.0-draft",
+          "provenance": {
+            "sourceType": "original-author-created",
+            "sourceReference": null,
+            "rightsStatus": "original-draft-no-third-party-reproduction"
+          },
+          "verification": {
+            "method": "definition substitution: 3log₂(2)=3",
+            "result": "비율 2로 확인; 독립 교육 검토·사람 검수 대기",
+            "humanVerified": false,
+            "autoGrade": "supported"
+          },
+          "choices": [
+            {
+              "id": "A",
+              "label": "2배"
+            },
+            {
+              "id": "B",
+              "label": "3배"
+            },
+            {
+              "id": "C",
+              "label": "8배"
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "distinctFamilies": 1,
+        "draftItems": 2,
+        "humanApprovedItems": 0
+      }
+    }
+  ]
+}

@@ -117,6 +117,187 @@ export const lessonSpecSchema = z
   })
   .passthrough();
 export type LessonSpec = z.infer<typeof lessonSpecSchema>;
+
+/** Proposal curriculum documents have their own data dialect and do not represent
+ * the M0 legacy completion/assessment handoff parsed by lessonSpecSchema. */
+export const proposalLessonSpecSchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    unitId: z.string().regex(/^M[0-8]-\d{2}$/),
+    levelId: z.enum([
+      "LEVEL 0", "LEVEL 1", "LEVEL 2", "LEVEL 3", "LEVEL 4",
+      "LEVEL 5", "LEVEL 6", "LEVEL 7", "LEVEL 8",
+    ]),
+    title: text,
+    contentVersion: id,
+    reviewStatus: z.enum(["draft", "researched", "reviewed"]),
+    authorRole: z.literal("curriculum"),
+    publicationApproved: z.literal(false),
+    officialStandards: z.array(z.object({
+      authority: id,
+      code: id,
+      sourceUrl: z.url(),
+      verifiedAt: z.iso.datetime(),
+    }).strict()),
+    proposalMetadata: z.object({
+      concepts: z.array(text).min(1),
+      prerequisiteUnits: z.array(z.string().regex(/^M[0-8]-\d{2}$/)),
+      visualization: text,
+    }).strict(),
+    objectives: z.array(text).min(1),
+    prerequisiteSkills: z.array(z.object({
+      id,
+      status: text,
+      description: text,
+    }).strict()),
+    targetSkills: z.array(id).min(1),
+    instructionalStrategy: z.object({
+      sequence: text,
+      principleDerivation: text,
+      accessibility: text,
+    }).strict(),
+    subunits: z.array(z.object({
+      id,
+      title: text,
+      targetSkills: z.array(id).min(1),
+      explanation: text,
+      activity: text,
+      check: text,
+    }).strict()).min(6),
+    interactiveComponents: z.array(z.object({
+      id,
+      kind: text,
+      interaction: text,
+      description: text,
+      features: z.array(text).min(1),
+    }).strict()).min(1),
+    questionBlueprint: z.object({
+      familyCount: z.number().int().positive(),
+      draftItemCount: z.number().int().positive(),
+      familyCriteria: z.array(text).min(1),
+      draftPracticeGoals: z.array(text).min(1),
+      assessmentInstanceCount: z.number().int().nonnegative(),
+      assessment: text,
+      distinctReasoningRule: text,
+    }).strict(),
+    assessmentCriteria: z.array(text).min(1),
+    reviewPolicy: z.object({
+      intervalDays: z.array(z.number().int().positive()),
+      status: text,
+      retrieval: text,
+    }).strict(),
+    workedExample: z.object({
+      prompt: text,
+      solution: text,
+      verification: text,
+    }).strict(),
+    learningPhases: z.array(z.object({
+      phaseId: id,
+      title: text,
+    }).strict()).length(15),
+    misconceptionsToCheck: z.array(text),
+    designReview: z.object({
+      status: text,
+      reviewerRole: text,
+      reviewerIdentity: text,
+      humanPublicationApproval: z.literal(false),
+    }).strict(),
+    implementationReadiness: z.object({
+      status: text,
+      publicationReady: z.literal(false),
+      pending: z.array(text),
+    }).strict(),
+  })
+  .strict();
+export type ProposalLessonSpec = z.infer<typeof proposalLessonSpecSchema>;
+
+/** Research proposal blueprints are draft practice collections, not the M0
+ * legacy family/assessment handoff parsed by problemBlueprintSchema. */
+export const proposalProblemBlueprintSchema = z
+  .object({
+    schemaVersion: z.literal("1"),
+    unitId: z.string().regex(/^M[0-8]-\d{2}$/),
+    unitTitle: text,
+    contentVersion: id,
+    reviewStatus: z.enum(["draft", "researched", "reviewed"]),
+    officialMappingStatus: z.literal("unverified"),
+    publicationApproved: z.literal(false),
+    families: z.array(z.object({
+      id,
+      status: z.literal("draft"),
+      title: text,
+      reasoningStructure: text,
+      thinkingType: text,
+      skillId: id,
+      distinctFrom: text,
+      items: z.array(z.object({
+        id,
+        status: z.literal("draft"),
+        purpose: z.literal("practice-draft"),
+        difficulty: z.enum(["D1", "D2", "D3", "D4", "D5"]),
+        inputType: z.literal("choice"),
+        prompt: text,
+        answer: z.object({
+          type: z.literal("choice"),
+          value: z.enum(["A", "B", "C"]),
+        }).strict(),
+        semanticAnswer: text,
+        rationale: text,
+        skillLabel: id,
+        misconceptionHypothesis: text,
+        contentVersion: id,
+        provenance: z.object({
+          sourceType: z.literal("original-author-created"),
+          sourceReference: z.null(),
+          rightsStatus: text,
+        }).strict(),
+        verification: z.object({
+          method: text,
+          result: text,
+          humanVerified: z.literal(false),
+          autoGrade: z.literal("supported"),
+        }).strict(),
+        choices: z.array(z.object({ id: z.enum(["A", "B", "C"]), label: text }).strict()).length(3),
+      }).strict()).length(2),
+      counts: z.object({
+        distinctFamilies: z.literal(1),
+        draftItems: z.literal(2),
+        humanApprovedItems: z.literal(0),
+      }).strict(),
+    }).strict()).length(3),
+  })
+  .strict()
+  .superRefine((blueprint, context) => {
+    const familyIds = blueprint.families.map((family) => family.id);
+    if (new Set(familyIds).size !== familyIds.length) {
+      context.addIssue({ code: "custom", message: "Problem family IDs must be unique." });
+    }
+    const itemIds = blueprint.families.flatMap((family) => family.items.map((item) => item.id));
+    if (new Set(itemIds).size !== itemIds.length) {
+      context.addIssue({ code: "custom", message: "Problem item IDs must be unique." });
+    }
+    blueprint.families.forEach((family) => {
+      family.items.forEach((item) => {
+        const choiceIds = item.choices.map((choice) => choice.id);
+        const labels = item.choices.map((choice) => choice.label);
+        const answerChoices = item.choices.filter((choice) => choice.id === item.answer.value);
+        if (new Set(choiceIds).size !== choiceIds.length || new Set(labels).size !== labels.length) {
+          context.addIssue({ code: "custom", message: `Choice IDs/labels must be unique: ${item.id}.` });
+        }
+        if (answerChoices.length !== 1 || answerChoices[0]?.label !== item.semanticAnswer) {
+          context.addIssue({ code: "custom", message: `Answer key must match the semantic answer: ${item.id}.` });
+        }
+        if (item.skillLabel !== family.skillId) {
+          context.addIssue({ code: "custom", message: `Item skill must match its family: ${item.id}.` });
+        }
+        if (item.contentVersion !== blueprint.contentVersion) {
+          context.addIssue({ code: "custom", message: `Item version must match its blueprint: ${item.id}.` });
+        }
+      });
+    });
+  });
+export type ProposalProblemBlueprint = z.infer<typeof proposalProblemBlueprintSchema>;
+
 export const problemBlueprintSchema = z
   .object({
     schemaVersion: z.literal("1"),

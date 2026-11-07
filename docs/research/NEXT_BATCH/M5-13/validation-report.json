@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1",
+  "unitId": "M5-13",
+  "contentVersion": "0.1.0-draft",
+  "reviewStatus": "draft",
+  "checks": {
+    "jsonParsed": true,
+    "threeDistinctFamilies": true,
+    "sixPracticeItems": true,
+    "assessmentItemsZero": true,
+    "allDraft": true,
+    "publicationApprovedFalse": true,
+    "humanVerifiedFalse": true,
+    "skillsMatchCurriculumTargetSkills": true,
+    "contentHas15Phases": true,
+    "allPhaseBlockReferencesResolve": true,
+    "semanticAnswerMatchesCorrectChoiceLabel": true,
+    "officialCodeMappingVerified": false,
+    "independentRecalculationComplete": true,
+    "answerKeyMatchesSemanticLabel": true,
+    "choiceIdsUniqueAndComplete": true
+  },
+  "answerKeyDistribution": {
+    "A": 2,
+    "C": 2,
+    "B": 2
+  },
+  "assessmentItemCount": 0,
+  "publicationApproved": false,
+  "humanVerified": false,
+  "limitations": [
+    "공식 교육과정 원문 첨부와 2028 예시 문항 PDF 본문은 열지 못해 코드/정확한 출제 연결 미검증",
+    "사람 검수와 게시 승인을 받지 않음"
+  ],
+  "independentRecalculationReview": {
+    "reviewer": "Curriculum independent reviewer (separate from Research author)",
+    "reviewerAgent": "/root/curriculum_independent_m5_09_13",
+    "reviewedAt": "2026-11-07",
+    "result": "30/30 draft answers independently recalculated; no remaining mathematical blocker.",
+    "reference": "Independent-review handoff message to Orchestrator on 2026-11-07; review was performed over problem-blueprint.json. This is an agent review record, not human publication approval."
+  }
+}

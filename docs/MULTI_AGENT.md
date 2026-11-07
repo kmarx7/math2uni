@@ -80,3 +80,9 @@ Curriculum review가 다섯 단원의 수업/청사진 정합성 및 문항 검�
 Curriculum Architect가 명세 독립 검토를 거쳐 다섯 단원을 implementation-ready로 인계하고, Research & Content가 공식자료 확인 상태와 30개 practice draft 및 verification 기록을 제공했다. 별도 Curriculum 검토는 M4-14~15 12문항, M4-16~18 18문항을 재계산했다. Developer & QA는 다섯 실험실, server-only 문제 변환, lesson/preview registry, 단원별 진도 격리와 단위/E2E 테스트 스펙을 추가했다. M4-18 M1-03은 제안 선수 메타데이터에 남아 있으나 실제 학습에서 강제 게이트로 쓰지 않는다.
 
 모든 새 문항은 draft 및 humanVerified=false, 평가 0개, 사람 게시 승인 0개다. lint/typecheck, Vitest 160개, content:validate 19개, build와 diff-check 통과. E2E는 테스트 서버의 127.0.0.1:54329 bind가 EPERM으로 시작 전 차단됐다. 상세 QA는 `docs/reviews/NEXT_STEP/M4-14-M4-18-batch-qa.md`; unit별 승인 대기 파일은 `docs/reviews/NEXT_BATCH/M4-14..18/`이다.
+
+## 2026-11-07 · M5 제안 명세와 레거시 인계 계약 분리
+
+M0-01의 `lessonSpecSchema`/`problemBlueprintSchema`는 레거시 completion·assessment handoff 전용이다. 제안 LEVEL 단원은 `schemaVersion: 1`, 문자열 `levelId`, 제안 경로 메타데이터, 3가족·연습 6개·평가 0개의 별도 형식을 사용하므로 이 레거시 계약이나 `validateLessonHandoff`에 합치지 않는다. 대신 `proposalLessonSpecSchema`와 `proposalProblemBlueprintSchema`를 별도 정의하고 M5-04~13 샘플을 전용 parser로 검사한다. 자동 검사는 제안 메타데이터, 15개 phase, 기술/가족/문항 연결, A/B/C 선택지 ID·정답 라벨 정합성과 초안/미승인 상태를 확인한다. M0 handoff 경로, schemaVersion 1 저장 진도, M0 점수, production publication gate는 변경하지 않는다.
+
+M5-09~13의 Research `content-draft.json`에는 wrapper 메타데이터와 renderer `content`를 구분해 기록한다. 승인 대기 항목은 `approved-content.json`에서 `approvedContent: null`로 남기고, 독립 답 재계산은 reviewed evidence로만 기록한다. 자동/에이전트 검토는 사람 게시 승인이나 공개 허가로 전환하지 않는다.
